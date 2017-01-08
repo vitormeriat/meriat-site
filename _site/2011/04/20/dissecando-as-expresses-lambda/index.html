@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dissecando as expressões Lambda | Trophy</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="Dissecando as expressões Lambda | Trophy">
+  <meta property="og:url" content="/2011/04/20/dissecando-as-expresses-lambda/">
+  <meta property="og:site_name" content="Trophy">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Dissecando as expressões Lambda | Trophy">
+  <meta name="twitter:url" content="/2011/04/20/dissecando-as-expresses-lambda/">
+  <meta name="twitter:site" content="Trophy">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Trophy" href="/feed.xml">
+  <link rel="canonical" href="/2011/04/20/dissecando-as-expresses-lambda/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2011-04-20T02:00:49-03:00" itemprop="datePublished">Apr 20, 2011</time></span>
+      <h1 itemprop="name headline">Dissecando as expressões Lambda</h1>
+      
+        <span>
+          Posted in C#
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify">Esta semana fui questionado sobre o que singificava aquele “<strong>treco</strong>” que todo mundo usa quando vai fazer uma consulta linq. São as expressões lambda, eu disse. Acabei percebendo que na turma ninguém sabia o que eram expressões lambda, apesar de todos as utilizarem.</p>
+<p align="justify">O primeiro passo para entendermos as expressões lambda é desvendar sua origem. Nosso estudo deve, portanto, se iniciar pelos delegates...</p>
+<p align="justify">O conceito de delegates não é algo tão novo. O pessoal mais nostalgico vai se animar com este assunto. Este conceito já era utilizado no na linguagem <strong>C</strong> e era intitulado "<strong>ponteiro para função</strong>". Terminologia que deixa mais claro o que um delegate realmente faz.</p>
+<p align="justify">O delegate assim como o ponteiro para função, guarda uma referência a uma função(ou método) e permite que chamemos essa função quando precisarmos.</p>
+<p align="justify">Em .Net estes "ponteiros" foram entitulados delegates e adicionou-se segurança de tipo a ele, sendo assim, para utilizar um delegate devemos especificar exatamente o tipo do resultado que o método apontado retorna, bem como os argumentos que o método espera receber.</p>
+<p align="justify">Após satisfazer estas condições podemos "passar" o delegate como se fosse uma variável.</p>
+<p align="justify">Nosso primeiro exemplo mostra o uso de delegate assim como era utilizado no .NET 1.0! Definimos um delegate e o tipo de argumento para o mesmo. Criamos o delegate e apontamos para o método de referência. Agora podemos<br />utilizar nosso delegate pelo código...</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/04/lambda1.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="Lambda1" border="0" alt="Lambda1" src="/assets/lambda1_thumb.png" width="473" height="271" /></a></p>
+<p align="justify">Dando um salto até o lançamento do .NET 2.0, teremos uma nova feature que irá facilitar o uso dos delegates em relação a maneira como eram escritos anteriormente. Este novo recurso eram os "Métodos Anônimos".</p>
+<p align="justify">Os métodos anônimos suprimem a necessidade de se criar outros métodos para apontá-los com delegates!!! É isso mesmo! Agora podemos definir o método a ser apontado no mesmo instante em que criamos o delegate e o compilador fica com a responsabilidade da interpretação. Na prática houve aqui um grande evolução na escrita do código.</p>
+<p align="justify">Vamos observar o funcionamento de um delegate tradicional comparado a sua utilização com um método anônimo: </p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/04/2.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="2" border="0" alt="2" src="/assets/2_thumb.png" width="482" height="255" /></a></p>
+<p align="justify">Podemos ver claramente a diferença aqui. Com os métodos anônimos, não precisamos criar outro método e um delegate que aponta para esse método. Dizemos apenas que queremos um delegate aqui e especificamos o corpo do método a ser chamado. É muito mais conveniente utilizar um método anônimo ao invés do modo com delegate tradicional. A definição do código a utilizar fica junto a sua utilização, tornando tudo mais intelegível. </p>
+<p align="justify">Outra característica introduzida com os métodos anônimos é a possibilidade de usar variáveis definidas fora do método anônimo: Utilizando o exemplo acima, podemos ter uma variável e a utilizar na condição do método anônimo.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/04/3.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="3" border="0" alt="3" src="/assets/3_thumb.png" width="478" height="253" /></a></p>
+<p align="justify">Neste exemplo vemos o uso da variável "procuraValor" dentro corpo do método do delegate embora tenhamos o definido fora dele. Neste caso, o compilador C# não somente cria o método como a própria classe (que contém o método) onde o valor que usaremos no corpo do delegate é passado como um membro dessa classe.</p>
+<h3 align="justify">Expressões Lambda</h3>
+<p align="justify">Lambda expressions são expressões anônimas e métodos anônimos com uma sintaxe açucarada(syntatic sugar ou açucar sintático refere-se a maior legibilidade do código bem como maior facilidade na escrita) que tornará mais agradavel e elegante a forma de embarcar métodos anônimos ao código.</p>
+<p align="justify">Nos dias de hoje, no C#3.0 (e no .NET 3.5) temos as expressões Lambda que são o próximo passo na "evolução do delegate". Agora, o compilador faz sumir o "delegate(...) {...}" (isso economiza um monte de digitação). Uma expressão lambda sempre consiste de duas partes (esquerda e direita) separadas por um "<strong>=&gt;</strong>". Este(<strong>=&gt;</strong>) por sua vez é o operador lambda que foi introduzido no C# 3.0 e é lido como "goes to" (vai para). A parte à esquerda do operador labmda contém uma lista de argumentos(não necessariamente tipados pois os tipos&nbsp; podem ser automáticamente indicados pelo compilador) a serem passados ao método. O lado direito contém o corpo do método. </p>
+<h4 align="justify">Vamos a prática:</h4>
+<p align="justify">Em um determinado cenário temos um conjunto de regras que são alteradas com frequência. Para um melhor desing decidimos isolar este trecho de código. Criamos então um delegate que retorna um double. Em nossa aplicação percorremos uma lista de valores e aplicamos para cada item nossa regra, que em suma aplica o valor 0.0 quando o resultado retornado for menor que 300.00.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/04/4.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="4" border="0" alt="4" src="/assets/4_thumb.png" width="478" height="205" /></a></p>
+<p align="justify">Notem que a expressão Lambda utilizada no método AplicaRegras é iniciado por um argumento de tipo implícito (<strong>i</strong>) que <u>vai para</u> o resultado de um calculo que neste caso e 15% do <strong>item</strong> em questão.</p>
+<p align="justify">Agora fica muito mais fácil entender nossas consultas linq…</p>
+<pre><font color="#666666">// Crio um objeto de contexto</font></pre>
+<pre><strong>ContextoDeDados contexto = new ContextoDeDados();</strong></pre>
+<pre><font color="#666666">// Consulto os desenvolvedores que trabalhama na empresa Literatura e Cia</font></pre>
+<pre><strong>var consulta = contexto.desenvolvedores.Where(c =&gt; c.Empresa == "Literatura e Cia");</strong></pre>
+<pre><font face="Lucida Sans Unicode"></font>&nbsp;</pre>
+<pre><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/04/769389356318835415.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="769389356318835415" border="0" alt="769389356318835415" src="/assets/769389356318835415_thumb.png" width="32" height="32" /></a> <a href="http://cid-bd055aa47a388023.office.live.com/self.aspx/.Public/ExpressoesLambda.rar">Baixe o código dos Exemplos utilizados neste artigo.</a></pre>
+<p>&nbsp;
+<p>&nbsp;<a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/03/logo.jpg"><img title="logo" border="0" alt="logo" align="left" src="/assets/logo_thumb.jpg?w=50&amp;h=98" width="50" height="98" /></a><font size="3">Um grande abraço e ótimo estudo!</font> </p>
+<p><strong>&nbsp;&nbsp; Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong><br />&nbsp;&nbsp;&nbsp; <a href="mailto:vitormeriat@gmail.com">vitormeriat@gmail.com</a><br />&nbsp;&nbsp;&nbsp; <a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a></p></p>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2011/03/24/cdigos-de-erro-do-azure-para-servios-de-armazenamento/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>Códigos de Erro do Azure para serviços de Armazenamento.</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

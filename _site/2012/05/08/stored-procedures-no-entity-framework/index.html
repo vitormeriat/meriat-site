@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Stored Procedures no Entity Framework | Trophy</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="Stored Procedures no Entity Framework | Trophy">
+  <meta property="og:url" content="/2012/05/08/stored-procedures-no-entity-framework/">
+  <meta property="og:site_name" content="Trophy">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Stored Procedures no Entity Framework | Trophy">
+  <meta name="twitter:url" content="/2012/05/08/stored-procedures-no-entity-framework/">
+  <meta name="twitter:site" content="Trophy">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Trophy" href="/feed.xml">
+  <link rel="canonical" href="/2012/05/08/stored-procedures-no-entity-framework/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2012-05-08T20:15:00-03:00" itemprop="datePublished">May 8, 2012</time></span>
+      <h1 itemprop="name headline">Stored Procedures no Entity Framework</h1>
+      
+        <span>
+          Posted in C#, ORM
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify">Aqui vai um post sobre o uso de stored procedures no Entity Framework. Não vou entrar no mérito da importância de SPs ou se ORMs como o EF eliminam esta necessidade. Vou apenas me ater as funcionalidades e motivos de algumas estranhezas ao se falar em SPs no Entity Framework.</p>
+<p><!--more--><br />
+<h2 align="justify">&#160;</h2>
+<h2 align="justify">Introdução</h2>
+<p align="justify">Para este fim criei uma aplicação <strong>MVC Razor</strong> com um Banco e duas tabelas, Cliente e Compra. Como na imagem abaixo:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/01.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="01" border="0" alt="01" src="/assets/01_thumb.png" width="374" height="489" /></a></p>
+<p align="justify">&#160;</p>
+<p align="justify">Agora vamos mapear o banco a ser trabalhado inserindo na pasta <strong>Models</strong> o modelo de dados. Clique com o botão direito e&#160; selecione as opções <strong>Add &gt; NewItem &gt; ADO.NET Entity Data Model &gt; Add.</strong> O próximo passo e apontar para o banco a ser mapeado, com já disse anteriormente, neste exemplo estaremos trabalhando com um banco local na aplicação. Após isto será apresentado a tela onde você vai selecionar os recursos do banco que serão mapeados:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/02.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="02" border="0" alt="02" src="/assets/02_thumb.png" width="560" height="585" /></a></p>
+<p align="justify">&#160;</p>
+<p align="justify">Observe que estou selecionando duas <strong>SPs</strong>. Com este passo completo iremos obter o arquivo <strong>edmx</strong> e uma janela exibindo o modelo será aberta:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/03.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="03" border="0" alt="03" src="/assets/03_thumb.png" width="431" height="272" /></a></p>
+<p align="justify">&#160;</p>
+<h2 align="justify">Analise do problema</h2>
+<p align="justify">Primeiro vamos observar o painel <strong>Model Browser</strong>:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/04.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="04" border="0" alt="04" src="/assets/04_thumb.png" width="442" height="452" /></a></p>
+<p align="justify">&#160;</p>
+<p align="justify">É possível notar que nosso modelo <strong>edmx </strong>possuí dois nós de navegação. No segundo nó temos uma pasta chamada <strong>Stored Procedures </strong>e dentro deste diretório temos as duas procedures que selecionamos no momento da criação do modelo.</p>
+<p align="justify">Neste ponto você “acha” que já é possível consumir as procedures mas não é o caso. Para que seja possível consumir estes procedimentos, é necessário associarmos nossas <strong>SPs</strong> como funções do modelo.</p>
+<p align="justify">Por padrão, o <strong>Entity Framework </strong>realiza operações diretamente nas tabelas do banco de dados. Isso ocorre devido ao mapeamento entre os esquemas conceituais e de armazenamento. Para utilizarmos <strong>SPs </strong>devemos então alterar os esquemas de mapeamento.</p>
+<p align="justify">Podemos fazer isso de duas maneiras: Criando uma função de importação no modelo conceitual que irá mapear a <strong>stored procedure</strong> ou mapear na mão… vamos ver apenas a primeira opção (pelo menos por agora).</p>
+<p align="justify">&#160;</p>
+<h2 align="justify">A solução</h2>
+<p align="justify">Observe na figura acima que no primeiro nó do modelo conceitual temos uma pasta chamada <strong>Functions Imports </strong>e ela está vazia. Pois bem, é aqui que a magia vai acontecer.</p>
+<p align="justify">O que iremos fazer agora é criar uma função para mapear a <strong>SP</strong> desejada.</p>
+<p align="justify">Quando criamos uma função o <strong>EF</strong> cria um método correspondente dentro do <strong>ObjectContext</strong> mapeando a <strong>SP</strong> desejada. Neste momento estamos vinculando a execução deste procedimento ao nosso modelo conceitual. Neste momento também é possível definir o tipo de retorno. </p>
+<p align="justify">Clique com o o botão direito em Function Imports &gt; Add Function Import… Na janela seguinte você pode definir o nome da função, a SP a ser mapeada e o tipo de retorno, exatamente como a imagem abaixo:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/10.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="10" border="0" alt="10" src="/assets/10_thumb.png" width="543" height="610" /></a></p>
+<p align="justify">Sobre os tipos de retorno:</p>
+<ul>
+<li>
+<div align="justify"><font color="#555555"><strong>None</strong>: Nenhum tipo de retorno;</font></div>
+</li>
+<li>
+<div align="justify"><font color="#555555"><strong>Scalars</strong>: Retorna tipos específicos como Int32, Boolean, Binary etc;</font></div>
+</li>
+<li>
+<div align="justify"><font color="#555555"><strong>Complex</strong>: Retorna um tipo coplexo. Este tipo possui propriedades correspondentes as colunas retornadas pela storede procedure. Este tipo é gerado automaticamente ao clicar no botão <strong>Create New Complex Type</strong>;</font></div>
+</li>
+<li>
+<div align="justify"><font color="#555555"><strong>Entities</strong>: Retorna em uma entidade padrão do modelo.</font></div>
+</li>
+</ul>
+<p align="justify">&#160;</p>
+<p align="justify">Neste momento vou demonstrar a importação de uma SP que retorna um tipo <strong>Complex</strong>. O arquivo com o exemplo está disponível no fim do POST. A <strong>SP</strong> a ser importada é <strong>proc_ListarComprasDetalhadas</strong>. Vamos dar uma olhada em sua sintaxe:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/11.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="11" border="0" alt="11" src="/assets/11_thumb.png" width="560" height="273" /></a></p>
+<p align="justify">&#160;</p>
+<p align="justify">Como podemos notar estou fazendo um <strong>INNER JOIN </strong>e retornando dados das duas tabelas. Ao importar a <strong>SP</strong> utilizo um retono do tipo <strong>Complex</strong> e o próprio <strong>EF</strong> cria um tipo correspondente.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/05.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="05" border="0" alt="05" src="/assets/05_thumb.png" width="536" height="663" /></a></p>
+<p align="justify">&#160;</p>
+<p align="justify">Agora ao vamos importar a <strong>proc_BuscarComprasDoCliente</strong>. Esta retorna um tipo já mapeado pelo modelo conceitual, neste caso a entidade Compra. Sendo assim posso simplesmente apontar o tipo de retorno como <strong>Entities</strong> e selecionar a entidade correspondente. Vamos analisar a sintaxe da <strong>SP</strong> e a tela de importação correspondente:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/12.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="12" border="0" alt="12" src="/assets/12_thumb.png" width="560" height="178" /></a></p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/06.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="06" border="0" alt="06" src="/assets/06_thumb.png" width="557" height="659" /></a></p>
+<p>&#160;</p>
+<p align="justify">Se observamos o painel <strong>Model Browser</strong> vamos perceber que nossas procedures foram mapeadas e que um novo tipo foi criado na pasta <strong>Complex Types</strong> como na imagem abaixo:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/07.png"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;border-top:0;margin-right:auto;border-right:0;padding-top:0;" title="07" border="0" alt="07" src="/assets/07_thumb.png" width="329" height="509" /></a></p>
+<p>&#160;</p>
+<p align="justify">Deste momento em diante é possível consumir a função e trabalhar com o novo tipo de maneira simples:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/09.png"><img style="background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;border-top:0;margin-right:auto;border-right:0;padding-top:0;" title="09" border="0" alt="09" src="/assets/09_thumb.png" width="552" height="542" /></a></p>
+<p>&#160;</p>
+<p><a href="https://skydrive.live.com/?cid=bd055aa47a388023#cid=BD055AA47A388023&amp;id=BD055AA47A388023%21365" target="_blank"><font size="3">Baixe aqui o exemplo utilizado neste POST!</font></a></p>
+<p>&#160;</p>
+<h2>É isso ai… bons estudos galera….</h2>
+<p>&#160;</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/05/ass-cop1.png"><img style="background-image:none;border-bottom:0;border-left:0;margin:0 20px 0 0;padding-left:0;padding-right:0;display:inline;float:left;border-top:0;border-right:0;padding-top:0;" title="Ass cop1" border="0" alt="Ass cop1" align="left" src="/assets/ass-cop1_thumb.png" width="104" height="104" /></a></p>
+<h3><font size="5"><font color="#9bbb59"><font>Twitter</font>:</font> <a href="http://twitter.com/#!/vitormeriat" target="_blank"><font color="#4f81bd">@vitormeriat</font></a></font></h3>
+<h3><a href="mailto:vitormeriat@gmail.com"><font size="5"><font color="#4f81bd">vitormeriat@gmail.com</font></font></a></h3>
+<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font size="5"><font color="#4f81bd">vitor.pereira@studentpartners.com.br</font></font></a></h3>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2012/04/11/webcast-windows-azure-storage-na-prtica/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>WebCast: Windows Azure Storage na prática</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

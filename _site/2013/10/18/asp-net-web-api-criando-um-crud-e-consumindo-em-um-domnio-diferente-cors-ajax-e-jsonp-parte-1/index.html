@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ASP.NET Web API - Criando um CRUD e consumindo em um domínio diferente. CORS, AJAX e JSONP [Parte 1] | Trophy</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="ASP.NET Web API - Criando um CRUD e consumindo em um domínio diferente. CORS, AJAX e JSONP [Parte 1] | Trophy">
+  <meta property="og:url" content="/2013/10/18/asp-net-web-api-criando-um-crud-e-consumindo-em-um-domnio-diferente-cors-ajax-e-jsonp-parte-1/">
+  <meta property="og:site_name" content="Trophy">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="ASP.NET Web API - Criando um CRUD e consumindo em um domínio diferente. CORS, AJAX e JSONP [Parte 1] | Trophy">
+  <meta name="twitter:url" content="/2013/10/18/asp-net-web-api-criando-um-crud-e-consumindo-em-um-domnio-diferente-cors-ajax-e-jsonp-parte-1/">
+  <meta name="twitter:site" content="Trophy">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Trophy" href="/feed.xml">
+  <link rel="canonical" href="/2013/10/18/asp-net-web-api-criando-um-crud-e-consumindo-em-um-domnio-diferente-cors-ajax-e-jsonp-parte-1/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2013-10-18T12:52:36-03:00" itemprop="datePublished">Oct 18, 2013</time></span>
+      <h1 itemprop="name headline">ASP.NET Web API - Criando um CRUD e consumindo em um domínio diferente. CORS, AJAX e JSONP [Parte 1]</h1>
+      
+        <span>
+          Posted in Services, WebAPI
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/capa01.png"><img title="capa01" style="background-image:none;float:left;padding-top:0;padding-left:0;margin:10px 20px 0 0;display:inline;padding-right:0;border-width:0;" border="0" alt="capa01" align="left" src="/assets/capa01_thumb.png" width="376" height="308" /></a>Se você também está utilizando WebAPI ou pretende utilizar em breve, e bem possível que você queira utilizar o mesmo em outras plataformas fora do .NET. Isso faz todo sentido, uma vez que o WebAPI expõe os métodos via HTTP e logo tem como maior benefício a possibilidade de ser consumido por um número maior de clientes. Neste post, vamos explorar este ponto criando uma solução WebAPI e como cliente um site HTML com JQuery.</p>
+<p><!--more-->
+<p>Cabe salientar alguns pontos:</p>
+<ul>
+<ul>
+<li>Esta aplicação será utilizada nos próximos posts da série; </li>
+<li>Vou utilizar o Visual Studio 2013RC, mas estou testando também no VS2012; </li>
+<li>Este post será dividido em três partes a fim de facilitar o passo a passo. </li>
+</ul>
+</ul>
+<p align="justify">Basicamente, vamos criar uma solução ASP.NET Web API expondo nosso serviço. Em outro projeto iremos criar uma solução cliente utilizando apenas HTML e JQuery para simular um cenário mais real possível. Com esta aplicação cliente, iremos fazer um CRUD completo, especializando algumas buscas. Todo o código fonte do post está disponível para download. Ai vai uma prévia do nosso cliente:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/000000.png"><img title="000000" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="000000" src="/assets/000000_thumb.png" width="560" height="351" /></a></p>
+<p>&#160;</p>
+<h2 align="justify">Criando o serviço </h2>
+<p align="justify">O primeiro passo é criar nosso serviço. Vamos criar como exemplo um serviço para manter a lista de municípios brasileiros com código, uf e nome. Este exemplo também será utilizado nos próximos posts, então mãos a obra.</p>
+<p align="justify">Abra o <strong>Visual Studio</strong> e selecione a opção <strong>New Project… ASP.NET Web Application </strong>e nomeie o seu projeto para <strong>CloudHostingMunicipios</strong> e clique em <strong>OK</strong>. </p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/001.png"><img title="001" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="001" src="/assets/001_thumb.png" width="560" height="324" /></a></p>
+<p align="justify">Na próxima tela selecione o <strong>template Web API</strong> e em <strong>Create Project</strong>. Agora vamos criar nosso modelo. Clique com o botão direito na pasta <strong>Models, Add e Class… </strong>Nomeie sua classe como <strong>Municipio.cs</strong>.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/003.png"><img title="003" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="003" src="/assets/003_thumb.png" width="560" height="324" /></a></p>
+<p>Agora insira o seguinte código a sua classe:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/002.png"><img title="002" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="002" src="/assets/002_thumb.png" width="493" height="563" /></a></p>
+<p align="justify">Nosso próximo passo é criar nosso repositório. Inicialmente eu planejei este post utilizando o <strong>Azure Table Storage</strong> para armazenar os dados, mas acabei decidindo por uma solução mais simples e independente para os testes. Sendo assim vamos trabalhar nossa fonte de dados em um arquivo txt. Para isso, vou disponibilizar o arquivo contendo todos os 5565 municípios brasileiros. Para prosseguir no post, você pode fazer o download do arquivo <a href="https://skydrive.live.com/?cid=bd055aa47a388023#cid=BD055AA47A388023&amp;id=BD055AA47A388023%213206" target="_blank">CLICANDO AQUI</a>. Após isso, adicione o arquivo na pasta Models para ser utilizado como nossa fonte de dados.</p>
+<p align="justify">Agora, clique com o botão direito na pasta Models e insira uma classe chamada IMunicipiosRepository.cs. Esta classe deverá conter o seguinte código:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/004.png"><img title="004" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="004" src="/assets/004_thumb.png" width="560" height="509" /></a></p>
+<p align="justify">Estamos determinando em nosso “<strong>contrato</strong>” os métodos que serão trabalhados no repositório. Basicamente vamos implementar um <strong>CRUD</strong>, onde o vamos ter um método especializado que busca apenas um município dado o seu código e um método que busca todos os municípios de uma determinada UF. Fora isso vamos realizar apenas um <strong>CRUD</strong>.</p>
+<p align="justify">Com nosso <strong>contrato </strong>especificado, clique com o botão direito na pasta Models e crie uma nova classe intitulada <strong>MunicipiosRepository.cs</strong>. Assim que a classe for gerada, faça ela herdar de <strong>IMunicipiosRepository</strong>. Como vamos trabalhar com um arquivo físico hospedado em nosso site, insira o uma variável caminho para informar o caminho do arquivo dentro do servidor. Seu código deve ficar assim:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/005.png"><img title="005" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="005" src="/assets/005_thumb.png" width="560" height="209" /></a></p>
+<p>Agora vamos aos métodos:</p>
+<h3><font style="font-weight:bold;">ListAllMunicipios()</font></h3>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/006.png"><img title="006" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="006" src="/assets/006_thumb.png" width="560" height="374" /></a></p>
+<p>O método acima apenas lê todas a linhas do arquivo txt e devolve como uma lista de Munícipio. Antes do retorno estou aproveitando para ordenar por UF já que a lista não usa este critério.</p>
+<h3><font style="font-weight:bold;">GetAll, GetByCodigo e GetByUF</font></h3>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/007.png"><img title="007" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="007" src="/assets/007_thumb.png" width="560" height="406" /></a></p>
+<p>Nos métodos acima, estamos apenas realizando buscas sobre nossa coleção de municípios.</p>
+<h3><font style="font-weight:bold;">AddMunicipio()</font></h3>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/008.png"><img title="008" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="008" src="/assets/008_thumb.png" width="560" height="366" /></a></p>
+<h3><font style="font-weight:bold;">UpdateMunicipio()</font></h3>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/009.png"><img title="009" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="009" src="/assets/009_thumb.png" width="556" height="635" /></a></p>
+<h3><font style="font-weight:bold;">DeleteMunicipio()</font></h3>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/010.png"><img title="010" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="010" src="/assets/010_thumb.png" width="560" height="272" /></a></p>
+<p>Com nossa classe de repositório já implementada, vamos criar nossa Controller. Clique com o botão direito na pasta <strong>Controllers, Add… e Web API Controller Class (v1)</strong>. Na tela que se segue nomeie o seu controller como <strong>MunicipioController</strong>.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/03.png"><img title="03" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="03" src="/assets/03_thumb.png" width="560" height="322" /></a></p>
+<p>Substitua o código da controller pelo trecho de código abaixo:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/011.png"><img title="011" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="011" src="/assets/011_thumb.png" width="560" height="851" /></a></p>
+<p>Observe que:</p>
+<ul>
+<li>Para as solicitações de <strong>POST, PUT e DELETE</strong> estamos retornando um <strong>StatusCode NotFound</strong> em caso de erro; </li>
+<li>Para as solicitações <strong>PUT </strong>e<strong> DELETE </strong>estamos retornando um <strong>StatusCode OK</strong> em caso de sucesso; </li>
+<li>Para a solicitação <strong>POST</strong> retornamos um <strong>StatusCode Created </strong>para sinalizar o sucesso da operação; </li>
+<li>Os demais métodos retornam os objetos selecionados. </li>
+</ul>
+<p>&#160;</p>
+<p>Neste momento já temos o nosso serviço funcional. É só executar a aplicação para testar.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/012.png"><img title="012" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="012" src="/assets/012_thumb.png" width="560" height="569" /></a></p>
+<p>&#160;</p>
+<p align="justify">No próximo post vamos criar nossa aplicação cliente apenas utilizando HTML e JQUERY para o consumo do serviço criado neste post. Também veremos algumas particularidades para do consumo de serviços entre domínios diferentes.</p>
+<p align="justify">O código fonte do serviço pode ser baixado <a href="https://skydrive.live.com/?cid=bd055aa47a388023#cid=BD055AA47A388023&amp;id=BD055AA47A388023%213206" target="_blank">CLICANDO AQUI!</a></p>
+<p>&#160;</p>
+<h1>Até mais e bom estudo a todos!</h1>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/06/me-azul.png"><img title="Me Azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="Me Azul" align="left" src="/assets/me-azul_thumb.png?w=110&amp;h=110&amp;h=110" width="110" height="110" /></a></p>
+<h3><font style="font-weight:bold;" color="#4f81bd"><font color="#9bbb59">Twitter:</font> </font><a href="http://twitter.com/#!/vitormeriat"><font style="font-weight:bold;" color="#4f81bd">@vitormeriat</font></a></h3>
+<h3><a href="mailto:vitormeriat@gmail.com"><font style="font-weight:bold;" color="#4f81bd">vitormeriat@gmail.com</font></a></h3>
+<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font style="font-weight:bold;" color="#4f81bd">vitor.pereira@studentpartner.com</font></a></h3>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2013/10/03/asp-net-web-api-como-funciona-o-content-negotiation/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>ASP.NET Web API - Como funciona o Content Negotiation</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

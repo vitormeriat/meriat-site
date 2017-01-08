@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tipos anônimos são realmente úteis? | Trophy</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="Tipos anônimos são realmente úteis? | Trophy">
+  <meta property="og:url" content="/2011/06/09/tipos-annimos-so-realmente-teis/">
+  <meta property="og:site_name" content="Trophy">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Tipos anônimos são realmente úteis? | Trophy">
+  <meta name="twitter:url" content="/2011/06/09/tipos-annimos-so-realmente-teis/">
+  <meta name="twitter:site" content="Trophy">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Trophy" href="/feed.xml">
+  <link rel="canonical" href="/2011/06/09/tipos-annimos-so-realmente-teis/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2011-06-09T11:22:05-03:00" itemprop="datePublished">Jun 9, 2011</time></span>
+      <h1 itemprop="name headline">Tipos anônimos são realmente úteis?</h1>
+      
+        <span>
+          Posted in C#, CLR
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify">Os tipos anônimos (Anonymous Types) são uma característica da linguagem C# onde criamos diversas propriedades para um objeto sem ter que definir explicitamente seu tipo. Essa novidade surgiu na versão 3.0 junto com diversas outras tais como: propriedades automáticas, inferência de tipos, inicializadores de objetos, expressões lambda, métodos de extensão dentre outros.</p>
+<p align="justify">A referência para tipos anônimos na MSDN diz que tipos anônimos fornecem uma maneira conveniente de encapsular um conjunto de propriedades apenas leitura em um simples objeto sem que seja necessário primeiro definir explicitamente um tipo. O nome do tipo é gerado pelo compilador e não está disponível no nível do código fonte. <strong>O tipo das propriedades é inferido pelo compilador</strong>.</p>
+<p align="justify"><font size="3">U</font>m tipo anônimo pode ser declarado da seguinte maneira:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/06/001_thumb2.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="001_thumb2" border="0" alt="001_thumb2" src="/assets/001_thumb2_thumb.png" width="482" height="101" /></a></p>
+<p align="justify"><font size="3">N</font>este caso a variável tipoAnonimo é um tipo anônimo que possui três propriedades: </p>
+<p><!--more-->
+<ol>
+<li>
+<div align="justify">Nome do tipo System.String;</div>
+</li>
+<li>
+<div align="justify">Idade do tipo System.Int32;</div>
+</li>
+<li>
+<div align="justify">Altura do tipo System.Double.</div>
+</li>
+</ol>
+<p align="justify"><font size="3">O</font>s tipo anônimos são muito úteis quando realizamos consultas usando o LINQ uma vez que normalmente temos que retornar um tipo com o conjunto de propriedades diferentes dos tipos já existentes. Vamos realizar algumas consultas para exemplificar esta assertiva:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/06/002_thumb3.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="002_thumb3" border="0" alt="002_thumb3" src="/assets/002_thumb3_thumb.png" width="482" height="261" /></a>&nbsp;</p>
+<p align="justify"><font size="3">A</font> primeira consulta retorna um tipo que contém três propriedades(Nome, Empresa e Linguagem) e no segundo exemplo obtemos um tipo com apenas uma propriedade( Empresa). Sem o recuso dos tipos anônimos teríamos que definir explicitamente a classe para representar os tipos retornados.</p>
+<blockquote><p align="justify">Quando um tipo anônimo é atribuído a uma variável, a variável deve ser inicializada com a construção <a href="http://msdn.microsoft.com/pt-br/library/bb383973.aspx">var</a>. Isso ocorre porque apenas o compilador tem acesso ao nome base do tipo anônimo. </p>
+</blockquote>
+<p align="justify"><font size="3">Q</font>uando criamos um tipo anônimo o compilador gera uma classe selada interna que modela o tipo . O tipo anônimo é imutável: todas as suas propriedades estão no modo somente leitura. Essa classe contém substituições de Equals() e GetHashCode() que implementam a semântica de valores. Além disso, o compilador gera uma substituição de ToString(), que exibe o valor de cada uma das propriedades públicas.</p>
+<p align="justify">Tipos anônimo são tipos de referência, derivam diretamente de <strong>object</strong>. Durante sua criação o compilador lhe atribui um nome que é inacessível para a aplicação. Da perspectiva do CLR, um tipo anônimo não é diferente de qualquer outro tipo por referência, exceto pelo fato de não poder ser convertido para qualquer tipo.</p>
+<p align="justify">&nbsp;</p>
+<h2 align="justify">Limitações</h2>
+<p align="justify">Os tipos anônimos apresentam limitações que devem ser conhecidas para que seu uso possa ser mais consciente. Quando se opta por usar tipos anônimos é necessário saber que eles não são símbolos C# válidos, sua validade fica a nível de CLR. Isto implica na impossibilidade de definir métodos de extensão, de declarar métodos com tipos anônimos como parâmetros e retornar tipos anônimos a partir de métodos.</p>
+<p align="justify">&nbsp;</p>
+<h2 align="justify">Resposta</h2>
+<p align="justify">É certo que os tipos anônimos tem limitações, então qual sua real utilidade? </p>
+<p align="justify">Penso que a utilização de tipos anônimos(sempre com o uso do bom senso) é muito vantajosa pelos seguintes pontos:</p>
+<ul>
+<li>
+<div align="justify">O compilador escreve os códigos muito mais rápido que você! Ele cria um calhamaço de código para cada tipo anônimo que criamos; </div>
+</li>
+<li>
+<div align="justify">É uma ótima maneira de economizar tempo (Time is money);</div>
+</li>
+<li>
+<div align="justify">Não destroem o desing da aplicação. São uma excelente alternativa para valores locais desafogando a necessidade que muitas vezes se tinha de criar uma classe para se trabalhar com os retornos;</div>
+</li>
+<li>
+<div align="justify">Por serem anônimos podem seu utilizados para trazer um maior desacoplamento, separando lógicas específicas sem a dependência de tipos já definidos.</div>
+</li>
+</ul>
+<p align="justify">Existem algumas estratégias que possibilitam um uso mais apurado dos tipos anônimos. Mais isto fica para o próximo post.</p>
+<p>Baixo e código fonte do post <a href="httpcid-bd055aa47a388023.office.live.comself.aspx.PublicTiposAnonimos.rar" target="_blank">aqui</a>!</p>
+<p>&nbsp;</p>
+<h4></h4>
+<h3>Um grande abraço e ótimo Estudo!</h3>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/03/logo.jpg"><img style="display:inline;float:left;" title="logo" border="0" alt="logo" align="left" src="/assets/logo_thumb.jpg?w=50&amp;h=98&amp;h=98" width="50" height="98" /></a><strong>&nbsp;&nbsp;&nbsp;&nbsp; Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong><br />&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:vitormeriat@gmail.com">vitormeriat@gmail.com</a><br />&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a></p>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2011/06/07/porque-setconfigurationsettingpublisher-precisa-ser-chamado-antes-de-fromconfigurationsetting/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>Porque SetConfigurationSettingPublisher precisa ser chamado antes de FromConfigurationSetting?</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

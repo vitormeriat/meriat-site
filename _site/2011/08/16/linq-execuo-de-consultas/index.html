@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>LINQ: Execução de consultas | Trophy</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="LINQ: Execução de consultas | Trophy">
+  <meta property="og:url" content="/2011/08/16/linq-execuo-de-consultas/">
+  <meta property="og:site_name" content="Trophy">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="LINQ: Execução de consultas | Trophy">
+  <meta name="twitter:url" content="/2011/08/16/linq-execuo-de-consultas/">
+  <meta name="twitter:site" content="Trophy">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Trophy" href="/feed.xml">
+  <link rel="canonical" href="/2011/08/16/linq-execuo-de-consultas/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2011-08-16T20:27:13-03:00" itemprop="datePublished">Aug 16, 2011</time></span>
+      <h1 itemprop="name headline">LINQ: Execução de consultas</h1>
+      
+        <span>
+          Posted in LINQ
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify">Durante a escrita de um teste para uma nova funcionalidade no sistema, reparei que havia da minha parte um esforço desnecessário para bater determinados valores em um relatório. Não era possível, tinha que ter algo de errado, pois minha lógica estava (humildemente falando) perfeita.
+<p align="justify">Fuça daqui, mexe ali e repentinamente os valores agora batem com toda a precisão matemática que era exigida. Inicio minha busca em prol de encontrar o erro e me deparo com algo interessante. Vamos fazer um teste para simular meu problema:
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/08/011.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="01" border="0" alt="01" src="/assets/01_thumb1.png" width="570" height="250" /></a>
+<p align="justify"></p>
+<p><!--more-->
+<p align="justify">Tenho minha fonte de dados que neste caso é uma lista de inteiros. Note que tenho três itens adicionados a lista. Neste momento crio minha consulta LINQ para retornar apenas os itens maiores que 2. Pelo estado da lista, o correto era inferir que o único item maior que 2 é 3, logo somente um item vai ser retornado.
+<p align="justify">Então logo após a criação da consulta adiciono mais um item a lista. No momento da exibição do resultado o que vai ser retornado? Apenas o<strong> 3</strong> ou <strong>3 | 4</strong> ?
+<p align="center">?
+<p align="center">?
+<p align="center">?
+<p align="center">?
+<p align="center">O resultado retornado foi precisamente <strong>3 | 4 |</strong>.
+<p>&nbsp; Vamos fazer uma breve investigação sobre o ocorrido analisando a imagem abaixo:
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/08/021.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;margin:10px 0 20px;" title="02" border="0" alt="02" src="/assets/02_thumb1.png" width="570" height="788" /></a>
+<ol>
+<li>No primeiro quadrante temos a lista preenchida com 3 itens no momento da criação da consulta.  </li>
+<li>No segundo quadrante a consulta já existe e aponta para a fonte de dados contendo 3 itens.  </li>
+<li>No terceiro quadrante adicionamos um item a fonte de dados. No momento da exibição da consulta ela aponta para a fonte de dados agora contendo 4 itens.</li>
+</ol>
+<p>&nbsp;<br />
+<h2>Em consulta...</h2>
+<p>As operações de consulta LINQ seguem a seguinte lógica:
+<ol>
+<li>É obtida a fonte de dados;  </li>
+<li>A consulta é criada;  </li>
+<li>A consulta é executada.</li>
+</ol>
+<p align="justify">A consulta especifica quais informações recuperar a partir da(s) fonte(s) de dados indicadas. A consulta também pode especificar como as informações devem ser classificadas, agrupadas e como serão retornadas. Uma consulta é armazenada em uma variável de consulta e inicializada com uma expressão de consulta.
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/08/03.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="03" border="0" alt="03" src="/assets/03_thumb.png" width="570" height="288" /></a>
+<p align="justify">Parece-me bem lógico que uma consulta LINQ seja feita sobre uma fonte de dados, um DataSet, XML, coleção de objetos e etc. O que não tinha ficado muito claro era a separação entre criação e execução da consulta.
+<p>&nbsp;<br />
+<h2>Execução da consulta</h2>
+<p align="justify">Uma função importante da maioria dos operadores de consulta é a capacidade de executarem não quando construídos, mas quando enumerados. Isto significa que a consulta é executada no momento que o método <strong>MoveNext()</strong> de <strong>IEnumerator</strong> é chamado.
+<p align="justify">Quando imprimimos o resultado do código da figura 1 percebemos que o número 4 está presente. Mesmo sendo inserido após a criação da consulta, ele está garantido no resultado porque somente na execução do <strong>foreach</strong> temos uma chamada a <strong>MoveNext()</strong> no enumerador da consulta.
+<p align="justify">É importante destacar que no LINQ, a variável de <b>consulta</b> não pratica nenhuma ação e não retorna nenhum dado. Ela apenas armazena as informações que são necessárias para produzir os resultados quando a consulta realmente for executada.
+<p align="justify">Com isso temos duas maneiras de executar as consultas LINQ: Execução tardia ou imediata.
+<p>&nbsp;<br />
+<h2>Execução Tardia (Lazy Loading )</h2>
+<p align="justify">Basicamente a execução tardia atrasa a execução da consulta até o ultimo momento possível já que o LINQ atrasa a execução das queries até sua real necessidade. Este recurso é muito importante porque “separa” a construção da consulta de sua execução. Isto possibilita que você construa uma consulta em muitos passos e possibilita as consultas de LINQ to SQL.
+<p align="justify">Com isso você pode trafegar uma consulta entre camadas e incrementa-la de acordo com regras de negócio e outras necessidades.
+<p align="justify">Execução tardia também tem suas desvantagens. Sempre que uma consulta for enumerada ela sofre uma reavaliação tendo como base o estado atual da fonte de dados. Isto pode ser desvantajoso nos seguintes cenários:
+<ul>
+<li>
+<div align="justify">Quando você quer guardar os resultados em um ponto determinado; </div>
+</li>
+<li>
+<div align="justify">Quando temos uma consulta computacionalmente intensa, acessou remoto ou nas nuvens e queremos evitar o acesso desnecessário.</div>
+</li>
+</ul>
+<p align="justify">Para estes casos a melhor opção é trabalhar com a execução imediata.
+<p>&nbsp;<br />
+<h2>Execução Imediata</h2>
+<p align="justify">Como vimos anteriormente a maioria dos operadores de consulta proporcionam execução tardia, com exceção de:
+<ul>
+<li>
+<div align="justify">Operadores que retornam um único elemento ou valor escalar como First, Count, Max ou Average; </div>
+</li>
+<li>
+<div align="justify">Operadores de conversão: ToArray, ToList, ToDictionary, ToLookUp.</div>
+</li>
+</ul>
+<p align="justify">Estes operadores realizam uma execução imediata da consulta pois seus mecanismos não dão suporte a execução tardia. Se repararmos a execução do método Count, é possível perceber que ele retorna apenas um simples inteiro que não é enumerado e portando não chama MoveNext.
+<p align="justify">A consulta abaixo é executada imediatamente e retorna o resultado tendo como base a lista no momento da criação da consulta. O número 4 foi desprezado.
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/08/04.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="04" border="0" alt="04" src="/assets/04_thumb.png" width="570" height="314" /></a>
+<p align="justify">Na execução tardia de consultas, a definição de consulta é armazenada em uma variável de consulta para posterior execução. Na execução imediata, a consulta é executada no momento da sua definição. Execução é disparada quando você aplica um método que requer acesso aos elementos individuais do resultado da consulta.
+<p align="justify">&nbsp;<br />
+<h2 align="justify">Finalizando </h2>
+<p align="justify">Vamos analisar mais um exemplo:
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/08/051.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="05" border="0" alt="05" src="/assets/05_thumb1.png" width="570" height="316" /></a>
+<p align="justify">Somente utilizar um ToList ou Count não garante que sua consulta será executada de forma imediata, pois deve-se atentar em como faze-lo. Devemos utilizar os operadores no momento exato da criação da consulta ou então ele será um lazy loading de qualquer forma.
+<p align="justify">Como é possível notar, o que separa a execução tardia da execução imediata são apenas detalhes. Detalhes que fazem muita diferença em determinadas situações como no meu caso, sendo assim meu concelho é: Procure sempre investigar os recursos que a linguagem te oferece pois, muito provavelmente eles irão salvar seu dia…
+<p align="justify">Você pode baixar o código fonte deste artigo <a href="https://skydrive.live.com/?sc=documents&amp;cid=bd055aa47a388023#!/?cid=bd055aa47a388023&amp;sc=documents&amp;uc=1&amp;id=BD055AA47A388023%21220" target="_blank">aqui!</a><br />
+<hr />
+<h3>Um grande abraço e ótimo estudo!</h3>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/08/arquitetura.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;margin:0 15px 0 0;" title="Arquitetura" border="0" alt="Arquitetura" align="left" src="/assets/arquitetura_thumb.png" width="81" height="130" /></a>
+<p><strong>Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong><br /><i><strong>Microsoft MSP – Brasília</strong></i><br /><a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a><br /><a href="mailto:vitor.meriat@srnimbus.com">vitor.meriat@srnimbus.com</a></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2011/08/12/charge-da-semana-gerenciando-projetos-parte-1/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>Charge da Semana: Gerenciando Projetos parte 1</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

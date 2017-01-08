@@ -1,0 +1,91 @@
+---
+layout: post
+title: Azure Mobile Service–Logging local e na nuvem com backend .NET WebAPI
+date: 2014-09-05 15:56:50.000000000 -03:00
+type: post
+published: true
+status: publish
+categories:
+- Microsoft Azure
+- WebAPI
+tags: []
+meta:
+  publicize_twitter_user: vitormeriat
+  publicize_twitter_url: http://t.co/w4hg3xqyaA
+  _wpas_done_517888: '1'
+  _publicize_done_external: a:1:{s:7:"twitter";a:1:{i:61749732;b:1;}}
+author:
+  login: vitormeriat
+  email: vitormeriat@hotmail.com
+  display_name: vitormeriat
+  first_name: ''
+  last_name: ''
+---
+<p align="justify">Um dos pontos de maior adoção ao <strong>backend .NET WebAPI</strong> para o serviços mobile do Microsoft Azure, é a facilidade de testar localmente. Fora isso, Se comparado a arquitetura do <strong>backend NodeJS</strong> temos muito mais capacidade em realizar debug e auditoria em nossa aplicação.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig04.png"><img title="fig04" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig04" src="{{ site.baseurl }}/assets/fig04_thumb.png" width="700" height="414" /></a></p>
+<p>Neste post vou exemplificar como utilizar o mecanismo de log do <strong>Microsoft Azure Mobile Services</strong> com backend .NET WebAPI local e na nuvem de forma rápida e simples.</p>
+<p><!--more-->
+<p align="justify">O primeiro passo e criar um serviço mobile caso você ainda não o tenha feito. Essa é uma tarefa realmente muito simples porém se você nunca o fez pode se&#160; basear no artigo anterior: <a href="http://vitormeriat.com.br/2014/08/12/azure-mobile-service-primeiros-passos-com-backend-net-webapi/" target="_blank">Azure Mobile Service – Primeiros passos com backend .NET WebAPI</a>. </p>
+<p align="justify">Neste artigo vou utilizar o mesmo serviço que havia criado no artigo anterior. Para isso vou no portal de gestão do Microsoft Azure, acesso meu serviço (no caso meriatwebapi) e acessando a nuvenzinha azul clico em <strong>CONNECT AN EXISTING WINDOWS OR WINDOWS PHONE APP</strong>. Será baixado um serviço com o exemplo ToDo já implementado, como o descrito anteriormente.</p>
+<p align="justify">Vamos iniciar implementando o LOG para os testes locais. Para isso acesse a classe TodoItemController na pasta Controllers, e insira os seguintes códigos nos métodos GetAllTodoItems e GetTodoItem respectivamente: </p>
+<ul>
+<li>this.Services.Log.Info(&quot;[GetAllTodoItems] GET all items&quot;); </li>
+<li>this.Services.Log.Info(&quot;[GetTodoItem] GET item: &quot; + id ?? &quot;&lt;&lt;no id&gt;&gt;&quot;); </li>
+</ul>
+<p>O seu código deve ficar assim:</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig02.png"><img title="FIG02" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG02" src="{{ site.baseurl }}/assets/fig02_thumb.png" width="700" height="550" /></a></p>
+<p>Simples assim… <strong>Habemus LOG!!!</strong></p>
+<p align="justify">Vale notar que o LOG é uma propriedade de <strong>ApiServices</strong> do WindowsAzure.Mobile.Service, e que está acessível em <strong>TableController&lt;T&gt;</strong>.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig03.png"><img title="FIG03" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG03" src="{{ site.baseurl }}/assets/fig03_thumb.png" width="700" height="548" /></a></p>
+<p>&#160;</p>
+<h2>Rodando Local</h2>
+<p>Executando o a aplicação localmente, podemos observar os Logs de duas maneiras:</p>
+<ul>
+<li>Debugando a aplicação e visualizando no Console Output </li>
+<li>Gravando o LOG fisicamente </li>
+</ul>
+<p><strong><font size="4">Console Output</font></strong></p>
+<p align="justify">Apenas rode sua aplicação com o&#160; famoso “<strong>F5</strong>”. Atache um <strong>breakpoint</strong> no <strong>GetAllTodoItems</strong>. Note que seu serviço vai executar no <strong>localhost</strong>. Ai é só realizar o get (<strong>localhost:{sua-porta}/tables/TodoItem</strong>).</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig041.png"><img title="FIG04" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG04" src="{{ site.baseurl }}/assets/fig04_thumb1.png" width="700" height="510" /></a></p>
+<p>Já na aplicação, abra a console <strong>Output</strong> e execute os próximos passos até o <strong>LOG</strong>.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig05.png"><img title="FIG05" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG05" src="{{ site.baseurl }}/assets/fig05_thumb.png" width="700" height="372" /></a></p>
+<p align="justify">Como podemos ver, o <strong>LOG</strong> vai ser exibido na console <strong>Output</strong>. É claro que nem sempre estamos debugando a aplicação, mesmo que rodando localmente. Isso nos leva a segunda solução:</p>
+<p><strong><font size="4">Gravando o LOG fisicamente</font></strong></p>
+<p align="justify">Neste ponto vamos gravar um arquivo txt em algum lugar. Não tem nada de novo nisso. Vamos apenas criar um um diagnostico para concatenar os logs em um arquivo texto. Para isso vamos alterar nosso <strong>Web.config</strong> incluindo o seguinte código:</p>
+<blockquote><p><strong><font size="2">&lt;system.diagnostics&gt;          <br />&#160;&#160;&#160; &lt;trace autoflush=&quot;true&quot;&gt;           <br />&#160;&#160;&#160;&#160;&#160; &lt;listeners&gt;           <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;add name=&quot;default&quot; initializeData=&quot;C:developmentmylog.txt&quot;           <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; type=&quot;System.Diagnostics.TextWriterTraceListener&quot; /&gt;           <br />&#160;&#160;&#160;&#160;&#160; &lt;/listeners&gt;           <br />&#160;&#160;&#160; &lt;/trace&gt;           <br />&#160; &lt;/system.diagnostics&gt;</font></strong></p>
+</blockquote>
+<p>Seu config vai ficar como o descrito abaixo:</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig06.png"><img title="FIG06" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG06" src="{{ site.baseurl }}/assets/fig06_thumb.png" width="700" height="522" /></a></p>
+<p align="justify">Neste caso estou definindo que meus logs devem ser gravados em um arquivo chamado <strong>mylog.txt</strong> na pasta <strong>development</strong> no meu diretório <strong>C</strong>. Executando novamente a aplicação e executando os métodos <strong>GetAllTodoItems</strong> (http://localhost:50269/tables/TodoItem) e <strong>GetTodoItem</strong> (http://localhost:50269/tables/TodoItem/1) vamos ter o seguinte:</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig07.png"><img title="FIG07" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG07" src="{{ site.baseurl }}/assets/fig07_thumb.png" width="700" height="270" /></a></p>
+<p>&#160;</p>
+<h2>Rodando na Nuvem</h2>
+<p align="justify">Esse é realmente simples. Só precisamos publicar as alterações do nosso serviço. Para isso basta clicar com o botão direito no projeto e clicar em <strong>Publish</strong>.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig01.png"><img title="fig01" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig01" src="{{ site.baseurl }}/assets/fig01_thumb.png" width="700" height="411" /></a></p>
+<p>Na tela que se segue selecione a opção Microsoft Azure Mobile Services.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig021.png"><img title="fig02" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig02" src="{{ site.baseurl }}/assets/fig02_thumb1.png" width="700" height="321" /></a></p>
+<p>Neste momento será realizado sua autorização e será listados todos os seus serviços bem como a opção de criar um novo serviço para o deploy da aplicação.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig031.png"><img title="fig03" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig03" src="{{ site.baseurl }}/assets/fig03_thumb1.png" width="700" height="475" /></a></p>
+<p align="justify">Em nosso caso vamos apenas selecionar o serviço correspondente e realizar o <strong>Publish</strong>.</p>
+<p align="justify">Pronto!!! Após a finalização do processo o navegador será aberto na página inicial do nosso serviço hospedado na nuvem. Agora é só realizar o mesmo procedimento dos testes locais.</p>
+<p align="justify">No meu caso a execução foi:</p>
+<ul>
+<li>https://meriatwebapi.azure-mobile.net/tables/TodoItem </li>
+<li>https://meriatwebapi.azure-mobile.net/tables/TodoItem/1 </li>
+</ul>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig061.png"><img title="fig06" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig06" src="{{ site.baseurl }}/assets/fig06_thumb1.png" width="700" height="240" /></a></p>
+<p>Para o resultado é só acessar a aba LOGS para visualizar.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig051.png"><img title="fig05" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig05" src="{{ site.baseurl }}/assets/fig05_thumb1.png" width="700" height="400" /></a></p>
+<p align="justify"><strong>PS:</strong> Vale notar que ao executar na nuvem será solicitado sua autenticação no brwoser. É só informar seu usuário da subscription (o nome antes do @ no e-mail de acesso ao portal), e a chave do serviço.</p>
+<p>&#160;</p>
+<p align="justify">Esta é só a introdução e serve de base para que você possa realizar suas implementações necessárias a fim de gerar todos os seus LOGS. </p>
+<p>&#160;</p>
+<h2>Referências:</h2>
+<p><a href="http://azure.microsoft.com/blog/2014/07/28/azure-mobile-services-net-updates/">http://azure.microsoft.com/blog/2014/07/28/azure-mobile-services-net-updates/</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn629482.aspx">http://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn629482.aspx</a></p>
+<h6></h6>
+<h2><font color="#d19049">Bons estudos e até a próxima pessoal&#160; ;)</font></h2>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/me-azul.png"><font color="#d19049"><img title="me-azul" style="float:left;margin:0 30px 0 0;display:inline;" border="0" alt="me-azul" src="{{ site.baseurl }}/assets/me-azul_thumb.png?w=263&amp;h=263" width="175" align="left" height="175" /></font></a></p>
+<p><strong><font color="#d19049" size="5">Twitter: @</font></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><font color="#d19049" size="5">vitormeriat</font></strong></a></p>
+<p><strong><font color="#d19049" size="5">vitormeriat@</font></strong><a href="mailto:vitormeriat@gmail.com"><strong><font color="#d19049" size="5">gmail.com</font></strong></a></p>
+<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><font color="#d19049" size="5">vitor.pereira@studentpartner.com</font></strong></a></p>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mensageria–Uma introdução ao Enterprise Integration | Trophy</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="Mensageria–Uma introdução ao Enterprise Integration | Trophy">
+  <meta property="og:url" content="/2014/10/30/mensageriauma-introduo-ao-enterprise-integration/">
+  <meta property="og:site_name" content="Trophy">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Mensageria–Uma introdução ao Enterprise Integration | Trophy">
+  <meta name="twitter:url" content="/2014/10/30/mensageriauma-introduo-ao-enterprise-integration/">
+  <meta name="twitter:site" content="Trophy">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Trophy" href="/feed.xml">
+  <link rel="canonical" href="/2014/10/30/mensageriauma-introduo-ao-enterprise-integration/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2014-10-30T16:11:27-02:00" itemprop="datePublished">Oct 30, 2014</time></span>
+      <h1 itemprop="name headline">Mensageria–Uma introdução ao Enterprise Integration</h1>
+      
+        <span>
+          Posted in Enterprise Integration, SOA
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/10/capa2.png"><img title="capa" style="background-image:none;float:left;padding-top:0;padding-left:0;margin:10px 15px 0 0;display:inline;padding-right:0;border-width:0;" border="0" alt="capa" src="/assets/capa_thumb2.png" width="465" align="left" height="372" /></a></p>
+<p align="justify">Primeiro vale notar qual a necessidade da mensageria. Hoje muito se fala em sistemas distribuídos, escaláveis, cloud computing e etc. O que nos leva a perceber que a cada dia temos mais sistemas e serviços sendo utilizados em massa, e que logicamente estes sistemas raramente são construídas de forma isolada.</p>
+<p align="justify">O que temos visto é que a prática de mercado aponta para uma pluralidade de sistemas, o que por sua vez aponta para uma pluralidade de plataformas e linguagens. Neste post vamos iniciar os estudos sobre as técnicas de integração de sistemas (Enterprise Integration Patterns), iniciando pela mensageria.</p>
+<p><!--more--><br />
+<h2><strong>Um pouco de história</strong></h2>
+<p align="justify">A ideia surge em 1983, quando o indiano Vivek Ranadivé, após seu MBA no MIT, teve a ideia de criar um barramento de software à semelhança do que acontece no barramento de comunicação entre a placa mãe e as demais placas de um PC. Para realizar sua ideia ele criou a empresa Teknekron e começou a desenvolver sua ideia com o TIB (<strong>The Information Bus</strong>). Em 1985 seu primeiro cliente foi a Goldman Sachs. O conceito teve ótima adoção nas empresas do mercado financeiro, o que levou a expansão do conceito para os demais mercados.
+<p align="justify">O famoso TIP da Teknekron trabalhava no conceito <strong>publish-subscribe</strong> (<strong>PubSub</strong>), onde uma aplicação disponibiliza dados a serem consumidos por outras que subscrevem para ter acesso. O modelo foi um sucesso. Na época todo mundo usava COBOL mas as aplicações poderiam tratar os dados de forma diferente. Quem fazia o meio de campo era o tal TIB (<strong>The Information Bus</strong>).
+<p align="justify">As empresas financeiras em geral usavam máquinas IBM para processar o espetacular software da Teknekron. A IBM não ganhava nada porém seus técnicos não ficaram só assistindo. Por volta de 1990 começaram a desenvolver algo do gênero, até que em 1993, lançaram o <strong>IBM MQseries</strong> (hoje Websphere MQ). Em 1997 foi a vez da Microsoft entrar neste mercado lançando a primeira versão do <strong>MSMQ</strong> (Microsoft Message Queue).
+<p align="justify">O conceito <strong>PubSub</strong> hoje em dia é largamente utilizado por aplicações populares como <strong>Facebook</strong> e <strong>Twitter</strong>. Porém antigamente era coisa de rico. Os servidores <strong>MQs</strong> semelhantes ao TIB, foram durante muitos anos usados quase que exclusivamente por grandes empresas. Um dos principais motivos pela não popularização, foi o modelo vendor lock-in usado pelas empresas que comercializavam os <strong>MQs</strong>. A elas não interessava permitir interoperabilidade entre diferentes produtos e até dificultavam ao máximo uma eventual troca de fornecedor de <strong>MQ</strong>.
+<p align="justify">Os próprios clientes reclamavam disso porque era comum ter que fazer um TIBCO MQ conversar com um IBM MQseries e era um verdadeiro parto... felizmente as coisas mudaram.&nbsp;
+<p>&nbsp;</p>
+<h2>Introdução</h2>
+<p align="justify">Hoje porém é consenso que, a integração entre estas múltiplas aplicações é uma necessidade constante. O que precisa ser notado é que para se integrar um simples sistema temos de enfrentar alguns desafios:</p>
+<ul>
+<li>Redes não são 100% confiáveis;  </li>
+<li>Redes são lentas ;  </li>
+<li>Aplicações podem usar diferentes linguagens, operar em plataformas diferentes e tratar os dados de acordo com suas próprias necessidades;  </li>
+<li>Mudanças são inevitáveis. Uma solução de integração deve minimizar dependências entre aplicações. O acoplamento entre elas deve ser tão baixo que mudanças em uma aplicação não implique em mudanças nas demais.</li>
+</ul>
+<p align="justify">O que se vê ao longo do amadurecimento das tecnologias de informação, foram diversas tentativas de vencer (ou amenizar) os desafios já citados por meio de algumas abordagens de comunicação entre aplicações distintas:</p>
+<ol>
+<li>
+<div align="justify"><strong>Comunicação por transferência de arquivo</strong> – Quando uma determinada aplicação grava um arquivo em um lugar acordado e a outra lê e apaga após ler. O formato dos dados geralmente era um outro acordo; </div>
+</li>
+<li>
+<div align="justify"><strong>Comunicação via armazenamento</strong> - Compartilhamento de uma base de dados; </div>
+</li>
+<li>
+<div align="justify"><strong>Comunicação via RPC, Remote Procedure Call</strong> – Quando uma aplicação expõe as funcionalidades necessárias de modo a possibilitar o acesso remoto. Este tipo de comunicação é real time e síncrono, logo quem solicita algo ao serviço deve esperar a resposta; </div>
+</li>
+<li>
+<div align="justify"><strong>Comunicação via Mensagens (ou mensageria)</strong> – Neste tipo de comunicação uma aplicação envia uma mensagem para um canal de acesso comum. Neste caso as demais aplicações vão efetuar a leitura quando quiserem, mediante contrato para determinação do canal e formato, bem como alguns detalhes que veremos mais detalhadamente. Geralmente este tipo de comunicação é assíncrona;</div>
+</li>
+</ol>
+<p>&nbsp;</p>
+<h2>Com tantas opções, porque falar só sobre mensageria? </h2>
+<p align="justify">Vale notar que ao longo do tempo diversas técnicas foram implementadas, porém a mensageria acabou se tornando o padrão neste caso. Entre os vários motivos que veremos mais detalhadamente, a interoperabilidade, evolução dos protocolos e o consumo assíncrono são de longe as características que elevaram o status da mensageria em relação a integração de sistemas.</p>
+<p>&nbsp;</p>
+<h2>Então, o que é mensageria?</h2>
+<p align="justify">Vamos considerar o seguinte cenário para a abstração: Uma chamada telefônica é uma forma de comunicação <strong>síncrona</strong> porque os dois lados precisam estar disponíveis ao mesmo tempo. </p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/10/fig1.png"><img title="FIG1" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG1" src="/assets/fig1_thumb.png" width="700" height="257" /></a></p>
+<p align="justify">Já se um dos lados liga e deixa um recado de voz, esta mensagem pode ser ouvida e respondida conforme a disponibilidade do outro lado. Neste caso dizemos que houve uma comunicação <strong>assíncrona</strong>.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/10/fig2.png"><img title="FIG2" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG2" src="/assets/fig2_thumb.png" width="700" height="331" /></a></p>
+<blockquote><p align="left">Mensageria é uma tecnologia que permite comunicação de alta velocidade e de forma assíncrona entre sistemas diferentes com mensagens entregues de forma garantida.</p>
+</blockquote>
+<p align="justify">Os canais, também conhecidos como filas de mensagens (<strong>MQ = message queuing</strong>), são caminhos lógicos que conectam os sistemas. Eles se comportam como se fossem uma coleção de mensagens compartilhadas entre múltiplos computadores que podem ser acessados concorrentemente por múltiplas aplicações.</p>
+<p align="justify">Quem envia a mensagem (escreve no canal) é o <strong>sender</strong> ou <strong>producer</strong> e o que recebe (lê o canal) é o <strong>receiver</strong> ou <strong>consumer</strong>. </p>
+<blockquote><p>A mensagem em si é simplesmente algum tipo de dado.</p>
+</blockquote>
+<p align="justify">Normalmente a mensagem contém um cabeçalho (<strong>header</strong>) e o corpo propriamente dito (<strong>body</strong>). O header contém os <strong>metadados</strong> sobre a mensagem. O corpo contém os dados trocados e é ignorado pelo sistema de mensageria. No linguajar DEV, podemos dizer que a mensagem é o corpo.</p>
+<p align="justify">&nbsp;</p>
+<h2>O que é um sistema de mensageria?</h2>
+<p align="justify">É o tal canal. Normalmente é um software que gerencia e coordena as mensagens enviadas e recebidas com a responsabilidade de não perder nenhuma. Em caso de falha, deve ser capaz de tentar novamente até conseguir (ou ocorrer uma intervenção externa). Conhecido em inglês por <strong>messaging system</strong> ou <strong>message-oriented middleware</strong> (MOM).</p>
+<p>Entre os mais conhecidos e utilizados modelos de <strong>MOMs </strong>temos o <strong>MSMQ</strong> (Message Queuing), <strong>JMS</strong> (Java Message Service) e <strong>MQSeries</strong> (IBM WebSphere MQ). Estes veremos com mais detalhes em postagens futuras.</p>
+<p>Uma mensagem é transmitida em 5 passos:</p>
+<ol>
+<li><strong>CREATE</strong> – o sender cria a mensagem e a preenche com dados;  </li>
+<li><strong>SEND</strong> – o sender adiciona a mensagem ao canal;  </li>
+<li><strong>DELIVER</strong> – o sistema de mensageria move a mensagem do computador do sender deixando disponível ao computador do receiver;  </li>
+<li><strong>RECEIVE</strong> – o receiver lê a mensagem no canal;  </li>
+<li><strong>PROCESS</strong> – o receiver extrai os dados da mensagem.</li>
+</ol>
+<p>Tudo de acordo com a figura abaixo:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/10/fig3.png"><img title="FIG3" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG3" src="/assets/fig3_thumb.png" width="700" height="355" /></a></p>
+<p>Dois tipos importantes de envio de mensagens:</p>
+<ol>
+<li>
+<div align="justify"><strong>Send and forget (ou fire and forget)</strong> – O sender cria e envia a mensagem em questão. Completado o envio, o sender assume outras tarefas confiando que o sistema de mensageria&nbsp; em algum momento entregará a mensagem ao receiver. </div>
+</li>
+<li>
+<div align="justify"><strong>Store and forward</strong> - Ao enviar, o sender armazena em seu computador a mensagem (na memória ou no disco). O sistema de mensageria igualmente grava a mensagem no computador do receiver. Trocas de mensagens usando o processo Store-and-forward podem ser repetidas quantas vezes forem necessárias sem risco de existir em duplicata no receiver.</div>
+</li>
+</ol>
+<p align="justify">&nbsp;</p>
+<p align="justify">No próximo post vamos ver sobre os protocolos de mensageria mais conhecidos e praticados no mercado hoje.</p>
+<p align="justify">&nbsp;</p>
+<h2>Referências</h2>
+<ul>
+<li><a href="http://www.eaipatterns.com/Introduction.html" target="_blank">Gregor Hohpe - Enterprise Application Integration</a>  </li>
+<li><font size="3"><font style="font-weight:normal;"><a href="http://pt.wikipedia.org/wiki/Message_Oriented_Middleware" target="_blank">Message Oriented Middleware</a></font></font>  </li>
+<li><a title="http://www.eaipatterns.com/Introduction.html" href="http://www.eaipatterns.com/Introduction.html">http://www.eaipatterns.com/Introduction.html</a></li>
+</ul>
+<p>&nbsp;</p>
+<h2><font color="#666666">Bons estudos e até a próxima pessoal&nbsp; ;)</font></h2>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/me-azul.png"><font color="#666666"><img title="me-azul" style="float:left;margin:0 30px 0 0;display:inline;" border="0" alt="me-azul" src="/assets/me-azul_thumb.png?w=263&amp;h=263" width="175" align="left" height="175" /></font></a>
+<p><strong><font color="#666666" size="5">Twitter: @</font></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><font color="#666666" size="5">vitormeriat</font></strong></a>
+<p><strong><font color="#666666" size="5">vitormeriat@</font></strong><a href="mailto:vitormeriat@gmail.com"><strong><font color="#666666" size="5">gmail.com</font></strong></a>
+<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><font color="#666666" size="5">vitor.pereira@studentpartner.com</font></strong></a></p></p></p></p></p>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2014/10/24/filosofia-no-javascript-funes-so-declarao-ou-expresso/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>Filosofia no JavaScript - Funções são declaração ou expressão?</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

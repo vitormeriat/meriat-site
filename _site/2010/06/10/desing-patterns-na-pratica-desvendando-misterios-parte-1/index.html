@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Desing Patterns na prática – Desvendando mistérios (parte 1) | Trophy</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="Desing Patterns na prática – Desvendando mistérios (parte 1) | Trophy">
+  <meta property="og:url" content="/2010/06/10/desing-patterns-na-pratica-desvendando-misterios-parte-1/">
+  <meta property="og:site_name" content="Trophy">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Desing Patterns na prática – Desvendando mistérios (parte 1) | Trophy">
+  <meta name="twitter:url" content="/2010/06/10/desing-patterns-na-pratica-desvendando-misterios-parte-1/">
+  <meta name="twitter:site" content="Trophy">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Trophy" href="/feed.xml">
+  <link rel="canonical" href="/2010/06/10/desing-patterns-na-pratica-desvendando-misterios-parte-1/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2010-06-10T10:31:48-03:00" itemprop="datePublished">Jun 10, 2010</time></span>
+      <h1 itemprop="name headline">Desing Patterns na prática – Desvendando mistérios (parte 1)</h1>
+      
+        <span>
+          Posted in Desing Patterns
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <div id="msgcns!BD055AA47A388023!154" class="bvMsg"> <span />
+<p style="text-align:justify;"><span style="font-size:14pt;line-height:115%;font-family:Verdana,sans-serif;">Desvendando<br />
+ os mistérios do<br />
+GoF...</span></p>
+<p style="text-align:right;" align="right">&quot;Os<br />
+padrões de<br />
+projeto são descrições de objetos que se<br />
+comunicam e classes que são customizadas para resolver<br />
+um problema genérico de design em um contexto específico&quot;  <br />
+<i>Gamma, Helm, Vlissides &amp; Johnson</i></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">Olá<br />
+pessoal. Estou iniciando uma série de artigos que visam o estudo prático<br />
+ dos<br />
+Desing Patterns com foco em C#. Logo abaixo inicio esta série com um<br />
+breve<br />
+relato histórico.</span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">Ao<br />
+longo dos anos, vários paradigmas buscaram cada vez mais uma maior<br />
+reutilização<br />
+de código, tornando assim as aplicações finais mais poderosas com um<br />
+menor<br />
+esforço do programador. </span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">Porém<br />
+a reutilização de código, bem como o projeto orientado a objetos, são<br />
+tarefas difíceis<br />
+de serem realizadas, sendo apenas conseguido com eficiência por<br />
+projetistas experientes.</span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">Surgiu<br />
+daí então a idéia da criação de catálogos de padrões de projeto, os<br />
+quais são uma<br />
+espécie de manual de boas práticas a serem seguidas e utilizadas em<br />
+projetos de<br />
+software orientados a objetos. Dos catálogos mais conhecidos e<br />
+utilizados,<br />
+destaca-se o primeiro e considerado mais importante, escrito em 1995<br />
+pela Gang<br />
+of Four, ou mais conhecida como GoF, e que também será o foco deste<br />
+artigo.</span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">As<br />
+soluções orientadas a objetos, desde o seu início, sempre buscaram<br />
+através dos mecanismos<br />
+de herança uma maior reaproveitamento e reutilização de código.</span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">Porém,<br />
+se projetar código orientado a objetos já é difícil, mais difícil ainda é<br />
+projetar software orientado a objetos com código reutilizável.<br />
+Projetistas<br />
+experientes conseguem visualizar a reutilização facilmente na fase de<br />
+projeto<br />
+de uma aplicação, enquanto projetistas novatos têm mais dificuldade para<br />
+conseguir este nível de abstração de dados a ponto de visualizar um<br />
+padrão<br />
+dentro do software.</span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">Isso<br />
+ocorre por que um projetista experiente, por ter trabalhado em vários<br />
+projetos<br />
+e visto vários sistemas diferentes, consegue encontrar padrões em<br />
+códigos, de<br />
+classes e de comunicação entre objetos.</span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">Daí<br />
+surgiu a idéia de padrões de projetos. Os padrões de projeto (do inglês <i>Design<br />
+Patterns</i>) são soluções para problemas recorrentes no desenvolvimento<br />
+ de<br />
+sistemas de software orientado a objetos.</span></p>
+<div style="text-align:left;"><span />
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;"><span><a href="https://crf5iq.bay.livefilestore.com/y1maQ9fQv3OukFRGCABq1W-6WRwUKEoiUnXXqcx7l9GIJopHo7jOdjTIlz6dMBv_nEK8XLNXcR6cBcC6-RnTtN7sTGSA360HMk8qEjOg1NcgJZJp9jKHy-YZR-DEAIK6RoNanvSPFSYJ1Eez6TJPnOfEA/image001.jpg?psid" rel="WLPP;url=https://crf5iq.bay.livefilestore.com/y1maQ9fQv3OukFRGCABq1W-6WRwUKEoiUnXXqcx7l9GIJopHo7jOdjTIlz6dMBv_nEK8XLNXcR6cBcC6-RnTtN7sTGSA360HMk8qEjOg1NcgJZJp9jKHy-YZR-DEAIK6RoNanvSPFSYJ1Eez6TJPnOfEA/image001.jpg?psid"><img src="/assets/image001.jpg?psid" alt="" /></a></span></span></p>
+</div>
+<p><span />
+<p style="text-align:justify;"><span /></p>
+<p style="text-align:justify;line-height:normal;"><span style="font-size:14pt;font-family:Verdana,sans-serif;">Sinopse dos Design<br />
+Patterns da &quot;Gang of Four&quot;</span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><b><span style="font-size:12pt;font-family:Verdana,sans-serif;">Padrões de Criação</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 14.2pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Padrões<br />
+que têm a ver com a <i>instanciação </i>de objetos</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 14.2pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><span lang="EN-US"><a href="http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/pat/abstractfactory.htm"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;text-decoration:none;" lang="PT-BR">Abstract Factory</span></b></a></span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Provê uma interface<br />
+para criar famílias de objetos relacionados ou inter-dependentes sem<br />
+especificar suas classes concretas.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Builder</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Separa a construção<br />
+de um objeto complexo da sua representação de forma que o mesmo processo<br />
+ de<br />
+construção possa criar representações diferentes.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><span lang="EN-US"><a href="http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/pat/factory.htm"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;text-decoration:none;" lang="PT-BR">Factory Method</span></b></a></span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Define uma interface<br />
+para criar um objeto, mas deixa as subclasses decidirem qual classe<br />
+instanciar.<br />
+O padrão Factory Method deixa uma classe repassar a responsabilidade de<br />
+instanciação para subclasses.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Prototype</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Especifica os tipos<br />
+de objetos a criar usando uma instância-protótipo e cria novos objetos<br />
+copiando<br />
+este protótipo.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><span lang="EN-US"><a href="http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/pat/singleton.htm"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;text-decoration:none;" lang="PT-BR">Singleton</span></b></a></span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Garante que uma<br />
+classe tenha uma única instância e provê um ponto global de acesso à<br />
+instância.</span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><b><span style="font-size:12pt;font-family:Verdana,sans-serif;">Padrões Estruturais</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Padrões<br />
+que têm a ver com a <i>composição</i> de classes ou objetos</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Adapter</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Converte a interface<br />
+de uma classe em outra interface com a qual os clientes estão prontos<br />
+para<br />
+lidar. O padrão Adapter permite que classes trabalhem conjuntamente<br />
+apesar de<br />
+interfaces incompatíveis.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Bridge</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Desacopla uma<br />
+abstração de sua implementação de forma que as duas possam mudar<br />
+independentemente uma da outra.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><span lang="EN-US"><a href="http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/pat/composite.htm"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;text-decoration:none;" lang="PT-BR">Composite</span></b></a></span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Compõe objetos em<br />
+estruturas de árvore para representar hierarquias Parte-Todo. O padrão<br />
+Composite permite que clientes tratem objetos individuais e composições<br />
+de<br />
+objetos de uniformemente.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><span lang="EN-US"><a href="http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/pat/decorator.htm"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;text-decoration:none;" lang="PT-BR">Decorator</span></b></a></span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Adiciona<br />
+responsabilidades a um objeto dinamicamente. Decoradores provêem uma<br />
+alternativa flexível à herança para estender funcionalidade.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Façade</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Provê uma interface<br />
+unificada para um conjunto de interfaces num subsistema. O padrão Façade<br />
+ define<br />
+uma interface de mais alto nível, deixando o subsistema mais fácil de<br />
+usar.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Flyweight</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Usa o<br />
+compartilhamento para dar suporte eficiente ao uso de um grande número<br />
+de<br />
+objetos de granularidade pequena.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Proxy</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Provê um objeto<br />
+procurador ou <i>placeholder</i> para um outro objeto para controlar o<br />
+acesso a<br />
+ele.</span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><b><span style="font-size:12pt;font-family:Verdana,sans-serif;">Padrões de Comportamento</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Padrões<br />
+que caracterizam formas de <i>interação </i>entre classes e objetos</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Chain<br />
+of Responsibility</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Evita acoplar o enviador<br />
+de um pedido ao receptor dando oportunidade a vários objetos para<br />
+tratarem do<br />
+pedido. Os objetos receptores são encadeados e o pedido é passado na<br />
+cadeia até<br />
+que um objeto o trate.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Command</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Encapsula um pedido<br />
+num objeto, permitindo assim parametrizar clientes com pedidos<br />
+diferentes,<br />
+enfileirar pedidos, fazer <i>log</i> de pedidos, e dar suporte a<br />
+operações de <i>undo</i>.</span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Interpreter</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Dada uma linguagem,<br />
+define uma representação de sua gramática e um interpretador que usa a<br />
+representação da gramática para interpretar sentenças da linguagem.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><span lang="EN-US"><a href="http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/pat/iterator.htm"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;text-decoration:none;" lang="PT-BR">Iterator</span></b></a></span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Provê uma forma de<br />
+acessar os elementos de uma coleção de objetos seqüencialmente sem expor<br />
+ sua<br />
+representação subjacente.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Mediator</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Define um objeto que<br />
+encapsule a forma com a qual um conjunto de objetos interagem. O padrão<br />
+Mediator promove o acoplamento fraco evitando que objetos referenciem<br />
+uns aos<br />
+outros explicitamente e permite que suas interações variem<br />
+independentemente.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">Memento</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Sem violar o<br />
+princípio de encapsulamento, captura e externaliza o estado interno de<br />
+um<br />
+objeto de forma a poder restaurar o objeto a este estado mais tarde.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><span lang="EN-US"><a href="http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/pat/observer.htm"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;text-decoration:none;" lang="PT-BR">Observer</span></b></a></span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Define uma<br />
+dependência um-para-muitos entre objetos de forma a avisar e atualizar<br />
+vários<br />
+objetos quando o estado de um objeto muda.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;text-decoration:underline;"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;">State</span></b></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Permite que um<br />
+objeto altere seu comportamento quando seu estado interno muda. O objeto<br />
+ estará<br />
+aparentemente mudando de classe com a mudança de estado.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;"><span lang="EN-US"><a href="http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/pat/strategy.htm"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;text-decoration:none;" lang="PT-BR">Strategy</span></b></a></span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Define uma família<br />
+de algoritmos, encapsula cada um, e deixe-os intercambiáveis. O padrão<br />
+Strategy<br />
+permite que o algoritmo varie independentemente dos clientes que o usam.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;color:rgb(0,0,0);"><span lang="EN-US"><a href="http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/pat/template.htm"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;text-decoration:none;" lang="PT-BR">Template Method</span></b></a></span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Define o esqueleto<br />
+de um algoritmo numa operação, deixando que subclasses completem algumas<br />
+ das<br />
+etapas. O padrão Template Method permite que subclasses redefinem<br />
+determinadas<br />
+etapas de um algoritmo sem alterar a estrutura do algoritmo.</span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;"> </span></p>
+<p style="margin-bottom:.0001pt;text-align:justify;line-height:normal;color:rgb(0,0,0);"><span lang="EN-US"><a href="http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/pat/visitor.htm"><b><span style="font-size:9pt;font-family:Verdana,sans-serif;text-decoration:none;" lang="PT-BR">Visitor</span></b></a></span></p>
+<p style="text-align:justify;line-height:normal;margin:0 0 .0001pt 18pt;"><span style="font-size:9pt;font-family:Verdana,sans-serif;">Represente uma<br />
+operação a ser realizada nos elementos de uma estrutura de objetos. O<br />
+padrão<br />
+Visitor permite que se defina uma nova operação sem alterar as classes<br />
+dos<br />
+elementos nos quais a operação age.</span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;"> </span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">No<br />
+próximo artigo estaremos abordando os padrões de projeto na prática com<br />
+foco no<br />
+C#.</span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">Qualquer<br />
+dúvida<br />
+ podem me mandar um email.</span></p>
+<p style="text-align:justify;"><span lang="EN-US"><a href="mailto:vitormeriat@gmail.com"><span style="font-family:Verdana,sans-serif;" lang="PT-BR">vitormeriat@gmail.com</span></a></span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">http://twitter.com/vitormeriat</span></p>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;">Até<br />
+a próxima!!!</span></p>
+<p><span style="font-family:Verdana,sans-serif;"></span>
+<p style="text-align:justify;"><span style="font-family:Verdana,sans-serif;"><br /></span></p>
+</div>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

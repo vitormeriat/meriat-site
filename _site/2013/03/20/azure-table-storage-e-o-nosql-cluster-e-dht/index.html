@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Azure Table Storage e o NoSQL - Cluster e DHT | Trophy</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="Azure Table Storage e o NoSQL - Cluster e DHT | Trophy">
+  <meta property="og:url" content="/2013/03/20/azure-table-storage-e-o-nosql-cluster-e-dht/">
+  <meta property="og:site_name" content="Trophy">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Azure Table Storage e o NoSQL - Cluster e DHT | Trophy">
+  <meta name="twitter:url" content="/2013/03/20/azure-table-storage-e-o-nosql-cluster-e-dht/">
+  <meta name="twitter:site" content="Trophy">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Trophy" href="/feed.xml">
+  <link rel="canonical" href="/2013/03/20/azure-table-storage-e-o-nosql-cluster-e-dht/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2013-03-20T17:17:10-03:00" itemprop="datePublished">Mar 20, 2013</time></span>
+      <h1 itemprop="name headline">Azure Table Storage e o NoSQL - Cluster e DHT</h1>
+      
+        <span>
+          Posted in Cloud Computing, Microsoft Azure, Microsoft Azure Storage
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify">Dando prosseguimento a esta mini-série, veremos alguns conceitos sobre <strong>cluster</strong> e <strong>DHT</strong>. No primeiro momento você pode se perguntar: Sou um desenvolvedor, só quero saber como criar um CRUD no <strong>Azure</strong> então para que tudo isso? O fato é estes pontos são a base desta estrutura, que levaram a evolução inevitável de se pensar em nuvem. Na verdade são conceitos que justificam toda a computação na nuvem mais vamos focar no<strong> Azure Table Service</strong>.</p>
+<p align="justify">A computação na nuvem acontece de maneira distribuída semelhante a um grid ou cluster. Também devido a esta &quot;maneira&quot; distribuída é que topamos com estruturas como a do <strong>ATS</strong>, <strong>Queues</strong> e <strong>Blobs</strong> no caso do Azure. O próprio <strong>SQL Databases</strong> (antigo <strong>SQL Azure</strong>), possui algumas diferenças em relação a sua versão <strong>on-premise</strong>. Isto ocorre devido a infra que torna possível a <strong>cloud computing</strong>. Esta infra surge em resposta a algumas necessidades que veremos nos próximos tópicos.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/10/dthcapa.png"><img title="dthCapa" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:none;padding-top:0;padding-left:0;margin-left:auto;border-left:0;display:block;padding-right:0;margin-right:auto;" border="0" alt="dthCapa" src="/assets/dthcapa_thumb.png" width="560" height="226" /></a></p>
+<p><!--more--><br />
+<h2 align="justify">&#160;</h2>
+<h2 align="justify">CLUSTER</h2>
+<p align="justify">Podemos definir um cluster como um mecanismo de dois ou mais computadores ou sistemas (chamados de <strong>nodos</strong> ou <strong>nós</strong>), que trabalhando em conjunto para a execução de aplicações ou realizando tarefas diversas de tal forma que os usuários tenham a impressão de um recurso único (computador virtual),disponibilizando tudo. Estamos falando na transparência do sistema, que tem como características fundamentais a confiabilidade, distribuição de carga e performance.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/03/cluster.png"><img title="Cluster" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="Cluster" src="/assets/cluster_thumb.png" width="488" height="491" /></a></p>
+<p align="justify">Um cluster é um tipo de sistema de processamento paralelo que consiste de uma coleção de computadores independentes interconectados através de uma rede, trabalhando cooperativamente como um único e integrado recurso computacional.&#160;&#160;&#160;&#160;&#160;&#160; </p>
+<p align="justify">A unidade básica do cluster é um único computador, chamado de nó ou nodo. Podemos aumentar um cluster simplesmente adicionando outras máquinas. O cluster como um todo será mais poderoso quanto mais rápidos forem os seu computadores individualmente e quanto mais rápida for a rede de interconexão que os conecta.</p>
+<p align="justify">A ideia por detrás do uso de clusters é espalhar as cargas entre todos os computadores disponíveis, usando ao máximo os recursos que estão livres nas máquinas.</p>
+<p align="justify">Basicamente existem 3 tipos de clusters:</p>
+<ul>
+<li>
+<div align="justify"><strong>Tolerância à falhas / Alta Disponibilidade (High Availability (HA) and Failover) </strong></div>
+<ol>       </ol>
+<ol>
+<li>
+<div align="justify">Estes modelos de clusters são construídos para prover uma disponibilidade de serviços e recursos de forma ininterruptas através do uso da redundância implícitas ao sistema </div>
+</li>
+<li>
+<div align="justify">A ideia geral é que se um nó do cluster vier a falhar (failover), aplicações ou serviços possam estar disponíveis em outro nó </div>
+</li>
+<li>
+<div align="justify">Utilizados para base de dados de missões críticas, correio, servidores de arquivos e aplicações </div>
+</li>
+</ol>
+</li>
+<li>
+<div align="justify"><strong>Balanceamento de Carga (Load Balancing) </strong></div>
+<ol>       </ol>
+<ol>
+<li>
+<div align="justify">Este modelo distribui o tráfego entrante ou requisições de recursos provenientes dos nodos que executam os mesmos programas entre as máquinas que compõem o cluster </div>
+</li>
+<li>
+<div align="justify">Todos os nodos estão responsáveis em controlar os pedidos. Se um nó falhar, as requisições são redistribuídas entre os nós disponíveis no momento. </div>
+</li>
+<li>
+<div align="justify">Este tipo de solução é normalmente utilizado em fazendas de servidores de web (web farms) </div>
+</li>
+</ol>
+</li>
+<li>
+<div align="justify"><strong>Computação de Alto Desempenho </strong></div>
+</li>
+</ul>
+<h3>&#160;</h3>
+<h3>Maiores Desafios</h3>
+<ul>
+<li>Escalabilidade (física e da aplicação) </li>
+<li>Disponibilidade (gerenciamento de falhas) </li>
+<li>Imagem Única do Sistema (parecer ao usuário único sistema em execução) </li>
+<li>Comunicação Rápida (redes e protocolos de comunicação) </li>
+<li>Balanceamento de Carga (CPU, Rede, Memória, Discos) </li>
+<li>Segurança e Encriptação </li>
+<li>Gerenciabilidade (administração e controle) </li>
+<li>Programabilidade (API simples) </li>
+<li>Aplicabilidade (aplicações voltadas para o cluster) </li>
+</ul>
+<h3>&#160;</h3>
+<h3 align="justify">Por que utilizar cluster?</h3>
+<ul>
+<li>
+<div align="justify">Quanto mais computadores na rede mais rápido fica sua estrutura (se você implementar da maneira correta ok?) </div>
+</li>
+<li>
+<div align="justify">Maior agilidade no processamento </div>
+</li>
+<li>
+<div align="justify">Componentes de fácil disponibilidade </div>
+</li>
+<li>
+<div align="justify">Fácil manutenção - A manutenção geralmente fica por conta do grupo de usuários, que ganha com experiência e economia de recursos </div>
+</li>
+<li>
+<div align="justify">Independência de fornecedores de hardware </div>
+</li>
+<li>
+<div align="justify">Custos muito baixos </div>
+</li>
+<li>
+<div align="justify">Se um computador do sistema parar não precisa esperar seu conserto para continuar seu trabalho </div>
+</li>
+<li>
+<div align="justify">Disponibilidade de sistema operacional e ferramentas de apoio gratuitas </div>
+</li>
+<li>
+<div align="justify">Uma configuração inicial pode ser facilmente atualizada, sem desperdício de investimento </div>
+</li>
+</ul>
+<p>&#160;</p>
+<h2>DTH - Distributed Hash Table</h2>
+<p align="justify">As pesquisas em <strong>DHT</strong> surgiram originalmente motivadas pelos sistemas peer-to-peer. O DTH surge da uma necessidade em se obter e alocar informações de uma maneira descentralizada, escalável, balanceada e de excelente performance. Estamos falando da era que antecede a famosa explosão de dados que vivemos hoje.</p>
+<p align="justify">Assim como o <strong>DNS</strong> tornou-se uma necessidade [já que em 1983 já existiam milhões de hosts na Internet], o P2P [<strong>peer-to-peer</strong>] é o resultado de uma tendência natural do desenvolvimento da engenharia de software em relação a disponibilidade de tecnologia para a criação de redes maiores. Não cabe aqui falar sobre a importância ou influência do <strong>P2P</strong> para a computação na nuvem mas sim do mecanismo que tornou isso possível: <strong>Distributed Hash Table</strong>.</p>
+<p align="justify">No mundo da descentralização, DTHs tiveram um efeito revolucionário com uma arquitetura de topologia emergente, propriedade demonstrável e excelente desempenho.</p>
+<p align="justify">A DTH formam infra-estruturas que provisionam um serviço de lookup semelhante a já conhecida tabela <strong>HASH</strong> ( um sistema que funciona em pares <strong>CHAVE-VALOR</strong>), que são armazenados de forma a qualquer nó participante possa recuperar de forma eficiente o valor associado a uma determinada chave. A responsabilidade de manter o mapeamento de chaves para valores é distribuída entre os nós de maneira que as mudanças causem o mínimo possível de desordem. Com isso as DTHs escalam um número extremamente grande de nós e gerenciam chegadas, saídas e falhas contínuas.</p>
+<p align="justify">Observe a imagem abaixo:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2013/03/dth1.png"><img title="DTH1" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="DTH1" src="/assets/dth1_thumb.png" width="560" height="315" /></a></p>
+<p>&#160;</p>
+<p align="justify">Aqui, cada posição de uma tabela hash normal é um peer e este é o responsável por ter o objeto que sofrerá ação. Na imagem acima, quando o usuário invoca uma operação sobre um objeto, a requisição chega a camada de roteamento já com o <strong>GUID</strong> do objeto. A camada de roteamento faz o search e encaminha a requisição até encontrar o nó com o objeto e realizar a operação.</p>
+<p align="justify">No modelo DHT, a GUID do objeto é gerada com uma função hash, usada para determinar o posicionamento e a localização, por isso, esses sistemas que usam uma camada de roteamento são conhecidos como tabelas hash distribuídas. Com isso, há três operações básicas, <strong>put</strong> (GUID, dados) para armazenar, <strong>remove</strong> (GUID) para remover todas as referências do objeto e <strong>get</strong> (GUID) para recuperar o objeto de um dos nós que o armazena.</p>
+<p align="justify">Agora, o interessante de tudo isso são as buscas. Como se busca numa DHT? É ai que a mágica toda acontece. Não vou abordar sobre isso já que estamos vendo apenas alguns conceitos para fortalecer nossa consciência de cloud computing, mas vale a pena dar uma olhada melhor em tempo oportuno.</p>
+<p align="justify">DHTs são usadas para construir serviços complexos com sistemas de arquivos distribuídos, compartilhamento de arquivos peer-to-peer, <strong>web caching</strong>, multcast, mensageria dentre outros. Algum destes serviços te lembra algo em relação ao Azure? Não é simples coincidência.</p>
+<p align="justify">&#160;</p>
+<p align="justify">Nos próximos posts vamos continuar vendo sobre alguns dos mecanismos que tornaram a cloud computing possível e sua influência sobre o serviços de storage na nuvem.</p>
+<p>&#160;</p>
+<h2>Até mais e bom estudo a todos!</h2>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/06/me-azul.png"><img title="Me Azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="Me Azul" align="left" src="/assets/me-azul_thumb.png?w=110&amp;h=110&amp;h=110" width="110" height="110" /></a></p>
+<h3><font color="#9bbb59"><strong><font color="#4f81bd">Twitter:</font></strong> </font><a href="http://twitter.com/#!/vitormeriat"><font color="#9bbb59">@vitormeriat</font></a></h3>
+<h3><a href="mailto:vitormeriat@gmail.com"><font color="#9bbb59">vitormeriat@gmail.com</font></a></h3>
+<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font color="#9bbb59">vitor.pereira@studentpartner.com</font></a></h3>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2013/03/05/azure-table-service-e-o-nosql-introduo/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>Azure Table Service e o NoSQL – Introdução</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

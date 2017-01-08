@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MQTT, protocolos, integrações e os cuidados com IoT | Trophy</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="MQTT, protocolos, integrações e os cuidados com IoT | Trophy">
+  <meta property="og:url" content="/2015/06/08/mqtt-protocolos-integraes-e-os-cuidados-com-iot/">
+  <meta property="og:site_name" content="Trophy">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="MQTT, protocolos, integrações e os cuidados com IoT | Trophy">
+  <meta name="twitter:url" content="/2015/06/08/mqtt-protocolos-integraes-e-os-cuidados-com-iot/">
+  <meta name="twitter:site" content="Trophy">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Trophy" href="/feed.xml">
+  <link rel="canonical" href="/2015/06/08/mqtt-protocolos-integraes-e-os-cuidados-com-iot/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2015-06-08T11:29:53-03:00" itemprop="datePublished">Jun 8, 2015</time></span>
+      <h1 itemprop="name headline">MQTT, protocolos, integrações e os cuidados com IoT</h1>
+      
+        <span>
+          Posted in Cloud Computing, Enterprise Integration, IoT
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify"><strong>MQTT</strong> ou <strong><a href="http://mqtt.org/" target="_blank">Message Queuing Telemetry Transport</a></strong>, é um protocolo de conectividade para <strong>M2M </strong>(Machine-to-Machine)<strong> / IoT</strong> (Internet of Things), projetado para suportar o transporte de mensagens para dispositivos de pequena capacidade, baixo consumo de energia, baixa largura de banda, alta latência e disponibilidade variável.</p>
+<p align="justify">Em resumo é um protocolo de mensagens de peso leve, que traz a capacidade de comunicação assíncrona em redes restritas, a dispositivos de recursos limitados. Ele se tornou um padrão <a href="https://www.oasis-open.org/" target="_blank">OASIS</a> em 07 de novembro de 2014, em sua versão <strong>3.1.1</strong>.</p>
+<p style="text-align: center;" align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/06/capa1.png"><img class="alignnone wp-image-2591 size-full" src="/assets/capa1.png" alt="capa" width="900" height="470" /></a></p>
+<p align="justify">Recentemente me perguntaram (<a href="http://vitormeriat.com.br/2014/11/21/mensageria-e-os-protocoloschoose-your-poison/" target="_blank">por conta deste post</a>), sobre qual a necessidade de um protocolo como o MQTT. A verdade é que muito se dá ao desconhecimento do público em relação ao mundo da “<strong>Internet das Coisas</strong>”.</p>
+<p align="justify">Este não é um post específico sobre MQTT, ou sua implementação. É sobre o gancho que este protocolo extremamente leve traz para o <strong>“pensar em IoT”</strong>.</p>
+<p><!--more--></p>
+<p align="justify">Cada dia vemos novos modelos de placas com capacidades maiores, mais próximas de uma máquina usual, e repentinamente nos ocorre que é possível construir aplicações exatamente como fazemos para o mundo Web, ou construir serviços exatamente como fazemos nossas APIs.</p>
+<p align="justify">O fato é que no mundo do IoT, os dispositivos que estão implantados nos relógios, tênis e outros diversos acessórios, não são placas com 2GB, USB 3.0 ou HDMI. Os dispositivos que estamos falando são componentes altamente minimalistas.</p>
+<p align="justify">Para se manter em um mercado cada vez mais agressivo, é fundamental construir devices que façam o melhor proveito de seus componentes, a fim de serem mais precisos em suas finalidades e com um custo menor de manufatura.</p>
+<p align="justify">Sendo assim, o que vemos na prática são diversos dispositivos com microprocessadores de 8-BITs e 192KB RAM.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/06/ghi_electronics_fez_cerb40_ii.png"><img style="background-image: none; padding-top: 0; padding-left: 0; margin: 0 8px 0 0; display: inline; padding-right: 0; border-width: 0;" title="GHI_Electronics_FEZ_Cerb40_II" src="/assets/ghi_electronics_fez_cerb40_ii_thumb.png" alt="GHI_Electronics_FEZ_Cerb40_II" width="345" height="260" border="0" /></a><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/06/ghi_electronics_g120_siza.jpg"><img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="GHI_Electronics_G120_siza" src="/assets/ghi_electronics_g120_siza_thumb.jpg" alt="GHI_Electronics_G120_siza" width="345" height="253" border="0" /></a></p>
+<p align="justify">Quando olhamos para estas capacidades, fica claro que deve se existir uma preocupação enorme com protocolos, brokers e as aplicações que serão desenvolvidas para um projeto de IoT.</p>
+<p align="justify">Nem todo dispositivo pode se dar ao luxo de 16MB de RAM, quem dirá 2GB. Então nestes termos olhar para o MQTT faz muito sentido. Aliás, estamos falando de um protocolo com apenas 2 bytes de Header. Em determinadas aplicações, até protocolos como o <strong>AMQP</strong> podem ser inviáveis dado o seu tamanho, ainda mais se houver necessidade de <strong>SSL</strong>.</p>
+<p align="justify">MQTT pode ser ideal em determinadas aplicações móveis por causa de seu tamanho, onde temos pacotes de dados minimalistas e uma distribuição eficiente de informações para um ou muitos receptores (assinantes). Sem falar no transporte de mensagens que não se preocupa com o conteúdo a ser entregue.</p>
+<p align="justify">Você ainda pode facilmente integrar com a nuvem a fim de abstrair sua infra, utilizando brokers já preparados para este cenário como</p>
+<p align="justify">Mas não se engane. MQTT não é uma bala de prata. Para quem quer entrar no mundo do IoT é importante conhecer toda as questões envolvidas.</p>
+<p align="justify">Já os <strong>early adopters</strong> de IoT vem de áreas como desenvolvimento de software e eletrônica, conectando dispositivos dentro desta rede mediante os diferentes protocolos disponíveis. Mas, para levar esse conceito ao nosso dia a dia é necessária uma camada de integração e protocolos que ofereçam suporte a todas as necessidades e complexidades técnicas. No final, para usuário é irrelevante se seu dispositivo “fala” via jSON, XML, SMS, COISAML…! Já para a implementação e desempenho este é um assunto totalmente relevante.</p>
+<p align="justify">Outra coisa que vale notar é o fator segurança. Mais dispositivos conectados significa mais IPs disponíveis que por sua vez significa mais portas vulneráveis e maior risco de segurança. As políticas de segurança e de privacidade com certeza serão revistas neste novo contexto. O aumento de comunicação nesta rede incrementa o risco de distribuir informações de forma indevida, sem falar da possibilidade dos erros de comunicação entre dispositivos. O desenho de novos serviços ganha mais um desafio, agora voltado à privacidade de dados e, principalmente, nos meios que podemos utilizar para ganhar a confiança dos usuários.</p>
+<p>Você encontra toda a e especificação do MQTT <a href="http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html" target="_blank">aqui!</a></p>
+<p>Nos próximos posts, vou estar implementando algumas integrações entre Nuvem e IoT.</p>
+<h2><span style="color: #666666;">Bons estudos e até a próxima pessoal  ;)</span></h2>
+<p><a href="http://vitormeriat.com.br/"><span style="color: #666666;"><img style="float: left; margin: 0 30px 0 0; display: inline;" title="me-azul" src="/assets/me-azul_thumb.png?w=263&amp;h=263" alt="me-azul" width="175" height="175" align="left" border="0" /></span></a></p>
+<p><strong><span style="color: #666666; font-size: x-large;">Twitter: @</span></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><span style="color: #666666; font-size: x-large;">vitormeriat</span></strong></a></p>
+<p><strong><span style="color: #666666; font-size: x-large;">vitormeriat@</span></strong><a href="mailto:vitormeriat@gmail.com"><strong><span style="color: #666666; font-size: x-large;">gmail.com</span></strong></a></p>
+<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><span style="color: #666666; font-size: x-large;">vitor.pereira@studentpartner.com</span></strong></a></p>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2015/05/21/wcf-2015open-source-e-novidades-no-visual-studio-2015-rc/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>WCF 2015–Open Source e novidades no Visual Studio 2015 RC</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>
