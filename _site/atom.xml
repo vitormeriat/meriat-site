@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/assets/xslt/atom.xslt" ?>
+<?xml-stylesheet type="text/css" href="/assets/css/atom.css" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>http://www.jorgemaia.com.br/</id>
+	<title>Jorge Maia</title>
+	<updated>2017-01-03T02:12:17-08:00</updated>
+
+	<subtitle>Neste site, muito sobre novas tecnologias, como fazer as coisas, IoT, eventos no Brasil e no Mundo, Agilidade, Podcasts....</subtitle>
+
+	
+		
+		<author>
+			
+				<name>Jorge Maia</name>
+			
+			
+				<email>jm@jorgemaia.com.br</email>
+			
+			
+				<uri>http://www.jorgemaia.com.br/</uri>
+			
+		</author>
+	
+
+	<link href="http://www.jorgemaia.com.br/atom.xml" rel="self" type="application/rss+xml" />
+	<link href="http://www.jorgemaia.com.br/" rel="alternate" type="text/html" />
+
+	<generator uri="http://jekyllrb.com" version="3.0.2">Jekyll</generator>
+
+	
+		<entry>
+			<id>http://www.jorgemaia.com.br/01-02-2017/CES-2017-Ja-cheguei!.html</id>
+			<title>CES 2017, já cheguei!</title>
+			<link href="http://www.jorgemaia.com.br/01-02-2017/CES-2017-Ja-cheguei!.html" rel="alternate" type="text/html" title="CES 2017, já cheguei!" />
+			<updated>2017-01-02T00:00:00-08:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Jorge Maia</name>
+					
+					
+						<email>jm@jorgemaia.com.br</email>
+					
+					
+						<uri>http://www.jorgemaia.com.br/</uri>
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="http://www.jorgemaia.com.br/01-02-2017/CES-2017-Ja-cheguei!.html">&lt;p&gt;Estou novamente em Las Vegas para a CES, nesta versão do evento, certamente veremos muito em relação a Inteligência Artificial e conectividade.&lt;/p&gt;
+&lt;p&gt; 
+Acredito realmente que estamos chegando a tal era em que a inteligência dos produtos vai superar as funcionalidades normais que estamos acostumados. Hoje ja temos uma prova com os assistentes pessoais sobre o que veremos pela frente. &lt;/p&gt;
+&lt;p&gt;&amp;lt;/p&amp;gt; 
+Estarei enviando diversos vídeos e imagens diretamente do evento.&lt;/p&gt;
+
+&lt;p&gt;Certamente vamos ter lançamentos da Samsung sobre tvs, como já foi anunciado recentemente, e, neste campo o que vem por ai são serviços para personalizar as tvs e mudar sua forma de usar a mesma. Em relação a carros, temos reconhecimento de sentimentos na pauta, e certamente muito mais coisas.&lt;/p&gt;
+
+</content>
+
+			
+				<category term="JorgeCast" />
+			
+				<category term="PodCasts" />
+			
+				<category term="Áudio" />
+			
+			
+
+			<published>2017-01-02T00:00:00-08:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://www.jorgemaia.com.br/12-14-2016/Meetup-em-SP-AI-e-IoT.html</id>
+			<title>Meetup em SP sobre AI e IoT</title>
+			<link href="http://www.jorgemaia.com.br/12-14-2016/Meetup-em-SP-AI-e-IoT.html" rel="alternate" type="text/html" title="Meetup em SP sobre AI e IoT" />
+			<updated>2016-12-14T00:00:00-08:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Jorge Maia</name>
+					
+					
+						<email>jm@jorgemaia.com.br</email>
+					
+					
+						<uri>http://www.jorgemaia.com.br/</uri>
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="http://www.jorgemaia.com.br/12-14-2016/Meetup-em-SP-AI-e-IoT.html">&lt;p&gt;No dia 14 de Dezembro de 2016 produzimos mais um encontro, este teve a apresentação do Vitor Meriat, e como tema, trabalhamos nesse encontro a Inteligência Artificial e suas aplicações na Internet das Coisas. 
+Além de falarmos sobre Aplicações reais, claro que tivemos código e serviços de nuvens como orquestradores do movimento.&lt;/p&gt;
+
+&lt;p&gt;Esta edição foi na sede do Imasters em SP.&lt;/p&gt;
+
+</content>
+
+			
+				<category term="JorgeCast" />
+			
+				<category term="PodCasts" />
+			
+				<category term="Áudio" />
+			
+			
+
+			<published>2016-12-14T00:00:00-08:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://www.jorgemaia.com.br/02-13-2016/IoT-em-Goia-nia-Parte-1.html</id>
+			<title>IoT em Goiânia</title>
+			<link href="http://www.jorgemaia.com.br/02-13-2016/IoT-em-Goia-nia-Parte-1.html" rel="alternate" type="text/html" title="IoT em Goiânia" />
+			<updated>2016-02-13T00:00:00-08:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Jorge Maia</name>
+					
+					
+						<email>jm@jorgemaia.com.br</email>
+					
+					
+						<uri>http://www.jorgemaia.com.br/</uri>
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="http://www.jorgemaia.com.br/02-13-2016/IoT-em-Goia-nia-Parte-1.html">&lt;p&gt;Fui a Goiânia bater um papo com o pessoal do grupo Override, com o tema: IoT das suas coisas, a palestra atingiu a quantidade máxima de inscritos 9 dias antes da realização.&lt;/p&gt;
+
+&lt;p&gt;Além de IoT, falamos sobre como podemos acelerar o desenvolvimento de aplicações usando Azure e IoT HUB.&lt;/p&gt;
+</content>
+
+			
+				<category term="IoT" />
+			
+				<category term="Eventos" />
+			
+			
+
+			<published>2016-02-13T00:00:00-08:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://www.jorgemaia.com.br/01-31-2016/CPBR9.html</id>
+			<title>CPBR9</title>
+			<link href="http://www.jorgemaia.com.br/01-31-2016/CPBR9.html" rel="alternate" type="text/html" title="CPBR9" />
+			<updated>2016-01-31T00:00:00-08:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Jorge Maia</name>
+					
+					
+						<email>jm@jorgemaia.com.br</email>
+					
+					
+						<uri>http://www.jorgemaia.com.br/</uri>
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="http://www.jorgemaia.com.br/01-31-2016/CPBR9.html">&lt;p&gt;Campus Party é sempre sinônimo de muita diversão e reencontrar amigos da comunidade. Nesta 9a edição, levamos alguns membros do CrazyTechGuys novamente e acampamos na Campus, na verdade eu fiquei no hotel ao lado, mas ainda penso que na próxima devo viver a experiência do camping.&lt;/p&gt;
+
+&lt;p&gt;Palestras muito boas, galera muito animada, ginganas, desafios e muita atividade social fizeram parte desses dias que passamos por lá. Gravei episódios do JorgeCast lá dentro, acompanhe no site.&lt;/p&gt;
+
+&lt;p&gt;Claro que não poderiamos deixar de ajudar e ministramos um workshop, eu e o Vitor Meriat, sobre IoT.&lt;/p&gt;
+
+&lt;p&gt;“Workshop: IoT Além do Hardware #CPBR9
+Dia: 27/01&lt;/p&gt;
+
+&lt;p&gt;Descrição: Internet das Coisas é possivelmente o termo mais falado no mundo da tecnologia nos últimos tempos, embora muito difundido, poucos realmente tratam IoT de início a fim, as vezes negligenciando a inteligência da nuvem, outras vezes segurança e focando quase sempre no hardware e seus componentes. Neste workshop venha ver de perto um dispositivo completo, funcionando e com todas as integrações. você poderá trabalhar com códigos para controlar os dispositivos e também com os dados gerados. A ideia é começarmos neste local algo bem maior que somente acender um led ou controlar algo remotamente. Venha conhecer e se divertir com o mundo da Internet das coisas. Serão abordados MQTT, conectividade e integração de sistemas e sensores com a nuvem, geração e tratamento de informações além do hardware. Não pretendemos montar hardware no workshop e sim utiliza-los para gerar uma solução.”&lt;/p&gt;
+</content>
+
+			
+				<category term="JorgeCast" />
+			
+				<category term="PodCasts" />
+			
+				<category term="Áudio" />
+			
+			
+
+			<published>2016-01-31T00:00:00-08:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://www.jorgemaia.com.br/01-26-2016/uma-conversa-dentro-do-trailer-da-nxp-na-ces-2016.html</id>
+			<title>Uma conversa dentro do Trailer da NXP na CES 2016</title>
+			<link href="http://www.jorgemaia.com.br/01-26-2016/uma-conversa-dentro-do-trailer-da-nxp-na-ces-2016.html" rel="alternate" type="text/html" title="Uma conversa dentro do Trailer da NXP na CES 2016" />
+			<updated>2016-01-26T16:16:00-08:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Jorge Maia</name>
+					
+					
+						<email>jm@jorgemaia.com.br</email>
+					
+					
+						<uri>http://www.jorgemaia.com.br/</uri>
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="http://www.jorgemaia.com.br/01-26-2016/uma-conversa-dentro-do-trailer-da-nxp-na-ces-2016.html">&lt;p&gt;Conversei com o pessoal da NXP na CES 2016 e visitei o Trailer deles com as tecnologias embarcadas.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</content>
+
+			
+				<category term="CES 2016" />
+			
+				<category term="Eventos" />
+			
+				<category term="Hardware" />
+			
+				<category term="Internet das Coisas" />
+			
+				<category term="IOT" />
+			
+				<category term="NXP" />
+			
+				<category term="Vídeo" />
+			
+				<category term="Tecnologia" />
+			
+			
+
+			<published>2016-01-26T16:16:00-08:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://www.jorgemaia.com.br/01-26-2016/iot-weekend-2016-em-6-cidades.html</id>
+			<title>IoT Weekend 2016 em 6 Cidades</title>
+			<link href="http://www.jorgemaia.com.br/01-26-2016/iot-weekend-2016-em-6-cidades.html" rel="alternate" type="text/html" title="IoT Weekend 2016 em 6 Cidades" />
+			<updated>2016-01-26T15:53:00-08:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Jorge Maia</name>
+					
+					
+						<email>jm@jorgemaia.com.br</email>
+					
+					
+						<uri>http://www.jorgemaia.com.br/</uri>
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="http://www.jorgemaia.com.br/01-26-2016/iot-weekend-2016-em-6-cidades.html">&lt;p&gt;Em 2016 estaremos em 6 Cidades com o IoT Weekend, um evento único no Brasil que tem foco em Internet das Coisas, composto de um dia de palestras em tracks específicas e um dia de workshops com a mão na massa realmente.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Acompanhem mais pelo site do evento: &lt;a href=&quot;http://www.iotweekend.com.br&quot; target=&quot;_blank&quot;&gt;http://www.iotweekend.com.br&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;[embed]https://youtu.be/ECOi8Gk2IwE[/embed]&lt;/p&gt;
+</content>
+
+			
+				<category term="Eventos" />
+			
+				<category term="Internet das Coisas" />
+			
+				<category term="IOT" />
+			
+				<category term="IoT Weekend" />
+			
+				<category term="Tecnologia" />
+			
+			
+
+			<published>2016-01-26T15:53:00-08:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://www.jorgemaia.com.br/01-12-2016/jorgecast-s3e1-como-foi-participar-da-ces-2016.html</id>
+			<title>JorgeCast S3E1 – Como foi participar da CES 2016</title>
+			<link href="http://www.jorgemaia.com.br/01-12-2016/jorgecast-s3e1-como-foi-participar-da-ces-2016.html" rel="alternate" type="text/html" title="JorgeCast S3E1 – Como foi participar da CES 2016" />
+			<updated>2016-01-12T01:03:00-08:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Jorge Maia</name>
+					
+					
+						<email>jm@jorgemaia.com.br</email>
+					
+					
+						<uri>http://www.jorgemaia.com.br/</uri>
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="http://www.jorgemaia.com.br/01-12-2016/jorgecast-s3e1-como-foi-participar-da-ces-2016.html">&lt;p&gt;Come&amp;ccedil;amos mais uma temporada!&lt;/p&gt;
+&lt;p&gt;Feliz 2016 para n&amp;oacute;s!&lt;/p&gt;
+&lt;p&gt;Promessa feita em 2015 e cumprida, neste epis&amp;oacute;dio falo da minha participa&amp;ccedil;&amp;atilde;o na CES 2016 e na experi&amp;ecirc;ncia de participar como imprensa.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=&quot;wpematico_credit&quot;&gt;&lt;small&gt;Powered by &lt;a href=&quot;http://www.wpematico.com&quot; target=&quot;_blank&quot;&gt;WPeMatico&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+</content>
+
+			
+				<category term="JorgeCast" />
+			
+				<category term="PodCasts" />
+			
+				<category term="Áudio" />
+			
+			
+
+			<published>2016-01-12T01:03:00-08:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://www.jorgemaia.com.br/01-06-2016/ces-2016-las-vegas.html</id>
+			<title>CES 2016 - Las Vegas</title>
+			<link href="http://www.jorgemaia.com.br/01-06-2016/ces-2016-las-vegas.html" rel="alternate" type="text/html" title="CES 2016 - Las Vegas" />
+			<updated>2016-01-06T15:49:00-08:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Jorge Maia</name>
+					
+					
+						<email>jm@jorgemaia.com.br</email>
+					
+					
+						<uri>http://www.jorgemaia.com.br/</uri>
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="http://www.jorgemaia.com.br/01-06-2016/ces-2016-las-vegas.html">&lt;p&gt;Prometido no ano passado em um &lt;a href=&quot;http://www.jorgecast.com.br&quot; target=&quot;_blank&quot;&gt;JorgeCast&lt;/a&gt;, aqui estamos em Las Vegas! CES 2016, o maior evento de tecnologia do mundo com milhares de lançamentos em todas as áreas. Vim representando o Jornal de Brasília e durante todo o evento teremos mais posts, vídeos e informações.&lt;/p&gt;
+
+&lt;p&gt;O evento começa oficialmente hoje, mas tivemos uma prévia no CES Unveiled (&lt;a href=&quot;https://www.youtube.com/watch?v=dwOturGlQEk&quot; target=&quot;_blank&quot;&gt;veja um pouquinho aqui&lt;/a&gt;) que aconteceu na segunda e ontem um dia de palestras para imprensa.&lt;/p&gt;
+
+&lt;p&gt;Conversei com alguns dos inventores e CEOs das empresas que estavam no evento de mídia e estou soltando aos poucos os vídeos depois de editados. até o final da semana todos estarão no meu &lt;a href=&quot;https://www.youtube.com/user/jorgeSMaia/&quot; target=&quot;_blank&quot;&gt;canal do YouTube&lt;/a&gt;, aproveite para assinar e sempre receber as novidades.&lt;/p&gt;
+
+&lt;p&gt;Agora teremos cobertura de todos os eventos e esse ano mais novidades com recursos áudio visuais estarão aparecendo por aqui!&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</content>
+
+			
+				<category term="CES2016" />
+			
+				<category term="Eventos" />
+			
+				<category term="IOT" />
+			
+				<category term="Tecnologia" />
+			
+			
+
+			<published>2016-01-06T15:49:00-08:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://www.jorgemaia.com.br/12-06-2015/transamerica-brasilia.html</id>
+			<title>Transamérica Brasília</title>
+			<link href="http://www.jorgemaia.com.br/12-06-2015/transamerica-brasilia.html" rel="alternate" type="text/html" title="Transamérica Brasília" />
+			<updated>2015-12-06T15:23:00-08:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Jorge Maia</name>
+					
+					
+						<email>jm@jorgemaia.com.br</email>
+					
+					
+						<uri>http://www.jorgemaia.com.br/</uri>
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="http://www.jorgemaia.com.br/12-06-2015/transamerica-brasilia.html">&lt;p&gt;Desde novembro de 2015 eu estou todas as quartas no programa Transnotícias na Transamérica Brasília, com o quadro de tecnologia. A idéia é estarmos falando as novidades no cenário tecnológico nacional e mundial, com enfoque claro em conectividade e dispositivos de IoT. O programa tem uma dinâmica muito boa e será certamente além de informativo, bem divertido!&lt;/p&gt;
+
+&lt;p&gt;Não perca! Todas as quartas, de 12:00 as 13:00! Para quem não é de Brasilia, o programa pode ser ouvido pela aplicação que pode ser baixada aqui neste &lt;a href=&quot;http://www.radiotransamerica.com.br/pagina.aspx?pg=aplicativo&amp;amp;codMundo=1&amp;amp;codPraca=1&quot; target=&quot;_blank&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</content>
+
+			
+				<category term="IOT" />
+			
+				<category term="Tecnologia" />
+			
+				<category term="Transamérica" />
+			
+			
+
+			<published>2015-12-06T15:23:00-08:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://www.jorgemaia.com.br/12-01-2015/jornal-de-brasilia.html</id>
+			<title>Jornal de Brasília</title>
+			<link href="http://www.jorgemaia.com.br/12-01-2015/jornal-de-brasilia.html" rel="alternate" type="text/html" title="Jornal de Brasília" />
+			<updated>2015-12-01T15:25:00-08:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Jorge Maia</name>
+					
+					
+						<email>jm@jorgemaia.com.br</email>
+					
+					
+						<uri>http://www.jorgemaia.com.br/</uri>
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="http://www.jorgemaia.com.br/12-01-2015/jornal-de-brasilia.html">&lt;p&gt;Mais uma novidade deste ano é a minha coluna no formato de Blog no Jornal de Brasília, entitulado Selfie, o blog tem como missão falar sobre novas economias e novidades deste cenário na tecnologia. Certamente falaremos sobre muita coisa legal e como sempre com muita opinião, fugindo do tradicional.&lt;/p&gt;
+
+&lt;p&gt;Farei publicações semanais neste início. Para conferir é só acessar &lt;a href=&quot;http://jornaldebrasilia.com.br/blog/selfie/&quot; target=&quot;_blank&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+</content>
+
+			
+				<category term="Jornal de Brasília" />
+			
+				<category term="Tecnologia" />
+			
+			
+
+			<published>2015-12-01T15:25:00-08:00</published>
+		</entry>
+	
+</feed>

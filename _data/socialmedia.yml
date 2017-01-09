@@ -1,0 +1,48 @@
+- name: GitHub
+  url: http://github.com/jorgemaia
+  class: icon-github
+  title: Code...
+
+- name: YouTube
+  url: http://www.youtube.com/jorgemaia_jorgecast
+  class: icon-youtube
+  title: "Vídeos e muito mais"
+
+- name: Twitter
+  url: http://twitter.com/jorgemaia
+  class: icon-twitter
+  title: "Twitter"
+
+- name: Mixcloud
+  url: http://www.facebook.com/jorgeasmaia/
+  class: icon-facebook
+  title: "Fan Page"
+
+#- name: Phlow YouTube Google+
+#  url: https://plus.google.com/u/0/+Phlow
+#3  class: icon-googleplus
+#  title: "YouTube Google+"
+
+# - name: Facebook
+#   url: http://www.facebook.com/
+#   class: icon-facebook
+#   title: ""
+
+# - name: Soundcloud
+#   url: http://soundcloud.com/
+#   class: icon-soundcloud
+#   title: ""
+- name: Instagram
+  url: http://instagram.com/jorgeasmaia
+  class: icon-instagram
+  title: "Pictures"
+
+# - name: Pinterest
+#   url: http://www.pinterest.com/
+#   class: icon-pinterest
+#   title: ""
+
+# - name: Xing
+#   url: https://www.xing.com/profile/
+#   class: icon-xing
+#   title: Xing Profil

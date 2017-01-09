@@ -1,57 +1,23 @@
-<!DOCTYPE html>
-<html>
+---
+layout: compress
+---
+<!doctype html>
+<html class="no-js" lang="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}">
+<head>
+	{% include _head.html %}
+</head>
+<body id="top-of-page" class="{{ layout.format }}">
+	{% unless page.skip_boilerplate %}
+	{% include _navigation.html %}
+	{% endunless %}
 
-  {% include head.html %}
+	{% include _masthead.html %}
+	{{ content }}
 
-  <body>
-    <!-- Header -->
-	<header id="fh5co-header" role="banner">
-		<div class="container">
-			<!-- Logo -->
-			<div id="fh5co-logo">
-				<a href="/">
-					<img src="/assets/images/logo.png" alt="Work Logo">
-				</a>
-			</div>
-			<!-- Logo -->
+	{% unless page.skip_boilerplate %}
+	{% include _footer.html %}
+	{% endunless %}
 
-			<!-- Mobile Toggle Menu Button -->
-			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-
-			<!-- Main Nav -->
-			<div id="fh5co-main-nav">
-				<nav id="fh5co-nav" role="navigation">
-					<ul>
-						<li class="{{ page.menuhome }}">
-							<a href="/">Blog</a>
-						</li>
-						<li class="{{ page.menuarchive }}">
-							<a href="/archive/">Archives</a>
-						</li>
-            <li class="{{ page.menucategory }}">
-							<a href="/category/">Categories</a>
-						</li>
-            <!-- <li class="{{ page.menucommunity }}">
-							<a href="/community/">Community</a>
-						</li> -->
-            <li class="{{ page.menuabout }}">
-							<a href="/about/"> About me </a>
-						</li>
-					</ul>
-					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
-          <!-- <a href="/about/" class="{{ page.menuabout }}">About me</a> -->
-				</nav>
-			</div>
-			<!-- Main Nav -->
-		</div>
-	</header>
-	<!-- Header -->
-
-    <main role="main">
-      {{ content }}
-    </main>
-
-    {% include footer.html %}
-
-  </body>
+	{% include _footer_scripts.html %}
+</body>
 </html>
