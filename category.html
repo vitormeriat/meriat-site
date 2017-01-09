@@ -1,0 +1,25 @@
+---
+layout: default
+title: Category
+permalink: /category/
+menucategory: fh5co-active
+---
+
+<div class="container">
+  <!-- <h2 class="text-center">Catoegories</h2> -->
+
+  <div class="category">
+    <ul>
+      {% assign sorted_cats = site.categories | sort %}
+      {% for category in sorted_cats %}
+        {% assign cat_name = category | first %}
+        <li>
+          <a href="{{ site.baseurl }}/category/{{ category | first | downcase | slugify }}/">
+            <h4>{{ cat_name }}</h4>
+            <span>{{ site.categories[cat_name] | size }} Posts</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
