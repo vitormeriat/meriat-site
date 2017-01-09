@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ASP.NET Web API - Cloud-Host, IaaS, PaaS e Cloud Services com Windows Azure. Parte 1 | Vitor Meriat</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="ASP.NET Web API - Cloud-Host, IaaS, PaaS e Cloud Services com Windows Azure. Parte 1 | Vitor Meriat">
+  <meta property="og:url" content="http://localhost:4000/2014/03/05/asp-net-web-api-cloud-host-iaas-paas-e-cloud-services-com-windows-azure-parte-1/">
+  <meta property="og:site_name" content="Vitor Meriat">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="ASP.NET Web API - Cloud-Host, IaaS, PaaS e Cloud Services com Windows Azure. Parte 1 | Vitor Meriat">
+  <meta name="twitter:url" content="http://localhost:4000/2014/03/05/asp-net-web-api-cloud-host-iaas-paas-e-cloud-services-com-windows-azure-parte-1/">
+  <meta name="twitter:site" content="Vitor Meriat">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="http://localhost:4000">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Vitor Meriat" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/2014/03/05/asp-net-web-api-cloud-host-iaas-paas-e-cloud-services-com-windows-azure-parte-1/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2014-03-05T19:49:06-03:00" itemprop="datePublished">Mar 5, 2014</time></span>
+      <h1 itemprop="name headline">ASP.NET Web API - Cloud-Host, IaaS, PaaS e Cloud Services com Windows Azure. Parte 1</h1>
+      
+        <span>
+          Posted in Cloud Computing, Microsoft Azure, Services, WebAPI
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify">Nos posts anteriores já tivemos a oportunidade de conhecer o ASP.NET Web API, seu poder, arquitetura e possibilidades. Agora chegou a hora de brincar um pouco e levar os nossos serviços ao cenário distribuído da Cloud Computing com Windows Azure. Neste post vamos dar uma olhada nos cenários, possibilidades e como implantar WebAPI no Windows Azure.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/03/capa.png"><u><font color="#444444"></font></u><img title="capa" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:none;padding-top:0;padding-left:0;margin-left:auto;border-left:0;display:block;padding-right:0;margin-right:auto;" border="0" alt="capa" src="/assets/capa_thumb.png" width="540" height="342" /></a></p>
+<p><!--more-->
+<p>Antes de continuar, para este post vou considerar que você já tem experiência com Windows Azure, já possui uma conta e já tem acesso ao portal de gestão do <strong>Azure</strong>. Estou considerando que você já tem conhecimento sobre <strong>ASP.NET Web API</strong> e já leu os três artigos anteriores sobre como consumir<strong> Web API</strong> em domínios diferentes utilizando <strong>CORS</strong>, <strong>AJAX</strong> e <strong>JSONP</strong>. Caso contrário, sugiro primeiro a leitura dos links abaixo antes de continuar:</p>
+<ul>
+<ul>
+<li><a href="http://vitormeriat.com.br/2013/09/20/asp-net-web-api-criando-e-consumindo-dados-parte-1/" target="_blank">ASP.NET Web API – Criando e consumindo dados [Parte 1]</a> </li>
+<li><a href="http://vitormeriat.com.br/2013/09/23/asp-net-web-api-criando-e-consumindo-dados-parte-2/" target="_blank">ASP.NET Web API – Criando e consumindo dados [Parte 2]</a> </li>
+<li><a href="http://vitormeriat.com.br/2013/10/18/asp-net-web-api-criando-um-crud-e-consumindo-em-um-domnio-diferente-cors-ajax-e-jsonp-parte-1/" target="_blank">ASP.NET Web API – Criando um CRUD e consumindo em um domínio diferente. CORS, AJAX e JSONP [Parte 1]</a> </li>
+<li><a href="http://vitormeriat.com.br/2013/10/24/asp-net-web-api-criando-um-crud-e-consumindo-em-um-domnio-diferente-cors-ajax-e-jsonp-parte-2/" target="_blank">ASP.NET Web API – Criando um CRUD e consumindo em um domínio diferente. CORS, AJAX e JSONP [Parte 2]</a> </li>
+<li><a href="http://vitormeriat.com.br/2013/10/30/asp-net-web-api-criando-um-crud-e-consumindo-em-um-domnio-diferente-cors-ajax-e-jsonp-parte-3/" target="_blank">ASP.NET Web API – Criando um CRUD e consumindo em um domínio diferente. CORS, AJAX e JSONP [Parte 3]</a> </li>
+</ul>
+</ul>
+<p align="justify">Basicamente, falar de <strong>Cloud-Host</strong> com <strong>WebAPI</strong>, é falar em hospedar nosso serviço na nuvem. Neste caso no <strong>Windows Azure</strong>.</p>
+<p align="justify">O primeiro ponto é perceber existem diversas maneiras de hospedar um serviço no Windows Azure. Podemos utilizar um modelo <strong>Web-Hosting</strong> ou <strong>Self-Hosting</strong> bem como hospedar um ambiente <strong>IaaS</strong>, <strong>PaaS</strong> ou <strong>SaaS</strong>. Enfim, não vou abordar todos os cenários pois o importante é entender os conceitos antes de prosseguir. Para isso, segue uma pequena referência:</p>
+<ul>
+<ul>
+<li><strong>Web-Hosting</strong> – Estilo de hospedagem utilizando o IIS. </li>
+<li><strong>Self-Hosting</strong> – Hospedagem que utiliza de um processo Windows diferente do IIS. </li>
+<li><strong>Cloud-Hosting</strong> – Estilo de hospedagem utilizando o Windows Azure. </li>
+<li><strong>IaaS</strong> – Infraestrutura como serviço. </li>
+<li><strong>SaaS</strong> – Software como serviço. </li>
+<li><strong>PaaS</strong> – Plataforma como serviço. </li>
+</ul>
+</ul>
+<p align="justify">&#160; <br />Apenas para exemplificar, poderiamos hospedar nosso serviço utilizando um modelo <strong>Self-Hosting</strong> com um <strong>Worker-Role</strong> em um <strong>Cloud Service</strong> ou rodando um aplicativo console dentro de uma <strong>VM</strong> do <strong>Windows Azure</strong>. É possível apenas criar nossa WebAPI utilizando o template base do Visual Studio e publicar diretamente para um Cloud Service ou utilizar uma estrutura <strong>SaaS</strong> com <strong>Azure Web Sites</strong>.</p>
+<p align="justify">O importante neste ponto é conhecer o que cada modelo pode te proporcionar. Lembre-se, estamos falando de nuvem, logo a premissa que impera aqui é: &quot;<strong>Pague pelo que usar</strong>&quot;. Sendo assim procure enteder sua necessidade para montar a melhor solução possível.</p>
+<p align="justify">O que vamos fazer noste post é prover nosso serviço, hospendando ele nos seguinte cenários:</p>
+<ul>
+<li>
+<div align="justify">SaaS – Utilizando um Template Web API hospedado no Azure Web Sites, modelo Web-Hosting</div>
+</li>
+<li>
+<div align="justify">IaaS – Utilizando um Console Aplication rodando em uma VM no Cloud Service, modelo Self-Hosting</div>
+</li>
+</ul>
+<p align="justify">&#160;</p>
+<p align="justify">Para acompanhar os exemplos você precisa baixar os dois projetos que utlizamos no post “ASP.NET Web API – Criando um CRUD e consumindo em um domínio diferente. CORS, AJAX e JSONP [Parte 3]” <a href="https://skydrive.live.com/?cid=BD055AA47A388023&amp;id=BD055AA47A388023!3718" target="_blank">CLICANDO AQUI!</a></p>
+<p align="justify">&#160;</p>
+<h2 align="justify">Cloud-Host com SaaS</h2>
+<p align="justify">Acesse o portal de gestão do <strong>Windows Azure </strong>e clique na aba Web Sites. Ao em Web Sites, clique no <strong>+ NEW </strong>que fica no canto inferior esquerdo. Selecione a opção <strong>WEB SITE</strong>, <strong>QUICK CREATE</strong> e informe a <strong>URL</strong> e a <strong>região</strong> do site a ser criado. No meu exemplo estou utilizando <strong>WebApiServerSaaS</strong> (como já estou utilizando e são <strong>URIs </strong>então escolha uma diferente ok?).</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/03/01.png"><img title="01" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="01" src="/assets/01_thumb.png" width="560" height="301" /></a></p>
+<p align="justify">Clique em <strong>CREATE WEB SITE</strong> e pronto. Seu Web Site no Windows Azure utilizando <strong>SaaS</strong> está pronto e rodando. </p>
+<p align="justify">Clique no Web Site recém criado e na aba <strong>DASHBOARD</strong> selecione a opção <strong>“Download the publish profile”</strong>. Com isso você vai realizar o download de um arquivo <strong>.PublishSettings</strong> que nada mais é que um <strong>XML </strong>contendo as informações do site e da conexão para utilizar o recurso <strong>“Publish Web”</strong> do Visual Studio.</p>
+<p align="justify">Já no <strong>Visual Studio</strong>, clique com o botão direito sobre o projeto <strong>CloudHostingMunicipios</strong> e selecione a opção <strong>Publish…</strong></p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/03/02.png"><img title="02" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="02" src="/assets/02_thumb.png" width="560" height="614" /></a></p>
+<p align="justify">Na tela que se segue, selecione a aba <strong>Profile</strong> importe o arquivo <strong>.PublishSettings. </strong>Na aba <strong>Preview</strong> clique em <strong>Star Preview</strong>, apenas para visualizar se todos os arqvuivos necessários está sendo enviados, teste a conexão e pode clicar em <strong>Publish</strong>. Neste momento nosso serviço <strong>WebAPI</strong> está sendo publicado na estrutura <strong>SaaS</strong> do <strong>WebSites</strong> Azure.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/03/03.png"><img title="03" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="03" src="/assets/03_thumb.png" width="560" height="443" /></a></p>
+<p align="justify">Após publicado o site será aberto no seu browser. Bom, meu serviço está publicado em <a href="http://webapiservercors.azurewebsites.net/">http://webapiservercors.azurewebsites.net/</a> e ficou com a seguinte cara:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/03/04.png"><img title="04" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="04" src="/assets/04_thumb.png" width="560" height="508" /></a></p>
+<p align="justify">Fiz algumas adaptações de layout na tela principal porque vou deixar este exemplo rodando para que o pessoal possa testar.</p>
+<p align="justify">Com já realizamos todo o tratamento em nosso serviço para que o mesmo possa trabalhar com domínios diferentes, basta apenas alterar em nosso <strong>Web API HTML Client</strong> trocando nas <strong>URLs</strong> o valor de <a title="http://localhost:56601/" href="http://localhost:56601/">http://localhost:56601/</a> por <a title="http://webapiserversaas.azurewebsites.net" href="http://webapiserversaas.azurewebsites.net/">http://webapiserversaas.azurewebsites.net/</a>. Como exemplo, o código script da<strong> index.html</strong> deve ficar como exibido abaixo:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/03/05.png"><img title="05" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="05" src="/assets/05_thumb.png" width="560" height="418" /></a></p>
+<p align="justify">Sendo assim, já estamos consumindo nosso serviço localmente. Como estamos utilizando <strong>CORS</strong> e <strong>JSONP</strong> este é o mesmo princípio dos posts anteriores. Não tem segredo, não precisa de configurações ou EndPoints adicionais. Estamos rodando tudo baseado em <strong>HTTP</strong>, de maneira simples e direta nosso serviço já está rodando em ambiente <strong>SaaS</strong> e pronto para ser consumido pela gama de clientes que forem necessários. Tenha em mente que não importa se estamos rodando local ou hospedado na nuvem, nosso serviço está pronto para fornercer os dados requiridos.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/03/06.png"><img title="06" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="06" src="/assets/06_thumb.png" width="560" height="335" /></a></p>
+<p align="justify">&#160;</p>
+<p align="justify">&#160;</p>
+<h2 align="justify">Cloud-Host com IaaS</h2>
+<p align="justify">Neste exemplo vamos utilizar um modelo Self-Hosting, onde vamos disponibilizar nosso serviço por meio de um Console Aplication rodando em uma VM no Windows Azure. Este é mais uma abordagem em que podemos utilizar o WebAPI para disponibilizar serviços.</p>
+<p align="justify">Para continuar, baixe o projeto Console CLICANDO AQUI! Este projeto nada mais é que o serviço que já estamos utilizando adaptado para um projeto Console. Algumas observações:</p>
+<p align="justify">Para esta implementação utilizei os mesmos passos do post xxx</p>
+<p align="justify">Note que em </p>
+<p align="justify">Agora vamos criar nossa VM para a hospedagem do nosso serviço. Selecione a opção de Virtual Machines no portal de gestão do Windows Azure, + NEW, VIRTUAL MACHINE e QUICK CREATE. Estou criando uma VM com Windows Server 2012 em uma instância Extra Small, mas sinta-se avontade para selecionar outra versão de Windows Server.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/03/003.png"><img title="003" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="003" src="/assets/003_thumb.png" width="560" height="301" /></a></p>
+<p align="justify">Para saber mais sobre Virtual Machines no Azure indico o seguinte link: <a href="http://www.windowsazure.com/en-us/documentation/services/virtual-machines/" target="_blank">VIRTUAL MACHINES!</a></p>
+<p align="justify">Com nossa VM rodando, clique sobre ela e vá para a aba INSTANCES e na barra inferior clique em CONNECT. Será baixado um arquivo .rdp com o qual você pode se conectar remotamente a sua VM. </p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/03/004.png"><img title="004" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="004" src="/assets/004_thumb.png" width="560" height="324" /></a></p>
+<p>&#160;</p>
+<p>Para não estender muito, vamos realizar as outras configurações e a implantação do modelo IaaS com Self-Hosting na continuação deste POST.</p>
+<p>No fim, vou publicar todo o código fonte utilizado neste séria para download no GitHub.</p>
+<p>&#160;</p>
+<h2><font color="#9bbb59"><font style="font-weight:bold;">Até mais e bom estudo a todos!</font></font></h2>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/06/me-azul.png"><font color="#9bbb59"><img title="Me Azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="Me Azul" src="/assets/me-azul_thumb.png?w=110&amp;h=110&amp;h=110" width="110" align="left" height="110" /></font></a></p>
+<h3><font color="#9bbb59"><font style="font-weight:bold;">Twitter: </font></font><a href="http://twitter.com/#!/vitormeriat"><font color="#9bbb59"><font style="font-weight:bold;">@vitormeriat</font></font></a></h3>
+<h3><a href="mailto:vitormeriat@gmail.com"><font color="#9bbb59"><font style="font-weight:bold;">vitormeriat@gmail.com</font></font></a></h3>
+<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font color="#9bbb59"><font style="font-weight:bold;">vitor.pereira@studentpartner.com</font></font></a></h3>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2014/02/17/windows-azure-ping-icmp-e-conectividade-na-nuvem/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>Windows Azure - PING, ICMP e conectividade na nuvem.</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

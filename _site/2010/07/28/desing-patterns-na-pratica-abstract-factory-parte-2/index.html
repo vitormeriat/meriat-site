@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Desing Patterns na prática – Abstract Factory (parte 2) | Vitor Meriat</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="Desing Patterns na prática – Abstract Factory (parte 2) | Vitor Meriat">
+  <meta property="og:url" content="http://localhost:4000/2010/07/28/desing-patterns-na-pratica-abstract-factory-parte-2/">
+  <meta property="og:site_name" content="Vitor Meriat">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Desing Patterns na prática – Abstract Factory (parte 2) | Vitor Meriat">
+  <meta name="twitter:url" content="http://localhost:4000/2010/07/28/desing-patterns-na-pratica-abstract-factory-parte-2/">
+  <meta name="twitter:site" content="Vitor Meriat">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="http://localhost:4000">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Vitor Meriat" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/2010/07/28/desing-patterns-na-pratica-abstract-factory-parte-2/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2010-07-28T16:19:24-03:00" itemprop="datePublished">Jul 28, 2010</time></span>
+      <h1 itemprop="name headline">Desing Patterns na prática – Abstract Factory (parte 2)</h1>
+      
+        <span>
+          Posted in Desing Patterns
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <div id="msgcns!BD055AA47A388023!195" class="bvMsg">
+<p>Continuando o artigo sobre as Fábricas Abstratas, iremos executar um teste prático utilizando C#.</p>
+<h3>Exemplo Prático</h3>
+<p>Nosso exemplo prático constitui uma concessionária de veículos novos e semi-novos. Nossa concessionária, trabalha com duas montadoras: Suzuki e Honda. Cada montadora produz dois tipos de produtos: Moto e Carro. Em nossa concessionária, iremos vender um produto para cada tipo(Carro e Moto), de ambas as montadoras.</p>
+<p>Segue o diagrama do exemplo proposto:</p>
+<p style="text-align:center;"><a rel="WLPP" href="https://crf5iq.bay.livefilestore.com/y1mAm36AedrastxGgI0bn_US6lYM4Ee0TRF5EbsjcIX4AZw0cuvZZ7YFFH__ouGLr53V4qyphPCajJXpNJwAOO0Te0n_5rPvSsJMwIIm19Z87QFMp1heAelEuOWVmNk1eAPKm7Rz8xWJ0j0-bLfZU77Ig/FabricaMontadora[12].png?download&amp;psid=1"><img class="aligncenter" style="display:block;border:0 initial initial;" title="FabricaMontadora" src="/assets/FabricaMontadora_thumb[10].png?download&amp;psid=1" border="0" alt="FabricaMontadora" width="594" height="446" /></a></p>
+<p>As fábricas concretas do diagrama são representadas pelas montadoras (Suzuki e Honda). Ainda que as montadoras criem Produtos diferentes (Titan, Fit, Katana e Vitara), as interações entre as montadoras e os produtos são os mesmos, pois eles são definidos pelos tipos (ProdutosAbstratos A e B - Carros e Motos).</p>
+<div>
+<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;font-size:8pt;overflow:auto;cursor:text;border:silver 1px solid;margin:20px 0 10px;padding:4px;">
+<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;">
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   1:</span> <span style="color:#0000ff;">namespace</span> Abstract_Factory</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   2:</span> {</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   3:</span>     <span style="color:#0000ff;">class</span> Program</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   4:</span>     {</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   5:</span>         <span style="color:#0000ff;">static</span> <span style="color:#0000ff;">void</span> Main(<span style="color:#0000ff;">string</span>[] args)</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   6:</span>         {</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   7:</span>             <span style="color:#008000;">// Crio as fábricas concretas que serão utilizadas</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   8:</span>             FabricaHonda honda = <span style="color:#0000ff;">new</span> FabricaHonda();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   9:</span>             FabricaSuzuki suzuki = <span style="color:#0000ff;">new</span> FabricaSuzuki();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  10:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  11:</span>             <span style="color:#008000;">// Crio os automóveis usando as fábricas correspondentes</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  12:</span>             Automoveis automovel = <span style="color:#0000ff;">new</span> Automoveis(honda);</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  13:</span>             automovel = <span style="color:#0000ff;">new</span> Automoveis(suzuki);</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  14:</span>         }</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  15:</span>     }</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  16:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  17:</span> <span style="color:#cc6633;">#region</span> AbstractFactory ------------------------------------------------------------------</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  18:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  19:</span>     <span style="color:#0000ff;">abstract</span> <span style="color:#0000ff;">class</span> FabricaMontadora</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  20:</span>     {</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  21:</span>         <span style="color:#008000;">// Métodos para fabricação dos Produtos       </span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  22:</span>         <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">abstract</span> Moto CriaMoto();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  23:</span>         <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">abstract</span> Carro CriaCarro();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  24:</span>     }</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  25:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  26:</span> <span style="color:#cc6633;">#endregion</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  27:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  28:</span> <span style="color:#cc6633;">#region</span> ConcreteFactory ------------------------------------------------------------------</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  29:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  30:</span>     <span style="color:#008000;">/// &lt;summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  31:</span>     <span style="color:#008000;">/// Fábrica Concreta 1</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  32:</span>     <span style="color:#008000;">/// &lt;/summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  33:</span>     <span style="color:#0000ff;">class</span> FabricaHonda : FabricaMontadora</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  34:</span>     {</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  35:</span>         <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">override</span> Moto CriaMoto() {<span style="color:#0000ff;">return</span> <span style="color:#0000ff;">new</span> Titan();}</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  36:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  37:</span>         <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">override</span> Carro CriaCarro() {<span style="color:#0000ff;">return</span> <span style="color:#0000ff;">new</span> Fit();}</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  38:</span>     }</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  39:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  40:</span>     <span style="color:#008000;">/// &lt;summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  41:</span>     <span style="color:#008000;">/// Fábrica Concreta 2</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  42:</span>     <span style="color:#008000;">/// &lt;/summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  43:</span>     <span style="color:#0000ff;">class</span> FabricaSuzuki : FabricaMontadora</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  44:</span>     {</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  45:</span>         <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">override</span> Moto CriaMoto() {<span style="color:#0000ff;">return</span> <span style="color:#0000ff;">new</span> Katana();}</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  46:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  47:</span>         <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">override</span> Carro CriaCarro() {<span style="color:#0000ff;">return</span> <span style="color:#0000ff;">new</span> Vitara();}</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  48:</span>     }</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  49:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  50:</span> <span style="color:#cc6633;">#endregion</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  51:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  52:</span> <span style="color:#cc6633;">#region</span> AbstractProduct ------------------------------------------------------------------</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  53:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  54:</span>     <span style="color:#008000;">/// &lt;summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  55:</span>     <span style="color:#008000;">/// Produto Abstrato A</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  56:</span>     <span style="color:#008000;">/// &lt;/summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  57:</span>     <span style="color:#0000ff;">abstract</span> <span style="color:#0000ff;">class</span> Moto {}</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  58:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  59:</span>     <span style="color:#008000;">/// &lt;summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  60:</span>     <span style="color:#008000;">/// Produto Abstrato B</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  61:</span>     <span style="color:#008000;">/// &lt;/summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  62:</span>     <span style="color:#0000ff;">abstract</span> <span style="color:#0000ff;">class</span> Carro {}</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  63:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  64:</span> <span style="color:#cc6633;">#endregion</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  65:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  66:</span> <span style="color:#cc6633;">#region</span> ConcreteProduct ------------------------------------------------------------------</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  67:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  68:</span>     <span style="color:#008000;">/// &lt;summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  69:</span>     <span style="color:#008000;">/// Define um objeto (produto) para ser criado pela Fábrica Concreta correspondente </span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  70:</span>     <span style="color:#008000;">/// Produto A1</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  71:</span>     <span style="color:#008000;">/// &lt;/summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  72:</span>     <span style="color:#0000ff;">class</span> Titan : Moto {}</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  73:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  74:</span>     <span style="color:#008000;">/// &lt;summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  75:</span>     <span style="color:#008000;">/// Produto B1</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  76:</span>     <span style="color:#008000;">/// &lt;/summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  77:</span>     <span style="color:#0000ff;">class</span> Fit : Carro {}</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  78:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  79:</span>     <span style="color:#008000;">/// &lt;summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  80:</span>     <span style="color:#008000;">/// Produto A2</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  81:</span>     <span style="color:#008000;">/// &lt;/summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  82:</span>     <span style="color:#0000ff;">class</span> Katana : Moto {}</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  83:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  84:</span>     <span style="color:#008000;">/// &lt;summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  85:</span>     <span style="color:#008000;">/// Produto A3</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  86:</span>     <span style="color:#008000;">/// &lt;/summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  87:</span>     <span style="color:#0000ff;">class</span> Vitara : Carro {}</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  88:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  89:</span> <span style="color:#cc6633;">#endregion</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  90:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  91:</span> <span style="color:#cc6633;">#region</span> Client ---------------------------------------------------------------------------</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  92:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  93:</span>     <span style="color:#008000;">/// &lt;summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  94:</span>     <span style="color:#008000;">/// Usa apenas interfaces declaradas pela AbstractFactory e AbstractProduct</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  95:</span>     <span style="color:#008000;">/// &lt;/summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  96:</span>     <span style="color:#0000ff;">class</span> Automoveis</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  97:</span>     {</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  98:</span>         <span style="color:#0000ff;">private</span> Moto moto;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  99:</span>         <span style="color:#0000ff;">private</span> Carro carro;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;"> 100:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;"> 101:</span>         <span style="color:#0000ff;">public</span> Automoveis(FabricaMontadora fabrica)</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;"> 102:</span>         {</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;"> 103:</span>             moto = fabrica.CriaMoto();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;"> 104:</span>             carro = fabrica.CriaCarro();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;"> 105:</span>         }</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;"> 106:</span>     }</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;"> 107:</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;"> 108:</span> <span style="color:#cc6633;">#endregion</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;"> 109:</span> }</pre>
+</div>
+</div>
+</div>
+<p>No próximo artigo iremos continuar explorando os Desing Patterns.</p>
+<p>Espero que tenham gostado e até a próxima!!!</p>
+<p><a href="mailto:vitormeriat@gmail.com">vitormeriat@gmail.com</a> / <a href="mailto:vitormeriat@hotmail.com">vitormeriat@hotmail.com</a></p>
+<p><a href="http://twitter.com/vitormeriat">http://twitter.com/vitormeriat</a></p>
+</div>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2010/07/07/iis-express-para-um-desnvolvimento-web-mais-pratico/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>IIS Express. Para um desnvolvimento web mais prático!</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

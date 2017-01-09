@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Azure Mobile Service–Logging local e na nuvem com backend .NET WebAPI | Vitor Meriat</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="Azure Mobile Service–Logging local e na nuvem com backend .NET WebAPI | Vitor Meriat">
+  <meta property="og:url" content="http://localhost:4000/2014/09/05/azure-mobile-servicelogging-local-e-na-nuvem-com-backend-net-webapi/">
+  <meta property="og:site_name" content="Vitor Meriat">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Azure Mobile Service–Logging local e na nuvem com backend .NET WebAPI | Vitor Meriat">
+  <meta name="twitter:url" content="http://localhost:4000/2014/09/05/azure-mobile-servicelogging-local-e-na-nuvem-com-backend-net-webapi/">
+  <meta name="twitter:site" content="Vitor Meriat">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="http://localhost:4000">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Vitor Meriat" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/2014/09/05/azure-mobile-servicelogging-local-e-na-nuvem-com-backend-net-webapi/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2014-09-05T15:56:50-03:00" itemprop="datePublished">Sep 5, 2014</time></span>
+      <h1 itemprop="name headline">Azure Mobile Service–Logging local e na nuvem com backend .NET WebAPI</h1>
+      
+        <span>
+          Posted in Microsoft Azure, WebAPI
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify">Um dos pontos de maior adoção ao <strong>backend .NET WebAPI</strong> para o serviços mobile do Microsoft Azure, é a facilidade de testar localmente. Fora isso, Se comparado a arquitetura do <strong>backend NodeJS</strong> temos muito mais capacidade em realizar debug e auditoria em nossa aplicação.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig04.png"><img title="fig04" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig04" src="/assets/fig04_thumb.png" width="700" height="414" /></a></p>
+<p>Neste post vou exemplificar como utilizar o mecanismo de log do <strong>Microsoft Azure Mobile Services</strong> com backend .NET WebAPI local e na nuvem de forma rápida e simples.</p>
+<p><!--more-->
+<p align="justify">O primeiro passo e criar um serviço mobile caso você ainda não o tenha feito. Essa é uma tarefa realmente muito simples porém se você nunca o fez pode se&#160; basear no artigo anterior: <a href="http://vitormeriat.com.br/2014/08/12/azure-mobile-service-primeiros-passos-com-backend-net-webapi/" target="_blank">Azure Mobile Service – Primeiros passos com backend .NET WebAPI</a>. </p>
+<p align="justify">Neste artigo vou utilizar o mesmo serviço que havia criado no artigo anterior. Para isso vou no portal de gestão do Microsoft Azure, acesso meu serviço (no caso meriatwebapi) e acessando a nuvenzinha azul clico em <strong>CONNECT AN EXISTING WINDOWS OR WINDOWS PHONE APP</strong>. Será baixado um serviço com o exemplo ToDo já implementado, como o descrito anteriormente.</p>
+<p align="justify">Vamos iniciar implementando o LOG para os testes locais. Para isso acesse a classe TodoItemController na pasta Controllers, e insira os seguintes códigos nos métodos GetAllTodoItems e GetTodoItem respectivamente: </p>
+<ul>
+<li>this.Services.Log.Info(&quot;[GetAllTodoItems] GET all items&quot;); </li>
+<li>this.Services.Log.Info(&quot;[GetTodoItem] GET item: &quot; + id ?? &quot;&lt;&lt;no id&gt;&gt;&quot;); </li>
+</ul>
+<p>O seu código deve ficar assim:</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig02.png"><img title="FIG02" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG02" src="/assets/fig02_thumb.png" width="700" height="550" /></a></p>
+<p>Simples assim… <strong>Habemus LOG!!!</strong></p>
+<p align="justify">Vale notar que o LOG é uma propriedade de <strong>ApiServices</strong> do WindowsAzure.Mobile.Service, e que está acessível em <strong>TableController&lt;T&gt;</strong>.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig03.png"><img title="FIG03" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG03" src="/assets/fig03_thumb.png" width="700" height="548" /></a></p>
+<p>&#160;</p>
+<h2>Rodando Local</h2>
+<p>Executando o a aplicação localmente, podemos observar os Logs de duas maneiras:</p>
+<ul>
+<li>Debugando a aplicação e visualizando no Console Output </li>
+<li>Gravando o LOG fisicamente </li>
+</ul>
+<p><strong><font size="4">Console Output</font></strong></p>
+<p align="justify">Apenas rode sua aplicação com o&#160; famoso “<strong>F5</strong>”. Atache um <strong>breakpoint</strong> no <strong>GetAllTodoItems</strong>. Note que seu serviço vai executar no <strong>localhost</strong>. Ai é só realizar o get (<strong>localhost:{sua-porta}/tables/TodoItem</strong>).</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig041.png"><img title="FIG04" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG04" src="/assets/fig04_thumb1.png" width="700" height="510" /></a></p>
+<p>Já na aplicação, abra a console <strong>Output</strong> e execute os próximos passos até o <strong>LOG</strong>.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig05.png"><img title="FIG05" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG05" src="/assets/fig05_thumb.png" width="700" height="372" /></a></p>
+<p align="justify">Como podemos ver, o <strong>LOG</strong> vai ser exibido na console <strong>Output</strong>. É claro que nem sempre estamos debugando a aplicação, mesmo que rodando localmente. Isso nos leva a segunda solução:</p>
+<p><strong><font size="4">Gravando o LOG fisicamente</font></strong></p>
+<p align="justify">Neste ponto vamos gravar um arquivo txt em algum lugar. Não tem nada de novo nisso. Vamos apenas criar um um diagnostico para concatenar os logs em um arquivo texto. Para isso vamos alterar nosso <strong>Web.config</strong> incluindo o seguinte código:</p>
+<blockquote><p><strong><font size="2">&lt;system.diagnostics&gt;          <br />&#160;&#160;&#160; &lt;trace autoflush=&quot;true&quot;&gt;           <br />&#160;&#160;&#160;&#160;&#160; &lt;listeners&gt;           <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;add name=&quot;default&quot; initializeData=&quot;C:developmentmylog.txt&quot;           <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; type=&quot;System.Diagnostics.TextWriterTraceListener&quot; /&gt;           <br />&#160;&#160;&#160;&#160;&#160; &lt;/listeners&gt;           <br />&#160;&#160;&#160; &lt;/trace&gt;           <br />&#160; &lt;/system.diagnostics&gt;</font></strong></p>
+</blockquote>
+<p>Seu config vai ficar como o descrito abaixo:</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig06.png"><img title="FIG06" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG06" src="/assets/fig06_thumb.png" width="700" height="522" /></a></p>
+<p align="justify">Neste caso estou definindo que meus logs devem ser gravados em um arquivo chamado <strong>mylog.txt</strong> na pasta <strong>development</strong> no meu diretório <strong>C</strong>. Executando novamente a aplicação e executando os métodos <strong>GetAllTodoItems</strong> (http://localhost:50269/tables/TodoItem) e <strong>GetTodoItem</strong> (http://localhost:50269/tables/TodoItem/1) vamos ter o seguinte:</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig07.png"><img title="FIG07" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG07" src="/assets/fig07_thumb.png" width="700" height="270" /></a></p>
+<p>&#160;</p>
+<h2>Rodando na Nuvem</h2>
+<p align="justify">Esse é realmente simples. Só precisamos publicar as alterações do nosso serviço. Para isso basta clicar com o botão direito no projeto e clicar em <strong>Publish</strong>.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig01.png"><img title="fig01" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig01" src="/assets/fig01_thumb.png" width="700" height="411" /></a></p>
+<p>Na tela que se segue selecione a opção Microsoft Azure Mobile Services.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig021.png"><img title="fig02" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig02" src="/assets/fig02_thumb1.png" width="700" height="321" /></a></p>
+<p>Neste momento será realizado sua autorização e será listados todos os seus serviços bem como a opção de criar um novo serviço para o deploy da aplicação.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig031.png"><img title="fig03" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig03" src="/assets/fig03_thumb1.png" width="700" height="475" /></a></p>
+<p align="justify">Em nosso caso vamos apenas selecionar o serviço correspondente e realizar o <strong>Publish</strong>.</p>
+<p align="justify">Pronto!!! Após a finalização do processo o navegador será aberto na página inicial do nosso serviço hospedado na nuvem. Agora é só realizar o mesmo procedimento dos testes locais.</p>
+<p align="justify">No meu caso a execução foi:</p>
+<ul>
+<li>https://meriatwebapi.azure-mobile.net/tables/TodoItem </li>
+<li>https://meriatwebapi.azure-mobile.net/tables/TodoItem/1 </li>
+</ul>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig061.png"><img title="fig06" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig06" src="/assets/fig06_thumb1.png" width="700" height="240" /></a></p>
+<p>Para o resultado é só acessar a aba LOGS para visualizar.</p>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/09/fig051.png"><img title="fig05" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="fig05" src="/assets/fig05_thumb1.png" width="700" height="400" /></a></p>
+<p align="justify"><strong>PS:</strong> Vale notar que ao executar na nuvem será solicitado sua autenticação no brwoser. É só informar seu usuário da subscription (o nome antes do @ no e-mail de acesso ao portal), e a chave do serviço.</p>
+<p>&#160;</p>
+<p align="justify">Esta é só a introdução e serve de base para que você possa realizar suas implementações necessárias a fim de gerar todos os seus LOGS. </p>
+<p>&#160;</p>
+<h2>Referências:</h2>
+<p><a href="http://azure.microsoft.com/blog/2014/07/28/azure-mobile-services-net-updates/">http://azure.microsoft.com/blog/2014/07/28/azure-mobile-services-net-updates/</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn629482.aspx">http://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn629482.aspx</a></p>
+<h6></h6>
+<h2><font color="#d19049">Bons estudos e até a próxima pessoal&#160; ;)</font></h2>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/me-azul.png"><font color="#d19049"><img title="me-azul" style="float:left;margin:0 30px 0 0;display:inline;" border="0" alt="me-azul" src="/assets/me-azul_thumb.png?w=263&amp;h=263" width="175" align="left" height="175" /></font></a></p>
+<p><strong><font color="#d19049" size="5">Twitter: @</font></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><font color="#d19049" size="5">vitormeriat</font></strong></a></p>
+<p><strong><font color="#d19049" size="5">vitormeriat@</font></strong><a href="mailto:vitormeriat@gmail.com"><strong><font color="#d19049" size="5">gmail.com</font></strong></a></p>
+<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><font color="#d19049" size="5">vitor.pereira@studentpartner.com</font></strong></a></p>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2014/09/03/etbs-2014-cloud-computing-servios-e-mobilidade-com-microsoft-azure/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>ETBS 2014 - Cloud Computing, Serviços e Mobilidade com Microsoft Azure</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

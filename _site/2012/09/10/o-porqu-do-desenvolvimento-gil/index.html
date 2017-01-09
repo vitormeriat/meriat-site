@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>O porquê do desenvolvimento Ágil | Vitor Meriat</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="O porquê do desenvolvimento Ágil | Vitor Meriat">
+  <meta property="og:url" content="http://localhost:4000/2012/09/10/o-porqu-do-desenvolvimento-gil/">
+  <meta property="og:site_name" content="Vitor Meriat">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="O porquê do desenvolvimento Ágil | Vitor Meriat">
+  <meta name="twitter:url" content="http://localhost:4000/2012/09/10/o-porqu-do-desenvolvimento-gil/">
+  <meta name="twitter:site" content="Vitor Meriat">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="http://localhost:4000">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Vitor Meriat" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/2012/09/10/o-porqu-do-desenvolvimento-gil/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2012-09-10T12:51:24-03:00" itemprop="datePublished">Sep 10, 2012</time></span>
+      <h1 itemprop="name headline">O porquê do desenvolvimento Ágil</h1>
+      
+        <span>
+          Posted in Agile, Gestão de Projetos
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/09/devagile.jpg"><img title="devAgile" style="background-image:none;float:left;padding-top:0;padding-left:0;margin:15px 20px 0 0;display:inline;padding-right:0;border-width:0;" border="0" alt="devAgile" align="left" src="/assets/devagile_thumb.jpg" width="240" height="182" /></a>Provavelmente você como eu já ouviu o buzz que agitou o mercado dos últimos anos com a forte implantação das metodologias ágeis no mercado de desenvolvimento de software. Ultimamente tive a oportunidade de trabalhar com força em adoção ao agile o que me incentivou a aprofundar os conhecimentos na área. E como não podia deixar de ser quanto mais se estuda mais questões aparecem e neste caso minha primeira dúvida foi a seguinte: É verdade que o desenvolvimento ágil de software é a melhor maneira de uma empresa se adaptar e responder as mudanças?</p>
+<p align="justify">Neste artigo pretendo abordar alguns pontos que defendem minha opinião sobre este assunto.</p>
+<p><!--more-->
+<p align="justify"><font color="#555555">O primeiro passo é deixar claro que meu questionamento foi motivado devido as incessantes afirmações que alguns amigos do mundo agile me faziam. O próximo passo é afirmar que com base na minha experimentação creio que o desenvolvimento ágil é a melhor maneira de se conseguir adaptação a fim de responder mudanças repentinas (algo quase default) no desenvolvimento de projetos.</font></p>
+<p align="justify">Não considero o desenvolvimento ágil “a bala de prata” ou “a última bolacha do pacote” pelo simples fato que é um processo intermediado e dependente de pessoas e ai reside as maiores falhas.</p>
+<p align="justify">Dito isto, logo abaixo temos alguns tópicos sobre os benefícios que o desenvolvimento ágil e a sua cultura podem trazer para sua empresa e equipe de desenvolvimento.</p>
+<p><font color="#555555"></font></p>
+<h2><font>Reduzindo os riscos</font></h2>
+<p align="justify">Como já sabemos, em qualquer projeto há uma série de riscos, prazos, orçamentos, aumento de escopo e um dos mais temidos – <em>principalmente se você excedeu sua previsão e/ou orçamento</em> – a entrega de software onde o cliente &quot;teve o que pediu”, mas não o resultado não é o que ele queria porque as exigências não foram compreendidas em primeiro lugar. (Isso às vezes se disfarça de &quot;mudanças nos requisitos.&quot;)     <br />O desenvolvimento Ágil procura evitar esses problemas com entregas frequentes de software o que permite aos usuários de negócios a oportunidade de fornecer feedback com base em inspeção frequente das atividades. Isso permite a equipe fazer correções imediatas caso haja algum mal-entendido. A entrega frequente de software, mantém cronogramas e orçamentos em cheque.</p>
+<p>&#160;</p>
+<h2><font>O desenvolvimento ágil proporciona um ambiente de desenvolvimento sustentável</font></h2>
+<p align="justify">Geralmente os projetos de software impõem é difícil adequar a programação inicial. É preciso conhecer a equipe de desenvolvimento, sua habilidade e destreza na tecnologia a ser adotada e prever possíveis imprevistos. Quando um destes fatores é desconhecido (o que será a maioria esmagadora da vezes), o mais comum é termos as famosas horas extras. </p>
+<p align="justify">É um fato que em Agile temos uma estimativa é óbvio que se trata de uma aproximação e não um número exato, mesmo assim existe uma série de problemas com o uso regular de horas extras, incluindo prováveis erros de programadores cansados, risco de rotatividade e o simples fato de que um modelo de horas extras constante não é sustentável a longo prazo.</p>
+<p>&#160;</p>
+<h2 align="justify"><font>Agile fortalecendo relacionamentos</font></h2>
+<p align="justify">O mecanismo do desenvolvimento ágil sugere uma constante troca de conhecimentos e diálogos entre a equipe. O diálogo contínuo e a capacidade de adaptar o produto ao negócio muda gradualmente a maneira de trabalho em uma equipe ágil. Em vez de todo mundo dividido por papéis funcionais, as equipes ágeis fazem o uso mais eficaz dos membros da equipe, sendo ditado pelas necessidades da equipe em cumprir seus compromissos. </p>
+<p align="justify">O objetivo torna-se comum e é mais importante do que cada indivíduo trabalhando estritamente dentro de sua área de especialização. Isso quebra as barreiras entre as disciplinas funcionais, permitindo que a equipe chegue a níveis mais altos de produtividade.</p>
+<p align="justify">&#160;</p>
+<h2 align="justify"><font>Desenvolvimento ágil e a melhora contínua</font></h2>
+<p align="justify">O Desenvolvimento ágil requer de seus praticantes estar continuamente em estado de aprendizagem e adaptação para um desenvolvimento sustentável.</p>
+<p align="justify">O desenvolvimento sustentável por sua vez fornece o tempo e energia necessários para que a equipe de desenvolvimento possa expandir seu conhecimento prático. Além disso, equipes ágeis realizam retrospectivas regulares no final de cada iteração para rever o que está funcionando bem e o que pode ser melhorado. Os membros da equipe avaliam o seu trabalho e o trabalho em equipe (ou a falta dela), bem como as práticas e técnicas para futuros ajustes na próxima iteração caso seja necessário.</p>
+<p align="justify">&#160;</p>
+<h2 align="justify"><font>Agile e adaptação as mudanças</font></h2>
+<p align="justify">Para se aproveitar as oportunidades, a capacidade de uma empresa em se adaptar e responder à mudança é fundamental. As práticas de desenvolvimento de software não devem ir contra as necessidades do negócio, forçando a empresa a escolher e aderir a um conjunto de características pré-determinadas que serão entregues meses ou anos mais tarde.    <br />O desenvolvimento ágil acolhe e se adapta à mudança. Como o software é entregue em iterações curtas (medido em poucas semanas) de uma cadeia prioritária de recursos. Projetos com desenvolvimento ágil são capazes de se adaptar facilmente de acordo com as condições de negócios em constante mudança.</p>
+<p align="justify">&#160;</p>
+<h2><font>Desenvolvimento ágil aumenta a produtividade</font></h2>
+<p align="justify">Criar um software que atenda as necessidades do negócio requer envolvimento da equipe partilhando conhecimento e trabalhando em conjunto. O desenvolvimento ágil foca a atenção da equipe como um raio laser para fazer a entrega com as características de maior valor.</p>
+<p align="justify">Como parte desta entrega, o desenvolvimento ágil vai além de usar equipes dirigidas que são na realidade nada mais do que uma coleção de indivíduos que trabalham em tarefas atribuídas. Equipes ágeis vão abraçar a colaboração no verdadeiro sentido da palavra, há objetivos comuns, conhecimentos partilhados, aprendizagem compartilhada, progresso compartilhado, e uma responsabilidade compartilhada pela equipe em cumprir os seus compromissos.    <br />Outro ganho de produtividade vem da mecânica operacional quase autônoma, onde as equipes podem tomar decisões sem a necessidade de orientação gerencial contínua, o que acaba deixando os desenvolvedores mais engajados com o projeto.</p>
+<p align="justify">.</p>
+<h2 align="justify"><font>Desenvolvimento ágil aborda as necessidades reais do negócio</font></h2>
+<p align="justify">Entre os desafios que todo projeto de software enfrenta a falta de realidade entre o projeto desenvolvido e completa satisfação das necessidades do negócio certamente é um dos principais pontos a se abordar. Como já foi esclarecido nos tópicos acima, o desenvolvimento ágil foca em tornar o processo mais dinâmico para que a qualquer momento possa serem realizadas mudanças a fim de refletir as corretas necessidades do negócio.</p>
+<p>&#160;</p>
+<h2>Bom estudo a todos!</h2>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/06/me-azul.png"><img title="Me Azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="Me Azul" align="left" src="/assets/me-azul_thumb.png?w=110&amp;h=110&amp;h=110" width="110" height="110" /></a></p>
+<h3><font size="5"><strong><font color="#4f81bd">Twitter:</font></strong> </font><a href="http://twitter.com/#!/vitormeriat"><font size="5">@vitormeriat</font></a></h3>
+<h3><a href="mailto:vitormeriat@gmail.com"><font size="5">vitormeriat@gmail.com</font></a></h3>
+<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font size="5">vitor.pereira@studentpartner.com</font></a></h3>
+<p> <font size="5"></font></p>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2012/08/22/reduzindo-os-riscos-ao-migrar-para-a-cloud-computing/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>Reduzindo os riscos ao migrar para a cloud computing</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

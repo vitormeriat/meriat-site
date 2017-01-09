@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Desing Patterns na prática – Builder (parte 3) | Vitor Meriat</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="Desing Patterns na prática – Builder (parte 3) | Vitor Meriat">
+  <meta property="og:url" content="http://localhost:4000/2010/06/24/desing-patterns-na-pratica-builder-parte-3/">
+  <meta property="og:site_name" content="Vitor Meriat">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Desing Patterns na prática – Builder (parte 3) | Vitor Meriat">
+  <meta name="twitter:url" content="http://localhost:4000/2010/06/24/desing-patterns-na-pratica-builder-parte-3/">
+  <meta name="twitter:site" content="Vitor Meriat">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="http://localhost:4000">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Vitor Meriat" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/2010/06/24/desing-patterns-na-pratica-builder-parte-3/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2010-06-24T03:29:14-03:00" itemprop="datePublished">Jun 24, 2010</time></span>
+      <h1 itemprop="name headline">Desing Patterns na prática – Builder (parte 3)</h1>
+      
+        <span>
+          Posted in Desing Patterns
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <div id="msgcns!BD055AA47A388023!173" class="bvMsg">
+<p>Já aprendemos sobre a definição do Padrão Builder, seus benefícios e concequências. Criamos um Produto, um Construtor Abstrato e o Construtores Concretos.</p>
+<p>Neste artigo, iremos implementar o Diretor, e veremos como consumir esta classe.</p>
+<h3>Passo 4 - Builder </h3>
+<p>Depois de ter o Builder correto criado, é responsabilidade da Director montar o produto, que é o objeto final.Chegou a hora de implementarmos o Director, conforme a Listagem 4.</p>
+<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;">
+<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;">
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   1:</span> <span style="color:#008000;">/// &lt;summary&gt; </span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   2:</span> <span style="color:#008000;">/// Director - Conecta as parter produzidas</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   3:</span> <span style="color:#008000;">/// A Montadora usa a ConstruirVeiculo para construir uma variedade de Veiculo em uma série de passos sequenciais.</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   4:</span> <span style="color:#008000;">/// &lt;/summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   5:</span> <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">class</span> Montadora</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   6:</span> &#123;        </pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   7:</span>     <span style="color:#008000;">// Para todos os objetos da estrutura.        </span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   8:</span>     <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">void</span> Construir(ConstruirVeiculo construirVeiculo)</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   9:</span>     &#123;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  10:</span>         construirVeiculo.ContruirChassi();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  11:</span>         construirVeiculo.ConstruirRodas();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  12:</span>         construirVeiculo.ConstruirPortas();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  13:</span>         construirVeiculo.ConstruirMotor();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  14:</span>     &#125;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  15:</span> &#125;</pre>
+</div>
+</div>
+<p>O Builder permite variar a representação interna do produto que ele cria. Ele também esconde os detalhes de como o produto é montado. Cada Builder específico é independente de outros e do resto do programa. Isso melhora a modularidade e faz a adição de outros Builders relativamente simples. Como cada Builder constrói o produto final passo-a-passo, dependendo dos dados, o programador tem mais controle sobre o produto final construído.</p>
+<p>Após nosso modelo já pronto, vamos à classe Program. Aqui nós iremos consumir a classe Montadora e criaremos um Carro e uma Moto.</p>
+<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;">
+<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;">
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   1:</span> <span style="color:#0000ff;">using</span> System;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   2:</span> <span style="color:#0000ff;">using</span> System.Collections.Generic;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   3:</span> <span style="color:#0000ff;">using</span> System.Linq;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   4:</span> <span style="color:#0000ff;">using</span> System.Text;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   5:</span> <span style="color:#0000ff;">using</span> Model;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   6:</span>  </pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   7:</span> <span style="color:#0000ff;">namespace</span> Builder</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   8:</span> &#123;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">   9:</span>     <span style="color:#008000;">/// &lt;summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  10:</span>     <span style="color:#008000;">/// Separa a construção de um objeto complexo da sua representação de forma que o mesmo processo</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  11:</span>     <span style="color:#008000;">/// de construção possa criar representações diferentes.</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  12:</span>     <span style="color:#008000;">/// &lt;/summary&gt;</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  13:</span>     <span style="color:#0000ff;">class</span> Program</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  14:</span>     &#123;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  15:</span>         <span style="color:#0000ff;">static</span> <span style="color:#0000ff;">void</span> Main(<span style="color:#0000ff;">string</span>[] args)</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  16:</span>         &#123;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  17:</span>             <span style="color:#008000;">// Cria a montadora com construtores de veículos</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  18:</span>             Montadora montadora = <span style="color:#0000ff;">new</span> Montadora();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  19:</span>             <span style="color:#008000;">// Build Moto</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  20:</span>             ConstruirVeiculo cMoto = <span style="color:#0000ff;">new</span> ConstrutorMoto();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  21:</span>             <span style="color:#008000;">// Build Carro</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  22:</span>             ConstruirVeiculo cCarro = <span style="color:#0000ff;">new</span> ConstrutorCarro();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  23:</span>  </pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  24:</span>             <span style="color:#008000;">// Construir e exibir os veículos</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  25:</span>             montadora.Construir(cMoto);</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  26:</span>             cMoto.Veiculo.Mostra();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  27:</span>  </pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  28:</span>             montadora.Construir(cCarro);</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  29:</span>             cCarro.Veiculo.Mostra();</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  30:</span>         &#125;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  31:</span>     &#125;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;">  32:</span> &#125;</pre>
+</div>
+</div>
+<p>Agora, temos a possibilidade de criar vários tipos de veículos, todos independentes.</p>
+<p>No próximo artigo continuaremos abordando os padrões de projeto com foco no C#.</p>
+<p><a href="mailto:vitormeriat@gmail.com">vitormeriat@gmail.com</a> / <a href="mailto:vitormeriat@hotmail.com">vitormeriat@hotmail.com</a></p>
+<p><a href="http://twitter.com/vitormeriat">http://twitter.com/vitormeriat</a></p>
+<p>Até a próxima!!!</p>
+</p></div>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2010/06/24/desing-patterns-na-pratica-builder-parte-2/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>Desing Patterns na prática – Builder (parte 2)</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

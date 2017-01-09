@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Microsoft Azure BizTalk Services–Configurando o ambiente de desenvolvimento | Vitor Meriat</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="Microsoft Azure BizTalk Services–Configurando o ambiente de desenvolvimento | Vitor Meriat">
+  <meta property="og:url" content="http://localhost:4000/2014/12/12/microsoft-azure-biztalk-servicesconfigurando-o-ambiente-de-desenvolvimento/">
+  <meta property="og:site_name" content="Vitor Meriat">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Microsoft Azure BizTalk Services–Configurando o ambiente de desenvolvimento | Vitor Meriat">
+  <meta name="twitter:url" content="http://localhost:4000/2014/12/12/microsoft-azure-biztalk-servicesconfigurando-o-ambiente-de-desenvolvimento/">
+  <meta name="twitter:site" content="Vitor Meriat">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="http://localhost:4000">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Vitor Meriat" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/2014/12/12/microsoft-azure-biztalk-servicesconfigurando-o-ambiente-de-desenvolvimento/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2014-12-12T15:55:29-02:00" itemprop="datePublished">Dec 12, 2014</time></span>
+      <h1 itemprop="name headline">Microsoft Azure BizTalk Services–Configurando o ambiente de desenvolvimento</h1>
+      
+        <span>
+          Posted in BizTalk, Enterprise Integration, SOA
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify">Esta é a continuação do artigo <a href="http://vitormeriat.com.br/2014/12/01/microsoft-azure-biztalk-servicescriando-seu-primeiro-servio-biztalk/" target="_blank">Microsoft Azure BizTalk Services–Criando seu primeiro serviço BizTalk</a>. O que vimos anteriormente foi a criação do serviço, cobrindo os números 1 e 2 da agenda. Nesta parte vou concluir com as configurações do&nbsp; ambiente de desenvolvimento completando o passo 3.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/capa02.png"><img title="CAPA02" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="CAPA02" src="/assets/capa02_thumb.png" width="700" height="363" /></a></p>
+<h1>Agenda</h1>
+<ol>
+<li><font color="#cccccc">Pré-requisitos </font>
+<ol>
+<li><font color="#cccccc">Subscription ativa no Azure </font> </li>
+<li><font color="#cccccc">Dependências no Azure </font> </li>
+<li><font color="#cccccc">Dependências On-premisse</font></li>
+</ol>
+</li>
+<li><font color="#cccccc">Provisionando o serviço </font>
+<ol>
+<li><font color="#cccccc">Criando o Banco de Dados </font> </li>
+<li><font color="#cccccc">Criando uma Conta de Armazenamento&nbsp;&nbsp;&nbsp; </font> </li>
+<li><font color="#cccccc">Criando o MABS (Microsoft Azure BizTalk Services) </font> </li>
+<li><font color="#cccccc">Obtendo o Controle de Acesso </font> </li>
+<li><font color="#cccccc">Configurando o Azure BizTalk Services Portal</font> </li>
+</ol>
+</li>
+<li>Configurando o ambiente de desenvolvimento
+<ol>
+<li>Instalando o certificado  </li>
+<li>Criando um certificado para o BizTalk Adapter Service  </li>
+<li>Instalando o Azure SDK BizTalk Services  </li>
+<li>Instalando o BizTalk Adapter Service (BAS)</li>
+</ol>
+</li>
+<li><font color="#cccccc">Configurando o BizTalk Adapter Service </font> </li>
+<li><font color="#cccccc">Considerações </font> </li>
+<li><font color="#cccccc">Referências</font></li>
+</ol>
+<p><!--more--><br />
+<h1>3 – Configurando o ambiente de desenvolvimento</h1>
+<p align="justify">Nesta parte vou abortar sobre a configuração do ambiente de desenvolvimento, bem com algumas dicas importantes que podem te poupar o tempo que eu gastei tentando realizar este mesmo procedimentos.</p>
+<p>&nbsp;</p>
+<h3>Instalando o certificado</h3>
+<p align="justify">Assim que criamos o serviço, é gerado um <strong>endpoint</strong> que será exatamente como o descrito abaixo, apenas substituindo o nome do serviço:</p>
+<ul>
+<li>
+<div align="justify">&nbsp;<strong>&lt;<u>SeuBiztalkServiceName</u>&gt;.biztalk.windows.net</strong></div>
+</li>
+</ul>
+<p align="justify">O que deve ser notado aqui é que para existir uma integração entre o serviço e os clientes, será necessário criar uma conexão segura. </p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/certificate.png"><img title="certificate" style="background-image:none;float:left;padding-top:0;padding-left:0;margin:0 20px 0 0;display:inline;padding-right:0;border-width:0;" border="0" alt="certificate" src="/assets/certificate_thumb.png" width="220" align="left" height="220" /></a>Para este exemplo vamos utilizar o certificado self-signed gerado pelo próprio Azure quando criamos o serviço.</p>
+<p align="justify">Para isso vamos precisar fazer o download do certificado e realizar a instalação do mesmo na <font size="3"><font style="font-weight:normal;">Raiz de <font size="3"><font style="font-weight:normal;">Certificados</font></font> Confiáveis em cada máquina que requerer conexão para o deploy do serviço Biztalk que estiver sendo trabalhado. Este procedimento vai permitir a máquina local aceitar as credenciais certificadas do servidor, e estabelecer a conexão SSL. O que é válido reforçar que aqui estamos falando de um exmplo. <strong><font color="#ff0000">Para um serviço em produção é fortemente indicado que você utilize um certificado fornecido por uma entidade com</font> </strong><a href="http://en.wikipedia.org/wiki/Certificate_authority" target="_blank"><strong>certificate authority (CA).</strong></a></font></font></p>
+<p align="justify">Com o serviço Biztalk que criamos anteriormente selecionado, clique em <strong>Download SSL Certificate</strong> como na imagem abaixo:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz011.png"><img title="bz011" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz011" src="/assets/bz011_thumb.png" width="700" height="615" /></a></p>
+<p align="justify">Assim que o download do <strong>self-signed public certificate (.cer)</strong> terminar, acesse o Console de Gerenciamento Microsoft, que exibe algumas ferramentas administrativas criadas pela Microsoft e parceiros. Para isso pressione a tecla do logotipo do Windows e R. Na tela <strong>Executar</strong> ou <strong>Run</strong> apenas digite <strong>mmc</strong> e clique em <strong>OK</strong>.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz012.png"><img title="bz012" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz012" src="/assets/bz012_thumb.png" width="700" height="442" /></a></p>
+<p align="justify">Na próxima tela clique em <strong>File</strong>, <strong>Add/Remove Snap-in</strong>. O resultado será a próxima tela.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz013.png"><img title="bz013" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz013" src="/assets/bz013_thumb.png" width="700" height="532" /></a></p>
+<p align="justify">No próximo passo selecione a opção <strong>Computer account</strong> e logo após <strong>Local computer</strong>, uma vez que estamos instalando o certificado para o desenvolvimento na máquina local.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz014.png"><img title="bz014" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz014" src="/assets/bz014_thumb.png" width="700" height="532" /></a></p>
+<p align="justify">Agora navegue para a raiz da pasta <strong>Trusted Root Certification Authorities</strong> e importe o certificado que fizemos o download.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz016.png"><img title="bz016" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz016" src="/assets/bz016_thumb.png" width="700" height="532" /></a></p>
+<p align="justify">Agora nosso certificado já está instalado.</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz017.png"><img title="bz017" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz017" src="/assets/bz017_thumb.png" width="700" height="532" /></a></p>
+<p align="justify">&nbsp;</p>
+<h2>Instalando o Azure SDK BizTalk Services</h2>
+<p align="justify">Este SDK contém todos os ativos necessários para a criação de um projeto BizTalk no Visual Studio. Podemos separar os componentes do SDK em três grandes focos:</p>
+<ul>
+<li>
+<div align="justify">O Tempo de Execução – Gerencia a conectividade entre as aplicações On-Premise, Line-Of-Business e o Serviço BizTalk no Azure;</div>
+</li>
+<li>
+<div align="justify">O Núcleo de desenvolvimento – Contém os ativos para desenvolver as aplicações em BizTalk, como os Templates para os projetos BizTalk no Visual Studio e os modelos de artefatos;</div>
+</li>
+<li>
+<div align="justify">As Ferramentas – Onde estão incluídos os cmdlets do PowerShell para a gestão de componentes tanto no servidor quanto no ambiente de desenvolvimento.</div>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p align="justify">Estou levando em conta que você já avaliou todas as dependências de ambiente que apontei na primeira parte. Sendo assim, primeiro verifique que você está mesmo rodando o .Net Framework 4.5. Para isso pressione a tecla do logotipo do Windows e R. Na tela <strong>Executar</strong> ou <strong>Run</strong> apenas digite o comando <strong>regedit</strong>. Navegue para <strong>ComputerHKEY_LOCAL_MACHINESOFTWAREMicrosoftNET Framework SetupNDPv4Client </strong>e verifique no registro <strong>Version</strong>, como na imagem abaixo:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz019.png"><img title="bz019" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz019" src="/assets/bz019_thumb.png" width="700" height="521" /></a></p>
+<p>Para verificar versão do seu <strong>PowerShell</strong>, execute o comando <strong>$PSVersionTable</strong>:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz020.png"><img title="bz020" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz020" src="/assets/bz020_thumb.png" width="700" height="378" /></a></p>
+<p>Com todos os requisitos supridos, faça o download do <font size="3"><a href="http://www.microsoft.com/en-us/download/details.aspx?id=39087" target="_blank">Microsoft Azure BizTalk Services SDK Setup</a>. Fique atento para baixar somente a versão correspondente ao seu SO (23 ou 64 bits). </font></p>
+<p>Não esqueça de executar como Administrador. Agora aceite os termos e clique em Avançar.</p>
+<p>Na tela de <strong>Features</strong>, selecionamos os recursos que serão instalados. Para o ambiente de desenvolvimento vamos instalar todos os recursos.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz021.png"><img title="bz021" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz021" src="/assets/bz021_thumb.png" width="700" height="465" /></a></p>
+<p>A próxima tela, <strong>Summary</strong>, exibe tanto os componentes como o status da instalação.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz022.png"><img title="bz022" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz022" src="/assets/bz022_thumb.png" width="700" height="467" /></a></p>
+<p align="justify">Durante a instalação dos componentes, será iniciado o processo para a instalação do BizTalk Adapter Service (BAS).</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz023.png"><img title="bz023" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz023" src="/assets/bz023_thumb.png" width="700" height="467" /></a></p>
+<p>&nbsp;</p>
+<h2>Instalando o BizTalk Adapter Service (BAS)</h2>
+<p>O BizTalk Adapter Service, faz parte do recurso de comunicação que permite a integração entre o serviço na nuvem e o ambiente on-premise de desenvolvimento. Tendo isso mente, clique em Next. Aceite os termos de licença e novamente clique em Next.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz024.png"><img title="bz024" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="bz024" src="/assets/bz024_thumb.png" width="506" height="397" /></a></p>
+<p>Na próxima tela Management Service Application Pool, é onde fornecemos a conta de serviço que vai executar o IIS APPLICATION POOL do BAS. Para futura referência, o nome do pool é BizTalk Adapter AppPool. </p>
+<blockquote><p>Vale notar que essa conta deve ter função de Administrador na máquina local.</p>
+</blockquote>
+<p align="justify">Como estamos utilizando uma máquina local, não é necessário informar o Domínio. Fora isso é só clicar em Next. </p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz025.png"><img title="bz025" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="bz025" src="/assets/bz025_thumb.png" width="506" height="397" /></a></p>
+<p align="justify">Na tela de<strong> Windows Azure BizTalk Services Deployment Details</strong>, devemos informar a <strong>URL</strong> da instância para o deploy. Você vai perceber que de fato só devemos substituir o campo <strong>&lt;deployment name&gt;</strong> pelo nome do nosso serviço.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz026.png"><img title="bz026" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="bz026" src="/assets/bz026_thumb.png" width="506" height="397" /></a></p>
+<p align="justify">Na tela de <strong>Management Service Site Binding</strong>, vamos utilizar o certificado que importamos para o IIS. Faremos isso pois em um ambiente coorporativo é necessário proteger nosso serviço e criptografar a comunicação HTTP estabelecendo uma comunicação segura. <strong>Lembre-se que para o ambiente de produção, devemos usar um certificado fornecido por uma autoridade de certificação confiável.</strong></p>
+<p>Especifique o número da porta em que o Web Service BizTalk Adapter será executado. Lembre que este serviço em questão está instalado no IIS em sua máquina local. Vou deixar o valor padrão que é 8080. Agora clique em Next até concluir a instalação.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz027.png"><img title="bz027" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="bz027" src="/assets/bz027_thumb.png" width="506" height="397" /></a></p>
+<p>Quando isso ocorrer, este instalador será fechado e veremos a tela abaixo.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz028.png"><img title="bz028" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz028" src="/assets/bz028_thumb.png" width="700" height="467" /></a></p>
+<p align="justify">Instalação concluída e como vemos abaixo o <strong>BizTalk Adapter AppPool</strong> foi criado com sucesso.</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2014/12/bz029.png"><img title="bz029" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="bz029" src="/assets/bz029_thumb.png" width="700" height="542" /></a></p>
+<h2>&nbsp;</h2>
+<p align="justify">No próximo post finalizamos com a configuração do BAS, algumas considerações e as referências utilizadas na construção deste artigo.</p>
+<p>&nbsp;</p>
+<h2>Bons estudos e até a próxima pessoal&nbsp; ;)</h2>
+<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/me-azul.png"><img title="me-azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="me-azul" src="/assets/me-azul_thumb.png?w=263&amp;h=263" width="175" align="left" height="175" /></a>
+<p><strong><font size="5">Twitter: @</font></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><font size="5">vitormeriat</font></strong></a>
+<p><strong><font size="5">vitormeriat@</font></strong><a href="mailto:vitormeriat@gmail.com"><strong><font size="5">gmail.com</font></strong></a>
+<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><font size="5">vitor.pereira@studentpartner.com</font></strong></a></p></p></p>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2014/12/01/microsoft-azure-biztalk-servicescriando-seu-primeiro-servio-biztalk/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>Microsoft Azure BizTalk Services–Criando seu primeiro serviço BizTalk</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

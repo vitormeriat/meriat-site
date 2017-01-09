@@ -1,0 +1,55 @@
+---
+layout: post
+title: 'Windows Azure Internals: Trabalhando com Storage Service e API REST (parte
+  1)'
+date: 2012-03-21 12:49:16.000000000 -03:00
+type: post
+published: true
+status: publish
+categories:
+- Cloud Computing
+- Microsoft Azure
+tags: []
+meta:
+  publicize_results: a:1:{s:7:"twitter";a:1:{i:61749732;a:2:{s:7:"user_id";s:11:"vitormeriat";s:7:"post_id";s:18:"182448796914032641";}}}
+  _wpas_done_twitter: '1'
+  tagazine-media: ''
+  _oembed_59847f249dd39701791778b11dd432a9: "{{unknown}}"
+author:
+  login: vitormeriat
+  email: vitormeriat@hotmail.com
+  display_name: vitormeriat
+  first_name: ''
+  last_name: ''
+---
+<p align="justify">Neste artigo, estarei abordando um pouco das entranhas do <strong>serviço de armazenamento do Windows Azure</strong> (<strong>Blob, Tables e Queues</strong>). Com exceção do <strong>SQL Azure</strong>, que transfere dados usando o protocolo <strong>TDS</strong> em uma conexão <strong>SSL</strong> (não oferecendo suporte a conexões não criptografadas), todos os serviços de armazenamento são expostos através de uma API HTTP <strong>RESTful</strong>. Sendo assim, vamos <strong>codificar</strong> nossa API RESTful para aprendizado. O código completo estará disponível na parte final do artigo.</p>
+<blockquote><p align="justify">“Chama-se <strong>RESTful</strong> os sistemas e APIs que seguem os princípios REST”.</p>
+</blockquote>
+<p align="justify">Entender o funcionamento destes “protocolos” vai nos possibilitar uma maior interação com os serviços de armazenamento, mais agilidade na identificação / correção de erros e um maior poder de fogo na criação de estratégias para consumo e desempenho de nossa aplicação. </p>
+<p align="justify">Existe várias vantagens na utilização deste modelo, pretendo discorrer sobre isto de forma a entendermos quais os benefícios e possibilidades que podemos explorar. Minha intenção com este artigo não é dissecar o <strong>REST</strong>, vamos apenas arranhar sua superfície.</p>
+<p><!--more--><br />
+<h2>&#160;</h2>
+<h2>Por que RESTful</h2>
+<p align="justify">Me lembro que no início de meus estudos com Azure, me perguntei sobre os motivos que levaram o time de Azure a adotar o RESTful. A medida que vamos compreendendo os modelos de programação na nuvem, bem como as vantagens menos obvias desta implementação, tudo vai ficando mais claro.</p>
+<p align="justify">Vou iniciar minha argumentação relembrando um ponto chave do pensamento sobre cloud computing e seus serviços: “Acredita-se que no futuro, ninguém precisará instalar nenhum tipo de software em seu computador, seja para editar textos, assistir vídeos, ou até mesmo editar imagens, tudo estará disponível na nuvem”. Utilizando-se da internet como meio de consumo, o modelo <a href="http://www.google.com.br/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=5&amp;cts=1331140650889&amp;ved=0CFAQFjAE&amp;url=http%3A%2F%2Fvitormeriat.wordpress.com%2F2011%2F07%2F08%2Fmodelos-de-servio-na-nuvem-iaas-paas-e-saas%2F&amp;ei=AZhXT7bZBoXhggemvsTrDA&amp;usg=AFQjCNHkwyO-GYLg9-wuatzzVd8KdKFpbQ" target="_blank">SaaS</a>objetiva disponibilizar os mesmos recursos de software para um número ilimitado de clientes. A palavra chave aqui é disponibilizar. </p>
+<p align="justify">Tornar os serviços do Azure altamente disponíveis foi uma grande jogada. Você pode continuar utilizando seu site em PHP consumindo apenas dados do Blob Storage ou utilizar o serviço de Filas sem ter que codificar sua aplicação em Windows Azure. Este é o modelo comum adotado para computação na nuvem, como por exemplo o caso do Twitter que executa o código em sua própria infra-estrutura mas utiliza o Amazon Simple Storage Service da Amazon (Amazon S3) para armazenar as imagens dos perfis.</p>
+<p align="justify">Outra vantagem bem aparente de se utilizar API RESTful é a facilidade em criar uma biblioteca para acesso em outras linguagens. Hoje é fácil encontrar clientes Azure para Python, Ruby, Erlang, PHP entre outros. </p>
+<p align="justify">&#160;</p>
+<h2 align="justify">Recursos na API RESTful</h2>
+<p align="justify">Quando estamos navegando na internet, o que ocorre são séries de requisições e respostas HTTP. No momento em que clicamos em um link qualquer, realizamos um pedido ao navegador web para que nos envia a página solicitada realizando um GET junto a URL. Em caso de existência, o servidor devolve um código HTTP de resposta (200), seguido pelo conteúdo da página. Caso não exista, o servidor devolve um código HTTP para página não encontrada (404). Como na imagem abaixo:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/03/imagem1.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="Imagem1" border="0" alt="Imagem1" src="{{ site.baseurl }}/assets/imagem1_thumb.png" width="560" height="358" /></a></p>
+<p align="justify">Podemos notar que o navegador&#160; solicita um recurso (neste caso uma página) que é identificado por sua URL. Logo após isso, é solicitado ao servidor que execute um método GET sobre o recurso. Esta é a natureza do REST e o motivo pelo qual é relativamente fácil de codificar em uma grande gama de linguagens. Se há suporte para HTTP, então é possível criar uma API RESTful para acessar recursos por meio de HTTP (Embora seja certamente possível usar alguns ou todos os princípios de REST em outros protocolos).</p>
+<p align="justify">O modelo RESTful está basicamente voltado para interações com recursos. Um recurso é qualquer informação que você deseja disponibilizar, pode ser a lista de empregados de sua empresa, as fotos de passeio em família etc. É um mapeamento conceitual para uma determinada entidade ou conjunto de entidades que você quer “trafegar” para seu serviço. Observe a URI abaixo:</p>
+<p><a title="http://vitormeriat.blob.core.windows.net/teste/Meriat.png" href="http://vitormeriat.blob.core.windows.net/teste/Meriat.png">http://vitormeriat.blob.core.windows.net/teste/Meriat.png</a></p>
+<p align="justify">Ela aponta para uma imagem que está armazenada no Blob Storage do Azure. Para o navegador isto pouco importa, ele conversa HTTP com o Azure Blob Service que devolve os bytes solicitados como o esperado. O fato de ser o Azure Storage Service não é relevante uma vez que é uma requisição HTTP trabalhando exatamente como as URLs devem trabalhar. Vamos observar os esquema abaixo:</p>
+<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/03/arquitetura-storage-azure.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="Arquitetura Storage Azure" border="0" alt="Arquitetura Storage Azure" src="{{ site.baseurl }}/assets/arquitetura-storage-azure_thumb.png" width="500" height="822" /></a></p>
+<p align="justify">A API REST expõe os blobs, tables e queues como objetos HTTP padrão. Sendo assim, podemos utilizar para estes objetos (recursos em REST) os métodos padrão do HTTP como GET, POST, PUT e DELETE. </p>
+<p align="justify">Todos os recursos do serviço de armazenamento do Azure se comportam da mesma maneira quando se trata de operações HTTP. Se você deseja obter um recurso qualquer, deve-se executar uma solicitação HTTP GET. Se a intenção for criar um objeto, você vai enviar uma requisição HTTP PUT. Da mesma forma, para se excluir um objeto você vai enviar uma requisição DELETE. A ressalva fica por conta do serviço de Tables que vai exigir mais elaboração para as consultas.</p>
+<p>No próximo post vou abordar sobre a nomenclatura REST e os primeiros passos para a codificação da nossa API.</p>
+<p>&#160;</p>
+<h2><font color="#666666">Um ótimo estudo a todos….</font></h2>
+<p>&#160;</p>
+<p><a href="http://meriat.files.wordpress.com/2012/03/ass-copy.png"><img style="display:inline;float:left;margin:0 20px 0 0;" title="Ass copy" border="0" alt="Ass copy" align="left" src="{{ site.baseurl }}/assets/ass-copy_thumb.png?w=120&amp;h=120" width="106" height="106" /></a></p>
+<h2><font color="#ff8000"><font>Twitter:</font></font>&#160;<font color="#4f81bd"><font>@vitormeriat</font></font></h2>
+<h2><a href="mailto:vitormeriat@gmail.com"><font color="#4f81bd">vitormeriat@gmail.com</font></a></h2>
+<h2><a href="mailto:vitor.pereira@studentpartners.com.br"><font color="#4f81bd" size="4">vitor.pereira@</font></a><a href="https://www.google.com.br/search?hl=pt-BR&amp;sa=X&amp;ei=cctpT6OgFcvBgAfRjbnUCQ&amp;ved=0CCUQvwUoAA&amp;q=studentpartners&amp;spell=1"><i><font color="#4f81bd" size="4">studentpartners</font></i></a><font color="#4f81bd" size="4">.com.br</font></h2>

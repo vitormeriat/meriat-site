@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!--<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Porque SetConfigurationSettingPublisher precisa ser chamado antes de FromConfigurationSetting? | Vitor Meriat</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="Porque SetConfigurationSettingPublisher precisa ser chamado antes de FromConfigurationSetting? | Vitor Meriat">
+  <meta property="og:url" content="http://localhost:4000/2011/06/07/porque-setconfigurationsettingpublisher-precisa-ser-chamado-antes-de-fromconfigurationsetting/">
+  <meta property="og:site_name" content="Vitor Meriat">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Porque SetConfigurationSettingPublisher precisa ser chamado antes de FromConfigurationSetting? | Vitor Meriat">
+  <meta name="twitter:url" content="http://localhost:4000/2011/06/07/porque-setconfigurationsettingpublisher-precisa-ser-chamado-antes-de-fromconfigurationsetting/">
+  <meta name="twitter:site" content="Vitor Meriat">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="http://localhost:4000">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Vitor Meriat" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/2011/06/07/porque-setconfigurationsettingpublisher-precisa-ser-chamado-antes-de-fromconfigurationsetting/">
+
+  -->
+
+
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<!-- Logo -->
+			<div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo.png" alt="Work Logo">
+				</a>
+			</div>
+			<!-- Logo -->
+
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <!-- <li class="">
+							<a href="/community/">Community</a>
+						</li> -->
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+
+    <main role="main">
+      <div class="container">
+
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/blog/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2011-06-07T11:28:00-03:00" itemprop="datePublished">Jun 7, 2011</time></span>
+      <h1 itemprop="name headline">Porque SetConfigurationSettingPublisher precisa ser chamado antes de FromConfigurationSetting?</h1>
+      
+        <span>
+          Posted in Cloud Computing, Microsoft Azure, Microsoft Azure Storage
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p align="justify">No post anterior(ver <a href="http://vitormeriat.wordpress.com/2011/05/25/cloudstorageaccount-e-o-mtodo-setconfigurationsettingpublisher/">aqui</a>) falei sobre a experiência ou aventura que é montar uma estratégia para o credenciamento da conta no Azure. Como já recebi alguns emails com perguntas e críticas, resolvi me apressar para liquidar(pelo menos em parte) com este assunto.</p>
+<p align="justify">Quem durante seus estudos sobre Azure não se deparou com o famoso erro:</p>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/06/011.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="01" border="0" alt="01" src="/assets/01_thumb1.png" width="580" height="406" /></a></p>
+<p><!--more-->
+<p align="justify">Quando utilizamos o método <em>FromConfigurationSetting</em>, o Azure irá procurar por um editor de configuração.</p>
+<p align="justify">A descrição de <a href="http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&amp;l=EN-US&amp;k=k(MICROSOFT.WINDOWSAZURE.CLOUDSTORAGEACCOUNT.FROMCONFIGURATIONSETTING);k(TargetFrameworkMoniker-%22.NETFRAMEWORK%2cVERSION%3dV4.0%22);k(DevLang-CSHARP)&amp;rd=true" target="_blank">CloudStorageAccount.FromConfigurationSetting</a> no próprio site da <a href="http://msdn.microsoft.com" target="_blank">MSDN</a> é a seguinte:</p>
+<div align="justify">
+<blockquote>
+<p>Create a new instance of a CloudStorageAccount object from a specified configuration setting. This method may be called only after the SetConfigurationSettingPublisher method has been called to configure the global configuration setting publisher.</p>
+</blockquote>
+</div>
+<p align="justify">Note que na descrição do método está um aviso em alto e bom som indicando que este método só pode ser <span style="text-decoration:underline;">chamado</span> após o método SetConfigurationSettingPublisher ser <span style="text-decoration:underline;">chamado</span> para configurar o editor global de definição de configuração. (…)</p>
+<p align="justify">O método FromConfigurationSetting executa o delegate com a lógica específica para obter as credenciais da conta. Este delegate por sua vez é invocado pelos método SetConfigurationSettingPublisher e este é o motivo pelo qual a mensagem de erro diz que este método <span style="text-decoration:underline;">deve ser chamado primeiro</span>. Em resumo:</p>
+<ol>
+<li>
+<div align="justify">Você chama SetConfigurationSettingPublisher passando a lógica para obter os dados da conta;</div>
+</li>
+<li>
+<div align="justify">Você chama FromConfigurationSetting passando o nome da configuração que o delegate(ou outra lógica…) vai usar para selecionar o valor correto;</div>
+</li>
+<li>
+<div align="justify">FromConfigurationSetting executa o delegate e cria o ambiente que permite a criação correta da instância de CloudStorageAccount. Nosso ponto de partida para as credenciais de conta no Azure.</div>
+</li>
+</ol>
+<p align="justify">Até aqui é tudo muito tranquilo, o interessante aqui é que o método FromConfigurationSetting não sabe onde você armazena as informações de conexão, é com SetConfigurationSettingPublisher que conseguimos adquirir as informações da conexão, bem como sua fonte. Sendo assim podemos utilizar de outras estratégias para armazenar nossas credenciais. Mas isto fica para o próximo post!</p>
+<p align="justify">&nbsp;</p>
+<h2></h2>
+<h3 align="justify">Um grande abraço e ótimo Estudo!</h3>
+<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2011/03/logo.jpg"><span style="font-size:small;"><img style="display:inline;float:left;margin-left:0;margin-right:0;" title="logo" border="0" alt="logo" align="left" src="/assets/logo_thumb.jpg?w=50&amp;h=98&amp;h=98" width="50" height="98" /></span></a><strong>&nbsp;&nbsp;&nbsp;&nbsp; Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong><br />&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:vitormeriat@gmail.com">vitormeriat@gmail.com</a><br />&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a></p>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('');"></figure>
+      </div>
+      <!-- <div class="profile__container">
+        <p></p>
+        
+          <ul class="profile__social">
+            
+            
+              <li><a class="fa fa-lg fa-github" href="" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div> -->
+    </div>
+  </section>
+
+</article>
+
+
+  <section class="next">
+    <a class="next__link" href="/2011/06/03/charge-da-semana-gerentes-de-projeto-adoram-a-nuvem/" style="background-image: url('');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>Charge da Semana: Gerentes de Projeto adoram a Nuvem</h2>
+      </div>
+    </a>
+  </section>
+
+</div>
+
+    </main>
+
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>-->
+
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved. <br>
+							Designed by: <a href="http://freehtml5.co/">freehtml5.co</a>  </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script> -->
+	<!-- <script src="/assets/js/google_map.js"></script> -->
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

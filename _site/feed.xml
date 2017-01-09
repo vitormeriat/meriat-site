@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Trophy</title>
+    <title>Vitor Meriat</title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 Jan 2017 11:13:53 -0200</pubDate>
-    <lastBuildDate>Mon, 09 Jan 2017 11:13:53 -0200</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 09 Jan 2017 17:49:05 -0200</pubDate>
+    <lastBuildDate>Mon, 09 Jan 2017 17:49:05 -0200</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>Big Data 1</title>
@@ -22,11 +22,385 @@
 &lt;p&gt;Four loko pinterest lo-fi beard kinfolk marfa. Man bun flannel activated charcoal blue bottle. Chillwave coloring book waistcoat hammock knausgaard selfies. Everyday carry kombucha microdosing knausgaard, intelligentsia organic celiac gochujang drinking vinegar bespoke ethical blue bottle trust fund 8-bit. Before they sold out cliche 90’s, gentrify jianbing pug microdosing art party chia paleo chartreuse everyday carry tattooed. Listicle taxidermy art party migas tote bag meditation, farm-to-table PBR&amp;amp;B. Poutine vaporware letterpress hell of.&lt;/p&gt;
 </description>
         <pubDate>Sun, 04 Dec 2016 00:00:00 -0200</pubDate>
-        <link>/2016/12/04/bigdata-1/</link>
-        <guid isPermaLink="true">/2016/12/04/bigdata-1/</guid>
+        <link>http://localhost:4000/2016/12/04/bigdata-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/12/04/bigdata-1/</guid>
         
         
         <category>Big Data</category>
+        
+      </item>
+    
+      <item>
+        <title>Microsoft Azure Notebooks–Jupyter Notebooks as a Service</title>
+        <description>&lt;p&gt;Essa é uma dica para a galera (que como eu), utiliza o Jupyter Notebooks como ferramenta de estudo ou trabalho.&lt;/p&gt;
+
+&lt;p style=&quot;background-color: #35424a&quot;&gt;&lt;img title=&quot;capa&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;capa&quot; src=&quot;/assets/uploads/2016/10/capa.jpg&quot; width=&quot;752&quot; height=&quot;412&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Provavelmente se você está lendo isto, é por que já conhece o Jupyter Notebooks ou antigo IPython, e tem interesse em usar ou entender esta oferta. Caso você não conheça esta ferramenta, basta saber que o Jupyter Notebooks oferece um environment com suporte a várias linguagens de programação, incluindo Python, R, MATLAB e etc. Esta é uma ferramenta que caiu nas graças dos programadores por proporcionar um meio simples de programar, visualizar e documentar de maneira eficientes seus experimentos. Em breve escrevo algo específico sobre essa ferramenta aqui no blog.&lt;/p&gt;
+
+&lt;p&gt;Por hora vamos analisar este serviço, que no momento em que escrevo este texto, está em PREVIEW.&lt;/p&gt;
+
+&lt;p&gt;Creio que o primeiro passo é entregar algumas informações sobre o serviço. Até este momento os Notebooks estão rodando sobre environment Anaconda para o Python e Microsoft R Open para R. Sendo assim temos suporte aos pacotes já conhecidos no Anaconda. Algo muito importante de ressaltar é que temos a possibilidade de instalar pacotes de maneira normal (pip install), ou usando Conda (conda install). O mesmo vale para R.&lt;/p&gt;
+
+&lt;h2 id=&quot;environments&quot;&gt;Environments&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div align=&quot;justify&quot;&gt;Anaconda 4.1.0 para Python 2.7.11&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div align=&quot;justify&quot;&gt;Anaconda 4.1 para Python 3.5.1&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div align=&quot;justify&quot;&gt;MRO 3.3.0 para R&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;Restrictions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div align=&quot;justify&quot;&gt;É possível acessar o github, PyPI, CRAN, OneDrive, DropBox,&amp;nbsp; Google Drive e é claro, o Azure;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div align=&quot;justify&quot;&gt;A memória é limitado a 4 GB;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div align=&quot;justify&quot;&gt;Seus dados pode ter removido após 60 dias de inatividade;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div align=&quot;justify&quot;&gt;Uso deve ser limitado a aprendizagem, investigação, computação em geral e etc. O que é meio lógico, já que o serviço (por hora gratuito), tem algumas limitações de processamento e privacidade.&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&quot;start&quot;&gt;Start&amp;gt;&lt;/h2&gt;
+&lt;p&gt;Para utilizar o serviço é algo tão simples quanto acessar o serviço e se autenticar no serviço.&lt;/p&gt;
+
+&lt;p style=&quot;background-color: #35424a&quot;&gt;&lt;img title=&quot;azure-notebook-1&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-1&quot; src=&quot;/assets/uploads/2016/10/azure-notebook-1.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Assim que você informar sua credencial, o serviço vai te solicitar a permissão para criar uma ID para sua conta no serviço. Diga sim e siga em frente…&lt;/p&gt;
+
+&lt;p&gt;Assim que tudo estiver pronto, você deve ver uma tela como abaixo:&lt;/p&gt;
+
+&lt;p&gt;&lt;img title=&quot;azure-notebook-2&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-2&quot; src=&quot;/assets/uploads/2016/10/azure-notebook-2.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Done. Você já um ambiente pronto, e inclusive alguns exemplos para testar. De cara, uma coisa interessante notar é que podemos importar notebooks direto de nosso computador ou de uma URL.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title=&quot;azure-notebook-3&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-3&quot; src=&quot;/assets/uploads/2016/10/azure-notebook-3.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Agora perceba que todos os nossos cadernos estão vinculados a uma biblioteca chamada &lt;strong&gt;Sample notebooks&lt;/strong&gt;. Sendo assim vamos criar uma biblioteca.  &amp;lt;/p&amp;gt;&lt;/p&gt;
+
+&lt;p align=&quot;justify&quot;&gt;Clique em &lt;strong&gt;My libraries&lt;/strong&gt;. Na página que se segue clique em &lt;strong&gt;New Library&lt;/strong&gt; e informe o nome, descrição e url personalizada.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title=&quot;azure-notebook-4&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-4&quot; src=&quot;/assets/uploads/2016/10/azure-notebook-4.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Assim que sua biblioteca estiver criada você pode optar por importar um caderno ou abrir seu Jupyter Notebooks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title=&quot;azure-notebook-5&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-5&quot; src=&quot;/assets/uploads/2016/10/azure-notebook-5.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Agora estamos em terreno conhecido. É só criar um novo Notebook usando Py2, Py3 ou R.&lt;/p&gt;
+
+&lt;p&gt;No próximo post vou mostrar como instalar pacotes de Python, R e como compartilhar sua biblioteca de forma pública.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero…&lt;/p&gt;
+</description>
+        <pubDate>Thu, 20 Oct 2016 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
+        
+        
+        <category>Data Science</category>
+        
+        <category>Machine Learning</category>
+        
+        <category>Python</category>
+        
+      </item>
+    
+      <item>
+        <title>IoT Weekend Recife 2016 - Como a Inteligência Artificial vai mudar a Internet das Coisas</title>
+        <description>&lt;p align=&quot;justify&quot;&gt;Olá pessoal, hoje, dia 06 de agosto de 2016 tive mais uma vez o privilégio de palestrar no &lt;a href=&quot;http://www.iotweekend.com.br/&quot; target=&quot;_blank&quot;&gt;IoT Weekend&lt;/a&gt; edição Recife. Esta é segunda vez em Recife e quarta edição geral do evento, que é inteiramente dedicado a Internet of Things, abrangendo do ponto de vista dos negócios aos famoso under the hood dos detalhes técnicos.&lt;/p&gt;
+&lt;p style=&quot;background-color: #3c3c3c&quot; align=&quot;center&quot;&gt;&lt;a href=&quot;/uploads/2016/08/capa.png&quot;&gt;&lt;img title=&quot;capa&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px&quot; border=&quot;0&quot; alt=&quot;capa&quot; src=&quot;/assets/capa_thumb.png&quot; width=&quot;1000&quot; height=&quot;562&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Esta edição vez estive falando novamente sobre Inteligência, dessa vez abordando como inteligência artificial está mudando a maneira como fazemos e pensamos na internet das coisas, com uma visão mais abrangente sobre o tema.&lt;/p&gt;
+&lt;p&gt;
+&lt;p align=&quot;justify&quot;&gt;Em suma nessa sessão tentei mostrar como os players atuais do mercado moldaram suas ferramentas e principalmente como isto pode lhe auxiliar no desenvolvimento de dispositivos cada vez mais inteligentes ou por que não dizer, cognitivos ou que aprendem.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Alguns termos como a própria cognição parecem ser algo místico, porém fazendo um resumo rápido da história da computação, as máquinas mais antigas eram capazes de fazer cálculos. Anos depois, surgiram os sistemas programáveis, que são aqueles utilizados até hoje em nossos celulares, por exemplo. Os próximos passos, como por exemplo a computação cognitiva, trazem uma tecnologia capaz de processar informações e de aprender com elas de forma muito semelhante ao cérebro humano, sem que precisem ser programadas para tal.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Existem uma série de outros temas a respeito, coisas que pretendo compartilhar em breve aqui no blog.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;Valeu galera, e até a próxima ;)&lt;/h2&gt;
+&lt;/p&gt;
+</description>
+        <pubDate>Sat, 06 Aug 2016 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
+        
+        
+        <category>Palestras</category>
+        
+      </item>
+    
+      <item>
+        <title>Meetups, Internet of Things Expo, MVP Open Day e dias de aprendizado em NYC</title>
+        <description>&lt;p align=&quot;justify&quot;&gt;Durante o mês de junho tive a oportunidade de participar de alguns eventos de tecnologia em New York, e é claro, de aproveitar essa cidade maravilhosa.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;O objetivo principal era a participação no Internet of &lt;a href=&quot;http://www.thingsexpo.com/&quot; target=&quot;_blank&quot;&gt;Things Expo&lt;/a&gt;. Evento dedicado as tecnologias que permeiam o IoT, tais quais Cloud Computing, Big Data, Security, Protocols e etc.&lt;/p&gt;
+&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;/uploads/2016/10/Cmcc5mYVIAAoB5V.jpg&quot;&gt;&lt;img title=&quot;Cmcc5mYVIAAoB5V&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;Cmcc5mYVIAAoB5V&quot; src=&quot;/assets/Cmcc5mYVIAAoB5V_thumb.jpg&quot; width=&quot;990&quot; height=&quot;742&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Este evento ocorreu nos dias 7, 8 e 9 de junho no famoso &lt;a href=&quot;http://www.javitscenter.com/&quot; target=&quot;_blank&quot;&gt;Javits Center&lt;/a&gt;. Este é um evento onde conseguimos ver as tendências do mercado de IoT, por meio das empresas, cases e profissionais que estão atuando no topo do mercado.&lt;/p&gt;
+&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;/uploads/2016/10/IMG_0232.jpg&quot;&gt;&lt;img title=&quot;IMG_0232&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;IMG_0232&quot; src=&quot;/assets/IMG_0232_thumb.jpg&quot; width=&quot;990&quot; height=&quot;740&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!--more--&gt;
+&lt;p align=&quot;justify&quot;&gt;Entre os assuntos disseminados nesta edição, tivemos temas como: &lt;u&gt;IoT: It’s Evolution and Connection to the Cloud&lt;/u&gt;, &lt;u&gt;Continuous Delivery of Microservices: Patterns and Processes&lt;/u&gt;, &lt;u&gt;The Internet of [Broken] Things: The Big Data Challenges of Keeping IoT Reliable&lt;/u&gt;, &lt;u&gt;The Science Behind Generating Big Data&lt;/u&gt;, &lt;u&gt;Secure Communications in P2P and Social IoT Networks&lt;/u&gt;… &lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;É interessante notar a variedade de assuntos que permeiam essa área de conhecimento. O mais importante foi notar o quanto o mercado está focado em “onde está o dinheiro”, ou onde IoT está sendo utilizado como ferramenta de mercado e não apenas como assunto para se brincar com hardware. &lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;Meetup&lt;/h2&gt;
+&lt;p align=&quot;justify&quot;&gt;Outro ponto alto em NYC são os meetups. Tive a oportunidade de participar do &lt;a href=&quot;https://nytm.org/&quot; target=&quot;_blank&quot;&gt;NY TECH MEETUP&lt;/a&gt;, e do maravilhos afterparty. &lt;/p&gt;
+&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;/uploads/2016/10/IMG_0318.jpg&quot;&gt;&lt;img title=&quot;IMG_0318&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;IMG_0318&quot; src=&quot;/assets/IMG_0318_thumb.jpg&quot; width=&quot;990&quot; height=&quot;747&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Outro ponto interessante é que geralmente os &lt;strong&gt;meetups&lt;/strong&gt; são utilizados como meio de network. Os apresentadores montam seus “&lt;strong&gt;stands&lt;/strong&gt;”, colocam seus cartões, as bebidas são postas na mesa, e galera circula com seus copos em uma mão, e os cartões na outra. Agora é hora de partilhar ideias, aprendizados e mostrar os seu trabalho.&lt;/p&gt;
+&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;/uploads/2016/10/IMG_0329.jpg&quot;&gt;&lt;img title=&quot;IMG_0329&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;IMG_0329&quot; src=&quot;/assets/IMG_0329_thumb.jpg&quot; width=&quot;990&quot; height=&quot;747&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;MVP Open Days 2016&lt;/h2&gt;
+&lt;p align=&quot;justify&quot;&gt;Uma grata surpresa foi a oportunidade de participar do primeiro MVP Open Days na Ámerica do Norte, que também foi meu primeiro evento na Microsoft como MVP. &lt;/p&gt;
+&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;/uploads/2016/10/IMG_0512.jpg&quot;&gt;&lt;img title=&quot;IMG_0512&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;IMG_0512&quot; src=&quot;/assets/IMG_0512_thumb.jpg&quot; width=&quot;990&quot; height=&quot;747&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Tive o grande prazer de conhecer a Microsoft NYC, na famosa Times Square 11. Para quem não conhece, o MVP Open Day é uma conferência com objetivo de reunir MVPs de uma determinado país a fim de interagir, aprender e trocar experiências.&lt;/p&gt;
+&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;/uploads/2016/10/IMG_0622.jpg&quot;&gt;&lt;img title=&quot;IMG_0622&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;IMG_0622&quot; src=&quot;/assets/IMG_0622_thumb.jpg&quot; width=&quot;990&quot; height=&quot;528&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;Valeu galera ;)&lt;/h2&gt;
+&lt;/p&gt;
+</description>
+        <pubDate>Thu, 28 Jul 2016 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
+        
+        
+        <category>Comunidade</category>
+        
+      </item>
+    
+      <item>
+        <title>DevOps Summit 2016–Azure Stack - O poder da nuvem em seu datacenter</title>
+        <description>&lt;p align=&quot;justify&quot;&gt;Dia 07/05 na seda da Microsoft no Brasil, aconteceu a primeira edição do DevOps Summit Brasil. Esse é um evento que teve como origem a fusão dos já consagrados Azure Summit Brasil e ALM Summit Brasil com foco em promover o conhecimento de Cloud Computing e DevOps.&lt;/p&gt;
+&lt;p style=&quot;background-color: #000000&quot; align=&quot;center&quot;&gt;&lt;img title=&quot;spark-tela&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;spark-tela&quot; src=&quot;/assets/devopssummit.jpg&quot; width=&quot;1000&quot; height=&quot;790&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Azure Stack é o primeiro produto de uma nova categoria hybrid cloud platform. Este novo produto permite que a TI entregue os recursos do seu Datacenter no mesmo modelo de entrega de serviços da nuvem pública.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Com o Azure Stack você aproveita o modelo de gestão operacional de recursos do azure em seu Datacenter. É isso mesmo, com o Azure Stack conseguimos integrar os serviços da nuvem pública com a nossa capacidade computacional, a fim de entregar serviços. Você também pode explorar uma abordagem híbrida, tendo a capacidade e flexibilidade de trabalhar os recursos onde for melhor.&lt;/p&gt;
+&lt;p&gt;&lt;!--more--&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;iframe style=&quot;height: 685px; width: 100%&quot; marginheight=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/zW5NtNvVdGsrct&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;br /&gt; &lt;/iframe&gt;&lt;/p&gt;
+&lt;h2&gt;Referências&lt;br /&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/blog/microsoft-azure-stack-technical-preview-is-now-available-for-download/&quot;&gt;Microsoft Azure Stack Technical Preview is now available for download&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/articles/azure-stack-run-powershell-script/#prepare-the-deployment-machine&quot;&gt;Deploy Azure Stack POC&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://channel9.msdn.com/Events/Ignite/2015/BRK3479&quot;&gt;Azure IaaS for Azure Stack&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/overview/azure-stack/&quot;&gt;Microsoft Azure Stack&lt;/a&gt;&lt;b&gt;&lt;/b&gt;&lt;i&gt;&lt;/i&gt;&lt;u&gt;&lt;/u&gt;&lt;sub&gt;&lt;/sub&gt;&lt;sup&gt;&lt;/sup&gt;&lt;strike&gt;&lt;/strike&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+</description>
+        <pubDate>Mon, 09 May 2016 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
+        
+        
+        <category>Comunidade</category>
+        
+        <category>Microsoft Azure</category>
+        
+        <category>Palestras</category>
+        
+      </item>
+    
+      <item>
+        <title>Global Azure Bootcamp 2016–Dispositivos inteligêntes e Azure Machine Learning</title>
+        <description>&lt;p align=&quot;justify&quot;&gt;Dia 16 de abril de 2016 ocorreu mais uma edição do Global Azure Bootcamp. Este é um evento mundial que ocorre quase simultâneamente, e que teve mais uma vez a participação em Brasília, desta vez sob a tutela do &lt;a href=&quot;https://mvp.microsoft.com/pt-br/PublicProfile/5001388&quot; target=&quot;_blank&quot;&gt;Jucinei Santos&lt;/a&gt;, MVP de Windows Development.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Minha participação foi uma análise sobre os chamados dispositivos inteligêntes, e como o Microsoft Azure está preparado para nos auxiliar nos cenários presente e futuro, quando falamos em tecnologias de Big Data, Machine Learning e serviços específos para o mundo de IoT.&lt;/p&gt;
+&lt;p style=&quot;background-color: #000000&quot; align=&quot;center&quot;&gt;&lt;a href=&quot;http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/04/gwabbsb2016.jpg&quot;&gt;&lt;img title=&quot;gwabbsb2016&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;gwabbsb2016&quot; src=&quot;/assets/gwabbsb2016_thumb.jpg&quot; width=&quot;330&quot; height=&quot;248&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/04/gwabbsb2016b.jpg&quot;&gt;&lt;img title=&quot;gwabbsb2016b&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;gwabbsb2016b&quot; src=&quot;/assets/gwabbsb2016b_thumb.jpg&quot; width=&quot;330&quot; height=&quot;248&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/04/gwabbsb2016c.jpg&quot;&gt;&lt;img title=&quot;gwabbsb2016c&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;gwabbsb2016c&quot; src=&quot;/assets/gwabbsb2016c_thumb.jpg&quot; width=&quot;330&quot; height=&quot;248&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!--more--&gt;
+&lt;p align=&quot;justify&quot;&gt;Ainda sobre o evento, foi possível demostrar a utilziação de serviços para comunicação com dispositivos, neste caso trabalhando com MQTT e utilizando uma demo prática de controle e coleta de dados em uma casa.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Além de realizar um experimento com o Microsoft Azure Machine Learning, também abordamos o futuro da intligência de dados e os novos caminhos que a cognição pode trazer para o mundo da inteligência artificial.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2 align=&quot;justify&quot;&gt;Referências&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div align=&quot;justify&quot;&gt;&lt;a href=&quot;http://mqtt.org/&quot; target=&quot;_blank&quot;&gt;MQTT&lt;/a&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div align=&quot;justify&quot;&gt;&lt;a href=&quot;https://www.microsoft.com/pt-br/server-cloud/internet-of-things/azure-iot-suite.aspx&quot; target=&quot;_blank&quot;&gt;Azure IoT Suite&lt;/a&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div align=&quot;justify&quot;&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/services/iot-hub/&quot; target=&quot;_blank&quot;&gt;Hub IoT do Azure&lt;/a&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div align=&quot;justify&quot;&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/services/machine-learning/&quot; target=&quot;_blank&quot;&gt;Aprendizado de Máquina do Azure&lt;/a&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Apr 2016 16:21:28 -0300</pubDate>
+        <link>http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
+        
+        
+        <category>Azure IoT Suite</category>
+        
+        <category>IoT</category>
+        
+        <category>Machine Learning</category>
+        
+        <category>Microsoft Azure</category>
+        
+      </item>
+    
+      <item>
+        <title>IoT Weekend GO–Dispositivos Inteligentes com Computação Cognitiva e IA</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/04/iotweekend.jpg&quot;&gt;&lt;img title=&quot;iotweekend&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;iotweekend&quot; src=&quot;/assets/iotweekend_thumb.jpg&quot; width=&quot;990&quot; height=&quot;742&quot; /&gt;&lt;/a&gt;
+&lt;p align=&quot;justify&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Olá pessoal, primeiro gostaria de agradecer a todos os participantes do evento e da minha palestra. O feedback foi maravilhoso, sem falar o networking. Este foi o primeiro IoT Weekend do ano, e ocorreu em Goiânia. Como o prometido segue abaixo algumas informações, material e referências da minha palestra no &lt;a href=&quot;http://www.iotweekend.com.br/2016/Goiania/index.html&quot; target=&quot;_blank&quot;&gt;IoT Weekend GO 2016&lt;/a&gt;. Assim que possível tento gravar um vídeo com o experimento realizada durante a palestra.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;&lt;a href=&quot;http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/04/logo_IOT_GO_header.png&quot;&gt;&lt;img title=&quot;logo_IOT_GO_header&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: left; padding-top: 0px; padding-left: 0px; border-left: 0px; margin: 0px 30px 0px 10px; display: inline; padding-right: 0px&quot; border=&quot;0&quot; alt=&quot;logo_IOT_GO_header&quot; src=&quot;/assets/logo_IOT_GO_header_thumb.png&quot; width=&quot;190&quot; align=&quot;left&quot; height=&quot;81&quot; /&gt;&lt;/a&gt;O tema foi em relação a computação congnitiva, inteligência artificial e IoT. Embora seja um tema recente, cognição na computação já provou ter um grande potencial. A geração de conhecimento por meio de aprendizado e dos dados disponíveis é a próxima grande onda de inovação no mercado de tecnologia. Empresas usando feedbacks e dados de ambiente de lojas para traçar e explorar os padrões de consumo dos clientes, hospitais usando cognição para acelerar pesquisas contra o câncer, cidades controlando melhor os seus recursos são pequenos exemplos do que já temos no mundo conectado de hoje. &lt;/p&gt;
+&lt;p&gt;&lt;!--more--&gt;
+&lt;p align=&quot;justify&quot;&gt;Ao unir computação cognitiva à Internet das Coisas conseguimos integrar e trabalhar um volume absurdo de dados com a inteligência cognitiva, gerando o subsídio necessário para as melhores tomadas de decisões.
+&lt;p align=&quot;justify&quot;&gt;Ainda foi relizada uma demonstração do poder dos serviços de aprendeizagem de máquina como serviço na cloud, utilizando como ferramente o Azure Machine Learning. Uma simples classificação de preferências do usuário na utilização de uma sala inteligênte se utilizando de deversos sensores para a coleta de informações aliados a um simples questionário de satisfação. Com base nisso conseguimos aprender algumas preferências na utilização da mesma.
+&lt;p align=&quot;justify&quot;&gt;Abaixo seguem os slides da apresentação e logo após algumas referências.
+&lt;p align=&quot;justify&quot;&gt;&amp;nbsp;
+&lt;p&gt;&lt;iframe style=&quot;height: 675px; width: 1000px&quot; marginheight=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/6aR1nnfD1bZfI1&quot; frameborder=&quot;0&quot; width=&quot;998&quot; marginwidth=&quot;0&quot; scrolling=&quot;no&quot;&gt; &lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;É isso ai galera… esse foi o primeiro IoT Weekend do ano… a próxima edição é no Recife!!!&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;Referências&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/services/cognitive-services/&quot; target=&quot;_blank&quot;&gt;Azure Cognitive Services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ibm.com/smarterplanet/us/en/ibmwatson/&quot; target=&quot;_blank&quot;&gt;IBM Watson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/services/machine-learning/&quot; target=&quot;_blank&quot;&gt;Azure Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/pt/machine-learning/&quot; target=&quot;_blank&quot;&gt;Amazon Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://epoca.globo.com/vida/noticia/2015/06/sete-maneiras-de-computacao-cognitiva-mudar-vida-das-pessoas.html&quot; target=&quot;_blank&quot;&gt;Computação cognitiva: sete maneiras de mudar, de vez, a vida das pessoas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 12 Apr 2016 20:24:17 -0300</pubDate>
+        <link>http://localhost:4000/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</guid>
+        
+        
+        <category>Comunidade</category>
+        
+        <category>Palestras</category>
+        
+      </item>
+    
+      <item>
+        <title>MQTT nativo no Azure IoT Hub</title>
+        <description>&lt;p align=&quot;justify&quot;&gt;Estou utilizando o Microsoft Azure em projetos de IoT antes mesmo do lançamento do &lt;a href=&quot;https://azure.microsoft.com/pt-br/services/iot-hub/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Azure IoT Hub&lt;/strong&gt;&lt;/a&gt;. Desde então tenho aguardado um notícia que veio enfim, no dia 8 de fevereiro de 2016: O suporte nativo ao protocolo &lt;a href=&quot;http://mqtt.org/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;MQTT&lt;/strong&gt;&lt;/a&gt; sem a necessidade do protocol gateway.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Embora essa fosse um solicitação recorrente, há de se parabenizar o esforço do time do &lt;strong&gt;Azure IoT&lt;/strong&gt;. Pouco tempo após o &lt;strong&gt;MQTT&lt;/strong&gt; ter sido aprovado como padrão &lt;strong&gt;ISO/IEC&lt;/strong&gt; (a saber: &lt;a title=&quot;http://www.iso.org/iso/catalogue_detail.htm?csnumber=69466&quot; href=&quot;http://www.iso.org/iso/catalogue_detail.htm?csnumber=69466&quot; target=&quot;_blank&quot;&gt;#ISO20922&lt;/a&gt;), somos agraciados com a notícia do suporte nativo no &lt;strong&gt;Azure IoT Hub&lt;/strong&gt;.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Essa é uma notícia que agrega e muito ao serviço. Aqueles que já trabalham na área sabem o quanto é fundamental a questão da comunicação. Um projeto IoT depende desse fator, e para se ter um projeto robusto é necessário se pensar nos principais problemas como restrição de banda, restrição de plataforma etc. É ai que entra o MQTT. Já abordei isso por cima em alguns posts anteriores.&lt;/p&gt;
+&lt;p&gt;&lt;!--more--&gt;
+&lt;p align=&quot;justify&quot;&gt;Devo fazer alguns posts sobre a experiência em utilizar o IoT Hub da Microsoft. Neles devo abordar detalhes do produto e a experiência de migrar um projeto já pronto, enviando dados para um broker na nuvem no modelo IaaS, para o serviço na plataforma Azure.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Utilizar o Azure IoT Hub com MQTT é tão simples quanto o esperado. Não há segredos nem customizações, apenas informe o protocolo a ser usado e sua string de conexão. Abaixo segue o exemplo em Node.js:&lt;/p&gt;
+&lt;h2&gt;Criar um device&lt;/h2&gt;
+&lt;pre style=&quot;font-size: 16pt !important&quot;&gt;&lt;code class=&quot;javascript&quot;&gt;
+var clientFromConnectionString = require('azure-iot-device-mqtt').clientFromConnectionString;
+var Message = require('azure-iot-device').Message;
+
+var connectionString = '[IoT Hub device connection string]';
+
+var client = clientFromConnectionString(connectionString);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Enviando dados&lt;/h2&gt;
+&lt;pre style=&quot;font-size: 16pt !important&quot;&gt;&lt;code class=&quot;javascript&quot;&gt;
+var msg = new Message('some data from my device');
+client.sendEvent(message, function (err) {
+  if (err) console.log(err.toString());
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Recebendo dados&lt;/h2&gt;
+&lt;pre style=&quot;font-size: 16pt !important&quot;&gt;&lt;code class=&quot;javascript&quot;&gt;
+client.receive(function (err, msg) {
+  if (err) console.error(err);
+  else console.log(msg);
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;Referências&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/blog/azure-iot-hub-ga-capability-overview/?wt.mc_id=WW_CE_IOT_OO_SCL_TW&amp;amp;Ocid=C+E+Social+FY16_Social_TW_MicrosoftIoT_20160209_363303519&quot; target=&quot;_blank&quot;&gt;Azure IoT Hub general availability overview&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Azure/azure-iot-sdks/tree/master/node/device/transport/mqtt&quot; target=&quot;_blank&quot;&gt;Github - Azure IoT Device MQTT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 13 Feb 2016 13:17:47 -0200</pubDate>
+        <link>http://localhost:4000/2016/02/13/mqtt-nativo-no-azure-iot-hub/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/02/13/mqtt-nativo-no-azure-iot-hub/</guid>
+        
+        
+        <category>Azure IoT Suite</category>
+        
+        <category>IoT</category>
+        
+        <category>Microsoft Azure</category>
+        
+        <category>MQTT</category>
+        
+      </item>
+    
+      <item>
+        <title>QCon SP 2016 - Medição da experiência real dos usuários com sensores e Machine Learning</title>
+        <description>&lt;p align=&quot;justify&quot;&gt;Fala pessoal, segue abaixo as informações sobre minha palestra na track de IoT da QCon São Paulo 2016. Agradeço a todos os participantes, e como prometido segue o PPT da apresentação e as referências utilizadas.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;&lt;a href=&quot;http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/02/qconsp2016.png&quot;&gt;&lt;img title=&quot;qconsp2016&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: left; padding-top: 0px; padding-left: 0px; margin: 20px 60px 0px 0px; display: inline; padding-right: 0px; border-top-width: 0px&quot; border=&quot;0&quot; alt=&quot;qconsp2016&quot; src=&quot;/assets/qconsp2016_thumb.png&quot; width=&quot;165&quot; align=&quot;left&quot; height=&quot;76&quot; /&gt;&lt;/a&gt;Nessa palestra vou explorar a experiência no uso de sensoriamento e outras técnicas de IoT e análise de dados, numa aplicação real de Caronas Compartilhadas. Os dados coletados incluem a rota dos carros, condições externas de clima e trânsito, que são cruzados com respostas a questionários e preferências pessoais.&lt;/p&gt;
+&lt;p&gt;&lt;!--more--&gt;
+&lt;p align=&quot;justify&quot;&gt;​O uso de dispositivos nos veículos capturando dados forneceu uma visão clara sobre o que realmente acontecia nas caronas – e a análise dos dados com técnicas de machine learning permitiu reduzir distorções causadas por efeitos externos às caronas em si. Ao final, foi possível medir com maior precisão os múltiplos aspectos da experiência na utilização do serviço.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Vou apresentar nessa palestra técnicas de IoT e Inteligência Artificial foram fundamentais para melhorar a aplicação e a experiência dos usuários. Serão abordados os passos para construção da aplicação, sua arquitetura, utilização de sensores, cloud, analytics e aprendizado de máquina, assim como critérios de performance e custo computacional. Serão abordados também desafios enfrentados na comunicação entre os dispositivos utilizados nos veículos.&lt;/p&gt;
+&lt;p&gt;&lt;iframe style=&quot;height: 675px; width: 1000px&quot; marginheight=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/by4wQxgA5RJzu9&quot; frameborder=&quot;0&quot; width=&quot;998&quot; marginwidth=&quot;0&quot; scrolling=&quot;no&quot;&gt; &lt;/iframe&gt;
+&lt;p align=&quot;justify&quot;&gt;Abaixo segue o link da palestra para quem quiser saber mais detalhes. Corre que ainda dá tempo de participar.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a title=&quot;http://qconsp.com/presentation/medicao-da-experiencia-real-dos-usuarios-com-sensores-e-machine-learning&quot; href=&quot;http://qconsp.com/presentation/medicao-da-experiencia-real-dos-usuarios-com-sensores-e-machine-learning&quot; target=&quot;_blank&quot;&gt;Medição da experiência real dos usuários com sensores e Machine Learning&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;Referências&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a title=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-overview/&quot; href=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-overview/&quot;&gt;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-overview/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a title=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-ipython-notebook-machine-learning/&quot; href=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-ipython-notebook-machine-learning/&quot;&gt;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-ipython-notebook-machine-learning/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a title=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-eventhub-streaming/&quot; href=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-eventhub-streaming/&quot;&gt;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-eventhub-streaming/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a title=&quot;https://azure.microsoft.com/en-us/services/machine-learning/&quot; href=&quot;https://azure.microsoft.com/en-us/services/machine-learning/&quot;&gt;https://azure.microsoft.com/en-us/services/machine-learning/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 10 Feb 2016 22:34:15 -0200</pubDate>
+        <link>http://localhost:4000/2016/02/10/qcon-sp-2016-medio-da-experincia-real-dos-usurios-com-sensores-e-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/02/10/qcon-sp-2016-medio-da-experincia-real-dos-usurios-com-sensores-e-machine-learning/</guid>
+        
+        
+        <category>Comunidade</category>
+        
+        <category>IoT</category>
+        
+        <category>Machine Learning</category>
+        
+        <category>Palestras</category>
+        
+      </item>
+    
+      <item>
+        <title>IoT Weekend 2016</title>
+        <description>&lt;p align=&quot;justify&quot;&gt;Em 2015 nasceu o&lt;strong&gt;&lt;font size=&quot;4&quot;&gt; &lt;/font&gt;&lt;/strong&gt;&lt;a href=&quot;http://www.iotweekend.com.br/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;&lt;font size=&quot;4&quot;&gt;IoT Weekend&lt;/font&gt;&lt;/strong&gt;&lt;/a&gt;, um evento com foco &lt;strong&gt;IoT&lt;/strong&gt; em sua forma mais completa. Começamos bem, estreando em &lt;a href=&quot;http://www.iotweekend.com.br/2015/Recife/index.html&quot; target=&quot;_blank&quot;&gt;Recife&lt;/a&gt; e &lt;a href=&quot;http://www.iotweekend.com.br/2015/Brasilia/index.html&quot; target=&quot;_blank&quot;&gt;Brasília&lt;/a&gt;, com o mais importante: Palestrantes e conteúdo de primeira, abordando temas como mercado, cidades inteligêntes, plataformas, big data, cloud computing, protocolos, comunicação, etc. Ou seja, todos os conteúdos pertinentes e com foco em &lt;strong&gt;IoT&lt;/strong&gt;. Isso sem falar no famoso workshop abrangendo uma plataforma (Arduino, Raspberry pi), junto com sua conectividade e integração ao mundo do big data e cloud computing.&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;&lt;a href=&quot;http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/02/logo_IOT_main.png&quot;&gt;&lt;img title=&quot;logo_IOT_main&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;logo_IOT_main&quot; src=&quot;/assets/logo_IOT_main_thumb.png&quot; width=&quot;390&quot; height=&quot;265&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;Foi graças ao sucesso e repercussão do IoT Weekend em 2015 que este ano na edição 2016 vamos sediar este evento em 6 cidades pelo Brasil:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goiânia&lt;/li&gt;
+&lt;li&gt;Rio de Janeiro&lt;/li&gt;
+&lt;li&gt;Recife&lt;/li&gt;
+&lt;li&gt;Maringá&lt;/li&gt;
+&lt;li&gt;São Paulo&lt;/li&gt;
+&lt;li&gt;Brasília&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;!--more--&gt;
+&lt;p&gt;Para mais informações nos siga nas redes sociais:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;font size=&quot;5&quot;&gt;&lt;strong&gt;Site:&lt;/strong&gt; &lt;/font&gt;&lt;a title=&quot;http://www.iotweekend.com.br/&quot; href=&quot;http://www.iotweekend.com.br/&quot;&gt;&lt;font size=&quot;5&quot;&gt;http://www.iotweekend.com.br/&lt;/font&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;font size=&quot;5&quot;&gt;&lt;strong&gt;Twitter:&lt;/strong&gt; &lt;/font&gt;&lt;a title=&quot;https://twitter.com/iotweekend&quot; href=&quot;https://twitter.com/iotweekend&quot;&gt;&lt;font size=&quot;5&quot;&gt;https://twitter.com/iotweekend&lt;/font&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;font size=&quot;5&quot;&gt;&lt;strong&gt;Facebook:&lt;/strong&gt; &lt;/font&gt;&lt;a title=&quot;https://www.facebook.com/iotweekend&quot; href=&quot;https://www.facebook.com/iotweekend&quot;&gt;&lt;font size=&quot;5&quot;&gt;https://www.facebook.com/iotweekend&lt;/font&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;justify&quot;&gt;O primeiro evento será nos dias 8,9 e 10 de Abril em Goiânia. A vendas já se iniciaram e a primeira remessa de ingressos se incerra no dia 25-02. Não perca tempo e já realize a inscrição. Caso você seja de uma das cidades e se interesse em participar, pode nos contactar por email para tirar qualquer dúvida, ou para sugestões. Serão bem vindas.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 08 Feb 2016 22:52:28 -0200</pubDate>
+        <link>http://localhost:4000/2016/02/08/iot-weekend-2016/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/02/08/iot-weekend-2016/</guid>
+        
+        
+        <category>Comunidade</category>
+        
+        <category>IoT</category>
         
       </item>
     

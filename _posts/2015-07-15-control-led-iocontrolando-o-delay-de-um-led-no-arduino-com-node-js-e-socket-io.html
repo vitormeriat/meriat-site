@@ -1,0 +1,87 @@
+---
+layout: post
+title: Control LED IO–Controlando o delay de um LED no Arduino com Node.js e Socket.io
+date: 2015-07-15 03:20:28.000000000 -03:00
+type: post
+published: true
+status: publish
+categories:
+- Arduino
+- IoT
+- Node.js
+- Socket.io
+tags: []
+meta:
+  _edit_last: '1'
+author:
+  login: vitormeriat
+  email: vitormeriat@hotmail.com
+  display_name: vitormeriat
+  first_name: ''
+  last_name: ''
+---
+<p align="justify"><strong><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/07/capa-control-led-io.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border-width: 0px;" title="capa control led io" src="{{ site.baseurl }}/assets/capa-control-led-io_thumb.png" alt="capa control led io" width="907" height="268" border="0" /></a></strong></p>
+<p align="justify"><strong>Primeiro acenda um LED, depois domine o mundo!</strong> Seguindo esta premissa estou disponibilizando meu primeiro projeto/estudo em <strong>Node.js</strong> no <strong>Arduino</strong>. Trata-se de um simples <strong>blink</strong> utilizando Node.js, <strong>Socket.io</strong>, <strong>Firmata </strong>e <strong>Johnny-five</strong> no <strong>Visual Studio</strong>. Abaixo segue o vídeo de demonstração:</p>
+<p><iframe src="https://www.youtube.com/embed/S2ewQMYJR5I?rel=0" width="1000" height="563" frameborder="0" allowfullscreen="allowfullscreen"></iframe><!--more--></p>
+<p align="justify">O projeto é bem simples e tem o passo-a-passo já está descrito no Github.</p>
+<p align="justify">Para mais detalhes e <strong>baixar o projeto</strong>, <a href="https://github.com/vitormeriat/Control-LED-IO" target="_blank">acesse o Repository da solução aqui</a>!</p>
+<p>&nbsp;</p>
+<h1>O código</h1>
+<p>Em <strong><span style="font-size: large;">app.js</span></strong> temos:</p>
+<pre><code class="javascript">
+var express = require('express'),
+    app = express(),
+    server = require('http').Server(app),
+    io = require('socket.io')(server),
+    five = require("johnny-five");
+
+app.disable('x-powered-by');
+
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', "http://" + req.headers.host + ':8000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    next();
+});
+
+app.use("/", express.static(__dirname + "/view"));
+
+app.get('/', function (req, res) {
+    res.sendfile(__dirname + '/view/index.html');
+});
+
+server.listen(3000, "127.0.0.1");
+
+five.Board().on("ready", function () {
+    
+    var led = new five.Led(13).strobe(1000);
+    
+    io.on('connection', function (socket) {
+        
+        console.log('Iniciado!!!');
+                
+        socket.on('led', function (data) {
+            console.log('Novo Delay LED: ' + data.delay);
+            led.strobe(data.delay);
+        });
+    });
+});
+</code></pre>
+<p>Já o script em nossa view <strong><span style="font-size: large;">index.html</span></strong></p>
+<pre><code class="javascript">
+var socket = io.connect("http://" + document.location.hostname + ":3000"), notif;
+console.log('Iniciado!!!');
+        
+$('#ledSet').on('click', function () {
+    var tmp = parseInt($('#ledDelay').val(), 10);            
+    socket.emit('led', { delay: tmp });
+    console.log("LED Delay Configurado para: ", tmp);
+});
+</code></pre>
+<h2>Próximos passos</h2>
+<p align="justify">Minha ideia é aproveitar o trabalho que já realizei com <strong>backend</strong> e <strong>integrações</strong> de <strong>cloud</strong> e <strong>IoT</strong>, para montar um projeto com o mesmo código funcionando no <strong>Arduino</strong>, <strong>Intel Galileo2</strong>, <strong>Intel Edison</strong> e <strong>Raspeberry Pi</strong>. Tudo se comunicando com a nuvem via <strong>Microsoft Azure</strong> :D</p>
+<p>&nbsp;</p>
+<h2>Bons estudos e até a próxima pessoal  ;)</h2>
+<p><strong><span style="color: #ffc000; font-size: x-large;">Twitter: @</span></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><span style="color: #ffc000; font-size: x-large;">vitormeriat</span></strong></a></p>
+<p><strong><span style="color: #ffc000; font-size: x-large;">vitormeriat@</span></strong><a href="mailto:vitormeriat@gmail.com"><strong><span style="color: #ffc000; font-size: x-large;">gmail.com</span></strong></a></p>
+<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><span style="color: #ffc000; font-size: x-large;">vitor.pereira@studentpartner.com</span></strong></a></p>

@@ -1,0 +1,161 @@
+---
+layout: post
+title: Entendento o LINQ (parte 1)
+date: 2010-12-29 19:14:51.000000000 -02:00
+type: post
+published: true
+status: publish
+categories:
+- LINQ
+- ORM
+tags: []
+meta:
+  _wpas_done_ms: '1'
+  _wpas_done_twitter: '1'
+author:
+  login: vitormeriat
+  email: vitormeriat@hotmail.com
+  display_name: vitormeriat
+  first_name: ''
+  last_name: ''
+---
+<p align="center"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2010/12/linq.jpg"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="linq" border="0" alt="linq" src="{{ site.baseurl }}/assets/linq_thumb.jpg" width="382" height="231" /></a></p>
+<p align="justify">O LINQ (Language Integrated Query ou Linguagem Integrada de Consulta), é uma nova função do C# 3.0 e .Net Framework 3.5. Ele permite escrever consultas estruturadas seguras em torno de coleções locais e objetos e fontes remotas de dados. </p>
+<p align="justify">Para iniciar nossos estudos no LINQ, devemos utilizar os namespaces "System.Linq" e "System.Linq.Expressions". Estarei utilizando o Visual C# 2010 Express.
+<p align="justify">O LINQ permite você consultar qualquer coleção de executando IEnumerable&lt;&gt;, no meio de um array, list, XML DOM, ou fonte remota de dados(como uma tabela no SQL Server). O LINQ oferece os benefícios de ambos os tipos de verificação do tempo de compilação e composição dinâmica de consultas.
+<p align="justify">O LINQ proporciona duas arquiteturas paralelas: consultas locais e consultas interpretadas. As consultas locais tratam de coleções locais de objetos, quanto às consultas interpretadas tratam de fontes remotas de dados.Neste momento, iremos nos ater somente as consultas locais, abordando as consultas interpretadas a partir do tópico LINQ para SQL.
+<p align="justify">As unidades básicas de dados no LINQ são sequências e elementos. Uma sequência é qualquer objeto que executa a interface IEnumerable.
+<p align="justify">No exemplo seguinte, o array numeros é uma sequência e 1,2,3,4,5 são os elementos:&nbsp;&nbsp; <strong>int[] numeros = {1,2,3,4,5};</strong> </p>
+<blockquote><p>Este tipo de sequência é denominada "local", uma vez que representa uma coleção local de objetos na memória.</p>
+</blockquote>
+<h1><font>Operadores de Consulta</font></h1>
+<p align="justify">São métodos que transformam uma sequência. Por padrão, um operador de consulta recebe uma sequência de entrada e retorna uma sequência de saída transformada. Há em torno de 40 operadores de consulta, executados como métodos estáticos de extensão e que são denominados operadores padrões de consulta.</p>
+<h1 align="justify"><font>Consulta</font></h1>
+<p align="justify">É uma expressão que transforma sequências utilizando operadores de consulta. A estrutura mais simples de uma consulta engloba uma sequência de entrada e um operador; como no exemplo 1:</p>
+<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;max-height:200px;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;" id="codeSnippetWrapper">
+<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;" id="codeSnippet">
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum1">   1:</span> <span style="color:#008000;">// Sequência a ser consultada</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum2">   2:</span> <span style="color:#0000ff;">int</span>[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum3">   3:</span>&nbsp; </pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum4">   4:</span> <span style="color:#008000;">// Consulta que retorna os números pares</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span> IEnumerable&lt;<span style="color:#0000ff;">int</span>&gt; filtro = System.Linq.Enumerable.</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span>                Where(sequencia, n =&gt; n % 2 == 0);</pre>
+<p><!--CRLF--></div>
+</div>
+<h1><font></font>&nbsp;</h1>
+<h1><font>Consultas Lambda</font></h1>
+<p align="justify">São as mais flexíveis e fundamentais. A maioria dos operadores de consulta aceita expressões Lambda como argumento. Estas expressões ajudam a direcionar e dar forma ao à consulta. No exemplo 1, utilizamos uma expressão Lambda:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>n =&gt; n % 2 == 0</strong>. </p>
+<p align="justify">O argumento de entrada <em><font size="2">n</font></em> representa cada um dos números no array e é do tipo int. O operador Where necessita que a expressão retorne um valor bool, indicando que o elemento deverá ser incluído na sequência de saída. </p>
+<p align="justify">No C# temos uma sintaxe especial para escrever consultas, denominada "sintaxe de compreensão de consultas". O exemplo 1 utilizando o esta sintaxe ficaria assim: </p>
+<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;max-height:200px;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;" id="codeSnippetWrapper">
+<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;" id="codeSnippet">
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum1">   1:</span> <span style="color:#0000ff;">int</span>[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 }; </pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum2">   2:</span>&nbsp; </pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum3">   3:</span> IEnumerable&lt;<span style="color:#0000ff;">int</span>&gt; filtro = from n <span style="color:#0000ff;">in</span> sequencia</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum4">   4:</span>                             <span style="color:#0000ff;">where</span> n % 2 == 0 </pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span>                             select n;</pre>
+<p><!--CRLF--></div>
+</div>
+<p align="justify">As sintaxes Lambda e de compreensão são complementares, então utilizaremos ambas durante os exemplos. Aproveitando o gancho, vamos diminuir nossa consulta "tipando implicitamente" o filtro, e chamando nosso operador </p>
+<p align="justify">diretamente de sequencia(nosso array de int), uma vez que os operadores são executados como métodos de extensão. O Exemplo 1 ficará assim: </p>
+<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;max-height:200px;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;" id="codeSnippetWrapper">
+<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;" id="codeSnippet">
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum1">   1:</span> <span style="color:#0000ff;">int</span>[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum2">   2:</span> var filtro = sequencia.Where(n =&gt; n % 2 == 0);</pre>
+<p><!--CRLF--></div>
+</div>
+<h1><font></font>&nbsp;</h1>
+<h1><font>Encadeamento de Operadores</font></h1>
+<p>Para realizar consultas mais complexas, nós podemos utilizar o encadeamento de operadores como no exemplo 2:</p>
+<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;max-height:200px;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;" id="codeSnippetWrapper">
+<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;" id="codeSnippet">
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum1">   1:</span> <span style="color:#008000;">// Crio a sequência a ser consultada</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum2">   2:</span> <span style="color:#0000ff;">string</span>[] sequencia = { <span style="color:#006080;">"Vasco"</span>, <span style="color:#006080;">"Fluminense"</span>, <span style="color:#006080;">"Bota-Fogo"</span>, <span style="color:#006080;">"Grêmio"</span>, <span style="color:#006080;">"Santos"</span>, <span style="color:#006080;">"Internacional"</span>, <span style="color:#006080;">"Cruzeiro"</span>, <span style="color:#006080;">"Figueirense"</span> };</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum3">   3:</span>&nbsp; </pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum4">   4:</span> <span style="color:#008000;">// Executo a consulta utilizando os operadores encadeados.</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span> var filtro = sequencia</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span>     .Where(n =&gt; n.Contains(<span style="color:#006080;">"a"</span>)) <span style="color:#008000;">// Condição</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum7">   7:</span>     .OrderBy(n =&gt; n.Length)      <span style="color:#008000;">// Ordenação</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum8">   8:</span>     .Select(n =&gt; n.ToUpper());   // Tudo em letras maiúsculas  </pre>
+<p><!--CRLF--></div>
+</div>
+<p align="justify">Os operadores Where, OrderBy e Select separam os métodos de extensão na classe Enumerable. O operador Where, faz o primeiro filtro da sequência de entrada. O operador OrderBy retira uma versão ordenada da sequência de entrada e o método Select retorno uma sequência onde cada elemento é transformado por uma determinada expressão Lambda. Os dados fluem da esquerda para a direita, em nosso caso, a ordem de execussão é: Where, OrderBy, OrderBy e Select.</p>
+<blockquote>
+<p align="justify">É importante frisar que ao utilizar operadores não é alterada a sequência de entrada. O que acontece é o retorno de uma nova seuqência.</p>
+</blockquote>
+<p align="justify">Quando utilizamos operadores de consulta encadeados, a sequência de saída do primeiro operadar é a sequência de entrada de outro. Podemos então, construir o exemplo 2 como no código abaixo:</p>
+<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;max-height:200px;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;" id="codeSnippetWrapper">
+<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;" id="codeSnippet">
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum1">   1:</span> <span style="color:#0000ff;">string</span>[] sequencia = { <span style="color:#006080;">"Vasco"</span>, <span style="color:#006080;">"Fluminense"</span>, <span style="color:#006080;">"Bota-Fogo"</span>, <span style="color:#006080;">"Grêmio"</span>, <span style="color:#006080;">"Santos"</span>, <span style="color:#006080;">"Internacional"</span>, <span style="color:#006080;">"Cruzeiro"</span>, <span style="color:#006080;">"Figueirense"</span> };</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum2">   2:</span>&nbsp; </pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum3">   3:</span> <span style="color:#008000;">// Filtro</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum4">   4:</span> var filtro = sequencia.Where(n =&gt; n.Contains(<span style="color:#006080;">"a"</span>));</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span> <span style="color:#008000;">// Ordenação</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span> var sorted1 = filtro.OrderBy(n =&gt; n.Length);</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum7">   7:</span> <span style="color:#008000;">// Transforma tudo em letras maiúsculas</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum8">   8:</span> var resultadoFinal = sorted2.Select(n =&gt; n.ToUpper());</pre>
+<p><!--CRLF--></div>
+</div>
+<h1><font>Subconsultas</font></h1>
+<p align="justify">Uma subconsulta é uma expressão Lambda de consulta obtida sobre o resultado da consulta anterior. No expemplo 3 utilizamos uma consulta n.Split() para converter cada uma das strings em uma coleção de palavras, logo após utilizamos nossa subconsulta .Last() para que a ordenação seja realizada pelo último elemento da coleção, neste caso o sobrenome do escritor.</p>
+<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;max-height:200px;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;" id="codeSnippetWrapper">
+<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;" id="codeSnippet">
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum1">   1:</span> <span style="color:#008000;">// Crio a sequência com os nomes dos escritores brasileiros</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum2">   2:</span> <span style="color:#0000ff;">string</span>[] nomes = { <span style="color:#006080;">"Monteiro Lobato"</span>, <span style="color:#006080;">"Cecilia Meireles"</span>, <span style="color:#006080;">"Manuel Bandeira"</span>, <span style="color:#006080;">"Mario Quintana"</span>, <span style="color:#006080;">"Castro Alves"</span> };</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum3">   3:</span>&nbsp; </pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum4">   4:</span> <span style="color:#008000;">// Crio uma consulta pra ordenar os nomes pelos sobrenomes dos escritores</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span> var resultado = nomes.OrderBy(n =&gt; n.Split().Last());</pre>
+<p><!--CRLF--></div>
+</div>
+<p align="justify">No exemplo 4 utilizamos uma subconsulta mais elaborada. Nesta subconsulta, retornamos todas os elementos químicos cujo a quantidade de letras for igual ao elemento menor.</p>
+<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;max-height:200px;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;" id="codeSnippetWrapper">
+<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;" id="codeSnippet">
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum1">   1:</span> <span style="color:#008000;">// Crio a sequência com alguns elementos da tabela periódica</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum2">   2:</span> <span style="color:#0000ff;">string</span>[] nomes = { <span style="color:#006080;">"Urânio"</span>, <span style="color:#006080;">"Rênio"</span>, <span style="color:#006080;">"Ununquádio"</span>, <span style="color:#006080;">"Sódio"</span>, <span style="color:#006080;">"Copernício"</span>, <span style="color:#006080;">"Bário"</span> };</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum3">   3:</span>&nbsp; </pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum4">   4:</span> <span style="color:#008000;">// Consulta para retornar todos os nomes cujo o tamanho seja igual ao menor nome.</span></pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span> var resultado = nomes</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span>     .Where(n =&gt; n.Length ==</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum7">   7:</span>         nomes.OrderBy(n2 =&gt; n2.Length)</pre>
+<p><!--CRLF-->
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum8">   8:</span>         .Select(n2 =&gt; n2.Length).First());</pre>
+<p><!--CRLF--></div>
+</div>
+<p align="justify">A variável externa de repetição (<i><font size="2">n</font></i>) está no centro da subconsulta, portanto, não podemos reutilizar <i><font size="2">n</font></i> como variável de iteração da subconsulta. </p>
+<p align="justify">No próximo artigo iremos continuar explorando as funcionalidades do LINQ. </p>
+<p><strong><font size="3" face="Arial">Twitter: </font><a href="twitter.com/vitormeriat"><font size="3" face="Arial">@vitormeriat</font></a></strong><font face="Arial"> <br /></font><a href="mailto:vitormeriat@gmail.com"><font size="3" face="Arial">vitormeriat@gmail.com</font></a><font face="Arial"> </font><br /><a href="mailto:vitor.pereira@studentpartners.com.br"><font size="3" face="Arial">vitor.pereira@studentpartners.com.br</font></a><font face="Arial"> </font></p>
+<p>[]’s</p></p></p></p></p></p>
