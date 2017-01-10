@@ -10,21 +10,20 @@ menuhome: fh5co-active
   <div class="section-padding archives__container">
     {% for post in paginator.posts %}
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-        <a class="card__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
-          <div class="card__container">
+        <a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+          <div >
             <h2 itemprop="name">{{ post.title }}</h2>
-            {% if post.image-sm %}
+              {% if post.image-sm %}
                <img src="{{ post.image-sm }}" class="absolute-bg" >
-             {% endif %}
-            <p itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">
-              {{ post.date | date: "%b %-d, %Y" }}
+              {% endif %}
+            <p>
+              <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
               {% if post.categories.size > 0 %}
-                in {{ post.categories | join: ', ' }}
+                in <span class="post-cat">{{ post.categories | join: ', ' }}</span>
               {% endif %}
             </p>
-            <p itemprop="description">{{ post.content | strip_html | truncatewords: 100 }}</p>
+            <p class="post-description">{{ post.content | strip_html | truncatewords: 80 }}</p>
             <a href="{{ post.url }}" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
-            <!-- <span class="card__more">Read Post</span> -->
             <div class="fh5co-spacer fh5co-spacer-md"></div>
           </div>
         </a>
@@ -41,7 +40,7 @@ menuhome: fh5co-active
 
         {% for page in (1..paginator.total_pages) %}
           {% if page == paginator.page %}
-            <em>{{ page }}</em>
+            <em style="background: #808080; color: #ffffff; padding: 0px 10px 0px 10px;">{{ page }}</em>
           {% elsif page == 1 %}
             <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
           {% else %}

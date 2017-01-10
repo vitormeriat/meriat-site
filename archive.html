@@ -16,9 +16,12 @@ menuarchive: fh5co-active
             <h3>{{ currentDate }}</h3>
             <ul>
             {% assign myDate = currentDate %}
-        {% endif %}
-        <li><span>{{ post.date | date: "%b %d" }}</span><a href="{{ post.url }}"> - <b>{{ post.title }}</b></a></li>
-        {% if forloop.last %}</ul>{% endif %}
+            {% endif %}
+            <li>
+              <span>{{ post.date | date: "%b %d" }}</span><a href="{{ post.url }}"> - <b>{{ post.title }}</b></a>
+            </li>
+            {% if forloop.last %}
+          </ul>{% endif %}
     {% endfor %}
   </div>
 
