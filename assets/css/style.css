@@ -72,6 +72,10 @@ figure.fh5co-with-caption figcaption {
   color: #7b7b7b;
 }
 
+.mast-container {
+  margin-bottom: 60px;
+}
+
 .absolute-bg {
   width:100%;
   height: auto;
