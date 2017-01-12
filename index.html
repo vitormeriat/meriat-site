@@ -12,16 +12,16 @@ menuhome: fh5co-active
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
           <div >
-            <h2 itemprop="name">{{ post.title }}</h2>
-              {% if post.image-sm %}
-               <img src="{{ post.image-sm }}" class="absolute-bg" >
-              {% endif %}
+            <span style="font-size: 2.2em; color: lightslategrey;">{{ post.title }}</span>
             <p>
               <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
               {% if post.categories.size > 0 %}
                 in <span class="post-cat">{{ post.categories | join: ', ' }}</span>
               {% endif %}
             </p>
+            {% if post.image-sm %}
+             <img src="{{ post.image-sm }}" class="absolute-bg" >
+            {% endif %}
             <p class="post-description">{{ post.content | strip_html | truncatewords: 80 }}</p>
             <a href="{{ post.url }}" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
             <div class="fh5co-spacer fh5co-spacer-md"></div>

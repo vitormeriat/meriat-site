@@ -7,12 +7,8 @@ layout: default
 <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="section-padding--lg mast">
-    <!-- <a class="nav nav-white" href="/blog/">
-      <i class="fa fa-lg fa-arrow-left"></i>
-      <span>Back to Posts</span>
-    </a> -->
     <figure class="absolute-bg mast__img" style="background-image: url('{{ page.image }}');"></figure>
-    <div class="mast-container">
+    <div class="mast-container" style="margin-bottom: 60px;">
       <!-- <span><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span> -->
       <h1 itemprop="name headline">{{ page.title }}</h1>
       <span><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>

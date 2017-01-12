@@ -6,8 +6,6 @@ menuarchive: fh5co-active
 ---
 
 <div class="container">
-  <!-- <h2 class="text-center">Archives</h2> -->
-
   <div class="archives">
     {% for post in site.posts %}
         {% assign currentDate = post.date | date: "%Y" %}
@@ -24,64 +22,4 @@ menuarchive: fh5co-active
           </ul>{% endif %}
     {% endfor %}
   </div>
-
-
-    	<!-- <ul>
-    	  {% for post in site.posts %}
-    	    {% unless post.next %}
-    	      <h3>{{ post.date | date: '%Y %b' }}</h3>
-    	    {% else %}
-    	      {% capture year %}{{ post.date | date: '%Y %b' }}{% endcapture %}
-    	      {% capture nyear %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
-    	      {% if year != nyear %}
-    	        <h3>{{ post.date | date: '%Y %b' }}</h3>
-    	      {% endif %}
-    	    {% endunless %}
-
-    	    <li><a href="{{ post.url }}"><span>{{ post.date | date: "%-d" }}</span> -  {{ post.title }}</a></li>
-    	  {% endfor %}
-    	</ul> -->
-
 </div>
-<!-- {% for post in site.posts %}
-	{% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
-	{% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
-		{% if month != nmonth %}
-			{% if forloop.index != 1 %}</ul>{% endif %}
-			<h3>{{ post.date | date: '%B %Y' }}</h3><ul>
-		{% endif %}
-	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-	<time>{{ post.date | date: "%e %B %Y" }}</time>
-{% endfor %} -->
-<!-- <br>
-<br>
-<br>
-{% assign sorted_cats = site.categories | sort %}
-{% for category in sorted_cats %}
-{% assign sorted_posts = category[1] | reversed %}
-<h4 id="{{category[0] | uri_escape | downcase }}">{{category[0] | capitalize}}</h4>
-<ul>
-  {% for post in sorted_posts %}
- 	<li><a href="{{ site.url }}{{ site.baseurl }}{{  post.url }}">{{  post.title }}</a></li>
-  {% endfor %}
-</ul>
-{% endfor %}
-
-<hr>
-<br>
-<br>
-<section class="archive-post-list">
-
-   {% for post in site.posts %}
-       {% assign currentDate = post.date | date: "%Y" %}
-       {% if currentDate != myDate %}
-           {% unless forloop.first %}</ul>{% endunless %}
-           <h1>{{ currentDate }}</h1>
-           <ul>
-           {% assign myDate = currentDate %}
-       {% endif %}
-       <li><a href="{{ post.url }}"><span>{{ post.date | date: "%b %-d" }}</span> - <b>{{ post.title }}</b></a></li>
-       {% if forloop.last %}</ul>{% endif %}
-   {% endfor %}
-
-</section> -->

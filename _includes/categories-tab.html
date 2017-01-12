@@ -4,7 +4,7 @@
       {% assign cat_name = category | first %}
       <li class="card">
         <a class="card__link" href="{{ site.baseurl }}/category/{{ category | first | downcase | slugify }}/">
-          {% for post in site.categories[cat_name] limit: 1 %}
+          <!-- {% for post in site.categories[cat_name] limit: 1 %}
             <div class="card__img">
               {% if post.image-sm %}
                 <figure class="absolute-bg" style="background-image: url('{{ post.image-sm }}');"></figure>
@@ -12,7 +12,7 @@
                 <figure class="absolute-bg" style="background-image: url('{{ post.image }}');"></figure>
               {% endif %}
             </div>
-          {% endfor %}
+          {% endfor %} -->
           <div class="card__container">
             <h2 class="card__header">{{ cat_name }}</h2>
             <p class="card__count">{{ site.categories[cat_name] | size }} Posts</p>
@@ -23,5 +23,5 @@
     {% endfor %}
   </ul>
 
-  {% include archive-link.html %}
+  <!-- {% include archive-link.html %} -->
 </div>
