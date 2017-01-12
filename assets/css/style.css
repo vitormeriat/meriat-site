@@ -77,6 +77,14 @@ figure.fh5co-with-caption figcaption {
   height: auto;
 }
 
+.next-container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+  .next-container span {
+    font-size: 1.6em;
+  }
+
 .post-description {
   text-align: justify;
 }
