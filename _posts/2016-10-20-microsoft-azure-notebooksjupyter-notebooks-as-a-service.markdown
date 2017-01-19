@@ -7,11 +7,12 @@ categories:
   - Machine Learning
   - Python
 description:
+image-sm: "https://meriatsite.blob.core.windows.net/images/2016/10/capa.jpg"
 ---
 
 Essa é uma dica para a galera (que como eu), utiliza o Jupyter Notebooks como ferramenta de estudo ou trabalho.
 
-<p style="background-color: #35424a"><img title="capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="capa" src="{{ site.baseurl }}/assets/uploads/2016/10/capa.jpg" width="752" height="412" /></p>
+<p style="background-color: #35424a"><img title="capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="capa" src="https://meriatsite.blob.core.windows.net/images/2016/10/capa.jpg" width="752" height="412" /></p>
 
 Provavelmente se você está lendo isto, é por que já conhece o Jupyter Notebooks ou antigo IPython, e tem interesse em usar ou entender esta oferta. Caso você não conheça esta ferramenta, basta saber que o Jupyter Notebooks oferece um environment com suporte a várias linguagens de programação, incluindo Python, R, MATLAB e etc. Esta é uma ferramenta que caiu nas graças dos programadores por proporcionar um meio simples de programar, visualizar e documentar de maneira eficientes seus experimentos. Em breve escrevo algo específico sobre essa ferramenta aqui no blog.
 
@@ -52,27 +53,27 @@ Creio que o primeiro passo é entregar algumas informações sobre o serviço. A
 ## Start>
 Para utilizar o serviço é algo tão simples quanto acessar o serviço e se autenticar no serviço.
 
-<p style="background-color: #35424a"><img title="azure-notebook-1" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-1" src="{{ site.baseurl }}/assets/uploads/2016/10/azure-notebook-1.jpg" width="100%" /></p>
+<p style="background-color: #35424a"><img title="azure-notebook-1" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-1" src="https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-1.jpg" width="100%" /></p>
 
 Assim que você informar sua credencial, o serviço vai te solicitar a permissão para criar uma ID para sua conta no serviço. Diga sim e siga em frente…
 
 Assim que tudo estiver pronto, você deve ver uma tela como abaixo:
 
-<p><img title="azure-notebook-2" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-2" src="{{ site.baseurl }}/assets/uploads/2016/10/azure-notebook-2.jpg" width="100%" /></p>
+<p><img title="azure-notebook-2" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-2" src="https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-2.jpg" width="100%" /></p>
 
 Done. Você já um ambiente pronto, e inclusive alguns exemplos para testar. De cara, uma coisa interessante notar é que podemos importar notebooks direto de nosso computador ou de uma URL.
 
-<p><img title="azure-notebook-3" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-3" src="{{ site.baseurl }}/assets/uploads/2016/10/azure-notebook-3.jpg" width="100%" /></p>
+<p><img title="azure-notebook-3" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-3" src="https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-3.jpg" width="100%" /></p>
 
 Agora perceba que todos os nossos cadernos estão vinculados a uma biblioteca chamada <strong>Sample notebooks</strong>. Sendo assim vamos criar uma biblioteca.&nbsp; </p>
 
 <p align="justify">Clique em <strong>My libraries</strong>. Na página que se segue clique em <strong>New Library</strong> e informe o nome, descrição e url personalizada.</p>
 
-<p><img title="azure-notebook-4" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-4" src="{{ site.baseurl }}/assets/uploads/2016/10/azure-notebook-4.jpg" width="100%" /></p>
+<p><img title="azure-notebook-4" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-4" src="https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-4.jpg" width="100%" /></p>
 
 Assim que sua biblioteca estiver criada você pode optar por importar um caderno ou abrir seu Jupyter Notebooks.
 
-<p><img title="azure-notebook-5" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-5" src="{{ site.baseurl }}/assets/uploads/2016/10/azure-notebook-5.jpg" width="100%" /></p>
+<p><img title="azure-notebook-5" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-5" src="https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-5.jpg" width="100%" /></p>
 
 Agora estamos em terreno conhecido. É só criar um novo Notebook usando Py2, Py3 ou R.
 

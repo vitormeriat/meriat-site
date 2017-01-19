@@ -1,24 +1,13 @@
 ---
 layout: post
 title: Spark além do WordCount
-date: 2016-01-27 07:07:43.000000000 -02:00
-type: post
-published: true
-status: publish
+date: 2016-01-27
 categories:
-- Big Data
-- Spark
-tags: []
-meta:
-  _edit_last: '1'
-author:
-  login: vitormeriat
-  email: vitormeriat@hotmail.com
-  display_name: vitormeriat
-  first_name: ''
-  last_name: ''
+ - Big Data
+ - Spark
+image-sm: "https://meriatsite.blob.core.windows.net/images/2016/01/spark-capa.jpg"
 ---
-<p style="background-color: #000000" align="center"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/01/spark-capa.jpg"><img title="spark-capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-capa" src="{{ site.baseurl }}/assets/spark-capa_thumb.jpg" width="819" height="518" /></a></p>
+<p style="background-color: #000000" align="center"><a href="https://meriatsite.blob.core.windows.net/images/2016/01/spark-capa.jpg"><img title="spark-capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-capa" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-capa.jpg" width="819" height="518" /></a></p>
 <p align="justify">Não é enganação, vou fazer o famoso exemplo do <strong>WordCount</strong>, porém vou tentar ir além do que apenas mostrar o código ou dizer Spark torna esta tarefa mais simples que utilizar Hadoop/MapReduce. A exemplo do post <a href="http://www.vitormeriat.com.br/spark-resilient-distributed-datasets/" target="_blank">Spark – Resilient Distributed Datasets</a>, vou focar na base e estrutura básica da ferramenta para se conseguir o desempenho esperado ao utilizar o Spark.</p>
 <p><!--more--><br />
 <h2>Spark e o MapReduce</h2>
@@ -29,7 +18,7 @@ author:
 <p align="left">&nbsp;</p>
 <h2>Spark Framework Ecosystem</h2>
 <p align="justify">Fora a API do Spark, existem bibliotecas adicionais que fazem parte do seu ecossistema e fornecem capacidades adicionais para as áreas de análise de Big Data e aprendizado de máquina.</p>
-<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/01/spark-stack.png"><img title="spark-stack" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-stack" src="{{ site.baseurl }}/assets/spark-stack_thumb.png" width="633" height="298" /></a></p>
+<p><a href="https://meriatsite.blob.core.windows.net/images/2016/01/spark-stack.png"><img title="spark-stack" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-stack" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-stack.png" width="633" height="298" /></a></p>
 <h3>&nbsp;</h3>
 <h3 align="justify"><a href="https://spark.apache.org/sql/"><font size="5">Spark SQL</font></a> <font style="font-weight: normal" size="3">fornece a capacidade de expor os conjuntos de dados Spark através de uma API JDBC. Isso permite executar consultas no estilo SQL sobre esses dados usando ferramentas tradicionais de BI e de visualização. Além disso, também permite que os usuários usem ETL para extrair seus dados em diferentes formatos (como JSON, Parquet, ou um banco de dados), transformá-los e expô-los para consultas ad-hoc;</font></h3>
 <p align="justify"><a href="https://spark.apache.org/streaming/"><font size="5"><strong>Spark Streaming</strong></font></a> <font size="3">pode ser usado para processar dados de streaming em tempo real baseado na computação de microbatch. Para isso é utilizado o DStream que é basicamente uma série de RDD para processar os dados em tempo real;</font></p>
@@ -55,7 +44,7 @@ author:
 cd c:bigdataspark
 binspark-shell</code></pre>
 <p>Se o Spark foi instalado corretamente, será apresentado as seguintes mensagens na saída no console.</p>
-<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/01/spark-tela.jpg"><img title="spark-tela" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-tela" src="{{ site.baseurl }}/assets/spark-tela_thumb.jpg" width="1000" height="790" /></a></p>
+<p><a href="https://meriatsite.blob.core.windows.net/images/2016/01/spark-tela.jpg"><img title="spark-tela" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-tela" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-tela.jpg" width="1000" height="790" /></a></p>
 <p>Para validar, rode o seguinte comando:</p>
 <pre style="font-size: 22pt !important"><code class="javascript">sc.version</code></pre>
 <p>Ele deve voltar algo como String = 1.4.1, ou seja, a versão do Spark que estamos usando.</p>
@@ -113,11 +102,11 @@ full.partitions.length</code></pre>
  .collect()</code></pre>
 <p>&nbsp;</p>
 <p>Após a execução o <strong><em>collect </em></strong>nos retorna parte do resultado como podemos ver abaixo:</p>
-<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/01/spark-result.jpg"><img title="spark-result" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-result" src="{{ site.baseurl }}/assets/spark-result_thumb.jpg" width="1000" height="454" /></a></p>
+<p><a href="https://meriatsite.blob.core.windows.net/images/2016/01/spark-result.jpg"><img title="spark-result" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-result" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-result.jpg" width="1000" height="454" /></a></p>
 <p>&nbsp;</p>
 <p align="justify">O retorno nos mostra uma estrutura de mapa contendo como <strong><em>Key</em></strong> a palavra cujo o valor é a quantidade de vezes que a palavra aparece no arquivo.</p>
 <p align="justify">A imagem abaixo mostra a UI do <strong><em>Spark</em> </strong>exibindo os dados de execução dos 2 estágios:</p>
-<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/01/spark-ui.jpg"><img title="spark-ui" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-ui" src="{{ site.baseurl }}/assets/spark-ui_thumb.jpg" width="1000" height="745" /></a></p>
+<p><a href="https://meriatsite.blob.core.windows.net/images/2016/01/spark-ui.jpg"><img title="spark-ui" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-ui" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-ui.jpg" width="1000" height="745" /></a></p>
 <p>Ao invés de utilizar o <strong><em>collect </em></strong>poderíamos utilizar o <em><strong>saveAsTextFile</strong></em> e teríamos todo o conteúdo em arquivo.</p>
 <p>&nbsp;</p>
 <h2>Referências</h2>

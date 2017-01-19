@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Big Data 1"
-date: 2016-12-04
+title: "Machine Learning"
+date: 2017-01-19
 categories:
   - Big Data
 description:
-image: https://emotionctl.blob.core.windows.net/imagens/1200.jpeg
-image-sm: https://emotionctl.blob.core.windows.net/imagens/1200-sm.jpeg
+image-sm: "https://meriatsite.blob.core.windows.net/images/2016/01/spark-capa.jpg"
 ---
 Tbh vaporware mumblecore iceland echo park DIY. Plaid woke next level enamel pin, vegan cred salvia pug. XOXO sartorial synth gluten-free, cold-pressed mumblecore craft beer helvetica. Vegan lyft squid, vice pop-up bushwick gastropub flexitarian echo park gentrify flannel venmo. Banh mi ugh direct trade, tote bag irony tbh biodiesel. Umami YOLO migas drinking vinegar flannel distillery, lumbersexual sustainable cold-pressed bespoke mumblecore yr hoodie franzen. Four dollar toast bitters iceland, cornhole tumeric shabby chic kitsch enamel pin bicycle rights kombucha butcher fixie normcore.
 
