@@ -110,8 +110,6 @@ figure.fh5co-with-caption figcaption {
     margin: 5px 5px 5px 0;
     padding: 2px;
     width: 100%;
-    /*text-align: right;
-    width: 150px;*/
 }
 
 #skills dl dd{
@@ -160,6 +158,10 @@ figure.fh5co-with-caption figcaption {
     cursor: pointer;
   }
 
+.index-title {
+  font-size: 2.8em;
+  color: black;
+}
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 0 0 20px 0;
