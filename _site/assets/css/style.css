@@ -39,9 +39,6 @@ body {
 
 a {
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   color: #1d2dfd;
   border-bottom: 2px solid transparent;
@@ -119,9 +116,7 @@ figure.fh5co-with-caption figcaption {
   font-size: 1em;
   margin: 5px 3px;
   padding: 3px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35);
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35);
   cursor: default;
 }
@@ -502,6 +497,7 @@ pre {
   text-transform: uppercase;
   text-indent: -55px;
   background: #252525;
+  -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle i::before, .fh5co-nav-toggle i::after {
@@ -511,6 +507,7 @@ pre {
   background: #252525;
   position: absolute;
   left: 0;
+  -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i {
@@ -544,18 +541,12 @@ pre {
 .fh5co-nav-toggle.active i::before {
   top: 0;
   -webkit-transform: rotateZ(45deg);
-  -moz-transform: rotateZ(45deg);
-  -ms-transform: rotateZ(45deg);
-  -o-transform: rotateZ(45deg);
   transform: rotateZ(45deg);
 }
 
 .fh5co-nav-toggle.active i::after {
   bottom: 0;
   -webkit-transform: rotateZ(-45deg);
-  -moz-transform: rotateZ(-45deg);
-  -ms-transform: rotateZ(-45deg);
-  -o-transform: rotateZ(-45deg);
   transform: rotateZ(-45deg);
 }
 
@@ -649,9 +640,6 @@ pre {
   display: block;
   color: #7b7b7b;
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .fh5co-view .fh5co-icon-view i {
@@ -659,9 +647,6 @@ pre {
 }
 .fh5co-view.active .fh5co-icon-view {
   -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
@@ -680,9 +665,6 @@ pre {
   z-index: 9999;
   position: absolute;
   -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -785,9 +767,6 @@ pre {
   height: 10px;
   background: #ccc;
   -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border: 2px solid transparent;
 }
@@ -831,10 +810,6 @@ pre {
   border-bottom: none !important;
   text-transform: uppercase;
   letter-spacing: 2px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
   border-radius: 4px;
   padding-left: 10px;
   padding-right: 10px;
@@ -1121,20 +1096,12 @@ pre {
 /* Progress Bars */
 .progress {
   height: 10px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
   border-radius: 30px;
   box-shadow: none;
 }
 
 .progress-bar {
   box-shadow: none;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
   border-radius: 30px;
 }
 .progress-bar.progress-bar-default {
@@ -1221,9 +1188,6 @@ a > img.fh5co-align-center {
   display: block;
   font-size: 20px;
   -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
@@ -1344,9 +1308,6 @@ a > img.fh5co-align-center {
 .fh5co-link > i {
   margin-right: 5px;
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .fh5co-link:hover > i {
@@ -1375,5 +1336,3 @@ a > img.fh5co-align-center {
   letter-spacing: 3px;
   color: #7b7b7b;
 }
-
-/*# sourceMappingURL=style.css.map */
