@@ -1,24 +1,12 @@
 ---
 layout: post
 title: Control LED IO–Controlando o delay de um LED no Arduino com Node.js e Socket.io
-date: 2015-07-15 03:20:28.000000000 -03:00
-type: post
-published: true
-status: publish
+date: 2015-07-15
 categories:
-- Arduino
-- IoT
-- Node.js
-- Socket.io
-tags: []
-meta:
-  _edit_last: '1'
-author:
-  login: vitormeriat
-  email: vitormeriat@hotmail.com
-  display_name: vitormeriat
-  first_name: ''
-  last_name: ''
+  - Arduino
+  - IoT
+  - Node.js
+  - Socket.io
 ---
 <p align="justify"><strong><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/07/capa-control-led-io.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border-width: 0px;" title="capa control led io" src="{{ site.baseurl }}/assets/capa-control-led-io_thumb.png" alt="capa control led io" width="907" height="268" border="0" /></a></strong></p>
 <p align="justify"><strong>Primeiro acenda um LED, depois domine o mundo!</strong> Seguindo esta premissa estou disponibilizando meu primeiro projeto/estudo em <strong>Node.js</strong> no <strong>Arduino</strong>. Trata-se de um simples <strong>blink</strong> utilizando Node.js, <strong>Socket.io</strong>, <strong>Firmata </strong>e <strong>Johnny-five</strong> no <strong>Visual Studio</strong>. Abaixo segue o vídeo de demonstração:</p>
@@ -53,13 +41,13 @@ app.get('/', function (req, res) {
 server.listen(3000, "127.0.0.1");
 
 five.Board().on("ready", function () {
-    
+
     var led = new five.Led(13).strobe(1000);
-    
+
     io.on('connection', function (socket) {
-        
+
         console.log('Iniciado!!!');
-                
+
         socket.on('led', function (data) {
             console.log('Novo Delay LED: ' + data.delay);
             led.strobe(data.delay);
@@ -71,9 +59,9 @@ five.Board().on("ready", function () {
 <pre><code class="javascript">
 var socket = io.connect("http://" + document.location.hostname + ":3000"), notif;
 console.log('Iniciado!!!');
-        
+
 $('#ledSet').on('click', function () {
-    var tmp = parseInt($('#ledDelay').val(), 10);            
+    var tmp = parseInt($('#ledDelay').val(), 10);
     socket.emit('led', { delay: tmp });
     console.log("LED Delay Configurado para: ", tmp);
 });

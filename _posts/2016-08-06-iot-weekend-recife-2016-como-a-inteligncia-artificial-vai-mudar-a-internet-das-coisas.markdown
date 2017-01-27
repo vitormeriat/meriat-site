@@ -3,7 +3,7 @@ layout: post
 title: "IoT Weekend Recife 2016 - Como a Inteligência Artificial vai mudar a Internet das Coisas"
 date: 2016-08-06
 categories:
-  - Palestras
+  - Comunidade
 image-sm: "https://meriatsite.blob.core.windows.net/images/2016/08/capa.png"
 ---
 <p align="justify">Olá pessoal, hoje, dia 06 de agosto de 2016 tive mais uma vez o privilégio de palestrar no <a href="http://www.iotweekend.com.br/"  target="_blank">IoT Weekend</a> edição Recife. Esta é segunda vez em Recife e quarta edição geral do evento, que é inteiramente dedicado a Internet of Things, abrangendo do ponto de vista dos negócios aos famoso under the hood dos detalhes técnicos.</p>

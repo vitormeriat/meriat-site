@@ -1,22 +1,10 @@
 ---
 layout: post
 title: JavaScript–Singleton Pattern
-date: 2015-06-16 00:50:09.000000000 -03:00
-type: post
-published: true
-status: publish
+date: 2015-06-16
 categories:
-- Desing Patterns
-- JavaScript
-tags: []
-meta:
-  _edit_last: '1'
-author:
-  login: vitormeriat
-  email: vitormeriat@hotmail.com
-  display_name: vitormeriat
-  first_name: ''
-  last_name: ''
+  - Desing Patterns
+  - JavaScript
 ---
 <p align="justify">O <strong>Singleton Pattern</strong> diz que você pode ter apenas uma única instância de uma classe (ou, no caso do <strong>JavaScript</strong>, função construtora). Isso significa que uma vez que a classe for instanciada, você deve sempre retornar esta mesma instância em chamadas subsequentes.
 <p align="justify">Um exemplo clássico deste pattern é usar um único objeto como namespace de sua aplicação, como podemos ver no exemplo abaixo:</p>
@@ -44,11 +32,11 @@ console.log(instance === new MinhaApp()); // result = true
 <pre><code class="javascript">
 function MinhaApp() {
     var instance;
-    
+
     MinhaApp = function () {
         return instance;
     };
-    
+
     instance = this;
 }
 </code></pre>
@@ -59,12 +47,12 @@ var MinhaApp;
 
 (function () {
     var instance;
-    
+
     MinhaApp = function () {
         if (instance) {
             return instance;
         }
-        
+
         instance = this;
     };
 })();

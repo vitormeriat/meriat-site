@@ -123,7 +123,7 @@
         Arduino &amp; IoT &amp; Node.js &amp; Socket.io
       </h2>
     
-    <span><time datetime="2015-07-15T03:20:28-03:00" itemprop="datePublished">Jul 15, 2015</time></span>
+    <span><time datetime="2015-07-15T00:00:00-03:00" itemprop="datePublished">Jul 15, 2015</time></span>
   </div>
 
   <div class="fh5co-spacer fh5co-spacer-md"></div>
@@ -132,7 +132,7 @@
     <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
     <div class="mast-container" style="margin-bottom: 60px;">
       <h1 itemprop="name headline">Control LED IO–Controlando o delay de um LED no Arduino com Node.js e Socket.io</h1>
-      <span><time datetime="2015-07-15T03:20:28-03:00" itemprop="datePublished">Jul 15, 2015</time></span>
+      <span><time datetime="2015-07-15T00:00:00-03:00" itemprop="datePublished">Jul 15, 2015</time></span>
       
         <span>
           Posted in Arduino, IoT, Node.js, Socket.io
@@ -176,13 +176,13 @@ app.get('/', function (req, res) {
 server.listen(3000, "127.0.0.1");
 
 five.Board().on("ready", function () {
-    
+
     var led = new five.Led(13).strobe(1000);
-    
+
     io.on('connection', function (socket) {
-        
+
         console.log('Iniciado!!!');
-                
+
         socket.on('led', function (data) {
             console.log('Novo Delay LED: ' + data.delay);
             led.strobe(data.delay);
@@ -194,9 +194,9 @@ five.Board().on("ready", function () {
 <pre><code class="javascript">
 var socket = io.connect("http://" + document.location.hostname + ":3000"), notif;
 console.log('Iniciado!!!');
-        
+
 $('#ledSet').on('click', function () {
-    var tmp = parseInt($('#ledDelay').val(), 10);            
+    var tmp = parseInt($('#ledDelay').val(), 10);
     socket.emit('led', { delay: tmp });
     console.log("LED Delay Configurado para: ", tmp);
 });

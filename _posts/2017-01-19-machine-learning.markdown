@@ -1,18 +1,16 @@
 ---
 layout: post
-title: "Machine Learning"
+title: "Inteligência Artificial, história indústria e economia"
 date: 2017-01-19
 categories:
-  - Big Data
+  - IA
 description:
-image-sm: "https://meriatsite.blob.core.windows.net/images/2016/01/spark-capa.jpg"
 ---
-Tbh vaporware mumblecore iceland echo park DIY. Plaid woke next level enamel pin, vegan cred salvia pug. XOXO sartorial synth gluten-free, cold-pressed mumblecore craft beer helvetica. Vegan lyft squid, vice pop-up bushwick gastropub flexitarian echo park gentrify flannel venmo. Banh mi ugh direct trade, tote bag irony tbh biodiesel. Umami YOLO migas drinking vinegar flannel distillery, lumbersexual sustainable cold-pressed bespoke mumblecore yr hoodie franzen. Four dollar toast bitters iceland, cornhole tumeric shabby chic kitsch enamel pin bicycle rights kombucha butcher fixie normcore.
 
-<p align="center"><iframe style="height: 685px; width: 100%" marginheight="0" src="https://www.slideshare.net/slideshow/embed_code/key/zW5NtNvVdGsrct" frameborder="0" marginwidth="0" scrolling="no"><br /> </iframe></p>
+A importância científica, industrial e econômica da <b><span style="font-size: 1.4em;">I</span>nteligência <span style="font-size: 1.4em;">A</span>rtificial</b>, bem como o seu previsível impacto social têm crescido muito nos últimos anos, estimando-se que cresça muito mais, apoiada quer na banalização da potência de cálculo (necessária à complexidade das suas operações), quer nos progressos reais verificados na investigação fundamental, cujos resultados saem agora dos laboratórios para a indústria. Na sua vertente tecnológica, a IA comporta uma importante faceta de engenharia. Na verdade, pretende em última análise programar computadores (a que poderão estar acoplados sensores e actuadores) de forma que desempenhem com êxito e eficiência tarefas que requerem inteligência.
 
-Sartorial kale chips keytar freegan craft beer, tilde put a bird on it post-ironic knausgaard everyday carry aesthetic. Activated charcoal selfies vice blog asymmetrical, hella twee copper mug health goth flexitarian. Tattooed pickled cold-pressed, PBR&B hell of schlitz seitan. Retro williamsburg schlitz health goth messenger bag roof party. Migas fanny pack chillwave chambray. Post-ironic roof party wolf ethical. Tacos PBR&B beard, lumbersexual retro DIY tumeric selvage brunch.
+Tal desempenho tem como suporte a combinação racional de métodos gerais e automatizados de abordagem à formulação e resolução lógica de problemas. É pela generalidade, computabilidade, e combinabilidade lógica desses métodos que a IA se distingue como disciplina científica. Em contraste, outras disciplinas científicas usam técnicas inteligentes mas específicas do seu domínio; técnicas gerais mas sem explicitação do raciocínio; técnicas múltiplas mas não articuladas num todo automatizado.
 
-Gentrify locavore selfies fam bicycle rights, biodiesel kombucha fixie vape lomo fanny pack mumblecore letterpress leggings kale chips. Biodiesel typewriter mlkshk man braid. Ugh fap snackwave microdosing synth live-edge. Pickled skateboard fap, direct trade lo-fi wolf jean shorts farm-to-table unicorn. Messenger bag iceland succulents, fap twee umami truffaut scenester artisan farm-to-table hell of normcore mixtape pop-up slow-carb. Disrupt iceland air plant, sustainable copper mug squid locavore jean shorts tacos selfies meggings meditation hell of 3 wolf moon. Schlitz thundercats lyft raclette green juice intelligentsia.
+As técnicas da IA encontram-se em evolução rápida, e algumas vão-se consubstanciando em instrumentos de "software" comercialmente disponíveis, de utilização acessível àqueles com um mínimo de inclinação informática. Outras dessas técnicas, não existindo sob a forma de instrumento acabado acessível ao leigo, necessitam de um especialista para a sua aplicação casuística.
 
-Four loko pinterest lo-fi beard kinfolk marfa. Man bun flannel activated charcoal blue bottle. Chillwave coloring book waistcoat hammock knausgaard selfies. Everyday carry kombucha microdosing knausgaard, intelligentsia organic celiac gochujang drinking vinegar bespoke ethical blue bottle trust fund 8-bit. Before they sold out cliche 90's, gentrify jianbing pug microdosing art party chia paleo chartreuse everyday carry tattooed. Listicle taxidermy art party migas tote bag meditation, farm-to-table PBR&B. Poutine vaporware letterpress hell of.
+A utilização da IA começa a generalizar-se com muitos êxitos de aplicação. Ocorrem anualmente inúmeros colóquios internacionais expressamente dedicados a essas aplicações. Em Portugal verifica-se um potencial considerável em IA, já consolidado em grande parte a nível do ensino e da investigação.

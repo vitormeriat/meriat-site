@@ -126,6 +126,21 @@ figure.fh5co-with-caption figcaption {
   font-size: 2em;
 }
 
+#search {
+    margin-bottom: 4em;
+}
+
+#search .input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+#search input[type=text]:focus {
+    width: 100%;
+}
+
 .category {}
   .category ul {
     list-style-type: none;
@@ -139,6 +154,16 @@ figure.fh5co-with-caption figcaption {
     background: #eee;
     cursor: pointer;
   }
+
+.category-title {
+  font-size: 2.2em;
+  clear: left;
+  display: inline;
+  float: left;
+  width: 100%;
+  color: black;
+  margin-bottom: 0.3em;
+}
 
 .archives {}
   .archives ul {
