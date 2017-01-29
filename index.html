@@ -20,7 +20,12 @@ menuhome: fh5co-active
               {% endif %}
             </p>
             {% if post.image-sm %}
-             <img src="{{ post.image-sm }}" class="absolute-bg" >
+             <img style="width: 100%;" src="{{ post.image-sm }}" class="absolute-bg" >
+            {% endif %}
+            {% if post.image %}
+              <div style="width: 100%; text-align: center;">
+                <img src="{{ post.image }}" >
+              </div>
             {% endif %}
             <p class="post-description">{{ post.content | strip_html | truncatewords: 80 }}</p>
             <a href="{{ post.url }}" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
