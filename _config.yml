@@ -4,6 +4,7 @@ baseurl: ""
 paginate: 10
 paginate_path: "/page-:num"
 google_analytics:
+highlighter: pygments
 
 # SEO settings
 title: Vitor Meriat

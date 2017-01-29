@@ -10,6 +10,11 @@ layout: default
     <div class="fh5co-spacer fh5co-spacer-sm"></div>
     <div class="col-md-12 text-center">
       <h1>{{ page.title }}</h1>
+      {% if post.subtitle %}
+      <h4 class="post-subtitle">
+          {{ post.subtitle }}
+      </h4>
+      {% endif %}
     </div>
     {% if page.categories.size > 0 %}
       <h2 class="fh5co-uppercase-heading-sm text-center">
@@ -63,4 +68,67 @@ layout: default
     </a>
   </section>
 {% endif %}
+
+<br>
+{% capture words %}
+  {{ content | number_of_words | minus: 180 }}
+{% endcapture %}
+{% unless words contains "-" %}
+  {{ words | plus: 180 | divided_by: 180 | append: " minutes to read" }}
+{% endunless %}
+<br>
+
+<br>
+
+{% if site.related_posts %}
+	<div class="related">
+		<h4>Related Posts</h4>
+		<ul class="posts">
+		    {% for post in site.related_posts limit:3 %}
+		    <li>
+			  <span>{{ post.date | date_to_string }} &raquo;</span>
+			  <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+		    </li>
+		    {% endfor %}
+		</ul>
+	</div>
+{% endif %}
+
+<br>
+<br>
+
+<div class="post-footer">
+  <div style="text-align: left; width: 33.33%; float: left;">
+    {% if page.previous %}
+      <a href="{{page.previous.url | prepend: site.baseurl | prepend: site.url }}"><< Older</a>
+    {% else %}
+      <span><< Older</span>
+    {% endif %}
+  </div>
+  <div style="text-align: center; width: 33.33%; float: left;">
+    <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }} ">Home</a>
+  </div>
+  <div style="text-align: right; width: 33.33%; float: left;">
+    {% if page.next %}
+      <a href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}">Newer >></a>
+    {% else %}
+      <span>Newer >></span>
+    {% endif %}
+  </div>
 </div>
+</div>
+<!-- <h3>Categories</h3>
+{% for category in site.categories %}
+    <a href="/category/{{ category[0] }}/" style="text-decoration: none;">{% if category[0] == 'aws' %}{{ category[0] | upcase }}{% else %}{{ category[0] | capitalize }}{% endif %}</a><br />
+{% endfor %}
+<p /> -->
+<!-- <p class="post-meta">
+  Posted by
+  {% if post.author %}
+    {{ post.author }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+  on {{ post.date | date: "%B %-d, %Y" }}
+</p> -->
+<br>
