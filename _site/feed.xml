@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Jan 2017 15:02:36 -0200</pubDate>
-    <lastBuildDate>Sun, 29 Jan 2017 15:02:36 -0200</lastBuildDate>
+    <pubDate>Sun, 29 Jan 2017 20:54:00 -0200</pubDate>
+    <lastBuildDate>Sun, 29 Jan 2017 20:54:00 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -144,30 +144,52 @@
         <title>Meetups, Internet of Things Expo, MVP Open Day e dias de aprendizado em NYC</title>
         <description>&lt;p align=&quot;justify&quot;&gt;Durante o mês de junho tive a oportunidade de participar de alguns eventos de tecnologia em New York, e é claro, de aproveitar essa cidade maravilhosa.&lt;/p&gt;
 
-&lt;p align=&quot;justify&quot;&gt;O objetivo principal era a participação no Internet of &lt;a href=&quot;http://www.thingsexpo.com/&quot; target=&quot;_blank&quot;&gt;Things Expo&lt;/a&gt;. Evento dedicado as tecnologias que permeiam o IoT, tais quais Cloud Computing, Big Data, Security, Protocols e etc.&lt;/p&gt;
-
-&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/Cmcc5mYVIAAoB5V.jpg&quot;&gt;&lt;img title=&quot;Cmcc5mYVIAAoB5V&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;Cmcc5mYVIAAoB5V&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/Cmcc5mYVIAAoB5V.jpg&quot; width=&quot;990&quot; height=&quot;742&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;img alt=&quot;Cmcc5mYVIAAoB5V&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/Cmcc5mYVIAAoB5V.jpg&quot; /&gt;
+&lt;/p&gt;
 
 &lt;p align=&quot;justify&quot;&gt;Este evento ocorreu nos dias 7, 8 e 9 de junho no famoso &lt;a href=&quot;http://www.javitscenter.com/&quot; target=&quot;_blank&quot;&gt;Javits Center&lt;/a&gt;. Este é um evento onde conseguimos ver as tendências do mercado de IoT, por meio das empresas, cases e profissionais que estão atuando no topo do mercado.&lt;/p&gt;
-&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0232.jpg&quot;&gt;&lt;img title=&quot;IMG_0232&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;IMG_0232&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0232.jpg&quot; width=&quot;990&quot; height=&quot;740&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;
+&lt;img alt=&quot;IMG_0232&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0232.jpg&quot; /&gt;
+&lt;/p&gt;
 
 &lt;p align=&quot;justify&quot;&gt;Entre os assuntos disseminados nesta edição, tivemos temas como: &lt;u&gt;IoT: It’s Evolution and Connection to the Cloud&lt;/u&gt;, &lt;u&gt;Continuous Delivery of Microservices: Patterns and Processes&lt;/u&gt;, &lt;u&gt;The Internet of [Broken] Things: The Big Data Challenges of Keeping IoT Reliable&lt;/u&gt;, &lt;u&gt;The Science Behind Generating Big Data&lt;/u&gt;, &lt;u&gt;Secure Communications in P2P and Social IoT Networks&lt;/u&gt;… &lt;/p&gt;
 &lt;p align=&quot;justify&quot;&gt;É interessante notar a variedade de assuntos que permeiam essa área de conhecimento. O mais importante foi notar o quanto o mercado está focado em “onde está o dinheiro”, ou onde IoT está sendo utilizado como ferramenta de mercado e não apenas como assunto para se brincar com hardware. &lt;/p&gt;
+
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
 &lt;h2&gt;Meetup&lt;/h2&gt;
+
 &lt;p align=&quot;justify&quot;&gt;Outro ponto alto em NYC são os meetups. Tive a oportunidade de participar do &lt;a href=&quot;https://nytm.org/&quot; target=&quot;_blank&quot;&gt;NY TECH MEETUP&lt;/a&gt;, e do maravilhos afterparty. &lt;/p&gt;
-&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0318.jpg&quot;&gt;&lt;img title=&quot;IMG_0318&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;IMG_0318&quot; src=&quot;/assets/IMG_0318_thumb.jpg&quot; width=&quot;990&quot; height=&quot;747&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;img alt=&quot;IMG_0318&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0318.jpg&quot; /&gt;
+&lt;/p&gt;
+
 &lt;p align=&quot;justify&quot;&gt;Outro ponto interessante é que geralmente os &lt;strong&gt;meetups&lt;/strong&gt; são utilizados como meio de network. Os apresentadores montam seus “&lt;strong&gt;stands&lt;/strong&gt;”, colocam seus cartões, as bebidas são postas na mesa, e galera circula com seus copos em uma mão, e os cartões na outra. Agora é hora de partilhar ideias, aprendizados e mostrar os seu trabalho.&lt;/p&gt;
-&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0329.jpg&quot;&gt;&lt;img title=&quot;IMG_0329&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;IMG_0329&quot; src=&quot;/assets/IMG_0329_thumb.jpg&quot; width=&quot;990&quot; height=&quot;747&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;img alt=&quot;IMG_0329&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0329.jpg&quot; /&gt;
+&lt;/p&gt;
+
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
 &lt;h2&gt;MVP Open Days 2016&lt;/h2&gt;
+
 &lt;p align=&quot;justify&quot;&gt;Uma grata surpresa foi a oportunidade de participar do primeiro MVP Open Days na Ámerica do Norte, que também foi meu primeiro evento na Microsoft como MVP. &lt;/p&gt;
-&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0512.jpg&quot;&gt;&lt;img title=&quot;IMG_0512&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;IMG_0512&quot; src=&quot;/assets/IMG_0512_thumb.jpg&quot; width=&quot;990&quot; height=&quot;747&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;img alt=&quot;IMG_0512&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0512.jpg&quot; /&gt;
+&lt;/p&gt;
+
 &lt;p align=&quot;justify&quot;&gt;Tive o grande prazer de conhecer a Microsoft NYC, na famosa Times Square 11. Para quem não conhece, o MVP Open Day é uma conferência com objetivo de reunir MVPs de uma determinado país a fim de interagir, aprender e trocar experiências.&lt;/p&gt;
-&lt;p style=&quot;background-color: #000000&quot;&gt;&lt;a href=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0622.jpg&quot;&gt;&lt;img title=&quot;IMG_0622&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;IMG_0622&quot; src=&quot;/assets/IMG_0622_thumb.jpg&quot; width=&quot;990&quot; height=&quot;528&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;h2&gt;Valeu galera ;)&lt;/h2&gt;
+
+&lt;p&gt;
+  &lt;img alt=&quot;IMG_0622&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0622.jpg&quot; /&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;Valeu galera ;)&lt;/h3&gt;
 </description>
         <pubDate>Thu, 28 Jul 2016 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
@@ -181,7 +203,7 @@
       <item>
         <title>DevOps Summit 2016–Azure Stack - O poder da nuvem em seu datacenter</title>
         <description>&lt;p align=&quot;justify&quot;&gt;Dia 07/05 na seda da Microsoft no Brasil, aconteceu a primeira edição do DevOps Summit Brasil. Esse é um evento que teve como origem a fusão dos já consagrados Azure Summit Brasil e ALM Summit Brasil com foco em promover o conhecimento de Cloud Computing e DevOps.&lt;/p&gt;
-&lt;p style=&quot;background-color: #000000&quot; align=&quot;center&quot;&gt;&lt;img title=&quot;spark-tela&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;spark-tela&quot; src=&quot;/assets/devopssummit.jpg&quot; width=&quot;1000&quot; height=&quot;790&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;background-color: #000000&quot; align=&quot;center&quot;&gt;&lt;img title=&quot;spark-tela&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;spark-tela&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/05/devopssummit.jpg&quot; width=&quot;1000&quot; height=&quot;790&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot;&gt;Azure Stack é o primeiro produto de uma nova categoria hybrid cloud platform. Este novo produto permite que a TI entregue os recursos do seu Datacenter no mesmo modelo de entrega de serviços da nuvem pública.&lt;/p&gt;
 &lt;p align=&quot;justify&quot;&gt;Com o Azure Stack você aproveita o modelo de gestão operacional de recursos do azure em seu Datacenter. É isso mesmo, com o Azure Stack conseguimos integrar os serviços da nuvem pública com a nossa capacidade computacional, a fim de entregar serviços. Você também pode explorar uma abordagem híbrida, tendo a capacidade e flexibilidade de trabalhar os recursos onde for melhor.&lt;/p&gt;
 &lt;p&gt;&lt;!--more--&gt;
@@ -209,8 +231,17 @@
       <item>
         <title>Global Azure Bootcamp 2016–Dispositivos inteligêntes e Azure Machine Learning</title>
         <description>&lt;p align=&quot;justify&quot;&gt;Dia 16 de abril de 2016 ocorreu mais uma edição do Global Azure Bootcamp. Este é um evento mundial que ocorre quase simultâneamente, e que teve mais uma vez a participação em Brasília, desta vez sob a tutela do &lt;a href=&quot;https://mvp.microsoft.com/pt-br/PublicProfile/5001388&quot; target=&quot;_blank&quot;&gt;Jucinei Santos&lt;/a&gt;, MVP de Windows Development.&lt;/p&gt;
+
 &lt;p align=&quot;justify&quot;&gt;Minha participação foi uma análise sobre os chamados dispositivos inteligêntes, e como o Microsoft Azure está preparado para nos auxiliar nos cenários presente e futuro, quando falamos em tecnologias de Big Data, Machine Learning e serviços específos para o mundo de IoT.&lt;/p&gt;
-&lt;p style=&quot;background-color: #000000&quot; align=&quot;center&quot;&gt;&lt;a href=&quot;http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/04/gwabbsb2016.jpg&quot;&gt;&lt;img title=&quot;gwabbsb2016&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;gwabbsb2016&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/gwabbsb2016_thumb.jpg&quot; width=&quot;330&quot; height=&quot;248&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/04/gwabbsb2016b.jpg&quot;&gt;&lt;img title=&quot;gwabbsb2016b&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;gwabbsb2016b&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/gwabbsb2016b_thumb.jpg&quot; width=&quot;330&quot; height=&quot;248&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/04/gwabbsb2016c.jpg&quot;&gt;&lt;img title=&quot;gwabbsb2016c&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;gwabbsb2016c&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/gwabbsb2016c_thumb.jpg&quot; width=&quot;330&quot; height=&quot;248&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;background-color: #000000&quot; align=&quot;center&quot;&gt;
+&lt;img alt=&quot;gwabbsb2016&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016.jpg&quot; /&gt;
+
+&lt;img alt=&quot;gwabbsb2016b&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016b.jpg&quot; /&gt;
+
+&lt;img alt=&quot;gwabbsb2016c&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016c.jpg&quot; /&gt;
+&lt;/p&gt;
+
 &lt;p&gt;&lt;!--more--&gt;
 &lt;p align=&quot;justify&quot;&gt;Ainda sobre o evento, foi possível demostrar a utilziação de serviços para comunicação com dispositivos, neste caso trabalhando com MQTT e utilizando uma demo prática de controle e coleta de dados em uma casa.&lt;/p&gt;
 &lt;p align=&quot;justify&quot;&gt;Além de realizar um experimento com o Microsoft Azure Machine Learning, também abordamos o futuro da intligência de dados e os novos caminhos que a cognição pode trazer para o mundo da inteligência artificial.&lt;/p&gt;
