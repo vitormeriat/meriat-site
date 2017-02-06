@@ -3,15 +3,41 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Jan 2017 21:30:19 -0200</pubDate>
-    <lastBuildDate>Sun, 29 Jan 2017 21:30:19 -0200</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 06 Feb 2017 13:19:34 -0200</pubDate>
+    <lastBuildDate>Mon, 06 Feb 2017 13:19:34 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
+        <title>Workshop de Machine Learning na CPBR10</title>
+        <description>&lt;p&gt;Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.&lt;/p&gt;
+
+&lt;h1 id=&quot;de-onde-ele-vem&quot;&gt;De onde ele vem?&lt;/h1&gt;
+&lt;p&gt;Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do “de Finibus Bonorum et Malorum” (Os Extremos do Bem e do Mal), de Cícero, escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, “Lorem Ipsum dolor sit amet…” vem de uma linha na seção 1.10.32.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-size: 3em;&quot;&gt;;)&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Não sei o motivo, mas esse cara não está subindo… pq?&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
+        <link>/2017/02/05/machine-learning/</link>
+        <guid isPermaLink="true">/2017/02/05/machine-learning/</guid>
+        
+        
+        <category>IA</category>
+        
+        <category>Machine Learning</category>
+        
+        <category>Jupyter Notebook</category>
+        
+        <category>Python</category>
+        
+      </item>
+    
+      <item>
         <title>Inteligência Artificial, história indústria e economia</title>
-        <description>&lt;p&gt;A importância científica, industrial e econômica da &lt;b&gt;&lt;span style=&quot;font-size: 1.4em;&quot;&gt;I&lt;/span&gt;nteligência &lt;span style=&quot;font-size: 1.4em;&quot;&gt;A&lt;/span&gt;rtificial&lt;/b&gt;, bem como o seu previsível impacto social têm crescido muito nos últimos anos, estimando-se que cresça muito mais, apoiada quer na banalização da potência de cálculo (necessária à complexidade das suas operações), quer nos progressos reais verificados na investigação fundamental, cujos resultados saem agora dos laboratórios para a indústria. Na sua vertente tecnológica, a IA comporta uma importante faceta de engenharia. Na verdade, pretende em última análise programar computadores (a que poderão estar acoplados sensores e actuadores) de forma que desempenhem com êxito e eficiência tarefas que requerem inteligência.&lt;/p&gt;
+        <description>&lt;p&gt;A importância científica, industrial e econômica da &lt;span style=&quot;font-size: 1.4em;&quot;&gt;I&lt;/span&gt;nteligência &lt;span style=&quot;font-size: 1.4em;&quot;&gt;A&lt;/span&gt;rtificial, bem como o seu previsível impacto social têm crescido muito nos últimos anos, estimando-se que cresça muito mais, apoiada quer na banalização da potência de cálculo (necessária à complexidade das suas operações), quer nos progressos reais verificados na investigação fundamental, cujos resultados saem agora dos laboratórios para a indústria. Na sua vertente tecnológica, a IA comporta uma importante faceta de engenharia. Na verdade, pretende em última análise programar computadores (a que poderão estar acoplados sensores e actuadores) de forma que desempenhem com êxito e eficiência tarefas que requerem inteligência.&lt;/p&gt;
 
 &lt;p&gt;Tal desempenho tem como suporte a combinação racional de métodos gerais e automatizados de abordagem à formulação e resolução lógica de problemas. É pela generalidade, computabilidade, e combinabilidade lógica desses métodos que a IA se distingue como disciplina científica. Em contraste, outras disciplinas científicas usam técnicas inteligentes mas específicas do seu domínio; técnicas gerais mas sem explicitação do raciocínio; técnicas múltiplas mas não articuladas num todo automatizado.&lt;/p&gt;
 
@@ -20,8 +46,8 @@
 &lt;p&gt;A utilização da IA começa a generalizar-se com muitos êxitos de aplicação. Ocorrem anualmente inúmeros colóquios internacionais expressamente dedicados a essas aplicações. Em Portugal verifica-se um potencial considerável em IA, já consolidado em grande parte a nível do ensino e da investigação.&lt;/p&gt;
 </description>
         <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/01/19/machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/01/19/machine-learning/</guid>
+        <link>/2017/01/19/inteligencia-artificial-historia-industria/</link>
+        <guid isPermaLink="true">/2017/01/19/inteligencia-artificial-historia-industria/</guid>
         
         
         <category>IA</category>
@@ -103,8 +129,8 @@
 &lt;p&gt;A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero…&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Oct 2016 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
+        <link>/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
+        <guid isPermaLink="true">/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
         
         
         <category>Data Science</category>
@@ -132,8 +158,8 @@
 &lt;/p&gt;
 </description>
         <pubDate>Sat, 06 Aug 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
+        <link>/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
+        <guid isPermaLink="true">/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
         
         
         <category>Comunidade</category>
@@ -192,8 +218,8 @@
 &lt;h3&gt;Valeu galera ;)&lt;/h3&gt;
 </description>
         <pubDate>Thu, 28 Jul 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
+        <link>/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
+        <guid isPermaLink="true">/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
         
         
         <category>Comunidade</category>
@@ -218,8 +244,8 @@
 &lt;/p&gt;
 </description>
         <pubDate>Mon, 09 May 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
+        <link>/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
+        <guid isPermaLink="true">/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
         
         
         <category>Comunidade</category>
@@ -264,8 +290,8 @@
 &lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Apr 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
+        <link>/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
+        <guid isPermaLink="true">/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
         
         
         <category>Azure IoT Suite</category>
@@ -304,8 +330,8 @@
 &lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 12 Apr 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</guid>
+        <link>/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</link>
+        <guid isPermaLink="true">/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</guid>
         
         
         <category>Comunidade</category>
@@ -351,8 +377,8 @@ client.receive(function (err, msg) {
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
         <pubDate>Sat, 13 Feb 2016 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2016/02/13/mqtt-nativo-no-azure-iot-hub/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/02/13/mqtt-nativo-no-azure-iot-hub/</guid>
+        <link>/2016/02/13/mqtt-nativo-no-azure-iot-hub/</link>
+        <guid isPermaLink="true">/2016/02/13/mqtt-nativo-no-azure-iot-hub/</guid>
         
         
         <category>Azure IoT Suite</category>
@@ -387,8 +413,8 @@ client.receive(function (err, msg) {
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 10 Feb 2016 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2016/02/10/qcon-sp-2016-medio-da-experincia-real-dos-usurios-com-sensores-e-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/02/10/qcon-sp-2016-medio-da-experincia-real-dos-usurios-com-sensores-e-machine-learning/</guid>
+        <link>/2016/02/10/qcon-sp-2016-medio-da-experincia-real-dos-usurios-com-sensores-e-machine-learning/</link>
+        <guid isPermaLink="true">/2016/02/10/qcon-sp-2016-medio-da-experincia-real-dos-usurios-com-sensores-e-machine-learning/</guid>
         
         
         <category>Comunidade</category>
@@ -396,40 +422,6 @@ client.receive(function (err, msg) {
         <category>IoT</category>
         
         <category>Machine Learning</category>
-        
-      </item>
-    
-      <item>
-        <title>IoT Weekend 2016</title>
-        <description>&lt;p align=&quot;justify&quot;&gt;Em 2015 nasceu o&lt;strong&gt;&lt;font size=&quot;4&quot;&gt; &lt;/font&gt;&lt;/strong&gt;&lt;a href=&quot;http://www.iotweekend.com.br/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;&lt;font size=&quot;4&quot;&gt;IoT Weekend&lt;/font&gt;&lt;/strong&gt;&lt;/a&gt;, um evento com foco &lt;strong&gt;IoT&lt;/strong&gt; em sua forma mais completa. Começamos bem, estreando em &lt;a href=&quot;http://www.iotweekend.com.br/2015/Recife/index.html&quot; target=&quot;_blank&quot;&gt;Recife&lt;/a&gt; e &lt;a href=&quot;http://www.iotweekend.com.br/2015/Brasilia/index.html&quot; target=&quot;_blank&quot;&gt;Brasília&lt;/a&gt;, com o mais importante: Palestrantes e conteúdo de primeira, abordando temas como mercado, cidades inteligêntes, plataformas, big data, cloud computing, protocolos, comunicação, etc. Ou seja, todos os conteúdos pertinentes e com foco em &lt;strong&gt;IoT&lt;/strong&gt;. Isso sem falar no famoso workshop abrangendo uma plataforma (Arduino, Raspberry pi), junto com sua conectividade e integração ao mundo do big data e cloud computing.&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;&lt;a href=&quot;https://meriatsite.blob.core.windows.net/images/2016/02/logo_IOT_main.png&quot;&gt;&lt;img title=&quot;logo_IOT_main&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;logo_IOT_main&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/02/logo_IOT_main.png&quot; width=&quot;390&quot; height=&quot;265&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;Foi graças ao sucesso e repercussão do IoT Weekend em 2015 que este ano na edição 2016 vamos sediar este evento em 6 cidades pelo Brasil:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goiânia&lt;/li&gt;
-&lt;li&gt;Rio de Janeiro&lt;/li&gt;
-&lt;li&gt;Recife&lt;/li&gt;
-&lt;li&gt;Maringá&lt;/li&gt;
-&lt;li&gt;São Paulo&lt;/li&gt;
-&lt;li&gt;Brasília&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;!--more--&gt;
-&lt;p&gt;Para mais informações nos siga nas redes sociais:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;font size=&quot;5&quot;&gt;&lt;strong&gt;Site:&lt;/strong&gt; &lt;/font&gt;&lt;a title=&quot;http://www.iotweekend.com.br/&quot; href=&quot;http://www.iotweekend.com.br/&quot;&gt;&lt;font size=&quot;5&quot;&gt;http://www.iotweekend.com.br/&lt;/font&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;font size=&quot;5&quot;&gt;&lt;strong&gt;Twitter:&lt;/strong&gt; &lt;/font&gt;&lt;a title=&quot;https://twitter.com/iotweekend&quot; href=&quot;https://twitter.com/iotweekend&quot;&gt;&lt;font size=&quot;5&quot;&gt;https://twitter.com/iotweekend&lt;/font&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;font size=&quot;5&quot;&gt;&lt;strong&gt;Facebook:&lt;/strong&gt; &lt;/font&gt;&lt;a title=&quot;https://www.facebook.com/iotweekend&quot; href=&quot;https://www.facebook.com/iotweekend&quot;&gt;&lt;font size=&quot;5&quot;&gt;https://www.facebook.com/iotweekend&lt;/font&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p align=&quot;justify&quot;&gt;O primeiro evento será nos dias 8,9 e 10 de Abril em Goiânia. A vendas já se iniciaram e a primeira remessa de ingressos se incerra no dia 25-02. Não perca tempo e já realize a inscrição. Caso você seja de uma das cidades e se interesse em participar, pode nos contactar por email para tirar qualquer dúvida, ou para sugestões. Serão bem vindas.&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 08 Feb 2016 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2016/02/08/iot-weekend-2016/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/02/08/iot-weekend-2016/</guid>
-        
-        
-        <category>Comunidade</category>
-        
-        <category>IoT</category>
         
       </item>
     
