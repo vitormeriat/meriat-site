@@ -3,11 +3,29 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Feb 2017 13:19:34 -0200</pubDate>
-    <lastBuildDate>Mon, 06 Feb 2017 13:19:34 -0200</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 07 Feb 2017 20:20:41 -0300</pubDate>
+    <lastBuildDate>Tue, 07 Feb 2017 20:20:41 -0300</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Machine Learning e sua literatura clássica</title>
+        <description>&lt;p&gt;Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.&lt;/p&gt;
+
+&lt;h1 id=&quot;de-onde-ele-vem&quot;&gt;De onde ele vem?&lt;/h1&gt;
+&lt;p&gt;Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do “de Finibus Bonorum et Malorum” (Os Extremos do Bem e do Mal), de Cícero, escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, “Lorem Ipsum dolor sit amet…” vem de uma linha na seção 1.10.32.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 07 Feb 2017 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
+        
+        
+        <category>IA</category>
+        
+        <category>Machine Learning</category>
+        
+      </item>
     
       <item>
         <title>Workshop de Machine Learning na CPBR10</title>
@@ -20,9 +38,9 @@
 
 &lt;p&gt;Não sei o motivo, mas esse cara não está subindo… pq?&lt;/p&gt;
 </description>
-        <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/05/machine-learning/</link>
-        <guid isPermaLink="true">/2017/02/05/machine-learning/</guid>
+        <pubDate>Sun, 05 Feb 2017 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2017/02/05/machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/05/machine-learning/</guid>
         
         
         <category>IA</category>
@@ -45,9 +63,9 @@
 
 &lt;p&gt;A utilização da IA começa a generalizar-se com muitos êxitos de aplicação. Ocorrem anualmente inúmeros colóquios internacionais expressamente dedicados a essas aplicações. Em Portugal verifica-se um potencial considerável em IA, já consolidado em grande parte a nível do ensino e da investigação.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
-        <link>/2017/01/19/inteligencia-artificial-historia-industria/</link>
-        <guid isPermaLink="true">/2017/01/19/inteligencia-artificial-historia-industria/</guid>
+        <pubDate>Thu, 19 Jan 2017 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</guid>
         
         
         <category>IA</category>
@@ -128,9 +146,9 @@
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero…&lt;/p&gt;
 </description>
-        <pubDate>Thu, 20 Oct 2016 00:00:00 -0200</pubDate>
-        <link>/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
-        <guid isPermaLink="true">/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
+        <pubDate>Thu, 20 Oct 2016 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
         
         
         <category>Data Science</category>
@@ -158,8 +176,8 @@
 &lt;/p&gt;
 </description>
         <pubDate>Sat, 06 Aug 2016 00:00:00 -0300</pubDate>
-        <link>/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
-        <guid isPermaLink="true">/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
+        <link>http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
         
         
         <category>Comunidade</category>
@@ -218,8 +236,8 @@
 &lt;h3&gt;Valeu galera ;)&lt;/h3&gt;
 </description>
         <pubDate>Thu, 28 Jul 2016 00:00:00 -0300</pubDate>
-        <link>/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
-        <guid isPermaLink="true">/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
+        <link>http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
         
         
         <category>Comunidade</category>
@@ -244,8 +262,8 @@
 &lt;/p&gt;
 </description>
         <pubDate>Mon, 09 May 2016 00:00:00 -0300</pubDate>
-        <link>/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
-        <guid isPermaLink="true">/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
+        <link>http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
         
         
         <category>Comunidade</category>
@@ -290,8 +308,8 @@
 &lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Apr 2016 00:00:00 -0300</pubDate>
-        <link>/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
-        <guid isPermaLink="true">/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
+        <link>http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
         
         
         <category>Azure IoT Suite</category>
@@ -330,8 +348,8 @@
 &lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 12 Apr 2016 00:00:00 -0300</pubDate>
-        <link>/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</link>
-        <guid isPermaLink="true">/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</guid>
+        <link>http://localhost:4000/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</guid>
         
         
         <category>Comunidade</category>
@@ -376,9 +394,9 @@ client.receive(function (err, msg) {
 &lt;p&gt;&lt;a href=&quot;https://github.com/Azure/azure-iot-sdks/tree/master/node/device/transport/mqtt&quot; target=&quot;_blank&quot;&gt;Github - Azure IoT Device MQTT&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 13 Feb 2016 00:00:00 -0200</pubDate>
-        <link>/2016/02/13/mqtt-nativo-no-azure-iot-hub/</link>
-        <guid isPermaLink="true">/2016/02/13/mqtt-nativo-no-azure-iot-hub/</guid>
+        <pubDate>Sat, 13 Feb 2016 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2016/02/13/mqtt-nativo-no-azure-iot-hub/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/02/13/mqtt-nativo-no-azure-iot-hub/</guid>
         
         
         <category>Azure IoT Suite</category>
@@ -388,40 +406,6 @@ client.receive(function (err, msg) {
         <category>Microsoft Azure</category>
         
         <category>MQTT</category>
-        
-      </item>
-    
-      <item>
-        <title>QCon SP 2016 - Medição da experiência real dos usuários com sensores e Machine Learning</title>
-        <description>&lt;p align=&quot;justify&quot;&gt;Fala pessoal, segue abaixo as informações sobre minha palestra na track de IoT da QCon São Paulo 2016. Agradeço a todos os participantes, e como prometido segue o PPT da apresentação e as referências utilizadas.&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;&lt;a href=&quot;https://meriatsite.blob.core.windows.net/images/2016/02/qconsp2016.png&quot;&gt;&lt;img title=&quot;qconsp2016&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: left; padding-top: 0px; padding-left: 0px; margin: 20px 60px 0px 0px; display: inline; padding-right: 0px; border-top-width: 0px&quot; border=&quot;0&quot; alt=&quot;qconsp2016&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/qconsp2016.png&quot; width=&quot;165&quot; align=&quot;left&quot; height=&quot;76&quot; /&gt;&lt;/a&gt;Nessa palestra vou explorar a experiência no uso de sensoriamento e outras técnicas de IoT e análise de dados, numa aplicação real de Caronas Compartilhadas. Os dados coletados incluem a rota dos carros, condições externas de clima e trânsito, que são cruzados com respostas a questionários e preferências pessoais.&lt;/p&gt;
-&lt;p&gt;&lt;!--more--&gt;
-&lt;p align=&quot;justify&quot;&gt;​O uso de dispositivos nos veículos capturando dados forneceu uma visão clara sobre o que realmente acontecia nas caronas – e a análise dos dados com técnicas de machine learning permitiu reduzir distorções causadas por efeitos externos às caronas em si. Ao final, foi possível medir com maior precisão os múltiplos aspectos da experiência na utilização do serviço.&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;Vou apresentar nessa palestra técnicas de IoT e Inteligência Artificial foram fundamentais para melhorar a aplicação e a experiência dos usuários. Serão abordados os passos para construção da aplicação, sua arquitetura, utilização de sensores, cloud, analytics e aprendizado de máquina, assim como critérios de performance e custo computacional. Serão abordados também desafios enfrentados na comunicação entre os dispositivos utilizados nos veículos.&lt;/p&gt;
-&lt;p&gt;&lt;iframe style=&quot;height: 675px; width: 1000px&quot; marginheight=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/by4wQxgA5RJzu9&quot; frameborder=&quot;0&quot; width=&quot;998&quot; marginwidth=&quot;0&quot; scrolling=&quot;no&quot;&gt; &lt;/iframe&gt;
-&lt;p align=&quot;justify&quot;&gt;Abaixo segue o link da palestra para quem quiser saber mais detalhes. Corre que ainda dá tempo de participar.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a title=&quot;http://qconsp.com/presentation/medicao-da-experiencia-real-dos-usuarios-com-sensores-e-machine-learning&quot; href=&quot;http://qconsp.com/presentation/medicao-da-experiencia-real-dos-usuarios-com-sensores-e-machine-learning&quot; target=&quot;_blank&quot;&gt;Medição da experiência real dos usuários com sensores e Machine Learning&lt;/a&gt; &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;h2&gt;Referências&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a title=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-overview/&quot; href=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-overview/&quot;&gt;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-overview/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a title=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-ipython-notebook-machine-learning/&quot; href=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-ipython-notebook-machine-learning/&quot;&gt;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-ipython-notebook-machine-learning/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a title=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-eventhub-streaming/&quot; href=&quot;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-eventhub-streaming/&quot;&gt;https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-eventhub-streaming/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a title=&quot;https://azure.microsoft.com/en-us/services/machine-learning/&quot; href=&quot;https://azure.microsoft.com/en-us/services/machine-learning/&quot;&gt;https://azure.microsoft.com/en-us/services/machine-learning/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 10 Feb 2016 00:00:00 -0200</pubDate>
-        <link>/2016/02/10/qcon-sp-2016-medio-da-experincia-real-dos-usurios-com-sensores-e-machine-learning/</link>
-        <guid isPermaLink="true">/2016/02/10/qcon-sp-2016-medio-da-experincia-real-dos-usurios-com-sensores-e-machine-learning/</guid>
-        
-        
-        <category>Comunidade</category>
-        
-        <category>IoT</category>
-        
-        <category>Machine Learning</category>
         
       </item>
     
