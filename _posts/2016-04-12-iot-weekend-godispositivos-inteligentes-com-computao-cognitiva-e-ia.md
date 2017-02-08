@@ -4,7 +4,7 @@ title: IoT Weekend GO–Dispositivos Inteligentes com Computação Cognitiva e I
 date: 2016-04-12
 categories:
   - Comunidade
-image-sm: "https://meriatsite.blob.core.windows.net/images/2016/04/iotweekend.jpg"
+image-full: "https://meriatsite.blob.core.windows.net/images/2016/04/iotweekend.jpg"
 ---
 <p><a href="https://meriatsite.blob.core.windows.net/images/2016/04/iotweekend.jpg"><img title="iotweekend" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="iotweekend" src="https://meriatsite.blob.core.windows.net/images/2016/04/iotweekend.jpg" width="990" height="742" /></a>
 <p align="justify">&nbsp;</p>

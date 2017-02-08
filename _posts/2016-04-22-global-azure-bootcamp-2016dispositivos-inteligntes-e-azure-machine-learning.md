@@ -7,7 +7,7 @@ categories:
   - IoT
   - Machine Learning
   - Microsoft Azure
-image-sm: "https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016.jpg"
+image-full: "https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016.jpg"
 ---
 <p align="justify">Dia 16 de abril de 2016 ocorreu mais uma edição do Global Azure Bootcamp. Este é um evento mundial que ocorre quase simultâneamente, e que teve mais uma vez a participação em Brasília, desta vez sob a tutela do <a href="https://mvp.microsoft.com/pt-br/PublicProfile/5001388" target="_blank">Jucinei Santos</a>, MVP de Windows Development.</p>
 

@@ -19,7 +19,7 @@ menuhome: fh5co-active
                 in <span class="post-cat">{{ post.categories | join: ', ' }}</span>
               {% endif %}
             </p>
-            {% if post.image-sm %}
+            {% if post.image-full %}
              <img style="width: 100%;" src="{{ post.image-sm }}" class="absolute-bg" >
             {% endif %}
             {% if post.image %}

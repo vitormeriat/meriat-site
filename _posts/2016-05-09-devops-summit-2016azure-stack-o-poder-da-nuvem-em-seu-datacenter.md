@@ -6,7 +6,7 @@ type: post
 categories:
   - Comunidade
   - Microsoft Azure
-image-sm: "https://meriatsite.blob.core.windows.net/images/2016/05/devopssummit.jpg"
+image-full: "https://meriatsite.blob.core.windows.net/images/2016/05/devopssummit.jpg"
 ---
 <p align="justify">Dia 07/05 na seda da Microsoft no Brasil, aconteceu a primeira edição do DevOps Summit Brasil. Esse é um evento que teve como origem a fusão dos já consagrados Azure Summit Brasil e ALM Summit Brasil com foco em promover o conhecimento de Cloud Computing e DevOps.</p>
 <p style="background-color: #000000" align="center"><img title="spark-tela" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-tela" src="https://meriatsite.blob.core.windows.net/images/2016/05/devopssummit.jpg" width="1000" height="790" /></p>
