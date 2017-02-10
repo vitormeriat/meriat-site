@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 07 Feb 2017 20:20:41 -0300</pubDate>
-    <lastBuildDate>Tue, 07 Feb 2017 20:20:41 -0300</lastBuildDate>
+    <pubDate>Thu, 09 Feb 2017 21:54:31 -0200</pubDate>
+    <lastBuildDate>Thu, 09 Feb 2017 21:54:31 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -16,7 +16,7 @@
 &lt;h1 id=&quot;de-onde-ele-vem&quot;&gt;De onde ele vem?&lt;/h1&gt;
 &lt;p&gt;Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do “de Finibus Bonorum et Malorum” (Os Extremos do Bem e do Mal), de Cícero, escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, “Lorem Ipsum dolor sit amet…” vem de uma linha na seção 1.10.32.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 07 Feb 2017 00:00:00 -0300</pubDate>
+        <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
         
@@ -38,7 +38,7 @@
 
 &lt;p&gt;Não sei o motivo, mas esse cara não está subindo… pq?&lt;/p&gt;
 </description>
-        <pubDate>Sun, 05 Feb 2017 00:00:00 -0300</pubDate>
+        <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2017/02/05/machine-learning/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/02/05/machine-learning/</guid>
         
@@ -63,7 +63,7 @@
 
 &lt;p&gt;A utilização da IA começa a generalizar-se com muitos êxitos de aplicação. Ocorrem anualmente inúmeros colóquios internacionais expressamente dedicados a essas aplicações. Em Portugal verifica-se um potencial considerável em IA, já consolidado em grande parte a nível do ensino e da investigação.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 19 Jan 2017 00:00:00 -0300</pubDate>
+        <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</guid>
         
@@ -146,7 +146,7 @@
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero…&lt;/p&gt;
 </description>
-        <pubDate>Thu, 20 Oct 2016 00:00:00 -0300</pubDate>
+        <pubDate>Thu, 20 Oct 2016 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
         <guid isPermaLink="true">http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
         
@@ -394,7 +394,7 @@ client.receive(function (err, msg) {
 &lt;p&gt;&lt;a href=&quot;https://github.com/Azure/azure-iot-sdks/tree/master/node/device/transport/mqtt&quot; target=&quot;_blank&quot;&gt;Github - Azure IoT Device MQTT&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 13 Feb 2016 00:00:00 -0300</pubDate>
+        <pubDate>Sat, 13 Feb 2016 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2016/02/13/mqtt-nativo-no-azure-iot-hub/</link>
         <guid isPermaLink="true">http://localhost:4000/2016/02/13/mqtt-nativo-no-azure-iot-hub/</guid>
         
