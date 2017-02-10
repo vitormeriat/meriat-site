@@ -161,6 +161,11 @@ figure.fh5co-with-caption figcaption {
   font-size: 2em;
 }
 
+.iframe-slideshare{
+  height: 570px;
+  width: 100%
+}
+
 #search {
     margin-bottom: 4em;
 }

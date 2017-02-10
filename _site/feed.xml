@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Feb 2017 21:54:31 -0200</pubDate>
-    <lastBuildDate>Thu, 09 Feb 2017 21:54:31 -0200</lastBuildDate>
+    <pubDate>Fri, 10 Feb 2017 17:06:23 -0200</pubDate>
+    <lastBuildDate>Fri, 10 Feb 2017 17:06:23 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -324,28 +324,43 @@
     
       <item>
         <title>IoT Weekend GO–Dispositivos Inteligentes com Computação Cognitiva e IA</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/iotweekend.jpg&quot;&gt;&lt;img title=&quot;iotweekend&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;iotweekend&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/iotweekend.jpg&quot; width=&quot;990&quot; height=&quot;742&quot; /&gt;&lt;/a&gt;
-&lt;p align=&quot;justify&quot;&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;Olá pessoal, primeiro gostaria de agradecer a todos os participantes do evento e da minha palestra. O feedback foi maravilhoso, sem falar o networking. Este foi o primeiro IoT Weekend do ano, e ocorreu em Goiânia. Como o prometido segue abaixo algumas informações, material e referências da minha palestra no &lt;a href=&quot;http://www.iotweekend.com.br/2016/Goiania/index.html&quot; target=&quot;_blank&quot;&gt;IoT Weekend GO 2016&lt;/a&gt;. Assim que possível tento gravar um vídeo com o experimento realizada durante a palestra.&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;&lt;a href=&quot;http://meriat-blog.azurewebsites.net/wp-content/uploads/2016/04/logo_IOT_GO_header.png&quot;&gt;&lt;img title=&quot;logo_IOT_GO_header&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: left; padding-top: 0px; padding-left: 0px; border-left: 0px; margin: 0px 30px 0px 10px; display: inline; padding-right: 0px&quot; border=&quot;0&quot; alt=&quot;logo_IOT_GO_header&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/logo_IOT_GO_header_thumb.png&quot; width=&quot;190&quot; align=&quot;left&quot; height=&quot;81&quot; /&gt;&lt;/a&gt;O tema foi em relação a computação congnitiva, inteligência artificial e IoT. Embora seja um tema recente, cognição na computação já provou ter um grande potencial. A geração de conhecimento por meio de aprendizado e dos dados disponíveis é a próxima grande onda de inovação no mercado de tecnologia. Empresas usando feedbacks e dados de ambiente de lojas para traçar e explorar os padrões de consumo dos clientes, hospitais usando cognição para acelerar pesquisas contra o câncer, cidades controlando melhor os seus recursos são pequenos exemplos do que já temos no mundo conectado de hoje. &lt;/p&gt;
-&lt;p&gt;&lt;!--more--&gt;
-&lt;p align=&quot;justify&quot;&gt;Ao unir computação cognitiva à Internet das Coisas conseguimos integrar e trabalhar um volume absurdo de dados com a inteligência cognitiva, gerando o subsídio necessário para as melhores tomadas de decisões.
+        <description>&lt;p&gt;
+  &lt;img title=&quot;iotweekend&quot; border=&quot;0&quot; style=&quot;width: 100%;&quot; alt=&quot;iotweekend&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/iotweekend.jpg&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p align=&quot;justify&quot;&gt;Olá pessoal, primeiro gostaria de agradecer a todos os participantes do evento e da minha palestra. O feedback foi maravilhoso, sem falar o networking. Este foi o primeiro IoT Weekend do ano, e ocorreu em Goiânia. Como o prometido segue abaixo algumas informações, material e referências da minha palestra no &lt;a href=&quot;http://www.iotweekend.com.br/2016/Goiania/index.html&quot; target=&quot;_blank&quot;&gt; IoT Weekend GO 2016&lt;/a&gt;. Assim que possível tento gravar um vídeo com o experimento realizada durante a palestra.&lt;/p&gt;
+
+&lt;p align=&quot;justify&quot;&gt;
+  &lt;img title=&quot;logo_IOT_GO_header&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: left; padding-top: 0px; padding-left: 0px; border-left: 0px; margin: 0px 30px 0px 10px; display: inline; padding-right: 0px&quot; border=&quot;0&quot; alt=&quot;logo_IOT_GO_header&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/logo_IOT_GO_header.png&quot; align=&quot;left&quot; /&gt;
+
+O tema foi em relação a computação congnitiva, inteligência artificial e IoT. Embora seja um tema recente, cognição na computação já provou ter um grande potencial. A geração de conhecimento por meio de aprendizado e dos dados disponíveis é a próxima grande onda de inovação no mercado de tecnologia. Empresas usando feedbacks e dados de ambiente de lojas para traçar e explorar os padrões de consumo dos clientes, hospitais usando cognição para acelerar pesquisas contra o câncer, cidades controlando melhor os seus recursos são pequenos exemplos do que já temos no mundo conectado de hoje. &lt;/p&gt;
+
+&lt;p align=&quot;justify&quot;&gt;
+  Ao unir computação cognitiva à Internet das Coisas conseguimos integrar e trabalhar um volume absurdo de dados com a inteligência cognitiva, gerando o subsídio necessário para as melhores tomadas de decisões.
+&lt;/p&gt;
+
 &lt;p align=&quot;justify&quot;&gt;Ainda foi relizada uma demonstração do poder dos serviços de aprendeizagem de máquina como serviço na cloud, utilizando como ferramente o Azure Machine Learning. Uma simples classificação de preferências do usuário na utilização de uma sala inteligênte se utilizando de deversos sensores para a coleta de informações aliados a um simples questionário de satisfação. Com base nisso conseguimos aprender algumas preferências na utilização da mesma.
-&lt;p align=&quot;justify&quot;&gt;Abaixo seguem os slides da apresentação e logo após algumas referências.
-&lt;p align=&quot;justify&quot;&gt;&amp;nbsp;
-&lt;p&gt;&lt;iframe style=&quot;height: 675px; width: 1000px&quot; marginheight=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/6aR1nnfD1bZfI1&quot; frameborder=&quot;0&quot; width=&quot;998&quot; marginwidth=&quot;0&quot; scrolling=&quot;no&quot;&gt; &lt;/iframe&gt;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/p&gt;
+
+&lt;p align=&quot;justify&quot;&gt;Abaixo seguem os slides da apresentação e logo após algumas referências.&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;iframe class=&quot;iframe-slideshare&quot; marginheight=&quot;0&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/6aR1nnfD1bZfI1&quot; scrolling=&quot;no&quot;&gt; &lt;/iframe&gt;
+&lt;/p&gt;
+
 &lt;p&gt;É isso ai galera… esse foi o primeiro IoT Weekend do ano… a próxima edição é no Recife!!!&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
 &lt;h2&gt;Referências&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/services/cognitive-services/&quot; target=&quot;_blank&quot;&gt;Azure Cognitive Services&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.ibm.com/smarterplanet/us/en/ibmwatson/&quot; target=&quot;_blank&quot;&gt;IBM Watson&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/services/machine-learning/&quot; target=&quot;_blank&quot;&gt;Azure Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/pt/machine-learning/&quot; target=&quot;_blank&quot;&gt;Amazon Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://epoca.globo.com/vida/noticia/2015/06/sete-maneiras-de-computacao-cognitiva-mudar-vida-das-pessoas.html&quot; target=&quot;_blank&quot;&gt;Computação cognitiva: sete maneiras de mudar, de vez, a vida das pessoas&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;&lt;/p&gt;
-&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/services/cognitive-services/&quot; target=&quot;_blank&quot;&gt;Azure Cognitive Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.ibm.com/smarterplanet/us/en/ibmwatson/&quot; target=&quot;_blank&quot;&gt;IBM Watson&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/services/machine-learning/&quot; target=&quot;_blank&quot;&gt;Azure Machine Learning&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/pt/machine-learning/&quot; target=&quot;_blank&quot;&gt;Amazon Machine Learning&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://epoca.globo.com/vida/noticia/2015/06/sete-maneiras-de-computacao-cognitiva-mudar-vida-das-pessoas.html&quot; target=&quot;_blank&quot;&gt;Computação cognitiva: sete maneiras de mudar, de vez, a vida das pessoas&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/p&gt;
 </description>
         <pubDate>Tue, 12 Apr 2016 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</link>
@@ -361,12 +376,14 @@
         <description>&lt;p align=&quot;justify&quot;&gt;Estou utilizando o Microsoft Azure em projetos de IoT antes mesmo do lançamento do &lt;a href=&quot;https://azure.microsoft.com/pt-br/services/iot-hub/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Azure IoT Hub&lt;/strong&gt;&lt;/a&gt;. Desde então tenho aguardado um notícia que veio enfim, no dia 8 de fevereiro de 2016: O suporte nativo ao protocolo &lt;a href=&quot;http://mqtt.org/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;MQTT&lt;/strong&gt;&lt;/a&gt; sem a necessidade do protocol gateway.&lt;/p&gt;
 &lt;p align=&quot;justify&quot;&gt;Embora essa fosse um solicitação recorrente, há de se parabenizar o esforço do time do &lt;strong&gt;Azure IoT&lt;/strong&gt;. Pouco tempo após o &lt;strong&gt;MQTT&lt;/strong&gt; ter sido aprovado como padrão &lt;strong&gt;ISO/IEC&lt;/strong&gt; (a saber: &lt;a title=&quot;http://www.iso.org/iso/catalogue_detail.htm?csnumber=69466&quot; href=&quot;http://www.iso.org/iso/catalogue_detail.htm?csnumber=69466&quot; target=&quot;_blank&quot;&gt;#ISO20922&lt;/a&gt;), somos agraciados com a notícia do suporte nativo no &lt;strong&gt;Azure IoT Hub&lt;/strong&gt;.&lt;/p&gt;
 &lt;p align=&quot;justify&quot;&gt;Essa é uma notícia que agrega e muito ao serviço. Aqueles que já trabalham na área sabem o quanto é fundamental a questão da comunicação. Um projeto IoT depende desse fator, e para se ter um projeto robusto é necessário se pensar nos principais problemas como restrição de banda, restrição de plataforma etc. É ai que entra o MQTT. Já abordei isso por cima em alguns posts anteriores.&lt;/p&gt;
-&lt;p&gt;&lt;!--more--&gt;
+
 &lt;p align=&quot;justify&quot;&gt;Devo fazer alguns posts sobre a experiência em utilizar o IoT Hub da Microsoft. Neles devo abordar detalhes do produto e a experiência de migrar um projeto já pronto, enviando dados para um broker na nuvem no modelo IaaS, para o serviço na plataforma Azure.&lt;/p&gt;
 &lt;p align=&quot;justify&quot;&gt;Utilizar o Azure IoT Hub com MQTT é tão simples quanto o esperado. Não há segredos nem customizações, apenas informe o protocolo a ser usado e sua string de conexão. Abaixo segue o exemplo em Node.js:&lt;/p&gt;
 &lt;h2&gt;Criar um device&lt;/h2&gt;
 &lt;pre style=&quot;font-size: 16pt !important&quot;&gt;&lt;code class=&quot;javascript&quot;&gt;
-var clientFromConnectionString = require('azure-iot-device-mqtt').clientFromConnectionString;
+var clientFromConnectionString =
+    require('azure-iot-device-mqtt').clientFromConnectionString;
+
 var Message = require('azure-iot-device').Message;
 
 var connectionString = '[IoT Hub device connection string]';
