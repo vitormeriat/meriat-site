@@ -13,7 +13,9 @@ image-full: "https://meriatsite.blob.core.windows.net/images/2017/02/07/capa.jpg
 
 A listagem a seguir pode ser categorizada como, **Popular Science Machine Learning Books** ou **Beginner Machine Learning Books**. É possível ainda encontrar vários livros desta listagem em categorias como **Introductory Machine Learning Books**.
 
-## Machine Learning Books Selection
+![machine learning](https://meriatsite.blob.core.windows.net/images/2017/02/07/capa.jpg "Machine Learning")
+
+### Machine Learning Books Selection
 
 * [The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World](https://www.amazon.com/dp/0465065708)
 * [Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die](https://www.amazon.com/dp/1119145678)
@@ -36,3 +38,45 @@ A listagem a seguir pode ser categorizada como, **Popular Science Machine Learni
 * [Machine Learning 1st Edition](https://www.amazon.com/dp/0070428077)
 * [Machine Learning: The Art and Science of Algorithms that Make Sense of Data](https://www.amazon.com/dp/1107422221)
 * [Foundations of Machine Learning (Adaptive Computation and Machine Learning series)](https://www.amazon.com/dp/026201825X)
+* [Programming Collective Intelligence: Building Smart Web 2.0 Applications](https://www.amazon.com/dp/0596529325)
+* [Time Series Analysis: Forecasting and Control](http://www.amazon.com/dp/1118675029)
+* [Practical Time Series Forecasting with R: A Hands-On Guide](http://www.amazon.com/dp/0997847913)
+* [Introduction to Time Series and Forecasting](http://www.amazon.com/dp/3319298526)
+* [Forecasting: principles and practice](http://www.amazon.com/dp/0987507109)
+
+### Com foco em Python
+* [Python Machine Learning](http://www.amazon.com/dp/1783555130)
+* [Data Science from Scratch: First Principles with Python](http://www.amazon.com/dp/149190142X)
+* [Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques for Building Intelligent Systems](http://www.amazon.com/dp/1491962291)
+* [Introduction to Machine Learning with Python: A Guide for Data Scientists](http://www.amazon.com/dp/1449369413)
+* [Vital Introduction to Machine Learning with Python: Best Practices to Improve and Optimize Machine Learning Systems and Algorithms](http://www.amazon.com/dp/B01N4FUDSE)
+* [Machine Learning in Python: Essential Techniques for Predictive Analysis](http://www.amazon.com/dp/1118961749)
+* [Python Data Science Handbook: Essential Tools for Working with Data](http://www.amazon.com/dp/1491912057)
+* [Introducing Data Science: Big Data, Machine Learning, and more, using Python tools](http://www.amazon.com/dp/1633430030)
+* [Real-World Machine Learning](http://www.amazon.com/dp/1617291927)
+
+### Com foco em R
+* [R for Data Science: Import, Tidy, Transform, Visualize, and Model Data](http://www.amazon.com/dp/1491910399)
+* [Machine Learning with R](http://www.amazon.com/dp/1784393908)
+* [Machine Learning With R Cookbook – 110 Recipes for Building Powerful Predictive Models with R](http://www.amazon.com/dp/1783982047)
+* [R Machine Learning By Example](http://www.amazon.com/dp/1784390844)
+* [R Machine Learning Essentials](http://www.amazon.com/dp/178398774X)
+* [Mastering Machine Learning with R](http://www.amazon.com/dp/178398452X)
+* [An Introduction to Statistical Learning: with Applications in R](http://www.amazon.com/dp/1461471370)
+* [Practical Data Science with R](http://www.amazon.com/dp/1617291560)
+* [Applied Predictive Modeling](http://www.amazon.com/dp/1461468485)
+* [R and Data Mining: Examples and Case Studies](http://www.amazon.com/dp/0123969638)
+
+Aqui vale fazer uma consideração: Temos a seguir uma listagem separada sobre Deep Learning. Isso se deve por essa ser uma técnica de Machine Learning que diz respeito a oportunidade de aprendizagem profunda com o uso de redes neurais.
+
+Em momento oportuno devo vou compartilhar aqui mais informações sobre Deep Learning, como meus estudos, códigos e referências. Por hora, segue a bibliografia melhor avaliada sobre o tema.
+
+### Deep Learning
+* [Deep Learning](http://www.amazon.com/dp/0262035618)
+* [Deep Learning: A Practitioner’s Approach](http://www.amazon.com/dp/1491914254)
+* [Fundamentals of Deep Learning: Designing Next-Generation Machine Intelligence Algorithms](http://www.amazon.com/dp/1491925612)
+* [Learning TensorFlow: A guide to building deep learning systems](http://www.amazon.com/dp/1491978511)
+* [Machine Learning with TensorFlow](http://www.amazon.com/dp/1617293873)
+* [TensorFlow Machine Learning Cookbook](http://www.amazon.com/dp/1786462168)
+* [Getting Started with TensorFlow](http://www.amazon.com/dp/1786468573)
+* [TensorFlow for Machine Intelligence: A Hands-On Introduction to Learning Algorithms](http://www.amazon.com/dp/1939902452)
