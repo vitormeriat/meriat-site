@@ -11,11 +11,9 @@ description: Literatura clássica e compêndio de Machine Learning, para quem qu
 image-full: "https://meriatsite.blob.core.windows.net/images/2017/02/07/capa.jpg"
 ---
 
-# Machine Learning Books Selection
-
-
 A listagem a seguir pode ser categorizada como, **Popular Science Machine Learning Books** ou **Beginner Machine Learning Books**. É possível ainda encontrar vários livros desta listagem em categorias como **Introductory Machine Learning Books**.
 
+## Machine Learning Books Selection
 
 * [The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World](https://www.amazon.com/dp/0465065708)
 * [Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die](https://www.amazon.com/dp/1119145678)
