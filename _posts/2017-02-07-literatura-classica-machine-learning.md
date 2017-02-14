@@ -13,7 +13,8 @@ image-full: "https://meriatsite.blob.core.windows.net/images/2017/02/07/capa.jpg
 
 A listagem a seguir pode ser categorizada como, **Popular Science Machine Learning Books** ou **Beginner Machine Learning Books**. É possível ainda encontrar vários livros desta listagem em categorias como **Introductory Machine Learning Books**.
 
-![machine learning](https://meriatsite.blob.core.windows.net/images/2017/02/07/capa.jpg "Machine Learning")
+<img style="width: 100%;" src="https://meriatsite.blob.core.windows.net/images/2017/02/07/capa.jpg" class="absolute-bg">
+
 
 ### Machine Learning Books Selection
 
@@ -44,7 +45,9 @@ A listagem a seguir pode ser categorizada como, **Popular Science Machine Learni
 * [Introduction to Time Series and Forecasting](http://www.amazon.com/dp/3319298526)
 * [Forecasting: principles and practice](http://www.amazon.com/dp/0987507109)
 
+
 ### Com foco em Python
+
 * [Python Machine Learning](http://www.amazon.com/dp/1783555130)
 * [Data Science from Scratch: First Principles with Python](http://www.amazon.com/dp/149190142X)
 * [Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques for Building Intelligent Systems](http://www.amazon.com/dp/1491962291)
@@ -55,7 +58,9 @@ A listagem a seguir pode ser categorizada como, **Popular Science Machine Learni
 * [Introducing Data Science: Big Data, Machine Learning, and more, using Python tools](http://www.amazon.com/dp/1633430030)
 * [Real-World Machine Learning](http://www.amazon.com/dp/1617291927)
 
+
 ### Com foco em R
+
 * [R for Data Science: Import, Tidy, Transform, Visualize, and Model Data](http://www.amazon.com/dp/1491910399)
 * [Machine Learning with R](http://www.amazon.com/dp/1784393908)
 * [Machine Learning With R Cookbook – 110 Recipes for Building Powerful Predictive Models with R](http://www.amazon.com/dp/1783982047)
@@ -70,6 +75,7 @@ A listagem a seguir pode ser categorizada como, **Popular Science Machine Learni
 Aqui vale fazer uma consideração: Temos a seguir uma listagem separada sobre Deep Learning. Isso se deve por essa ser uma técnica de Machine Learning que diz respeito a oportunidade de aprendizagem profunda com o uso de redes neurais.
 
 Em momento oportuno devo vou compartilhar aqui mais informações sobre Deep Learning, como meus estudos, códigos e referências. Por hora, segue a bibliografia melhor avaliada sobre o tema.
+
 
 ### Deep Learning
 * [Deep Learning](http://www.amazon.com/dp/0262035618)
