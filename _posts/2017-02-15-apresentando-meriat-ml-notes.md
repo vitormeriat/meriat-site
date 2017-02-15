@@ -10,6 +10,13 @@ categories:
   - Jupyter Notebook
   - Python
 description: Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.
+image-full: "https://meriatsite.blob.core.windows.net/images/2017/02/15/capa.jpg"
 ---
+
+<img style="width: 100%;" src="https://meriatsite.blob.core.windows.net/images/2017/02/15/capa.jpg" class="absolute-bg">
+
+No ultimo ano tive a oportunidade de trabalhar em projetos envolvendo IoT e Machine Learning. No processo entre aplicacao, estudos e desenvolvimento, acabei separando algum material e exemplos que me ajudaram a inicar nesta carreira, bem como no processo de aprendizagem.
+
+O Meriat Machine Learning Notes nada mais e que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.
 
 <span style="font-size: 3em;">;)</span>
