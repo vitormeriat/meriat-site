@@ -113,13 +113,13 @@ hr {
   height: 0;
 }
 
-pre {
+/*pre {
   overflow: auto;
-}
+}*/
 
 code,
 kbd,
-pre,
+/*pre,*/
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
@@ -246,7 +246,7 @@ th {
     content: "";
   }
 
-  pre,
+  /*pre,*/
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
@@ -1608,7 +1608,7 @@ address {
 
 code,
 kbd,
-pre,
+/*pre,*/
 samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -1636,7 +1636,7 @@ kbd kbd {
   box-shadow: none;
 }
 
-pre {
+/*pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
@@ -1661,7 +1661,7 @@ pre code {
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
-}
+}*/
 
 .container {
   margin-right: auto;

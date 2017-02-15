@@ -28,7 +28,7 @@ O tema foi em relação a computação congnitiva, inteligência artificial e Io
 <p align="justify">Abaixo seguem os slides da apresentação e logo após algumas referências.</p>
 
 <p>
-  <iframe class="iframe-slideshare" marginheight="0" frameborder="0" marginwidth="0" src="https://www.slideshare.net/slideshow/embed_code/key/6aR1nnfD1bZfI1" scrolling="no"> </iframe>
+  <iframe class="iframe-slideshare" style="height: 685px; width: 100%" marginheight="0" frameborder="0" marginwidth="0" src="https://www.slideshare.net/slideshow/embed_code/key/6aR1nnfD1bZfI1" scrolling="no"> </iframe>
 </p>
 
 <p>É isso ai galera… esse foi o primeiro IoT Weekend do ano… a próxima edição é no Recife!!!</p>

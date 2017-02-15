@@ -5,13 +5,19 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Feb 2017 09:51:57 -0200</pubDate>
-    <lastBuildDate>Wed, 15 Feb 2017 09:51:57 -0200</lastBuildDate>
+    <pubDate>Wed, 15 Feb 2017 17:00:50 -0200</pubDate>
+    <lastBuildDate>Wed, 15 Feb 2017 17:00:50 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>Apresentando o Meriat Machine Learning Notes</title>
-        <description>&lt;p&gt;&lt;span style=&quot;font-size: 3em;&quot;&gt;;)&lt;/span&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2017/02/15/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;No ultimo ano tive a oportunidade de trabalhar em projetos envolvendo IoT e Machine Learning. No processo entre aplicacao, estudos e desenvolvimento, acabei separando algum material e exemplos que me ajudaram a inicar nesta carreira, bem como no processo de aprendizagem.&lt;/p&gt;
+
+&lt;p&gt;O Meriat Machine Learning Notes nada mais e que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-size: 3em;&quot;&gt;;)&lt;/span&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
@@ -131,23 +137,73 @@
     
       <item>
         <title>Workshop de Machine Learning na CPBR10</title>
-        <description>&lt;p&gt;Este ano tive a honra de mais uma vez palestrar na Campus Party. Como de costume minha participação foi em conjunto com a comunidade CrazyTechGuys.&lt;/p&gt;
+        <description>&lt;div style=&quot;width: 100%; -ms-align-items: center; -webkit-align-items: center; align-items: center;&quot;&gt;
+    &lt;img style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2017/02/05/campus-ia.jpg&quot; class=&quot;absolute-bg&quot; /&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Nesta oportunidade dividi as ações com o mestre Jorge Maia, no workshop de IoT e Machine Learning. Nesta atividade trabalhamos além dos conceitos básicos de IoT e Machine Learning, novidade de mercado, protocolos, linguagens e plataformas.&lt;/p&gt;
+&lt;p&gt;Este ano tive a honra de mais uma vez palestrar na Campus Party. Como de costume minha participação foi em conjunto com a comunidade CrazyTechGuys.&lt;/p&gt;
+
+&lt;p&gt;Nesta oportunidade dividi as ações com o mestre Jorge Maia, no workshop de &lt;a href=&quot;http://campuse.ro/events/campus-party-brasil-2017/workshop/sensores-internet-das-coisas-e-inteligencia-artificial-de-perto-e-sem-mitos/&quot;&gt;IoT e Machine Learning&lt;/a&gt;. Nesta atividade trabalhamos além dos conceitos básicos de IoT e Machine Learning, novidade de mercado, protocolos, linguagens e plataformas.&lt;/p&gt;
 
 &lt;p&gt;Na minha deixa pude demonstrar como iniciar um projeto de Machine Learning do zero utilizando como ferramentas o Jupyter Notebook, Python e o famoso dataset Pima Indians Diabetes Database que é normalmente utilizando para tarefas de classificação e, é largamente utilizado para prever o início de diabetes com base em diagnósticos já realizados.&lt;/p&gt;
 
 &lt;p&gt;É possível encontrar diversos exemplos de utilização do dataset, bem como uma ampla gama de exemplos de diferentes explorações e tratamentos dos dados.&lt;/p&gt;
 
-&lt;h2 id=&quot;dataset&quot;&gt;Dataset&lt;/h2&gt;
+&lt;p&gt;Neste workshop demonstrei como utilizar o Jupyter Notebook bem como os principais módulos para se trabalhar com Data Science e Python. Vimos os principais conceitos envolvidos nesta atividade e como aplicar em exercício prático.&lt;/p&gt;
+
+&lt;h1 id=&quot;resumindo&quot;&gt;Resumindo&lt;/h1&gt;
+
+&lt;p&gt;Quando falamos de ML, temos duas pricipais tecnicas para trabalhar:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Aprendizagem supervisionada&lt;/li&gt;
+  &lt;li&gt;Aprendizagem Nao supervisionada&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Quando falamos de aprendizagem supervisionada e não supervisionada, tendemos a pensar que a diferença está na predição com ou sem a supervisão humana, mas na realidade tudo está ligado aos dados.&lt;/p&gt;
+
+&lt;p&gt;Quando se trata de Aprendizagem supervisionada, cada linha possui diversos atributos, que serão os inputs e os possíveis outputs, ou seja, o valor que esperamos para o conjunto de atributos da linha.&lt;/p&gt;
+
+&lt;p&gt;Se usamos como exemplo determinar o valor de casas em uma determinada região, podemos pegar como atributos o tamanho, quantidade de quartos, área da casa, localidade e claro, o preço.&lt;/p&gt;
+
+&lt;p&gt;Logo após passamos esses dados em um algorítimo de ML, com todos os dados de entrada e os possíveis dados de saída, que neste caso será o valor da casa. O algorítimo determina a relação entre os atributos da casa e seu valor final.&lt;/p&gt;
+
+&lt;p&gt;Depois o resultante do algorítimo será um Modelo, que nada mais é que uma função matemática. Este Modelo será o cara que vai receber os novos dados e ser capaz de prever o preço final.&lt;/p&gt;
+
+&lt;p&gt;O modelo é capaz de prever o preço, pq ele aplica a função matemática que ele aprendeu durante o processo no novo conjunto de dados. A medida que temos novos dados, podemos melhorar nosso modelo e realizar o tão famoso aprendizado de máquina…&lt;/p&gt;
+
+&lt;p&gt;No processo de aprendizagem não supervisionada, o algorítimo busca em seu conjunto de dados, clusters, ou agrupamentos de dados com características semelhantes.&lt;/p&gt;
+
+&lt;p&gt;Sendo assim, o algorítimo identifica a partir dos dados de entrada grupos de dados que compartilhem as mesmas características. Neste caso, não precisamos apresentar os possíveis dados de saída.&lt;/p&gt;
+
+&lt;p&gt;Imagine um conjunto de gravações com pessoas falando. Podemos gerar um dataset com os atributos das vozes das pessoas como entonação, inflexção, altura e etc. Passamos estes dados em um algorítimo de aprendizagem não supervisionado.&lt;/p&gt;
+
+&lt;p&gt;O algorítimo analisa os dados e cria um modelo que classifica clusters de dados que compartilham os mesmos padrões de voz. Com isso o algorítimo será capaz de isolar uma única voz a partir dos dados aprendidos.&lt;/p&gt;
+
+&lt;p&gt;Podemos rezumir de forma simples da segunte maneira:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aprendizagem supervisionada&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Previsão de valores&lt;/li&gt;
+  &lt;li&gt;Nossos dados de treino devem ter valores de entrada e saída, para que o mesmo possa aprender a partir dos novos dados de entrada, a gerar uma saída correta.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Aprendizagem não supervisionada&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Idendificação de grupos de dados&lt;/li&gt;
+  &lt;li&gt;Nossos dados precisam apenas possuir entradas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;source&quot;&gt;Source&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vitormeriat/workshop-cpbr10&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dataset&quot;&gt;Dataset&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabetes&quot;&gt;UCI&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/uciml/pima-indians-diabetes-database&quot;&gt;Kaggle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;ref&quot;&gt;Ref&lt;/h2&gt;
-
-&lt;p&gt;&lt;span style=&quot;font-size: 2em;&quot;&gt;;)&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</link>
@@ -198,36 +254,23 @@
 &lt;p&gt;Creio que o primeiro passo é entregar algumas informações sobre o serviço. Até este momento os Notebooks estão rodando sobre environment Anaconda para o Python e Microsoft R Open para R. Sendo assim temos suporte aos pacotes já conhecidos no Anaconda. Algo muito importante de ressaltar é que temos a possibilidade de instalar pacotes de maneira normal (pip install), ou usando Conda (conda install). O mesmo vale para R.&lt;/p&gt;
 
 &lt;h2 id=&quot;environments&quot;&gt;Environments&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;div align=&quot;justify&quot;&gt;Anaconda 4.1.0 para Python 2.7.11&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;div align=&quot;justify&quot;&gt;Anaconda 4.1 para Python 3.5.1&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;div align=&quot;justify&quot;&gt;MRO 3.3.0 para R&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;h2&gt;Restrictions&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;div align=&quot;justify&quot;&gt;É possível acessar o github, PyPI, CRAN, OneDrive, DropBox,&amp;nbsp; Google Drive e é claro, o Azure;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;div align=&quot;justify&quot;&gt;A memória é limitado a 4 GB;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;div align=&quot;justify&quot;&gt;Seus dados pode ter removido após 60 dias de inatividade;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;div align=&quot;justify&quot;&gt;Uso deve ser limitado a aprendizagem, investigação, computação em geral e etc. O que é meio lógico, já que o serviço (por hora gratuito), tem algumas limitações de processamento e privacidade.&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h2 id=&quot;start&quot;&gt;Start&amp;gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Anaconda 4.1.0 para Python 2.7.11&lt;/li&gt;
+  &lt;li&gt;Anaconda 4.1 para Python 3.5.1&lt;/li&gt;
+  &lt;li&gt;MRO 3.3.0 para R&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;restrictions&quot;&gt;Restrictions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;É possível acessar o github, PyPI, CRAN, OneDrive, DropBox, Google Drive e é claro, o Azure;&lt;/li&gt;
+  &lt;li&gt;A memória é limitado a 4 GB;&lt;/li&gt;
+  &lt;li&gt;Seus dados pode ter removido após 60 dias de inatividade;&lt;/li&gt;
+  &lt;li&gt;Uso deve ser limitado a aprendizagem, investigação, computação em geral e etc. O que é meio lógico, já que o serviço (por hora gratuito), tem algumas limitações de processamento e privacidade.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;start&quot;&gt;Start&lt;/h2&gt;
 &lt;p&gt;Para utilizar o serviço é algo tão simples quanto acessar o serviço e se autenticar no serviço.&lt;/p&gt;
 
 &lt;p style=&quot;background-color: #35424a&quot;&gt;&lt;img title=&quot;azure-notebook-1&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-1&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-1.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
@@ -458,7 +501,7 @@ O tema foi em relação a computação congnitiva, inteligência artificial e Io
 &lt;p align=&quot;justify&quot;&gt;Abaixo seguem os slides da apresentação e logo após algumas referências.&lt;/p&gt;
 
 &lt;p&gt;
-  &lt;iframe class=&quot;iframe-slideshare&quot; marginheight=&quot;0&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/6aR1nnfD1bZfI1&quot; scrolling=&quot;no&quot;&gt; &lt;/iframe&gt;
+  &lt;iframe class=&quot;iframe-slideshare&quot; style=&quot;height: 685px; width: 100%&quot; marginheight=&quot;0&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/6aR1nnfD1bZfI1&quot; scrolling=&quot;no&quot;&gt; &lt;/iframe&gt;
 &lt;/p&gt;
 
 &lt;p&gt;É isso ai galera… esse foi o primeiro IoT Weekend do ano… a próxima edição é no Recife!!!&lt;/p&gt;

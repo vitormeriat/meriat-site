@@ -312,21 +312,12 @@ ul ul, ul ol, ol ul, ol ol {
   padding-left: 25px;
 }
 
-pre {
+/*pre {
   white-space: pre-wrap;
-  /* CSS3 browsers  */
   white-space: -moz-pre-wrap !important;
-  /* 1999+ Mozilla  */
   white-space: -pre-wrap;
-  /* Opera 4 thru 6 */
   white-space: -o-pre-wrap;
-  /* Opera 7 and up */
   word-wrap: break-word;
-  /* IE 5.5+ and up */
-  /* overflow-x: auto; */
-  /* Firefox 2 only */
-  /* width: 99%; */
-  /* only if needed */
 }
 
 pre {
@@ -339,7 +330,7 @@ pre {
   font: lighter 1.2rem/2rem Monaco,'MonacoRegular',monospace;
   background: url(../images/pre.png) repeat 0 -0.9rem;
   background-size: 1px 4rem;
-}
+}*/
 
 #fh5co-header {
   margin-top: 2em;

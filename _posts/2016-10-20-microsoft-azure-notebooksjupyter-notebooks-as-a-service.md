@@ -21,36 +21,20 @@ Por hora vamos analisar este serviço, que no momento em que escrevo este texto,
 Creio que o primeiro passo é entregar algumas informações sobre o serviço. Até este momento os Notebooks estão rodando sobre environment Anaconda para o Python e Microsoft R Open para R. Sendo assim temos suporte aos pacotes já conhecidos no Anaconda. Algo muito importante de ressaltar é que temos a possibilidade de instalar pacotes de maneira normal (pip install), ou usando Conda (conda install). O mesmo vale para R.
 
 ## Environments
-<ul>
-<li>
-<div align="justify">Anaconda 4.1.0 para Python 2.7.11</div>
-</li>
-<li>
-<div align="justify">Anaconda 4.1 para Python 3.5.1</div>
-</li>
-<li>
-<div align="justify">MRO 3.3.0 para R</div>
-</li>
-</ul>
-<p>&nbsp;</p>
-<h2>Restrictions</h2>
-<ul>
-<li>
-<div align="justify">É possível acessar o github, PyPI, CRAN, OneDrive, DropBox,&nbsp; Google Drive e é claro, o Azure;</div>
-</li>
-<li>
-<div align="justify">A memória é limitado a 4 GB;</div>
-</li>
-<li>
-<div align="justify">Seus dados pode ter removido após 60 dias de inatividade;</div>
-</li>
-<li>
-<div align="justify">Uso deve ser limitado a aprendizagem, investigação, computação em geral e etc. O que é meio lógico, já que o serviço (por hora gratuito), tem algumas limitações de processamento e privacidade.</div>
-</li>
-</ul>
-<p>&nbsp;</p>
 
-## Start>
+* Anaconda 4.1.0 para Python 2.7.11
+* Anaconda 4.1 para Python 3.5.1
+* MRO 3.3.0 para R
+
+## Restrictions
+
+* É possível acessar o github, PyPI, CRAN, OneDrive, DropBox, Google Drive e é claro, o Azure;
+* A memória é limitado a 4 GB;
+* Seus dados pode ter removido após 60 dias de inatividade;
+* Uso deve ser limitado a aprendizagem, investigação, computação em geral e etc. O que é meio lógico, já que o serviço (por hora gratuito), tem algumas limitações de processamento e privacidade.
+
+
+## Start
 Para utilizar o serviço é algo tão simples quanto acessar o serviço e se autenticar no serviço.
 
 <p style="background-color: #35424a"><img title="azure-notebook-1" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-1" src="https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-1.jpg" width="100%" /></p>
