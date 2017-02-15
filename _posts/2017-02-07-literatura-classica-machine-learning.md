@@ -7,7 +7,8 @@ categories:
   - Machine Learning
   - Data Science
   - Deep Learning
-description: Literatura clássica e compêndio de Machine Learning, para quem quer aprender da maneira certa.
+description: Literatura clássica e compêndio de Machine Learning, para quem quer aprender da maneira certa. Nest post vou listar o Popular Science Machine Learning Books, e como adendo uma listagem de Deep Learning.
+
 image-full: "https://meriatsite.blob.core.windows.net/images/2017/02/07/capa.jpg"
 ---
 

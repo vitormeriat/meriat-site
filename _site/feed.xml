@@ -5,9 +5,32 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Feb 2017 23:41:35 -0200</pubDate>
-    <lastBuildDate>Mon, 13 Feb 2017 23:41:35 -0200</lastBuildDate>
+    <pubDate>Wed, 15 Feb 2017 09:51:57 -0200</pubDate>
+    <lastBuildDate>Wed, 15 Feb 2017 09:51:57 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Apresentando o Meriat Machine Learning Notes</title>
+        <description>&lt;p&gt;&lt;span style=&quot;font-size: 3em;&quot;&gt;;)&lt;/span&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        
+        
+        <category>IA</category>
+        
+        <category>Machine Learning</category>
+        
+        <category>Data Science</category>
+        
+        <category>Deep Learning</category>
+        
+        <category>Jupyter Notebook</category>
+        
+        <category>Python</category>
+        
+      </item>
     
       <item>
         <title>Machine Learning e sua literatura clássica</title>
@@ -108,18 +131,27 @@
     
       <item>
         <title>Workshop de Machine Learning na CPBR10</title>
-        <description>&lt;p&gt;Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.&lt;/p&gt;
+        <description>&lt;p&gt;Este ano tive a honra de mais uma vez palestrar na Campus Party. Como de costume minha participação foi em conjunto com a comunidade CrazyTechGuys.&lt;/p&gt;
 
-&lt;h1 id=&quot;de-onde-ele-vem&quot;&gt;De onde ele vem?&lt;/h1&gt;
-&lt;p&gt;Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do “de Finibus Bonorum et Malorum” (Os Extremos do Bem e do Mal), de Cícero, escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, “Lorem Ipsum dolor sit amet…” vem de uma linha na seção 1.10.32.&lt;/p&gt;
+&lt;p&gt;Nesta oportunidade dividi as ações com o mestre Jorge Maia, no workshop de IoT e Machine Learning. Nesta atividade trabalhamos além dos conceitos básicos de IoT e Machine Learning, novidade de mercado, protocolos, linguagens e plataformas.&lt;/p&gt;
 
-&lt;p&gt;&lt;span style=&quot;font-size: 3em;&quot;&gt;;)&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Na minha deixa pude demonstrar como iniciar um projeto de Machine Learning do zero utilizando como ferramentas o Jupyter Notebook, Python e o famoso dataset Pima Indians Diabetes Database que é normalmente utilizando para tarefas de classificação e, é largamente utilizado para prever o início de diabetes com base em diagnósticos já realizados.&lt;/p&gt;
 
-&lt;p&gt;Não sei o motivo, mas esse cara não está subindo… pq?&lt;/p&gt;
+&lt;p&gt;É possível encontrar diversos exemplos de utilização do dataset, bem como uma ampla gama de exemplos de diferentes explorações e tratamentos dos dados.&lt;/p&gt;
+
+&lt;h2 id=&quot;dataset&quot;&gt;Dataset&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabetes&quot;&gt;UCI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/uciml/pima-indians-diabetes-database&quot;&gt;Kaggle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ref&quot;&gt;Ref&lt;/h2&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-size: 2em;&quot;&gt;;)&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/05/machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/05/machine-learning/</guid>
+        <link>http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -134,13 +166,15 @@
     
       <item>
         <title>Inteligência Artificial, história indústria e economia</title>
-        <description>&lt;p&gt;A importância científica, industrial e econômica da &lt;span style=&quot;font-size: 1.4em;&quot;&gt;I&lt;/span&gt;nteligência &lt;span style=&quot;font-size: 1.4em;&quot;&gt;A&lt;/span&gt;rtificial, bem como o seu previsível impacto social têm crescido muito nos últimos anos, estimando-se que cresça muito mais, apoiada quer na banalização da potência de cálculo (necessária à complexidade das suas operações), quer nos progressos reais verificados na investigação fundamental, cujos resultados saem agora dos laboratórios para a indústria. Na sua vertente tecnológica, a IA comporta uma importante faceta de engenharia. Na verdade, pretende em última análise programar computadores (a que poderão estar acoplados sensores e actuadores) de forma que desempenhem com êxito e eficiência tarefas que requerem inteligência.&lt;/p&gt;
+        <description>&lt;p&gt;A importância científica, industrial e econômica da &lt;span style=&quot;font-size: 1.6em;&quot;&gt;I&lt;/span&gt;nteligência &lt;span style=&quot;font-size: 1.6em;&quot;&gt;A&lt;/span&gt;rtificial, bem como o seu previsível impacto social têm crescido muito nos últimos anos, estimando-se que cresça muito mais, apoiada quer na banalização da potência de cálculo (necessária à complexidade das suas operações), quer nos progressos reais verificados na investigação fundamental, cujos resultados saem agora dos laboratórios para a indústria. Na sua vertente tecnológica, a IA comporta uma importante faceta de engenharia. Na verdade, pretende em última análise programar computadores (a que poderão estar acoplados sensores e actuadores) de forma que desempenhem com êxito e eficiência tarefas que requerem inteligência.&lt;/p&gt;
 
 &lt;p&gt;Tal desempenho tem como suporte a combinação racional de métodos gerais e automatizados de abordagem à formulação e resolução lógica de problemas. É pela generalidade, computabilidade, e combinabilidade lógica desses métodos que a IA se distingue como disciplina científica. Em contraste, outras disciplinas científicas usam técnicas inteligentes mas específicas do seu domínio; técnicas gerais mas sem explicitação do raciocínio; técnicas múltiplas mas não articuladas num todo automatizado.&lt;/p&gt;
 
 &lt;p&gt;As técnicas da IA encontram-se em evolução rápida, e algumas vão-se consubstanciando em instrumentos de “software” comercialmente disponíveis, de utilização acessível àqueles com um mínimo de inclinação informática. Outras dessas técnicas, não existindo sob a forma de instrumento acabado acessível ao leigo, necessitam de um especialista para a sua aplicação casuística.&lt;/p&gt;
 
 &lt;p&gt;A utilização da IA começa a generalizar-se com muitos êxitos de aplicação. Ocorrem anualmente inúmeros colóquios internacionais expressamente dedicados a essas aplicações. Em Portugal verifica-se um potencial considerável em IA, já consolidado em grande parte a nível do ensino e da investigação.&lt;/p&gt;
+
+&lt;p&gt;É isso ai pessoal, em breve continuamos esse bate papo ;)&lt;/p&gt;
 </description>
         <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</link>
@@ -447,61 +481,6 @@ O tema foi em relação a computação congnitiva, inteligência artificial e Io
         
         
         <category>Comunidade</category>
-        
-      </item>
-    
-      <item>
-        <title>MQTT nativo no Azure IoT Hub</title>
-        <description>&lt;p align=&quot;justify&quot;&gt;Estou utilizando o Microsoft Azure em projetos de IoT antes mesmo do lançamento do &lt;a href=&quot;https://azure.microsoft.com/pt-br/services/iot-hub/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Azure IoT Hub&lt;/strong&gt;&lt;/a&gt;. Desde então tenho aguardado um notícia que veio enfim, no dia 8 de fevereiro de 2016: O suporte nativo ao protocolo &lt;a href=&quot;http://mqtt.org/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;MQTT&lt;/strong&gt;&lt;/a&gt; sem a necessidade do protocol gateway.&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;Embora essa fosse um solicitação recorrente, há de se parabenizar o esforço do time do &lt;strong&gt;Azure IoT&lt;/strong&gt;. Pouco tempo após o &lt;strong&gt;MQTT&lt;/strong&gt; ter sido aprovado como padrão &lt;strong&gt;ISO/IEC&lt;/strong&gt; (a saber: &lt;a title=&quot;http://www.iso.org/iso/catalogue_detail.htm?csnumber=69466&quot; href=&quot;http://www.iso.org/iso/catalogue_detail.htm?csnumber=69466&quot; target=&quot;_blank&quot;&gt;#ISO20922&lt;/a&gt;), somos agraciados com a notícia do suporte nativo no &lt;strong&gt;Azure IoT Hub&lt;/strong&gt;.&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;Essa é uma notícia que agrega e muito ao serviço. Aqueles que já trabalham na área sabem o quanto é fundamental a questão da comunicação. Um projeto IoT depende desse fator, e para se ter um projeto robusto é necessário se pensar nos principais problemas como restrição de banda, restrição de plataforma etc. É ai que entra o MQTT. Já abordei isso por cima em alguns posts anteriores.&lt;/p&gt;
-
-&lt;p align=&quot;justify&quot;&gt;Devo fazer alguns posts sobre a experiência em utilizar o IoT Hub da Microsoft. Neles devo abordar detalhes do produto e a experiência de migrar um projeto já pronto, enviando dados para um broker na nuvem no modelo IaaS, para o serviço na plataforma Azure.&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;Utilizar o Azure IoT Hub com MQTT é tão simples quanto o esperado. Não há segredos nem customizações, apenas informe o protocolo a ser usado e sua string de conexão. Abaixo segue o exemplo em Node.js:&lt;/p&gt;
-&lt;h2&gt;Criar um device&lt;/h2&gt;
-&lt;pre style=&quot;font-size: 16pt !important&quot;&gt;&lt;code class=&quot;javascript&quot;&gt;
-var clientFromConnectionString =
-    require('azure-iot-device-mqtt').clientFromConnectionString;
-
-var Message = require('azure-iot-device').Message;
-
-var connectionString = '[IoT Hub device connection string]';
-
-var client = clientFromConnectionString(connectionString);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Enviando dados&lt;/h2&gt;
-&lt;pre style=&quot;font-size: 16pt !important&quot;&gt;&lt;code class=&quot;javascript&quot;&gt;
-var msg = new Message('some data from my device');
-client.sendEvent(message, function (err) {
-  if (err) console.log(err.toString());
-});
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Recebendo dados&lt;/h2&gt;
-&lt;pre style=&quot;font-size: 16pt !important&quot;&gt;&lt;code class=&quot;javascript&quot;&gt;
-client.receive(function (err, msg) {
-  if (err) console.error(err);
-  else console.log(msg);
-});
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;h2&gt;Referências&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/blog/azure-iot-hub-ga-capability-overview/?wt.mc_id=WW_CE_IOT_OO_SCL_TW&amp;amp;Ocid=C+E+Social+FY16_Social_TW_MicrosoftIoT_20160209_363303519&quot; target=&quot;_blank&quot;&gt;Azure IoT Hub general availability overview&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Azure/azure-iot-sdks/tree/master/node/device/transport/mqtt&quot; target=&quot;_blank&quot;&gt;Github - Azure IoT Device MQTT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 13 Feb 2016 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2016/02/13/mqtt-nativo-no-azure-iot-hub/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/02/13/mqtt-nativo-no-azure-iot-hub/</guid>
-        
-        
-        <category>Azure IoT Suite</category>
-        
-        <category>IoT</category>
-        
-        <category>Microsoft Azure</category>
-        
-        <category>MQTT</category>
         
       </item>
     
