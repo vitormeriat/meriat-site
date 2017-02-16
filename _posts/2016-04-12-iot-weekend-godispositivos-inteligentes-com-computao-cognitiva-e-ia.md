@@ -44,3 +44,5 @@ O tema foi em relação a computação congnitiva, inteligência artificial e Io
     <li><a href="http://epoca.globo.com/vida/noticia/2015/06/sete-maneiras-de-computacao-cognitiva-mudar-vida-das-pessoas.html" target="_blank">Computação cognitiva: sete maneiras de mudar, de vez, a vida das pessoas</a></li>
   </ul>
 </p>
+
+##### ;)

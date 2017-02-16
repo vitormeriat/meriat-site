@@ -37,7 +37,7 @@ categories:
     </code>
 </pre>
 
-## Recebendo dados 
+## Recebendo dados
 <pre style="font-size: 16pt !important">
     <code class="javascript">
     client.receive(function (err, msg) {
@@ -54,3 +54,4 @@ categories:
 <p><a href="https://azure.microsoft.com/en-us/blog/azure-iot-hub-ga-capability-overview/?wt.mc_id=WW_CE_IOT_OO_SCL_TW&amp;Ocid=C+E+Social+FY16_Social_TW_MicrosoftIoT_20160209_363303519" target="_blank">Azure IoT Hub general availability overview</a></p>
 <p><a href="https://github.com/Azure/azure-iot-sdks/tree/master/node/device/transport/mqtt" target="_blank">Github - Azure IoT Device MQTT</a></p>
 
+##### ;)

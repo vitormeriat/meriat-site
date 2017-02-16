@@ -53,4 +53,4 @@ image-full: "https://meriatsite.blob.core.windows.net/images/2016/10/Cmcc5mYVIAA
   <img alt="IMG_0622" style="width: 100%;" src="https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0622.jpg" />
 </p>
 
-<h3>Valeu galera ;)</h3>
+### Valeu galera ;)

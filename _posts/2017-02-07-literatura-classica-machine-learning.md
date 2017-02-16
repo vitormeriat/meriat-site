@@ -87,3 +87,6 @@ Em momento oportuno devo vou compartilhar aqui mais informações sobre Deep Lea
 * [TensorFlow Machine Learning Cookbook](http://www.amazon.com/dp/1786462168)
 * [Getting Started with TensorFlow](http://www.amazon.com/dp/1786468573)
 * [TensorFlow for Machine Intelligence: A Hands-On Introduction to Learning Algorithms](http://www.amazon.com/dp/1939902452)
+
+
+##### É isso ai... valeu pessoal ;)

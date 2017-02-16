@@ -68,5 +68,3 @@ Podemos rezumir de forma simples da segunte maneira:
 ### Dataset
 * [UCI](https://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabetes)
 * [Kaggle](https://www.kaggle.com/uciml/pima-indians-diabetes-database)
-
-

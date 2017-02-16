@@ -28,4 +28,5 @@ Abaixo segue o link da palestra para quem quiser saber mais detalhes. Corre que 
 * <a title="https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-ipython-notebook-machine-learning/" href="https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-ipython-notebook-machine-learning/">https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-ipython-notebook-machine-learning/</a>
 * <a title="https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-eventhub-streaming/" href="https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-eventhub-streaming/">https://azure.microsoft.com/pt-br/documentation/articles/hdinsight-apache-spark-eventhub-streaming/</a>
 * <a title="https://azure.microsoft.com/en-us/services/machine-learning/" href="https://azure.microsoft.com/en-us/services/machine-learning/">https://azure.microsoft.com/en-us/services/machine-learning/</a>
-s
+
+##### ;)

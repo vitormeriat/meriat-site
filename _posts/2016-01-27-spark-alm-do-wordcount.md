@@ -26,16 +26,16 @@ Fora a API do Spark, existem bibliotecas adicionais que fazem parte do seu ecoss
 <a href="https://meriatsite.blob.core.windows.net/images/2016/01/spark-stack.png"><img title="spark-stack" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-stack" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-stack.png" width="633" height="298" /></a>
 <div style="height: 50px;"></div>
 
-#### <a href="https://spark.apache.org/sql/" target="_blank">Spark SQL</a> 
+#### <a href="https://spark.apache.org/sql/" target="_blank">Spark SQL</a>
 Fornece a capacidade de expor os conjuntos de dados Spark através de uma API JDBC. Isso permite executar consultas no estilo SQL sobre esses dados usando ferramentas tradicionais de BI e de visualização. Além disso, também permite que os usuários usem ETL para extrair seus dados em diferentes formatos (como JSON, Parquet, ou um banco de dados), transformá-los e expô-los para consultas ad-hoc;
 
-#### <a href="https://spark.apache.org/streaming/" target="_blank">Spark Streaming</a> 
+#### <a href="https://spark.apache.org/streaming/" target="_blank">Spark Streaming</a>
 Pode ser usado para processar dados de streaming em tempo real baseado na computação de microbatch. Para isso é utilizado o DStream que é basicamente uma série de RDD para processar os dados em tempo real;
 
-#### <a href="https://spark.apache.org/mllib/" target="_blank">MLlib</a> 
+#### <a href="https://spark.apache.org/mllib/" target="_blank">MLlib</a>
 É a biblioteca de aprendizado de máquina do Spark, que consiste em algoritmos de aprendizagem, incluindo a classificação, regressão, clustering, filtragem colaborativa e redução de dimensionalidade;
 
-#### <a href="https://spark.apache.org/graphx/" target="_blank">GraphX</a> 
+#### <a href="https://spark.apache.org/graphx/" target="_blank">GraphX</a>
 É uma nova API do Spark para grafos e computação paralela. Em alto nível, o GraphX ​​estende o Spark RDD para grafos. Para apoiar a computação de grafos, o GraphX ​​expõe um conjunto de operadores fundamentais (por exemplo, subgrafos e vértices adjacentes), bem como uma variante optimizada do Pregel. Além disso, o GraphX ​​inclui uma crescente coleção de algoritmos para simplificar tarefas de análise de grafos.
 <div style="height: 50px;"></div>
 
@@ -82,11 +82,11 @@ Agora notem nas mensagens da inicialização do Spark a seguinte mensagem: **Spa
 
 O primeiro passo será carregar o arquivo **Crimes_-_2015.txt**. É um arquivo público com a base dos crimes cometidos em Chigago no ano de 2015. O link vai estar nas resferências. É um arquivo bem pequeno com apenas 260 mil registros. Ótimo para um teste.
 
-O objeto de contexto possui várias métodos para que um arquivo possa ser carregado e utilizado pelo Spark, no nosso caso utilizaremos o método **textFile** que recebe como parâmetro obrigatório o caminho do arquivo ou arquivos, podemos utilizar wildcards, caminho de um diretório, caminho para arquivos locais, arquivos em um HDFS, S3. 
+O objeto de contexto possui várias métodos para que um arquivo possa ser carregado e utilizado pelo Spark, no nosso caso utilizaremos o método **textFile** que recebe como parâmetro obrigatório o caminho do arquivo ou arquivos, podemos utilizar wildcards, caminho de um diretório, caminho para arquivos locais, arquivos em um HDFS, S3.
 
-Além de **Text Files** o Spark permite que os **RDDs** possam ser criados a partir de <a href="http://hadoop.apache.org/common/docs/current/api/org/apache/hadoop/mapred/SequenceFileInputFormat.html">Sequence Files</a> e qualquer outro <a href="http://hadoop.apache.org/docs/stable/api/org/apache/hadoop/mapred/InputFormat.html">InputFormat</a> do Hadoop. 
+Além de **Text Files** o Spark permite que os **RDDs** possam ser criados a partir de <a href="http://hadoop.apache.org/common/docs/current/api/org/apache/hadoop/mapred/SequenceFileInputFormat.html">Sequence Files</a> e qualquer outro <a href="http://hadoop.apache.org/docs/stable/api/org/apache/hadoop/mapred/InputFormat.html">InputFormat</a> do Hadoop.
 
-Mas o que é um RDD? A maioria dos processamentos realizados em sistemas, sejam eles comerciais ou de pesquisas avançadas fazem uso de coleções de objetos, sejam esses simples ou complexos, se formos pensar em algo muito utilizado em Big Data que é a estatística, vamos perceber que no fim serão realizadas as quatro operações básicas da matemática combinadas de formas diferentes para chegar a um resultado, desse modo podemos definir os **RDDs** de forma simples como sendo coleções de objetos que nos permitem realizar uma série de operações (não apenas matemáticas) em seu conteúdo. 
+Mas o que é um RDD? A maioria dos processamentos realizados em sistemas, sejam eles comerciais ou de pesquisas avançadas fazem uso de coleções de objetos, sejam esses simples ou complexos, se formos pensar em algo muito utilizado em Big Data que é a estatística, vamos perceber que no fim serão realizadas as quatro operações básicas da matemática combinadas de formas diferentes para chegar a um resultado, desse modo podemos definir os **RDDs** de forma simples como sendo coleções de objetos que nos permitem realizar uma série de operações (não apenas matemáticas) em seu conteúdo.
 
 Até aí nada de novo, qualquer linguagem de programação possui de uma forma ou de outra o conceito de coleções, mas agora pense em coleções com Terabytes de conteúdo, como podemos distribuir o processamento de forma confiável, com tolerância a falhas e em paralelo? Pois bem, nesse ponto entra o **RDD** que é uma coleção com todas essas características te liberando para pensar nas suas implementações ao invés desses detalhes tão importantes e difíceis de implementar.
 
@@ -164,3 +164,5 @@ Ao invés de utilizar o **collect** poderíamos utilizar o **saveAsTextFile** e 
 
 ## Citação
 Neste post realizei citações ao post do master Isaías que pode ser lido <a href="https://isaiasbarroso.wordpress.com/2014/08/22/wordcount-em-spark/" target="_blank">clicando aqui!</a>
+
+##### Valeu galera ;)

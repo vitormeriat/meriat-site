@@ -21,3 +21,5 @@ image-full: "https://meriatsite.blob.core.windows.net/images/2016/05/devopssummi
 <li><a href="https://channel9.msdn.com/Events/Ignite/2015/BRK3479">Azure IaaS for Azure Stack</a>  </li>
 <li><a href="https://azure.microsoft.com/pt-br/overview/azure-stack/">Microsoft Azure Stack</a><b></b><i></i><u></u><sub></sub><sup></sup><strike></strike></li>
 </ul>
+
+##### ;)

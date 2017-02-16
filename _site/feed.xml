@@ -3,10 +3,10 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Feb 2017 17:00:50 -0200</pubDate>
-    <lastBuildDate>Wed, 15 Feb 2017 17:00:50 -0200</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 16 Feb 2017 10:54:09 -0200</pubDate>
+    <lastBuildDate>Thu, 16 Feb 2017 10:54:09 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -16,12 +16,10 @@
 &lt;p&gt;No ultimo ano tive a oportunidade de trabalhar em projetos envolvendo IoT e Machine Learning. No processo entre aplicacao, estudos e desenvolvimento, acabei separando algum material e exemplos que me ajudaram a inicar nesta carreira, bem como no processo de aprendizagem.&lt;/p&gt;
 
 &lt;p&gt;O Meriat Machine Learning Notes nada mais e que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.&lt;/p&gt;
-
-&lt;p&gt;&lt;span style=&quot;font-size: 3em;&quot;&gt;;)&lt;/span&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
@@ -119,10 +117,12 @@
   &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1786468573&quot;&gt;Getting Started with TensorFlow&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1939902452&quot;&gt;TensorFlow for Machine Intelligence: A Hands-On Introduction to Learning Algorithms&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h5 id=&quot;É-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h5&gt;
 </description>
         <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
+        <link>/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">/2017/02/07/literatura-classica-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -203,11 +203,10 @@
   &lt;li&gt;&lt;a href=&quot;https://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabetes&quot;&gt;UCI&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/uciml/pima-indians-diabetes-database&quot;&gt;Kaggle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
         <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</guid>
+        <link>/2017/02/05/cpbr10-workshop-machine-learning/</link>
+        <guid isPermaLink="true">/2017/02/05/cpbr10-workshop-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -230,11 +229,11 @@
 
 &lt;p&gt;A utilização da IA começa a generalizar-se com muitos êxitos de aplicação. Ocorrem anualmente inúmeros colóquios internacionais expressamente dedicados a essas aplicações. Em Portugal verifica-se um potencial considerável em IA, já consolidado em grande parte a nível do ensino e da investigação.&lt;/p&gt;
 
-&lt;p&gt;É isso ai pessoal, em breve continuamos esse bate papo ;)&lt;/p&gt;
+&lt;h5 id=&quot;É-isso-ai-pessoal-em-breve-continuamos-esse-bate-papo-&quot;&gt;É isso ai pessoal, em breve continuamos esse bate papo ;)&lt;/h5&gt;
 </description>
         <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</guid>
+        <link>/2017/01/19/inteligencia-artificial-historia-industria/</link>
+        <guid isPermaLink="true">/2017/01/19/inteligencia-artificial-historia-industria/</guid>
         
         
         <category>IA</category>
@@ -300,11 +299,11 @@
 &lt;p&gt;No próximo post vou mostrar como instalar pacotes de Python, R e como compartilhar sua biblioteca de forma pública.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero…&lt;/p&gt;
+&lt;p&gt;A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero ;)&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Oct 2016 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
+        <link>/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
+        <guid isPermaLink="true">/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
         
         
         <category>Data Science</category>
@@ -317,23 +316,24 @@
     
       <item>
         <title>IoT Weekend Recife 2016 - Como a Inteligência Artificial vai mudar a Internet das Coisas</title>
-        <description>&lt;p align=&quot;justify&quot;&gt;Olá pessoal, hoje, dia 06 de agosto de 2016 tive mais uma vez o privilégio de palestrar no &lt;a href=&quot;http://www.iotweekend.com.br/&quot; target=&quot;_blank&quot;&gt;IoT Weekend&lt;/a&gt; edição Recife. Esta é segunda vez em Recife e quarta edição geral do evento, que é inteiramente dedicado a Internet of Things, abrangendo do ponto de vista dos negócios aos famoso under the hood dos detalhes técnicos.&lt;/p&gt;
+        <description>&lt;p&gt;Olá pessoal, hoje, dia 06 de agosto de 2016 tive mais uma vez o privilégio de palestrar no IoT Weekend edição Recife. Esta é segunda vez em Recife e quarta edição geral do evento, que é inteiramente dedicado a Internet of Things, abrangendo do ponto de vista dos negócios aos famoso under the hood dos detalhes técnicos.&lt;/p&gt;
 
-&lt;p style=&quot;background-color: #3c3c3c&quot; align=&quot;center&quot;&gt;&lt;img title=&quot;capa&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px&quot; border=&quot;0&quot; alt=&quot;capa&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/08/capa.png&quot; width=&quot;1000&quot; height=&quot;562&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;capa&quot; alt=&quot;capa&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/08/capa.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
-&lt;p align=&quot;justify&quot;&gt;Esta edição vez estive falando novamente sobre Inteligência, dessa vez abordando como inteligência artificial está mudando a maneira como fazemos e pensamos na internet das coisas, com uma visão mais abrangente sobre o tema.&lt;/p&gt;
-&lt;p&gt;
+&lt;p&gt;Esta edição vez estive falando novamente sobre Inteligência, dessa vez abordando como inteligência artificial está mudando a maneira como fazemos e pensamos na internet das coisas, com uma visão mais abrangente sobre o tema.&lt;/p&gt;
 
-&lt;p align=&quot;justify&quot;&gt;Em suma nessa sessão tentei mostrar como os players atuais do mercado moldaram suas ferramentas e principalmente como isto pode lhe auxiliar no desenvolvimento de dispositivos cada vez mais inteligentes ou por que não dizer, cognitivos ou que aprendem.&lt;/p&gt;
+&lt;p&gt;Em suma nessa sessão tentei mostrar como os players atuais do mercado moldaram suas ferramentas e principalmente como isto pode lhe auxiliar no desenvolvimento de dispositivos cada vez mais inteligentes ou por que não dizer, cognitivos ou que aprendem.&lt;/p&gt;
 
-&lt;p align=&quot;justify&quot;&gt;Alguns termos como a própria cognição parecem ser algo místico, porém fazendo um resumo rápido da história da computação, as máquinas mais antigas eram capazes de fazer cálculos. Anos depois, surgiram os sistemas programáveis, que são aqueles utilizados até hoje em nossos celulares, por exemplo. Os próximos passos, como por exemplo a computação cognitiva, trazem uma tecnologia capaz de processar informações e de aprender com elas de forma muito semelhante ao cérebro humano, sem que precisem ser programadas para tal.&lt;/p&gt;
+&lt;p&gt;Alguns termos como a própria cognição parecem ser algo místico, porém fazendo um resumo rápido da história da computação, as máquinas mais antigas eram capazes de fazer cálculos. Anos depois, surgiram os sistemas programáveis, que são aqueles utilizados até hoje em nossos celulares, por exemplo. Os próximos passos, como por exemplo a computação cognitiva, trazem uma tecnologia capaz de processar informações e de aprender com elas de forma muito semelhante ao cérebro humano, sem que precisem ser programadas para tal.&lt;/p&gt;
 
-&lt;p align=&quot;justify&quot;&gt;Existem uma série de outros temas a respeito, coisas que pretendo compartilhar em breve aqui no blog.&lt;/p&gt;
-&lt;/p&gt;
+&lt;p&gt;Existem uma série de outros temas a respeito, coisas que pretendo compartilhar em breve aqui no blog.&lt;/p&gt;
+
+&lt;h3 id=&quot;ref&quot;&gt;Ref&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.iotweekend.com.br/&quot; target=&quot;_blank&quot;&gt;IoT Weekend&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 06 Aug 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
+        <link>/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
+        <guid isPermaLink="true">/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
         
         
         <category>Comunidade</category>
@@ -389,11 +389,11 @@
   &lt;img alt=&quot;IMG_0622&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0622.jpg&quot; /&gt;
 &lt;/p&gt;
 
-&lt;h3&gt;Valeu galera ;)&lt;/h3&gt;
+&lt;h3 id=&quot;valeu-galera-&quot;&gt;Valeu galera ;)&lt;/h3&gt;
 </description>
         <pubDate>Thu, 28 Jul 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
+        <link>/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
+        <guid isPermaLink="true">/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
         
         
         <category>Comunidade</category>
@@ -415,11 +415,13 @@
 &lt;li&gt;&lt;a href=&quot;https://channel9.msdn.com/Events/Ignite/2015/BRK3479&quot;&gt;Azure IaaS for Azure Stack&lt;/a&gt;  &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/overview/azure-stack/&quot;&gt;Microsoft Azure Stack&lt;/a&gt;&lt;b&gt;&lt;/b&gt;&lt;i&gt;&lt;/i&gt;&lt;u&gt;&lt;/u&gt;&lt;sub&gt;&lt;/sub&gt;&lt;sup&gt;&lt;/sup&gt;&lt;strike&gt;&lt;/strike&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+##### ;)
 &lt;/p&gt;
 </description>
         <pubDate>Mon, 09 May 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
+        <link>/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
+        <guid isPermaLink="true">/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
         
         
         <category>Comunidade</category>
@@ -461,11 +463,13 @@
 &lt;div align=&quot;justify&quot;&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/services/machine-learning/&quot; target=&quot;_blank&quot;&gt;Aprendizado de Máquina do Azure&lt;/a&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+
+##### ;)
 &lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Apr 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
+        <link>/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
+        <guid isPermaLink="true">/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
         
         
         <category>Azure IoT Suite</category>
@@ -517,10 +521,12 @@ O tema foi em relação a computação congnitiva, inteligência artificial e Io
     &lt;li&gt;&lt;a href=&quot;http://epoca.globo.com/vida/noticia/2015/06/sete-maneiras-de-computacao-cognitiva-mudar-vida-das-pessoas.html&quot; target=&quot;_blank&quot;&gt;Computação cognitiva: sete maneiras de mudar, de vez, a vida das pessoas&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/p&gt;
+
+&lt;h5&gt;;)&lt;/h5&gt;
 </description>
         <pubDate>Tue, 12 Apr 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</guid>
+        <link>/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</link>
+        <guid isPermaLink="true">/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</guid>
         
         
         <category>Comunidade</category>

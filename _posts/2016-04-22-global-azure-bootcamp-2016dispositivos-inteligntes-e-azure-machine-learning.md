@@ -40,3 +40,5 @@ image-full: "https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016
 <div align="justify"><a href="https://azure.microsoft.com/pt-br/documentation/services/machine-learning/" target="_blank">Aprendizado de Máquina do Azure</a></div>
 </li>
 </ul>
+
+##### ;)
