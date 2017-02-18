@@ -10,7 +10,7 @@ categories:
 image-full: "https://meriatsite.blob.core.windows.net/images/2016/01/cpbr9.jpg"
 ---
 
-Como o prometido, segue o material de utilizado no <a href="http://campuse.ro/events/campus-party-brasil-2016/workshop/iot-alem-do-hardware-cpbr9/" target="_blank">workshop de IoT</a> que fizemos no Campus Party SP 2016.
+Como o prometido, segue o material de utilizado no [workshop de IoT](http://campuse.ro/events/campus-party-brasil-2016/workshop/iot-alem-do-hardware-cpbr9/) que fizemos no Campus Party SP 2016.
 
 <img title="cpbr9" alt="cpbr9" src="https://meriatsite.blob.core.windows.net/images/2016/01/cpbr9.jpg" width="100%" />
 
