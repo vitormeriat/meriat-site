@@ -6,9 +6,9 @@ categories:
   - Desing Patterns
   - JavaScript
 ---
-<p align="justify">O <strong>Singleton Pattern</strong> diz que você pode ter apenas uma única instância de uma classe (ou, no caso do <strong>JavaScript</strong>, função construtora). Isso significa que uma vez que a classe for instanciada, você deve sempre retornar esta mesma instância em chamadas subsequentes.
+<p align="justify">O <strong>Singleton Pattern</strong> diz que você pode ter apenas uma única instância de uma classe (ou, no caso do <strong>JavaScript</strong>, função construtora). Isso significa que uma vez que a classe for instanciada, você deve sempre retornar esta mesma instância em chamadas subsequentes.</p>
 <p align="justify">Um exemplo clássico deste pattern é usar um único objeto como namespace de sua aplicação, como podemos ver no exemplo abaixo:</p>
-<pre><code class="javascript" style="font-size: 24pt !important;">
+<pre><code class="javascript" style="font-size: 22pt !important;">
 var MinhaApp = {};
 </code></pre>
 <p align="justify">Pelo fato de termos definido a variável como um objeto, não podemos instanciar novos objetos à partir dele (embora possamos criar novos objetos usando este como base com a função <strong>Object.create</strong>, por exemplo). </p>
@@ -21,7 +21,7 @@ function MinhaApp() {
     return MinhaApp.instance;
 }
 </code></pre>
-<p><!--more-->
+
 <p align="justify">Essa função construtora irá garantir que você sempre receba a mesma instância como resultado. Isso só é possível porque funções construtoras utilizam o retorno como resultado da instanciação. Na prática, você poderia retornar qualquer tipo de objeto, como arrays ou strings. </p>
 <pre><code class="javascript">
 var instance = new MinhaApp();
@@ -58,5 +58,5 @@ var MinhaApp;
 })();
 
 </code></pre>
-<p><p>&nbsp;</p>
-<h2>Bons estudos e até a próxima galera!</h2></p></p></p></p></p>
+
+<h2>Bons estudos e até a próxima galera!</h2>
