@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MQTT, protocolos, integrações e os cuidados com IoT
-date: 2015-06-08 
+date: 2015-06-08
 categories:
   - Cloud Computing
   - Enterprise Integration
@@ -9,7 +9,7 @@ categories:
 ---
 <p align="justify"><strong>MQTT</strong> ou <strong><a href="http://mqtt.org/" target="_blank">Message Queuing Telemetry Transport</a></strong>, é um protocolo de conectividade para <strong>M2M </strong>(Machine-to-Machine)<strong> / IoT</strong> (Internet of Things), projetado para suportar o transporte de mensagens para dispositivos de pequena capacidade, baixo consumo de energia, baixa largura de banda, alta latência e disponibilidade variável.</p>
 <p align="justify">Em resumo é um protocolo de mensagens de peso leve, que traz a capacidade de comunicação assíncrona em redes restritas, a dispositivos de recursos limitados. Ele se tornou um padrão <a href="https://www.oasis-open.org/" target="_blank">OASIS</a> em 07 de novembro de 2014, em sua versão <strong>3.1.1</strong>.</p>
-<p style="text-align: center;" align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/06/capa1.png"><img class="alignnone wp-image-2591 size-full" src="{{ site.baseurl }}/assets/capa1.png" alt="capa" width="900" height="470" /></a></p>
+<p style="text-align: center;" align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2015/06/capa1.png"><img class="alignnone wp-image-2591 size-full" src="{{ site.baseurl }}/assets/capa1.png" alt="capa" width="900" height="470" /></a></p>
 <p align="justify">Recentemente me perguntaram (<a href="http://vitormeriat.com.br/2014/11/21/mensageria-e-os-protocoloschoose-your-poison/" target="_blank">por conta deste post</a>), sobre qual a necessidade de um protocolo como o MQTT. A verdade é que muito se dá ao desconhecimento do público em relação ao mundo da “<strong>Internet das Coisas</strong>”.</p>
 <p align="justify">Este não é um post específico sobre MQTT, ou sua implementação. É sobre o gancho que este protocolo extremamente leve traz para o <strong>“pensar em IoT”</strong>.</p>
 <p><!--more--></p>
@@ -17,7 +17,7 @@ categories:
 <p align="justify">O fato é que no mundo do IoT, os dispositivos que estão implantados nos relógios, tênis e outros diversos acessórios, não são placas com 2GB, USB 3.0 ou HDMI. Os dispositivos que estamos falando são componentes altamente minimalistas.</p>
 <p align="justify">Para se manter em um mercado cada vez mais agressivo, é fundamental construir devices que façam o melhor proveito de seus componentes, a fim de serem mais precisos em suas finalidades e com um custo menor de manufatura.</p>
 <p align="justify">Sendo assim, o que vemos na prática são diversos dispositivos com microprocessadores de 8-BITs e 192KB RAM.</p>
-<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/06/ghi_electronics_fez_cerb40_ii.png"><img style="background-image: none; padding-top: 0; padding-left: 0; margin: 0 8px 0 0; display: inline; padding-right: 0; border-width: 0;" title="GHI_Electronics_FEZ_Cerb40_II" src="{{ site.baseurl }}/assets/ghi_electronics_fez_cerb40_ii_thumb.png" alt="GHI_Electronics_FEZ_Cerb40_II" width="345" height="260" border="0" /></a><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/06/ghi_electronics_g120_siza.jpg"><img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="GHI_Electronics_G120_siza" src="{{ site.baseurl }}/assets/ghi_electronics_g120_siza_thumb.jpg" alt="GHI_Electronics_G120_siza" width="345" height="253" border="0" /></a></p>
+<p><a href="https://meriatsite.blob.core.windows.net/images/2015/06/ghi_electronics_fez_cerb40_ii.png"><img style="background-image: none; padding-top: 0; padding-left: 0; margin: 0 8px 0 0; display: inline; padding-right: 0; border-width: 0;" title="GHI_Electronics_FEZ_Cerb40_II" src="{{ site.baseurl }}/assets/ghi_electronics_fez_cerb40_ii_thumb.png" alt="GHI_Electronics_FEZ_Cerb40_II" width="345" height="260" border="0" /></a><a href="https://meriatsite.blob.core.windows.net/images/2015/06/ghi_electronics_g120_siza.jpg"><img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="GHI_Electronics_G120_siza" src="{{ site.baseurl }}/assets/ghi_electronics_g120_siza_thumb.jpg" alt="GHI_Electronics_G120_siza" width="345" height="253" border="0" /></a></p>
 <p align="justify">Quando olhamos para estas capacidades, fica claro que deve se existir uma preocupação enorme com protocolos, brokers e as aplicações que serão desenvolvidas para um projeto de IoT.</p>
 <p align="justify">Nem todo dispositivo pode se dar ao luxo de 16MB de RAM, quem dirá 2GB. Então nestes termos olhar para o MQTT faz muito sentido. Aliás, estamos falando de um protocolo com apenas 2 bytes de Header. Em determinadas aplicações, até protocolos como o <strong>AMQP</strong> podem ser inviáveis dado o seu tamanho, ainda mais se houver necessidade de <strong>SSL</strong>.</p>
 <p align="justify">MQTT pode ser ideal em determinadas aplicações móveis por causa de seu tamanho, onde temos pacotes de dados minimalistas e uma distribuição eficiente de informações para um ou muitos receptores (assinantes). Sem falar no transporte de mensagens que não se preocupa com o conteúdo a ser entregue.</p>

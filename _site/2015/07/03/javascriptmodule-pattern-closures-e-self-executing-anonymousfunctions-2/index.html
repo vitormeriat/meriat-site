@@ -150,7 +150,7 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/07/capaJSMP.png"><img style="background-image: none; float: left; padding-top: 0px; padding-left: 0px; margin: 20px 30px 0px 0px; display: inline; padding-right: 0px; border-width: 0px;" title="capaJSMP" src="/assets/capaJSMP_thumb.png" alt="capaJSMP" width="550" height="212" align="left" border="0" /></a></p>
+    <p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2015/07/capaJSMP.png"><img style="background-image: none; float: left; padding-top: 0px; padding-left: 0px; margin: 20px 30px 0px 0px; display: inline; padding-right: 0px; border-width: 0px;" title="capaJSMP" src="/assets/capaJSMP_thumb.png" alt="capaJSMP" width="550" height="212" align="left" border="0" /></a></p>
 <p align="justify">Quem trabalha com JavaScript conhece bem a problemática em relação ao escopo e criação de variáveis. Uma das grandes preocupações dos desenvolvedores JavaScript é evitar o uso indiscriminado de variáveis globais, o que pode levar a erros terríveis e de difícil rastreabilidade.</p>
 <p align="justify">Como <strong>“AINDA”</strong> não temos uma sintaxe de módulos do próprio JavaScript, o padrão é a utilização de módulos para garantir um escopo de variáveis fechado, além de simular a privacidade de atributos e funções.</p>
 <p align="justify">Este pattern pode envolver uma combinação de técnicas como closures e funções auto-executáveis. A sintaxe é bastante característica e pode ser encontrada facilmente em diversas bibliotecas, como no caso do <a href="https://dev.windows.com/en-us/develop/winjs" target="_blank">WinJS</a>.</p>
@@ -177,7 +177,7 @@ function init() {
     window.init(); // Escopo Global
 }());
 </code></pre>
-<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/07/fig1.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border-width: 0px;" title="fig1" src="/assets/fig1_thumb.png" alt="fig1" width="700" height="181" border="0" /></a></p>
+<p><a href="https://meriatsite.blob.core.windows.net/images/2015/07/fig1.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border-width: 0px;" title="fig1" src="/assets/fig1_thumb.png" alt="fig1" width="700" height="181" border="0" /></a></p>
 <p align="justify">Notem que aqui eu declarei 2 funções com o mesmo nome: init. Porém cada uma em um escopo. Uma está lá no escopo global window, e a outra é local dentro da clousure. Por existirem em escopos diferentes uma função não interfere na outra e pode coexistir em um mesmo código.</p>
 <p align="justify">Tudo o que for declarado no escopo window é acessível de qualquer lugar, já que o escopo window é o root. O que for declarado dentro da clousure só é acessível de dentro dela, e se não for usado nenhum <strong>padrão de revelação</strong> só é acessível lá.</p>
 <p align="justify">Se olharmos para o resultado do código veremos que primeiro foi executado a função do <strong>Escopo Local</strong> e depois a do <strong>Escopo Global</strong> sem erros.</p>
@@ -196,7 +196,7 @@ function init() {
 // ReferenceError: namespaceUm is not defined
 namespaceUm.init();
 </code></pre>
-<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/07/fig2.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border-width: 0px;" title="fig2" src="/assets/fig2_thumb.png" alt="fig2" width="700" height="186" border="0" /></a></p>
+<p><a href="https://meriatsite.blob.core.windows.net/images/2015/07/fig2.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border-width: 0px;" title="fig2" src="/assets/fig2_thumb.png" alt="fig2" width="700" height="186" border="0" /></a></p>
 <p align="justify">Aqui vemos uma função declarada dentro de uma clousure e comprovamos como a mesma é inacessível fora deste contexto. No primeiro momento é executado a função que exibe o valor correto, e no segundo momento tento executar a função de fora do escopo da clousure o que gera o erro de objetjo undefined.</p>
 <p align="justify">Isso é importante para entendermos como podemos criar <strong>módulos independentes</strong> e simulando a visibilidade privada tão difundida na OOP.</p>
 <p>&nbsp;</p>
@@ -233,7 +233,7 @@ Pontos.imprimir(); // returns 3
 Pontos.contador = 500;
 Pontos.imprimir(); // returns 500
 </code></pre>
-<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/07/fig3.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border-width: 0px;" title="fig3" src="/assets/fig3_thumb.png" alt="fig3" width="700" height="181" border="0" /></a></p>
+<p><a href="https://meriatsite.blob.core.windows.net/images/2015/07/fig3.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border-width: 0px;" title="fig3" src="/assets/fig3_thumb.png" alt="fig3" width="700" height="181" border="0" /></a></p>
 <p align="justify">Temos uma função <strong>Pontos</strong> com um atributo contador responsável por guardar um valor que é importante em nosso regra. O ideal é que este valor só seja alterado pela utilização do método <strong>incrementar</strong>, porém como vemos no exemplo este tipo de implementação torna muito fácil a quebra do <strong>encapsulamento</strong>, dando total acesso a manipulação do atributo <strong>Pontos.contador</strong> de forma direta.</p>
 <p align="justify">Para resolver este problema vamos criar uma variável local para armazenar o <strong>contador</strong> e o expor em uma interface pública que retorna esse valor.  Vamos ao código:</p>
 <pre><code class="javascript">
@@ -258,7 +258,7 @@ Pontos.imprimir(); // returns 2
 Pontos.contador = 500;
 Pontos.imprimir(); // returns 2
 </code></pre>
-<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2015/07/fig4.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border-width: 0px;" title="fig4" src="/assets/fig4_thumb.png" alt="fig4" width="700" height="261" border="0" /></a></p>
+<p><a href="https://meriatsite.blob.core.windows.net/images/2015/07/fig4.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border-width: 0px;" title="fig4" src="/assets/fig4_thumb.png" alt="fig4" width="700" height="261" border="0" /></a></p>
 <p align="justify">Note que ambas as funções referenciam a variável <strong>contador</strong>, que agora não é mais acessível de forma direta, ou de fora do escopo da<strong> função auto executável</strong>. Mesmo que alguém tente alterar o valor da variável <strong>contador</strong> de fora do escopo, o valor continua o mesmo, só sendo alterado pelo método <strong>incrementar</strong>.</p>
 <p align="justify">Dessa forma, podemos encapsular todo o comportamento, sem termos que nos preocupar com modificações feitas sem ser pela função <strong>Pontos.incrementar()</strong>, exatamente como o esperado.</p>
 <p align="justify">Agora vamos para um exemplo do dia a dia. Observe o seguinte código e teste o seu resultado:</p>

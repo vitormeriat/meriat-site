@@ -20,7 +20,7 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p align="justify"><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/02/errosqlazure.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;margin:0 20px 15px 0;" title="ErroSqlAzure" border="0" alt="ErroSqlAzure" align="left" src="{{ site.baseurl }}/assets/errosqlazure_thumb.png" width="240" height="112" /></a>Estava eu trabalhando feliz da vida em um sistema em Azure utilizando o ambiente local por meio do <strong>Compute Emulator</strong> e&#160; um banco de dados hospedado em um <strong>SQL Server 2008 R2</strong> padrão, e tudo corria perfeitamente bem. Com todos os testes passando decidi que era hora de testar com os dados no <strong>SQL Azure</strong> e tive uma surpresinha:</p>
+<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2012/02/errosqlazure.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;margin:0 20px 15px 0;" title="ErroSqlAzure" border="0" alt="ErroSqlAzure" align="left" src="{{ site.baseurl }}/assets/errosqlazure_thumb.png" width="240" height="112" /></a>Estava eu trabalhando feliz da vida em um sistema em Azure utilizando o ambiente local por meio do <strong>Compute Emulator</strong> e&#160; um banco de dados hospedado em um <strong>SQL Server 2008 R2</strong> padrão, e tudo corria perfeitamente bem. Com todos os testes passando decidi que era hora de testar com os dados no <strong>SQL Azure</strong> e tive uma surpresinha:</p>
 <blockquote><p><font color="#ff0000"><strong>Msg 40054, Level 16, State 1, Line 3          <br /></strong>Tables without a clustered index are not supported in this version of SQL Server. Please create a clustered index and try again.</font></p>
 </blockquote>
 <p><!--more-->
@@ -34,13 +34,13 @@ author:
 <p align="justify">O primeiro passo foi identificar as tabelas sem um clustered index definido. É claro que no meu caso eu tinha muitas tabelas o que justifica o esforço, mas vamos simular isto criando um banco com quatro tabelas como segue na listagem abaixo. </p>
 <pre><pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  1: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CREATE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CREATE</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=DATABASE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">DATABASE</a> TesteSQLAzure
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  2: 
+<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  2:
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  3: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=USE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">USE</a> [TesteSQLAzure];
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  4: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a>
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  5: 
+<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  5:
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  6: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CREATE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CREATE</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=TABLE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">TABLE</a> [dbo].[Tabela01] (
 </pre>
@@ -54,7 +54,7 @@ author:
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 11: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a>
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 12: 
+<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 12:
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 13: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CREATE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CREATE</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=TABLE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">TABLE</a> [dbo].[Tabela02] (
 </pre>
@@ -68,7 +68,7 @@ author:
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 18: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a>
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 19: 
+<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 19:
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 20: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CREATE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CREATE</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=TABLE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">TABLE</a> [dbo].[Tabela03] (
 </pre>
@@ -82,7 +82,7 @@ author:
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 25: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a>
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 26: 
+<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 26:
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 27: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CREATE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CREATE</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=TABLE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">TABLE</a> [dbo].[Tabela04] (
 </pre>
@@ -105,7 +105,7 @@ author:
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  4: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a>
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  5: 
+<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  5:
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  6: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=ALTER&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">ALTER</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=TABLE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">TABLE</a> [dbo].[Tabela04]
 </pre>
@@ -117,20 +117,20 @@ author:
 <p>&#160;</p>
 <p align="justify">Neste exato momento, seria possível inserir dados nas tabelas Tabela02 e Tabela04, porém teríamos o referido problema quando fosse a vez de inserir dados nas tabelas Tabela01 e Tabela03 . Como ainda não sabemos disto, precisamos encontrar as tabelas “estragadas” no SQL Azure. Para isso, vamos dividir o script em 3 passos:</p>
 <p>Passo 1: Contar a quantidade de tabelas do banco em questão;</p>
-<pre><pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  1: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=SELECT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">SELECT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=COUNT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">COUNT</a> (*) 
+<pre><pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  1: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=SELECT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">SELECT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=COUNT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">COUNT</a> (*)
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  2: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=FROM&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">FROM</a> sys.objects 
+<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  2: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=FROM&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">FROM</a> sys.objects
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  3: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=WHERE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">WHERE</a> type = '<span style="color:#8b0000;">U</span>'</pre>
 <p>&#160;</p>
 <p>Passo 2: Retornar a quantidade de tabelas com o clustered index definido;</p>
 <pre><pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  1: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=SELECT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">SELECT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=COUNT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">COUNT</a> (*) <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=AS&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">AS</a> '<span style="color:#8b0000;">Quantidade</span>'
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  2: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=FROM&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">FROM</a> sys.indexes 
+<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  2: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=FROM&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">FROM</a> sys.indexes
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  3: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=WHERE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">WHERE</a> object_id <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=IN&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">IN</a> 
+<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  3: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=WHERE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">WHERE</a> object_id <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=IN&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">IN</a>
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  4: ( <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=SELECT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">SELECT</a> object_id <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=FROM&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">FROM</a> sys.objects <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=WHERE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">WHERE</a> type = '<span style="color:#8b0000;">U</span>' ) 
+<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  4: ( <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=SELECT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">SELECT</a> object_id <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=FROM&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">FROM</a> sys.objects <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=WHERE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">WHERE</a> type = '<span style="color:#8b0000;">U</span>' )
 </pre>
 <pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  5: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=AND&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">AND</a> index_id = 1</pre>
 <p>&#160;</p>
@@ -151,7 +151,7 @@ author:
 <p>** Esse exemplo não tem por objetivo entrar na discussão do que é uma boa chave para seu índice cluster, apenas mostra cuidados ao portar uma aplicação para o SQL Azure.</p>
 <p>&#160;</p>
 <h3><strong>Um ótimo feriado a todos.</strong></h3>
-<p><a href="http://meriat-blog.azurewebsites.net/wp-content/uploads/2012/02/notebook.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;" title="Notebook" border="0" alt="Notebook" align="left" src="{{ site.baseurl }}/assets/notebook_thumb.png" width="81" height="130" /></a></p>
+<p><a href="https://meriatsite.blob.core.windows.net/images/2012/02/notebook.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;" title="Notebook" border="0" alt="Notebook" align="left" src="{{ site.baseurl }}/assets/notebook_thumb.png" width="81" height="130" /></a></p>
 <p><strong>Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong> </p>
 <p><i><strong>Microsoft MSP – Brasília</strong></i> </p>
 <p><a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a> </p>

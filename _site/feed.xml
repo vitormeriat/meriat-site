@@ -5,17 +5,19 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Feb 2017 23:27:40 -0200</pubDate>
-    <lastBuildDate>Fri, 17 Feb 2017 23:27:40 -0200</lastBuildDate>
+    <pubDate>Sun, 19 Feb 2017 22:13:34 -0300</pubDate>
+    <lastBuildDate>Sun, 19 Feb 2017 22:13:34 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
         <title>Apresentando o Meriat Machine Learning Notes</title>
         <description>&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2017/02/15/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;No ultimo ano tive a oportunidade de trabalhar em projetos envolvendo IoT e Machine Learning. No processo entre aplicacao, estudos e desenvolvimento, acabei separando algum material e exemplos que me ajudaram a inicar nesta carreira, bem como no processo de aprendizagem.&lt;/p&gt;
+&lt;p&gt;No último ano tive a oportunidade de trabalhar em projetos envolvendo IoT e Machine Learning. No processo entre aplicação, estudos e desenvolvimento, acabei separando algum material e exemplos que me ajudaram a inicar nesta carreira, bem como no processo de aprendizagem.&lt;/p&gt;
 
 &lt;p&gt;O Meriat Machine Learning Notes nada mais e que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.&lt;/p&gt;
+
+&lt;p&gt;Minha opção pelo &lt;strong&gt;Jupyter Notebook&lt;/strong&gt;, dentre tantos motivos, se dá pelo fato de conseguir de forma simples documentar e visualizar todo o código e anotações de forma simples.&lt;/p&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
         <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
