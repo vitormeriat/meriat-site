@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Feb 2017 11:29:49 -0300</pubDate>
-    <lastBuildDate>Mon, 20 Feb 2017 11:29:49 -0300</lastBuildDate>
+    <pubDate>Wed, 22 Feb 2017 13:31:07 -0300</pubDate>
+    <lastBuildDate>Wed, 22 Feb 2017 13:31:07 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -404,22 +404,26 @@
     
       <item>
         <title>DevOps Summit 2016–Azure Stack - O poder da nuvem em seu datacenter</title>
-        <description>&lt;p align=&quot;justify&quot;&gt;Dia 07/05 na seda da Microsoft no Brasil, aconteceu a primeira edição do DevOps Summit Brasil. Esse é um evento que teve como origem a fusão dos já consagrados Azure Summit Brasil e ALM Summit Brasil com foco em promover o conhecimento de Cloud Computing e DevOps.&lt;/p&gt;
-&lt;p style=&quot;background-color: #000000&quot; align=&quot;center&quot;&gt;&lt;img title=&quot;spark-tela&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;spark-tela&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/05/devopssummit.jpg&quot; width=&quot;1000&quot; height=&quot;790&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;Azure Stack é o primeiro produto de uma nova categoria hybrid cloud platform. Este novo produto permite que a TI entregue os recursos do seu Datacenter no mesmo modelo de entrega de serviços da nuvem pública.&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;Com o Azure Stack você aproveita o modelo de gestão operacional de recursos do azure em seu Datacenter. É isso mesmo, com o Azure Stack conseguimos integrar os serviços da nuvem pública com a nossa capacidade computacional, a fim de entregar serviços. Você também pode explorar uma abordagem híbrida, tendo a capacidade e flexibilidade de trabalhar os recursos onde for melhor.&lt;/p&gt;
-&lt;p&gt;&lt;!--more--&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;iframe style=&quot;height: 685px; width: 100%&quot; marginheight=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/zW5NtNvVdGsrct&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;br /&gt; &lt;/iframe&gt;&lt;/p&gt;
-&lt;h2&gt;Referências&lt;br /&gt;&lt;/h2&gt;
+        <description>&lt;p&gt;Dia 07/05 na seda da Microsoft no Brasil, aconteceu a primeira edição do DevOps Summit Brasil. Esse é um evento que teve como origem a fusão dos já consagrados Azure Summit Brasil e ALM Summit Brasil com foco em promover o conhecimento de Cloud Computing e DevOps.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title=&quot;spark-tela&quot; alt=&quot;spark-tela&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/05/devopssummit.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Azure Stack é o primeiro produto de uma nova categoria hybrid cloud platform. Este novo produto permite que a TI entregue os recursos do seu Datacenter no mesmo modelo de entrega de serviços da nuvem pública.&lt;/p&gt;
+
+&lt;p&gt;Com o Azure Stack você aproveita o modelo de gestão operacional de recursos do azure em seu Datacenter. É isso mesmo, com o Azure Stack conseguimos integrar os serviços da nuvem pública com a nossa capacidade computacional, a fim de entregar serviços. Você também pode explorar uma abordagem híbrida, tendo a capacidade e flexibilidade de trabalhar os recursos onde for melhor.&lt;/p&gt;
+
+&lt;iframe style=&quot;height: 685px; width: 100%&quot; marginheight=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/zW5NtNvVdGsrct&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;br /&gt; &lt;/iframe&gt;
+
+&lt;h3 id=&quot;referências&quot;&gt;Referências&lt;/h3&gt;
+
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/blog/microsoft-azure-stack-technical-preview-is-now-available-for-download/&quot;&gt;Microsoft Azure Stack Technical Preview is now available for download&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/articles/azure-stack-run-powershell-script/#prepare-the-deployment-machine&quot;&gt;Deploy Azure Stack POC&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://channel9.msdn.com/Events/Ignite/2015/BRK3479&quot;&gt;Azure IaaS for Azure Stack&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/overview/azure-stack/&quot;&gt;Microsoft Azure Stack&lt;/a&gt;&lt;b&gt;&lt;/b&gt;&lt;i&gt;&lt;/i&gt;&lt;u&gt;&lt;/u&gt;&lt;sub&gt;&lt;/sub&gt;&lt;sup&gt;&lt;/sup&gt;&lt;strike&gt;&lt;/strike&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/blog/microsoft-azure-stack-technical-preview-is-now-available-for-download/&quot;&gt;Microsoft Azure Stack Technical Preview is now available for download&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/articles/azure-stack-run-powershell-script/#prepare-the-deployment-machine&quot;&gt;Deploy Azure Stack POC&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://channel9.msdn.com/Events/Ignite/2015/BRK3479&quot;&gt;Azure IaaS for Azure Stack&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/overview/azure-stack/&quot;&gt;Microsoft Azure Stack&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-##### ;)
-&lt;/p&gt;
+&lt;h4&gt;;)&lt;/h4&gt;
 </description>
         <pubDate>Mon, 09 May 2016 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>

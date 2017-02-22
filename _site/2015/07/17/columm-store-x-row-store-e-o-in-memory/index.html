@@ -79,7 +79,7 @@
 			<!-- Logo -->
 			<div id="fh5co-logo">
 				<a href="/">
-					<img src="/assets/images/logo.png" alt="Work Logo">
+					<img src="/assets/images/logo-a.png" alt="Work Logo">
 				</a>
         <!-- <h5>Vitor Meriat </h5> -->
 			</div>
@@ -154,14 +154,15 @@
 <p align="justify">Com a crescente necessidade de análise de grandes volumes de dados no menor tempo possível, bancos de dados baseados em uso intensivo de memória <strong>RAM</strong> (In-Memory) estão cotados como sendo a solução mais viável. A principal diferença entre os bancos de dados<strong> In-Memory</strong> e os “<u>tradicionais/clássicos</u>” já conhecidos, está na forma de armazenamento dos dados, <strong><em>Column Store vs Row Store. </em></strong>Vamos considerar uma tabela organizada nos dois modelos:</p>
 <p>&nbsp;</p>
 <h2><strong>Row Store</strong></h2>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2015/07/Untitled-1.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border: 0px;" title="Untitled-1" src="/assets/Untitled-1_thumb.png" alt="Untitled-1" width="1061" height="273" border="0" /></a></p>
+<p><img src="https://meriatsite.blob.core.windows.net/images/2015/07/Untitled-1.png" alt="Untitled-1" width="100%" /></p>
 <p>&nbsp;</p>
+
 <h2><strong>Column Store</strong></h2>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2015/07/Untitled-5.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border: 0px;" title="Untitled-5" src="/assets/Untitled-5_thumb.png" alt="Untitled-5" width="654" height="559" border="0" /></a></p>
+<p><img src="https://meriatsite.blob.core.windows.net/images/2015/07/Untitled-5.png" alt="Untitled-5" width="100%" /></p>
 <p><!--more--></p>
 <p align="justify">Ao invés de cada registro da tabela ficar armazenado em uma linha, o registro passa a ser armazenado em colunas separadas. Essa forma de armazenamento tem algumas vantagens, como exemplo a capacidade de compressão dos dados, se formos analisar a compressão de um banco onde os registros são armazenados em linha, encontraremos em uma mesma linha diferentes tipos (<strong>domínios</strong>) o que torna o processo mais complicado, já no banco orientado a colunas, cada coluna irá conter o mesmo tipo (<strong>domínio</strong>) de dado. De acordo com algumas pesquisas o nível de compressão alcançado  em bancos orientados a colunas chega a ser de <strong>60%</strong> a <strong>70%</strong>  mais eficiente que nos bancos orientados a linhas.</p>
 <p align="justify">Para o caso de armazenamento dos dados em colunas é necessário que haja um relacionamento entre as colunas para identificar que a mesma pertence a um registro específico, para resolver esse problema a estratégia de incluir um ID virtual é normalmente adotada, nesse caso a representação do armazenamento em colunas ficaria como a imagem abaixo:</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2015/07/Untitled-8.png"><img style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; margin-right: auto; border: 0px;" title="Untitled-8" src="/assets/Untitled-8_thumb.png" alt="Untitled-8" width="720" height="647" border="0" /></a></p>
+<p><img src="https://meriatsite.blob.core.windows.net/images/2015/07/Untitled-8.png" alt="Untitled-8" width="100%" /></p>
 <p>Vamos a seguinte query:</p>
 <pre style="font-size: 22pt !important;"><code class="sql">
 SELECT AVG(PESSOA_IDADE) FROM PESSOA
@@ -181,11 +182,6 @@ SELECT AVG(PESSOA_IDADE) FROM PESSOA
 </ul>
 <p>&nbsp;</p>
 <h2><span style="color: #ffc000;">Bons estudos e até a próxima pessoal  ;)</span></h2>
-<ul>
-<li><span style="color: #ffc000; font-size: x-large;"><strong>Twitter: @</strong></span><a href="mailto:vitormeriatvitormeriat@gmail.com"><span style="color: #ffc000; font-size: x-large;"><strong>vitormeriat</strong></span></a></li>
-<li><span style="color: #ffc000; font-size: x-large;"><strong>vitormeriat@</strong></span><a href="mailto:vitormeriat@gmail.com"><span style="color: #ffc000; font-size: x-large;"><strong>gmail.com</strong></span></a></li>
-<li><a href="mailto:vitor.pereira@studentpartner.com"><span style="color: #ffc000; font-size: x-large;"><strong>vitor.pereira@studentpartner.com</strong></span></a></li>
-</ul>
 
   </section>
 
@@ -199,31 +195,51 @@ SELECT AVG(PESSOA_IDADE) FROM PESSOA
 
 </article>
 
-
+<!-- 
   <section class="next">
-    <a class="next__link" href="/2015/07/15/control-led-iocontrolando-o-delay-de-um-led-no-arduino-com-node-js-e-socket-io/" style="background-image: url('');">
-
+    <a class="next__link" href="/2015/07/15/control-led-iocontrolando-o-delay-de-um-led-no-arduino-com-node-js-e-socket-io/" >
       <div class="next-container" style="margin: 60px 0 60px 0;">
         <hr>
-        <h4>Read Next <i class="fa fa-lg fa-arrow-right"></i></h4>
+        <h4>Read Previous <i class="fa fa-lg fa-arrow-right"></i></h4>
         <span style="font-size: 1.6em;">Control LED IO–Controlando o delay de um LED no Arduino com Node.js e Socket.io</span>
         <hr>
       </div>
-
     </a>
   </section>
+ -->
+
+  <div style="margin-top: 60px; margin-bottom: 60px;">
+    
+    
+      3 minutes to read
+    
+  </div>
 
 
-<br>
+  <section class="next">
+    
+    <a class="next__link" href="/2015/07/15/control-led-iocontrolando-o-delay-de-um-led-no-arduino-com-node-js-e-socket-io/" >
+      <div class="next-container">
+        <hr>
+        <h4><i class="fa fa-lg fa-arrow-left"></i> Read Older</h4>
+        <span style="font-size: 1.6em;">Control LED IO–Controlando o delay de um LED no Arduino com Node.js e Socket.io</span>
+        <hr>
+      </div>
+    </a>
+    
+    
+    <a class="next__link" href="/2015/07/23/tdc-2015-sp-ciclo-de-vida-de-aplices-universal-windows-platform/" style="text-align: right;" >
+      <div class="next-container">
+        <hr>
+        <h4>Read Newer <i class="fa fa-lg fa-arrow-right"></i></h4>
+        <span style="font-size: 1.6em;">TDC 2015 SP–Ciclo de vida de aplicões Universal Windows Platform</span>
+        <hr>
+      </div>
+    </a>
+    
+  </section>
 
-
-  3 minutes to read
-
-<br>
-
-<br>
-
-
+<!-- 
 	<div class="related">
 		<h4>Related Posts</h4>
 		<ul class="posts">
@@ -248,9 +264,9 @@ SELECT AVG(PESSOA_IDADE) FROM PESSOA
 
 
 <br>
-<br>
+<br> -->
 
-<div class="post-footer">
+<!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
       <a href="http://localhost:4000/2015/07/15/control-led-iocontrolando-o-delay-de-um-led-no-arduino-com-node-js-e-socket-io/"><< Older</a>
@@ -264,7 +280,8 @@ SELECT AVG(PESSOA_IDADE) FROM PESSOA
       <a href="http://localhost:4000/2015/07/23/tdc-2015-sp-ciclo-de-vida-de-aplices-universal-windows-platform/">Newer >></a>
     
   </div>
-</div>
+</div> -->
+
 </div>
 <!-- <h3>Categories</h3>
 
@@ -378,7 +395,7 @@ SELECT AVG(PESSOA_IDADE) FROM PESSOA
   
   on 
 </p> -->
-<br>
+<div style="height: 80px;"></div>
 
     </main>
 

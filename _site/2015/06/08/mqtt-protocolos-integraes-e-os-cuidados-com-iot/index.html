@@ -79,7 +79,7 @@
 			<!-- Logo -->
 			<div id="fh5co-logo">
 				<a href="/">
-					<img src="/assets/images/logo.png" alt="Work Logo">
+					<img src="/assets/images/logo-a.png" alt="Work Logo">
 				</a>
         <!-- <h5>Vitor Meriat </h5> -->
 			</div>
@@ -152,7 +152,7 @@
   <section class="section-padding post" itemprop="articleBody">
     <p align="justify"><strong>MQTT</strong> ou <strong><a href="http://mqtt.org/" target="_blank">Message Queuing Telemetry Transport</a></strong>, é um protocolo de conectividade para <strong>M2M </strong>(Machine-to-Machine)<strong> / IoT</strong> (Internet of Things), projetado para suportar o transporte de mensagens para dispositivos de pequena capacidade, baixo consumo de energia, baixa largura de banda, alta latência e disponibilidade variável.</p>
 <p align="justify">Em resumo é um protocolo de mensagens de peso leve, que traz a capacidade de comunicação assíncrona em redes restritas, a dispositivos de recursos limitados. Ele se tornou um padrão <a href="https://www.oasis-open.org/" target="_blank">OASIS</a> em 07 de novembro de 2014, em sua versão <strong>3.1.1</strong>.</p>
-<p style="text-align: center;" align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2015/06/capa1.png"><img class="alignnone wp-image-2591 size-full" src="/assets/capa1.png" alt="capa" width="900" height="470" /></a></p>
+<p style="text-align: center;" align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2015/06/capa1.png"><img class="alignnone wp-image-2591 size-full" src="https://meriatsite.blob.core.windows.net/images/2015/06/capa1.png" alt="capa" width="900" height="470" /></a></p>
 <p align="justify">Recentemente me perguntaram (<a href="http://vitormeriat.com.br/2014/11/21/mensageria-e-os-protocoloschoose-your-poison/" target="_blank">por conta deste post</a>), sobre qual a necessidade de um protocolo como o MQTT. A verdade é que muito se dá ao desconhecimento do público em relação ao mundo da “<strong>Internet das Coisas</strong>”.</p>
 <p align="justify">Este não é um post específico sobre MQTT, ou sua implementação. É sobre o gancho que este protocolo extremamente leve traz para o <strong>“pensar em IoT”</strong>.</p>
 <p><!--more--></p>
@@ -160,7 +160,10 @@
 <p align="justify">O fato é que no mundo do IoT, os dispositivos que estão implantados nos relógios, tênis e outros diversos acessórios, não são placas com 2GB, USB 3.0 ou HDMI. Os dispositivos que estamos falando são componentes altamente minimalistas.</p>
 <p align="justify">Para se manter em um mercado cada vez mais agressivo, é fundamental construir devices que façam o melhor proveito de seus componentes, a fim de serem mais precisos em suas finalidades e com um custo menor de manufatura.</p>
 <p align="justify">Sendo assim, o que vemos na prática são diversos dispositivos com microprocessadores de 8-BITs e 192KB RAM.</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2015/06/ghi_electronics_fez_cerb40_ii.png"><img style="background-image: none; padding-top: 0; padding-left: 0; margin: 0 8px 0 0; display: inline; padding-right: 0; border-width: 0;" title="GHI_Electronics_FEZ_Cerb40_II" src="/assets/ghi_electronics_fez_cerb40_ii_thumb.png" alt="GHI_Electronics_FEZ_Cerb40_II" width="345" height="260" border="0" /></a><a href="https://meriatsite.blob.core.windows.net/images/2015/06/ghi_electronics_g120_siza.jpg"><img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="GHI_Electronics_G120_siza" src="/assets/ghi_electronics_g120_siza_thumb.jpg" alt="GHI_Electronics_G120_siza" width="345" height="253" border="0" /></a></p>
+<p>
+  <a href="https://meriatsite.blob.core.windows.net/images/2015/06/ghi_electronics_fez_cerb40_ii.png"><img style="background-image: none; padding-top: 0; padding-left: 0; margin: 0 8px 0 0; display: inline; padding-right: 0; border-width: 0;" title="GHI_Electronics_FEZ_Cerb40_II" src="https://meriatsite.blob.core.windows.net/images/2015/06/ghi_electronics_fez_cerb40_ii.png" alt="GHI_Electronics_FEZ_Cerb40_II" width="345" height="260" /></a>
+  <a href="https://meriatsite.blob.core.windows.net/images/2015/06/ghi_electronics_g120_siza.jpg"><img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="GHI_Electronics_G120_siza" src="https://meriatsite.blob.core.windows.net/images/2015/06/ghi_electronics_g120_siza.jpg" alt="GHI_Electronics_G120_siza" width="345" height="253" border="0" /></a>
+</p>
 <p align="justify">Quando olhamos para estas capacidades, fica claro que deve se existir uma preocupação enorme com protocolos, brokers e as aplicações que serão desenvolvidas para um projeto de IoT.</p>
 <p align="justify">Nem todo dispositivo pode se dar ao luxo de 16MB de RAM, quem dirá 2GB. Então nestes termos olhar para o MQTT faz muito sentido. Aliás, estamos falando de um protocolo com apenas 2 bytes de Header. Em determinadas aplicações, até protocolos como o <strong>AMQP</strong> podem ser inviáveis dado o seu tamanho, ainda mais se houver necessidade de <strong>SSL</strong>.</p>
 <p align="justify">MQTT pode ser ideal em determinadas aplicações móveis por causa de seu tamanho, onde temos pacotes de dados minimalistas e uma distribuição eficiente de informações para um ou muitos receptores (assinantes). Sem falar no transporte de mensagens que não se preocupa com o conteúdo a ser entregue.</p>
@@ -170,11 +173,8 @@
 <p align="justify">Outra coisa que vale notar é o fator segurança. Mais dispositivos conectados significa mais IPs disponíveis que por sua vez significa mais portas vulneráveis e maior risco de segurança. As políticas de segurança e de privacidade com certeza serão revistas neste novo contexto. O aumento de comunicação nesta rede incrementa o risco de distribuir informações de forma indevida, sem falar da possibilidade dos erros de comunicação entre dispositivos. O desenho de novos serviços ganha mais um desafio, agora voltado à privacidade de dados e, principalmente, nos meios que podemos utilizar para ganhar a confiança dos usuários.</p>
 <p>Você encontra toda a e especificação do MQTT <a href="http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html" target="_blank">aqui!</a></p>
 <p>Nos próximos posts, vou estar implementando algumas integrações entre Nuvem e IoT.</p>
+
 <h2><span style="color: #666666;">Bons estudos e até a próxima pessoal  ;)</span></h2>
-<p><a href="http://vitormeriat.com.br/"><span style="color: #666666;"><img style="float: left; margin: 0 30px 0 0; display: inline;" title="me-azul" src="/assets/me-azul_thumb.png?w=263&amp;h=263" alt="me-azul" width="175" height="175" align="left" border="0" /></span></a></p>
-<p><strong><span style="color: #666666; font-size: x-large;">Twitter: @</span></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><span style="color: #666666; font-size: x-large;">vitormeriat</span></strong></a></p>
-<p><strong><span style="color: #666666; font-size: x-large;">vitormeriat@</span></strong><a href="mailto:vitormeriat@gmail.com"><strong><span style="color: #666666; font-size: x-large;">gmail.com</span></strong></a></p>
-<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><span style="color: #666666; font-size: x-large;">vitor.pereira@studentpartner.com</span></strong></a></p>
 
   </section>
 
@@ -188,31 +188,51 @@
 
 </article>
 
-
+<!-- 
   <section class="next">
-    <a class="next__link" href="/2015/05/21/wcf-2015open-source-e-novidades-no-visual-studio-2015-rc/" style="background-image: url('');">
-
+    <a class="next__link" href="/2015/05/21/wcf-2015open-source-e-novidades-no-visual-studio-2015-rc/" >
       <div class="next-container" style="margin: 60px 0 60px 0;">
         <hr>
-        <h4>Read Next <i class="fa fa-lg fa-arrow-right"></i></h4>
+        <h4>Read Previous <i class="fa fa-lg fa-arrow-right"></i></h4>
         <span style="font-size: 1.6em;">WCF 2015–Open Source e novidades no Visual Studio 2015 RC</span>
         <hr>
       </div>
-
     </a>
   </section>
+ -->
+
+  <div style="margin-top: 60px; margin-bottom: 60px;">
+    
+    
+      4 minutes to read
+    
+  </div>
 
 
-<br>
+  <section class="next">
+    
+    <a class="next__link" href="/2015/05/21/wcf-2015open-source-e-novidades-no-visual-studio-2015-rc/" >
+      <div class="next-container">
+        <hr>
+        <h4><i class="fa fa-lg fa-arrow-left"></i> Read Older</h4>
+        <span style="font-size: 1.6em;">WCF 2015–Open Source e novidades no Visual Studio 2015 RC</span>
+        <hr>
+      </div>
+    </a>
+    
+    
+    <a class="next__link" href="/2015/06/13/winjs-4-0novidades-e-melhorias-para-universal-apps-e-cross-browser-2/" style="text-align: right;" >
+      <div class="next-container">
+        <hr>
+        <h4>Read Newer <i class="fa fa-lg fa-arrow-right"></i></h4>
+        <span style="font-size: 1.6em;">WinJS 4.0–Novidades e melhorias para Universal Apps e Cross-browser</span>
+        <hr>
+      </div>
+    </a>
+    
+  </section>
 
-
-  4 minutes to read
-
-<br>
-
-<br>
-
-
+<!-- 
 	<div class="related">
 		<h4>Related Posts</h4>
 		<ul class="posts">
@@ -237,9 +257,9 @@
 
 
 <br>
-<br>
+<br> -->
 
-<div class="post-footer">
+<!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
       <a href="http://localhost:4000/2015/05/21/wcf-2015open-source-e-novidades-no-visual-studio-2015-rc/"><< Older</a>
@@ -253,7 +273,8 @@
       <a href="http://localhost:4000/2015/06/13/winjs-4-0novidades-e-melhorias-para-universal-apps-e-cross-browser-2/">Newer >></a>
     
   </div>
-</div>
+</div> -->
+
 </div>
 <!-- <h3>Categories</h3>
 
@@ -367,7 +388,7 @@
   
   on 
 </p> -->
-<br>
+<div style="height: 80px;"></div>
 
     </main>
 

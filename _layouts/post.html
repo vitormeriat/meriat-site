@@ -54,33 +54,53 @@ layout: default
 
 </article>
 
-{% if page.previous.url %}
+<!-- {% if page.previous.url %}
   <section class="next">
-    <a class="next__link" href="{{page.previous.url | prepend: site.baseurl }}" style="background-image: url('{{ page.previous.image }}');">
-
+    <a class="next__link" href="{{page.previous.url | prepend: site.baseurl }}" >
       <div class="next-container" style="margin: 60px 0 60px 0;">
         <hr>
-        <h4>Read Next <i class="fa fa-lg fa-arrow-right"></i></h4>
+        <h4>Read Previous <i class="fa fa-lg fa-arrow-right"></i></h4>
         <span style="font-size: 1.6em;">{{page.previous.title}}</span>
         <hr>
       </div>
-
     </a>
   </section>
-{% endif %}
+{% endif %} -->
 
-<br>
-{% capture words %}
-  {{ content | number_of_words | minus: 180 }}
-{% endcapture %}
-{% unless words contains "-" %}
-  {{ words | plus: 180 | divided_by: 180 | append: " minutes to read" }}
-{% endunless %}
-<br>
+  <div style="margin-top: 60px; margin-bottom: 60px;">
+    {% capture words %}
+      {{ content | number_of_words | minus: 180 }}
+    {% endcapture %}
+    {% unless words contains "-" %}
+      {{ words | plus: 180 | divided_by: 180 | append: " minutes to read" }}
+    {% endunless %}
+  </div>
 
-<br>
 
-{% if site.related_posts %}
+  <section class="next">
+    {% if page.previous.url %}
+    <a class="next__link" href="{{page.previous.url | prepend: site.baseurl }}" >
+      <div class="next-container">
+        <hr>
+        <h4><i class="fa fa-lg fa-arrow-left"></i> Read Older</h4>
+        <span style="font-size: 1.6em;">{{page.previous.title}}</span>
+        <hr>
+      </div>
+    </a>
+    {% endif %}
+    {% if page.next.url %}
+    <a class="next__link" href="{{page.next.url | prepend: site.baseurl }}" style="text-align: right;" >
+      <div class="next-container">
+        <hr>
+        <h4>Read Newer <i class="fa fa-lg fa-arrow-right"></i></h4>
+        <span style="font-size: 1.6em;">{{page.next.title}}</span>
+        <hr>
+      </div>
+    </a>
+    {% endif %}
+  </section>
+
+<!-- {% if site.related_posts %}
 	<div class="related">
 		<h4>Related Posts</h4>
 		<ul class="posts">
@@ -95,9 +115,9 @@ layout: default
 {% endif %}
 
 <br>
-<br>
+<br> -->
 
-<div class="post-footer">
+<!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     {% if page.previous %}
       <a href="{{page.previous.url | prepend: site.baseurl | prepend: site.url }}"><< Older</a>
@@ -115,7 +135,8 @@ layout: default
       <span>Newer >></span>
     {% endif %}
   </div>
-</div>
+</div> -->
+
 </div>
 <!-- <h3>Categories</h3>
 {% for category in site.categories %}
@@ -131,4 +152,4 @@ layout: default
   {% endif %}
   on {{ post.date | date: "%B %-d, %Y" }}
 </p> -->
-<br>
+<div style="height: 80px;"></div>

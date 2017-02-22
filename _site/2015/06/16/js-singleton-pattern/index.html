@@ -79,7 +79,7 @@
 			<!-- Logo -->
 			<div id="fh5co-logo">
 				<a href="/">
-					<img src="/assets/images/logo.png" alt="Work Logo">
+					<img src="/assets/images/logo-a.png" alt="Work Logo">
 				</a>
         <!-- <h5>Vitor Meriat </h5> -->
 			</div>
@@ -150,9 +150,9 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p align="justify">O <strong>Singleton Pattern</strong> diz que você pode ter apenas uma única instância de uma classe (ou, no caso do <strong>JavaScript</strong>, função construtora). Isso significa que uma vez que a classe for instanciada, você deve sempre retornar esta mesma instância em chamadas subsequentes.
+    <p align="justify">O <strong>Singleton Pattern</strong> diz que você pode ter apenas uma única instância de uma classe (ou, no caso do <strong>JavaScript</strong>, função construtora). Isso significa que uma vez que a classe for instanciada, você deve sempre retornar esta mesma instância em chamadas subsequentes.</p>
 <p align="justify">Um exemplo clássico deste pattern é usar um único objeto como namespace de sua aplicação, como podemos ver no exemplo abaixo:</p>
-<pre><code class="javascript" style="font-size: 24pt !important;">
+<pre><code class="javascript" style="font-size: 22pt !important;">
 var MinhaApp = {};
 </code></pre>
 <p align="justify">Pelo fato de termos definido a variável como um objeto, não podemos instanciar novos objetos à partir dele (embora possamos criar novos objetos usando este como base com a função <strong>Object.create</strong>, por exemplo). </p>
@@ -165,7 +165,7 @@ function MinhaApp() {
     return MinhaApp.instance;
 }
 </code></pre>
-<p><!--more-->
+
 <p align="justify">Essa função construtora irá garantir que você sempre receba a mesma instância como resultado. Isso só é possível porque funções construtoras utilizam o retorno como resultado da instanciação. Na prática, você poderia retornar qualquer tipo de objeto, como arrays ou strings. </p>
 <pre><code class="javascript">
 var instance = new MinhaApp();
@@ -202,8 +202,8 @@ var MinhaApp;
 })();
 
 </code></pre>
-<p><p>&nbsp;</p>
-<h2>Bons estudos e até a próxima galera!</h2></p></p></p></p></p>
+
+<h2>Bons estudos e até a próxima galera!</h2>
 
   </section>
 
@@ -217,31 +217,51 @@ var MinhaApp;
 
 </article>
 
-
+<!-- 
   <section class="next">
-    <a class="next__link" href="/2015/06/13/winjs-4-0novidades-e-melhorias-para-universal-apps-e-cross-browser-2/" style="background-image: url('');">
-
+    <a class="next__link" href="/2015/06/13/winjs-4-0novidades-e-melhorias-para-universal-apps-e-cross-browser-2/" >
       <div class="next-container" style="margin: 60px 0 60px 0;">
         <hr>
-        <h4>Read Next <i class="fa fa-lg fa-arrow-right"></i></h4>
+        <h4>Read Previous <i class="fa fa-lg fa-arrow-right"></i></h4>
         <span style="font-size: 1.6em;">WinJS 4.0–Novidades e melhorias para Universal Apps e Cross-browser</span>
         <hr>
       </div>
-
     </a>
   </section>
+ -->
+
+  <div style="margin-top: 60px; margin-bottom: 60px;">
+    
+    
+      2 minutes to read
+    
+  </div>
 
 
-<br>
+  <section class="next">
+    
+    <a class="next__link" href="/2015/06/13/winjs-4-0novidades-e-melhorias-para-universal-apps-e-cross-browser-2/" >
+      <div class="next-container">
+        <hr>
+        <h4><i class="fa fa-lg fa-arrow-left"></i> Read Older</h4>
+        <span style="font-size: 1.6em;">WinJS 4.0–Novidades e melhorias para Universal Apps e Cross-browser</span>
+        <hr>
+      </div>
+    </a>
+    
+    
+    <a class="next__link" href="/2015/06/17/iot-weekend-recifeminha-apresentao-sobre-cloud-computing-e-integraes-com-iot/" style="text-align: right;" >
+      <div class="next-container">
+        <hr>
+        <h4>Read Newer <i class="fa fa-lg fa-arrow-right"></i></h4>
+        <span style="font-size: 1.6em;">IoT Weekend Recife–Minha apresentação sobre cloud computing e integrações com IoT</span>
+        <hr>
+      </div>
+    </a>
+    
+  </section>
 
-
-  2 minutes to read
-
-<br>
-
-<br>
-
-
+<!-- 
 	<div class="related">
 		<h4>Related Posts</h4>
 		<ul class="posts">
@@ -266,9 +286,9 @@ var MinhaApp;
 
 
 <br>
-<br>
+<br> -->
 
-<div class="post-footer">
+<!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
       <a href="http://localhost:4000/2015/06/13/winjs-4-0novidades-e-melhorias-para-universal-apps-e-cross-browser-2/"><< Older</a>
@@ -282,7 +302,8 @@ var MinhaApp;
       <a href="http://localhost:4000/2015/06/17/iot-weekend-recifeminha-apresentao-sobre-cloud-computing-e-integraes-com-iot/">Newer >></a>
     
   </div>
-</div>
+</div> -->
+
 </div>
 <!-- <h3>Categories</h3>
 
@@ -396,7 +417,7 @@ var MinhaApp;
   
   on 
 </p> -->
-<br>
+<div style="height: 80px;"></div>
 
     </main>
 
