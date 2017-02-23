@@ -19,4 +19,14 @@ No último ano tive a oportunidade de trabalhar em projetos envolvendo IoT e Mac
 
 O Meriat Machine Learning Notes nada mais e que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.
 
-Minha opção pelo **Jupyter Notebook**, dentre tantos motivos, se dá pelo fato de conseguir de forma simples documentar e visualizar todo o código e anotações de forma simples.
+Minha opção pelo **Jupyter Notebook**, dentre tantos motivos, se dá pelo fato de conseguir de forma simples documentar e visualizar todo o código e anotações de forma simples. Vale dizer que o código que estou utilizando pode ser facilmente utilizado em outra IDE, conforme sua preferência.
+
+Minha ideia é realizar um coletânea sobre os principais termos, exemplos e referenciar o mesmo para quem quiser se aprofundar no tema.
+
+Algumas implementações são reprodução de exercícios dos quais eu irei apontar o material base.
+
+### Github
+
+> Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.
+
+[Meriat Machine Learning Note](https://github.com/vitormeriat/meriat-ml-notes)
