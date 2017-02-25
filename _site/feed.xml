@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Feb 2017 13:31:07 -0300</pubDate>
-    <lastBuildDate>Wed, 22 Feb 2017 13:31:07 -0300</lastBuildDate>
+    <pubDate>Sat, 25 Feb 2017 14:52:13 -0300</pubDate>
+    <lastBuildDate>Sat, 25 Feb 2017 14:52:13 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -17,7 +17,19 @@
 
 &lt;p&gt;O Meriat Machine Learning Notes nada mais e que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.&lt;/p&gt;
 
-&lt;p&gt;Minha opção pelo &lt;strong&gt;Jupyter Notebook&lt;/strong&gt;, dentre tantos motivos, se dá pelo fato de conseguir de forma simples documentar e visualizar todo o código e anotações de forma simples.&lt;/p&gt;
+&lt;p&gt;Minha opção pelo &lt;strong&gt;Jupyter Notebook&lt;/strong&gt;, dentre tantos motivos, se dá pelo fato de conseguir de forma simples documentar e visualizar todo o código e anotações de forma simples. Vale dizer que o código que estou utilizando pode ser facilmente utilizado em outra IDE, conforme sua preferência.&lt;/p&gt;
+
+&lt;p&gt;Minha ideia é realizar um coletânea sobre os principais termos, exemplos e referenciar o mesmo para quem quiser se aprofundar no tema.&lt;/p&gt;
+
+&lt;p&gt;Algumas implementações são reprodução de exercícios dos quais eu irei apontar o material base.&lt;/p&gt;
+
+&lt;h3 id=&quot;github&quot;&gt;Github&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/vitormeriat/meriat-ml-notes&quot;&gt;Meriat Machine Learning Note&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>

@@ -194,7 +194,7 @@ figure.fh5co-with-caption figcaption {
   }
 
 .category-title {
-  font-size: 2.2em;
+  font-size: 1.4em;
   clear: left;
   display: inline;
   float: left;
@@ -202,6 +202,16 @@ figure.fh5co-with-caption figcaption {
   color: black;
   margin-bottom: 0.3em;
 }
+
+.split-list ul{
+  float: left;
+  /*margin-left: 1em;*/
+}
+.split-list li{
+  /*padding-right: 2em;*/
+  line-height: 1.5em;
+}
+
 
 .archives {}
   .archives ul {
