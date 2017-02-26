@@ -50,10 +50,22 @@ menucategory: fh5co-active
       {% for category in sorted_cats %}
         {% assign cat_name = category | first %}
         <li>
-          <a href="{{ site.baseurl }}/category/{{ category | first | downcase | slugify }}/">
-            <span class="category-title">{{ cat_name }}</span>
-            <span>{{ site.categories[cat_name] | size }} Posts</span>
-          </a>
+          {% if cat_name == 'C#' %}
+            <a href="{{ site.baseurl }}/category/c-sharp/">
+              <span class="category-title">{{ cat_name }}</span>
+              <span>{{ site.categories[cat_name] | size }} Posts</span>
+            </a>
+          {% elsif cat_name == 'C++' %}
+            <a href="{{ site.baseurl }}/category/c-plus-plus/">
+              <span class="category-title">{{ cat_name }}</span>
+              <span>{{ site.categories[cat_name] | size }} Posts</span>
+            </a>
+          {% else %}
+            <a href="{{ site.baseurl }}/category/{{ category | first | downcase | slugify }}/">
+              <span class="category-title">{{ cat_name }}</span>
+              <span>{{ site.categories[cat_name] | size }} Posts</span>
+            </a>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>
