@@ -5,7 +5,7 @@ menuhome: fh5co-active
 
 <div class="container">
 
-<section class="archives" itemscope itemtype="http://schema.org/Blog">
+<section itemscope itemtype="http://schema.org/Blog">
 
   <div class="section-padding archives__container">
     {% for post in paginator.posts %}
@@ -41,27 +41,29 @@ menuhome: fh5co-active
 
     {% if paginator.total_pages > 1 %}
       <div class="paginator">
+        <ul>
         {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+          <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
         {% else %}
-          <span>&laquo; Prev</span>
+          <li><span>&laquo; Prev</span></li>
         {% endif %}
 
         {% for page in (1..paginator.total_pages) %}
           {% if page == paginator.page %}
-            <em style="background: #808080; color: #ffffff; padding: 0px 10px 0px 10px;">{{ page }}</em>
+            <li><em style="background: #808080; color: #ffffff; padding: 0px 10px 0px 10px;">{{ page }}</em></li>
           {% elsif page == 1 %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+            <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
           {% else %}
-            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+            <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
           {% endif %}
         {% endfor %}
 
         {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+          <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
         {% else %}
-          <span>Next &raquo;</span>
+          <li><span>Next &raquo;</span></li>
         {% endif %}
+        </ul>
       </div>
     {% endif %}
   </div>
