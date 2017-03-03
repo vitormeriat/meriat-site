@@ -4,11 +4,11 @@ title: "IoT Weekend Recife 2016 - Como a Inteligência Artificial vai mudar a In
 date: 2016-08-06
 categories:
   - Comunidade
-image-full: "https://meriatsite.blob.core.windows.net/images/2016/08/capa.png"
+image-full: "http://blob.vitormeriat.com.br/images/2016/08/capa.png"
 ---
 Olá pessoal, hoje, dia 06 de agosto de 2016 tive mais uma vez o privilégio de palestrar no IoT Weekend edição Recife. Esta é segunda vez em Recife e quarta edição geral do evento, que é inteiramente dedicado a Internet of Things, abrangendo do ponto de vista dos negócios aos famoso under the hood dos detalhes técnicos.
 
-<img title="capa" alt="capa" src="https://meriatsite.blob.core.windows.net/images/2016/08/capa.png" width="100%" />
+<img title="capa" alt="capa" src="http://blob.vitormeriat.com.br/images/2016/08/capa.png" width="100%" />
 
 Esta edição vez estive falando novamente sobre Inteligência, dessa vez abordando como inteligência artificial está mudando a maneira como fazemos e pensamos na internet das coisas, com uma visão mais abrangente sobre o tema.
 

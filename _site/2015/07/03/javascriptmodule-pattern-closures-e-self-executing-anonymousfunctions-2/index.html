@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -150,7 +161,7 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p align="justify"><img src="https://meriatsite.blob.core.windows.net/images/2015/07/capaJSMP.png" alt="capaJSMP" width="550" height="212" align="left" /></p>
+    <p align="justify"><img src="http://blob.vitormeriat.com.br/images/2015/07/capaJSMP.png" alt="capaJSMP" width="550" height="212" align="left" /></p>
 <p align="justify">Quem trabalha com JavaScript conhece bem a problemática em relação ao escopo e criação de variáveis. Uma das grandes preocupações dos desenvolvedores JavaScript é evitar o uso indiscriminado de variáveis globais, o que pode levar a erros terríveis e de difícil rastreabilidade.</p>
 <p align="justify">Como <strong>“AINDA”</strong> não temos uma sintaxe de módulos do próprio JavaScript, o padrão é a utilização de módulos para garantir um escopo de variáveis fechado, além de simular a privacidade de atributos e funções.</p>
 <p align="justify">Este pattern pode envolver uma combinação de técnicas como closures e funções auto-executáveis. A sintaxe é bastante característica e pode ser encontrada facilmente em diversas bibliotecas, como no caso do <a href="https://dev.windows.com/en-us/develop/winjs" target="_blank">WinJS</a>.</p>
@@ -177,7 +188,7 @@ function init() {
     window.init(); // Escopo Global
 }());
 </code></pre>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2015/07/fig1.png"><img src="https://meriatsite.blob.core.windows.net/images/2015/07/fig1.png" alt="fig1" width="100%" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2015/07/fig1.png"><img src="http://blob.vitormeriat.com.br/images/2015/07/fig1.png" alt="fig1" width="100%" /></a></p>
 <p align="justify">Notem que aqui eu declarei 2 funções com o mesmo nome: init. Porém cada uma em um escopo. Uma está lá no escopo global window, e a outra é local dentro da clousure. Por existirem em escopos diferentes uma função não interfere na outra e pode coexistir em um mesmo código.</p>
 <p align="justify">Tudo o que for declarado no escopo window é acessível de qualquer lugar, já que o escopo window é o root. O que for declarado dentro da clousure só é acessível de dentro dela, e se não for usado nenhum <strong>padrão de revelação</strong> só é acessível lá.</p>
 <p align="justify">Se olharmos para o resultado do código veremos que primeiro foi executado a função do <strong>Escopo Local</strong> e depois a do <strong>Escopo Global</strong> sem erros.</p>
@@ -196,7 +207,7 @@ function init() {
 // ReferenceError: namespaceUm is not defined
 namespaceUm.init();
 </code></pre>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2015/07/fig2.png"><img src="https://meriatsite.blob.core.windows.net/images/2015/07/fig2.png" alt="fig2" width="100%" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2015/07/fig2.png"><img src="http://blob.vitormeriat.com.br/images/2015/07/fig2.png" alt="fig2" width="100%" /></a></p>
 <p align="justify">Aqui vemos uma função declarada dentro de uma clousure e comprovamos como a mesma é inacessível fora deste contexto. No primeiro momento é executado a função que exibe o valor correto, e no segundo momento tento executar a função de fora do escopo da clousure o que gera o erro de objetjo undefined.</p>
 <p align="justify">Isso é importante para entendermos como podemos criar <strong>módulos independentes</strong> e simulando a visibilidade privada tão difundida na OOP.</p>
 <p>&nbsp;</p>
@@ -233,7 +244,7 @@ Pontos.imprimir(); // returns 3
 Pontos.contador = 500;
 Pontos.imprimir(); // returns 500
 </code></pre>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2015/07/fig3.png"><img src="https://meriatsite.blob.core.windows.net/images/2015/07/fig3.png" alt="fig3" width="100%" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2015/07/fig3.png"><img src="http://blob.vitormeriat.com.br/images/2015/07/fig3.png" alt="fig3" width="100%" /></a></p>
 <p align="justify">Temos uma função <strong>Pontos</strong> com um atributo contador responsável por guardar um valor que é importante em nosso regra. O ideal é que este valor só seja alterado pela utilização do método <strong>incrementar</strong>, porém como vemos no exemplo este tipo de implementação torna muito fácil a quebra do <strong>encapsulamento</strong>, dando total acesso a manipulação do atributo <strong>Pontos.contador</strong> de forma direta.</p>
 <p align="justify">Para resolver este problema vamos criar uma variável local para armazenar o <strong>contador</strong> e o expor em uma interface pública que retorna esse valor.  Vamos ao código:</p>
 <pre><code class="javascript">
@@ -258,7 +269,7 @@ Pontos.imprimir(); // returns 2
 Pontos.contador = 500;
 Pontos.imprimir(); // returns 2
 </code></pre>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2015/07/fig4.png"><img src="https://meriatsite.blob.core.windows.net/images/2015/07/fig4.png" alt="fig4" width="100%" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2015/07/fig4.png"><img src="http://blob.vitormeriat.com.br/images/2015/07/fig4.png" alt="fig4" width="100%" /></a></p>
 <p align="justify">Note que ambas as funções referenciam a variável <strong>contador</strong>, que agora não é mais acessível de forma direta, ou de fora do escopo da<strong> função auto executável</strong>. Mesmo que alguém tente alterar o valor da variável <strong>contador</strong> de fora do escopo, o valor continua o mesmo, só sendo alterado pelo método <strong>incrementar</strong>.</p>
 <p align="justify">Dessa forma, podemos encapsular todo o comportamento, sem termos que nos preocupar com modificações feitas sem ser pela função <strong>Pontos.incrementar()</strong>, exatamente como o esperado.</p>
 <p align="justify">Agora vamos para um exemplo do dia a dia. Observe o seguinte código e teste o seu resultado:</p>

@@ -4,12 +4,12 @@ title: IoT além do Hardware
 date: 2016-02-07
 categories:
   - IoT
-image-full: "https://meriatsite.blob.core.windows.net/images/2016/02/capa-iot-alem-do-hardware.png"
+image-full: "http://blob.vitormeriat.com.br/images/2016/02/capa-iot-alem-do-hardware.png"
 ---
 
 Tenho participado de muitos eventos e falado bastante sobre <strong>IoT</strong> no último ano. Uma pergunta recorrente que me é feita é sobre qual placa comprar para iniciar no mundo do IoT. OK... mas porque você tem de comprar uma placa para iniciar no mundo do IoT?
 
-<img title="capa-iot-alem-do-hardware" src="https://meriatsite.blob.core.windows.net/images/2016/02/capa-iot-alem-do-hardware.png" width="100%" />
+<img title="capa-iot-alem-do-hardware" src="http://blob.vitormeriat.com.br/images/2016/02/capa-iot-alem-do-hardware.png" width="100%" />
 
 A ideia aqui é ver o que circunda o mundo do IoT, do que ele é formado e como podemos entrar nesse mundo mesmo sem o conhecimento imediato de hardware.
 
@@ -24,7 +24,7 @@ Já temos coisas conectadas na internet há muito tempo. O chamados sistemas emb
 ## Qual a base do IoT?
 Quando falamos de IoT, temos um fluxo base para se delimitar o que é o que não é internet das coisas.
 
-<img title="fluxo-iot" alt="fluxo-iot" src="https://meriatsite.blob.core.windows.net/images/2016/02/fluxo-iot.png" width="100%" />
+<img title="fluxo-iot" alt="fluxo-iot" src="http://blob.vitormeriat.com.br/images/2016/02/fluxo-iot.png" width="100%" />
 
 Parece sutil, mas essa é a diferença que tem movimentado o mercado de forma tão agressiva nos últimos anos. Notem que o fluxo é composto por Coisas que estão conectadas, gerando dados e inteligência. É isso que entendemos como IoT, essa é a verdadeira revolução, a inteligência vinda com o IoT.
 

@@ -1,41 +1,36 @@
 ---
 layout: post
 title: Services now–Criando e testando um WCF Service Web Role em um Cloud Service
-date: 2014-11-24 
+date: 2014-11-24
 categories:
   - Microsoft Azure
   - Services
   - WCF
 
 ---
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/11/capawcf1.png"><img title="capaWCF1" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="capaWCF1" src="{{ site.baseurl }}/assets/capawcf1_thumb.png" width="700" height="331" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/11/capawcf1.png"><img title="capaWCF1" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="capaWCF1" src="{{ site.baseurl }}/assets/capawcf1_thumb.png" width="700" height="331" /></a></p>
 <p align="justify">Esta é a continuação do post anterior: <a href="http://vitormeriat.com.br/2014/11/23/criando-e-testando-um-wcf-service-web-role-on-premise/" target="_blank">Criando e testando um WCF Service Web Role On-Premise</a>. Neste post vamos utilizar o serviço WCF criado anteriormente, para realizar a publicação do mesmo na nuvem, hospedado e um <strong>Cloud Service </strong>no <strong>Microsoft Azure</strong>.</p>
 <p><!--more-->
 <p align="justify">Estou levando em conta que você já executou os passos do post anterior ou que já tem um serviço WFC já criado. </p>
 <p align="justify">Sendo assim vamos ao <strong>deploy da aplicação</strong>. Clique com o botão direito sobre o projeto do <strong>Coud Service </strong>(no caso do exemplo o projeto WindowsAzureWCF), e selecione a opção <strong>Publish…</strong></p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/11/artgo1.png"><img title="artgo1" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo1" src="{{ site.baseurl }}/assets/artgo1_thumb.png" width="700" height="480" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/11/artgo1.png"><img title="artgo1" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo1" src="{{ site.baseurl }}/assets/artgo1_thumb.png" width="700" height="480" /></a></p>
 <p align="justify">Agora estou levando em conta que você já tem uma subscription ativa do Microsoft Azure. Caso contrário<strong> </strong><a href="http://azure.microsoft.com/pt-br/"><strong>acesse esse link</strong></a>. Na tela que segue, logo após selecionar a subscription correta, teremos a exibição da tela para a criação do Cloud Service onde o serviço será hospedado. Informe o nome do serviço e a Região (Datacenter) onde o mesmo será hospedado.</p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/11/artgo2.png"><img title="artgo2" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo2" src="{{ site.baseurl }}/assets/artgo2_thumb.png" width="700" height="480" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/11/artgo2.png"><img title="artgo2" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo2" src="{{ site.baseurl }}/assets/artgo2_thumb.png" width="700" height="480" /></a></p>
 <p align="justify">Após prover estas informações é só esperar a criação do Cloud Service. Quando criado teremos a tela abaixo:</p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/11/artgo3.png"><img title="artgo3" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo3" src="{{ site.baseurl }}/assets/artgo3_thumb.png" width="700" height="480" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/11/artgo3.png"><img title="artgo3" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo3" src="{{ site.baseurl }}/assets/artgo3_thumb.png" width="700" height="480" /></a></p>
 <p align="justify">Agora clique em Publish e aguarde o final do processo. Você pode acompanhar o status do deploy no próprio Visual Studio:</p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/11/artgo4.png"><img title="artgo4" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo4" src="{{ site.baseurl }}/assets/artgo4_thumb.png" width="700" height="661" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/11/artgo4.png"><img title="artgo4" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo4" src="{{ site.baseurl }}/assets/artgo4_thumb.png" width="700" height="661" /></a></p>
 <p align="justify">Ao final teremos o status de <strong>Completed</strong> e a <strong>URL </strong>onde o serviço está exposto.</p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/11/artgo5.png"><img title="artgo5" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo5" src="{{ site.baseurl }}/assets/artgo5_thumb.png" width="700" height="661" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/11/artgo5.png"><img title="artgo5" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo5" src="{{ site.baseurl }}/assets/artgo5_thumb.png" width="700" height="661" /></a></p>
 <p align="justify">Simples não é? Agora só falta testar o nosso serviço. Notem que conseguimos acessar a URL exatamente como fizemos on-premisse, porém utilizando endereço do Cloud Service.</p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/11/artgo6.png"><img title="artgo6" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo6" src="{{ site.baseurl }}/assets/artgo6_thumb.png" width="700" height="452" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/11/artgo6.png"><img title="artgo6" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo6" src="{{ site.baseurl }}/assets/artgo6_thumb.png" width="700" height="452" /></a></p>
 <p align="justify">Agora nosso serviço já está hospedado na nuvem. Vamos para o console de teste que criamos no post anterior. A única coisa que&nbsp; precisamos alterar é o <strong>endpoint</strong> de acesso ao serviço. Como no post anterior o teste foi local, ainda estamos apontando para um <strong>address</strong> <a title="http://127.0.0.1:4318/Service1.svc" href="http://127.0.0.1:4318/Service1.svc">http://127.0.0.1:4318/Service1.svc</a>. Agora só precisamos alterar este valor em nosso App.config incluindo a URL recém criada, como no exemplo abaixo:</p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/11/artgo7.png"><img title="artgo7" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo7" src="{{ site.baseurl }}/assets/artgo7_thumb.png" width="700" height="581" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/11/artgo7.png"><img title="artgo7" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo7" src="{{ site.baseurl }}/assets/artgo7_thumb.png" width="700" height="581" /></a></p>
 <p>Agora execute a aplicação… o resultado vai ser o mesmo!</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/11/artgo8.png"><img title="artgo8" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo8" src="{{ site.baseurl }}/assets/artgo8_thumb.png" width="700" height="282" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/11/artgo8.png"><img title="artgo8" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="artgo8" src="{{ site.baseurl }}/assets/artgo8_thumb.png" width="700" height="282" /></a></p>
 <p align="justify">&nbsp;</p>
 <p align="justify">Pronto, já criamos nosso<strong> WCF Service Web Role</strong>, testamos o serviço localmente rodando tudo on-premisse utilizando a estrutura do <strong>Computer Emulator</strong>, publicamos no <strong>Microsoft Azure</strong> e consumimos o serviço rodando na nuvem. Esta é apenas uma dica, nos próximos posts vou abordar este assunto com mais propriedade.</p>
 <p align="justify">&nbsp;</p>
 <p>O código fonte deste exemplo pode ser baixado <a href="http://1drv.ms/1xp8dLF" target="_blank">CLICANDO AQUI...</a></p>
 <p>&nbsp;</p>
 <h2><font color="#000000">Bons estudos e até a próxima pessoal&nbsp; ;)</font></h2>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/me-azul.png"><font color="#000000"><img title="me-azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="me-azul" src="{{ site.baseurl }}/assets/me-azul_thumb.png?w=263&amp;h=263" width="175" align="left" height="175" /></font></a>
-<p><strong><font color="#000000" size="5">Twitter: @</font></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><font color="#000000" size="5">vitormeriat</font></strong></a>
-<p><strong><font color="#000000" size="5">vitormeriat@</font></strong><a href="mailto:vitormeriat@gmail.com"><strong><font color="#000000" size="5">gmail.com</font></strong></a>
-<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><font color="#000000" size="5">vitor.pereira@studentpartner.com</font></strong></a><br />
-<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font color="#9bbb59"></font></a></h3></p></p>

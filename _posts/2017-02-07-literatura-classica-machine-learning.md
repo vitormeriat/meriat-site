@@ -9,12 +9,12 @@ categories:
   - Deep Learning
 description: Literatura clássica e compêndio de Machine Learning, para quem quer aprender da maneira certa. Nest post vou listar o Popular Science Machine Learning Books, e como adendo uma listagem de Deep Learning.
 
-image-full: "https://meriatsite.blob.core.windows.net/images/2017/02/07/capa.jpg"
+image-full: "http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg"
 ---
 
 A listagem a seguir pode ser categorizada como, **Popular Science Machine Learning Books** ou **Beginner Machine Learning Books**. É possível ainda encontrar vários livros desta listagem em categorias como **Introductory Machine Learning Books**.
 
-<img style="width: 100%;" src="https://meriatsite.blob.core.windows.net/images/2017/02/07/capa.jpg" class="absolute-bg">
+<img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg" class="absolute-bg">
 
 
 ### Machine Learning Books Selection

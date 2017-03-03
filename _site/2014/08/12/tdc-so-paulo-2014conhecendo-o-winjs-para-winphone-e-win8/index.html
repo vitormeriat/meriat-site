@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -153,12 +164,12 @@
     <p align="justify">Olá pessoal. Como o prometido estou disponibilizando o material utilizado no <a href="http://www.thedevelopersconference.com.br/tdc/2014/saopaulo/trilha-winphone-win8dev" target="_blank">TDC 2014 edição São Paulo</a> da minha palestra <strong>Conhecendo o WinJS</strong> para Windows Phone e Windows 8.</p>
 <p align="justify">Como o citado na palestra, o <strong>WinJS</strong> é a biblioteca JavaScript criada pela Microsoft a fim de permitir o desenvolvimento de aplicações HTML5 e JS acessando os recursos do WinRT. A premissa da palestra foi que o WinJS é muito mais que um Wrapper de acesso ao WinRT…</p>
 <p align="justify">Estou disponibilizando o <strong>PPT</strong> e as demos utilizadas e as que não deram tempo de concluir. Vale notar que os exemplo estão disponíveis para para o <strong>WinJS 2.0 (<u>Windows 8</u>)</strong> e <strong>WinJS 2.1 (<u>Windows Phone 8.1</u>)</strong>.</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/08/fig01.png"><img title="fig01" style="border-top:0;border-right:0;background-image:none;border-bottom:0;padding-top:0;padding-left:0;border-left:0;display:inline;padding-right:0;" border="0" alt="fig01" src="/assets/fig01_thumb.png" width="700" height="381" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/08/fig01.png"><img title="fig01" style="border-top:0;border-right:0;background-image:none;border-bottom:0;padding-top:0;padding-left:0;border-left:0;display:inline;padding-right:0;" border="0" alt="fig01" src="http://blob.vitormeriat.com.br/images/2014/08/fig01_thumb.png" width="700" height="381" /></a></p>
 <p><!--more-->
 <p><strong>Demo:</strong> ListView customizado.</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/08/fig02.png"><img title="fig02" style="border-top:0;border-right:0;background-image:none;border-bottom:0;padding-top:0;padding-left:0;border-left:0;display:inline;padding-right:0;" border="0" alt="fig02" src="/assets/fig02_thumb.png" width="700" height="381" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/08/fig02.png"><img title="fig02" style="border-top:0;border-right:0;background-image:none;border-bottom:0;padding-top:0;padding-left:0;border-left:0;display:inline;padding-right:0;" border="0" alt="fig02" src="http://blob.vitormeriat.com.br/images/2014/08/fig02_thumb.png" width="700" height="381" /></a></p>
 <p><strong>Demo:</strong> WinJS e AngularJS</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/08/fig03.png"><img title="fig03" style="border-top:0;border-right:0;background-image:none;border-bottom:0;padding-top:0;padding-left:0;border-left:0;display:inline;padding-right:0;" border="0" alt="fig03" src="/assets/fig03_thumb.png" width="700" height="397" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/08/fig03.png"><img title="fig03" style="border-top:0;border-right:0;background-image:none;border-bottom:0;padding-top:0;padding-left:0;border-left:0;display:inline;padding-right:0;" border="0" alt="fig03" src="http://blob.vitormeriat.com.br/images/2014/08/fig03_thumb.png" width="700" height="397" /></a></p>
 <p><strong>Demo:</strong> Maximizando o WinJS com AngularJS.</p>
 <p align="justify">As demos podem ser baixadas <a href="http://1drv.ms/1ukKrUh" target="_blank">CLICANDO AQUI!!!</a> Vale notar que para rodar os exemplos é necessário o Visual Studio 2013 update 2.</p>
 <p align="justify">Abaixo segue o PPT e as referências para aqueles que estiverem interessados em investir no desenvolvimento de APPs para Windows 8 e Windows Phone com HTML5 e Java Script.</p>
@@ -175,10 +186,6 @@
 </ul>
 <p>&#160;</p>
 <h2><font color="#ffc000">Bons estudos e até a próxima pessoal&#160; ;)</font></h2>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/me-azul.png"><font color="#ffc000"><img title="me-azul" style="float:left;margin:0 29px 0 0;display:inline;" border="0" alt="me-azul" src="/assets/me-azul_thumb.png?w=263&amp;h=263" width="175" align="left" height="175" /></font></a></p>
-<p><strong><font color="#ffc000" size="5">Twitter: @</font></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><font color="#ffc000" size="5">vitormeriat</font></strong></a></p>
-<p><strong><font color="#ffc000" size="5">vitormeriat@</font></strong><a href="mailto:vitormeriat@gmail.com"><strong><font color="#ffc000" size="5">gmail.com</font></strong></a></p>
-<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><font color="#ffc000" size="5">vitor.pereira@studentpartner.com</font></strong></a></p>
 
   </section>
 

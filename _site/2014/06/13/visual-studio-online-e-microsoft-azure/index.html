@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -164,30 +175,26 @@
 </ul>
 <p align="justify">Como o anunciado por <strong>Brian Harry</strong> (Product Unit Manager for Team Foundation Server), uma das maiores solicitações dos usuários do VSO é a autenticação federada. E qual o motivo disso?</p>
 <p align="justify">Primeiro as inúmeras solicitações para se utilizar contas corporativas e não só o famoso <strong>Live ID</strong>. Outro ponto é que anteriormente só era possível ter a correspondência entre o VSO e uma única conta do Microsoft Azure. Isso se aplica muito bem caso seu cenário seja de trabalhar apenas com projetos próprios, já se houver a necessidade de interagir com outras contas (empresariais, clientes e afins), você ficava limitado.</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/capa1.png"><img title="capa" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="capa" src="/assets/capa_thumb1.png" width="700" height="671" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/capa1.png"><img title="capa"  alt="capa" src="http://blob.vitormeriat.com.br/images/2014/06/capa_thumb1.png" width="700" height="671" /></a></p>
 <p><!--more-->
 <p align="justify">É importante falar que este recurso se aplica as contas novas após o lançamento deste recuso, porém, como o anunciado por Brian Harry, nos próximos sprints já será possível adicionar contas já existentes. </p>
 <blockquote><p>Important: Unfortunately, we do not yet support linking an existing VS Online account to AAD, and therefore there's no way to use your AD credentials to log into an account you've already created.</p>
 </blockquote>
 <p align="justify">Seguindo no que temos hoje, é possível de maneira muito simples criar uma nova conta do <strong>VSO</strong> já vinculando a mesma do Microsoft Azure.</p>
 <p align="justify">Para isso basta simplesmente logoar no portal e acessar a área do <strong>VISUAL STUDIO ONLINE</strong> no painel da esquerda como na imagem abaixo. Você pode utilizar o link caso ainda não tenha uma conta vinculada ou com este serviço selecionado clicar em <strong>+ NEW</strong> no canto esquerdo inferior.</p>
-<p align="justify"><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/04.png"><img title="04" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="04" src="/assets/04_thumb.png" width="700" height="400" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/06/04.png"><img title="04"  alt="04" src="http://blob.vitormeriat.com.br/images/2014/06/04_thumb.png" width="700" height="400" /></a></p>
 <p align="justify">&#160;</p>
 <p align="justify">Agora temos duas opções, criar uma nova conta ou vincular uma conta existente.&#160; Neste exemplo eu já possuo uma conta e estou criando uma do zero. Aqui eu já tenho a opção de definir se quero ou não vincular minha conta ao meu AAD. </p>
 <p align="justify">Em outras palavras em minutos estou subindo um <strong>TFS</strong> e já vou ter a possíbilidade de trabalhar com contas corporativas em um cenário mais comun ao das grandes empresas.</p>
-<p align="justify"><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/05.png"><img title="05" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="05" src="/assets/05_thumb.png" width="700" height="400" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/06/05.png"><img title="05"  alt="05" src="http://blob.vitormeriat.com.br/images/2014/06/05_thumb.png" width="700" height="400" /></a></p>
 <p align="justify">&#160;</p>
 <p align="justify">Note que&#160; agora na opção para linkar uma conta existente, ele exibe o meu VSO padrão que já está associado ao LIVE ID. Como já citei anteriormente o recurso para vinculação ao AAD só é possível para novas contas criadas apartir do lançamento do VSO. Sendo assim para minha conta padrão não consigo (por hora) utilizar este recurso.</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/06.png"><img title="06" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="06" src="/assets/06_thumb.png" width="700" height="397" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/06.png"><img title="06"  alt="06" src="http://blob.vitormeriat.com.br/images/2014/06/06_thumb.png" width="700" height="397" /></a></p>
 <p>&#160;</p>
 <p>No fim deste exemplo, é só entrar no portal do <strong>VSO</strong> para ver as contas listadas ao seu <strong>LIVE ID</strong>. No meu caso, a conta <strong><u>meriat</u></strong> foi criada via portal do Microsoft Azure e já está viculada ao meu <strong>AAD</strong>.</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/07.png"><img title="07" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="07" src="/assets/07_thumb.png" width="700" height="286" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/07.png"><img title="07"  alt="07" src="http://blob.vitormeriat.com.br/images/2014/06/07_thumb.png" width="700" height="286" /></a></p>
 <p>&#160;</p>
 <h2><font color="#ffc000">Bons estudos e até a próxima pessoal&#160; ;)</font></h2>
-<p> <a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/me-azul.png"><img title="me-azul" style="float:left;margin:0 25px 0 0;display:inline;" border="0" alt="me-azul" src="/assets/me-azul_thumb.png?w=175&amp;h=175" width="175" align="left" height="175" /></a>
-<p><strong><font color="#ffc000" size="5">Twitter: @</font></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><font color="#ffc000" size="5">vitormeriat</font></strong></a></p>
-<p><strong><font color="#ffc000" size="5">vitormeriat@</font></strong><a href="mailto:vitormeriat@gmail.com"><strong><font color="#ffc000" size="5">gmail.com</font></strong></a></p>
-<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><font color="#ffc000" size="5">vitor.pereira@studentpartner.com</font></strong></a></p>
 
   </section>
 

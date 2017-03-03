@@ -4,17 +4,17 @@ title: IoT Weekend GO–Dispositivos Inteligentes com Computação Cognitiva e I
 date: 2016-04-12
 categories:
   - Comunidade
-image-full: "https://meriatsite.blob.core.windows.net/images/2016/04/iotweekend.jpg"
+image-full: "http://blob.vitormeriat.com.br/images/2016/04/iotweekend.jpg"
 ---
 <p>
-  <img title="iotweekend" border="0" style="width: 100%;" alt="iotweekend" src="https://meriatsite.blob.core.windows.net/images/2016/04/iotweekend.jpg" />
+  <img title="iotweekend" border="0" style="width: 100%;" alt="iotweekend" src="http://blob.vitormeriat.com.br/images/2016/04/iotweekend.jpg" />
 </p>
 
 <p align="justify">Olá pessoal, primeiro gostaria de agradecer a todos os participantes do evento e da minha palestra. O feedback foi maravilhoso, sem falar o networking. Este foi o primeiro IoT Weekend do ano, e ocorreu em Goiânia. Como o prometido segue abaixo algumas informações, material e referências da minha palestra no <a href="http://www.iotweekend.com.br/2016/Goiania/index.html" target="_blank" > IoT Weekend GO 2016</a>. Assim que possível tento gravar um vídeo com o experimento realizada durante a palestra.</p>
 
 
 <p align="justify">
-  <img title="logo_IOT_GO_header" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: left; padding-top: 0px; padding-left: 0px; border-left: 0px; margin: 0px 30px 0px 10px; display: inline; padding-right: 0px" border="0" alt="logo_IOT_GO_header" src="https://meriatsite.blob.core.windows.net/images/2016/04/logo_IOT_GO_header.png" align="left" />
+  <img title="logo_IOT_GO_header" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: left; padding-top: 0px; padding-left: 0px; border-left: 0px; margin: 0px 30px 0px 10px; display: inline; padding-right: 0px" border="0" alt="logo_IOT_GO_header" src="http://blob.vitormeriat.com.br/images/2016/04/logo_IOT_GO_header.png" align="left" />
 
 O tema foi em relação a computação congnitiva, inteligência artificial e IoT. Embora seja um tema recente, cognição na computação já provou ter um grande potencial. A geração de conhecimento por meio de aprendizado e dos dados disponíveis é a próxima grande onda de inovação no mercado de tecnologia. Empresas usando feedbacks e dados de ambiente de lojas para traçar e explorar os padrões de consumo dos clientes, hospitais usando cognição para acelerar pesquisas contra o câncer, cidades controlando melhor os seus recursos são pequenos exemplos do que já temos no mundo conectado de hoje. </p>
 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Mensageria–Uma introdução ao Enterprise Integration
-date: 2014-10-30 
+date: 2014-10-30
 categories:
   - Enterprise Integration
   - SOA
 
 ---
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/10/capa2.png"><img title="capa" style="background-image:none;float:left;padding-top:0;padding-left:0;margin:10px 15px 0 0;display:inline;padding-right:0;border-width:0;" border="0" alt="capa" src="{{ site.baseurl }}/assets/capa_thumb2.png" width="465" align="left" height="372" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/10/capa2.png"><img title="capa" style="background-image:none;float:left;padding-top:0;padding-left:0;margin:10px 15px 0 0;display:inline;padding-right:0;border-width:0;" border="0" alt="capa" src="{{ site.baseurl }}/assets/capa_thumb2.png" width="465" align="left" height="372" /></a></p>
 <p align="justify">Primeiro vale notar qual a necessidade da mensageria. Hoje muito se fala em sistemas distribuídos, escaláveis, cloud computing e etc. O que nos leva a perceber que a cada dia temos mais sistemas e serviços sendo utilizados em massa, e que logicamente estes sistemas raramente são construídas de forma isolada.</p>
 <p align="justify">O que temos visto é que a prática de mercado aponta para uma pluralidade de sistemas, o que por sua vez aponta para uma pluralidade de plataformas e linguagens. Neste post vamos iniciar os estudos sobre as técnicas de integração de sistemas (Enterprise Integration Patterns), iniciando pela mensageria.</p>
 <p><!--more--><br />
@@ -47,9 +47,9 @@ categories:
 <p>&nbsp;</p>
 <h2>Então, o que é mensageria?</h2>
 <p align="justify">Vamos considerar o seguinte cenário para a abstração: Uma chamada telefônica é uma forma de comunicação <strong>síncrona</strong> porque os dois lados precisam estar disponíveis ao mesmo tempo. </p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/10/fig1.png"><img title="FIG1" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG1" src="{{ site.baseurl }}/assets/fig1_thumb.png" width="700" height="257" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/10/fig1.png"><img title="FIG1" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG1" src="{{ site.baseurl }}/assets/fig1_thumb.png" width="700" height="257" /></a></p>
 <p align="justify">Já se um dos lados liga e deixa um recado de voz, esta mensagem pode ser ouvida e respondida conforme a disponibilidade do outro lado. Neste caso dizemos que houve uma comunicação <strong>assíncrona</strong>.</p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/10/fig2.png"><img title="FIG2" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG2" src="{{ site.baseurl }}/assets/fig2_thumb.png" width="700" height="331" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/10/fig2.png"><img title="FIG2" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG2" src="{{ site.baseurl }}/assets/fig2_thumb.png" width="700" height="331" /></a></p>
 <blockquote><p align="left">Mensageria é uma tecnologia que permite comunicação de alta velocidade e de forma assíncrona entre sistemas diferentes com mensagens entregues de forma garantida.</p>
 </blockquote>
 <p align="justify">Os canais, também conhecidos como filas de mensagens (<strong>MQ = message queuing</strong>), são caminhos lógicos que conectam os sistemas. Eles se comportam como se fossem uma coleção de mensagens compartilhadas entre múltiplos computadores que podem ser acessados concorrentemente por múltiplas aplicações.</p>
@@ -70,7 +70,7 @@ categories:
 <li><strong>PROCESS</strong> – o receiver extrai os dados da mensagem.</li>
 </ol>
 <p>Tudo de acordo com a figura abaixo:</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/10/fig3.png"><img title="FIG3" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG3" src="{{ site.baseurl }}/assets/fig3_thumb.png" width="700" height="355" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/10/fig3.png"><img title="FIG3" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="FIG3" src="{{ site.baseurl }}/assets/fig3_thumb.png" width="700" height="355" /></a></p>
 <p>Dois tipos importantes de envio de mensagens:</p>
 <ol>
 <li>
@@ -91,7 +91,3 @@ categories:
 </ul>
 <p>&nbsp;</p>
 <h2><font color="#666666">Bons estudos e até a próxima pessoal&nbsp; ;)</font></h2>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/me-azul.png"><font color="#666666"><img title="me-azul" style="float:left;margin:0 30px 0 0;display:inline;" border="0" alt="me-azul" src="{{ site.baseurl }}/assets/me-azul_thumb.png?w=263&amp;h=263" width="175" align="left" height="175" /></font></a>
-<p><strong><font color="#666666" size="5">Twitter: @</font></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><font color="#666666" size="5">vitormeriat</font></strong></a>
-<p><strong><font color="#666666" size="5">vitormeriat@</font></strong><a href="mailto:vitormeriat@gmail.com"><strong><font color="#666666" size="5">gmail.com</font></strong></a>
-<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><font color="#666666" size="5">vitor.pereira@studentpartner.com</font></strong></a></p></p></p></p></p>

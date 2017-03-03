@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -152,7 +163,7 @@
   <section class="section-padding post" itemprop="articleBody">
     <p>Essa é uma dica para a galera (que como eu), utiliza o Jupyter Notebooks como ferramenta de estudo ou trabalho.</p>
 
-<p style="background-color: #35424a"><img title="capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="capa" src="https://meriatsite.blob.core.windows.net/images/2016/10/capa.jpg" width="752" height="412" /></p>
+<p style="background-color: #35424a"><img title="capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="capa" src="http://blob.vitormeriat.com.br/images/2016/10/capa.jpg" width="752" height="412" /></p>
 
 <p>Provavelmente se você está lendo isto, é por que já conhece o Jupyter Notebooks ou antigo IPython, e tem interesse em usar ou entender esta oferta. Caso você não conheça esta ferramenta, basta saber que o Jupyter Notebooks oferece um environment com suporte a várias linguagens de programação, incluindo Python, R, MATLAB e etc. Esta é uma ferramenta que caiu nas graças dos programadores por proporcionar um meio simples de programar, visualizar e documentar de maneira eficientes seus experimentos. Em breve escrevo algo específico sobre essa ferramenta aqui no blog.</p>
 
@@ -180,27 +191,27 @@
 <h2 id="start">Start</h2>
 <p>Para utilizar o serviço é algo tão simples quanto acessar o serviço e se autenticar no serviço.</p>
 
-<p style="background-color: #35424a"><img title="azure-notebook-1" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-1" src="https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-1.jpg" width="100%" /></p>
+<p style="background-color: #35424a"><img title="azure-notebook-1" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-1" src="http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-1.jpg" width="100%" /></p>
 
 <p>Assim que você informar sua credencial, o serviço vai te solicitar a permissão para criar uma ID para sua conta no serviço. Diga sim e siga em frente…</p>
 
 <p>Assim que tudo estiver pronto, você deve ver uma tela como abaixo:</p>
 
-<p><img title="azure-notebook-2" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-2" src="https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-2.jpg" width="100%" /></p>
+<p><img title="azure-notebook-2" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-2" src="http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-2.jpg" width="100%" /></p>
 
 <p>Done. Você já um ambiente pronto, e inclusive alguns exemplos para testar. De cara, uma coisa interessante notar é que podemos importar notebooks direto de nosso computador ou de uma URL.</p>
 
-<p><img title="azure-notebook-3" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-3" src="https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-3.jpg" width="100%" /></p>
+<p><img title="azure-notebook-3" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-3" src="http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-3.jpg" width="100%" /></p>
 
 <p>Agora perceba que todos os nossos cadernos estão vinculados a uma biblioteca chamada <strong>Sample notebooks</strong>. Sendo assim vamos criar uma biblioteca.  &lt;/p&gt;</p>
 
 <p align="justify">Clique em <strong>My libraries</strong>. Na página que se segue clique em <strong>New Library</strong> e informe o nome, descrição e url personalizada.</p>
 
-<p><img title="azure-notebook-4" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-4" src="https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-4.jpg" width="100%" /></p>
+<p><img title="azure-notebook-4" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-4" src="http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-4.jpg" width="100%" /></p>
 
 <p>Assim que sua biblioteca estiver criada você pode optar por importar um caderno ou abrir seu Jupyter Notebooks.</p>
 
-<p><img title="azure-notebook-5" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-5" src="https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-5.jpg" width="100%" /></p>
+<p><img title="azure-notebook-5" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-5" src="http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-5.jpg" width="100%" /></p>
 
 <p>Agora estamos em terreno conhecido. É só criar um novo Notebook usando Py2, Py3 ou R.</p>
 

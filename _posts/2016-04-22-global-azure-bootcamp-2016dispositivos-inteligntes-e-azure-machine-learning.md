@@ -7,18 +7,18 @@ categories:
   - IoT
   - Machine Learning
   - Microsoft Azure
-image-full: "https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016.jpg"
+image-full: "http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016.jpg"
 ---
 <p align="justify">Dia 16 de abril de 2016 ocorreu mais uma edição do Global Azure Bootcamp. Este é um evento mundial que ocorre quase simultâneamente, e que teve mais uma vez a participação em Brasília, desta vez sob a tutela do <a href="https://mvp.microsoft.com/pt-br/PublicProfile/5001388" target="_blank">Jucinei Santos</a>, MVP de Windows Development.</p>
 
 <p align="justify">Minha participação foi uma análise sobre os chamados dispositivos inteligêntes, e como o Microsoft Azure está preparado para nos auxiliar nos cenários presente e futuro, quando falamos em tecnologias de Big Data, Machine Learning e serviços específos para o mundo de IoT.</p>
 
 <p style="background-color: #000000" align="center">
-<img alt="gwabbsb2016" src="https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016.jpg" />
+<img alt="gwabbsb2016" src="http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016.jpg" />
 
-<img alt="gwabbsb2016b" src="https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016b.jpg" />
+<img alt="gwabbsb2016b" src="http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016b.jpg" />
 
-<img alt="gwabbsb2016c" src="https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016c.jpg" />
+<img alt="gwabbsb2016c" src="http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016c.jpg" />
 </p>
 
 <p><!--more-->

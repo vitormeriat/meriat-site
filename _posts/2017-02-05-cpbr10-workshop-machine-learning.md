@@ -8,10 +8,10 @@ categories:
   - Jupyter Notebook
   - Python
 description: Workshop de Machine Learning na Campus Party 2017, a CPBR10. Este ano tive a honra de mais uma vez palestrar na Campus Party. Na minha deixa pude demonstrar como iniciar um projeto de Machine Learning do zero utilizando como ferramentas o Jupyter Notebook, Python e o famoso dataset Pima Indians Diabetes Database.
-image-full: "http://meriatsite.blob.core.windows.net/images/2017/02/05/campus-ia.jpg"
+image-full: "http://blob.vitormeriat.com.br/images/2017/02/05/campus-ia.jpg"
 ---
 <div style="width: 100%; -ms-align-items: center; -webkit-align-items: center; align-items: center;">
-    <img style="width: 100%;" src="https://meriatsite.blob.core.windows.net/images/2017/02/05/campus-ia.jpg" class="absolute-bg">
+    <img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/02/05/campus-ia.jpg" class="absolute-bg">
 </div>
 
 Este ano tive a honra de mais uma vez palestrar na Campus Party. Como de costume minha participação foi em conjunto com a comunidade CrazyTechGuys.

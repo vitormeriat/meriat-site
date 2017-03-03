@@ -5,13 +5,13 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 27 Feb 2017 00:43:42 -0300</pubDate>
-    <lastBuildDate>Mon, 27 Feb 2017 00:43:42 -0300</lastBuildDate>
+    <pubDate>Thu, 02 Mar 2017 21:59:58 -0300</pubDate>
+    <lastBuildDate>Thu, 02 Mar 2017 21:59:58 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
         <title>Apresentando o Meriat Machine Learning Notes</title>
-        <description>&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2017/02/15/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/02/15/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No último ano tive a oportunidade de trabalhar em projetos envolvendo IoT e Machine Learning. No processo entre aplicação, estudos e desenvolvimento, acabei separando algum material e exemplos que me ajudaram a inicar nesta carreira, bem como no processo de aprendizagem.&lt;/p&gt;
 
@@ -54,7 +54,7 @@
         <title>Machine Learning e sua literatura clássica</title>
         <description>&lt;p&gt;A listagem a seguir pode ser categorizada como, &lt;strong&gt;Popular Science Machine Learning Books&lt;/strong&gt; ou &lt;strong&gt;Beginner Machine Learning Books&lt;/strong&gt;. É possível ainda encontrar vários livros desta listagem em categorias como &lt;strong&gt;Introductory Machine Learning Books&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2017/02/07/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;machine-learning-books-selection&quot;&gt;Machine Learning Books Selection&lt;/h3&gt;
 
@@ -152,7 +152,7 @@
       <item>
         <title>Workshop de Machine Learning na CPBR10</title>
         <description>&lt;div style=&quot;width: 100%; -ms-align-items: center; -webkit-align-items: center; align-items: center;&quot;&gt;
-    &lt;img style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2017/02/05/campus-ia.jpg&quot; class=&quot;absolute-bg&quot; /&gt;
+    &lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/02/05/campus-ia.jpg&quot; class=&quot;absolute-bg&quot; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Este ano tive a honra de mais uma vez palestrar na Campus Party. Como de costume minha participação foi em conjunto com a comunidade CrazyTechGuys.&lt;/p&gt;
@@ -258,7 +258,7 @@
         <title>Microsoft Azure Notebooks–Jupyter Notebooks as a Service</title>
         <description>&lt;p&gt;Essa é uma dica para a galera (que como eu), utiliza o Jupyter Notebooks como ferramenta de estudo ou trabalho.&lt;/p&gt;
 
-&lt;p style=&quot;background-color: #35424a&quot;&gt;&lt;img title=&quot;capa&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;capa&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/capa.jpg&quot; width=&quot;752&quot; height=&quot;412&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;background-color: #35424a&quot;&gt;&lt;img title=&quot;capa&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;capa&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/capa.jpg&quot; width=&quot;752&quot; height=&quot;412&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Provavelmente se você está lendo isto, é por que já conhece o Jupyter Notebooks ou antigo IPython, e tem interesse em usar ou entender esta oferta. Caso você não conheça esta ferramenta, basta saber que o Jupyter Notebooks oferece um environment com suporte a várias linguagens de programação, incluindo Python, R, MATLAB e etc. Esta é uma ferramenta que caiu nas graças dos programadores por proporcionar um meio simples de programar, visualizar e documentar de maneira eficientes seus experimentos. Em breve escrevo algo específico sobre essa ferramenta aqui no blog.&lt;/p&gt;
 
@@ -286,27 +286,27 @@
 &lt;h2 id=&quot;start&quot;&gt;Start&lt;/h2&gt;
 &lt;p&gt;Para utilizar o serviço é algo tão simples quanto acessar o serviço e se autenticar no serviço.&lt;/p&gt;
 
-&lt;p style=&quot;background-color: #35424a&quot;&gt;&lt;img title=&quot;azure-notebook-1&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-1&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-1.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;background-color: #35424a&quot;&gt;&lt;img title=&quot;azure-notebook-1&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-1&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-1.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Assim que você informar sua credencial, o serviço vai te solicitar a permissão para criar uma ID para sua conta no serviço. Diga sim e siga em frente…&lt;/p&gt;
 
 &lt;p&gt;Assim que tudo estiver pronto, você deve ver uma tela como abaixo:&lt;/p&gt;
 
-&lt;p&gt;&lt;img title=&quot;azure-notebook-2&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-2&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-2.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;azure-notebook-2&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-2&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-2.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Done. Você já um ambiente pronto, e inclusive alguns exemplos para testar. De cara, uma coisa interessante notar é que podemos importar notebooks direto de nosso computador ou de uma URL.&lt;/p&gt;
 
-&lt;p&gt;&lt;img title=&quot;azure-notebook-3&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-3&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-3.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;azure-notebook-3&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-3&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-3.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Agora perceba que todos os nossos cadernos estão vinculados a uma biblioteca chamada &lt;strong&gt;Sample notebooks&lt;/strong&gt;. Sendo assim vamos criar uma biblioteca.  &amp;lt;/p&amp;gt;&lt;/p&gt;
 
 &lt;p align=&quot;justify&quot;&gt;Clique em &lt;strong&gt;My libraries&lt;/strong&gt;. Na página que se segue clique em &lt;strong&gt;New Library&lt;/strong&gt; e informe o nome, descrição e url personalizada.&lt;/p&gt;
 
-&lt;p&gt;&lt;img title=&quot;azure-notebook-4&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-4&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-4.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;azure-notebook-4&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-4&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-4.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Assim que sua biblioteca estiver criada você pode optar por importar um caderno ou abrir seu Jupyter Notebooks.&lt;/p&gt;
 
-&lt;p&gt;&lt;img title=&quot;azure-notebook-5&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-5&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/azure-notebook-5.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;azure-notebook-5&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-5&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-5.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Agora estamos em terreno conhecido. É só criar um novo Notebook usando Py2, Py3 ou R.&lt;/p&gt;
 
@@ -332,7 +332,7 @@
         <title>IoT Weekend Recife 2016 - Como a Inteligência Artificial vai mudar a Internet das Coisas</title>
         <description>&lt;p&gt;Olá pessoal, hoje, dia 06 de agosto de 2016 tive mais uma vez o privilégio de palestrar no IoT Weekend edição Recife. Esta é segunda vez em Recife e quarta edição geral do evento, que é inteiramente dedicado a Internet of Things, abrangendo do ponto de vista dos negócios aos famoso under the hood dos detalhes técnicos.&lt;/p&gt;
 
-&lt;p&gt;&lt;img title=&quot;capa&quot; alt=&quot;capa&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/08/capa.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;capa&quot; alt=&quot;capa&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/08/capa.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Esta edição vez estive falando novamente sobre Inteligência, dessa vez abordando como inteligência artificial está mudando a maneira como fazemos e pensamos na internet das coisas, com uma visão mais abrangente sobre o tema.&lt;/p&gt;
 
@@ -359,13 +359,13 @@
         <description>&lt;p align=&quot;justify&quot;&gt;Durante o mês de junho tive a oportunidade de participar de alguns eventos de tecnologia em New York, e é claro, de aproveitar essa cidade maravilhosa.&lt;/p&gt;
 
 &lt;p&gt;
-  &lt;img alt=&quot;Cmcc5mYVIAAoB5V&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/Cmcc5mYVIAAoB5V.jpg&quot; /&gt;
+  &lt;img alt=&quot;Cmcc5mYVIAAoB5V&quot; style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/Cmcc5mYVIAAoB5V.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p align=&quot;justify&quot;&gt;Este evento ocorreu nos dias 7, 8 e 9 de junho no famoso &lt;a href=&quot;http://www.javitscenter.com/&quot; target=&quot;_blank&quot;&gt;Javits Center&lt;/a&gt;. Este é um evento onde conseguimos ver as tendências do mercado de IoT, por meio das empresas, cases e profissionais que estão atuando no topo do mercado.&lt;/p&gt;
 
 &lt;p&gt;
-&lt;img alt=&quot;IMG_0232&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0232.jpg&quot; /&gt;
+&lt;img alt=&quot;IMG_0232&quot; style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/IMG_0232.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p align=&quot;justify&quot;&gt;Entre os assuntos disseminados nesta edição, tivemos temas como: &lt;u&gt;IoT: It’s Evolution and Connection to the Cloud&lt;/u&gt;, &lt;u&gt;Continuous Delivery of Microservices: Patterns and Processes&lt;/u&gt;, &lt;u&gt;The Internet of [Broken] Things: The Big Data Challenges of Keeping IoT Reliable&lt;/u&gt;, &lt;u&gt;The Science Behind Generating Big Data&lt;/u&gt;, &lt;u&gt;Secure Communications in P2P and Social IoT Networks&lt;/u&gt;… &lt;/p&gt;
@@ -378,13 +378,13 @@
 &lt;p align=&quot;justify&quot;&gt;Outro ponto alto em NYC são os meetups. Tive a oportunidade de participar do &lt;a href=&quot;https://nytm.org/&quot; target=&quot;_blank&quot;&gt;NY TECH MEETUP&lt;/a&gt;, e do maravilhos afterparty. &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;img alt=&quot;IMG_0318&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0318.jpg&quot; /&gt;
+  &lt;img alt=&quot;IMG_0318&quot; style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/IMG_0318.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p align=&quot;justify&quot;&gt;Outro ponto interessante é que geralmente os &lt;strong&gt;meetups&lt;/strong&gt; são utilizados como meio de network. Os apresentadores montam seus “&lt;strong&gt;stands&lt;/strong&gt;”, colocam seus cartões, as bebidas são postas na mesa, e galera circula com seus copos em uma mão, e os cartões na outra. Agora é hora de partilhar ideias, aprendizados e mostrar os seu trabalho.&lt;/p&gt;
 
 &lt;p&gt;
-  &lt;img alt=&quot;IMG_0329&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0329.jpg&quot; /&gt;
+  &lt;img alt=&quot;IMG_0329&quot; style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/IMG_0329.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
@@ -394,13 +394,13 @@
 &lt;p align=&quot;justify&quot;&gt;Uma grata surpresa foi a oportunidade de participar do primeiro MVP Open Days na Ámerica do Norte, que também foi meu primeiro evento na Microsoft como MVP. &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;img alt=&quot;IMG_0512&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0512.jpg&quot; /&gt;
+  &lt;img alt=&quot;IMG_0512&quot; style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/IMG_0512.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p align=&quot;justify&quot;&gt;Tive o grande prazer de conhecer a Microsoft NYC, na famosa Times Square 11. Para quem não conhece, o MVP Open Day é uma conferência com objetivo de reunir MVPs de uma determinado país a fim de interagir, aprender e trocar experiências.&lt;/p&gt;
 
 &lt;p&gt;
-  &lt;img alt=&quot;IMG_0622&quot; style=&quot;width: 100%;&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/10/IMG_0622.jpg&quot; /&gt;
+  &lt;img alt=&quot;IMG_0622&quot; style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/IMG_0622.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;h3 id=&quot;valeu-galera-&quot;&gt;Valeu galera ;)&lt;/h3&gt;
@@ -418,7 +418,7 @@
         <title>DevOps Summit 2016–Azure Stack - O poder da nuvem em seu datacenter</title>
         <description>&lt;p&gt;Dia 07/05 na seda da Microsoft no Brasil, aconteceu a primeira edição do DevOps Summit Brasil. Esse é um evento que teve como origem a fusão dos já consagrados Azure Summit Brasil e ALM Summit Brasil com foco em promover o conhecimento de Cloud Computing e DevOps.&lt;/p&gt;
 
-&lt;p&gt;&lt;img title=&quot;spark-tela&quot; alt=&quot;spark-tela&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/05/devopssummit.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;spark-tela&quot; alt=&quot;spark-tela&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/05/devopssummit.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Azure Stack é o primeiro produto de uma nova categoria hybrid cloud platform. Este novo produto permite que a TI entregue os recursos do seu Datacenter no mesmo modelo de entrega de serviços da nuvem pública.&lt;/p&gt;
 
@@ -455,11 +455,11 @@
 &lt;p align=&quot;justify&quot;&gt;Minha participação foi uma análise sobre os chamados dispositivos inteligêntes, e como o Microsoft Azure está preparado para nos auxiliar nos cenários presente e futuro, quando falamos em tecnologias de Big Data, Machine Learning e serviços específos para o mundo de IoT.&lt;/p&gt;
 
 &lt;p style=&quot;background-color: #000000&quot; align=&quot;center&quot;&gt;
-&lt;img alt=&quot;gwabbsb2016&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016.jpg&quot; /&gt;
+&lt;img alt=&quot;gwabbsb2016&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016.jpg&quot; /&gt;
 
-&lt;img alt=&quot;gwabbsb2016b&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016b.jpg&quot; /&gt;
+&lt;img alt=&quot;gwabbsb2016b&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016b.jpg&quot; /&gt;
 
-&lt;img alt=&quot;gwabbsb2016c&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/gwabbsb2016c.jpg&quot; /&gt;
+&lt;img alt=&quot;gwabbsb2016c&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016c.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;!--more--&gt;
@@ -503,13 +503,13 @@
       <item>
         <title>IoT Weekend GO–Dispositivos Inteligentes com Computação Cognitiva e IA</title>
         <description>&lt;p&gt;
-  &lt;img title=&quot;iotweekend&quot; border=&quot;0&quot; style=&quot;width: 100%;&quot; alt=&quot;iotweekend&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/iotweekend.jpg&quot; /&gt;
+  &lt;img title=&quot;iotweekend&quot; border=&quot;0&quot; style=&quot;width: 100%;&quot; alt=&quot;iotweekend&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/iotweekend.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p align=&quot;justify&quot;&gt;Olá pessoal, primeiro gostaria de agradecer a todos os participantes do evento e da minha palestra. O feedback foi maravilhoso, sem falar o networking. Este foi o primeiro IoT Weekend do ano, e ocorreu em Goiânia. Como o prometido segue abaixo algumas informações, material e referências da minha palestra no &lt;a href=&quot;http://www.iotweekend.com.br/2016/Goiania/index.html&quot; target=&quot;_blank&quot;&gt; IoT Weekend GO 2016&lt;/a&gt;. Assim que possível tento gravar um vídeo com o experimento realizada durante a palestra.&lt;/p&gt;
 
 &lt;p align=&quot;justify&quot;&gt;
-  &lt;img title=&quot;logo_IOT_GO_header&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: left; padding-top: 0px; padding-left: 0px; border-left: 0px; margin: 0px 30px 0px 10px; display: inline; padding-right: 0px&quot; border=&quot;0&quot; alt=&quot;logo_IOT_GO_header&quot; src=&quot;https://meriatsite.blob.core.windows.net/images/2016/04/logo_IOT_GO_header.png&quot; align=&quot;left&quot; /&gt;
+  &lt;img title=&quot;logo_IOT_GO_header&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: left; padding-top: 0px; padding-left: 0px; border-left: 0px; margin: 0px 30px 0px 10px; display: inline; padding-right: 0px&quot; border=&quot;0&quot; alt=&quot;logo_IOT_GO_header&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/logo_IOT_GO_header.png&quot; align=&quot;left&quot; /&gt;
 
 O tema foi em relação a computação congnitiva, inteligência artificial e IoT. Embora seja um tema recente, cognição na computação já provou ter um grande potencial. A geração de conhecimento por meio de aprendizado e dos dados disponíveis é a próxima grande onda de inovação no mercado de tecnologia. Empresas usando feedbacks e dados de ambiente de lojas para traçar e explorar os padrões de consumo dos clientes, hospitais usando cognição para acelerar pesquisas contra o câncer, cidades controlando melhor os seus recursos são pequenos exemplos do que já temos no mundo conectado de hoje. &lt;/p&gt;
 

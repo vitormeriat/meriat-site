@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -151,7 +162,7 @@
 
   <section class="section-padding post" itemprop="articleBody">
     <p align="justify">Como já é de conhecimento geral, no dia 03-04-2014 a Microsoft após 5 anos resolveu alterar o nome da sua plataforma Cloud&#160; de <strong>Windows Azure</strong> para <strong>Microsoft Azure</strong>.     <br />Esta mudança como anunciado por Steven Martin, faz parte da estratégia da Microsoft em refletir a real condição de sua plataforma que é um ambiente mais aberto, onde se é possível trabalhar com Python, Ruby, Node.js, Java, Hadoop, Linux, Oracle e não apenas um serviço do Windows-centric.</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/05/ms-cloud.png"><img title="MS CLOUD" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="MS CLOUD" src="/assets/ms-cloud_thumb.png" width="540" height="438" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/05/ms-cloud.png"><img title="MS CLOUD" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="MS CLOUD" src="http://blob.vitormeriat.com.br/images/2014/05/ms-cloud_thumb.png" width="540" height="438" /></a></p>
 <p><!--more-->
 <p align="justify">Este post porém faz parte de uma conjectura... a algum tempo já vinha falando em algumas discussões que o nome Windows Azure não fazia mais sentido e que isso deveria mudar num futuro próximo. Pois bem, em menção a isso escrevi o POST: <a href="http://vitormeriat.com.br/2014/03/26/agora-microsoft-azure-por-que-eu-j-esperava-por-isso/" target="_blank">Agora é Microsoft Azure – Por que eu já esperava por isso!</a></p>
 <p align="justify">Baseado nos últimos anúncios, propagandas e conversas que tenho acompanhado nos fóruns e grupos de Cloud,&#160; me arrisco a falar quem num futuro próximo teremos mais mudanças…</p>
@@ -167,10 +178,6 @@
 <p align="justify">Para mais informações sobre a <a href="http://www.microsoft.com/enterprise/MicrosoftCloud" target="_blank">Microsoft Cloud clique aqui!</a></p>
 <p>&#160;</p>
 <h1>Até mais pessoal!</h1>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2012/06/me-azul.png"><img title="Me Azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="Me Azul" src="/assets/me-azul_thumb.png?w=110&amp;h=110&amp;h=110" width="110" align="left" height="110" /></a></p>
-<h3><font style="font-weight:bold;" color="#4f81bd">Twitter: </font><a href="http://twitter.com/#%21/vitormeriat"><font style="font-weight:bold;" color="#4f81bd">@vitormeriat</font></a></h3>
-<h3><a href="mailto:vitormeriat@gmail.com"><font style="font-weight:bold;" color="#4f81bd">vitormeriat@gmail.com</font></a></h3>
-<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font style="font-weight:bold;" color="#4f81bd">vitor.pereira@studentpartner.com</font></a></h3>
 
   </section>
 

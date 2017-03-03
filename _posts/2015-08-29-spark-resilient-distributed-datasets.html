@@ -9,7 +9,7 @@ categories:
 
 <p align="justify"><a href="http://spark.apache.org/"><strong><font size="4">Spark</font></strong></a> é uma estrutura de processamento paralelo, um sistema <strong>Open Source</strong> para computação em <a href="http://pt.wikipedia.org/wiki/Cluster"><strong>cluster</strong></a> cujo objetivo é possibilitar que a análise de dados seja a mais rápida possível. <strong>Spark</strong> foi pensado com base na crescente necessidade de análise de grandes volumes de dados no menor tempo possível. Seu mecanismo de processamento foi desenvolvido com foco em velocidade e facilidade de uso, visando sempre uma análise sofisticada.
 <p style="background-color: #0e324a">
-    <img width="100%" alt="spark-bigdata" src="https://meriatsite.blob.core.windows.net/images/2015/08/spark-bigdata.jpg" />
+    <img width="100%" alt="spark-bigdata" src="http://blob.vitormeriat.com.br/images/2015/08/spark-bigdata.jpg" />
 </p>
 
 <p align="justify">Estou falando de um projeto <strong>Apache</strong> anunciado como <u>“lightning fast cluster computing”</u>, que te permite (segundo o Apache) executar programas <strong>100 vezes</strong> mais rápidos em memória e <strong>10 vezes</strong> mais rápidos em disco, quando comparado ao Hadoop, por exemplo.
@@ -31,11 +31,11 @@ sparkContext.textFile("hdfs://...")
 
 <p align="justify">A maioria da soluções envolvendo modelo de programação em cluster como por exemplo, o <strong>Hadoop,</strong> são baseados em um fluxo de dados acíclico onde os registros são carregados de um meio de armazenamento estável (sistema de arquivos distribuído, banco de dados, etc), submetidos a um <strong>DAG</strong> <strong>(Directed Acyclic Graph)</strong> de operadores deterministicos, e escritos de volta em um meio de armazenamento estável. Observe a imagem abaixo, que representa um <strong>DAG</strong>, onde as atividades estão interligadas por ciclos que não estão em uma sequência seguindo uma mesma direção.</p>
 <p align="justify">
-    <img width="100%" alt="Directed_acyclic_graph" src="https://meriatsite.blob.core.windows.net/images/2015/08/Directed_acyclic_graph.png" />
+    <img width="100%" alt="Directed_acyclic_graph" src="http://blob.vitormeriat.com.br/images/2015/08/Directed_acyclic_graph.png" />
 </p>
 <p align="justify">A imagem abaixo exibe um fluxo de dados acíclico com um modelo tradicional <strong>MapReduce</strong>. Ela demonstra a leitura dos dados de um meio estável, o processamento utilizando MapReduce em paralelo e a escrita do resultado em um meio estável. Para aplicações que precisam ler conjuntos de dados repetidas vezes e utilizar funções de agregação (<strong>count</strong>, <strong>min</strong>, <strong>max</strong>, <strong>avg</strong>) esse modelo não é tão eficiente pois precisa ler os dados do disco a cada query, para quem esta acostumado a realizar análise de dados principalmente utilizando Hadoop provavelmente conhece o <a href="http://hive.apache.org/">Apache Hive</a> cuja a função é fornecer um sistema de <strong>Data Warehouse</strong> para Hadoop.</p>
 <p style="background-color: #0c3f67">
-  <img width="100%" alt="map-reduce-end" src="https://meriatsite.blob.core.windows.net/images/2015/08/map-reduce-end.png" />
+  <img width="100%" alt="map-reduce-end" src="http://blob.vitormeriat.com.br/images/2015/08/map-reduce-end.png" />
 </p>
 <p align="justify">Nesse ponto o Spark desponta como uma solução mais viável pois uma vez os dados em memória a manipulação das informações se torna muito mais rápida, em alguns estudos Spark se mostra <u><strong>30 vezes</strong></u> mais eficiente que <strong>Hive/Hadoop</strong>. </p>
 

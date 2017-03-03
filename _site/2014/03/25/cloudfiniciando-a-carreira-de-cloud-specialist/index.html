@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -150,7 +161,7 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p><a href="https://meriatsite.blob.core.windows.net/images/2014/03/exin.png"><img title="exin" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:left;padding-top:0;padding-left:0;margin:0 25px 0 0;border-left:0;display:inline;padding-right:0;" border="0" alt="exin" src="/assets/exin_thumb.png" width="320" align="left" height="436" /></a></p>
+    <p><a href="http://blob.vitormeriat.com.br/images/2014/03/exin.png"><img title="exin" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:left;padding-top:0;padding-left:0;margin:0 25px 0 0;border-left:0;display:inline;padding-right:0;" border="0" alt="exin" src="http://blob.vitormeriat.com.br/images/2014/03/exin_thumb.png" width="320" align="left" height="436" /></a></p>
 <p align="justify">Olá pessoal. Apesar de estar no mundo das Nuvens “<strong>a long time ago</strong>”, os últimos meses (final de 2013 e início de 2014) estão trazendo novos caminhos para minha vida profissional.</p>
 <p align="justify"><strong>Mudar</strong> para São Paulo e entrar em contato com uma gama mais diversificade de profissionais da TI tem sido escencial para expandir os horizontes, e uma das primeiras coisas que ouvi aqui foi: <em>“Cara, você tem que conhecer os conceitos e não só a tecnologia. Para quem só conhece o martelo todo problema vira prego!”.</em></p>
 <p align="justify">Foi nessa pegada que decidi estudar a tal da Cloud e não apenas uma <strong>tecnologia/player/fornecedor</strong> específico como Windows Azure ou Amazon Web Services…</p>
@@ -183,10 +194,6 @@
 <p align="justify">Estas provas tem por objetivo atestar seu conhecimento nos conceitos, implementações, arquiteturas e outros “saberes” fundamentais para se implantar Cloud Computing em um ambiente corporativo.</p>
 <p>&#160;</p>
 <h2><font color="#4f81bd">Até mais e bom estudo a todos!</font></h2>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2012/06/me-azul.png"><font color="#4f81bd"><img title="Me Azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="Me Azul" src="/assets/me-azul_thumb.png?w=110&amp;h=110&amp;h=110" width="110" align="left" height="110" /></font></a></p>
-<h3><font color="#4f81bd"><font style="font-weight:bold;">Twitter: </font></font><a href="http://twitter.com/#!/vitormeriat"><font color="#4f81bd"><font style="font-weight:bold;">@vitormeriat</font></font></a></h3>
-<h3><a href="mailto:vitormeriat@gmail.com"><font color="#4f81bd"><font style="font-weight:bold;">vitormeriat@gmail.com</font></font></a></h3>
-<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font color="#4f81bd"><font style="font-weight:bold;">vitor.pereira@studentpartner.com</font></font></a></h3>
 
   </section>
 
@@ -216,7 +223,7 @@
   <div style="margin-top: 60px; margin-bottom: 60px;">
     
     
-      2 minutes to read
+      1 minutes to read
     
   </div>
 

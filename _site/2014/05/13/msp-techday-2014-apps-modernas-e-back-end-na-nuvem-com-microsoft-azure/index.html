@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -151,7 +162,7 @@
 
   <section class="section-padding post" itemprop="articleBody">
     <p>Olá pessoal. Como prometido segue o post com o material da palestra APPs moderdas e Back-End na nuvem com Microsoft Azure.</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/05/capa.png"><img title="capa" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="capa" src="/assets/capa_thumb.png" width="540" height="554" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/05/capa.png"><img title="capa" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="capa" src="http://blob.vitormeriat.com.br/images/2014/05/capa_thumb.png" width="540" height="554" /></a></p>
 <p>Vale notar que como falado na palestra, aplicações modernas não são apneas mobile, mas aplicações focadas nos conceito <strong>SMART</strong>, na fluidez e experiência contínua de seus usuários.</p>
 <p><!--more-->
 <p>Sendo assim segue logo abaixo o link para os código utilizados na palestra, mas o PPT e alguns links selecionados neste tema.</p>
@@ -162,7 +173,7 @@
 <p align="justify">Vale citar que as confirgurações de acesso a nuvem foram substituídas, então antes de rodar os exemplos, acesse o portal com sua conta e realize as alterações necessárias.</p>
 <p align="justify">Para saber mais sobre o Microsoft Azure, é só <a href="http://azure.microsoft.com/pt-br/documentation/" target="_blank">CLICAR AQUI!!!</a>Este é um hub de documentações detalhadas das tecnologias envolvidas no Azure e como implementar cada uma delas.</p>
 <p align="justify">Relembrando o exemplo de Mobile Service, é só clicar na nuvenzinha(1), selecionar a tecnologia/device a se trabalhar(2) e copiar o exemplo de código gerado no link CONNECT(3).</p>
-<p align="justify"><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/05/mobile-services-windows-azure.png"><img title="Mobile Services   Windows Azure" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:none;padding-top:0;padding-left:0;margin-left:auto;border-left:0;display:block;padding-right:0;margin-right:auto;" border="0" alt="Mobile Services   Windows Azure" src="/assets/mobile-services-windows-azure_thumb.png" width="560" height="281" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/05/mobile-services-windows-azure.png"><img title="Mobile Services   Windows Azure" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:none;padding-top:0;padding-left:0;margin-left:auto;border-left:0;display:block;padding-right:0;margin-right:auto;" border="0" alt="Mobile Services   Windows Azure" src="http://blob.vitormeriat.com.br/images/2014/05/mobile-services-windows-azure_thumb.png" width="560" height="281" /></a></p>
 <p align="justify">&#160;</p>
 <p align="justify">Se você ainda não possui um conta do Microsoft Azure, basta seguir o tutorial abaixo, criar uma conta de teste e iniciar seus estudos!</p>
 <ul>
@@ -172,10 +183,6 @@
 </ul>
 <p>&#160;</p>
 <h1><font color="#646b86">Até mais pessoal!</font></h1>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2012/06/me-azul.png"><img title="Me Azul" style="float:left;margin:0 25px 0 0;display:inline;" border="0" alt="Me Azul" src="/assets/me-azul_thumb.png?w=110&amp;h=110&amp;h=110" width="110" align="left" height="110" /></a></p>
-<h3><font style="font-weight:bold;" color="#646b86">Twitter: </font><a href="http://twitter.com/#%21/vitormeriat"><font style="font-weight:bold;" color="#646b86">@vitormeriat</font></a></h3>
-<h3><a href="mailto:vitormeriat@gmail.com"><font style="font-weight:bold;" color="#646b86">vitormeriat@gmail.com</font></a></h3>
-<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font style="font-weight:bold;" color="#646b86">vitor.pereira@studentpartner.com</font></a></h3>
 
   </section>
 

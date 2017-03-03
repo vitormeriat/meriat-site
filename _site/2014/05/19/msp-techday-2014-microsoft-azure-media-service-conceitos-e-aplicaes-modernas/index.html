@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -150,7 +161,7 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/05/a-ms.png"><img title="a ms" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:left;padding-top:0;padding-left:0;margin:0 30px 0 0;border-left:0;display:inline;padding-right:0;" border="0" alt="a ms" src="/assets/a-ms_thumb.png" width="400" align="left" height="284" /></a></p>
+    <p><a href="http://blob.vitormeriat.com.br/images/2014/05/a-ms.png"><img title="a ms" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:left;padding-top:0;padding-left:0;margin:0 30px 0 0;border-left:0;display:inline;padding-right:0;" border="0" alt="a ms" src="http://blob.vitormeriat.com.br/images/2014/05/a-ms_thumb.png" width="400" align="left" height="284" /></a></p>
 <p align="justify">Olá galera, segue as informações referentes a apresentação realizada no dia 17-05, terceiro e último sábado de eventos on-line do <strong>MSP TechDay</strong>.</p>
 <p align="justify">Nesta apresentação basicamente me preocupei em responder o que é um serviço de distribuição de Media, qual a necessidade de um serviço de distribuição de Media na Nuvem e o que o <strong>Microsoft Azure Media Services</strong> oferece para este cenário.</p>
 <p><!--more-->
@@ -160,10 +171,6 @@
 <div style="margin-bottom:5px;"><strong><a title="MSP TechDay 2014 – Microsoft Azure Media Service - Conceitos e aplicações modernas" href="https://pt.slideshare.net/VitorMeriat/msp-techday-2014-microsoft-azure-media-service-conceitos-e-aplicaes-modernas" target="_blank">MSP TechDay 2014 – Microsoft Azure Media Service - Conceitos e aplicações modernas</a> </strong>from <strong><a href="http://www.slideshare.net/VitorMeriat" target="_blank">Vitor Meriat</a></strong> </div>
 <p>&#160;</p>
 <h2><font style="font-weight:bold;" color="#a5a5a5">Até mais pessoal!</font></h2>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2012/06/me-azul.png"><font color="#a5a5a5"><img title="Me Azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="Me Azul" src="/assets/me-azul_thumb.png?w=110&amp;h=110&amp;h=110" width="110" align="left" height="110" /></font></a></p>
-<h3><font style="font-weight:bold;" color="#a5a5a5">Twitter: </font><a href="http://twitter.com/#%21/vitormeriat"><font style="font-weight:bold;" color="#a5a5a5">@vitormeriat</font></a></h3>
-<h3><a href="mailto:vitormeriat@gmail.com"><font style="font-weight:bold;" color="#a5a5a5">vitormeriat@gmail.com</font></a></h3>
-<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font style="font-weight:bold;" color="#a5a5a5">vitor.pereira@studentpartner.com</font></a></h3>
 
   </section>
 

@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -152,11 +163,11 @@
   <section class="section-padding post" itemprop="articleBody">
     <p align="justify">Olá pessoal… novamente tive a grande honra de participar do <strong><a href="http://www.iotweekend.com.br/" target="_blank">IoT Weekend</a></strong>, desta vez na edição <strong>Brasília</strong> (minha terra natal)<strong>. </strong>Foi um evento maravilhoso, com um público muito atento, palestrantes extremamente qualificados e grandes cases de sucesso, entre <strong>IoT</strong> e <strong>Cloud Computing</strong>.</p>
 <p align="justify">Como prometido segue o material da minha apresentação, <strong>Cloud Computing, o BackStage entre dispositivos e usuários. </strong>Nesta apresentação, utilizando um exemplo prático, vimos sobre fundamentos de Cloud Computing, utilização protocolos como <strong>AMQP</strong> e <strong>MQTT</strong>, <strong>Big Data</strong>, <strong>Stream Analytics</strong> e <strong>Machine Learning</strong>.</p>
-<p style="background-color: #646767;"><img src="https://meriatsite.blob.core.windows.net/images/2015/08/capaiotweekendbsb.png" alt="capaiotweekendbsb" width="100%" /></p>
+<p style="background-color: #646767;"><img src="http://blob.vitormeriat.com.br/images/2015/08/capaiotweekendbsb.png" alt="capaiotweekendbsb" width="100%" /></p>
 
 <p>&nbsp;</p>
 
-<p><img style="background-image: none; float: left; padding-top: 0px; padding-left: 0px; margin: 0px 40px 0px 0px; display: inline; padding-right: 0px; border: 0px;" title="iotweekend" src="https://meriatsite.blob.core.windows.net/images/2015/08/iotweekend.jpg" alt="iotweekend" width="470" height="522" align="left" /></p>
+<p><img style="background-image: none; float: left; padding-top: 0px; padding-left: 0px; margin: 0px 40px 0px 0px; display: inline; padding-right: 0px; border: 0px;" title="iotweekend" src="http://blob.vitormeriat.com.br/images/2015/08/iotweekend.jpg" alt="iotweekend" width="470" height="522" align="left" /></p>
 <p align="justify">Um dispositivo de <strong>Internet das Coisas</strong> necessariamente tem que enviar e receber comandos e mensagens e muitas das vezes milhares de vezes em um determinado período de tempo curto. Uma coleira de cachorro inteligente por exemplo pode definir uma cerca virtual e quando o animal ultrapassar o perímetro definido ele começa a enviar o seu novo  posicionamento e com isso seu dono pode além de o encontrar facilmente, conhecer seus hábitos e muitas vezes tornar a vida do animal mais divertida e melhor. Este é um dos exemplos onde temos a geração de centenas de dados por dia e que se utilizados e tratados de forma adequada podem gerar uma informação de extrema valia e qualidade. Em um dispositivo como este também precisamos enviar comandos visando modificar o comportamento do dispositivo e também interagir com o animal. Tudo isso é orquestrado pelos serviços na nuvem, de forma escalável e segura.</p>
 <p align="justify">E foi baseado nessa premissa que montei um exemplo básico: Um simples sensor <strong>PIR</strong> <strong>(Passive Infrared)</strong>, enviando dados para o <a href="https://azure.microsoft.com/pt-br/documentation/articles/storage-dotnet-how-to-use-queues/" target="_blank"><strong>Azure Queue Storage</strong></a>, <a href="https://azure.microsoft.com/en-us/documentation/articles/event-hubs-csharp-ephcs-getstarted/" target="_blank"><strong>Azure Event Hubs</strong></a> e um <a href="http://www.cloudmqtt.com/" target="_blank"><strong>Broker SaaS MQTT na Amazon Web Services</strong></a>. Os dados gerados são gravados em um <strong>NoSQL</strong>, que é utilizado como base para o <strong>Machine Learning</strong>. Nesta apresentação, foi utilizado o <a href="http://azure.microsoft.com/en-us/services/machine-learning/" target="_blank"><strong>Azure Machine Learning</strong></a> e o <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/" target="_blank"><strong>IBM Watson</strong></a>.</p>
 <p align="justify">

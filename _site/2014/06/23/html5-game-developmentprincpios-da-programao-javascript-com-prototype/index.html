@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -153,7 +164,7 @@
     <p align="justify">Olá pessoal. Saindo um pouco do habitual hoje vou falar sobre desenvolvimento de games com <strong>JavaScript</strong> e <strong>HTML5</strong>. Minha ideia é abordar alguns assuntos que&#160; acho pertinentes sobre o desenvolvimento de games com HTML5 e JavaScript. Estou levando em conta que você já conhece pelo menos o básico de HTML5 e JavaScript portanto vou logo para o lado mais denso da brincadeira.</p>
 <p align="justify">Entre os vários assuntos associados a este tema vou iniciar esta mini-série falando sobre este recurso poderoso que é o <strong>Prototype</strong>. Um dos motivos que me levaram a isso se dá ao fato deste ser o meu primeiro objeto de estudo quando decidi me aprofundar no JavaScript. Parte disso se da pelo fato da grande utilização deste padrão. Já quando falamos em desenvolver games com JavaScript, geralmente vamos ter um grande número de objetos, métodos e arquivos scripts. Manter esta estrutura de forma organizada e coesa é na maioria dos casos um desafio. </p>
 <p align="justify">
-<p align="justify"><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/capa11.png"><img title="capa1" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="capa1" src="/assets/capa1_thumb.png" width="700" height="343" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/06/capa11.png"><img title="capa1"  alt="capa1" src="http://blob.vitormeriat.com.br/images/2014/06/capa1_thumb.png" width="700" height="343" /></a></p>
 <p align="justify">Sendo assim é importante entender como otimizar a criação dos objetos de certa forma que seja possível diminuir a quantidade de código e risco nas alterações futuras.</p>
 <p><!--more-->
 <p>Para facilitar, vou disponibilizar o código fonte dos exemplos que pode ser <a href="http://1drv.ms/1j7kiil" target="_blank">baixado aqui!!!</a>. </p>
@@ -166,10 +177,10 @@
 <h2>Então como criar meus objetos?</h2>
 <p align="justify">Em JavaScript temos<strong> “basicamente”</strong> duas maneiras de se criar objetos: Usando um <strong><u>object literal</u></strong> ou <strong><u>constructor function</u></strong>.</p>
 <p align="justify">Já estou preparando um post específico sobre este assunto então vou apenas ilustrar estas duas maneiras de criar objetos como no código abaixo:</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/003.png"><img title="003" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="003" src="/assets/003_thumb.png" width="700" height="768" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/003.png"><img title="003"  alt="003" src="http://blob.vitormeriat.com.br/images/2014/06/003_thumb.png" width="700" height="768" /></a></p>
 <p align="justify">Existe uma série de assuntos a se considerar sobre estas abordagens. No entanto vamos abordar a criação de objetos com função de construtor, que é o mais utilizado por ser <strong>”essencialmente”</strong> uma classe.</p>
 <p align="justify">Observe o código abaixo:</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/041.png"><img title="04" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="04" src="/assets/04_thumb1.png" width="700" height="495" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/041.png"><img title="04"  alt="04" src="http://blob.vitormeriat.com.br/images/2014/06/04_thumb1.png" width="700" height="495" /></a></p>
 <p align="justify">Note que primeiro criamos nossa “função construtora de objeto”. Com ela definida podemos utilizar o bom e velho <strong>NEW</strong> para obter um novo objeto que é uma cópia do objeto <strong>“pai”</strong>, trazendo suas propriedades e métodos. </p>
 <p align="justify">Porém reparem que estou utilizando uma função <strong><u>toString()</u></strong> que não está definido no objeto inicial. Isso porque qualquer objeto em JavaScript pode utilizar esta função para retornar uma string de si mesmo. Agora como isso é possível se JavaScript <u>não é</u> uma linguagem orientada a classe? <u>A resposta é: Através do <strong>PROTOTYPE</strong>!!!</u></p>
 <p align="justify"><u></u></p>
@@ -179,14 +190,14 @@
 <p align="justify">Sendo assim quando você pede a um objeto determinado “recurso”, o JavaScript vai primeiro procurar no objeto corrente. Caso não encontre o próximo passo é olhar para a propriedade [Prototype] e procurar o “recurso” no objeto referenciado. Se não encontrar no objeto referenciado ele repete o mesmo ciclo até que a propriedade [Prototype] seja nulo.</p>
 <p align="justify">Isso é chamado de prototype chain (cadeia de protótipos). Um prototype pode ser acessado utilizando o <strong>Object.isPrototypeOf()</strong>. Outra forma muito utilizada é acessar a propriedade [Prototype] com <strong>__proto__</strong>.</p>
 <p align="justify">Vamos voltar ao exemplo do objeto Pessoa utilizando a função toString(). Neste caso o JavaScript procura a função toString() no objeto Pessoa e não acha. Vai para a propriedade Prototype que aponta para outro objeto. Neste objeto ele realiza o mesmo processo procurando a função e não acha, então, vai novamente para propriedade Prototype que aponta para outro objeto realiza a busca, acha a função e a executa.</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/005.png"><img title="005" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="005" src="/assets/005_thumb.png" width="700" height="140" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/005.png"><img title="005"  alt="005" src="http://blob.vitormeriat.com.br/images/2014/06/005_thumb.png" width="700" height="140" /></a></p>
 <p align="justify">É simples validar isso apenas utilizando a função <strong>hasOwnProperty()</strong> que retorna um true ou false indicando se o objeto tem ou não a propriedade indicada.</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/006.png"><img title="006" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="006" src="/assets/006_thumb.png" width="700" height="461" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/006.png"><img title="006"  alt="006" src="http://blob.vitormeriat.com.br/images/2014/06/006_thumb.png" width="700" height="461" /></a></p>
 <p>&#160;</p>
 <h2>E a aplicação prática?</h2>
 <p align="justify">Já vimos que de maneira simples podemos pensar no Prototype como uma maneira de criar heranças frouxas onde é possível adicionar novas características evitando uma declaração global.</p>
 <p align="justify">A ideia neste exemplo é criar uma função para calcular o XP de um usuário do game. Baseado no nível e na pontuação temos os pontos de experiência. Pois bem, o mais comum é trabalhar essa estrutura de maneira simples como segue o código abaixo:</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/007.png"><img title="007" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="007" src="/assets/007_thumb.png" width="700" height="692" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/007.png"><img title="007"  alt="007" src="http://blob.vitormeriat.com.br/images/2014/06/007_thumb.png" width="700" height="692" /></a></p>
 <p>Sem pensar muito é possível encontrar algumas falhas nessa abordagem</p>
 <ul>
 <li>Fica complexo manter a medida que a função cresce </li>
@@ -195,38 +206,34 @@
 <li>Torna as alterações mais complexas e com mais tendência a falha </li>
 </ul>
 <p align="justify">Não quero me deter nisso já que pretendo retomar este assunto em outro post. Agora vamos pensar neste mesmo código sobre a <u>perspectiva do Prototype</u>. Abaixo temos a criação do nosso objeto sem nenhuma implementação. Logo abaixo temos a referência ao nosso <strong>Script1</strong>.</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/009.png"><img title="009" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="009" src="/assets/009_thumb.png" width="700" height="274" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/009.png"><img title="009"  alt="009" src="http://blob.vitormeriat.com.br/images/2014/06/009_thumb.png" width="700" height="274" /></a></p>
 <p align="justify">O <strong>Script1</strong> é responsável pela implementação inicial. Neste caso estou fazendo a mesma lógica do código inicial.</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/008.png"><img title="008" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="008" src="/assets/008_thumb.png" width="700" height="722" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/008.png"><img title="008"  alt="008" src="http://blob.vitormeriat.com.br/images/2014/06/008_thumb.png" width="700" height="722" /></a></p>
 <p align="justify">Agora voltamos ao que falei no início. Dificilmente você vai construir sua aplicação ou game utilizando um só script. Então vamos continuar nossa implementação… agora surgiu a necessidade de em dado momento alterar o calculo do <strong>XP</strong>. </p>
 <p align="justify">De maneira muito simples apenas chamamos nosso <strong><u>objeto.prototype</u></strong> e a propriedade a ser alterada (neste caso o método <strong>calcularExperience</strong>), podemos realizar a alteração desejada, refletindo apenas no momento da necessidade. O resto ficou inalterado e pode ser utilizado normalmente. Vamos ao nosso <strong>Script2</strong>:</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/010.png"><img title="010" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="010" src="/assets/010_thumb.png" width="700" height="526" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/010.png"><img title="010"  alt="010" src="http://blob.vitormeriat.com.br/images/2014/06/010_thumb.png" width="700" height="526" /></a></p>
 <p align="justify">Como é possível ver no output continuamos recebendo o mesmo valor para os cálculos anteriores e um novo resultado derivado da alteração que realizamos por último.</p>
 <p align="justify">&#160;</p>
 <h2 align="justify">Várias maneiras de implementação</h2>
 <p align="justify">Outra coisa bacana é como podemos trabalhar o protótipos dentro do JavaScript. Vamos observar o exemplo abaixo:</p>
-<p align="justify"><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/011.png"><img title="011" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="011" src="/assets/011_thumb.png" width="700" height="758" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/06/011.png"><img title="011"  alt="011" src="http://blob.vitormeriat.com.br/images/2014/06/011_thumb.png" width="700" height="758" /></a></p>
 <p align="justify">Primeiro criamos um objeto <strong>Monstro</strong> com apenas uma propriedade chamada <strong>vidas</strong>. Logo depois crio um objeto <strong>monstro1</strong> usando Monstro como protótipo. Agora <strong>monstro1</strong> também tem a propriedade <strong>vidas</strong>. </p>
 <p align="justify">Já em <strong>monstro2</strong> estamos utilizando o <strong>Object.create()</strong>. Note que de maneira simples estamos setando o número de vidas e criando uma nova propriedade chamada <strong>força</strong>.</p>
 <p align="justify">Em <strong>monstro3</strong> utilizamos o próprio <strong>Object.create()</strong> para a criação de propriedade extras. Neste caso criando a propriedade poder.</p>
 <p align="justify">Podemos criar a mesma estrutura sem utilizar o Object.create(). </p>
-<p align="justify"><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/012.png"><img title="012" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="012" src="/assets/012_thumb.png" width="700" height="748" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/06/012.png"><img title="012"  alt="012" src="http://blob.vitormeriat.com.br/images/2014/06/012_thumb.png" width="700" height="748" /></a></p>
 <p align="justify">Neste caso estamos criando nosso protótipo <strong>(personagemPrototype) </strong>e logo após uma função <strong>(personagem)</strong>&#160; para forçar a <strong>“inicialização”</strong> para as novas chamadas ao protótipo. Não é a maneira mais simples mas traz o mesmo resultado.</p>
 <p align="justify">O que é possível perceber nestes exemplos é a facilidade na criação e orientação de novos objetos utilizando prototipagem sem o compromisso de um único <strong>“jeito”</strong> para a implementação. Vale anotar que dependendo da sua abordagem o entendimento o entendimento futuro pode se tornar bastante complexo.&#160;&#160; </p>
 <p align="justify">&#160;</p>
 <p align="justify">O que pode ter passado desapercebido, é que através do prototype podemos criar novas características para as &quot;classes&quot; já definidas pelo próprio JavaScript. Como exemplo, vamos colocar um novo método na &quot;classe&quot; String do JavaScript.</p>
 <p align="justify">Apenas para fins didáticos vamos incluir a função <strong>parseInt()</strong> a fim de converter uma String em Inteiro de uma maneira simplificada utilizando prototype:</p>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/001.png"><img title="001" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="001" src="/assets/001_thumb.png" width="700" height="410" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/06/001.png"><img title="001"  alt="001" src="http://blob.vitormeriat.com.br/images/2014/06/001_thumb.png" width="700" height="410" /></a></p>
 <p align="justify">Agora podemos chamar o parseInt() direto de uma String em vez de chamar a função e passar uma string a ser convertida [<strong>parseInt(&quot;950&quot;);</strong>]</p>
 <p align="justify">&#160;</p>
 <h2 align="justify">Conclusão</h2>
 <p align="justify">Como vimos o&#160; prototype nos permite adicionar características e comportamentos para as <strong>&quot;classes&quot;</strong>, após sua definição, sendo assim podemos reutilizar toda a definição de uma<strong> “classe”</strong> em outra.</p>
 <p>&#160;</p>
 <h2><font color="#f79646">Bons estudos e até a próxima pessoal&#160; ;)</font></h2>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/me-azul.png"><font color="#f79646"><img title="me-azul" style="float:left;margin:0 25px 0 0;display:inline;" border="0" alt="me-azul" src="/assets/me-azul_thumb.png?w=175&amp;h=175" width="175" align="left" height="175" /></font></a></p>
-<p><strong><font color="#f79646" size="5">Twitter: @</font></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><font color="#f79646" size="5">vitormeriat</font></strong></a></p>
-<p><strong><font color="#f79646" size="5">vitormeriat@</font></strong><a href="mailto:vitormeriat@gmail.com"><strong><font color="#f79646" size="5">gmail.com</font></strong></a></p>
-<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><font color="#f79646" size="5">vitor.pereira@studentpartner.com</font></strong></a></p>
 
   </section>
 

@@ -6,12 +6,12 @@ type: post
 categories:
   - Comunidade
   - Microsoft Azure
-image-full: "https://meriatsite.blob.core.windows.net/images/2016/05/devopssummit.jpg"
+image-full: "http://blob.vitormeriat.com.br/images/2016/05/devopssummit.jpg"
 ---
 
 Dia 07/05 na seda da Microsoft no Brasil, aconteceu a primeira edição do DevOps Summit Brasil. Esse é um evento que teve como origem a fusão dos já consagrados Azure Summit Brasil e ALM Summit Brasil com foco em promover o conhecimento de Cloud Computing e DevOps.
 
-<img title="spark-tela" alt="spark-tela" src="https://meriatsite.blob.core.windows.net/images/2016/05/devopssummit.jpg" width="100%" />
+<img title="spark-tela" alt="spark-tela" src="http://blob.vitormeriat.com.br/images/2016/05/devopssummit.jpg" width="100%" />
 
 Azure Stack é o primeiro produto de uma nova categoria hybrid cloud platform. Este novo produto permite que a TI entregue os recursos do seu Datacenter no mesmo modelo de entrega de serviços da nuvem pública.
 

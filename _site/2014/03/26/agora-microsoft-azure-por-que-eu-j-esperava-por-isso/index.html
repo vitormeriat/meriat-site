@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -152,26 +163,22 @@
   <section class="section-padding post" itemprop="articleBody">
     <p align="justify">Foi anunciado no dia 25 de março de 2014 que o já tão conhecido <strong>Windows Azure</strong> seria renomeado para <strong>“Microsoft Azure”</strong>. O discurso do anuncio de Steven Martin foi deixar claro que a Microsoft estava alinhando sua estratégia em mostrar o <strong>“Azure”</strong> como uma plataforma pública de Cloud Computing.</p>
 <p>&#160;</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/03/microsoftazure.png"><img title="MicrosoftAzure" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="MicrosoftAzure" src="/assets/microsoftazure_thumb.png" width="540" height="83" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/03/microsoftazure.png"><img title="MicrosoftAzure" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="MicrosoftAzure" src="http://blob.vitormeriat.com.br/images/2014/03/microsoftazure_thumb.png" width="540" height="83" /></a></p>
 <blockquote><p><u><sup>imagem não oficial!</sup></u></p>
 </blockquote>
 <p align="justify">Como andei lendo ao longo do dia nos comentários sobre esta notícia, muitos acharam que a ideia fazia sentido já que no <strong>Azure</strong> você conseguia trabalhar com outras frentes como <strong>Linux, Oracle, Java, Ruby</strong> etc. </p>
 <p><!--more-->
 <p align="justify">Estou estudando para certificações de Cloud Computing e as principais literaturas ainda apontam o Windows Azure apenas como PaaS. Isso faz sentido se levarmos em consideração que os principais livros de referência no assunto datam de 2010 e meados de 2011. Época em que o Windows Azure ainda se concentrava nos Web Roles, Worker Roles, Queues, Tables, Blobs e SQL Azure. Ou seja, foco na plataforma como serviço.</p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/03/windows-azure.png"><img title="Windows-Azure" style="background-image:none;float:left;padding-top:0;padding-left:0;margin:15px 10px 0 0;display:inline;padding-right:0;border-width:0;" border="0" alt="Windows-Azure" src="/assets/windows-azure_thumb.png" width="360" align="left" height="87" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/03/windows-azure.png"><img title="Windows-Azure" style="background-image:none;float:left;padding-top:0;padding-left:0;margin:15px 10px 0 0;display:inline;padding-right:0;border-width:0;" border="0" alt="Windows-Azure" src="http://blob.vitormeriat.com.br/images/2014/03/windows-azure_thumb.png" width="360" align="left" height="87" /></a></p>
 <p align="justify">É fácil notar, principalmente comparando com as primeiras referências, que o Azure evoluiu a passos largos. Para aqueles que tiveram a oportunidade de trabalhar com o Windows Azure nos primórdios de seu lançamento, esta diferença é ainda mais gritante. É fácil notar também o quanto a <strong>Microsoft</strong> tem investido na linha da interoperabilidade, apoiando padrões e suportando formatos a fim de expandir e facilitar o desenvolvimento e soluções.</p>
 <p>&#160;</p>
 <p align="justify">O fato é que já fazia algum tempo que eu estava incomodado em como as literaturas referenciam o Windows Azure. Mesmo em algumas publicações modernas ainda não temos o Windows Azure no seu devido papel. Hoje já é consenso comum que o Azure é líder em alguns segmentos, briga nos primeiros lugares em outros e que no geral é um dos principais fornecedores de Cloud Computing.</p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2014/03/microsoft-pixabay.png"><img title="microsoft-pixabay" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:right;padding-top:0;padding-left:0;margin:20px 0 0 25px;border-left:0;display:inline;padding-right:0;" border="0" alt="microsoft-pixabay" src="/assets/microsoft-pixabay_thumb.png" width="240" align="right" height="120" /></a>Não só pelo fato do Azure suportar diversos Sistemas Operacionais, linguagens e serviços de terceiros, mas pela própria padronização do mercado em ligar as plataformas de Cloud ao fornecedor é que eu já esperava algo neste sentido. Olhando para outros fornecedores como Amazon, IBM, Salesforce e Google, dá para notar que as plataformas de Cloud são orientadas ao fornecedor e não a um SO. Isso gera alguns problemas. Já ouvi e li coisas do tipo: <strong><em>“O Windows Azure é uma Cloud que só roda Windows Server”</em></strong> ou <strong><em>“A Cloud Computing da Microsoft oferece opções de Windows como plataforma ou infraestrutura como serviço”</em></strong>.</p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/03/microsoft-pixabay.png"><img title="microsoft-pixabay" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:right;padding-top:0;padding-left:0;margin:20px 0 0 25px;border-left:0;display:inline;padding-right:0;" border="0" alt="microsoft-pixabay" src="http://blob.vitormeriat.com.br/images/2014/03/microsoft-pixabay_thumb.png" width="240" align="right" height="120" /></a>Não só pelo fato do Azure suportar diversos Sistemas Operacionais, linguagens e serviços de terceiros, mas pela própria padronização do mercado em ligar as plataformas de Cloud ao fornecedor é que eu já esperava algo neste sentido. Olhando para outros fornecedores como Amazon, IBM, Salesforce e Google, dá para notar que as plataformas de Cloud são orientadas ao fornecedor e não a um SO. Isso gera alguns problemas. Já ouvi e li coisas do tipo: <strong><em>“O Windows Azure é uma Cloud que só roda Windows Server”</em></strong> ou <strong><em>“A Cloud Computing da Microsoft oferece opções de Windows como plataforma ou infraestrutura como serviço”</em></strong>.</p>
 <p align="justify">Pode até parecer preciosismo da minha parte, mas na minha concepção em análise com os principais concorrentes de mercado, esta alteração de nome para <strong>Microsoft Azure</strong> é um grande passo…</p>
 <p align="justify">&#160;</p>
 <p><strong>PS: Esta alteração só entra em vigo a partir do dia 03 de Abril.</strong></p>
 <p>&#160;</p>
 <h2><font color="#9bbb59">Até mais e bom estudo a todos!</font></h2>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2012/06/me-azul.png"><font color="#9bbb59"><img title="Me Azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="Me Azul" src="/assets/me-azul_thumb.png?w=110&amp;h=110&amp;h=110" width="110" align="left" height="110" /></font></a></p>
-<h3><font color="#9bbb59"><font style="font-weight:bold;">Twitter: </font></font><a href="http://twitter.com/#%21/vitormeriat"><font color="#9bbb59"><font style="font-weight:bold;">@vitormeriat</font></font></a></h3>
-<h3><a href="mailto:vitormeriat@gmail.com"><font color="#9bbb59"><font style="font-weight:bold;">vitormeriat@gmail.com</font></font></a></h3>
-<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font color="#9bbb59"><font style="font-weight:bold;">vitor.pereira@studentpartner.com</font></font></a></h3>
 
   </section>
 

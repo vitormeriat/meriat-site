@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Filosofia no JavaScript - Funções são declaração ou expressão?
-date: 2014-10-24 
+date: 2014-10-24
 categories:
   - JavaScript
 
 ---
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/10/capa1.png"><img title="Capa" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="Capa" src="{{ site.baseurl }}/assets/capa_thumb1.png" width="700" height="477" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/10/capa1.png"><img title="Capa" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="Capa" src="{{ site.baseurl }}/assets/capa_thumb1.png" width="700" height="477" /></a></p>
 <p align="justify">Primeiro, de maneira simples e clara a resposta da pergunta acima é: <strong>Tanto faz…</strong> Funções em <strong>Javascript</strong> funcionam tanto como <strong>Declaração</strong> ou <strong>Expressão</strong>. O que nos leva a segunda pergunta: Então para que este post se é algo tão simples? Assim como na filosofia alguns dos temas mais complexos se escondem na simplicidade (não que este seja o caso).</p>
 <p align="justify">O certo porém, é que uma <strong>função</strong> em Javascript pode ser utilizada de maneiras diferentes, como nos seguintes casos:</p>
 <ul>
@@ -26,26 +26,22 @@ categories:
 <p align="justify">Contudo é bom observar alguns aspectos, já que dependendo do uso as funções podem sofrer limitações ou adquirir novos comportamentos. </p>
 <p><!--more-->
 <p>Observe a função abaixo:</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/10/cod01.png"><img title="COD01" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD01" src="{{ site.baseurl }}/assets/cod01_thumb.png" width="700" height="920" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/10/cod01.png"><img title="COD01" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD01" src="{{ site.baseurl }}/assets/cod01_thumb.png" width="700" height="920" /></a></p>
 <p align="justify">O mesmo código pode ser escrito atribuindo a função como expressão (retorno) de uma variável. Exatamente como no código abaixo:</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/10/cod02.png"><img title="COD02" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD02" src="{{ site.baseurl }}/assets/cod02_thumb.png" width="700" height="242" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/10/cod02.png"><img title="COD02" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD02" src="{{ site.baseurl }}/assets/cod02_thumb.png" width="700" height="242" /></a></p>
 <p align="justify">OK... O código é o mesmo. Não mudou nada, correto? Não…</p>
 <p align="justify">Uma função como instrução sempre é “hospedada” no escopo onde foi definida. Logo, não é desnecessário definir a função antes do uso. Você pode simplesmente comprovar isso no exemplo abaixo:</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/10/cod03.png"><img title="COD03" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD03" src="{{ site.baseurl }}/assets/cod03_thumb.png" width="700" height="668" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/10/cod03.png"><img title="COD03" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD03" src="{{ site.baseurl }}/assets/cod03_thumb.png" width="700" height="668" /></a></p>
 <p align="justify">Notem que estamos chamando a função antes de sua definição. Dado o seu escopo este código está correto e o seu resultado será o esperado. Agora vamos tentar o mesmo utilizando a função como expressão. Observe o código abaixo:</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/10/cod04.png"><img title="COD04" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD04" src="{{ site.baseurl }}/assets/cod04_thumb.png" width="700" height="891" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/10/cod04.png"><img title="COD04" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD04" src="{{ site.baseurl }}/assets/cod04_thumb.png" width="700" height="891" /></a></p>
 <p><font color="#ff0000"><strong>Que lindo!!! minhaFuncao() é undefined!!! Throw exception in your face :|</strong></font></p>
 <p align="justify">Mesmo que “<em>geralmente</em>” tratem os “<em>tipos</em>” de função como sendo a mesma coisa, na prática são diferentes em relação a sua execução e objetivo. A maior utilidade (ou mais comum) para uma função como expressão é o uso em estruturas de decisão. Podemos fazer isso trabalhando com a palavra reservada <strong>return</strong>. Observe o código abaixo:</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/10/cod05.png"><img title="COD05" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD05" src="{{ site.baseurl }}/assets/cod05_thumb.png" width="700" height="956" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/10/cod05.png"><img title="COD05" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD05" src="{{ site.baseurl }}/assets/cod05_thumb.png" width="700" height="956" /></a></p>
 <p>Notem quem ele imprime os dois valores, tanto o da função quanto o do IF. Agora basta trocar o valor do retorno para 0 e não vamos mais entrar no IF, ou seja, apenas a primeira sentença será impressa. <strong>[EXEMPLO 6 no código fonte]</strong></p>
 <p>Também é possível usar outra abordagem, considerar a função como um Valor. Tendo isso em mente podemos simplesmente atribuir nossa função como uma propriedade de um objeto. Observe o código abaixo:</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/10/cod07.png"><img title="COD07" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD07" src="{{ site.baseurl }}/assets/cod07_thumb.png" width="700" height="930" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/10/cod07.png"><img title="COD07" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD07" src="{{ site.baseurl }}/assets/cod07_thumb.png" width="700" height="930" /></a></p>
 <p>Outra maneira seria passar nossa função como argumento de outra função:</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2014/10/cod08.png"><img title="COD08" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD08" src="{{ site.baseurl }}/assets/cod08_thumb.png" width="700" height="409" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/10/cod08.png"><img title="COD08" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="COD08" src="{{ site.baseurl }}/assets/cod08_thumb.png" width="700" height="409" /></a></p>
 <p>Sei que não existe nada de inovador nisso, porém sempre é bom ver as coisas sob um novo angulo, e tentar sempre que possível entender aquilo que estamos programando.</p>
 <p>&nbsp;</p>
 <h2><font color="#808000">Bons estudos e até a próxima pessoal&nbsp; ;)</font></h2>
-<p><a href="https://meriat-blog.azurewebsites.net/wp-content/uploads/2014/06/me-azul.png"><font color="#808000"><img title="me-azul" style="float:left;margin:0 30px 0 0;display:inline;" border="0" alt="me-azul" src="{{ site.baseurl }}/assets/me-azul_thumb.png?w=263&amp;h=263" width="175" align="left" height="175" /></font></a>
-<p><strong><font color="#808000" size="5">Twitter: @</font></strong><a href="mailto:vitormeriatvitormeriat@gmail.com"><strong><font color="#808000" size="5">vitormeriat</font></strong></a>
-<p><strong><font color="#808000" size="5">vitormeriat@</font></strong><a href="mailto:vitormeriat@gmail.com"><strong><font color="#808000" size="5">gmail.com</font></strong></a>
-<p><a href="mailto:vitor.pereira@studentpartner.com"><strong><font color="#808000" size="5">vitor.pereira@studentpartner.com</font></strong></a></p></p></p>

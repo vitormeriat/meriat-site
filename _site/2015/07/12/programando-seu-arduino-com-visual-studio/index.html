@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -151,7 +162,7 @@
 
   <section class="section-padding post" itemprop="articleBody">
     <p align="justify">Recentemente fui questionado sobre opções para se trabalhar com o <strong>Arduino</strong> no Visual Studio. Como acho esse um tema interessante (um tanto pelo interesse do público em <strong>IoT</strong>, um tanto por ser da comunidade Microsoft), resolvi condesar aqui as minhas dicas de como utilizar o <strong>Visual Studio</strong> para programar um Arduino.
-<p style="background-color: #e5e204;"><img alt="vs e arduino" src="https://meriatsite.blob.core.windows.net/images/2015/07/vs-e-arduino.png" width="100%" />
+<p style="background-color: #e5e204;"><img alt="vs e arduino" src="http://blob.vitormeriat.com.br/images/2015/07/vs-e-arduino.png" width="100%" />
 <p align="justify">Temos aqui duas estratégias distintas: <strong>Node.js</strong> e o <strong>Arduino for Microsoft Visual Studio</strong>. Ambas utilizam a mesma base para a comunicação com o Arduino, sendo assim o primeiro passo é falar sobre o protocolo firmata. </p>
 <p><!--more--><br />
 <h1>Firmata</h1>
@@ -161,12 +172,12 @@
 <h1>Node.js</h1>
 <p align="justify">A primeira opção é utilizar Node.js. Para isso, será necessário ter o Arduino Software (IDE), que é baixado diretamtne do site do Arduino, clicando <a href="https://www.arduino.cc/en/Main/Software" target="_blank">AQUI</a>!</p>
 <p align="justify">Assim que você realizar a instalação da IDE, conecte seu arduino e acesse o código de exemplo do Firmata que está disponível em <strong>Examples</strong> &gt; <strong>Firmata</strong> &gt; <strong>StandartFirmata</strong>, como na imagem abaixo:</p>
-<p><img title="firmata" alt="firmata" src="https://meriatsite.blob.core.windows.net/images/2015/07/firmata.png" width="100%" /></p>
+<p><img title="firmata" alt="firmata" src="http://blob.vitormeriat.com.br/images/2015/07/firmata.png" width="100%" /></p>
 <p align="justify">Assim que o <strong>Sketch</strong> carregar, basta fazer o Upload para o Arduino e pronto! Seu Arduino já está preparado para ser uma extenção do seu computador. Basta agora criar um novo projeto no Visual Studio utilizando o templeta do Node.js. Para isso é necessário ter instalado o <a href="https://nodejstools.codeplex.com/" target="_blank">Node.js Tools for Visual Studio</a>.</p>
 <p>&nbsp;<br />
 <h1>Arduino for Microsoft Visual Studio</h1>
 <p align="justify">Este é um plugin pago. Por isto mesmo nunca havia me interessado em o utilizar, porém o que está disponível na versão free é o mesmo que conseguimos fazem com a IDE oficial do Arduino, porém com as facilidades que a <strong>IDE do Visual Studio</strong> nos traz.</p>
-<p align="justify"><img title="visualstudio" alt="visualstudio" src="https://meriatsite.blob.core.windows.net/images/2015/07/visualstudio.png" width="100%" /></p>
+<p align="justify"><img title="visualstudio" alt="visualstudio" src="http://blob.vitormeriat.com.br/images/2015/07/visualstudio.png" width="100%" /></p>
 <p align="justify">Se você ainda não tiver o <strong>Visual Studio</strong> instalado, indico o uso do Visual <a href="https://www.visualstudio.com/products/visual-studio-community-vs" target="_blank">Studio 2013 Community Edition</a>, que é uma <strong>IDE</strong> muito completa e grátis.</p>
 <p align="justify">Para baixar o plugin, basta acessar a página do <a href="http://www.visualmicro.com/" target="_blank">Visual Micro</a> e fazer o download. Todas as instruções de instalação e uso das duas opções estão no vídeo baixo:</p>
 <p align="justify">&nbsp;<iframe height="506" src="https://www.youtube.com/embed/PGMgV3cE1VM?rel=0" frameborder="0" width="900" allowfullscreen></iframe></p>

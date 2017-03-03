@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -152,7 +163,7 @@
   <section class="section-padding post" itemprop="articleBody">
     <p>Tenho participado de muitos eventos e falado bastante sobre <strong>IoT</strong> no último ano. Uma pergunta recorrente que me é feita é sobre qual placa comprar para iniciar no mundo do IoT. OK… mas porque você tem de comprar uma placa para iniciar no mundo do IoT?</p>
 
-<p><img title="capa-iot-alem-do-hardware" src="https://meriatsite.blob.core.windows.net/images/2016/02/capa-iot-alem-do-hardware.png" width="100%" /></p>
+<p><img title="capa-iot-alem-do-hardware" src="http://blob.vitormeriat.com.br/images/2016/02/capa-iot-alem-do-hardware.png" width="100%" /></p>
 
 <p>A ideia aqui é ver o que circunda o mundo do IoT, do que ele é formado e como podemos entrar nesse mundo mesmo sem o conhecimento imediato de hardware.</p>
 
@@ -166,7 +177,7 @@
 <h2 id="qual-a-base-do-iot">Qual a base do IoT?</h2>
 <p>Quando falamos de IoT, temos um fluxo base para se delimitar o que é o que não é internet das coisas.</p>
 
-<p><img title="fluxo-iot" alt="fluxo-iot" src="https://meriatsite.blob.core.windows.net/images/2016/02/fluxo-iot.png" width="100%" /></p>
+<p><img title="fluxo-iot" alt="fluxo-iot" src="http://blob.vitormeriat.com.br/images/2016/02/fluxo-iot.png" width="100%" /></p>
 
 <p>Parece sutil, mas essa é a diferença que tem movimentado o mercado de forma tão agressiva nos últimos anos. Notem que o fluxo é composto por Coisas que estão conectadas, gerando dados e inteligência. É isso que entendemos como IoT, essa é a verdadeira revolução, a inteligência vinda com o IoT.</p>
 

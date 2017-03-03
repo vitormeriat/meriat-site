@@ -4,7 +4,7 @@
   ﻿<head>
 
   <!-- -->
-  <script>
+  <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,6 +13,17 @@
     ga('create', 'UA-90757610-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
 
 
   <meta charset="utf-8">
@@ -56,7 +67,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
@@ -150,7 +161,7 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p style="background-color: #000000" align="center"><a href="https://meriatsite.blob.core.windows.net/images/2016/01/spark-capa.jpg"><img title="spark-capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-capa" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-capa.jpg" width="819" height="518" /></a></p>
+    <p style="background-color: #000000" align="center"><a href="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"><img title="spark-capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-capa" src="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg" width="819" height="518" /></a></p>
 
 <p>Não é enganação, vou fazer o famoso exemplo do <strong>WordCount</strong>, porém vou tentar ir além do que apenas mostrar o código ou dizer Spark torna esta tarefa mais simples que utilizar Hadoop/MapReduce. A exemplo do post <a href="http://www.vitormeriat.com.br/spark-resilient-distributed-datasets/" target="_blank">Spark – Resilient Distributed Datasets</a>, vou focar na base e estrutura básica da ferramenta para se conseguir o desempenho esperado ao utilizar o Spark.</p>
 
@@ -166,7 +177,7 @@
 <h2 id="spark-framework-ecosystem">Spark Framework Ecosystem</h2>
 <p>Fora a API do Spark, existem bibliotecas adicionais que fazem parte do seu ecossistema e fornecem capacidades adicionais para as áreas de análise de Big Data e aprendizado de máquina.</p>
 
-<p><a href="https://meriatsite.blob.core.windows.net/images/2016/01/spark-stack.png"><img title="spark-stack" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-stack" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-stack.png" width="633" height="298" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png"><img title="spark-stack" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-stack" src="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png" width="633" height="298" /></a></p>
 <div style="height: 50px;"></div>
 
 <h4 id="spark-sql"><a href="https://spark.apache.org/sql/" target="_blank">Spark SQL</a></h4>
@@ -211,7 +222,7 @@
 
 <p>Se o Spark foi instalado corretamente, será apresentado as seguintes mensagens na saída no console.</p>
 
-<p><img title="spark-tela" alt="spark-tela" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-tela.jpg" width="100%" /></p>
+<p><img title="spark-tela" alt="spark-tela" src="http://blob.vitormeriat.com.br/images/2016/01/spark-tela.jpg" width="100%" /></p>
 
 <p>Para validar, rode o seguinte comando:</p>
 <pre style="font-size: 1.6em !important"><code class="javascript">sc.version</code></pre>
@@ -293,13 +304,13 @@ val counts = full.flatMap(line =&gt; line.split(" "))
 
 <p>Após a execução o <strong>collect</strong> nos retorna parte do resultado como podemos ver abaixo:</p>
 
-<p><img title="spark-result" alt="spark-result" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-result.jpg" width="100%" /></p>
+<p><img title="spark-result" alt="spark-result" src="http://blob.vitormeriat.com.br/images/2016/01/spark-result.jpg" width="100%" /></p>
 
 <p>O retorno nos mostra uma estrutura de mapa contendo como <strong>Key</strong> a palavra cujo o valor é a quantidade de vezes que a palavra aparece no arquivo.</p>
 
 <p>A imagem abaixo mostra a UI do <strong>Spark</strong> exibindo os dados de execução dos 2 estágios:</p>
 
-<p><img title="spark-ui" alt="spark-ui" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-ui.jpg" width="100%" /></p>
+<p><img title="spark-ui" alt="spark-ui" src="http://blob.vitormeriat.com.br/images/2016/01/spark-ui.jpg" width="100%" /></p>
 
 <p>Ao invés de utilizar o <strong>collect</strong> poderíamos utilizar o <strong>saveAsTextFile</strong> e teríamos todo o conteúdo em arquivo.</p>
 

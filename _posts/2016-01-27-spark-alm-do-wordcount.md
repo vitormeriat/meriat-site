@@ -5,9 +5,9 @@ date: 2016-01-27
 categories:
    - Big Data
    - Spark
-image-full: "https://meriatsite.blob.core.windows.net/images/2016/01/spark-capa.jpg"
+image-full: "http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"
 ---
-<p style="background-color: #000000" align="center"><a href="https://meriatsite.blob.core.windows.net/images/2016/01/spark-capa.jpg"><img title="spark-capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-capa" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-capa.jpg" width="819" height="518" /></a></p>
+<p style="background-color: #000000" align="center"><a href="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"><img title="spark-capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-capa" src="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg" width="819" height="518" /></a></p>
 
 Não é enganação, vou fazer o famoso exemplo do **WordCount**, porém vou tentar ir além do que apenas mostrar o código ou dizer Spark torna esta tarefa mais simples que utilizar Hadoop/MapReduce. A exemplo do post <a href="http://www.vitormeriat.com.br/spark-resilient-distributed-datasets/" target="_blank">Spark – Resilient Distributed Datasets</a>, vou focar na base e estrutura básica da ferramenta para se conseguir o desempenho esperado ao utilizar o Spark.
 
@@ -23,7 +23,7 @@ Praticamente como tudo na vida de TI, cabe ao técnico analizar os dados e casos
 ## Spark Framework Ecosystem
 Fora a API do Spark, existem bibliotecas adicionais que fazem parte do seu ecossistema e fornecem capacidades adicionais para as áreas de análise de Big Data e aprendizado de máquina.
 
-<a href="https://meriatsite.blob.core.windows.net/images/2016/01/spark-stack.png"><img title="spark-stack" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-stack" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-stack.png" width="633" height="298" /></a>
+<a href="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png"><img title="spark-stack" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-stack" src="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png" width="633" height="298" /></a>
 <div style="height: 50px;"></div>
 
 #### <a href="https://spark.apache.org/sql/" target="_blank">Spark SQL</a>
@@ -66,7 +66,7 @@ Para verificar a instalação o Spark, navegue até o diretório e execute o she
 
 Se o Spark foi instalado corretamente, será apresentado as seguintes mensagens na saída no console.
 
-<img title="spark-tela" alt="spark-tela" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-tela.jpg" width="100%" />
+<img title="spark-tela" alt="spark-tela" src="http://blob.vitormeriat.com.br/images/2016/01/spark-tela.jpg" width="100%" />
 
 Para validar, rode o seguinte comando:
 <pre style="font-size: 1.6em !important"><code class="javascript">sc.version</code></pre>
@@ -144,13 +144,13 @@ val counts = full.flatMap(line =&gt; line.split(" "))
 
 Após a execução o **collect** nos retorna parte do resultado como podemos ver abaixo:
 
-<img title="spark-result" alt="spark-result" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-result.jpg" width="100%" />
+<img title="spark-result" alt="spark-result" src="http://blob.vitormeriat.com.br/images/2016/01/spark-result.jpg" width="100%" />
 
 O retorno nos mostra uma estrutura de mapa contendo como **Key** a palavra cujo o valor é a quantidade de vezes que a palavra aparece no arquivo.
 
 A imagem abaixo mostra a UI do **Spark** exibindo os dados de execução dos 2 estágios:
 
-<img title="spark-ui" alt="spark-ui" src="https://meriatsite.blob.core.windows.net/images/2016/01/spark-ui.jpg" width="100%"/>
+<img title="spark-ui" alt="spark-ui" src="http://blob.vitormeriat.com.br/images/2016/01/spark-ui.jpg" width="100%"/>
 
 Ao invés de utilizar o **collect** poderíamos utilizar o **saveAsTextFile** e teríamos todo o conteúdo em arquivo.
 
