@@ -30,3 +30,5 @@ Algumas implementações são reprodução de exercícios dos quais eu irei apon
 > Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.
 
 [Meriat Machine Learning Note](https://github.com/vitormeriat/meriat-ml-notes)
+
+##### Até a próxima pessoal ;)
