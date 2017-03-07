@@ -91,9 +91,10 @@
 					<img src="/assets/images/logo.png" alt="Work Logo">
 				</a>
 			</div>
-      <h2 class="text-center">Vitor Meriat</h2>
-      <h5 class="text-center">MVP Azure - Cloud Architect - Data science enthusiast</h5>
-
+      <div style="text-align: center;">
+        <h2 style="margin-top: 0px !important;">Vitor Meriat</h2>
+        <span style="font-size: 1em; color: black;">MVP Azure - Cloud Architect - Data science enthusiast</span>
+      </div>
 			<!-- Mobile Toggle Menu Button -->
 			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 
@@ -124,15 +125,16 @@
 	<!-- Header -->
 
     <main role="main">
-      <div class="container">
+      <div class="fh5co-spacer fh5co-spacer-sm"></div>
 
+<div class="container">
 <section itemscope itemtype="http://schema.org/Blog">
 
   <div class="section-padding archives__container">
     
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2012/03/05/dicas-azure-evite-deployments-no-validados-no-windows-azure/" itemprop="url">
-          <div>
+          <div style="text-align: center;">
             <span class="index-title">Dicas Azure: Evite Deployments não validados no Windows Azure</span>
             <p>
               <span class="post-date">Mar 5, 2012</span>
@@ -142,18 +144,19 @@
             </p>
             
             
+            </div>
+          </a>
             
               <p class="post-description">Ai vai mais uma dica de “produtividade” para o Windows Azure. Se tinha uma coisa irritante nas versões anteriores ao SDK 1.4 era a não validação de pacotes para deploy do Azure. Vamos supor o seguinte: Você fez sua aplicação para o Azure e codificou uma class libary chamada MinhaDependencia com suas regras de negócio. Neste ponto seu projeto tem uma dependência do assembly MinhaDependencia.dll. Se por algum motivo esta dependência não estiver anexada ao pacote, seu deploy irá falhar...</p>
             
             <a href="/2012/03/05/dicas-azure-evite-deployments-no-validados-no-windows-azure/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
             <div class="fh5co-spacer fh5co-spacer-md"></div>
-          </div>
-        </a>
+
       </article>
     
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2012/02/28/dicas-azure-cuidado-com-o-deploying-travado-deployment-at-busy-or-initializing-status-for-long-time/" itemprop="url">
-          <div>
+          <div style="text-align: center;">
             <span class="index-title">Dicas Azure: Cuidado com o deploying travado. Deployment at Busy or Initializing Status for long time…</span>
             <p>
               <span class="post-date">Feb 28, 2012</span>
@@ -163,18 +166,19 @@
             </p>
             
             
+            </div>
+          </a>
             
               <p class="post-description">O pessoal que está trabalhando ou estudando o Azure, provavelmente já esbarrou com este problema. Fazer um deploy da aplicação na nuvem e o mesmo ficar “eras” em estado de “Busy” ou “Initializing”, exatamente como na imagem abaixo: Neste caso específico (e que havia ocorrido anteriormente comigo), meu arquivo ServiceConfiguration.cscfg que tem a diretiva DiagnosticsConnectionString estava apontando para o desenvolvimento local. Este é o comportamento esperado, o seu estado default. &#160; O problema Quando tentamos fazer um deploy da aplicação...</p>
             
             <a href="/2012/02/28/dicas-azure-cuidado-com-o-deploying-travado-deployment-at-busy-or-initializing-status-for-long-time/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
             <div class="fh5co-spacer fh5co-spacer-md"></div>
-          </div>
-        </a>
+
       </article>
     
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2012/02/23/enumerator-foreach-e-o-erro-invalidoperationexception-collection-was-modified/" itemprop="url">
-          <div>
+          <div style="text-align: center;">
             <span class="index-title">Enumerator, foreach e o erro “InvalidOperationException: Collection Was Modified”</span>
             <p>
               <span class="post-date">Feb 23, 2012</span>
@@ -184,18 +188,19 @@
             </p>
             
             
+            </div>
+          </a>
             
               <p class="post-description">Vamos abordar o cenário mais comum: Você possui uma coleção que pode ser uma lista de string, int ou como neste caso uma coleção de uma classe qualquer. Sua coleção tem diversos itens adicionados e você necessita retirar os itens conforme uma determinada lógica de negócio. Observe o código abaixo: &#160; O motivo Você utiliza um loop foreach para percorrer cada item da coleção. Assim que sua regra é atendida por um dos itens da coleção, chamamos o método Remove()...</p>
             
             <a href="/2012/02/23/enumerator-foreach-e-o-erro-invalidoperationexception-collection-was-modified/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
             <div class="fh5co-spacer fh5co-spacer-md"></div>
-          </div>
-        </a>
+
       </article>
     
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2012/02/17/sql-azure-tabelas-sem-clustered-index/" itemprop="url">
-          <div>
+          <div style="text-align: center;">
             <span class="index-title">SQL Azure e o não suporte a tabelas sem clustered index</span>
             <p>
               <span class="post-date">Feb 17, 2012</span>
@@ -205,18 +210,19 @@
             </p>
             
             
+            </div>
+          </a>
             
               <p class="post-description">Estava eu trabalhando feliz da vida em um sistema em Azure utilizando o ambiente local por meio do Compute Emulator e&#160; um banco de dados hospedado em um SQL Server 2008 R2 padrão, e tudo corria perfeitamente bem. Com todos os testes passando decidi que era hora de testar com os dados no SQL Azure e tive uma surpresinha: Msg 40054, Level 16, State 1, Line 3 Tables without a clustered index are not supported in this version of SQL...</p>
             
             <a href="/2012/02/17/sql-azure-tabelas-sem-clustered-index/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
             <div class="fh5co-spacer fh5co-spacer-md"></div>
-          </div>
-        </a>
+
       </article>
     
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2012/02/14/listar-nomes-das-tabelas-do-windows-azure-storage-service/" itemprop="url">
-          <div>
+          <div style="text-align: center;">
             <span class="index-title">Listar nomes das tabelas do Windows Azure Storage Service</span>
             <p>
               <span class="post-date">Feb 14, 2012</span>
@@ -226,18 +232,19 @@
             </p>
             
             
+            </div>
+          </a>
             
               <p class="post-description">Ai vai uma dica rápida para quem está trabalhando com Azure. Hoje tive a necessidade de listar todas as minhas tabelas do serviço de armazenamento do Windows Azure. Eu tinha que listar os nomes de todas as tabelas do desenvolvimento local e das minhas contas de acesso na nuvem.&#160; Com isso era preciso acessar e ler todas as tabelas modificando apenas meu Subscription ID. Considere esta necessidade quando você tem 100 ou mais tabelas penduradas no ATS (Azure Table Service)...</p>
             
             <a href="/2012/02/14/listar-nomes-das-tabelas-do-windows-azure-storage-service/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
             <div class="fh5co-spacer fh5co-spacer-md"></div>
-          </div>
-        </a>
+
       </article>
     
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2011/12/22/windows-azure-novidades-de-dezembro/" itemprop="url">
-          <div>
+          <div style="text-align: center;">
             <span class="index-title">Windows Azure: Novidades de dezembro</span>
             <p>
               <span class="post-date">Dec 22, 2011</span>
@@ -247,18 +254,19 @@
             </p>
             
             
+            </div>
+          </a>
             
               <p class="post-description">Último mês do ano e já estamos na semana de natal. O ano está se findando mas as novidades não param. O mês de dezembro está cheio de novidades e melhorias para quem está trabalhando ou quer se manter informado sobre a plataforma Azure. Quem está acompanhando a evolução dos serviços na nuvem da plataforma de cloud computing da Microsoft desde o início, sabe que já tivemos uma grande evolução. Algo que me chamou atenção foi o anuncio de Suporte...</p>
             
             <a href="/2011/12/22/windows-azure-novidades-de-dezembro/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
             <div class="fh5co-spacer fh5co-spacer-md"></div>
-          </div>
-        </a>
+
       </article>
     
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2011/11/08/arquitetura-android-explorando-o-activity/" itemprop="url">
-          <div>
+          <div style="text-align: center;">
             <span class="index-title">Arquitetura Android. Explorando o Activity</span>
             <p>
               <span class="post-date">Nov 8, 2011</span>
@@ -268,18 +276,19 @@
             </p>
             
             
+            </div>
+          </a>
             
               <p class="post-description">Geralmente encontramos diversos artigos falando sobre a programação Android iniciando-se na instalação e configuração das ferramentas necessárias para o desenvolvimento. Entretanto, antes de despejar configurações e código sobre a tela, tenho aprendido o valor de se conhecer o terreno sobre o qual se anda. Neste caso, o primeiro passo para desenvolver aplicações Android é explorar um pouco da arquitetura do Activity, peça fundamental para o nosso objetivo. &#160; Visão geral Uma Activity (atividade) pode ser entendida como uma tarefa que...</p>
             
             <a href="/2011/11/08/arquitetura-android-explorando-o-activity/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
             <div class="fh5co-spacer fh5co-spacer-md"></div>
-          </div>
-        </a>
+
       </article>
     
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2011/10/26/windows-azure-storage-infra-estrutura-de-armazenamento/" itemprop="url">
-          <div>
+          <div style="text-align: center;">
             <span class="index-title">Windows Azure Storage: Infra-estrutura de armazenamento</span>
             <p>
               <span class="post-date">Oct 26, 2011</span>
@@ -289,18 +298,19 @@
             </p>
             
             
+            </div>
+          </a>
             
               <p class="post-description">Vamos falar um pouco sobre alguns dos conceitos básicos do Windows Azure Storage explorando mais um pouco da arquitetura do sistema de armazenamento. Como já vimos anteriormente, o Windows Azure Storage inclui um conjunto de serviços robustos. Estes serviços estão sempre disponíveis, são duráveis e altamente escaláveis. Eles fazem parte integrante de uma aplicação de cloud-enabled. Esses benefícios são o resultado de uma complexa arquitetura que oferece muitas opções. Compreender esta arquitetura pode ser assustador, e você pode se perguntar...</p>
             
             <a href="/2011/10/26/windows-azure-storage-infra-estrutura-de-armazenamento/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
             <div class="fh5co-spacer fh5co-spacer-md"></div>
-          </div>
-        </a>
+
       </article>
     
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2011/10/19/tdc-2011-em-goinia-eu-vou/" itemprop="url">
-          <div>
+          <div style="text-align: center;">
             <span class="index-title">TDC 2011 em Goiânia. Eu vou!</span>
             <p>
               <span class="post-date">Oct 19, 2011</span>
@@ -310,18 +320,19 @@
             </p>
             
             
+            </div>
+          </a>
             
               <p class="post-description">Ai vai uma super dica sobre um evento que ocorrerá este mês em Goiânia, o TDC 2011. O TDC ou The Developer’s Coference, é um evento de grande porte e alcance, principalmente por que ao longo de suas 11 trilhas teremos palestras sobre diversas plataformas e linguagens abordando temas como Arquitetura, robótica, web, SOA/Cloud, empreendedorismo, testes, mobile e etc. Estarei palestrando na trilha de .NET junto com o Bruno Kenj. Nesta palestra vamos abordar de maneira sucinta a arquitetura do...</p>
             
             <a href="/2011/10/19/tdc-2011-em-goinia-eu-vou/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
             <div class="fh5co-spacer fh5co-spacer-md"></div>
-          </div>
-        </a>
+
       </article>
     
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2011/10/19/desenvolvimento-android-aprenda-atravs-do-cdigo/" itemprop="url">
-          <div>
+          <div style="text-align: center;">
             <span class="index-title">Desenvolvimento Android. Aprenda através do código.</span>
             <p>
               <span class="post-date">Oct 19, 2011</span>
@@ -331,13 +342,14 @@
             </p>
             
             
+            </div>
+          </a>
             
               <p class="post-description">Aqui vai uma dica para quem como eu se interessa ou está iniciando os estudos para a plataforma Android. Para iniciar os estudos em alguma plataforma, um bom caminho é procurar os materiais de estudo mais indicados pela “comunidade” e ter a mão bons exemplos de implementações como base. Para iniciar no mundo Android, você precisa instalar o Kit de desenvolvimento, que é comumente conhecido como SDK do Android. Após a instalação, você pode procurar a pasta da instalação do...</p>
             
             <a href="/2011/10/19/desenvolvimento-android-aprenda-atravs-do-cdigo/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
             <div class="fh5co-spacer fh5co-spacer-md"></div>
-          </div>
-        </a>
+
       </article>
     
 

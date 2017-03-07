@@ -3,10 +3,10 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Mar 2017 22:50:04 -0300</pubDate>
-    <lastBuildDate>Sat, 04 Mar 2017 22:50:04 -0300</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 06 Mar 2017 22:14:42 -0300</pubDate>
+    <lastBuildDate>Mon, 06 Mar 2017 22:14:42 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -34,8 +34,8 @@
 &lt;h5 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h5&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
@@ -137,8 +137,8 @@
 &lt;h5 id=&quot;É-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h5&gt;
 </description>
         <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">/2017/02/07/literatura-classica-machine-learning/</guid>
+        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -221,8 +221,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/05/cpbr10-workshop-machine-learning/</link>
-        <guid isPermaLink="true">/2017/02/05/cpbr10-workshop-machine-learning/</guid>
+        <link>http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -248,8 +248,8 @@
 &lt;h5 id=&quot;É-isso-ai-pessoal-em-breve-continuamos-esse-bate-papo-&quot;&gt;É isso ai pessoal, em breve continuamos esse bate papo ;)&lt;/h5&gt;
 </description>
         <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
-        <link>/2017/01/19/inteligencia-artificial-historia-industria/</link>
-        <guid isPermaLink="true">/2017/01/19/inteligencia-artificial-historia-industria/</guid>
+        <link>http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</guid>
         
         
         <category>IA</category>
@@ -318,8 +318,8 @@
 &lt;p&gt;A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero ;)&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Oct 2016 00:00:00 -0200</pubDate>
-        <link>/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
-        <guid isPermaLink="true">/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
+        <link>http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
         
         
         <category>Data Science</category>
@@ -348,8 +348,8 @@
 &lt;p&gt;&lt;a href=&quot;http://www.iotweekend.com.br/&quot; target=&quot;_blank&quot;&gt;IoT Weekend&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 06 Aug 2016 00:00:00 -0300</pubDate>
-        <link>/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
-        <guid isPermaLink="true">/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
+        <link>http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
         
         
         <category>Comunidade</category>
@@ -408,8 +408,8 @@
 &lt;h3 id=&quot;valeu-galera-&quot;&gt;Valeu galera ;)&lt;/h3&gt;
 </description>
         <pubDate>Thu, 28 Jul 2016 00:00:00 -0300</pubDate>
-        <link>/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
-        <guid isPermaLink="true">/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
+        <link>http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
         
         
         <category>Comunidade</category>
@@ -440,8 +440,8 @@
 &lt;h4&gt;;)&lt;/h4&gt;
 </description>
         <pubDate>Mon, 09 May 2016 00:00:00 -0300</pubDate>
-        <link>/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
-        <guid isPermaLink="true">/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
+        <link>http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
         
         
         <category>Comunidade</category>
@@ -488,8 +488,8 @@
 &lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Apr 2016 00:00:00 -0300</pubDate>
-        <link>/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
-        <guid isPermaLink="true">/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
+        <link>http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
         
         
         <category>Azure IoT Suite</category>
@@ -545,8 +545,8 @@ O tema foi em relação a computação congnitiva, inteligência artificial e Io
 &lt;h5&gt;;)&lt;/h5&gt;
 </description>
         <pubDate>Tue, 12 Apr 2016 00:00:00 -0300</pubDate>
-        <link>/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</link>
-        <guid isPermaLink="true">/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</guid>
+        <link>http://localhost:4000/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/12/iot-weekend-godispositivos-inteligentes-com-computao-cognitiva-e-ia/</guid>
         
         
         <category>Comunidade</category>
