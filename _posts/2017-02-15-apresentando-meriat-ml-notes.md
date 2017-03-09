@@ -31,4 +31,43 @@ Algumas implementações são reprodução de exercícios dos quais eu irei apon
 
 [Meriat Machine Learning Note](https://github.com/vitormeriat/meriat-ml-notes)
 
+
+## Meriat Machine Learning Note
+
+Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.
+
+## Projects
+
+### File Handling
+
+### SMS Spam Filtering
+
+### Song Recommender
+
+### Basic Math
+Basic math notions with python
+
+### Basic Statistic in Python
+
+### Basic Natural Language Processing
+1. Tokenization
+2. Stopword Removal
+3. N-Grams
+4. WordSense Disambiguation
+5. Parts-of-Speech
+
+*This module uses NLTK for the text processing processes. It is important to note that you will need to download nltk_data.*
+
+### Simple Probability Model
+1. Common Ground
+2. Limit Theorems
+3. Derived Distributions
+  * Covariance
+  * Correlation
+
+### Imbalanced Learning with Gaussians
+
+
+
+
 ##### Até a próxima pessoal ;)
