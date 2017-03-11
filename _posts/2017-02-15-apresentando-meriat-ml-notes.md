@@ -21,7 +21,6 @@ O Meriat Machine Learning Notes nada mais e que um compendio destes estudos que 
 
 Minha opção pelo **Jupyter Notebook**, dentre tantos motivos, se dá pelo fato de conseguir de forma simples documentar e visualizar todo o código e anotações de forma simples. Vale dizer que o código que estou utilizando pode ser facilmente utilizado em outra IDE, conforme sua preferência.
 
-Minha ideia é realizar um coletânea sobre os principais termos, exemplos e referenciar o mesmo para quem quiser se aprofundar no tema.
 
 Algumas implementações são reprodução de exercícios dos quais eu irei apontar o material base.
 
@@ -32,11 +31,11 @@ Algumas implementações são reprodução de exercícios dos quais eu irei apon
 [Meriat Machine Learning Note](https://github.com/vitormeriat/meriat-ml-notes)
 
 
+<div style="margin-bottom: 8em;"></div>
+
 ## Meriat Machine Learning Note
 
-Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.
-
-## Projects
+A estrutura atual está como o descrito abaixo:
 
 ### File Handling
 
@@ -48,6 +47,7 @@ Study Notes on machine learning, data analysis, algorithms and best practices us
 Basic math notions with python
 
 ### Basic Statistic in Python
+Basic math statistics with python
 
 ### Basic Natural Language Processing
 1. Tokenization
@@ -67,7 +67,6 @@ Basic math notions with python
 
 ### Imbalanced Learning with Gaussians
 
+<div style="margin-bottom: 5em;"></div>
 
-
-
-##### Até a próxima pessoal ;)
+### Até a próxima pessoal ;)
