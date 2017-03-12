@@ -14,7 +14,7 @@ categories:
 
 ---
 <p align="justify">Segue mais um capítulo desta saga. Desta vez vamos passar por alguns conceitos sobre <strong>NoSQL</strong>, sua forma e arquitetura base, escalabilidade, desempenho e sua relação com o <strong>Big Data</strong>.</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2013/12/capa.png"><img title="capa" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="capa" src="{{ site.baseurl }}/assets/capa_thumb.png" width="560" height="340" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2013/12/capa.png"><img title="capa" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="capa" src="{{ site.baseurl }}/assets/capa_thumb.png" width="560" height="340" /></a></p>
 <p><!--more-->
 <p>Antes de prosseguir, recomendo a leitura dos seguintes posts:</p>
 <ul>
@@ -164,7 +164,7 @@ categories:
 <blockquote><p align="justify">Commit em duas fases refere-se a uma transação que pode utilizar dois ou mais bancos de dados (<strong>multi-database</strong>), que podem estar localizados em servidores diferentes. Durante uma transação em bancos com essa característica garante-se que o Commit seja realizado em todos os bancos participantes ou em nenhum, ou seja, ou grava tudo ou não grava nada. </p>
 <p align="justify">Por exemplo, se sua aplicação atualiza dados em 2 banco de dados e você faz um commit, o recurso de commit em duas fases previne situações como a de um dos bancos ficar indisponível e suas mudanças serem atualizadas somente em um dos bancos envolvidos.</p>
 </blockquote>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2013/12/architecture.png"><img title="architecture" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="architecture" src="{{ site.baseurl }}/assets/architecture_thumb.png" width="560" height="373" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2013/12/architecture.png"><img title="architecture" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="architecture" src="{{ site.baseurl }}/assets/architecture_thumb.png" width="560" height="373" /></a></p>
 <p align="justify">Se você for escrever <strong>20 entidades</strong> para um cluster de banco de dados com <strong>3 nós</strong>, a ideia é gravar os dados de maneira uniforme entre todos eles. O banco de dados não precisa sincronizar entre os nós para que isso aconteça, e não há a necessidade de um <strong>Commint</strong> de duas fases, com o efeito visível que um cliente pode ver as mudanças no nó 1 antes do<strong> Cliente 2</strong> gravar todas as <strong>20 entidades</strong>.</p>
 <p align="justify">Uma solução <strong>RDBMS</strong> distribuída por outro lado, precisa garantir a consistência em todos os três nós. Isso significa que um cliente irá ou não ver qualquer mudança até todos os três nós tenhan confirmado todas as fases da gravação. Além disso a sincronização do <strong>RDBMS</strong> também precisa ler os dados a partir de outros nós, a fim de assegurar a integridade referencial.</p>
 <p align="justify">O fato de que de uma solução <strong>NoSQL</strong> poder escalar horizontalmente também significa que pode alavancar sua natureza distribuída para alta disponibilidade. Isso é muito importante na nuvem, já que um nó pode falhar a qualquer momento.</p>
@@ -181,7 +181,7 @@ categories:
 <p align="justify">No próximo post vou abordar especificamente sobre o <strong>Azure Table Service</strong> dentre deste contexto.</p>
 <p>&#160;</p>
 <h2>Até mais e bom estudo a todos!</h2>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2012/06/me-azul.png"><img title="Me Azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="Me Azul" src="{{ site.baseurl }}/assets/me-azul_thumb.png?w=110&amp;h=110&amp;h=110" width="110" align="left" height="110" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2012/06/me-azul.png"><img title="Me Azul" style="float:left;margin:0 20px 0 0;display:inline;" border="0" alt="Me Azul" src="{{ site.baseurl }}/assets/me-azul_thumb.png?w=110&amp;h=110&amp;h=110" width="110" align="left" height="110" /></a></p>
 <h3><font style="font-weight:bold;" color="#4f81bd">Twitter: </font><a href="http://twitter.com/#!/vitormeriat"><font style="font-weight:bold;" color="#9bbb59">@vitormeriat</font></a></h3>
 <h3><a href="mailto:vitormeriat@gmail.com"><font style="font-weight:bold;" color="#9bbb59">vitormeriat@gmail.com</font></a></h3>
 <h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font style="font-weight:bold;" color="#9bbb59">vitor.pereira@studentpartner.com</font></a></h3>
