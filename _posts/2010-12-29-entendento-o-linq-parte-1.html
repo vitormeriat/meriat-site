@@ -13,36 +13,48 @@ categories:
 <p align="justify">O LINQ permite você consultar qualquer coleção de executando IEnumerable&lt;&gt;, no meio de um array, list, XML DOM, ou fonte remota de dados(como uma tabela no SQL Server). O LINQ oferece os benefícios de ambos os tipos de verificação do tempo de compilação e composição dinâmica de consultas.
 <p align="justify">O LINQ proporciona duas arquiteturas paralelas: consultas locais e consultas interpretadas. As consultas locais tratam de coleções locais de objetos, quanto às consultas interpretadas tratam de fontes remotas de dados.Neste momento, iremos nos ater somente as consultas locais, abordando as consultas interpretadas a partir do tópico LINQ para SQL.
 <p align="justify">As unidades básicas de dados no LINQ são sequências e elementos. Uma sequência é qualquer objeto que executa a interface IEnumerable.
-<p align="justify">No exemplo seguinte, o array numeros é uma sequência e 1,2,3,4,5 são os elementos:&nbsp;&nbsp; <strong>int[] numeros = {1,2,3,4,5};</strong> </p>
+<p align="justify">No exemplo seguinte, o array numeros é uma sequência e 1,2,3,4,5 são os elementos:</p>
+<pre style="font-size: 1.6em !important">
+    <code class="cs">
+int[] numeros = {1,2,3,4,5};
+    </code>
+</pre>
+
+
 <blockquote><p>Este tipo de sequência é denominada "local", uma vez que representa uma coleção local de objetos na memória.</p>
 </blockquote>
 <h1><font>Operadores de Consulta</font></h1>
 <p align="justify">São métodos que transformam uma sequência. Por padrão, um operador de consulta recebe uma sequência de entrada e retorna uma sequência de saída transformada. Há em torno de 40 operadores de consulta, executados como métodos estáticos de extensão e que são denominados operadores padrões de consulta.</p>
 <h1 align="justify"><font>Consulta</font></h1>
 <p align="justify">É uma expressão que transforma sequências utilizando operadores de consulta. A estrutura mais simples de uma consulta engloba uma sequência de entrada e um operador; como no exemplo 1:</p>
-
 <pre style="font-size: 1.6em !important">
     <code class="cs">
-      // Sequência a ser consultada
-     int[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+// Sequência a ser consultada
+int[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-     // Consulta que retorna os números pares
-     IEnumerable<int> filtro = System.Linq.Enumerable.
+// Consulta que retorna os números pares
+IEnumerable<int> filtro = System.Linq.Enumerable.
     </code>
 </pre>
 
 <h1><font>Consultas Lambda</font></h1>
-<p align="justify">São as mais flexíveis e fundamentais. A maioria dos operadores de consulta aceita expressões Lambda como argumento. Estas expressões ajudam a direcionar e dar forma ao à consulta. No exemplo 1, utilizamos uma expressão Lambda:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>n =&gt; n % 2 == 0</strong>. </p>
+<p align="justify">São as mais flexíveis e fundamentais. A maioria dos operadores de consulta aceita expressões Lambda como argumento. Estas expressões ajudam a direcionar e dar forma ao à consulta. No exemplo 1, utilizamos uma expressão Lambda:</p>
+<pre style="font-size: 1.6em !important">
+    <code class="cs">
+n => n % 2 == 0
+    </code>
+</pre>
+
 <p align="justify">O argumento de entrada <em><font size="2">n</font></em> representa cada um dos números no array e é do tipo int. O operador Where necessita que a expressão retorne um valor bool, indicando que o elemento deverá ser incluído na sequência de saída. </p>
 <p align="justify">No C# temos uma sintaxe especial para escrever consultas, denominada "sintaxe de compreensão de consultas". O exemplo 1 utilizando o esta sintaxe ficaria assim: </p>
 
 <pre style="font-size: 1.6em !important">
     <code class="cs">
-    int[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-    IEnumerable<int> filtro = from n in sequencia
-      where n % 2 == 0
-      select n;
+IEnumerable<int> filtro = from n in sequencia
+  where n % 2 == 0
+  select n;
     </code>
 </pre>
 
@@ -51,8 +63,8 @@ categories:
 
 <pre style="font-size: 1.6em !important">
     <code class="cs">
-      int[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-      var filtro = sequencia.Where(n => n % 2 == 0);
+int[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+var filtro = sequencia.Where(n => n % 2 == 0);
     </code>
 </pre>
 
@@ -62,14 +74,14 @@ categories:
 
 <pre style="font-size: 1.6em !important">
     <code class="cs">
-      // Crio a sequência a ser consultada
-      string[] sequencia = { "Vasco", "Fluminense", "Bota-Fogo", "Grêmio", "Santos", "Internacional", "Cruzeiro", "Figueirense" };
+// Crio a sequência a ser consultada
+string[] sequencia = { "Vasco", "Fluminense", "Bota-Fogo", "Grêmio", "Santos", "Internacional", "Cruzeiro", "Figueirense" };
 
-      // Executo a consulta utilizando os operadores encadeados.
-      var filtro = sequencia
-         .Where(n => n.Contains("a")) // Condição
-         .OrderBy(n => n.Length)      // Ordenação
-         .Select(n => n.ToUpper());   // Tudo em letras maiúsculas
+// Executo a consulta utilizando os operadores encadeados.
+var filtro = sequencia
+   .Where(n => n.Contains("a")) // Condição
+   .OrderBy(n => n.Length)      // Ordenação
+   .Select(n => n.ToUpper());   // Tudo em letras maiúsculas
     </code>
 </pre>
 
@@ -80,14 +92,14 @@ categories:
 <p align="justify">Quando utilizamos operadores de consulta encadeados, a sequência de saída do primeiro operadar é a sequência de entrada de outro. Podemos então, construir o exemplo 2 como no código abaixo:</p>
 <pre style="font-size: 1.6em !important">
     <code class="cs">
-    string[] sequencia = { "Vasco", "Fluminense", "Bota-Fogo", "Grêmio", "Santos", "Internacional", "Cruzeiro", "Figueirense" };
+string[] sequencia = { "Vasco", "Fluminense", "Bota-Fogo", "Grêmio", "Santos", "Internacional", "Cruzeiro", "Figueirense" };
 
-    // Filtro
-    var filtro = sequencia.Where(n => n.Contains("a"));
-    // Ordenação
-    var sorted1 = filtro.OrderBy(n => n.Length);
-    // Transforma tudo em letras maiúsculas
-    var resultadoFinal = sorted2.Select(n => n.ToUpper());
+// Filtro
+var filtro = sequencia.Where(n => n.Contains("a"));
+// Ordenação
+var sorted1 = filtro.OrderBy(n => n.Length);
+// Transforma tudo em letras maiúsculas
+var resultadoFinal = sorted2.Select(n => n.ToUpper());
     </code>
 </pre>
 
@@ -96,25 +108,25 @@ categories:
 <p align="justify">Uma subconsulta é uma expressão Lambda de consulta obtida sobre o resultado da consulta anterior. No expemplo 3 utilizamos uma consulta n.Split() para converter cada uma das strings em uma coleção de palavras, logo após utilizamos nossa subconsulta .Last() para que a ordenação seja realizada pelo último elemento da coleção, neste caso o sobrenome do escritor.</p>
 <pre style="font-size: 1.6em !important">
     <code class="cs">
-      // Crio a sequência com os nomes dos escritores brasileiros
-      string[] nomes = { "Monteiro Lobato", "Cecilia Meireles", "Manuel Bandeira", "Mario Quintana", "Castro Alves" };
+// Crio a sequência com os nomes dos escritores brasileiros
+string[] nomes = { "Monteiro Lobato", "Cecilia Meireles", "Manuel Bandeira", "Mario Quintana", "Castro Alves" };
 
-      // Crio uma consulta pra ordenar os nomes pelos sobrenomes dos escritores
-      var resultado = nomes.OrderBy(n => n.Split().Last());
+// Crio uma consulta pra ordenar os nomes pelos sobrenomes dos escritores
+var resultado = nomes.OrderBy(n => n.Split().Last());
     </code>
 </pre>
 
 <p align="justify">No exemplo 4 utilizamos uma subconsulta mais elaborada. Nesta subconsulta, retornamos todas os elementos químicos cujo a quantidade de letras for igual ao elemento menor.</p>
 <pre style="font-size: 1.6em !important">
     <code class="cs">
-    // Crio a sequência com alguns elementos da tabela periódica
-    string[] nomes = { "Urânio", "Rênio", "Ununquádio", "Sódio", "Copernício", "Bário" };
+// Crio a sequência com alguns elementos da tabela periódica
+string[] nomes = { "Urânio", "Rênio", "Ununquádio", "Sódio", "Copernício", "Bário" };
 
-    // Consulta para retornar todos os nomes cujo o tamanho seja igual ao menor nome.
-    var resultado = nomes
-       .Where(n => n.Length ==
-           nomes.OrderBy(n2 => n2.Length)
-           .Select(n2 => n2.Length).First());
+// Consulta para retornar todos os nomes cujo o tamanho seja igual ao menor nome.
+var resultado = nomes
+   .Where(n => n.Length ==
+       nomes.OrderBy(n2 => n2.Length)
+       .Select(n2 => n2.Length).First());
     </code>
 </pre>
 
