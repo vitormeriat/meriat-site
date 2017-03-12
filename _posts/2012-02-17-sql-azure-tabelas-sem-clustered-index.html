@@ -1,17 +1,14 @@
 ---
 layout: post
 title: SQL Azure e o não suporte a tabelas sem clustered index
-date: 2012-02-17 16:27:57.000000000 -02:00
-type: post
-published: true
-status: publish
+date: 2012-02-17
 categories:
-- Microsoft Azure
-- Microsoft Azure Storage
-- SQL
+  - Microsoft Azure
+  - Microsoft Azure Storage
+  - SQL
 
 ---
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2012/02/errosqlazure.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;margin:0 20px 15px 0;" title="ErroSqlAzure"   alt="ErroSqlAzure" align="left" src="http://blob.vitormeriat.com.br/images/errosqlazure.png" width="240" height="112" /></a>Estava eu trabalhando feliz da vida em um sistema em Azure utilizando o ambiente local por meio do <strong>Compute Emulator</strong> e&#160; um banco de dados hospedado em um <strong>SQL Server 2008 R2</strong> padrão, e tudo corria perfeitamente bem. Com todos os testes passando decidi que era hora de testar com os dados no <strong>SQL Azure</strong> e tive uma surpresinha:</p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2012/02/errosqlazure.png"><img alt="ErroSqlAzure" align="left" src="http://blob.vitormeriat.com.br/images/2012/02/errosqlazure.png" /></a>Estava eu trabalhando feliz da vida em um sistema em Azure utilizando o ambiente local por meio do <strong>Compute Emulator</strong> e&#160; um banco de dados hospedado em um <strong>SQL Server 2008 R2</strong> padrão, e tudo corria perfeitamente bem. Com todos os testes passando decidi que era hora de testar com os dados no <strong>SQL Azure</strong> e tive uma surpresinha:</p>
 <blockquote><p><font color="#ff0000"><strong>Msg 40054, Level 16, State 1, Line 3  <br /></strong>Tables without a clustered index are not supported in this version of SQL Server. Please create a clustered index and try again.</font></p>
 </blockquote>
 <p><!--more-->
@@ -23,127 +20,96 @@ categories:
 <p>&#160;</p>
 <h2>Solução</h2>
 <p align="justify">O primeiro passo foi identificar as tabelas sem um clustered index definido. É claro que no meu caso eu tinha muitas tabelas o que justifica o esforço, mas vamos simular isto criando um banco com quatro tabelas como segue na listagem abaixo. </p>
-<pre><pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  1: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CREATE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CREATE</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=DATABASE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">DATABASE</a> TesteSQLAzure
+<pre style="font-size: 1.6em !important">
+    <code class="sql">
+CREATE DATABASE TesteSQLAzure
+USE [TesteSQLAzure];
+GO
+CREATE TABLE [dbo].[Tabela01] (
+  [PartitionKey] varchar(36)  NOT NULL,
+  [RowKey] varchar(36)  NOT NULL,
+  [PropriedadeA] varchar(50)  NULL
+);
+GO
+
+CREATE TABLE [dbo].[Tabela02] (
+  [PartitionKey] varchar(36)  NOT NULL,
+  [RowKey] varchar(36)  NOT NULL,
+  [PropriedadeA] varchar(50)  NULL
+);
+GO
+
+CREATE TABLE [dbo].[Tabela03] (
+  [PartitionKey] varchar(36)  NOT NULL,
+  [RowKey] varchar(36)  NOT NULL,
+  [PropriedadeA] varchar(50)  NULL
+);
+GO
+
+CREATE TABLE [dbo].[Tabela04] (
+  [PartitionKey] varchar(36)  NOT NULL,
+  [RowKey] varchar(36)  NOT NULL,
+  [PropriedadeA] varchar(50)  NULL
+);
+GO
+    </code>
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  2:
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  3: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=USE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">USE</a> [TesteSQLAzure];
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  4: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a>
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  5:
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  6: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CREATE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CREATE</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=TABLE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">TABLE</a> [dbo].[Tabela01] (
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  7: [PartitionKey] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(36)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NOT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NOT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>,
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  8: [RowKey] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(36)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NOT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NOT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>,
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  9: [PropriedadeA] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(50)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 10: );
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 11: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a>
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 12:
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 13: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CREATE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CREATE</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=TABLE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">TABLE</a> [dbo].[Tabela02] (
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 14: [PartitionKey] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(36)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NOT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NOT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>,
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 15: [RowKey] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(36)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NOT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NOT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>,
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 16: [PropriedadeA] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(50)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 17: );
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 18: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a>
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 19:
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 20: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CREATE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CREATE</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=TABLE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">TABLE</a> [dbo].[Tabela03] (
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 21: [PartitionKey] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(36)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NOT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NOT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>,
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 22: [RowKey] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(36)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NOT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NOT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>,
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 23: [PropriedadeA] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(50)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 24: );
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 25: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a>
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 26:
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 27: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CREATE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CREATE</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=TABLE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">TABLE</a> [dbo].[Tabela04] (
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 28: [PartitionKey] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(36)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NOT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NOT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>,
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 29: [RowKey] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(36)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NOT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NOT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>,
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 30: [PropriedadeA] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=varchar&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">varchar</a>(50)  <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NULL&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NULL</a>
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 31: );
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;"> 32: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a></pre>
+
 <p align="justify">&#160;</p>
 <p>Como próximo passo vamos criar os índices para as tabelas Tabela02 e Tabela04:</p>
-<pre><pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  1: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=ALTER&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">ALTER</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=TABLE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">TABLE</a> [dbo].[Tabela02]
+<pre style="font-size: 1.6em !important">
+    <code class="sql">
+ALTER TABLE [dbo].[Tabela02]
+ADD CONSTRAINT [PK_Tabela02]
+PRIMARY KEY CLUSTERED ([PartitionKey], [RowKey] ASC);
+GO
+
+ALTER TABLE [dbo].[Tabela04]
+ADD CONSTRAINT [PK_Tabela04]
+PRIMARY KEY CLUSTERED ([PartitionKey], [RowKey] ASC);
+GO
+    </code>
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  2: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=ADD&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">ADD</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CONSTRAINT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CONSTRAINT</a> [PK_Tabela02]
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  3: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=PRIMARY&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">PRIMARY</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=KEY&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">KEY</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CLUSTERED&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CLUSTERED</a> ([PartitionKey], [RowKey] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=ASC&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">ASC</a>);
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  4: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a>
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  5:
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  6: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=ALTER&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">ALTER</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=TABLE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">TABLE</a> [dbo].[Tabela04]
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  7: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=ADD&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">ADD</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CONSTRAINT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CONSTRAINT</a> [PK_Tabela04]
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  8: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=PRIMARY&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">PRIMARY</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=KEY&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">KEY</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=CLUSTERED&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">CLUSTERED</a> ([PartitionKey], [RowKey] <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=ASC&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">ASC</a>);
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  9: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=GO&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">GO</a></pre>
+
 <p>&#160;</p>
 <p align="justify">Neste exato momento, seria possível inserir dados nas tabelas Tabela02 e Tabela04, porém teríamos o referido problema quando fosse a vez de inserir dados nas tabelas Tabela01 e Tabela03 . Como ainda não sabemos disto, precisamos encontrar as tabelas “estragadas” no SQL Azure. Para isso, vamos dividir o script em 3 passos:</p>
 <p>Passo 1: Contar a quantidade de tabelas do banco em questão;</p>
-<pre><pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  1: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=SELECT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">SELECT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=COUNT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">COUNT</a> (*)
+<pre style="font-size: 1.6em !important">
+    <code class="sql">
+SELECT COUNT (*)
+FROM sys.objects
+WHERE type = 'U'
+    </code>
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  2: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=FROM&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">FROM</a> sys.objects
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  3: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=WHERE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">WHERE</a> type = '<span style="color:#8b0000;">U</span>'</pre>
+
 <p>&#160;</p>
 <p>Passo 2: Retornar a quantidade de tabelas com o clustered index definido;</p>
-<pre><pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  1: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=SELECT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">SELECT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=COUNT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">COUNT</a> (*) <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=AS&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">AS</a> '<span style="color:#8b0000;">Quantidade</span>'
+<pre style="font-size: 1.6em !important">
+    <code class="sql">
+SELECT COUNT (*) AS 'Quantidade'
+FROM sys.indexes
+WHERE object_id IN
+  ( SELECT object_id FROM sys.objects WHERE type = 'U' )
+  AND index_id = 1
+    </code>
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  2: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=FROM&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">FROM</a> sys.indexes
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  3: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=WHERE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">WHERE</a> object_id <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=IN&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">IN</a>
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  4: ( <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=SELECT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">SELECT</a> object_id <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=FROM&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">FROM</a> sys.objects <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=WHERE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">WHERE</a> type = '<span style="color:#8b0000;">U</span>' )
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  5: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=AND&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">AND</a> index_id = 1</pre>
+
 <p>&#160;</p>
 <p>Passo 3: Retornar o nome das tabelas sem um clustered index definido.</p>
-<pre><pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  1: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=SELECT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">SELECT</a> name <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=AS&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">AS</a> '<span style="color:#8b0000;">Tabelas sem Clustered Index</span>'
+<pre style="font-size: 1.6em !important">
+    <code class="sql">
+SELECT name AS 'Tabelas sem Clustered Index'
+FROM sys.objects
+WHERE type = 'U' AND object_id NOT IN
+  (SELECT object_id FROM sys.indexes WHERE index_id = 1)
+    </code>
 </pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  2: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=FROM&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">FROM</a> sys.objects
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  3: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=WHERE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">WHERE</a> type = '<span style="color:#8b0000;">U</span>'
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  4: <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=AND&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">AND</a> object_id <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=NOT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">NOT</a> <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=IN&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">IN</a>
-</pre>
-<pre style="background-color:#ffffff;width:100%;font-family:consolas,&#039;font-size:12px;margin:0;">  5: (<a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=SELECT&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">SELECT</a> object_id <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=FROM&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">FROM</a> sys.indexes <a style="color:#0000ff;" href="http://search.microsoft.com/default.asp?so=RECCNT&amp;siteid=us%2Fdev&amp;p=1&amp;nq=NEW&amp;qu=WHERE&amp;IntlSearch=&amp;boolean=PHRASE&amp;ig=01&amp;i=09&amp;i=99">WHERE</a> index_id = 1)</pre>
+
 <p>&#160;</p>
 <p>É claro que você poderia executar direto o 3º passo, mas assim fica mais claro como chegar até esta solução.</p>
 <p>Agora que você já identificou as tabelas com problema, é só adicionar as constraints para que neste cenário, tudo funcione corretamente.</p>
+
 <h3>Importante:</h3>
 <p>** Esse exemplo não tem por objetivo entrar na discussão do que é uma boa chave para seu índice cluster, apenas mostra cuidados ao portar uma aplicação para o SQL Azure.</p>
 <p>&#160;</p>
 <h3><strong>Um ótimo feriado a todos.</strong></h3>
-<p><a href="http://blob.vitormeriat.com.br/images/2012/02/notebook.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;" title="Notebook"   alt="Notebook" align="left" src="http://blob.vitormeriat.com.br/images/notebook.png" width="81" height="130" /></a></p>
-<p><strong>Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong> </p>
-<p><i><strong>Microsoft MSP – Brasília</strong></i> </p>
-<p><a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a> </p>
-<p><a href="mailto:vitor.meriat@srnimbus.com">vitor.meriat@srnimbus.com</a></p>
