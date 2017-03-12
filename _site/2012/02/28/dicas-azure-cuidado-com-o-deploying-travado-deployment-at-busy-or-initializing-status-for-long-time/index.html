@@ -161,10 +161,10 @@
 
   <section class="section-padding post" itemprop="articleBody">
     <p align="justify">O pessoal que está trabalhando ou estudando o <strong>Azure</strong>, provavelmente já esbarrou com este problema. Fazer um deploy da aplicação na nuvem e o mesmo ficar “eras” em estado de “<strong>Busy</strong>” ou “<strong>Initializing</strong>”, exatamente como na imagem abaixo:</p>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2012/02/01.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="01" border="0" alt="01" src="/assets/01_thumb.png" width="540" height="326" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2012/02/01.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="01" border="0" alt="01" src="/assets/01_thumb.png" width="540" height="326" /></a></p>
 <p><!--more-->
 <p align="justify">Neste caso específico (e que havia ocorrido anteriormente comigo), meu arquivo <strong>ServiceConfiguration.cscfg</strong> que tem a diretiva <strong>DiagnosticsConnectionString</strong> estava apontando para o desenvolvimento local. Este é o comportamento esperado, o seu estado default.</p>
-<p align="justify"><a href="https://meriatsite.blob.core.windows.net/images/2012/02/021.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="02" border="0" alt="02" src="/assets/02_thumb1.png" width="540" height="172" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2012/02/021.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="02" border="0" alt="02" src="/assets/02_thumb1.png" width="540" height="172" /></a></p>
 <p align="justify">&#160;</p>
 <h2 align="justify">O problema</h2>
 <p align="justify">Quando tentamos fazer um deploy da aplicação neste estado, estamos exigindo que o pacote inicialize a aplicação executando nosso <strong>Diagnostics</strong> para se conectar ao armazenamento local, o que não existe na nuvem. Como não é possível iniciar, o deploy se perde e fica preso em <strong>Busy / Initializing</strong>…</p>
@@ -177,7 +177,7 @@
 <p align="justify">Antes de publicar se projeto, verifique se seus arquivos de configuração(ServiceConfiguration) e definição(ServiceDefinition) estão corretos. Se suas strings de conexão estão apontando para o lugar correto. São detalhes que podem te salvar de uma boa dor de cabeça…</p>
 <p align="justify">&#160;</p>
 <h3><font>Um ótimo estudo a todos.</font></h3>
-<p><a href="https://meriatsite.blob.core.windows.net/images/2012/02/principal.png"><img style="display:inline;float:left;" title="Principal" border="0" alt="Principal" align="left" src="/assets/principal_thumb.png?w=81&amp;h=130" width="81" height="130" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2012/02/principal.png"><img style="display:inline;float:left;" title="Principal" border="0" alt="Principal" align="left" src="/assets/principal_thumb.png?w=81&amp;h=130" width="81" height="130" /></a></p>
 <p><strong>Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong></p>
 <p><i><strong>Microsoft MSP – Brasília</strong></i></p>
 <p><a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a></p>

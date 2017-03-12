@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Mar 2017 21:59:52 -0300</pubDate>
-    <lastBuildDate>Thu, 09 Mar 2017 21:59:52 -0300</lastBuildDate>
+    <pubDate>Sat, 11 Mar 2017 22:01:31 -0300</pubDate>
+    <lastBuildDate>Sat, 11 Mar 2017 22:01:31 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -19,8 +19,6 @@
 
 &lt;p&gt;Minha opção pelo &lt;strong&gt;Jupyter Notebook&lt;/strong&gt;, dentre tantos motivos, se dá pelo fato de conseguir de forma simples documentar e visualizar todo o código e anotações de forma simples. Vale dizer que o código que estou utilizando pode ser facilmente utilizado em outra IDE, conforme sua preferência.&lt;/p&gt;
 
-&lt;p&gt;Minha ideia é realizar um coletânea sobre os principais termos, exemplos e referenciar o mesmo para quem quiser se aprofundar no tema.&lt;/p&gt;
-
 &lt;p&gt;Algumas implementações são reprodução de exercícios dos quais eu irei apontar o material base.&lt;/p&gt;
 
 &lt;h3 id=&quot;github&quot;&gt;Github&lt;/h3&gt;
@@ -31,11 +29,11 @@
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/vitormeriat/meriat-ml-notes&quot;&gt;Meriat Machine Learning Note&lt;/a&gt;&lt;/p&gt;
 
+&lt;div style=&quot;margin-bottom: 8em;&quot;&gt;&lt;/div&gt;
+
 &lt;h2 id=&quot;meriat-machine-learning-note&quot;&gt;Meriat Machine Learning Note&lt;/h2&gt;
 
-&lt;p&gt;Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.&lt;/p&gt;
-
-&lt;h2 id=&quot;projects&quot;&gt;Projects&lt;/h2&gt;
+&lt;p&gt;A estrutura atual está como o descrito abaixo:&lt;/p&gt;
 
 &lt;h3 id=&quot;file-handling&quot;&gt;File Handling&lt;/h3&gt;
 
@@ -47,6 +45,7 @@
 &lt;p&gt;Basic math notions with python&lt;/p&gt;
 
 &lt;h3 id=&quot;basic-statistic-in-python&quot;&gt;Basic Statistic in Python&lt;/h3&gt;
+&lt;p&gt;Basic math statistics with python&lt;/p&gt;
 
 &lt;h3 id=&quot;basic-natural-language-processing&quot;&gt;Basic Natural Language Processing&lt;/h3&gt;
 &lt;ol&gt;
@@ -73,7 +72,9 @@
 
 &lt;h3 id=&quot;imbalanced-learning-with-gaussians&quot;&gt;Imbalanced Learning with Gaussians&lt;/h3&gt;
 
-&lt;h5 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h5&gt;
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
         <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
@@ -342,9 +343,9 @@
 
 &lt;p&gt;&lt;img title=&quot;azure-notebook-3&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-3&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-3.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Agora perceba que todos os nossos cadernos estão vinculados a uma biblioteca chamada &lt;strong&gt;Sample notebooks&lt;/strong&gt;. Sendo assim vamos criar uma biblioteca.  &amp;lt;/p&amp;gt;&lt;/p&gt;
+&lt;p&gt;Agora perceba que todos os nossos cadernos estão vinculados a uma biblioteca chamada &lt;strong&gt;Sample notebooks&lt;/strong&gt;. Sendo assim vamos criar uma biblioteca.&lt;/p&gt;
 
-&lt;p align=&quot;justify&quot;&gt;Clique em &lt;strong&gt;My libraries&lt;/strong&gt;. Na página que se segue clique em &lt;strong&gt;New Library&lt;/strong&gt; e informe o nome, descrição e url personalizada.&lt;/p&gt;
+&lt;p&gt;Clique em &lt;strong&gt;My libraries&lt;/strong&gt;. Na página que se segue clique em &lt;strong&gt;New Library&lt;/strong&gt; e informe o nome, descrição e url personalizada.&lt;/p&gt;
 
 &lt;p&gt;&lt;img title=&quot;azure-notebook-4&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; border=&quot;0&quot; alt=&quot;azure-notebook-4&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-4.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
@@ -493,41 +494,27 @@
       </item>
     
       <item>
-        <title>Global Azure Bootcamp 2016–Dispositivos inteligêntes e Azure Machine Learning</title>
-        <description>&lt;p align=&quot;justify&quot;&gt;Dia 16 de abril de 2016 ocorreu mais uma edição do Global Azure Bootcamp. Este é um evento mundial que ocorre quase simultâneamente, e que teve mais uma vez a participação em Brasília, desta vez sob a tutela do &lt;a href=&quot;https://mvp.microsoft.com/pt-br/PublicProfile/5001388&quot; target=&quot;_blank&quot;&gt;Jucinei Santos&lt;/a&gt;, MVP de Windows Development.&lt;/p&gt;
+        <title>Global Azure Bootcamp 2016–Dispositivos Inteligêntes e Azure Machine Learning</title>
+        <description>&lt;p&gt;Dia 16 de abril de 2016 ocorreu mais uma edição do Global Azure Bootcamp. Este é um evento mundial que ocorre quase simultâneamente, e que teve mais uma vez a participação em Brasília, desta vez sob a tutela do &lt;a href=&quot;https://mvp.microsoft.com/pt-br/PublicProfile/5001388&quot;&gt;Jucinei Santos&lt;/a&gt;, MVP de Windows Development.&lt;/p&gt;
 
-&lt;p align=&quot;justify&quot;&gt;Minha participação foi uma análise sobre os chamados dispositivos inteligêntes, e como o Microsoft Azure está preparado para nos auxiliar nos cenários presente e futuro, quando falamos em tecnologias de Big Data, Machine Learning e serviços específos para o mundo de IoT.&lt;/p&gt;
+&lt;p&gt;Minha participação foi uma análise sobre os chamados dispositivos inteligêntes, e como o Microsoft Azure está preparado para nos auxiliar nos cenários presente e futuro, quando falamos em tecnologias de Big Data, Machine Learning e serviços específos para o mundo de IoT.&lt;/p&gt;
 
-&lt;p style=&quot;background-color: #000000&quot; align=&quot;center&quot;&gt;
-&lt;img alt=&quot;gwabbsb2016&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016.jpg&quot; /&gt;
-
+&lt;p&gt;&lt;img alt=&quot;gwabbsb2016&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016.jpg&quot; /&gt;
 &lt;img alt=&quot;gwabbsb2016b&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016b.jpg&quot; /&gt;
+&lt;img alt=&quot;gwabbsb2016c&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016c.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;img alt=&quot;gwabbsb2016c&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016c.jpg&quot; /&gt;
-&lt;/p&gt;
+&lt;p&gt;Ainda sobre o evento, foi possível demostrar a utilziação de serviços para comunicação com dispositivos, neste caso trabalhando com MQTT e utilizando uma demo prática de controle e coleta de dados em uma casa.&lt;/p&gt;
 
-&lt;p&gt;&lt;!--more--&gt;
-&lt;p align=&quot;justify&quot;&gt;Ainda sobre o evento, foi possível demostrar a utilziação de serviços para comunicação com dispositivos, neste caso trabalhando com MQTT e utilizando uma demo prática de controle e coleta de dados em uma casa.&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;Além de realizar um experimento com o Microsoft Azure Machine Learning, também abordamos o futuro da intligência de dados e os novos caminhos que a cognição pode trazer para o mundo da inteligência artificial.&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;&amp;nbsp;&lt;/p&gt;
-&lt;h2 align=&quot;justify&quot;&gt;Referências&lt;/h2&gt;
+&lt;p&gt;Além de realizar um experimento com o Microsoft Azure Machine Learning, também abordamos o futuro da intligência de dados e os novos caminhos que a cognição pode trazer para o mundo da inteligência artificial.&lt;/p&gt;
+
+&lt;h3 id=&quot;referências&quot;&gt;Referências&lt;/h3&gt;
+
 &lt;ul&gt;
-&lt;li&gt;
-&lt;div align=&quot;justify&quot;&gt;&lt;a href=&quot;http://mqtt.org/&quot; target=&quot;_blank&quot;&gt;MQTT&lt;/a&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;div align=&quot;justify&quot;&gt;&lt;a href=&quot;https://www.microsoft.com/pt-br/server-cloud/internet-of-things/azure-iot-suite.aspx&quot; target=&quot;_blank&quot;&gt;Azure IoT Suite&lt;/a&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;div align=&quot;justify&quot;&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/services/iot-hub/&quot; target=&quot;_blank&quot;&gt;Hub IoT do Azure&lt;/a&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;div align=&quot;justify&quot;&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/services/machine-learning/&quot; target=&quot;_blank&quot;&gt;Aprendizado de Máquina do Azure&lt;/a&gt;&lt;/div&gt;
-&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mqtt.org/&quot;&gt;MQTT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.microsoft.com/pt-br/server-cloud/internet-of-things/azure-iot-suite.aspx&quot;&gt;Azure IoT Suite&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/services/iot-hub/&quot;&gt;Hub IoT do Azure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/services/machine-learning/&quot;&gt;Aprendizado de Máquina do Azure&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-##### ;)
-&lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Apr 2016 00:00:00 -0300</pubDate>
         <link>/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
