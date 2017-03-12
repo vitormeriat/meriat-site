@@ -160,7 +160,7 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/06.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;margin:0 10px 0 0;" title="06" border="0" alt="06" align="left" src="/assets/06_thumb.png" width="310" height="218" /></a>
+    <p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/06.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;margin:0 10px 0 0;" title="06"   alt="06" align="left" src="http://blob.vitormeriat.com.br/images/06.png" width="310" height="218" /></a>
 <p align="justify">Uma das vantagens de uma oferta SaaS é poder oferecer uma baixa curva de aprendizagem para o desenvolvimento de aplicações. Como já vimos anteriormente, o Windows Azure no modelo software como serviço traz aos desenvolvedores esta facilidade. Toda a estrutura de um projeto Azure mantém familiaridade a um projeto Web comum, seja WebForm ou MVC por meio de seus papeis.
 <p align="justify">Para acessarmos nossa conta de armazenamento no Windows Azure, assim como necessário para qualquer aplicação web, devemos fornecer as credenciais para tal fim. É comum encontrarmos em ambientes de desenvolvimento com bases de produção e homologação, e é ai que se inicia a brincadeira.
 <p align="justify">É na string de conexão que informamos os parâmetros que são necessários para acessar a conta de armazenamento. Você pode configurar a string de conexão para as seguintes finalidades:
@@ -193,10 +193,10 @@
 </ul>
 </ul>
 <p align="justify"><font color="#777777"></font>Observe o código abaixo: </p>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/01.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="01" border="0" alt="01" src="/assets/01_thumb.png" width="570" height="229" /></a>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/01.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="01"   alt="01" src="http://blob.vitormeriat.com.br/images/01.png" width="570" height="229" /></a>
 <p align="justify">Quando estamos desenvolvendo no ambiente de desenvolvimento temos acesso as credenciais da conta de armazenamento local por meio da propriedade DevelopmentStorageAccount da classe CloudStorageAccount que obtém um objeto do mesmo tipo que referência a conta de armazenamento de desenvolvimento.
 <p align="justify">Seguindo a lógica citada anteriormente, podemos fornecer o nome e chave de acesso a nossa conta de armazenamento de desenvolvimento como no código abaixo:
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/02.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="02" border="0" alt="02" src="/assets/02_thumb.png" width="570" height="219" /></a>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/02.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="02"   alt="02" src="http://blob.vitormeriat.com.br/images/02.png" width="570" height="219" /></a>
 <p align="justify">Cabe aqui fazer uma observação: O esquema de URI trabalhado pelo emulador de armazenamento é diferente do esquema utilizado pelos serviços de armazenamento na nuvem. No ambiente de desenvolvimento o nome da conta faz parte do caminho hierárquico da URI já no armazenamento na nuvem o nome da conta faz parte do nome de domínio. Isto ocorre devido a resolução de nomes de domínio estarem disponíveis na nuvem, mas não no computador local. </p>
 <p align="justify">Devido a limitação citada acima, o esquema URI do emulador de armazenamento&nbsp; segue este formato:</p>
 <p align="justify"><a href="http://&lt;endereco-maquina-local&gt;:&lt;porta&gt;/&lt;nome-da-conta&gt;/&lt;recurso">http://&lt;endereco-maquina-local&gt;:&lt;porta&gt;/&lt;nome-da-conta&gt;/&lt;recurso</a>&gt;</p>
@@ -219,7 +219,7 @@
 <blockquote><p align="justify">O emulador de armazenamento se baseia em um Microsoft SQL Server e fornece serviços semelhantes aos do armazenamento no Windows Azure. Por padrão, o emulador de armazenamento é configurado para um banco de dados Microsoft SQL Server Express nas versões 2005 ou 2008. Você pode instalar o SQL Server Management Studio Express para gerenciar sua instalação do SQL Server Express. Não é recomendado alterar a base gerada.</p>
 </blockquote>
 <p align="justify">O emulador de armazenamento é um processo (DSService.exe) que permite a utilização de uma interface para iniciar, parar, redefinir instâncias ou simplesmente desligar os serviços. Você pode acessar a interface seguindo os passos abaixo.</p>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/05.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="05" border="0" alt="05" src="/assets/05_thumb.png" width="570" height="247" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/05.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="05"   alt="05" src="http://blob.vitormeriat.com.br/images/05.png" width="570" height="247" /></a></p>
 <p align="justify">&nbsp;</p>
 <h3 align="justify">Armazenamento na Nuvem</h3>
 <p align="justify">Você pode definir uma string de conexão para uma conta de armazenamento no Windows Azure de duas formas:
@@ -267,7 +267,7 @@
 <p>PS: Estreando outro desenho do mascote…</p>
 <p>&nbsp;</p>
 <h3>Um grande abraço e ótimo estudo!</h3>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/08/notebook.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;" title="Notebook" border="0" alt="Notebook" align="left" src="/assets/notebook_thumb.png" width="81" height="130" /></a>
+<p><a href="http://blob.vitormeriat.com.br/images/2011/08/notebook.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;" title="Notebook"   alt="Notebook" align="left" src="http://blob.vitormeriat.com.br/images/notebook.png" width="81" height="130" /></a>
 <p><strong>Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong><br /><i><strong>Microsoft MSP – Brasília</strong></i><br /><a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a><br /><a href="mailto:vitor.meriat@srnimbus.com">vitor.meriat@srnimbus.com</a></p></p></p></p></p></p></p>
 
   </section>
@@ -408,9 +408,9 @@
 
     <a href="/category/Amazon Web Service/" style="text-decoration: none;">Amazon web service</a><br />
 
-    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
-
     <a href="/category/Sharepoint/" style="text-decoration: none;">Sharepoint</a><br />
+
+    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
 
     <a href="/category/Testes/" style="text-decoration: none;">Testes</a><br />
 

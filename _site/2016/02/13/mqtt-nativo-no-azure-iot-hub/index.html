@@ -171,7 +171,7 @@
 <pre style="font-size: 16pt !important">
 <code class="javascript">
     var clientFromConnectionString =
-        require('azure-iot-device-mqtt').clientFromConnectionString;
+    require('azure-iot-device-mqtt').clientFromConnectionString;
     var Message = require('azure-iot-device').Message;
     var connectionString = '[IoT Hub device connection string]';
     var client = clientFromConnectionString(connectionString);
@@ -184,7 +184,7 @@
 <code class="javascript">
     var msg = new Message('some data from my device');
     client.sendEvent(message, function (err) {
-      if (err) console.log(err.toString());
+  if (err) console.log(err.toString());
     });
     </code>
 </pre>
@@ -193,8 +193,8 @@
 <pre style="font-size: 16pt !important">
     <code class="javascript">
     client.receive(function (err, msg) {
-      if (err) console.error(err);
-      else console.log(msg);
+  if (err) console.error(err);
+  else console.log(msg);
     });
     </code>
 </pre>
@@ -346,9 +346,9 @@
 
     <a href="/category/Amazon Web Service/" style="text-decoration: none;">Amazon web service</a><br />
 
-    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
-
     <a href="/category/Sharepoint/" style="text-decoration: none;">Sharepoint</a><br />
+
+    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
 
     <a href="/category/Testes/" style="text-decoration: none;">Testes</a><br />
 

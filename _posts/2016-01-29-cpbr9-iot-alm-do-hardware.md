@@ -14,7 +14,7 @@ Como o prometido, segue o material de utilizado no [workshop de IoT](http://camp
 
 <img title="cpbr9" alt="cpbr9" src="http://blob.vitormeriat.com.br/images/2016/01/cpbr9.jpg" width="100%" />
 
-<iframe style="height: 675px; width: 1000px" marginheight="0" src="https://www.slideshare.net/slideshow/embed_code/key/ydqhL1TY4ODcgg" frameborder="0" width="998" marginwidth="0" scrolling="no"> </iframe>
+<iframe style="height: 675px; width: 1000px" marginheight="0" src="https://www.slideshare.net/slideshow/embed_code/key/ydqhL1TY4ODcgg" frame  width="998" marginwidth="0" scrolling="no"> </iframe>
 
 <div style="margin-bottom: 5em;"></div>
 

@@ -17,7 +17,7 @@ Azure Stack é o primeiro produto de uma nova categoria hybrid cloud platform. E
 
 Com o Azure Stack você aproveita o modelo de gestão operacional de recursos do azure em seu Datacenter. É isso mesmo, com o Azure Stack conseguimos integrar os serviços da nuvem pública com a nossa capacidade computacional, a fim de entregar serviços. Você também pode explorar uma abordagem híbrida, tendo a capacidade e flexibilidade de trabalhar os recursos onde for melhor.
 
-<iframe style="height: 685px; width: 100%" marginheight="0" src="https://www.slideshare.net/slideshow/embed_code/key/zW5NtNvVdGsrct" frameborder="0" marginwidth="0" scrolling="no"><br /> </iframe>
+<iframe style="height: 685px; width: 100%" marginheight="0" src="https://www.slideshare.net/slideshow/embed_code/key/zW5NtNvVdGsrct" frame  marginwidth="0" scrolling="no"><br /> </iframe>
 
 ### Referências
 

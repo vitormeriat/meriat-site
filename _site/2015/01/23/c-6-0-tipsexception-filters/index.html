@@ -169,16 +169,19 @@ static void Main(string[] args)
 
     try
     {
-      	int resultado = numero % 0;
-        Console.WriteLine(resultado);
+  
+int resultado = numero % 0;
+    Console.WriteLine(resultado);
     }
     catch (DivideByZeroException ex) when (ex.Source.Equals("Nome Errado"))
     {
-      	Console.WriteLine("Condição falsa!!!");
+  
+Console.WriteLine("Condição falsa!!!");
     }
     catch (DivideByZeroException ex) when (ex.Message.Equals("Attempted to divide by zero."))
     {
-       	Console.WriteLine("Condição verdadeiranMensagem: " + ex.Message);
+   
+Console.WriteLine("Condição verdadeiranMensagem: " + ex.Message);
     }
 
     Console.ReadKey(true);
@@ -327,9 +330,9 @@ static void Main(string[] args)
 
     <a href="/category/Amazon Web Service/" style="text-decoration: none;">Amazon web service</a><br />
 
-    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
-
     <a href="/category/Sharepoint/" style="text-decoration: none;">Sharepoint</a><br />
+
+    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
 
     <a href="/category/Testes/" style="text-decoration: none;">Testes</a><br />
 

@@ -6,7 +6,7 @@ categories:
   - LINQ
   - ORM
 ---
-<p align="center"><a href="http://blob.vitormeriat.com.br/images/2010/12/linq.jpg"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="linq" border="0" alt="linq" src="{{ site.baseurl }}/assets/linq_thumb.jpg" width="382" height="231" /></a></p>
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2010/12/linq.jpg"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="linq"   alt="linq" src="http://blob.vitormeriat.com.br/images/linq.jpg" width="382" height="231" /></a></p>
 <p align="justify">O LINQ (Language Integrated Query ou Linguagem Integrada de Consulta), é uma nova função do C# 3.0 e .Net Framework 3.5. Ele permite escrever consultas estruturadas seguras em torno de coleções locais e objetos e fontes remotas de dados. </p>
 <p align="justify">Para iniciar nossos estudos no LINQ, devemos utilizar os namespaces "System.Linq" e "System.Linq.Expressions". Estarei utilizando o Visual C# 2010 Express.
 <p align="justify">O LINQ permite você consultar qualquer coleção de executando IEnumerable&lt;&gt;, no meio de um array, list, XML DOM, ou fonte remota de dados(como uma tabela no SQL Server). O LINQ oferece os benefícios de ambos os tipos de verificação do tempo de compilação e composição dinâmica de consultas.
@@ -31,7 +31,7 @@ categories:
 <p><!--CRLF-->
 <pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span> IEnumerable&lt;<span style="color:#0000ff;">int</span>&gt; filtro = System.Linq.Enumerable.</pre>
 <p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span>                Where(sequencia, n =&gt; n % 2 == 0);</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span>    Where(sequencia, n =&gt; n % 2 == 0);</pre>
 <p><!--CRLF--></div>
 </div>
 <h1><font></font>&nbsp;</h1>
@@ -47,9 +47,9 @@ categories:
 <p><!--CRLF-->
 <pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum3">   3:</span> IEnumerable&lt;<span style="color:#0000ff;">int</span>&gt; filtro = from n <span style="color:#0000ff;">in</span> sequencia</pre>
 <p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum4">   4:</span>                             <span style="color:#0000ff;">where</span> n % 2 == 0 </pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum4">   4:</span>         <span style="color:#0000ff;">where</span> n % 2 == 0 </pre>
 <p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span>                             select n;</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span>         select n;</pre>
 <p><!--CRLF--></div>
 </div>
 <p align="justify">As sintaxes Lambda e de compreensão são complementares, então utilizaremos ambas durante os exemplos. Aproveitando o gancho, vamos diminuir nossa consulta "tipando implicitamente" o filtro, e chamando nosso operador </p>
@@ -76,11 +76,11 @@ categories:
 <p><!--CRLF-->
 <pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span> var filtro = sequencia</pre>
 <p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span>     .Where(n =&gt; n.Contains(<span style="color:#006080;">"a"</span>)) <span style="color:#008000;">// Condição</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span> .Where(n =&gt; n.Contains(<span style="color:#006080;">"a"</span>)) <span style="color:#008000;">// Condição</span></pre>
 <p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum7">   7:</span>     .OrderBy(n =&gt; n.Length)      <span style="color:#008000;">// Ordenação</span></pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum7">   7:</span> .OrderBy(n =&gt; n.Length)  <span style="color:#008000;">// Ordenação</span></pre>
 <p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum8">   8:</span>     .Select(n =&gt; n.ToUpper());   // Tudo em letras maiúsculas  </pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum8">   8:</span> .Select(n =&gt; n.ToUpper());   // Tudo em letras maiúsculas  </pre>
 <p><!--CRLF--></div>
 </div>
 <p align="justify">Os operadores Where, OrderBy e Select separam os métodos de extensão na classe Enumerable. O operador Where, faz o primeiro filtro da sequência de entrada. O operador OrderBy retira uma versão ordenada da sequência de entrada e o método Select retorno uma sequência onde cada elemento é transformado por uma determinada expressão Lambda. Os dados fluem da esquerda para a direita, em nosso caso, a ordem de execussão é: Where, OrderBy, OrderBy e Select.</p>
@@ -135,11 +135,11 @@ categories:
 <p><!--CRLF-->
 <pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span> var resultado = nomes</pre>
 <p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span>     .Where(n =&gt; n.Length ==</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span> .Where(n =&gt; n.Length ==</pre>
 <p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum7">   7:</span>         nomes.OrderBy(n2 =&gt; n2.Length)</pre>
+<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum7">   7:</span>     nomes.OrderBy(n2 =&gt; n2.Length)</pre>
 <p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum8">   8:</span>         .Select(n2 =&gt; n2.Length).First());</pre>
+<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum8">   8:</span>     .Select(n2 =&gt; n2.Length).First());</pre>
 <p><!--CRLF--></div>
 </div>
 <p align="justify">A variável externa de repetição (<i><font size="2">n</font></i>) está no centro da subconsulta, portanto, não podemos reutilizar <i><font size="2">n</font></i> como variável de iteração da subconsulta. </p>

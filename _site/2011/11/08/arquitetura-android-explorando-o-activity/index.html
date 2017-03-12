@@ -160,7 +160,7 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p><a href="http://blob.vitormeriat.com.br/images/2011/11/android_head.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="android_head" border="0" alt="android_head" src="/assets/android_head_thumb.png" width="560" height="186" /></a></p>
+    <p><a href="http://blob.vitormeriat.com.br/images/2011/11/android_head.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="android_head"   alt="android_head" src="http://blob.vitormeriat.com.br/images/android_head.png" width="560" height="186" /></a></p>
 <p align="justify">Geralmente encontramos diversos artigos falando sobre a programação Android iniciando-se na instalação e configuração das ferramentas necessárias para o desenvolvimento. Entretanto, antes de despejar configurações e código sobre a tela, tenho aprendido o valor de se conhecer o terreno sobre o qual se anda. Neste caso, o primeiro passo para desenvolver aplicações Android é explorar um pouco da arquitetura do Activity, peça fundamental para o nosso objetivo.</p>
 <p><!--more-->
 <p>&#160;</p>
@@ -174,7 +174,7 @@
 <h2>Ciclo de vida</h2>
 <p align="justify">As Activities são gerenciadas em forma de pilha, então, quando uma nova activity é iniciada ela é colocada sobre o topo da pilha e se torna a atividade em execução, a activity anterior permanecerá sempre abaixo dela e não virá para o primeiro plano até a saída da activity em execução.</p>
 <p align="justify">Vamos observar o plano de execução das atividades:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/11/ciclo-de-vida.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="ciclo de vida" border="0" alt="ciclo de vida" src="/assets/ciclo-de-vida_thumb.png" width="545" height="711" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2011/11/ciclo-de-vida.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="ciclo de vida"   alt="ciclo de vida" src="http://blob.vitormeriat.com.br/images/ciclo-de-vida.png" width="545" height="711" /></a></p>
 <p align="justify">O diagrama acima mostra os caminhos trilhados por uma activity. Os retângulos representam chamadas a métodos que você pode implementar para realizar as operações necessárias enquanto a atividade se move entre os estados. Os retângulos coloridos com cantos arredondados são os estados que a atividade esta sujeita.</p>
 <p align="justify">Uma Activity tem alguns estados essenciais:</p>
 <ul>
@@ -189,12 +189,12 @@
 </li>
 </ul>
 <p>Conforme podemos ver abaixo, o plano de execução se baseia nestes estados.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/11/activity-android.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="Activity Android" border="0" alt="Activity Android" src="/assets/activity-android_thumb.png" width="540" height="428" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2011/11/activity-android.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="Activity Android"   alt="Activity Android" src="http://blob.vitormeriat.com.br/images/activity-android.png" width="540" height="428" /></a></p>
 <p>&#160;</p>
 <p align="justify">Sempre que outra activity é chamada, a activity anterior é parada, mas não descartada, o sistema à coloca em uma pilha para poder resgatá-la no futuro. Isso pode ser visto no uso de um sistema qualquer que tenha muitas telas, sempre que pressionarmos&#160; a tecla <strong>BACK</strong> vamos voltar para a tela anterior até o fechamento da aplicação.</p>
 <p align="justify">Quando uma activity é interrompida porque outra é iniciada, o sistema é notificado dessa alteração através dos métodos da atividade chamada conforme vemos na imagem abaixo:</p>
 <p><font size="1"><font size="1"><sup>(clique na imagem para ampliar)</sup></font></font></p>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/11/mtodos-android.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="Métodos Android" border="0" alt="Métodos Android" src="/assets/mtodos-android_thumb.png" width="540" height="374" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2011/11/mtodos-android.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="Métodos Android"   alt="Métodos Android" src="http://blob.vitormeriat.com.br/images/mtodos-android.png" width="540" height="374" /></a></p>
 <p>Como já ficou claro (assim espero), os métodos seguem uma sequencia lógica e estruturada. Cada chamada fica refém de uma sequencia tendo opções até a destruição dos recursos alocados.</p>
 <p align="justify">Neste ciclo existem três laços extremamente importantes e devem ser monitorados dentro de sua atividade:</p>
 <ol>
@@ -210,8 +210,8 @@
 </ol>
 <p>Espero que tenham gostado. No próximo post estarei concluindo mais algumas questões sobre o Activity.</p>
 <h3>Um grande abraço e ótimo estudo.</h3>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/10/arquitetura.png"><img style="display:inline;float:left;margin:0 20px 0 0;" title="Arquitetura" border="0" alt="Arquitetura" align="left" src="/assets/arquitetura_thumb.png?w=81&amp;h=130" width="81" height="130" /></a></p>
-<p><strong>Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong>     <br /><i><strong>Microsoft MSP – Brasília</strong></i>     <br /><a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a>     <br /><a href="mailto:vitor.meriat@srnimbus.com">vitor.meriat@srnimbus.com</a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2011/10/arquitetura.png"><img style="display:inline;float:left;margin:0 20px 0 0;" title="Arquitetura"   alt="Arquitetura" align="left" src="http://blob.vitormeriat.com.br/images/arquitetura.png?w=81&amp;h=130" width="81" height="130" /></a></p>
+<p><strong>Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong> <br /><i><strong>Microsoft MSP – Brasília</strong></i> <br /><a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a> <br /><a href="mailto:vitor.meriat@srnimbus.com">vitor.meriat@srnimbus.com</a></p>
 
   </section>
 
@@ -351,9 +351,9 @@
 
     <a href="/category/Amazon Web Service/" style="text-decoration: none;">Amazon web service</a><br />
 
-    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
-
     <a href="/category/Sharepoint/" style="text-decoration: none;">Sharepoint</a><br />
+
+    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
 
     <a href="/category/Testes/" style="text-decoration: none;">Testes</a><br />
 

@@ -7,7 +7,7 @@ categories:
    - Spark
 image-full: "http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"
 ---
-<p style="background-color: #000000" align="center"><a href="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"><img title="spark-capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-capa" src="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg" width="819" height="518" /></a></p>
+<p style="background-color: #000000" align="center"><a href="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"><img title="spark-capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto"   alt="spark-capa" src="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg" width="819" height="518" /></a></p>
 
 Não é enganação, vou fazer o famoso exemplo do **WordCount**, porém vou tentar ir além do que apenas mostrar o código ou dizer Spark torna esta tarefa mais simples que utilizar Hadoop/MapReduce. A exemplo do post <a href="http://www.vitormeriat.com.br/spark-resilient-distributed-datasets/">Spark – Resilient Distributed Datasets</a>, vou focar na base e estrutura básica da ferramenta para se conseguir o desempenho esperado ao utilizar o Spark.
 
@@ -23,7 +23,7 @@ Praticamente como tudo na vida de TI, cabe ao técnico analizar os dados e casos
 ## Spark Framework Ecosystem
 Fora a API do Spark, existem bibliotecas adicionais que fazem parte do seu ecossistema e fornecem capacidades adicionais para as áreas de análise de Big Data e aprendizado de máquina.
 
-<a href="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png"><img title="spark-stack" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-stack" src="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png" width="633" height="298" /></a>
+<a href="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png"><img title="spark-stack" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto"   alt="spark-stack" src="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png" width="633" height="298" /></a>
 <div style="height: 50px;"></div>
 
 #### <a href="https://spark.apache.org/sql/">Spark SQL</a>
@@ -94,7 +94,7 @@ Agora vamos carregar nosso arquivo utilizando o método **textFile**. Por padrã
 
 <pre style="font-size: 1.6em !important">
     <code class="javascript">
-        val full = sc.textFile("C:/bigdata/bases/Crimes_-2015.txt")
+    val full = sc.textFile("C:/bigdata/bases/Crimes_-2015.txt")
     </code>
 </pre>
 
@@ -102,8 +102,8 @@ O método **textFile** aceita dois parâmetros, o caminho do arquivo e o número
 
 <pre style="font-size: 1.6em !important">
     <code class="javascript">
-        full.partitions
-        full.partitions.length
+    full.partitions
+    full.partitions.length
     </code>
 </pre>
 

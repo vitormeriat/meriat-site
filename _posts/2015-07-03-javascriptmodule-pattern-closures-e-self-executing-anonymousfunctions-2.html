@@ -29,7 +29,7 @@ function init() {
 
 (function () {
     function init() {
-        console.log('Escopo Global');
+    console.log('Escopo Global');
     }
 
     init(); // Escopo Local
@@ -48,9 +48,9 @@ function init() {
 <pre><code class="javascript">
 (function () {
     var namespaceUm = {
-        init: function () {
-            console.log('Namespace Um');
-        }
+    init: function () {
+    console.log('Namespace Um');
+    }
     };
 
     // NamespaceUm
@@ -90,10 +90,10 @@ namespaceUm.init();
 var Pontos = {
     contador: 0,
     incrementar: function (){
-        return this.contador += 1;
+    return this.contador += 1;
     },
     imprimir: function (){
-        console.log(this.contador);
+    console.log(this.contador);
     }
 };
 
@@ -112,15 +112,15 @@ Pontos.imprimir(); // returns 500
 var Pontos = (function () {
     var contador = 0;
     return {
-        contador: function () {
-            return contador;
-        },
-        incrementar: function () {
-            return contador += 1;
-        },
-        imprimir: function () {
-            console.log(contador);
-        }
+    contador: function () {
+    return contador;
+    },
+    incrementar: function () {
+    return contador += 1;
+    },
+    imprimir: function () {
+    console.log(contador);
+    }
     };
 })();
 
@@ -135,7 +135,7 @@ Pontos.imprimir(); // returns 2
 <p align="justify">Note que ambas as funções referenciam a variável <strong>contador</strong>, que agora não é mais acessível de forma direta, ou de fora do escopo da<strong> função auto executável</strong>. Mesmo que alguém tente alterar o valor da variável <strong>contador</strong> de fora do escopo, o valor continua o mesmo, só sendo alterado pelo método <strong>incrementar</strong>.</p>
 <p align="justify">Dessa forma, podemos encapsular todo o comportamento, sem termos que nos preocupar com modificações feitas sem ser pela função <strong>Pontos.incrementar()</strong>, exatamente como o esperado.</p>
 <p align="justify">Agora vamos para um exemplo do dia a dia. Observe o seguinte código e teste o seu resultado:</p>
-<p><iframe src="//jsfiddle.net/vitormeriat/qz63s6o2/2/embedded/" width="100%" height="400" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p><iframe src="//jsfiddle.net/vitormeriat/qz63s6o2/2/embedded/" width="100%" height="400" frame  allowfullscreen="allowfullscreen"></iframe></p>
 <p>&nbsp;</p>
 <p align="justify">Em breve trago outros exemplos de implementações do modelo <strong>Self-Executing Anonymous Functions</strong> no <strong>JavaScript</strong>.</p>
 <p>&nbsp;</p>

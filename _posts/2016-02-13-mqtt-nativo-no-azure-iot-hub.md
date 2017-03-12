@@ -19,7 +19,7 @@ categories:
 <pre style="font-size: 16pt !important">
 <code class="javascript">
     var clientFromConnectionString =
-        require('azure-iot-device-mqtt').clientFromConnectionString;
+    require('azure-iot-device-mqtt').clientFromConnectionString;
     var Message = require('azure-iot-device').Message;
     var connectionString = '[IoT Hub device connection string]';
     var client = clientFromConnectionString(connectionString);
@@ -32,7 +32,7 @@ categories:
 <code class="javascript">
     var msg = new Message('some data from my device');
     client.sendEvent(message, function (err) {
-      if (err) console.log(err.toString());
+  if (err) console.log(err.toString());
     });
     </code>
 </pre>
@@ -41,8 +41,8 @@ categories:
 <pre style="font-size: 16pt !important">
     <code class="javascript">
     client.receive(function (err, msg) {
-      if (err) console.error(err);
-      else console.log(msg);
+  if (err) console.error(err);
+  else console.log(msg);
     });
     </code>
 </pre>

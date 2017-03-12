@@ -12,7 +12,7 @@ categories:
 <pre><code class="javascript">
 function Usuario(attrs) {
     for (var nome in attrs) {
-        this[nome] = attrs[nome];
+    this[nome] = attrs[nome];
     }
 }
 
@@ -32,10 +32,10 @@ var user = Usuario.build({
 <pre><code class="javascript">
 Usuario.build = function (attrs) {
     if (arguments.length === 2) {
-        attrs = {
-            nome: arguments[0],
-            email: arguments[1]
-        };
+    attrs = {
+    nome: arguments[0],
+    email: arguments[1]
+    };
     }
     return new Usuario(attrs);
 };

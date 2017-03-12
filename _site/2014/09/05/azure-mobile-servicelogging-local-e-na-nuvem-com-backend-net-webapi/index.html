@@ -191,7 +191,7 @@
 <p align="justify">Como podemos ver, o <strong>LOG</strong> vai ser exibido na console <strong>Output</strong>. É claro que nem sempre estamos debugando a aplicação, mesmo que rodando localmente. Isso nos leva a segunda solução:</p>
 <p><strong><font size="4">Gravando o LOG fisicamente</font></strong></p>
 <p align="justify">Neste ponto vamos gravar um arquivo txt em algum lugar. Não tem nada de novo nisso. Vamos apenas criar um um diagnostico para concatenar os logs em um arquivo texto. Para isso vamos alterar nosso <strong>Web.config</strong> incluindo o seguinte código:</p>
-<blockquote><p><strong><font size="2">&lt;system.diagnostics&gt;          <br />&#160;&#160;&#160; &lt;trace autoflush=&quot;true&quot;&gt;           <br />&#160;&#160;&#160;&#160;&#160; &lt;listeners&gt;           <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;add name=&quot;default&quot; initializeData=&quot;C:developmentmylog.txt&quot;           <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; type=&quot;System.Diagnostics.TextWriterTraceListener&quot; /&gt;           <br />&#160;&#160;&#160;&#160;&#160; &lt;/listeners&gt;           <br />&#160;&#160;&#160; &lt;/trace&gt;           <br />&#160; &lt;/system.diagnostics&gt;</font></strong></p>
+<blockquote><p><strong><font size="2">&lt;system.diagnostics&gt;  <br />&#160;&#160;&#160; &lt;trace autoflush=&quot;true&quot;&gt;   <br />&#160;&#160;&#160;&#160;&#160; &lt;listeners&gt;   <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;add name=&quot;default&quot; initializeData=&quot;C:developmentmylog.txt&quot;   <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; type=&quot;System.Diagnostics.TextWriterTraceListener&quot; /&gt;   <br />&#160;&#160;&#160;&#160;&#160; &lt;/listeners&gt;   <br />&#160;&#160;&#160; &lt;/trace&gt;   <br />&#160; &lt;/system.diagnostics&gt;</font></strong></p>
 </blockquote>
 <p>Seu config vai ficar como o descrito abaixo:</p>
 <p><img alt="FIG06" src="http://blob.vitormeriat.com.br/images/2014/09/fig06.png" width="100%" /></p>
@@ -363,9 +363,9 @@
 
     <a href="/category/Amazon Web Service/" style="text-decoration: none;">Amazon web service</a><br />
 
-    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
-
     <a href="/category/Sharepoint/" style="text-decoration: none;">Sharepoint</a><br />
+
+    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
 
     <a href="/category/Testes/" style="text-decoration: none;">Testes</a><br />
 

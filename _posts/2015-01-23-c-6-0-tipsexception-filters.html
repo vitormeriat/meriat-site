@@ -15,16 +15,19 @@ static void Main(string[] args)
 
     try
     {
-      	int resultado = numero % 0;
-        Console.WriteLine(resultado);
+  
+int resultado = numero % 0;
+    Console.WriteLine(resultado);
     }
     catch (DivideByZeroException ex) when (ex.Source.Equals("Nome Errado"))
     {
-      	Console.WriteLine("Condição falsa!!!");
+  
+Console.WriteLine("Condição falsa!!!");
     }
     catch (DivideByZeroException ex) when (ex.Message.Equals("Attempted to divide by zero."))
     {
-       	Console.WriteLine("Condição verdadeiranMensagem: " + ex.Message);
+   
+Console.WriteLine("Condição verdadeiranMensagem: " + ex.Message);
     }
 
     Console.ReadKey(true);

@@ -16,7 +16,7 @@ var MinhaApp = {};
 <pre><code class="javascript">
 function MinhaApp() {
     if (!MinhaApp.instance) {
-        MinhaApp.instance = this;
+    MinhaApp.instance = this;
     }
     return MinhaApp.instance;
 }
@@ -34,7 +34,7 @@ function MinhaApp() {
     var instance;
 
     MinhaApp = function () {
-        return instance;
+    return instance;
     };
 
     instance = this;
@@ -49,11 +49,11 @@ var MinhaApp;
     var instance;
 
     MinhaApp = function () {
-        if (instance) {
-            return instance;
-        }
+    if (instance) {
+    return instance;
+    }
 
-        instance = this;
+    instance = this;
     };
 })();
 

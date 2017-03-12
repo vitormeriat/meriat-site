@@ -170,15 +170,15 @@
 <p align="justify">Este recurso, entretanto, permite a extensão das funcionalidades de tipo existentes, mesmo quando um tipo não é hereditário. E estes métodos de exibição têm uma função crucial na implementação do LINQ. Um exemplo disso é a interface IEnumerable&lt;T&gt;. Para oferecer suporte ao LINQ, novos métodos tiveram que ser adicionados a esta interface. Contudo, a alteração da interface adicionando novos métodos a deixaria incompatível com as versões dos consumidores existentes. A adição de uma nova interface era uma possibilidade, mas a criação de uma nova interface para complementar a interface IEnumerable&lt;T&gt; existente seria um projeto um tanto estranho.(*)</p>
 <h3 align="justify">Mão na massa</h3>
 <p align="justify">Vamos ao nosso exemplo:</p>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/04/01.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="01" src="/assets/01_thumb.png" alt="01" width="480" height="228" border="0" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/04/01.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="01" src="http://blob.vitormeriat.com.br/images/01.png" alt="01" width="480" height="228"   /></a></p>
 <p align="justify">Declaramos um objeto Pessoa que é uma <strong>Struct</strong>(estrutura), e estruturas no C# são tipos de valor e diferente dos tipos por referência ele sempre tem um valor padrão. Logo após informamos os valores para primeiro e último nome. Dentro da nossa estrutura de verificação(nome chique para meu if) temos a variável pessoa do tipo struct. Ela possui uma propriedade <strong>PrimeiroNome</strong> do tipo <strong>string</strong>. O método <strong>ValidaNome</strong> é <strong>estendido</strong> do tipo string. Já após a validação dos nomes imprimimos o resultado. Agora nosso método é uma <strong>extenção</strong> da estrutura pessoa. Vamos ver como isso é possível.</p>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/04/02.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="02" src="/assets/02_thumb.png" alt="02" width="483" height="266" border="0" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/04/02.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="02" src="http://blob.vitormeriat.com.br/images/02.png" alt="02" width="483" height="266"   /></a></p>
 <p align="justify">Temos uma classe Pessoa.cs e nela nossa estrutura Pessoa com suas propriedades. Notem que abaixo temos nossos métodos de extensão.</p>
 <p align="justify">A declaração do método contém o atributo que identifica este método como um método de extensão. Este atributo é o <strong>“this”</strong> que está antes dos tipos dos parâmetros. Os métodos de extensão são definidos pela aplicação do atributo de extensão encontrado no namespace System.Runtime.CompilerServices encontrado em System.Core.Dll. Para aqueles que não estão familiarizados com atributos, eles podem ser usados para fornecer metadados que são usados pelo compilador para disparar uma funcionalidade adicional. Nesse caso, o atributo de extensão oferece informações que mostram ao compilador que aquele método poderá ser chamado no tipo identificado como o primeiro argumento para o método de extensão — A Struct Pessoa e a string nome, no meu exemplo.</p>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/04/03.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="03" src="/assets/03_thumb.png" alt="03" width="479" height="166" border="0" /></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/04/03.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="03" src="http://blob.vitormeriat.com.br/images/03.png" alt="03" width="479" height="166"   /></a></p>
 <p align="justify">Esta imagem ilustra muito bem o que aprendemos aqui. Agora que criamos nossos métodos e os estendemos nos tipos que precisamos, eles estão disponíveis no Intellisense, assim como alguns métodos especialmente estendidos para nossas consultas Linq. Notem que estes métodos estão sinalizados com (extension).</p>
 <p align="justify"><a href="http://cid-bd055aa47a388023.office.live.com/self.aspx/.Public/M%c3%a9todos%20de%20Extens%c3%a3o.rar">Baixe aqui o Código Fonte do artigo</a></p>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/03/logo.jpg"><img title="logo" src="/assets/logo_thumb.jpg?w=50&amp;h=98&amp;h=98" alt="logo" width="50" height="98" align="left" border="0" /></a><span style="font-size:medium;">Um grande abraço e ótimo estudo!</span></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/03/logo.jpg"><img title="logo" src="http://blob.vitormeriat.com.br/images/logo.jpg?w=50&amp;h=98&amp;h=98" alt="logo" width="50" height="98" align="left"   /></a><span style="font-size:medium;">Um grande abraço e ótimo estudo!</span></p>
 <p><strong>   Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong><br />
 <a href="mailto:vitormeriat@gmail.com">vitormeriat@gmail.com</a><br />
 <a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a></p>
@@ -327,9 +327,9 @@
 
     <a href="/category/Amazon Web Service/" style="text-decoration: none;">Amazon web service</a><br />
 
-    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
-
     <a href="/category/Sharepoint/" style="text-decoration: none;">Sharepoint</a><br />
+
+    <a href="/category/Gestão de Projetos/" style="text-decoration: none;">Gestão de projetos</a><br />
 
     <a href="/category/Testes/" style="text-decoration: none;">Testes</a><br />
 
