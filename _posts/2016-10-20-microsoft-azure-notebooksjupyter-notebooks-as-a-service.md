@@ -49,9 +49,9 @@ Done. Você já um ambiente pronto, e inclusive alguns exemplos para testar. De 
 
 <p><img title="azure-notebook-3" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-3" src="http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-3.jpg" width="100%" /></p>
 
-Agora perceba que todos os nossos cadernos estão vinculados a uma biblioteca chamada <strong>Sample notebooks</strong>. Sendo assim vamos criar uma biblioteca.&nbsp; </p>
+Agora perceba que todos os nossos cadernos estão vinculados a uma biblioteca chamada <strong>Sample notebooks</strong>. Sendo assim vamos criar uma biblioteca.
 
-<p align="justify">Clique em <strong>My libraries</strong>. Na página que se segue clique em <strong>New Library</strong> e informe o nome, descrição e url personalizada.</p>
+Clique em <strong>My libraries</strong>. Na página que se segue clique em <strong>New Library</strong> e informe o nome, descrição e url personalizada.
 
 <p><img title="azure-notebook-4" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto" border="0" alt="azure-notebook-4" src="http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-4.jpg" width="100%" /></p>
 

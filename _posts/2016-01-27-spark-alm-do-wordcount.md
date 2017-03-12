@@ -9,10 +9,10 @@ image-full: "http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"
 ---
 <p style="background-color: #000000" align="center"><a href="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"><img title="spark-capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-capa" src="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg" width="819" height="518" /></a></p>
 
-Não é enganação, vou fazer o famoso exemplo do **WordCount**, porém vou tentar ir além do que apenas mostrar o código ou dizer Spark torna esta tarefa mais simples que utilizar Hadoop/MapReduce. A exemplo do post <a href="http://www.vitormeriat.com.br/spark-resilient-distributed-datasets/" target="_blank">Spark – Resilient Distributed Datasets</a>, vou focar na base e estrutura básica da ferramenta para se conseguir o desempenho esperado ao utilizar o Spark.
+Não é enganação, vou fazer o famoso exemplo do **WordCount**, porém vou tentar ir além do que apenas mostrar o código ou dizer Spark torna esta tarefa mais simples que utilizar Hadoop/MapReduce. A exemplo do post <a href="http://www.vitormeriat.com.br/spark-resilient-distributed-datasets/">Spark – Resilient Distributed Datasets</a>, vou focar na base e estrutura básica da ferramenta para se conseguir o desempenho esperado ao utilizar o Spark.
 
 ## Spark e o MapReduce
-Resumindo toda a brincadeira, o Spark estende o <a href="https://en.wikipedia.org/wiki/MapReduce" target="_blank">MapReduce</a>** **de modo a evitar mover os dados durante o processamento se utilizando de recursos como armazenamento em memória e processamento em tempo real (ou quase isso). Só a utilização destas artimanhas já é capaz de proporcionar um desempenho várias vezes melhor que outras tecnologias de Big Data.
+Resumindo toda a brincadeira, o Spark estende o <a href="https://en.wikipedia.org/wiki/MapReduce">MapReduce</a> de modo a evitar mover os dados durante o processamento se utilizando de recursos como armazenamento em memória e processamento em tempo real (ou quase isso). Só a utilização destas artimanhas já é capaz de proporcionar um desempenho várias vezes melhor que outras tecnologias de Big Data.
 
 Os resultados intermediários são retidos em memória ao invéz de serem escritos em disco. Isso é traduzido em desempenho, principalmente quando se precisa processar o mesmo conjuntos de dados muitas vezes.
 
@@ -26,31 +26,31 @@ Fora a API do Spark, existem bibliotecas adicionais que fazem parte do seu ecoss
 <a href="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png"><img title="spark-stack" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" border="0" alt="spark-stack" src="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png" width="633" height="298" /></a>
 <div style="height: 50px;"></div>
 
-#### <a href="https://spark.apache.org/sql/" target="_blank">Spark SQL</a>
+#### <a href="https://spark.apache.org/sql/">Spark SQL</a>
 Fornece a capacidade de expor os conjuntos de dados Spark através de uma API JDBC. Isso permite executar consultas no estilo SQL sobre esses dados usando ferramentas tradicionais de BI e de visualização. Além disso, também permite que os usuários usem ETL para extrair seus dados em diferentes formatos (como JSON, Parquet, ou um banco de dados), transformá-los e expô-los para consultas ad-hoc;
 
-#### <a href="https://spark.apache.org/streaming/" target="_blank">Spark Streaming</a>
+#### <a href="https://spark.apache.org/streaming/">Spark Streaming</a>
 Pode ser usado para processar dados de streaming em tempo real baseado na computação de microbatch. Para isso é utilizado o DStream que é basicamente uma série de RDD para processar os dados em tempo real;
 
-#### <a href="https://spark.apache.org/mllib/" target="_blank">MLlib</a>
+#### <a href="https://spark.apache.org/mllib/">MLlib</a>
 É a biblioteca de aprendizado de máquina do Spark, que consiste em algoritmos de aprendizagem, incluindo a classificação, regressão, clustering, filtragem colaborativa e redução de dimensionalidade;
 
-#### <a href="https://spark.apache.org/graphx/" target="_blank">GraphX</a>
+#### <a href="https://spark.apache.org/graphx/">GraphX</a>
 É uma nova API do Spark para grafos e computação paralela. Em alto nível, o GraphX ​​estende o Spark RDD para grafos. Para apoiar a computação de grafos, o GraphX ​​expõe um conjunto de operadores fundamentais (por exemplo, subgrafos e vértices adjacentes), bem como uma variante optimizada do Pregel. Além disso, o GraphX ​​inclui uma crescente coleção de algoritmos para simplificar tarefas de análise de grafos.
 <div style="height: 50px;"></div>
 
 O Spark é escrito na linguagem <a href="http://www.scala-lang.org/">Scala</a>, executa em uma máquina virtual Java e atualmente suporta as seguintes linguagens:
-* <a href="http://www.scala-lang.org/" target="_blank">Scala</a>
+* <a href="http://www.scala-lang.org/">Scala</a>
 * Java
-* <a href="https://www.python.org/" target="_blank">Python</a>
-* <a href="http://clojure.org/" target="_blank">Clojure</a>
-* <a href="https://www.r-project.org/" target="_blank">R</a>
+* <a href="https://www.python.org/">Python</a>
+* <a href="http://clojure.org/">Clojure</a>
+* <a href="https://www.r-project.org/">R</a>
 <div style="height: 50px;"></div>
 
 ## Instalação
 Basicamente você pode testar o Spark utlizando uma instalação em sua máquina para execução stand-alone, utilizar alguma máquina virtual (VM) pronta, como as disponibilizadas pela Cloudera, Hortonworks, MapR ou ainda, utilizando o Spark como serviço em Cloud Computing no Azure ou AWS.
 
-Basicamente para este exemplo vamos apens executar o mesmo localmente. O processo é simples, basta instalar o <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html" target="_blank">JDK</a> e realizar o download da última versão do <a href="https://spark.apache.org/downloads.html" target="_blank">Spark</a>.
+Basicamente para este exemplo vamos apens executar o mesmo localmente. O processo é simples, basta instalar o <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">JDK</a> e realizar o download da última versão do <a href="https://spark.apache.org/downloads.html">Spark</a>.
 
 O importante aqui é que após o download, você deve descompactar a pasta do Spark em alguma pasta, de preferência no C: da sua máquina. No meu caso eu estou usando o seguinte caminho: **C:bigdataspark**
 <div style="height: 50px;"></div>
@@ -94,7 +94,7 @@ Agora vamos carregar nosso arquivo utilizando o método **textFile**. Por padrã
 
 <pre style="font-size: 1.6em !important">
     <code class="javascript">
-        val full = sc.textFile("C:/bigdata/bases/Crimes_-_2015.txt")
+        val full = sc.textFile("C:/bigdata/bases/Crimes_-2015.txt")
     </code>
 </pre>
 
@@ -163,6 +163,4 @@ Ao invés de utilizar o **collect** poderíamos utilizar o **saveAsTextFile** e 
 * <a title="http://spark.apache.org/examples.html" href="http://spark.apache.org/examples.html">http://spark.apache.org/examples.html</a>
 
 ## Citação
-Neste post realizei citações ao post do master Isaías que pode ser lido <a href="https://isaiasbarroso.wordpress.com/2014/08/22/wordcount-em-spark/" target="_blank">clicando aqui!</a>
-
-##### Valeu galera ;)
+Neste post realizei citações ao post do master Isaías que pode ser lido <a href="https://isaiasbarroso.wordpress.com/2014/08/22/wordcount-em-spark/">clicando aqui!</a>

@@ -49,5 +49,3 @@ Você quer comprar uma placa? Ok, mas o que você vai fazer a seguir? Apenas ace
 Um projeto de IoT envolve muitas coisas como protocolos de comunicação, streaming de dados, tratamento de dados, análise de dados, etc.
 
 Big Data e Cloud Computing são nomes facilmente associados a IoT. Sendo assim antes de comprar uma placa (o que é outra boa discussão), existe um arcabouço de conhecimento que deve ser perseguido antes de entrar no mercado de IoT.
-
-##### ;)
