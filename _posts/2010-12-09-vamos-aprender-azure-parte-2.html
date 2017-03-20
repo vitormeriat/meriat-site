@@ -9,173 +9,104 @@ categories:
 
 <p>Continuando nossa série, agora chegou o momento de irmos para o código:</p>
 <p>O primeiro passo é a inclusão dos Namespaces para utilizar as bibliotecas do Windows Azure.</p>
-<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.2%;font-family:'Courier New', courier, monospace;direction:ltr;height:127px;max-height:200px;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;" id="codeSnippetWrapper">
-<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;" id="codeSnippet">
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum1">   1:</span> <span style="color:#008000;">// Referências ao Windows Azure.</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum2">   2:</span> <span style="color:#0000ff;">using</span> Microsoft.WindowsAzure;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum3">   3:</span> <span style="color:#008000;">// Este namespace fornece uma biblioteca de cliente</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum4">   4:</span> <span style="color:#008000;">//para trabalhar com os serviços de armazenamento do</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span> <span style="color:#008000;">//Windows Azure.</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span> <span style="color:#0000ff;">using</span> Microsoft.WindowsAzure.StorageClient;</pre>
-<p><!--CRLF--></div>
-</div>
+<pre style="font-size: 1.6em !important">
+    <code class="cs">
+// Referências ao Windows Azure.
+using Microsoft.WindowsAzure;
+// Este namespace fornece uma biblioteca de cliente
+//para trabalhar com os serviços de armazenamento do
+//Windows Azure.
+using Microsoft.WindowsAzure.StorageClient;
+    </code>
+</pre>
+
+
 <p>Agora iremos criar um método para realizar o upload da foto selecionada:</p>
-<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;max-height:200px;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;" id="codeSnippetWrapper">
-<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;" id="codeSnippet">
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum1">   1:</span> <span style="color:#0000ff;">private</span> <span style="color:#0000ff;">void</span> UploadFoto()</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum2">   2:</span> { </pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum3">   3:</span> openFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonPictures);</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum4">   4:</span> <span style="color:#008000;">// Utilizo o filtro para permitir somente a extensão jpg</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span> openFileDialog1.Filter = <span style="color:#006080;">"JPG Files (*.jpg)|*.jpg"</span>;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span> openFileDialog1.FileName = <span style="color:#006080;">""</span>;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum7">   7:</span> openFileDialog1.ShowDialog(<span style="color:#0000ff;">this</span>);</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum8">   8:</span> txFileName.Text = openFileDialog1.FileName;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum9">   9:</span> }</pre>
-<p><!--CRLF--></div>
-</div>
+<pre style="font-size: 1.6em !important">
+    <code class="cs">
+private void UploadFoto()
+{
+   openFileDialog1.InitialDirectory =
+        Environment.GetFolderPath(Environment.SpecialFolder.CommonPictures);
+
+   // Utilizo o filtro para permitir somente a extensão jpg
+   openFileDialog1.Filter = "JPG Files (*.jpg)|*.jpg";
+   openFileDialog1.FileName = "";
+   openFileDialog1.ShowDialog(this);
+   txFileName.Text = openFileDialog1.FileName;
+}
+    </code>
+</pre>
+
 <p>O próximo método irá realizar a publicação da foto selecionada:</p>
-<div style="border-bottom:silver 1px solid;text-align:left;border-left:silver 1px solid;line-height:12pt;background-color:#f4f4f4;width:97.5%;font-family:'Courier New', courier, monospace;direction:ltr;max-height:200px;font-size:8pt;overflow:auto;border-top:silver 1px solid;cursor:text;border-right:silver 1px solid;margin:20px 0 10px;padding:4px;" id="codeSnippetWrapper">
-<div style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;padding:0;" id="codeSnippet">
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum1">   1:</span> <span style="color:#0000ff;">private</span> <span style="color:#0000ff;">void</span> PersistirFoto()</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum2">   2:</span> {</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum3">   3:</span> <span style="color:#008000;">// Verifico se todos os dados foram informados</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum4">   4:</span> <span style="color:#0000ff;">if</span> (<span style="color:#0000ff;">string</span>.IsNullOrEmpty(txNomeConta.Text.Trim())</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum5">   5:</span>     || <span style="color:#0000ff;">string</span>.IsNullOrEmpty(txChave.Text.Trim())</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum6">   6:</span>     || <span style="color:#0000ff;">string</span>.IsNullOrEmpty(txFileName.Text.Trim()))</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum7">   7:</span> {</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum8">   8:</span>     <span style="color:#008000;">// Informo a nessecidade dos campos</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum9">   9:</span>     MessageBox.Show(<span style="color:#006080;">"Entre com a Conta/Chave (do Blob) e Arquivo a fazer upload"</span>);</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum10">  10:</span>     <span style="color:#0000ff;">return</span>;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum11">  11:</span> }</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum12">  12:</span>&nbsp; </pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum13">  13:</span> <span style="color:#008000;">// Crio um cursor</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum14">  14:</span> Cursor actualCursor = <span style="color:#0000ff;">this</span>.Cursor;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum15">  15:</span>&nbsp; </pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum16">  16:</span> <span style="color:#0000ff;">try</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum17">  17:</span> {</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum18">  18:</span>     <span style="color:#008000;">// Executo o cursor como espera(a ampulheta dos windows xp e anteriores),</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum19">  19:</span>     <span style="color:#008000;">//para exibir ao usuário um feedback da execução do upload.</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum20">  20:</span>     <span style="color:#0000ff;">this</span>.Cursor = Cursors.WaitCursor;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum21">  21:</span>&nbsp; </pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum22">  22:</span>     <span style="color:#008000;">// Crio um CloudStorageAccount que representa uma conta do Windows Azure.</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum23">  23:</span>     <span style="color:#008000;">// Utilizo o StorageCredentialsAccountAndKey para representar as credenciais para acessar os serviços do Windows Azure..</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum24">  24:</span>     <span style="color:#008000;">// Informo false para representar o uso do protocolo HTTP.</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum25">  25:</span>     CloudStorageAccount storageAccount =</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum26">  26:</span>     <span style="color:#0000ff;">new</span> CloudStorageAccount(</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum27">  27:</span>     <span style="color:#0000ff;">new</span> StorageCredentialsAccountAndKey(txNomeConta.Text, txChave.Text),</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum28">  28:</span>     <span style="color:#0000ff;">false</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum29">  29:</span>     );</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum30">  30:</span>&nbsp; </pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum31">  31:</span>     <span style="color:#008000;">// Crio um CloudBlobClient para fornecer o acesso ao serviço de Blob. O cliente do serviço encapsula o URI de base para o serviço de Blob.</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum32">  32:</span>     <span style="color:#008000;">// Utiliza as credenciais do usuário.</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum33">  33:</span>     CloudBlobClient blobStorage = storageAccount.CreateCloudBlobClient();</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum34">  34:</span>&nbsp; </pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum35">  35:</span>     <span style="color:#008000;">// Crio um CloudBlobContainer para representar um contêiner no serviço Windows Azure Blob.</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum36">  36:</span>     CloudBlobContainer container = blobStorage.GetContainerReference(<span style="color:#006080;">"concursofotonuvem"</span>);</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum37">  37:</span>     container.CreateIfNotExist();</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum38">  38:</span>&nbsp; </pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum39">  39:</span>     <span style="color:#008000;">// configura container para ter acesso público</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum40">  40:</span>     var permissions = container.GetPermissions();</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum41">  41:</span>     permissions.PublicAccess = BlobContainerPublicAccessType.Container;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum42">  42:</span>     container.SetPermissions(permissions);</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum43">  43:</span>&nbsp; </pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum44">  44:</span>     <span style="color:#008000;">// Nome do arquivo a ser publicado</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum45">  45:</span>     <span style="color:#0000ff;">string</span> uniqueBlobName = <span style="color:#0000ff;">string</span>.Format(<span style="color:#006080;">"foto_{0}.jpg"</span>, Guid.NewGuid().ToString());</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum46">  46:</span>     CloudBlockBlob blob = container.GetBlockBlobReference(uniqueBlobName);</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum47">  47:</span>     blob.Properties.ContentType = <span style="color:#006080;">"jpg"</span>;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum48">  48:</span>     blob.UploadFile(txFileName.Text);</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum49">  49:</span>     <span style="color:#008000;">// Exibo o endereço do arquivo publicado</span></pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum50">  50:</span>     txNomeDoBlob.Text = blob.Uri.AbsoluteUri;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum51">  51:</span> }</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum52">  52:</span> <span style="color:#0000ff;">catch</span> (Exception err)</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum53">  53:</span> {</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum54">  54:</span>     txNomeDoBlob.Text = <span style="color:#006080;">"Erro!"</span>;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum55">  55:</span>&nbsp; </pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum56">  56:</span>     <span style="color:#0000ff;">this</span>.Cursor = actualCursor;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum57">  57:</span>     MessageBox.Show(<span style="color:#006080;">"Erro: "</span> + err.Message);</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum58">  58:</span>     <span style="color:#0000ff;">return</span>;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum59">  59:</span> }</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum60">  60:</span> <span style="color:#0000ff;">this</span>.Cursor = actualCursor;</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum61">  61:</span>&nbsp; </pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:#f4f4f4;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum62">  62:</span> MessageBox.Show(<span style="color:#006080;">"Upload foi feito com Sucesso !!nATENÇÃO: Não se esqueça de copiar o nome final da sua foto para cadastrar no site do concurso !!!"</span>);</pre>
-<p><!--CRLF-->
-<pre style="text-align:left;line-height:12pt;background-color:white;width:100%;font-family:'Courier New', courier, monospace;direction:ltr;color:black;font-size:8pt;overflow:visible;border-style:none;margin:0;padding:0;"><span style="color:#606060;" id="lnum63">  63:</span> }</pre>
-<p><!--CRLF--></div>
-</div>
+<pre style="font-size: 1.2em !important">
+    <code class="cs">
+private void PersistirFoto()
+{
+  // Verifico se todos os dados foram informados
+  if (string.IsNullOrEmpty(txNomeConta.Text.Trim())
+      || string.IsNullOrEmpty(txChave.Text.Trim())
+      || string.IsNullOrEmpty(txFileName.Text.Trim()))
+  {
+      // Informo a nessecidade dos campos
+      MessageBox.Show("Entre com a Conta/Chave (do Blob) e Arquivo a fazer upload");
+      return;
+  }
+
+  // Crio um cursor
+  Cursor actualCursor = this.Cursor;
+
+  try
+  {
+     // Executo o cursor como espera(a ampulheta dos windows xp e anteriores),
+     //para exibir ao usuário um feedback da execução do upload.
+     this.Cursor = Cursors.WaitCursor;
+
+     // Crio um CloudStorageAccount que representa uma conta do Windows Azure.
+     // Utilizo o StorageCredentialsAccountAndKey para representar as credenciais para acessar os serviços do Windows Azure..
+     // Informo false para representar o uso do protocolo HTTP.
+     CloudStorageAccount storageAccount =
+     new CloudStorageAccount(
+     new StorageCredentialsAccountAndKey(txNomeConta.Text, txChave.Text),
+     false
+     );
+
+     // Crio um CloudBlobClient para fornecer o acesso ao serviço de Blob. O cliente do serviço encapsula o URI de base para o serviço de Blob.
+     // Utiliza as credenciais do usuário.
+     CloudBlobClient blobStorage = storageAccount.CreateCloudBlobClient();
+
+     // Crio um CloudBlobContainer para representar um contêiner no serviço Windows Azure Blob.
+     CloudBlobContainer container = blobStorage.GetContainerReference("concursofotonuvem");
+     container.CreateIfNotExist();
+
+     // configura container para ter acesso público
+     var permissions = container.GetPermissions();
+     permissions.PublicAccess = BlobContainerPublicAccessType.Container;
+     container.SetPermissions(permissions);
+
+     // Nome do arquivo a ser publicado
+     string uniqueBlobName = string.Format("foto_{0}.jpg", Guid.NewGuid().ToString());
+     CloudBlockBlob blob = container.GetBlockBlobReference(uniqueBlobName);
+     blob.Properties.ContentType = "jpg";
+     blob.UploadFile(txFileName.Text);
+     // Exibo o endereço do arquivo publicado
+     txNomeDoBlob.Text = blob.Uri.AbsoluteUri;
+  }
+  catch (Exception err)
+  {
+     txNomeDoBlob.Text = "Erro!";
+
+     this.Cursor = actualCursor;
+     MessageBox.Show("Erro: " + err.Message);
+     return;
+  }
+  this.Cursor = actualCursor;
+
+  MessageBox.Show("Upload foi feito com Sucesso !!nATENÇÃO: Não se esqueça de copiar o nome final da sua foto para cadastrar no site do concurso !!!");
+}
+    </code>
+</pre>
+
 <p>Agora é só fazer a chamada dos métodos aos respectivos eventos.</p>
 <p align="justify">O próximo passo será a criação do Storage account para que possamos publicar a foto. Acesse o portal do Azure, Clique em Hosted Services, Storage Accounts &amp; CDN, selecione Storage Accounts e crie um novo Storage account conforme a imagem abaixo:</p>
 <p><a href="http://blob.vitormeriat.com.br/images/2010/12/tela-1.png"><img alt="Tela 1" src="http://blob.vitormeriat.com.br/images/2010/12/tela-1.png" /></a></p>

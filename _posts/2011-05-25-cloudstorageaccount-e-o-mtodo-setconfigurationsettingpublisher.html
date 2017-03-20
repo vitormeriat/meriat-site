@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CloudStorageAccount e o método SetConfigurationSettingPublisher
+title: CloudStorageAccount e o método SetConfiguration SettingPublisher
 date: 2011-05-25
 categories:
   - Cloud Computing
@@ -9,7 +9,7 @@ categories:
 ---
 <p align="justify">Aqueles que estão estudando ou trabalhando como Azure certamente já tiveram de obter as credenciais da conta de armazenamento. Neste momento você recorre ao Windows Azure Platform Training Kit e os ainda poucos artigos que tratam do assunto.</p>
 <p align="justify">Provavelmente o código que você vai encontrar será este(do próprio WAPTK):</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/05/013.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="01"   alt="01" src="http://blob.vitormeriat.com.br/images/01.png" width="482" height="99" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2011/05/013.png"><img alt="01" src="http://blob.vitormeriat.com.br/images/2011/05/01.png" /></a></p>
 <p align="justify">Confesso que não sou um usuário assíduo dos delagates mas uma declaração que envolve um delegate Func(T1, T2) , dentro de outro, Action(T1,T2) para mim já é preciosismo…</p>
 <p align="justify">A falta de objetividade e clareza na documentação do Azure (o que com certeza irá mudar) aliado a esta sintaxe nada amigável (e que fique bem claro que nem sempre soluções extremamente elegantes são as melhores) cria uma espécie de antipatia para alguns desenvolvedores.</p>
 <p><!--more-->
@@ -23,12 +23,10 @@ categories:
 </li>
 </ol>
 <p align="justify">Neste caso poderíamos fazer sem a expressão Lambda e definir o método como no exemplo abaixo…</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/05/022.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="02"   alt="02" src="http://blob.vitormeriat.com.br/images/02.png" width="482" height="255" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2011/05/022.png"><img alt="02" src="http://blob.vitormeriat.com.br/images/2011/05/02.png" /></a></p>
 <blockquote><p>Para os que ainda não estiverem familiarizados com as expressões Lambda, sugiro a leitura: <a href="http://vitormeriat.wordpress.com/2011/04/20/dissecando-as-expresses-lambda/" target="_blank">Dissecando as expressões Lambda</a></p>
 </blockquote>
 <p align="justify">Agora no momento que uma chamada é feita para recuperar as credenciais, teremos a execução do método MeuEditorDeConfiguracao.</p>
 <p align="justify">Quando utilizamos o método <em>CloudStorageAccount.FromConfigurationSetting</em>, o Azure procura por um editor de configuração. Devido uma chamada anterior a <em>SetConfigurationSettingPublisher, </em>ele encontra o nosso método customizado e utilizando o <em>RoleEnvironment.GetConfigurationSettingValue</em>, nosso código obtém os valores da nossa conta e invoca o método previsto com o parâmetro Func&lt;string, bool&gt;.</p>
 <p>No próximo post vamos explorar algumas possibilidades para nossas estratégias de obtenção das credenciais da conta de armazenamento&nbsp; no Azure.</p>
 <p><a href="http://cid-bd055aa47a388023.office.live.com/self.aspx/.Public/CredenciaisAzure.rar" target="_blank">Código fonte do Artigo</a></p>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/03/logo.jpg"><br /><img title="logo"   alt="logo" align="left" src="http://blob.vitormeriat.com.br/images/logo.jpg?w=50&amp;h=98&amp;h=98" width="50" height="98" /></a><font size="4">Um grande abraço e ótimo estudo!</font></p>
-<p><strong>&nbsp;&nbsp; Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong><br />&nbsp;&nbsp;&nbsp; <a href="mailto:vitormeriat@gmail.com">vitormeriat@gmail.com</a><br />&nbsp;&nbsp;&nbsp; <a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a></p>
