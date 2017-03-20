@@ -27,7 +27,9 @@ O colapso do "Titanic" está associada com a regra não escrita do salvamento no
 
 Nesta tarefa, os competidores precisam analisar a probabilidade de sobrevivência das diferentes categorias de passageiros.
 
+Para determinar se o passageiro sobreviveu ao "Titanic", vamos usar uma árvore de decisão. Uma árvore de decisão é gerada automaticamente com base no parâmetro de entrada. A imagem abaixo mostra um exemplo de uma árvore de decisão a ser criado.
 
+<img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg" class="absolute-bg">
 
 
 [Titanic: Machine Learning from Disaster](https://github.com/vitormeriat/meriat-ml-notes/blob/master/Titanic%20-%20Machine%20Learning%20from%20Disaster.ipynb)
