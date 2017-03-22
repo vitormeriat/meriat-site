@@ -6,9 +6,11 @@ categories:
   - Microsoft Azure
   - Microsoft Azure Storage
   - SQL
-
+image: "http://blob.vitormeriat.com.br/images/2012/02/errosqlazure.png"
 ---
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2012/02/errosqlazure.png"><img alt="ErroSqlAzure" align="left" src="http://blob.vitormeriat.com.br/images/2012/02/errosqlazure.png" /></a>Estava eu trabalhando feliz da vida em um sistema em Azure utilizando o ambiente local por meio do <strong>Compute Emulator</strong> e&#160; um banco de dados hospedado em um <strong>SQL Server 2008 R2</strong> padrão, e tudo corria perfeitamente bem. Com todos os testes passando decidi que era hora de testar com os dados no <strong>SQL Azure</strong> e tive uma surpresinha:</p>
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2012/02/errosqlazure.png"><img alt="ErroSqlAzure" src="http://blob.vitormeriat.com.br/images/2012/02/errosqlazure.png" /></a></p>
+<p align="justifiy">Estava eu trabalhando feliz da vida em um sistema em Azure utilizando o ambiente local por meio do <strong>Compute Emulator</strong> e&#160; um banco de dados hospedado em um <strong>SQL Server 2008 R2</strong> padrão, e tudo corria perfeitamente bem. Com todos os testes passando decidi que era hora de testar com os dados no <strong>SQL Azure</strong> e tive uma surpresinha:</p>
 <blockquote><p><font color="#ff0000"><strong>Msg 40054, Level 16, State 1, Line 3  <br /></strong>Tables without a clustered index are not supported in this version of SQL Server. Please create a clustered index and try again.</font></p>
 </blockquote>
 <p><!--more-->
@@ -111,5 +113,5 @@ WHERE type = 'U' AND object_id NOT IN
 
 <h3>Importante:</h3>
 <p>** Esse exemplo não tem por objetivo entrar na discussão do que é uma boa chave para seu índice cluster, apenas mostra cuidados ao portar uma aplicação para o SQL Azure.</p>
-<p>&#160;</p>
-<h3><strong>Um ótimo feriado a todos.</strong></h3>
+
+<h4><strong>Um ótimo feriado a todos.</strong></h4>
