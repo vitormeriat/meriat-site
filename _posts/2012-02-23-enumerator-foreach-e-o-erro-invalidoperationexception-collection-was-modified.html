@@ -1,17 +1,13 @@
 ---
 layout: post
 title: 'Enumerator, foreach e o erro “InvalidOperationException: Collection Was Modified”'
-date: 2012-02-23 11:14:11.000000000 -02:00
-type: post
-published: true
-status: publish
+date: 2012-02-23
 categories:
-- C#
-
+  - C#
 ---
 <p align="justify">Vamos abordar o cenário mais comum: Você possui uma coleção que pode ser uma lista de string, int ou como neste caso uma coleção de uma classe qualquer. Sua coleção tem diversos itens adicionados e você necessita retirar os itens conforme uma determinada lógica de negócio. Observe o código abaixo:</p>
 <p><!--more-->
-<p><a href="http://blob.vitormeriat.com.br/images/2012/02/listagem-1.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="Listagem 1"   alt="Listagem 1" src="http://blob.vitormeriat.com.br/images/listagem-1.png" width="573" height="450" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2012/02/listagem-1.png"><img alt="Listagem 1" src="http://blob.vitormeriat.com.br/images/2012/02/listagem-1.png"/></a></p>
 <p>&#160;</p>
 <h2>O motivo</h2>
 <p align="justify">Você utiliza um <strong>loop foreach</strong> para percorrer cada item da coleção. Assim que sua regra é atendida por um dos itens da coleção, chamamos o método <strong>Remove() </strong>que tenta modificar a coleção durante o laço <strong>foreach</strong>.</p>
@@ -27,13 +23,8 @@ categories:
 <h2>A solução</h2>
 <p align="justify">Existem várias estratégias para isto, a maioria envolve trabalhar com listas auxiliares e é exatamente isto que quero evitar. </p>
 <p align="justify">Levando em consideração aquilo que já sabemos sobre o funcionamento do <strong>foreach</strong>, podemos solucionar o problema de satisfatória apenas substituindo a linha do <strong>foreach</strong> pela sintaxe abaixo:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2012/02/listagem-2.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="Listagem 2"   alt="Listagem 2" src="http://blob.vitormeriat.com.br/images/listagem-2.png" width="573" height="65" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2012/02/listagem-2.png"><img alt="Listagem 2" src="http://blob.vitormeriat.com.br/images/2012/02/listagem-2.png"/></a></p>
 <p align="justify">O que ocorre é que para cada iteração trabalhamos com uma nova cópia da lista, o que evita o erro de coleção modificada…</p>
 <p>O código fonte do exemplo pode ser baixado <a href="https://skydrive.live.com/?cid=bd055aa47a388023#cid=BD055AA47A388023&amp;id=BD055AA47A388023%21227">aqui!</a></p>
 <p>&#160;</p>
-<h3><strong>Um ótimo feriado a todos.</strong></h3>
-<p><a href="http://blob.vitormeriat.com.br/images/2012/02/principal.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;" title="Principal"   alt="Principal" align="left" src="http://blob.vitormeriat.com.br/images/principal.png" width="81" height="130" /></a></p>
-<p><strong>Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong></p>
-<p><i><strong>Microsoft MSP – Brasília</strong></i></p>
-<p><a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a></p>
-<p><a href="mailto:vitor.meriat@srnimbus.com">vitor.meriat@srnimbus.com</a></p>
+<h4><strong>Um ótimo feriado a todos.</strong></h4>
