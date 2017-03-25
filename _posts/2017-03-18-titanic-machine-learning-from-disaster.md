@@ -21,7 +21,7 @@ Embora os Mythbusters provaram completamente que Jack e Rose podiam caber na por
 
 Usando dados do site Kaggle e do software estatístico R, eu desenvolvi três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias) que previram taxas de sobrevivência para os passageiros do Titanic.
 
-<img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg" class="absolute-bg">
+<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg" class="absolute-bg"></p>
 
 O colapso do "Titanic" está associada com a regra não escrita do salvamento no mar de pessoas, "mulheres e crianças primeiro".
 

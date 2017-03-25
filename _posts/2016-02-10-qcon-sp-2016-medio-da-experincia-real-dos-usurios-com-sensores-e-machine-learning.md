@@ -17,7 +17,7 @@ Fala pessoal, segue abaixo as informações sobre minha palestra na track de IoT
 
 Vou apresentar nessa palestra técnicas de IoT e Inteligência Artificial foram fundamentais para melhorar a aplicação e a experiência dos usuários. Serão abordados os passos para construção da aplicação, sua arquitetura, utilização de sensores, cloud, analytics e aprendizado de máquina, assim como critérios de performance e custo computacional. Serão abordados também desafios enfrentados na comunicação entre os dispositivos utilizados nos veículos.
 
-<iframe style="height: 675px; width: 1000px" marginheight="0" src="https://www.slideshare.net/slideshow/embed_code/key/by4wQxgA5RJzu9" frame  width="998" marginwidth="0" scrolling="no"> </iframe>
+<iframe style="height: 675px; width: 100%" marginheight="0" src="https://www.slideshare.net/slideshow/embed_code/key/by4wQxgA5RJzu9" frame marginwidth="0" scrolling="no"> </iframe>
 
 Abaixo segue o link da palestra para quem quiser saber mais detalhes. Corre que ainda dá tempo de participar.
 

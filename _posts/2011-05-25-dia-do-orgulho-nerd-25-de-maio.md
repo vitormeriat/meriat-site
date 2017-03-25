@@ -3,7 +3,9 @@ layout: post
 title: Dia do orgulho Nerd (25 de maio)
 date: 2011-05-25
 ---
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/05/3d-glasses.jpg"><img alt="3d-glasses" src="http://blob.vitormeriat.com.br/images/2011/05/3d-glasses.jpg" /></a></p>
+
+<a href="http://blob.vitormeriat.com.br/images/2011/05/3d-glasses.jpg"><img alt="3d-glasses" src="http://blob.vitormeriat.com.br/images/2011/05/3d-glasses.jpg" /></a>
+
 <p align="justify">Hoje estamos comemorando o dia do orgulho Nerd ou no caso de algumas pessoas o orgulho Geek.</p>
 <p align="justify">Esta data foi escolhida por um motivo obvio, no dia 25 de maio de 1977 fomos agraciados por um fenômeno chamado Star Wars que fez vários descobrirem sua afinidade com a força. A coragem de Han Solo e a inteligência e dificuldade de se expressar de R2D2 e Chewie.</p>
 <p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/05/i-love-nerds10.jpg"><img alt="i-love-nerds" align="left" src="http://blob.vitormeriat.com.br/images/2011/05/i-love-nerds10.jpg" /></a>O segundo motivo foi o DNA, ou Douglas Noel Adams, criador da trilogia de 4 (para alguns 5) livros. Tanto Douglas como George Lucas trouxeram galáxias distantes e mundos esquecidos, variadas utilizações de uma toalha, problemas políticos e nuances relacionados aos problemas do mundo que leitores e pessoas comuns não reconheceriam, e sim apenas aqueles agraciados com uma visão mais critica ou uma sede maior de conhecimento, nós os ditos NERDS.</p>

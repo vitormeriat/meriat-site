@@ -16,6 +16,7 @@ A listagem a seguir pode ser categorizada como, **Popular Science Machine Learni
 
 <img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg" class="absolute-bg">
 
+<div style="margin-bottom: 5em;"></div>
 
 ### Machine Learning Books Selection
 
@@ -46,6 +47,7 @@ A listagem a seguir pode ser categorizada como, **Popular Science Machine Learni
 * [Introduction to Time Series and Forecasting](http://www.amazon.com/dp/3319298526)
 * [Forecasting: principles and practice](http://www.amazon.com/dp/0987507109)
 
+<div style="margin-bottom: 5em;"></div>
 
 ### Com foco em Python
 
@@ -59,6 +61,7 @@ A listagem a seguir pode ser categorizada como, **Popular Science Machine Learni
 * [Introducing Data Science: Big Data, Machine Learning, and more, using Python tools](http://www.amazon.com/dp/1633430030)
 * [Real-World Machine Learning](http://www.amazon.com/dp/1617291927)
 
+<div style="margin-bottom: 5em;"></div>
 
 ### Com foco em R
 
@@ -77,6 +80,7 @@ Aqui vale fazer uma consideração: Temos a seguir uma listagem separada sobre D
 
 Em momento oportuno devo vou compartilhar aqui mais informações sobre Deep Learning, como meus estudos, códigos e referências. Por hora, segue a bibliografia melhor avaliada sobre o tema.
 
+<div style="margin-bottom: 5em;"></div>
 
 ### Deep Learning
 * [Deep Learning](http://www.amazon.com/dp/0262035618)
@@ -88,5 +92,6 @@ Em momento oportuno devo vou compartilhar aqui mais informações sobre Deep Lea
 * [Getting Started with TensorFlow](http://www.amazon.com/dp/1786468573)
 * [TensorFlow for Machine Intelligence: A Hands-On Introduction to Learning Algorithms](http://www.amazon.com/dp/1939902452)
 
+<div style="margin-bottom: 5em;"></div>
 
-##### É isso ai... valeu pessoal ;)
+### É isso ai... valeu pessoal ;)

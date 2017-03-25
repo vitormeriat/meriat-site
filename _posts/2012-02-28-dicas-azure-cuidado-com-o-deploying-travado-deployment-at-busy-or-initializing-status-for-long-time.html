@@ -3,11 +3,21 @@ layout: post
 title: 'Dicas Azure: Cuidado com o deploying travado. Deployment at Busy or Initializing Status for long time'
 date: 2012-02-28
 categories:
+<<<<<<< HEAD
+- Cloud Computing
+- Microsoft Azure
+image: "http://blob.vitormeriat.com.br/images/2012/02/01.png"
+---
+<p align="justify">O pessoal que está trabalhando ou estudando o <strong>Azure</strong>, provavelmente já esbarrou com este problema. Fazer um deploy da aplicação na nuvem e o mesmo ficar “eras” em estado de “<strong>Busy</strong>” ou “<strong>Initializing</strong>”, exatamente como na imagem abaixo:</p>
+<p><a href="http://blob.vitormeriat.com.br/images/2012/02/01.png"><img alt="01" src="http://blob.vitormeriat.com.br/images/2012/02/01.png"/></a></p>
+<p><!--more-->
+=======
   - Cloud Computing
   - Microsoft Azure
 ---
 <p align="justify">O pessoal que está trabalhando ou estudando o <strong>Azure</strong>, provavelmente já esbarrou com este problema. Fazer um deploy da aplicação na nuvem e o mesmo ficar “eras” em estado de “<strong>Busy</strong>” ou “<strong>Initializing</strong>”, exatamente como na imagem abaixo:</p>
 <p align="center"><a href="http://blob.vitormeriat.com.br/images/2012/02/01.png"><img alt="01" src="http://blob.vitormeriat.com.br/images/2012/02/01.png"/></a></p>
+>>>>>>> fc19c35aaf9d0aae2c5a94f9ddc93deb1b95af77
 <p align="justify">Neste caso específico (e que havia ocorrido anteriormente comigo), meu arquivo <strong>ServiceConfiguration.cscfg</strong> que tem a diretiva <strong>DiagnosticsConnectionString</strong> estava apontando para o desenvolvimento local. Este é o comportamento esperado, o seu estado default.</p>
 <p align="justify"><a href="http://blob.vitormeriat.com.br/images/2012/02/021.png"><img alt="02" src="http://blob.vitormeriat.com.br/images/2012/02/02.png"/></a></p>
 <p align="justify">&#160;</p>

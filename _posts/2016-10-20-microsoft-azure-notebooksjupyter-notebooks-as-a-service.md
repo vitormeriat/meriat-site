@@ -63,5 +63,7 @@ Agora estamos em terreno conhecido. É só criar um novo Notebook usando Py2, Py
 
 No próximo post vou mostrar como instalar pacotes de Python, R e como compartilhar sua biblioteca de forma pública.
 
+<div style="margin-bottom: 5em;"></div>
+
 ## Conclusion
 A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero ;)

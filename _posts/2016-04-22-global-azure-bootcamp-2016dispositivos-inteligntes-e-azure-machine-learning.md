@@ -21,6 +21,8 @@ Ainda sobre o evento, foi possível demostrar a utilziação de serviços para c
 
 Além de realizar um experimento com o Microsoft Azure Machine Learning, também abordamos o futuro da intligência de dados e os novos caminhos que a cognição pode trazer para o mundo da inteligência artificial.
 
+<div style="margin-bottom: 5em;"></div>
+
 ### Referências
 
 * [MQTT](http://mqtt.org/)

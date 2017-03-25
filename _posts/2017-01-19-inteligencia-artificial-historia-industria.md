@@ -15,4 +15,6 @@ As técnicas da IA encontram-se em evolução rápida, e algumas vão-se co
 
 A utilização da IA começa a generalizar-se com muitos êxitos de aplicação. Ocorrem anualmente inúmeros colóquios internacionais expressamente dedicados a essas aplicações. Em Portugal verifica-se um potencial considerável em IA, já consolidado em grande parte a nível do ensino e da investigação.
 
-##### É isso ai pessoal, em breve continuamos esse bate papo ;)
+<div style="margin-bottom: 5em;"></div>
+
+#### É isso ai pessoal, em breve continuamos esse bate papo ;)

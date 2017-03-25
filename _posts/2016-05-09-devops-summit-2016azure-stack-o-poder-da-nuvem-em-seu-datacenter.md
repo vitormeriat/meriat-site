@@ -19,6 +19,8 @@ Com o Azure Stack você aproveita o modelo de gestão operacional de recursos do
 
 <iframe style="height: 685px; width: 100%" marginheight="0" src="https://www.slideshare.net/slideshow/embed_code/key/zW5NtNvVdGsrct" frame  marginwidth="0" scrolling="no"><br /> </iframe>
 
+<div style="margin-bottom: 5em;"></div>
+
 ### Referências
 
 * [Microsoft Azure Stack Technical Preview is now available for download](https://azure.microsoft.com/en-us/blog/microsoft-azure-stack-technical-preview-is-now-available-for-download/)
@@ -26,5 +28,3 @@ Com o Azure Stack você aproveita o modelo de gestão operacional de recursos do
 * [Azure IaaS for Azure Stack](https://channel9.msdn.com/Events/Ignite/2015/BRK3479)
 * [Microsoft Azure Stack](https://azure.microsoft.com/pt-br/overview/azure-stack/)
 
-
-#### ;)
