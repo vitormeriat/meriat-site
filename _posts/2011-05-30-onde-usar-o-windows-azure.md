@@ -3,30 +3,24 @@ layout: post
 title: Onde usar o Windows Azure?
 date: 2011-05-30
 categories:
-  - Cloud Computing
-  - Microsoft Azure
+    - Cloud Computing
+    - Microsoft Azure
 ---
-<p align="justify">Durante uma apresentação(Webcast) do arquiteto e evangelista da Microsoft <strong>Bill Zack</strong> sobre Windows Azure Design Patterns, ele disse algo que me chamou a atenção: “como arquitetos, estamos mais interessados ​​em resolver os problemas de negócios que podem ser solucionados utilizando esses recursos(do Windows Azure neste caso) onde eles são adequados”.
-<p align="justify">A Cloud computing foi desenvolvida para alguns cenários específicos e determinadas aplicações possuem um padrão de uso que as torna adequadas para a nuvem. O contrário também é verdade.
-<p align="justify">Durante seu Webcast, foi apresentado uma série de soluções e cenários cujo os recursos e componentes do Windows Azure são recomendados. Segue o resumo e logo após o link para o download do webcast. </p>
-<p><!--more-->
-<p align="justify"><strong>Workloads</strong>
-<ul>
-<li>
-<div align="justify"><strong>On e Off</strong> – aplicações que são usadas esporadicamente durante determinados períodos de tempo durante o dia ou ano. Muitos serviços que rodam no final do dia ou do mês caem nessa categoria. Proporcionar a capacidade necessária para essas aplicações é mais caro que rodá-las em um cloud porque a maior parte do tempo a capacidade não é usada. </div>
-</li>
-<li>
-<div align="justify"><strong>Crescimento rápido ou não rápido</strong> – um padrão de trabalho encontrado pelos iniciantes que não podem prever com exatidão o nível de sucesso de seu novo negócio e, consequentemente, a verdadeira capacidade que precisam. Iniciantes geralmente começam com pequenos aumentos de capacidade quando a demanda aumenta. Tais aplicações são adequadas para o cloud por que o cloud pode suportar o crescimento das necessidades rapidamente. </div>
-</li>
-<li>
-<div align="justify"><strong>Crescimento imprevisível</strong> – isso acontece, por exemplo, quando a carga normal em um web server é temporariamente aumentada por uma valor muito alto, tão grande que o sistema não consegue lidar com o tráfego passageiro. Os proprietários devem fornecer capacidade suficiente para suportar essas cargas, mas eles não esperam esses picos de tráfego. Mesmo se eles antecipá-las, a capacidade adicional ficaria a maior parte do tempo sem uso. Este é um outro bom candidato ao cloud. </div>
-</li>
-<li>
-<div align="justify"><strong>Crescimento previsível</strong> – a carga constatemente varia de uma maneira previsível ao longo do tempo. O proprietário pode comprar o equipamente e software necessário sem ter que depender de uma fornecedor de cloud.</div>
-</li>
-</ul>
-<p align="justify">Zack continua descrevendo cenários para computação, armazenagem, comunicações, deploy e administração com soluções fornecidas pelo Windows Azure.
-<p align="justify"><strong>Computation</strong>
+
+Durante uma apresentação(Webcast) do arquiteto e evangelista da Microsoft <strong>Bill Zack</strong> sobre Windows Azure Design Patterns, ele disse algo que me chamou a atenção: “como arquitetos, estamos mais interessados ​​em resolver os problemas de negócios que podem ser solucionados utilizando esses recursos(do Windows Azure neste caso) onde eles são adequados”.
+
+A Cloud computing foi desenvolvida para alguns cenários específicos e determinadas aplicações possuem um padrão de uso que as torna adequadas para a nuvem. O contrário também é verdade.
+
+Durante seu Webcast, foi apresentado uma série de soluções e cenários cujo os recursos e componentes do Windows Azure são recomendados. Segue o resumo e logo após o link para o download do webcast.
+
+**Workloads**
+* <strong>On e Off</strong> – aplicações que são usadas esporadicamente durante determinados períodos de tempo durante o dia ou ano. Muitos serviços que rodam no final do dia ou do mês caem nessa categoria. Proporcionar a capacidade necessária para essas aplicações é mais caro que rodá-las em um cloud porque a maior parte do tempo a capacidade não é usada. 
+* <strong>Crescimento rápido ou não rápido</strong> – um padrão de trabalho encontrado pelos iniciantes que não podem prever com exatidão o nível de sucesso de seu novo negócio e, consequentemente, a verdadeira capacidade que precisam. Iniciantes geralmente começam com pequenos aumentos de capacidade quando a demanda aumenta. Tais aplicações são adequadas para o cloud por que o cloud pode suportar o crescimento das necessidades rapidamente.
+* <strong>Crescimento imprevisível</strong> – isso acontece, por exemplo, quando a carga normal em um web server é temporariamente aumentada por uma valor muito alto, tão grande que o sistema não consegue lidar com o tráfego passageiro. Os proprietários devem fornecer capacidade suficiente para suportar essas cargas, mas eles não esperam esses picos de tráfego. Mesmo se eles antecipá-las, a capacidade adicional ficaria a maior parte do tempo sem uso. Este é um outro bom candidato ao cloud.
+* <strong>Crescimento previsível</strong> – a carga constatemente varia de uma maneira previsível ao longo do tempo. O proprietário pode comprar o equipamente e software necessário sem ter que depender de uma fornecedor de cloud.
+* Zack continua descrevendo cenários para computação, armazenagem, comunicações, deploy e administração com soluções fornecidas pelo Windows Azure.
+
+**Computation**
 <ul>
 <li>
 <div align="justify"><strong>Instâncias de aplicações On-demand – </strong>este padrão se aplica durante eventos especiais, quando os aplicativos precisam escalar rapidamente, e depois reduzir o escalonamento. Windows Azure suporta estas necessidades com gerenciadores web e worker roles automaticamente. </div>

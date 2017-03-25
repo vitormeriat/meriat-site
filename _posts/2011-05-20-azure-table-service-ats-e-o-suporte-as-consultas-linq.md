@@ -3,31 +3,28 @@ layout: post
 title: Azure Table Service (ATS) e o suporte as consultas LINQ
 date: 2011-05-20
 categories:
-  - Cloud Computing
-  - LINQ
-  - Microsoft Azure
-  - Microsoft Azure Storage
+    - Cloud Computing
+    - LINQ
+    - Microsoft Azure
+    - Microsoft Azure Storage
 ---
-<p align="justify">O Azure Table Service é um serviço de armazenamento de dados não relacional que proporciona a persistência de entidades dentro de tabelas que por sua vez estão relacionadas a uma conta do Windows Azure.</p>
-<p align="justify">O ATS não é um banco de dados relacional como os já consagrados Microsoft SQL Server, Oracle ou DB2. Ele possui uma estrutura “frouxa” que proporciona em uma mesma tabela se ter linhas com estruturas de colunas distintas.</p>
-<p align="justify">Se você vai iniciar uma aplicação Azure e está pensando em usar LINQ para acesso a dados, ai vai a lista com os operadores que tem ou não suporte dentro do ATS.</p>
-<h3 align="justify">Operadores suportados</h3>
-<ul>
-<li>
-<div align="justify"><font size="3"><strong>From</strong></font></div>
-</li>
-<li>
-<div align="justify"><font size="3"><strong>Where</strong></font></div>
-</li>
-<li>
-<div align="justify"><font size="3"><strong>First, FirstOrDefault</strong></font> </div>
-</li>
-<li>
-<div align="justify"><font size="3"><strong>Take</strong></font> </div>
-<p align="justify">OBS: Para o operador Take, o valor especificado deve ser menor ou igual a 1.000. No caso do valor ultrapassar este limite, o ATS irá retornar o famoso status code 400 (Bad Request). Se o operador Take não for especificado, o retorno trará somente os primeiros 1.000 registros.</p>
-</li>
-</ul>
-<h3 align="justify">Operadores não suportados</h3>
+
+O Azure Table Service é um serviço de armazenamento de dados não relacional que proporciona a persistência de entidades dentro de tabelas que por sua vez estão relacionadas a uma conta do Windows Azure.
+
+O ATS não é um banco de dados relacional como os já consagrados Microsoft SQL Server, Oracle ou DB2. Ele possui uma estrutura “frouxa” que proporciona em uma mesma tabela se ter linhas com estruturas de colunas distintas.
+
+Se você vai iniciar uma aplicação Azure e está pensando em usar LINQ para acesso a dados, ai vai a lista com os operadores que tem ou não suporte dentro do ATS.
+
+### Operadores suportados
+* **From**
+* **Where**
+* **First, FirstOrDefault**
+* **Take**
+
+**OBS:** Para o operador Take, o valor especificado deve ser menor ou igual a 1.000. No caso do valor ultrapassar este limite, o ATS irá retornar o famoso status code 400 (Bad Request). Se o operador Take não for especificado, o retorno trará somente os primeiros 1.000 registros.
+
+
+### Operadores não suportados
 <ul>
 <li>
 <div align="justify"><strong><font size="3">Select</font> </strong></div>
@@ -118,5 +115,6 @@ categories:
 <div align="justify"><strong><font size="3">Reverse</font></strong></div>
 </li>
 </ul>
+
 <p align="justify"><strong></strong>&nbsp;</p>
-<p align="justify">O Azure Table Service é uma ótima opção para o armazenamento de dados. Contudo é necessário conhecê-lo bem antes de fundamentar sua aplicação nele. Caso contrário você corre o risco de chegar no meio do projeto e se deparar com restrições que podem impossibilitar o desenvolvimento…</p>
+O Azure Table Service é uma ótima opção para o armazenamento de dados. Contudo é necessário conhecê-lo bem antes de fundamentar sua aplicação nele. Caso contrário você corre o risco de chegar no meio do projeto e se deparar com restrições que podem impossibilitar o desenvolvimento…

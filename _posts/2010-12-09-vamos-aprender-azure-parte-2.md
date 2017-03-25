@@ -3,8 +3,8 @@ layout: post
 title: Vamos aprender azure! Parte 2
 date: 2010-12-09
 categories:
-  - Cloud Computing
-  - Microsoft Azure
+    - Cloud Computing
+    - Microsoft Azure
 ---
 
 <p>Continuando nossa série, agora chegou o momento de irmos para o código:</p>
