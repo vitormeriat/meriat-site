@@ -146,7 +146,7 @@
   <div class="fh5co-spacer fh5co-spacer-md"></div>
 
   <!-- <header class="section-padding-lg mast">
-    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <figure class="absolute-bg mast__img" style="background-image: url('http://blob.vitormeriat.com.br/images/2014/10/capa2.png');"></figure>
     <div class="mast-container" style="margin-bottom: 60px;">
       <h1 itemprop="name headline">Mensageria–Uma introdução ao Enterprise Integration</h1>
       <span><time datetime="2014-10-30T00:00:00-02:00" itemprop="datePublished">Oct 30, 2014</time></span>
@@ -160,7 +160,7 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p><a href="http://blob.vitormeriat.com.br/images/2014/10/capa2.png"><img title="capa"     alt="capa" src="http://blob.vitormeriat.com.br/images/2014/10/capa.png" width="465" align="left" height="372" /></a></p>
+    <p><a href="http://blob.vitormeriat.com.br/images/2014/10/capa2.png"><img alt="capa" src="http://blob.vitormeriat.com.br/images/2014/10/capa.png" width="465" align="left" height="372" /></a></p>
 <p align="justify">Primeiro vale notar qual a necessidade da mensageria. Hoje muito se fala em sistemas distribuídos, escaláveis, cloud computing e etc. O que nos leva a perceber que a cada dia temos mais sistemas e serviços sendo utilizados em massa, e que logicamente estes sistemas raramente são construídas de forma isolada.</p>
 <p align="justify">O que temos visto é que a prática de mercado aponta para uma pluralidade de sistemas, o que por sua vez aponta para uma pluralidade de plataformas e linguagens. Neste post vamos iniciar os estudos sobre as técnicas de integração de sistemas (Enterprise Integration Patterns), iniciando pela mensageria.</p>
 <p><!--more--><br />
@@ -200,9 +200,9 @@
 <p>&nbsp;</p>
 <h2>Então, o que é mensageria?</h2>
 <p align="justify">Vamos considerar o seguinte cenário para a abstração: Uma chamada telefônica é uma forma de comunicação <strong>síncrona</strong> porque os dois lados precisam estar disponíveis ao mesmo tempo. </p>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/10/fig1.png"><img alt="FIG1" src="http://blob.vitormeriat.com.br/images/2014/10/fig1.png" width="700" height="257" /></a></p>
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/10/fig1.png"><img alt="FIG1" src="http://blob.vitormeriat.com.br/images/2014/10/fig1.png" /></a></p>
 <p align="justify">Já se um dos lados liga e deixa um recado de voz, esta mensagem pode ser ouvida e respondida conforme a disponibilidade do outro lado. Neste caso dizemos que houve uma comunicação <strong>assíncrona</strong>.</p>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/10/fig2.png"><img alt="FIG2" src="http://blob.vitormeriat.com.br/images/2014/10/fig2.png" width="700" height="331" /></a></p>
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/10/fig2.png"><img alt="FIG2" src="http://blob.vitormeriat.com.br/images/2014/10/fig2.png" /></a></p>
 <blockquote><p align="left">Mensageria é uma tecnologia que permite comunicação de alta velocidade e de forma assíncrona entre sistemas diferentes com mensagens entregues de forma garantida.</p>
 </blockquote>
 <p align="justify">Os canais, também conhecidos como filas de mensagens (<strong>MQ = message queuing</strong>), são caminhos lógicos que conectam os sistemas. Eles se comportam como se fossem uma coleção de mensagens compartilhadas entre múltiplos computadores que podem ser acessados concorrentemente por múltiplas aplicações.</p>
@@ -223,7 +223,7 @@
 <li><strong>PROCESS</strong> – o receiver extrai os dados da mensagem.</li>
 </ol>
 <p>Tudo de acordo com a figura abaixo:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/10/fig3.png"><img alt="FIG3" src="http://blob.vitormeriat.com.br/images/2014/10/fig3.png" width="700" height="355" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2014/10/fig3.png"><img alt="FIG3" src="http://blob.vitormeriat.com.br/images/2014/10/fig3.png" /></a></p>
 <p>Dois tipos importantes de envio de mensagens:</p>
 <ol>
 <li>
@@ -306,17 +306,17 @@
 		    
 		    <li>
 			  <span>18 Mar 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
+			  <a href="/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
 		    </li>
 		    
 		    <li>
 			  <span>15 Feb 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
+			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
 		    </li>
 		    
 		    <li>
 			  <span>07 Feb 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
+			  <a href="/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
 		    </li>
 		    
 		</ul>
@@ -329,15 +329,15 @@
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="http://localhost:4000/2014/10/24/filosofia-no-javascript-funes-so-declarao-ou-expresso/"><< Older</a>
+      <a href="/2014/10/24/filosofia-no-javascript-funes-so-declarao-ou-expresso/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
-    <a href="http://localhost:4000/ ">Home</a>
+    <a href="/ ">Home</a>
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <a href="http://localhost:4000/2014/11/21/mensageria-e-os-protocoloschoose-your-poison/">Newer >></a>
+      <a href="/2014/11/21/mensageria-e-os-protocoloschoose-your-poison/">Newer >></a>
     
   </div>
 </div> -->
