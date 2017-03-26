@@ -3,10 +3,10 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Mar 2017 12:55:27 -0300</pubDate>
-    <lastBuildDate>Sat, 25 Mar 2017 12:55:27 -0300</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 26 Mar 2017 15:15:50 -0300</pubDate>
+    <lastBuildDate>Sun, 26 Mar 2017 15:15:50 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -19,7 +19,7 @@
 
 &lt;p&gt;Usando dados do site Kaggle e do software estatístico R, eu desenvolvi três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias) que previram taxas de sobrevivência para os passageiros do Titanic.&lt;/p&gt;
 
-&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;O colapso do “Titanic” está associada com a regra não escrita do salvamento no mar de pessoas, “mulheres e crianças primeiro”.&lt;/p&gt;
 
@@ -36,8 +36,8 @@
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
-        <link>/2017/03/18/titanic-machine-learning-from-disaster/</link>
-        <guid isPermaLink="true">/2017/03/18/titanic-machine-learning-from-disaster/</guid>
+        <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
         
         <category>IA</category>
@@ -122,8 +122,8 @@
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
@@ -145,6 +145,8 @@
         <description>&lt;p&gt;A listagem a seguir pode ser categorizada como, &lt;strong&gt;Popular Science Machine Learning Books&lt;/strong&gt; ou &lt;strong&gt;Beginner Machine Learning Books&lt;/strong&gt;. É possível ainda encontrar vários livros desta listagem em categorias como &lt;strong&gt;Introductory Machine Learning Books&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;machine-learning-books-selection&quot;&gt;Machine Learning Books Selection&lt;/h3&gt;
 
@@ -177,6 +179,8 @@
   &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0987507109&quot;&gt;Forecasting: principles and practice&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
 &lt;h3 id=&quot;com-foco-em-python&quot;&gt;Com foco em Python&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -190,6 +194,8 @@
   &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1633430030&quot;&gt;Introducing Data Science: Big Data, Machine Learning, and more, using Python tools&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617291927&quot;&gt;Real-World Machine Learning&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;com-foco-em-r&quot;&gt;Com foco em R&lt;/h3&gt;
 
@@ -210,6 +216,8 @@
 
 &lt;p&gt;Em momento oportuno devo vou compartilhar aqui mais informações sobre Deep Learning, como meus estudos, códigos e referências. Por hora, segue a bibliografia melhor avaliada sobre o tema.&lt;/p&gt;
 
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
 &lt;h3 id=&quot;deep-learning&quot;&gt;Deep Learning&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0262035618&quot;&gt;Deep Learning&lt;/a&gt;&lt;/li&gt;
@@ -222,11 +230,13 @@
   &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1939902452&quot;&gt;TensorFlow for Machine Intelligence: A Hands-On Introduction to Learning Algorithms&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;É-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h5&gt;
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;É-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">/2017/02/07/literatura-classica-machine-learning/</guid>
+        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -309,8 +319,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/05/cpbr10-workshop-machine-learning/</link>
-        <guid isPermaLink="true">/2017/02/05/cpbr10-workshop-machine-learning/</guid>
+        <link>http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -333,11 +343,13 @@
 
 &lt;p&gt;A utilização da IA começa a generalizar-se com muitos êxitos de aplicação. Ocorrem anualmente inúmeros colóquios internacionais expressamente dedicados a essas aplicações. Em Portugal verifica-se um potencial considerável em IA, já consolidado em grande parte a nível do ensino e da investigação.&lt;/p&gt;
 
-&lt;h5 id=&quot;É-isso-ai-pessoal-em-breve-continuamos-esse-bate-papo-&quot;&gt;É isso ai pessoal, em breve continuamos esse bate papo ;)&lt;/h5&gt;
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;É-isso-ai-pessoal-em-breve-continuamos-esse-bate-papo-&quot;&gt;É isso ai pessoal, em breve continuamos esse bate papo ;)&lt;/h4&gt;
 </description>
         <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
-        <link>/2017/01/19/inteligencia-artificial-historia-industria/</link>
-        <guid isPermaLink="true">/2017/01/19/inteligencia-artificial-historia-industria/</guid>
+        <link>http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</guid>
         
         
         <category>IA</category>
@@ -402,12 +414,14 @@
 
 &lt;p&gt;No próximo post vou mostrar como instalar pacotes de Python, R e como compartilhar sua biblioteca de forma pública.&lt;/p&gt;
 
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero ;)&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Oct 2016 00:00:00 -0200</pubDate>
-        <link>/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
-        <guid isPermaLink="true">/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
+        <link>http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
         
         
         <category>Data Science</category>
@@ -436,8 +450,8 @@
 &lt;p&gt;&lt;a href=&quot;http://www.iotweekend.com.br/&quot; target=&quot;_blank&quot;&gt;IoT Weekend&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 06 Aug 2016 00:00:00 -0300</pubDate>
-        <link>/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
-        <guid isPermaLink="true">/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
+        <link>http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
         
         
         <category>Comunidade</category>
@@ -496,8 +510,8 @@
 &lt;h3 id=&quot;valeu-galera-&quot;&gt;Valeu galera ;)&lt;/h3&gt;
 </description>
         <pubDate>Thu, 28 Jul 2016 00:00:00 -0300</pubDate>
-        <link>/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
-        <guid isPermaLink="true">/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
+        <link>http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
         
         
         <category>Comunidade</category>
@@ -516,6 +530,8 @@
 
 &lt;iframe style=&quot;height: 685px; width: 100%&quot; marginheight=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/zW5NtNvVdGsrct&quot; frame=&quot;&quot; marginwidth=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;br /&gt; &lt;/iframe&gt;
 
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
 &lt;h3 id=&quot;referências&quot;&gt;Referências&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -525,11 +541,10 @@
   &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/overview/azure-stack/&quot;&gt;Microsoft Azure Stack&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4&gt;;)&lt;/h4&gt;
 </description>
         <pubDate>Mon, 09 May 2016 00:00:00 -0300</pubDate>
-        <link>/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
-        <guid isPermaLink="true">/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
+        <link>http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
         
         
         <category>Comunidade</category>
@@ -552,6 +567,8 @@
 
 &lt;p&gt;Além de realizar um experimento com o Microsoft Azure Machine Learning, também abordamos o futuro da intligência de dados e os novos caminhos que a cognição pode trazer para o mundo da inteligência artificial.&lt;/p&gt;
 
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
 &lt;h3 id=&quot;referências&quot;&gt;Referências&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -562,8 +579,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 22 Apr 2016 00:00:00 -0300</pubDate>
-        <link>/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
-        <guid isPermaLink="true">/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
+        <link>http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
         
         
         <category>Azure IoT Suite</category>

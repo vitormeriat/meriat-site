@@ -160,23 +160,40 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p align="justify">Basicamente, a arquitetura de uma aplicação hospedada no Windows Azure é baseada em elementos escalonáveis, que são construídos sobre código gerenciado, esses elementos são conhecidos como Roles.</p>
-<p align="justify">Um aplicativo que roda em Windows Azure é um serviço hospedado. Normalmente, um serviço hospedado contém diversos recursos computacionais que, coletivamente, processam as informações e interagem uns com os outros e com mundo externo. Os serviços hospedados no Windows Azure são os papéis(Roles).</p>
-<p align="justify">Uma aplicação hospedada no Windows Azure implementa uma ou mais Roles, podendo assim executar várias instâncias de uma Role, onde são replicadas em vários computadores. Desta forma, garantindo a total funcionalidade da aplicação em praticamente tempo integral.</p>
+    <p>Basicamente, a arquitetura de uma aplicação hospedada no Windows Azure é baseada em elementos escalonáveis, que são construídos sobre código gerenciado, esses elementos são conhecidos como Roles.</p>
+
+<p>Um aplicativo que roda em Windows Azure é um serviço hospedado. Normalmente, um serviço hospedado contém diversos recursos computacionais que, coletivamente, processam as informações e interagem uns com os outros e com mundo externo. Os serviços hospedados no Windows Azure são os papéis(Roles).</p>
+
+<p>Uma aplicação hospedada no Windows Azure implementa uma ou mais Roles, podendo assim executar várias instâncias de uma Role, onde são replicadas em vários computadores. Desta forma, garantindo a total funcionalidade da aplicação em praticamente tempo integral.</p>
+
 <p>Windows Azure atualmente suporta os seguintes tipos de Roles:</p>
-<h3>Web Role</h3>
-<p align="justify">IIS7 e ASP.NET em um OS fornecido pelo Windows Azure. O Web Role ASP.NET no Windows Azure é semelhante a um aplicativo da Web ASP.NET. Ele possui arquivos .aspx e o código-fonte, incluindo ferramentas adicionais que permitem que ele seja executado no ambiente Windows Azure. Um Web Role pode receber a maioria dos aplicativos que usam o protocolo HTTP, como o FastCGI ou um serviço WCF usando o esquema basicHttpBinding.</p>
-<h3>Worker Role</h3>
-<p align="justify">É um "executável" (como um serviço ou processo), sendo útil para o desenvolvimento generalizado.</p>
-<h3>VM Role</h3>
-<p align="justify">O VM Role consiste em um sistema operacional que é construído usando uma VHD. Esta função é um tipo especial para permitir que você defina a configuração e atualizações do sistema operacional da máquina virtual. Utiliza Windows services, scheduled tasks, etc. Você configura e adminstra o sistema operacional. <br />&nbsp;<br />O diagrama a abaixo mostra os componentes de um aplicativo do Windows Azure:</p>
-<p align="center"><a href="http://blob.vitormeriat.com.br/images/2011/03/attachment.jpg"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="attachment"   alt="attachment" src="http://blob.vitormeriat.com.br/images/2011/03/attachment.jpg"/></a></p>
-<p align="justify">No diagrama acima podemos notar os papéis(Roles), e suas respectivas ligações. Notem que os papéis são “gerenciados” pelas configurações definidas nos arquivos: <strong>ServiceConfiguration.cscfg</strong> e <strong>ServiceDefinition.csdef.</strong></p>
-<h2>Padrão de aplicação típica para uso dos Papéis(Roles).</h2>
-<p>Uma aplicação do Windows Azure pode ser implementada com Asp.Net, WCF ou qualquer tecnologia com suporte ao IIS. Você pode por exemplo hospedar uma aplicação PHP, já que o IIS suporta PHP atravéz de <strong>Fast CGI.</strong>&nbsp;</p>
+
+<h3 id="web-role">Web Role</h3>
+
+<p>IIS7 e ASP.NET em um OS fornecido pelo Windows Azure. O Web Role ASP.NET no Windows Azure é semelhante a um aplicativo da Web ASP.NET. Ele possui arquivos .aspx e o código-fonte, incluindo ferramentas adicionais que permitem que ele seja executado no ambiente Windows Azure. Um Web Role pode receber a maioria dos aplicativos que usam o protocolo HTTP, como o FastCGI ou um serviço WCF usando o esquema basicHttpBinding.</p>
+
+<h3 id="worker-role">Worker Role</h3>
+
+<p>É um “executável” (como um serviço ou processo), sendo útil para o desenvolvimento generalizado.</p>
+
+<h3 id="vm-role">VM Role</h3>
+
+<p>O VM Role consiste em um sistema operacional que é construído usando uma VHD. Esta função é um tipo especial para permitir que você defina a configuração e atualizações do sistema operacional da máquina virtual. Utiliza Windows services, scheduled tasks, etc. Você configura e adminstra o sistema operacional. <br /> <br />O diagrama a abaixo mostra os componentes de um aplicativo do Windows
+Azure:</p>
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2011/03/attachment.jpg"><img alt="attachment" src="http://blob.vitormeriat.com.br/images/2011/03/attachment.jpg" /></a></p>
+
+<p>No diagrama acima podemos notar os papéis(Roles), e suas respectivas ligações. Notem que os papéis são “gerenciados” pelas configurações definidas nos arquivos: <strong>ServiceConfiguration.cscfg</strong> e <strong>ServiceDefinition.csdef.</strong></p>
+
+<h2 id="padrão-de-aplicação-típica-para-uso-dos-papéisroles">Padrão de aplicação típica para uso dos Papéis(Roles).</h2>
+
+<p>Uma aplicação do Windows Azure pode ser implementada com Asp.Net, WCF ou qualquer tecnologia com suporte ao IIS. Você pode por exemplo hospedar uma aplicação PHP, já que o IIS suporta PHP atravéz de <strong>Fast CGI.</strong></p>
+
 <p>Um dos padrões mais utilizado para aplicativos no Windows Azure é um Web Role para receber as requisições, utilizando de Filas(Queues) do Azure para passar as instâncias de um Worker Role que periodicamente olha para a fila de mensagens a fim de ver se há algum “trabalho” a realizar. O Web Role recupera o resultado do processo. Este padrão pode ser melhor entendido conforme o diagra abaixo:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/03/ic417497.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="IC417497"   alt="IC417497" src="http://blob.vitormeriat.com.br/images/2011/03/ic417497.png" /></a></p>
-<p>Um grande abraço e ótimo estudo!
+
+<p><a href="http://blob.vitormeriat.com.br/images/2011/03/ic417497.png"><img alt="IC417497" src="http://blob.vitormeriat.com.br/images/2011/03/ic417497.png" /></a></p>
+
+<h4 id="um-grande-abraço-e-ótimo-estudo">Um grande abraço e ótimo estudo!</h4>
 
   </section>
 
@@ -241,17 +258,17 @@
 		    
 		    <li>
 			  <span>18 Mar 2017 &raquo;</span>
-			  <a href="/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
+			  <a href="http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
 		    </li>
 		    
 		    <li>
 			  <span>15 Feb 2017 &raquo;</span>
-			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
+			  <a href="http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
 		    </li>
 		    
 		    <li>
 			  <span>07 Feb 2017 &raquo;</span>
-			  <a href="/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
+			  <a href="http://localhost:4000/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
 		    </li>
 		    
 		</ul>
@@ -264,15 +281,15 @@
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="/2011/01/17/o-que-esperar-da-nuvem/"><< Older</a>
+      <a href="http://localhost:4000/2011/01/17/o-que-esperar-da-nuvem/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
-    <a href="/ ">Home</a>
+    <a href="http://localhost:4000/ ">Home</a>
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <a href="/2011/03/22/erro-na-criao-de-fila-no-azure/">Newer >></a>
+      <a href="http://localhost:4000/2011/03/22/erro-na-criao-de-fila-no-azure/">Newer >></a>
     
   </div>
 </div> -->

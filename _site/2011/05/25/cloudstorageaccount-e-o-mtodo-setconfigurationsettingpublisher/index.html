@@ -160,28 +160,37 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p align="justify">Aqueles que estão estudando ou trabalhando como Azure certamente já tiveram de obter as credenciais da conta de armazenamento. Neste momento você recorre ao Windows Azure Platform Training Kit e os ainda poucos artigos que tratam do assunto.</p>
-<p align="justify">Provavelmente o código que você vai encontrar será este(do próprio WAPTK):</p>
+    <p>Aqueles que estão estudando ou trabalhando como Azure certamente já tiveram de obter as credenciais da conta de armazenamento. Neste momento você recorre ao Windows Azure Platform Training Kit e os ainda poucos artigos que tratam do assunto.</p>
+
+<p>Provavelmente o código que você vai encontrar será este(do próprio WAPTK):</p>
+
 <p><a href="http://blob.vitormeriat.com.br/images/2011/05/013.png"><img alt="01" src="http://blob.vitormeriat.com.br/images/2011/05/013.png" /></a></p>
-<p align="justify">Confesso que não sou um usuário assíduo dos delagates mas uma declaração que envolve um delegate Func(T1, T2) , dentro de outro, Action(T1,T2) para mim já é preciosismo…</p>
-<p align="justify">A falta de objetividade e clareza na documentação do Azure (o que com certeza irá mudar) aliado a esta sintaxe nada amigável (e que fique bem claro que nem sempre soluções extremamente elegantes são as melhores) cria uma espécie de antipatia para alguns desenvolvedores.</p>
-<p><!--more-->
-<p align="justify">Em resumo, você está invocando um método que espera um método que utiliza um método como um parâmetro. Sei que isto parece confuso então vamos explorar a expressão lambda para entendermos melhor qual a utilização deste método:</p>
-<ol>
-<li>
-<div align="justify">O método<a href="http://msdn.microsoft.com/en-us/library/microsoft.windowsazure.cloudstorageaccount.setconfigurationsettingpublisher.aspx" target="_blank">SetConfigurationSettingPublisher</a> espera um único parâmetro que é do tipo <a href="http://msdn.microsoft.com/en-us/library/018hxwa8.aspx" target="_blank">Action</a>: Action&lt;string,Func&lt;string,bool&gt;&gt;. </div>
-</li>
-<li>
-<div align="justify">Notem que os parâmetros que passados ​​para o nosso método, são uma string (chamada <strong>configName</strong> ) e um Func&lt;string,bool&gt; (chamado <strong>configSettingPublisher</strong>). Em outras palavras, Azure vai retornar o nome da configuração que está sendo recuperado, bem como um método que espera uma string e retorna um valor booleano. </div>
-</li>
-</ol>
-<p align="justify">Neste caso poderíamos fazer sem a expressão Lambda e definir o método como no exemplo abaixo…</p>
+
+<p>Confesso que não sou um usuário assíduo dos delagates mas uma declaração que envolve um delegate Func(T1, T2) , dentro de outro, Action(T1,T2) para mim já é preciosismo…</p>
+
+<p>A falta de objetividade e clareza na documentação do Azure (o que com certeza irá mudar) aliado a esta sintaxe nada amigável (e que fique bem claro que nem sempre soluções extremamente elegantes são as melhores) cria uma espécie de antipatia para alguns desenvolvedores.</p>
+
+<p>Em resumo, você está invocando um método que espera um método que utiliza um método como um parâmetro. Sei que isto parece confuso então vamos explorar a expressão lambda para entendermos melhor qual a utilização deste método:</p>
+
+<ul>
+  <li>O método<a href="http://msdn.microsoft.com/en-us/library/microsoft.windowsazure.cloudstorageaccount.setconfigurationsettingpublisher.aspx" target="_blank">SetConfigurationSettingPublisher</a> espera um único parâmetro que é do tipo <a href="http://msdn.microsoft.com/en-us/library/018hxwa8.aspx" target="_blank">Action</a>: Action&lt;string,Func&lt;string,bool&gt;&gt;.</li>
+  <li>Notem que os parâmetros que passados ​​para o nosso método, são uma string (chamada <strong>configName</strong> ) e um Func&lt;string,bool&gt; (chamado <strong>configSettingPublisher</strong>). Em outras palavras, Azure vai retornar o nome da configuração que está sendo recuperado, bem como um método que espera uma string e retorna um valor booleano.</li>
+</ul>
+
+<p>Neste caso poderíamos fazer sem a expressão Lambda e definir o método como no exemplo abaixo…</p>
+
 <p><a href="http://blob.vitormeriat.com.br/images/2011/05/022.png"><img alt="02" src="http://blob.vitormeriat.com.br/images/2011/05/022.png" /></a></p>
-<blockquote><p>Para os que ainda não estiverem familiarizados com as expressões Lambda, sugiro a leitura: <a href="http://vitormeriat.com.br/2011/04/20/dissecando-as-expresses-lambda/" target="_blank">Dissecando as expressões Lambda</a></p>
+
+<blockquote>
+  <p>Para os que ainda não estiverem familiarizados com as expressões Lambda, sugiro a leitura: <a href="http://vitormeriat.com.br/2011/04/20/dissecando-as-expresses-lambda/" target="_blank">Dissecando as expressões Lambda</a></p>
 </blockquote>
-<p align="justify">Agora no momento que uma chamada é feita para recuperar as credenciais, teremos a execução do método MeuEditorDeConfiguracao.</p>
-<p align="justify">Quando utilizamos o método <em>CloudStorageAccount.FromConfigurationSetting</em>, o Azure procura por um editor de configuração. Devido uma chamada anterior a <em>SetConfigurationSettingPublisher, </em>ele encontra o nosso método customizado e utilizando o <em>RoleEnvironment.GetConfigurationSettingValue</em>, nosso código obtém os valores da nossa conta e invoca o método previsto com o parâmetro Func&lt;string, bool&gt;.</p>
-<p>No próximo post vamos explorar algumas possibilidades para nossas estratégias de obtenção das credenciais da conta de armazenamento&nbsp; no Azure.</p>
+
+<p>Agora no momento que uma chamada é feita para recuperar as credenciais, teremos a execução do método MeuEditorDeConfiguracao.</p>
+
+<p>Quando utilizamos o método <em>CloudStorageAccount.FromConfigurationSetting</em>, o Azure procura por um editor de configuração. Devido uma chamada anterior a <em>SetConfigurationSettingPublisher, </em>ele encontra o nosso método customizado e utilizando o <em>RoleEnvironment.GetConfigurationSettingValue</em>, nosso código obtém os valores da nossa conta e invoca o método previsto com o parâmetro Func&lt;string, bool&gt;.</p>
+
+<p>No próximo post vamos explorar algumas possibilidades para nossas estratégias de obtenção das credenciais da conta de armazenamento  no Azure.</p>
+
 <p><a href="http://cid-bd055aa47a388023.office.live.com/self.aspx/.Public/CredenciaisAzure.rar" target="_blank">Código fonte do Artigo</a></p>
 
   </section>
@@ -247,17 +256,17 @@
 		    
 		    <li>
 			  <span>18 Mar 2017 &raquo;</span>
-			  <a href="/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
+			  <a href="http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
 		    </li>
 		    
 		    <li>
 			  <span>15 Feb 2017 &raquo;</span>
-			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
+			  <a href="http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
 		    </li>
 		    
 		    <li>
 			  <span>07 Feb 2017 &raquo;</span>
-			  <a href="/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
+			  <a href="http://localhost:4000/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
 		    </li>
 		    
 		</ul>
@@ -270,15 +279,15 @@
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="/2011/05/23/charge-da-semana-como-no-utilizar-a-nuvem/"><< Older</a>
+      <a href="http://localhost:4000/2011/05/23/charge-da-semana-como-no-utilizar-a-nuvem/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
-    <a href="/ ">Home</a>
+    <a href="http://localhost:4000/ ">Home</a>
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <a href="/2011/05/25/dia-do-orgulho-nerd-25-de-maio/">Newer >></a>
+      <a href="http://localhost:4000/2011/05/25/dia-do-orgulho-nerd-25-de-maio/">Newer >></a>
     
   </div>
 </div> -->

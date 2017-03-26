@@ -160,26 +160,37 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p align="justify">Hoje recebi um email com uma pegunta interessante de um desenvolvedor que utilizava o exemplo do post <a href="http://vitormeriat.wordpress.com/2011/05/25/cloudstorageaccount-e-o-mtodo-setconfigurationsettingpublisher/" target="_blank">CloudStorageAccount e o método SetConfigurationSettingPublisher</a>e obteve um <strong>SEHException</strong> durante sua execução. Como este é um erro comum, resolvi fazer um post para esta resposta.</p>
-<p>O <a href="http://www.microsoft.com/windowsazure/sdk/" target="_blank">Windows Azure SDK</a>atualmente na versão 1.4 disponibiliza um ambiente para o desenvolvimento de aplicações na plataforma Azure. Este ambiente foi disponibilizado para que possamos localmente “<strong>emular</strong>” os recursos oferecidos na nuvem.</p>
+    <p>Hoje recebi um email com uma pegunta interessante de um desenvolvedor que utilizava o exemplo do post <a href="http://vitormeriat.wordpress.com/2011/05/25/cloudstorageaccount-e-o-mtodo-setconfigurationsettingpublisher/" target="_blank">CloudStorageAccount e o método SetConfigurationSettingPublisher</a>e obteve um <strong>SEHException</strong> durante sua execução. Como este é um erro comum, resolvi fazer um post para esta resposta.</p>
+
+<p>O <a href="http://www.microsoft.com/windowsazure/sdk/" target="_blank">Windows Azure SDK</a> atualmente na versão 1.4 disponibiliza um ambiente para o desenvolvimento de aplicações na plataforma Azure. Este ambiente foi disponibilizado para que possamos localmente <strong>“emular”</strong> os recursos oferecidos na nuvem.</p>
+
 <p>Dito isso é provável que antes de executar uma aplicação para o Azure, você decida iniciar o ambiente para emular nossa “nuvem local”. Provavelmente o resultado será este:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/06/aa.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="aa"   alt="aa" src="http://blob.vitormeriat.com.br/images/aa.png" width="462" height="262" /></a></p>
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2011/06/aa.png"><img alt="aa" src="http://blob.vitormeriat.com.br/images/2011/06/aa.png" /></a></p>
+
 <p>Com nosso ambiente em pleno funcionamento, você decide iniciar sua aplicação e se depara com um <strong>SEHException</strong> em sua tela como na imagem abaixo:</p>
-<p><!--more-->
-<p><a href="http://blob.vitormeriat.com.br/images/2011/06/bb.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="bb"   alt="bb" src="http://blob.vitormeriat.com.br/images/bb.png" width="640" height="236" /></a></p>
-<p>Este erro ocorre na chamada <strong>RoleEnvironment.GetConfigurationSettingValue</strong> dentro do arquivo Global.asax.cs, e se deve a um fato interessante: </p>
-<blockquote><p><font size="2"><strong>Sua aplicação não está executando dentro do ambiente do Windows Azure Emulator…</strong></font></p>
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2011/06/bb.png"><img alt="bb" src="http://blob.vitormeriat.com.br/images/2011/06/bb.png" /></a></p>
+
+<p>Este erro ocorre na chamada <strong>RoleEnvironment.GetConfigurationSettingValue</strong> dentro do arquivo Global.asax.cs, e se deve a um fato interessante:</p>
+
+<blockquote>
+  <p>Sua aplicação não está executando dentro do ambiente do Windows Azure Emulator…</p>
 </blockquote>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/06/cc.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="cc"   alt="cc" src="http://blob.vitormeriat.com.br/images/cc.png" width="311" height="413" /></a></p>
-<p>Mesmo tendo iniciado os serviços para emular o ambiente azure, o projeto que estava como <em>Set as StartUp Project</em> era o WebRole. A solução para este problema é muito simples: </p>
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2011/06/cc.png"><img alt="cc" src="http://blob.vitormeriat.com.br/images/2011/06/cc.png" /></a></p>
+
+<p>Mesmo tendo iniciado os serviços para emular o ambiente azure, o projeto que estava como <em>Set as StartUp Project</em> era o WebRole. A solução para este problema é muito simples:</p>
+
 <ul>
-<li>Definir o projeto <em>Windows Azure</em> como inicial utilizando o <em>Set as StartUp Project.</em></li>
+  <li>Definir o projeto <em>Windows Azure</em> como inicial utilizando o <em>Set as StartUp Project.</em></li>
 </ul>
-<p><font color="#777777">É claro que podemos(e devemos) utilizar estratégias para evitar este tipo de erro, mas vou abordar isto no próximo post. </font></p>
-<p><font color="#777777">Como já está no título este é apenas uma dica rápida!</font></p>
-<p><font color="#777777"></font>&nbsp;</p>
-<h3><font size="3">Um grande abraço, ótimo estudo e até a próxima</font>!</h3>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/03/logo.jpg"><img style="display:inline;float:left;margin-left:0;margin-right:0;" title="logo"   alt="logo" align="left" src="http://blob.vitormeriat.com.br/images/logo.jpg?w=50&amp;h=98&amp;h=98" width="50" height="98" /></a><strong>&nbsp;&nbsp;&nbsp;&nbsp; Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong><br />&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:vitormeriat@gmail.com">vitormeriat@gmail.com</a><br />&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a></p>
+
+<p>É claro que podemos(e devemos) utilizar estratégias para evitar este tipo de erro, mas vou abordar isto no próximo post.</p>
+
+<p>Como já está no título este é apenas uma dica rápida!</p>
+
+<h4>Um grande abraço, ótimo estudo e até a próxima!</h4>
 
   </section>
 
@@ -244,17 +255,17 @@
 		    
 		    <li>
 			  <span>18 Mar 2017 &raquo;</span>
-			  <a href="/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
+			  <a href="http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
 		    </li>
 		    
 		    <li>
 			  <span>15 Feb 2017 &raquo;</span>
-			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
+			  <a href="http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
 		    </li>
 		    
 		    <li>
 			  <span>07 Feb 2017 &raquo;</span>
-			  <a href="/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
+			  <a href="http://localhost:4000/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
 		    </li>
 		    
 		</ul>
@@ -267,15 +278,15 @@
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="/2011/06/10/charge-da-semana-como-ser-um-arquiteto-de-software/"><< Older</a>
+      <a href="http://localhost:4000/2011/06/10/charge-da-semana-como-ser-um-arquiteto-de-software/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
-    <a href="/ ">Home</a>
+    <a href="http://localhost:4000/ ">Home</a>
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <a href="/2011/06/17/carge-da-semana-contemplando-a-arquitetura-do-sistema/">Newer >></a>
+      <a href="http://localhost:4000/2011/06/17/carge-da-semana-contemplando-a-arquitetura-do-sistema/">Newer >></a>
     
   </div>
 </div> -->

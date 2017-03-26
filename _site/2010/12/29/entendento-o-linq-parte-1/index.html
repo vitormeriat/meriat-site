@@ -146,7 +146,7 @@
   <div class="fh5co-spacer fh5co-spacer-md"></div>
 
   <!-- <header class="section-padding-lg mast">
-    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <figure class="absolute-bg mast__img" style="background-image: url('http://blob.vitormeriat.com.br/images/2010/12/linq.jpg');"></figure>
     <div class="mast-container" style="margin-bottom: 60px;">
       <h1 itemprop="name headline">Entendento o LINQ (parte 1)</h1>
       <span><time datetime="2010-12-29T00:00:00-02:00" itemprop="datePublished">Dec 29, 2010</time></span>
@@ -161,11 +161,17 @@
 
   <section class="section-padding post" itemprop="articleBody">
     <p align="center"><a href="http://blob.vitormeriat.com.br/images/2010/12/linq.jpg"><img alt="linq" src="http://blob.vitormeriat.com.br/images/2010/12/linq.jpg" /></a></p>
-<p align="justify">O LINQ (Language Integrated Query ou Linguagem Integrada de Consulta), é uma nova função do C# 3.0 e .Net Framework 3.5. Ele permite escrever consultas estruturadas seguras em torno de coleções locais e objetos e fontes remotas de dados. </p>
-<p align="justify">Para iniciar nossos estudos no LINQ, devemos utilizar os namespaces "System.Linq" e "System.Linq.Expressions". Estarei utilizando o Visual C# 2010 Express.
-<p align="justify">O LINQ permite você consultar qualquer coleção de executando IEnumerable&lt;&gt;, no meio de um array, list, XML DOM, ou fonte remota de dados(como uma tabela no SQL Server). O LINQ oferece os benefícios de ambos os tipos de verificação do tempo de compilação e composição dinâmica de consultas.
-<p align="justify">O LINQ proporciona duas arquiteturas paralelas: consultas locais e consultas interpretadas. As consultas locais tratam de coleções locais de objetos, quanto às consultas interpretadas tratam de fontes remotas de dados.Neste momento, iremos nos ater somente as consultas locais, abordando as consultas interpretadas a partir do tópico LINQ para SQL.
-<p align="justify">As unidades básicas de dados no LINQ são sequências e elementos. Uma sequência é qualquer objeto que executa a interface IEnumerable.
+
+<p>O LINQ (Language Integrated Query ou Linguagem Integrada de Consulta), é uma nova função do C# 3.0 e .Net Framework 3.5. Ele permite escrever consultas estruturadas seguras em torno de coleções locais e objetos e fontes remotas de dados. &lt;/p&gt;</p>
+
+<p>Para iniciar nossos estudos no LINQ, devemos utilizar os namespaces “System.Linq” e “System.Linq.Expressions”. Estarei utilizando o Visual C# 2010 Express.</p>
+
+<p>O LINQ permite você consultar qualquer coleção de executando IEnumerable&lt;&gt;, no meio de um array, list, XML DOM, ou fonte remota de dados(como uma tabela no SQL Server). O LINQ oferece os benefícios de ambos os tipos de verificação do tempo de compilação e composição dinâmica de consultas.</p>
+
+<p>O LINQ proporciona duas arquiteturas paralelas: consultas locais e consultas interpretadas. As consultas locais tratam de coleções locais de objetos, quanto às consultas interpretadas tratam de fontes remotas de dados.Neste momento, iremos nos ater somente as consultas locais, abordando as consultas interpretadas a partir do tópico LINQ para SQL.</p>
+
+<p>As unidades básicas de dados no LINQ são sequências e elementos. Uma sequência é qualquer objeto que executa a interface IEnumerable.</p>
+
 <p align="justify">No exemplo seguinte, o array numeros é uma sequência e 1,2,3,4,5 são os elementos:</p>
 <pre style="font-size: 1.6em !important">
     <code class="cs">
@@ -173,13 +179,18 @@ int[] numeros = {1,2,3,4,5};
     </code>
 </pre>
 
-
-<blockquote><p>Este tipo de sequência é denominada "local", uma vez que representa uma coleção local de objetos na memória.</p>
+<blockquote>
+  <p>Este tipo de sequência é denominada “local”, uma vez que representa uma coleção local de objetos na memória.</p>
 </blockquote>
-<h1><font>Operadores de Consulta</font></h1>
-<p align="justify">São métodos que transformam uma sequência. Por padrão, um operador de consulta recebe uma sequência de entrada e retorna uma sequência de saída transformada. Há em torno de 40 operadores de consulta, executados como métodos estáticos de extensão e que são denominados operadores padrões de consulta.</p>
-<h1 align="justify"><font>Consulta</font></h1>
-<p align="justify">É uma expressão que transforma sequências utilizando operadores de consulta. A estrutura mais simples de uma consulta engloba uma sequência de entrada e um operador; como no exemplo 1:</p>
+
+<h1 id="operadores-de-consulta">Operadores de Consulta</h1>
+
+<p>São métodos que transformam uma sequência. Por padrão, um operador de consulta recebe uma sequência de entrada e retorna uma sequência de saída transformada. Há em torno de 40 operadores de consulta, executados como métodos estáticos de extensão e que são denominados operadores padrões de consulta.</p>
+
+<h1 id="consulta">Consulta</h1>
+
+<p>É uma expressão que transforma sequências utilizando operadores de consulta. A estrutura mais simples de uma consulta engloba uma sequência de entrada e um operador; como no exemplo 1:</p>
+
 <pre style="font-size: 1.6em !important">
     <code class="cs">
 // Sequência a ser consultada
@@ -187,19 +198,22 @@ int[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
 // Consulta que retorna os números pares
 IEnumerable<int> filtro = System.Linq.Enumerable.
-    </code>
-</pre>
+    &lt;/code&gt;
+&lt;/pre&gt;
 
-<h1><font>Consultas Lambda</font></h1>
-<p align="justify">São as mais flexíveis e fundamentais. A maioria dos operadores de consulta aceita expressões Lambda como argumento. Estas expressões ajudam a direcionar e dar forma ao à consulta. No exemplo 1, utilizamos uma expressão Lambda:</p>
+# Consultas Lambda
+
+São as mais flexíveis e fundamentais. A maioria dos operadores de consulta aceita expressões Lambda como argumento. Estas expressões ajudam a direcionar e dar forma ao à consulta. No exemplo 1, utilizamos uma expressão Lambda:
+
 <pre style="font-size: 1.6em !important">
     <code class="cs">
-n => n % 2 == 0
+n =&gt; n % 2 == 0
     </code>
 </pre>
 
-<p align="justify">O argumento de entrada <em><font size="2">n</font></em> representa cada um dos números no array e é do tipo int. O operador Where necessita que a expressão retorne um valor bool, indicando que o elemento deverá ser incluído na sequência de saída. </p>
-<p align="justify">No C# temos uma sintaxe especial para escrever consultas, denominada "sintaxe de compreensão de consultas". O exemplo 1 utilizando o esta sintaxe ficaria assim: </p>
+O argumento de entrada <em><font size="2">n</font></em> representa cada um dos números no array e é do tipo int. O operador Where necessita que a expressão retorne um valor bool, indicando que o elemento deverá ser incluído na sequência de saída. 
+
+No C# temos uma sintaxe especial para escrever consultas, denominada "sintaxe de compreensão de consultas". O exemplo 1 utilizando o esta sintaxe ficaria assim:
 
 <pre style="font-size: 1.6em !important">
     <code class="cs">
@@ -208,22 +222,22 @@ int[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 IEnumerable<int> filtro = from n in sequencia
   where n % 2 == 0
   select n;
-    </code>
-</pre>
+    &lt;/code&gt;
+&lt;/pre&gt;
 
-<p align="justify">As sintaxes Lambda e de compreensão são complementares, então utilizaremos ambas durante os exemplos. Aproveitando o gancho, vamos diminuir nossa consulta "tipando implicitamente" o filtro, e chamando nosso operador </p>
-<p align="justify">diretamente de sequencia(nosso array de int), uma vez que os operadores são executados como métodos de extensão. O Exemplo 1 ficará assim: </p>
+As sintaxes Lambda e de compreensão são complementares, então utilizaremos ambas durante os exemplos. Aproveitando o gancho, vamos diminuir nossa consulta "tipando implicitamente" o filtro, e chamando nosso operador diretamente de sequencia(nosso array de int), uma vez que os operadores são executados como métodos de extensão. O Exemplo 1 ficará assim: 
 
 <pre style="font-size: 1.6em !important">
     <code class="cs">
 int[] sequencia = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-var filtro = sequencia.Where(n => n % 2 == 0);
+var filtro = sequencia.Where(n =&gt; n % 2 == 0);
     </code>
 </pre>
 
-<h1><font></font>&nbsp;</h1>
-<h1><font>Encadeamento de Operadores</font></h1>
-<p>Para realizar consultas mais complexas, nós podemos utilizar o encadeamento de operadores como no exemplo 2:</p>
+
+# Encadeamento de Operadores
+
+Para realizar consultas mais complexas, nós podemos utilizar o encadeamento de operadores como no exemplo 2:
 
 <pre style="font-size: 1.6em !important">
     <code class="cs">
@@ -232,44 +246,48 @@ string[] sequencia = { "Vasco", "Fluminense", "Bota-Fogo", "Grêmio", "Santos", 
 
 // Executo a consulta utilizando os operadores encadeados.
 var filtro = sequencia
-   .Where(n => n.Contains("a")) // Condição
-   .OrderBy(n => n.Length)      // Ordenação
-   .Select(n => n.ToUpper());   // Tudo em letras maiúsculas
+   .Where(n =&gt; n.Contains("a")) // Condição
+   .OrderBy(n =&gt; n.Length)      // Ordenação
+   .Select(n =&gt; n.ToUpper());   // Tudo em letras maiúsculas
     </code>
 </pre>
 
-<p align="justify">Os operadores Where, OrderBy e Select separam os métodos de extensão na classe Enumerable. O operador Where, faz o primeiro filtro da sequência de entrada. O operador OrderBy retira uma versão ordenada da sequência de entrada e o método Select retorno uma sequência onde cada elemento é transformado por uma determinada expressão Lambda. Os dados fluem da esquerda para a direita, em nosso caso, a ordem de execussão é: Where, OrderBy, OrderBy e Select.</p>
-<blockquote>
-<p align="justify">É importante frisar que ao utilizar operadores não é alterada a sequência de entrada. O que acontece é o retorno de uma nova seuqência.</p>
-</blockquote>
-<p align="justify">Quando utilizamos operadores de consulta encadeados, a sequência de saída do primeiro operadar é a sequência de entrada de outro. Podemos então, construir o exemplo 2 como no código abaixo:</p>
+Os operadores Where, OrderBy e Select separam os métodos de extensão na classe Enumerable. O operador Where, faz o primeiro filtro da sequência de entrada. O operador OrderBy retira uma versão ordenada da sequência de entrada e o método Select retorno uma sequência onde cada elemento é transformado por uma determinada expressão Lambda. Os dados fluem da esquerda para a direita, em nosso caso, a ordem de execussão é: Where, OrderBy, OrderBy e Select.
+
+&gt; É importante frisar que ao utilizar operadores não é alterada a sequência de entrada. O que acontece é o retorno de uma nova seuqência.
+
+Quando utilizamos operadores de consulta encadeados, a sequência de saída do primeiro operadar é a sequência de entrada de outro. Podemos então, construir o exemplo 2 como no código abaixo:
+
 <pre style="font-size: 1.6em !important">
     <code class="cs">
 string[] sequencia = { "Vasco", "Fluminense", "Bota-Fogo", "Grêmio", "Santos", "Internacional", "Cruzeiro", "Figueirense" };
 
 // Filtro
-var filtro = sequencia.Where(n => n.Contains("a"));
+var filtro = sequencia.Where(n =&gt; n.Contains("a"));
 // Ordenação
-var sorted1 = filtro.OrderBy(n => n.Length);
+var sorted1 = filtro.OrderBy(n =&gt; n.Length);
 // Transforma tudo em letras maiúsculas
-var resultadoFinal = sorted2.Select(n => n.ToUpper());
+var resultadoFinal = sorted2.Select(n =&gt; n.ToUpper());
     </code>
 </pre>
 
 
-<h1><font>Subconsultas</font></h1>
-<p align="justify">Uma subconsulta é uma expressão Lambda de consulta obtida sobre o resultado da consulta anterior. No expemplo 3 utilizamos uma consulta n.Split() para converter cada uma das strings em uma coleção de palavras, logo após utilizamos nossa subconsulta .Last() para que a ordenação seja realizada pelo último elemento da coleção, neste caso o sobrenome do escritor.</p>
+# Subconsultas
+
+Uma subconsulta é uma expressão Lambda de consulta obtida sobre o resultado da consulta anterior. No expemplo 3 utilizamos uma consulta n.Split() para converter cada uma das strings em uma coleção de palavras, logo após utilizamos nossa subconsulta .Last() para que a ordenação seja realizada pelo último elemento da coleção, neste caso o sobrenome do escritor.
+
 <pre style="font-size: 1.6em !important">
     <code class="cs">
 // Crio a sequência com os nomes dos escritores brasileiros
 string[] nomes = { "Monteiro Lobato", "Cecilia Meireles", "Manuel Bandeira", "Mario Quintana", "Castro Alves" };
 
 // Crio uma consulta pra ordenar os nomes pelos sobrenomes dos escritores
-var resultado = nomes.OrderBy(n => n.Split().Last());
+var resultado = nomes.OrderBy(n =&gt; n.Split().Last());
     </code>
 </pre>
 
-<p align="justify">No exemplo 4 utilizamos uma subconsulta mais elaborada. Nesta subconsulta, retornamos todas os elementos químicos cujo a quantidade de letras for igual ao elemento menor.</p>
+No exemplo 4 utilizamos uma subconsulta mais elaborada. Nesta subconsulta, retornamos todas os elementos químicos cujo a quantidade de letras for igual ao elemento menor.
+
 <pre style="font-size: 1.6em !important">
     <code class="cs">
 // Crio a sequência com alguns elementos da tabela periódica
@@ -277,14 +295,16 @@ string[] nomes = { "Urânio", "Rênio", "Ununquádio", "Sódio", "Copernício", 
 
 // Consulta para retornar todos os nomes cujo o tamanho seja igual ao menor nome.
 var resultado = nomes
-   .Where(n => n.Length ==
-       nomes.OrderBy(n2 => n2.Length)
-       .Select(n2 => n2.Length).First());
+   .Where(n =&gt; n.Length ==
+       nomes.OrderBy(n2 =&gt; n2.Length)
+       .Select(n2 =&gt; n2.Length).First());
     </code>
 </pre>
 
-<p align="justify">A variável externa de repetição (<i><font size="2">n</font></i>) está no centro da subconsulta, portanto, não podemos reutilizar <i><font size="2">n</font></i> como variável de iteração da subconsulta. </p>
-<p align="justify">No próximo artigo iremos continuar explorando as funcionalidades do LINQ. </p>
+A variável externa de repetição (<i>n</i>) está no centro da subconsulta, portanto, não podemos reutilizar <i>n</i> como variável de iteração da subconsulta.
+
+#### No próximo artigo iremos continuar explorando as funcionalidades do LINQ.
+</int></code></pre></int></code></pre>
 
   </section>
 
@@ -314,7 +334,7 @@ var resultado = nomes
   <div style="margin-top: 60px; margin-bottom: 60px;">
     
     
-      6 minutes to read
+      5 minutes to read
     
   </div>
 
@@ -349,17 +369,17 @@ var resultado = nomes
 		    
 		    <li>
 			  <span>18 Mar 2017 &raquo;</span>
-			  <a href="/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
+			  <a href="http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
 		    </li>
 		    
 		    <li>
 			  <span>15 Feb 2017 &raquo;</span>
-			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
+			  <a href="http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
 		    </li>
 		    
 		    <li>
 			  <span>07 Feb 2017 &raquo;</span>
-			  <a href="/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
+			  <a href="http://localhost:4000/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
 		    </li>
 		    
 		</ul>
@@ -372,15 +392,15 @@ var resultado = nomes
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="/2010/12/17/acesse-os-principais-links-do-technet-e-msdn-de-forma-simples/"><< Older</a>
+      <a href="http://localhost:4000/2010/12/17/acesse-os-principais-links-do-technet-e-msdn-de-forma-simples/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
-    <a href="/ ">Home</a>
+    <a href="http://localhost:4000/ ">Home</a>
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <a href="/2010/12/29/entendento-o-linq-parte-2/">Newer >></a>
+      <a href="http://localhost:4000/2010/12/29/entendento-o-linq-parte-2/">Newer >></a>
     
   </div>
 </div> -->
