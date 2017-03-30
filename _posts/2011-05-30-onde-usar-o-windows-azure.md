@@ -14,7 +14,7 @@ A Cloud computing foi desenvolvida para alguns cenários específicos e determin
 Durante seu Webcast, foi apresentado uma série de soluções e cenários cujo os recursos e componentes do Windows Azure são recomendados. Segue o resumo e logo após o link para o download do webcast.
 
 **Workloads**
-* <strong>On e Off</strong> – aplicações que são usadas esporadicamente durante determinados períodos de tempo durante o dia ou ano. Muitos serviços que rodam no final do dia ou do mês caem nessa categoria. Proporcionar a capacidade necessária para essas aplicações é mais caro que rodá-las em um cloud porque a maior parte do tempo a capacidade não é usada. 
+* <strong>On e Off</strong> – aplicações que são usadas esporadicamente durante determinados períodos de tempo durante o dia ou ano. Muitos serviços que rodam no final do dia ou do mês caem nessa categoria. Proporcionar a capacidade necessária para essas aplicações é mais caro que rodá-las em um cloud porque a maior parte do tempo a capacidade não é usada.
 * <strong>Crescimento rápido ou não rápido</strong> – um padrão de trabalho encontrado pelos iniciantes que não podem prever com exatidão o nível de sucesso de seu novo negócio e, consequentemente, a verdadeira capacidade que precisam. Iniciantes geralmente começam com pequenos aumentos de capacidade quando a demanda aumenta. Tais aplicações são adequadas para o cloud por que o cloud pode suportar o crescimento das necessidades rapidamente.
 * <strong>Crescimento imprevisível</strong> – isso acontece, por exemplo, quando a carga normal em um web server é temporariamente aumentada por uma valor muito alto, tão grande que o sistema não consegue lidar com o tráfego passageiro. Os proprietários devem fornecer capacidade suficiente para suportar essas cargas, mas eles não esperam esses picos de tráfego. Mesmo se eles antecipá-las, a capacidade adicional ficaria a maior parte do tempo sem uso. Este é um outro bom candidato ao cloud.
 * <strong>Crescimento previsível</strong> – a carga constatemente varia de uma maneira previsível ao longo do tempo. O proprietário pode comprar o equipamente e software necessário sem ter que depender de uma fornecedor de cloud.
@@ -91,4 +91,4 @@ Durante seu Webcast, foi apresentado uma série de soluções e cenários cujo o
 </ul>
 <p>Você pode baixar o webcast <a href="http://blogs.msdn.com/b/billzack/archive/2010/03/29/windows-azure-design-patterns.aspx">aqui.</a></p>
 <p>&nbsp;</p>
-<h3><font size="4">Um grande abraço ótimo Estudo!</font></h3>
+<h4><font size="4">Um grande abraço ótimo Estudo!</font></h4>

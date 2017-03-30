@@ -1,14 +1,12 @@
 ---
 layout: post
 title: Explorando o Windows Azure Toolkit for Android
-date: 2011-10-14 20:15:55.000000000 -03:00
-type: post
-published: true
-status: publish
+date: 2011-10-14
 categories:
-- Cloud Computing
-- Microsoft Azure
+    - Cloud Computing
+    - Microsoft Azure
 ---
+
 <p align="justify">Hoje estava atualizando meu android e pesquisando sobre uma versão mais atual esbarrei neste vídeo muito legal da <strong>Cloud Cover</strong> com <a href="http://blog.smarx.com/" target="_blank">Steve Marx</a> e <a href="http://www.wadewegner.com/" target="_blank">Wade Wegner</a> sobre o Windows Azure Toolkit para o Android.</p>
 <p align="justify">O propósito desses kits são tornar o desenvolvimento mais fácil disponibilizando exemplos e explicando implementações. É um material realmente útil para os desenvolvedores de dispositivos móveis.</p>
 <p><!--more-->
@@ -24,6 +22,5 @@ categories:
 <p align="justify">&#160; </p>
 <p> <a href="http://channel9.msdn.com/Shows/Cloud+Cover/Episode-58-Exploring-the-Windows-Azure-Toolkit-for-Android/player?w=512&#038;h=288">http://channel9.msdn.com/Shows/Cloud+Cover/Episode-58-Exploring-the-Windows-Azure-Toolkit-for-Android/player?w=512&#038;h=288</a>
 <p>&#160;</p>
-<h3>Um grande abraço e ótimo estudo!</h3>
-<p><a href="http://blob.vitormeriat.com.br/images/2011/10/notebook.png"><img style="display:inline;float:left;" title="Notebook"   alt="Notebook" align="left" src="http://blob.vitormeriat.com.br/images/notebook.png?w=81&amp;h=130" width="81" height="130" /></a></p>
-<p><strong>Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong> <br /><a href="mailto:vitormeriat@gmail.com">vitormeriat@gmail.com</a> <br /><a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a></p>
+
+### Um grande abraço e ótimo estudo!

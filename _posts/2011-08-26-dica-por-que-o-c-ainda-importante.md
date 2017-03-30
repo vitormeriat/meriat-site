@@ -1,12 +1,9 @@
 ---
 layout: post
 title: 'Dica: Por que o C++ ainda é importante'
-date: 2011-08-26 02:00:03.000000000 -03:00
-type: post
-published: true
-status: publish
+date: 2011-08-26
 categories:
-  -- C++
+    -- C++
 ---
 <p><strong>&gt; Quais as vantagens a C++ mantenha sobre c#?</strong></p>
 <p><strong>&gt; Como o C++ se encaixar com a Web e as respectivas tecnologias?</strong></p>
@@ -19,4 +16,3 @@ categories:
 <p><a href="http://msdn.microsoft.com/pt-br/magazine/hh288086.aspx">http://msdn.microsoft.com/pt-br/magazine/hh288086.aspx</a></p>
 <hr />
 <h3>Um grande abraço e ótimo estudo!</h3>
-<p><strong>Twitter: <a href="http://twitter.com/vitormeriat">@vitormeriat</a></strong> <br /><i><strong>Microsoft MSP – Brasília</strong></i> <br /><a href="mailto:vitor.pereira@studentpartners.com.br">vitor.pereira@studentpartners.com.br</a> <br /><a href="mailto:vitor.meriat@srnimbus.com">vitor.meriat@srnimbus.com</a></p>
