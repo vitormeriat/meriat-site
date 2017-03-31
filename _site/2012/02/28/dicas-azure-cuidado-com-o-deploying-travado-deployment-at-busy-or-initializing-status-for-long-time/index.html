@@ -161,9 +161,9 @@
 
   <section class="section-padding post" itemprop="articleBody">
     <p align="justify">O pessoal que está trabalhando ou estudando o <strong>Azure</strong>, provavelmente já esbarrou com este problema. Fazer um deploy da aplicação na nuvem e o mesmo ficar “eras” em estado de “<strong>Busy</strong>” ou “<strong>Initializing</strong>”, exatamente como na imagem abaixo:</p>
-<p align="center"><a href="http://blob.vitormeriat.com.br/images/2012/02/01.png"><img alt="01" src="http://blob.vitormeriat.com.br/images/2012/02/01.png"/></a></p>
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2012/02/01.png"><img alt="01" src="http://blob.vitormeriat.com.br/images/2012/02/01.png" /></a></p>
 <p align="justify">Neste caso específico (e que havia ocorrido anteriormente comigo), meu arquivo <strong>ServiceConfiguration.cscfg</strong> que tem a diretiva <strong>DiagnosticsConnectionString</strong> estava apontando para o desenvolvimento local. Este é o comportamento esperado, o seu estado default.</p>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2012/02/021.png"><img alt="02" src="http://blob.vitormeriat.com.br/images/2012/02/02.png"/></a></p>
+<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2012/02/021.png"><img alt="02" src="http://blob.vitormeriat.com.br/images/2012/02/02.png" /></a></p>
 <p align="justify">&#160;</p>
 <h2 align="justify">O problema</h2>
 <p align="justify">Quando tentamos fazer um deploy da aplicação neste estado, estamos exigindo que o pacote inicialize a aplicação executando nosso <strong>Diagnostics</strong> para se conectar ao armazenamento local, o que não existe na nuvem. Como não é possível iniciar, o deploy se perde e fica preso em <strong>Busy / Initializing</strong>…</p>
@@ -240,17 +240,17 @@
 		    
 		    <li>
 			  <span>18 Mar 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
+			  <a href="/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
 		    </li>
 		    
 		    <li>
 			  <span>15 Feb 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
+			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
 		    </li>
 		    
 		    <li>
 			  <span>07 Feb 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
+			  <a href="/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
 		    </li>
 		    
 		</ul>
@@ -263,15 +263,15 @@
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="http://localhost:4000/2012/02/23/enumerator-foreach-e-o-erro-invalidoperationexception-collection-was-modified/"><< Older</a>
+      <a href="/2012/02/23/enumerator-foreach-e-o-erro-invalidoperationexception-collection-was-modified/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
-    <a href="http://localhost:4000/ ">Home</a>
+    <a href="/ ">Home</a>
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <a href="http://localhost:4000/2012/03/05/dicas-azure-evite-deployments-no-validados-no-windows-azure/">Newer >></a>
+      <a href="/2012/03/05/dicas-azure-evite-deployments-no-validados-no-windows-azure/">Newer >></a>
     
   </div>
 </div> -->

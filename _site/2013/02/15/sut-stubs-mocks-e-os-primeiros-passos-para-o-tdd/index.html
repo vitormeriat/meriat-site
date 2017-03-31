@@ -160,7 +160,7 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p align="justify"><a href="http://blob.vitormeriat.com.br/images/2013/02/tdd.png"><img title="tdd" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:left;padding-top:0;padding-left:0;margin:0 15px 0 0;border-left:0;display:inline;padding-right:0;"   alt="tdd" align="left" src="http://blob.vitormeriat.com.br/images/tdd.png" width="240" height="228" /></a>É consenso que os testes são de extrema importância para o desenvolvimento de um produto. Com o passar dos anos os testes foram galgando diferentes posições dentro deste mundo. Mesmo que você não seja um optante ou profundo conhecedor do <strong>TDD</strong>, é provável que já tenha escrito ou testado seu código de alguma forma. Sendo assim, é importante conhecer alguns dos mecanismos, artefatos e técnicas da disciplina de testes. </p>
+    <p align="justify"><a href="http://blob.vitormeriat.com.br/images/2013/02/tdd.png"><img title="tdd" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:left;padding-top:0;padding-left:0;margin:0 15px 0 0;border-left:0;display:inline;padding-right:0;" alt="tdd" align="left" src="http://blob.vitormeriat.com.br/images/tdd.png" width="240" height="228" /></a>É consenso que os testes são de extrema importância para o desenvolvimento de um produto. Com o passar dos anos os testes foram galgando diferentes posições dentro deste mundo. Mesmo que você não seja um optante ou profundo conhecedor do <strong>TDD</strong>, é provável que já tenha escrito ou testado seu código de alguma forma. Sendo assim, é importante conhecer alguns dos mecanismos, artefatos e técnicas da disciplina de testes. </p>
 <p align="justify">Existem discussões intermináveis sobre o valor dos testes em detrimento do tempo que usamos para codificá-los. O que não se discute é sobre sua importância. Podemos verificar se uma funcionalidade está corretamente implementada e garantir durante o desenvolvimento que esta implementação não será quebrada.</p>
 <p align="justify">O problema é que trabalhar com testes no mundo real não é tão simples. Quando estamos desenvolvendo nossas aplicações, nos deparamos com a necessidade de testes que envolvem banco de dados, web services, componentes de terceiros e por ai vai. Tudo isso pode deixar a complexidade do teste extremamente alta tanto para escrita quanto para depuração, sem falar que isso pode tornar o seu teste falho. Imagine que você escreve um determinado teste usando um banco de dados compartilhado e durante sua rotina de execução de teste ele falha. No primeiro momento você não sabe se ocorreu alguma alteração em nível de código ou se simplesmente alteraram os valores no banco de dados levando o teste a falha.</p>
 <p align="justify">É frequente ouvir equipes dizerem que não vão escrever determinados testes devido a dificuldade de traduzir certas partes do código. Ai entra um dos grandes desafios da disciplina de testes: <u>desenvolver estratégias para isolar a complexidade do código e facilitar a escrita dos testes</u>.</p>
@@ -195,7 +195,7 @@
 <p align="justify">Um Stub é usado para substituir a dependência externa, fornecendo estado para que nossos testes sejam executados sem exceções. O Stub é adequado apenas para testar se o resultado de alguma função está correto ou não. Mock é mais complexo sendo usado para testar comportamentos, por exemplo, verificar se uma função foi chamada ou não.</p>
 <p align="justify">Resumindo tudo segundo as palavras de <strong>Roy Osherove</strong> em seu livro <strong><em>&quot;The Art of Unit Testing&quot;</em></strong>, a diferença entre mocks e stubs é que mocks levam o teste a falha e stubs não.</p>
 <p align="justify">Observe a ilustração abaixo:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/02/mock-sut-stub.png"><img title="mock sut stub" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;"   alt="mock sut stub" src="http://blob.vitormeriat.com.br/images/mock-sut-stub.png" width="560" height="412" /></a></p>
+<p><a href="http://blob.vitormeriat.com.br/images/2013/02/mock-sut-stub.png"><img title="mock sut stub" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="mock sut stub" src="http://blob.vitormeriat.com.br/images/mock-sut-stub.png" width="560" height="412" /></a></p>
 <p>&#160;</p>
 <p align="justify">A setas vermelhas indicam que o caminho do Mock pode levar o teste ao erro, já no caso do Stub não deve haver falha.</p>
 <p align="justify">Logo, usamos mocks para simular comportamentos, testar comunicação entre os objetos e caso as exigências do mesmo sejam contrariadas seu teste vai falhar. Sempre deve haver apenas um mock por teste e lembre-se: o Assert é contra o mock...</p>
@@ -214,6 +214,7 @@
 <p><a href="http://martinfowler.com/articles/mocksArentStubs.html" target="_blank">Mocks Aren't Stubs</a></p>
 
 
+</p>
 
   </section>
 
@@ -278,17 +279,17 @@
 		    
 		    <li>
 			  <span>18 Mar 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
+			  <a href="/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
 		    </li>
 		    
 		    <li>
 			  <span>15 Feb 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
+			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
 		    </li>
 		    
 		    <li>
 			  <span>07 Feb 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
+			  <a href="/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
 		    </li>
 		    
 		</ul>
@@ -301,15 +302,15 @@
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="http://localhost:4000/2013/01/28/testes-e-mais-testes-o-porqu-dos-testes-de-software/"><< Older</a>
+      <a href="/2013/01/28/testes-e-mais-testes-o-porqu-dos-testes-de-software/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
-    <a href="http://localhost:4000/ ">Home</a>
+    <a href="/ ">Home</a>
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <a href="http://localhost:4000/2013/02/25/prioritria-nas-empresas-computao-em-nuvem-traz-novas-questes-para-a-ti/">Newer >></a>
+      <a href="/2013/02/25/prioritria-nas-empresas-computao-em-nuvem-traz-novas-questes-para-a-ti/">Newer >></a>
     
   </div>
 </div> -->
