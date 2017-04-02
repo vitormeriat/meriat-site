@@ -3,41 +3,118 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 30 Mar 2017 21:40:22 -0300</pubDate>
-    <lastBuildDate>Thu, 30 Mar 2017 21:40:22 -0300</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 02 Apr 2017 18:28:51 -0300</pubDate>
+    <lastBuildDate>Sun, 02 Apr 2017 18:28:51 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</title>
+        <description>&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/01/palestra-0.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como o prometido, vou fazer um compliado do que vimos na minha apresentação sobre Azure Cognitive Services no DevOpsSummit Brasil 2017.&lt;/p&gt;
+
+&lt;p&gt;A ideia era apresentar a plataforma, entendendo o que são serviços cognitivos, sua importância e como eles foram incorporados e distribuídos no ecossistema da Microsoft.&lt;/p&gt;
+
+&lt;h2 id=&quot;cognitive-services--ai&quot;&gt;Cognitive Services &amp;amp; AI&lt;/h2&gt;
+&lt;p&gt;Como vimos, intligência artificial não é um assunto novo, pelo contrário, estamos falando de um assunto que vem assombrando o imaginário humano nos últimos 100 anos, e pesquisado academicamente hà mais de 5 décadas.&lt;/p&gt;
+
+&lt;p&gt;Neste mundo de AI, os serviços cognitivos estão ligados as aplicações voltadas a proximidade da linguagem natural. Temos de analise de sentimento a visão computacional, tudo de forma simples e fácil, como uma API deve ser.&lt;/p&gt;
+
+&lt;h2 id=&quot;o-evento&quot;&gt;O evento&lt;/h2&gt;
+&lt;p&gt;O evento ocorreu na sede da Microsoft em São Paulo, e foi dividido em 4 trilhas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;TECNOLOGIAS NA NUVEM&lt;/li&gt;
+  &lt;li&gt;DESENVOLVIMENTO MODERNO&lt;/li&gt;
+  &lt;li&gt;MELHORIA CONTÍNUA&lt;/li&gt;
+  &lt;li&gt;PRÁTICAS E PROCESSOS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tive a honra de palestrar na trilha de &lt;strong&gt;Desenvolvimento Moderno&lt;/strong&gt; explorando um tema que tem gerado muito interesse nos últimos tempos: Computação Cognitiva.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/01/palestra-1.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/01/palestra-2.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vale lembrar que mesmo não tendo tempo para todas as demonstrações, conseguimos rodar a API de &lt;strong&gt;Face Detect&lt;/strong&gt;, o resultado foi o seguinte:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/01/demo-final.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;os-materiais&quot;&gt;Os materiais&lt;/h2&gt;
+
+&lt;p&gt;Todas as demos utilizadas na apresentação foram consumindo apenas a &lt;strong&gt;API REST&lt;/strong&gt;, cuja a documentação está disponível em: &lt;a href=&quot;https://www.microsoft.com/cognitive-services/en-us/documentation&quot;&gt;Cognitive Services Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;O código apresentado já está disponível no meu GitHub no repositório &lt;a href=&quot;https://github.com/vitormeriat/cognitive-services&quot;&gt;Cognitive Services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Vale lembrar que neste repositório vou colocar vários testes incluindo outras plataformas de Cloud.&lt;/p&gt;
+
+&lt;p&gt;Abaixo é só clicar na imagem para baixar ou visualizar os slides da apresentação.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;//www.slideshare.net/VitorMeriat/devopssummit-2017-azure-cognitive-services&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/01/devops-summit-brasil-ppt.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;No próximo post&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
+</description>
+        <pubDate>Sat, 01 Apr 2017 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
+        
+        
+        <category>IA</category>
+        
+        <category>Cognitive Computing</category>
+        
+        <category>Microsoft Azure</category>
+        
+        <category>Python</category>
+        
+        <category>Palestras</category>
+        
+        <category>Comunidade</category>
+        
+      </item>
     
       <item>
         <title>Kaggle Competition - Titanic: Machine Learning from Disaster</title>
         <description>&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;O Projeto Titanic é uma competição de Data Science do Kaggle.com. O objetivo é deduzir os índices de sobrevivência dos passageiros. O conjunto de testes de 418 passageiros foi usado para treinar um modelo que foi montado em dados de treinamento de 891 passageiros. O conjunto de dados continha: Class, Name, Sex, Age, Sibling/Spouse, Parents/Children, Ticket#, Fare, Cabin#, e Port of Embarkment.&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;Projeto Titanic&lt;/strong&gt; é uma competição de &lt;strong&gt;Data Science&lt;/strong&gt; promovida pelo &lt;a href=&quot;kaggle.com&quot;&gt;Kaggle.com&lt;/a&gt;. O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic.&lt;/p&gt;
 
-&lt;p&gt;Embora os Mythbusters provaram completamente que Jack e Rose podiam caber na porta flutuante no final do filme, eu estava interessado em calcular minhas chances pessoais de sobrevivência se eu estivesse a bordo do Titanic em 14 de abril de 1912.&lt;/p&gt;
+&lt;p&gt;O conjunto de testes conta com 418 passageiros e foi usado para treinar um modelo montado com base nos dados de treinamento, composto por 891 passageiros. O conjunto de dados continha: &lt;strong&gt;Class, Name, Sex, Age, Sibling/Spouse, Parents/Children, Ticket#, Fare, Cabin#, e Port of Embarkment&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Usando dados do site Kaggle e do software estatístico R, eu desenvolvi três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias) que previram taxas de sobrevivência para os passageiros do Titanic.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Embora os &lt;a href=&quot;https://www.youtube.com/watch?v=JVgkvaDHmto&quot;&gt;Mythbusters&lt;/a&gt; em seu programa tenham provado completamente que era possível Jack e Rose ter sobrevivido utilizando a porta flutuante, o interesse aqui é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.&lt;/p&gt;
+
+&lt;p&gt;Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;O colapso do “Titanic” está associada com a regra não escrita do salvamento no mar de pessoas, “mulheres e crianças primeiro”.&lt;/p&gt;
+&lt;h1 id=&quot;passo-1&quot;&gt;Passo 1&lt;/h1&gt;
+&lt;p&gt;O colapso do “Titanic” está associada com a regra não escrita do salvamento no mar: “mulheres e crianças primeiro”.&lt;/p&gt;
 
 &lt;p&gt;Nesta tarefa, os competidores precisam analisar a probabilidade de sobrevivência das diferentes categorias de passageiros.&lt;/p&gt;
 
-&lt;p&gt;Para determinar se o passageiro sobreviveu ao “Titanic”, vamos usar uma árvore de decisão. Uma árvore de decisão é gerada automaticamente com base no parâmetro de entrada. A imagem abaixo mostra um exemplo de uma árvore de decisão a ser criado.&lt;/p&gt;
+&lt;p&gt;Para determinar se o passageiro sobreviveu ao “Titanic”, vamos usar uma árvore de decisão. Uma árvore de decisão é gerada automaticamente com base no parâmetro de entrada. A imagem abaixo mostra um exemplo de uma árvore de decisão é criada.&lt;/p&gt;
 
 &lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/vitormeriat/meriat-ml-notes/blob/master/Titanic%20-%20Machine%20Learning%20from%20Disaster.ipynb&quot;&gt;Titanic: Machine Learning from Disaster&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;o-repositório&quot;&gt;O repositório&lt;/h1&gt;
+&lt;p&gt;Você pode 
+&lt;a href=&quot;https://github.com/vitormeriat/meriat-ml-notes/blob/master/Titanic%20-%20Machine%20Learning%20from%20Disaster.ipynb&quot;&gt;Titanic: Machine Learning from Disaster&lt;/a&gt;&lt;/p&gt;
 
 &lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
-        <link>/2017/03/18/titanic-machine-learning-from-disaster/</link>
-        <guid isPermaLink="true">/2017/03/18/titanic-machine-learning-from-disaster/</guid>
+        <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
         
         <category>IA</category>
@@ -122,8 +199,8 @@
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
@@ -235,8 +312,8 @@
 &lt;h3 id=&quot;É-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">/2017/02/07/literatura-classica-machine-learning/</guid>
+        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -319,8 +396,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/05/cpbr10-workshop-machine-learning/</link>
-        <guid isPermaLink="true">/2017/02/05/cpbr10-workshop-machine-learning/</guid>
+        <link>http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -348,8 +425,8 @@
 &lt;h4 id=&quot;É-isso-ai-pessoal-em-breve-continuamos-esse-bate-papo-&quot;&gt;É isso ai pessoal, em breve continuamos esse bate papo ;)&lt;/h4&gt;
 </description>
         <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
-        <link>/2017/01/19/inteligencia-artificial-historia-industria/</link>
-        <guid isPermaLink="true">/2017/01/19/inteligencia-artificial-historia-industria/</guid>
+        <link>http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</guid>
         
         
         <category>IA</category>
@@ -420,8 +497,8 @@
 &lt;p&gt;A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero ;)&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Oct 2016 00:00:00 -0200</pubDate>
-        <link>/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
-        <guid isPermaLink="true">/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
+        <link>http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
         
         
         <category>Data Science</category>
@@ -450,8 +527,8 @@
 &lt;p&gt;&lt;a href=&quot;http://www.iotweekend.com.br/&quot; target=&quot;_blank&quot;&gt;IoT Weekend&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 06 Aug 2016 00:00:00 -0300</pubDate>
-        <link>/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
-        <guid isPermaLink="true">/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
+        <link>http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
         
         
         <category>Comunidade</category>
@@ -510,8 +587,8 @@
 &lt;h3 id=&quot;valeu-galera-&quot;&gt;Valeu galera ;)&lt;/h3&gt;
 </description>
         <pubDate>Thu, 28 Jul 2016 00:00:00 -0300</pubDate>
-        <link>/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
-        <guid isPermaLink="true">/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
+        <link>http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
         
         
         <category>Comunidade</category>
@@ -543,51 +620,11 @@
 
 </description>
         <pubDate>Mon, 09 May 2016 00:00:00 -0300</pubDate>
-        <link>/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
-        <guid isPermaLink="true">/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
+        <link>http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
         
         
         <category>Comunidade</category>
-        
-        <category>Microsoft Azure</category>
-        
-      </item>
-    
-      <item>
-        <title>Global Azure Bootcamp 2016–Dispositivos Inteligêntes e Azure Machine Learning</title>
-        <description>&lt;p&gt;Dia 16 de abril de 2016 ocorreu mais uma edição do Global Azure Bootcamp. Este é um evento mundial que ocorre quase simultâneamente, e que teve mais uma vez a participação em Brasília, desta vez sob a tutela do &lt;a href=&quot;https://mvp.microsoft.com/pt-br/PublicProfile/5001388&quot;&gt;Jucinei Santos&lt;/a&gt;, MVP de Windows Development.&lt;/p&gt;
-
-&lt;p&gt;Minha participação foi uma análise sobre os chamados dispositivos inteligêntes, e como o Microsoft Azure está preparado para nos auxiliar nos cenários presente e futuro, quando falamos em tecnologias de Big Data, Machine Learning e serviços específos para o mundo de IoT.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;gwabbsb2016&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016.jpg&quot; /&gt;
-&lt;img alt=&quot;gwabbsb2016b&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016b.jpg&quot; /&gt;
-&lt;img alt=&quot;gwabbsb2016c&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016c.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ainda sobre o evento, foi possível demostrar a utilziação de serviços para comunicação com dispositivos, neste caso trabalhando com MQTT e utilizando uma demo prática de controle e coleta de dados em uma casa.&lt;/p&gt;
-
-&lt;p&gt;Além de realizar um experimento com o Microsoft Azure Machine Learning, também abordamos o futuro da intligência de dados e os novos caminhos que a cognição pode trazer para o mundo da inteligência artificial.&lt;/p&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;referências&quot;&gt;Referências&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mqtt.org/&quot;&gt;MQTT&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.microsoft.com/pt-br/server-cloud/internet-of-things/azure-iot-suite.aspx&quot;&gt;Azure IoT Suite&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/services/iot-hub/&quot;&gt;Hub IoT do Azure&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/services/machine-learning/&quot;&gt;Aprendizado de Máquina do Azure&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 22 Apr 2016 00:00:00 -0300</pubDate>
-        <link>/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</link>
-        <guid isPermaLink="true">/2016/04/22/global-azure-bootcamp-2016dispositivos-inteligntes-e-azure-machine-learning/</guid>
-        
-        
-        <category>Azure IoT Suite</category>
-        
-        <category>IoT</category>
-        
-        <category>Machine Learning</category>
         
         <category>Microsoft Azure</category>
         
