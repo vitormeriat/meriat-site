@@ -24,6 +24,16 @@ O conjunto de testes conta com 418 passageiros e foi usado para treinar um model
 
 Embora os [Mythbusters](https://www.youtube.com/watch?v=JVgkvaDHmto) em seu programa tenham provado completamente que era possível Jack e Rose ter sobrevivido utilizando a porta flutuante, o interesse aqui é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.
 
+A história do Titanic é muito conhecida, tendo originado diversos livros, filmes, HQs e afins. É válido lembrar que a história narrada de forma célebre por James Cameron em seu filme de 1997, ilustra perfeitamente o motivo deste desafio. Vamos começar com uma breve perspectiva sobre o tema: Em Abril de 1912 o Titanic zarpou rumo a New York com 2224 passageiros, dos quais estima-se que apenas 710 tenham sobrevivido.
+
+É aqui que entra nosso desafio: Desenvolver um padrão simples para identificar o perfil dos sobreviventes deste desastre.
+
+Neste caso não temos complicação com elementos aleatórios de sorte. A maioria dos sobreviventes eram mulheres, crianças e pessoas da alta sociedade.
+
+# Start
+
+A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, **train.csv** e **test.csv**. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de treino. Nos dados de teste este valor precisa ser deduzido.
+
 Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.
 
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg" class="absolute-bg"></p>
