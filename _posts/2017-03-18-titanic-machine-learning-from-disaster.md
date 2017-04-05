@@ -17,7 +17,6 @@ image-full: "http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg"
 
 O **Projeto Titanic** é uma competição de **Data Science** promovida pelo [Kaggle.com](kaggle.com). O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic. 
 
-O conjunto de testes conta com 418 passageiros e foi usado para treinar um modelo montado com base nos dados de treinamento, composto por 891 passageiros. O conjunto de dados continha: **Class, Name, Sex, Age, Sibling/Spouse, Parents/Children, Ticket#, Fare, Cabin#, e Port of Embarkment**.
 
 <hr/>
 
@@ -28,13 +27,28 @@ A história do Titanic é muito conhecida, tendo originado diversos livros, film
 
 É aqui que entra nosso desafio: Desenvolver um padrão simples para identificar o perfil dos sobreviventes deste desastre.
 
+> Nota: Muitos dos barcos salva-vidas não estavam com a sua capacidade máxima de pessoas a bordo. Se estivessem, seria possível salvar 53,4% dos passageiros, mas apenas 31,6% deles sobreviveram.
+
 Neste caso não temos complicação com elementos aleatórios de sorte. A maioria dos sobreviventes eram mulheres, crianças e pessoas da alta sociedade.
 
 # Start
 
-A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, **train.csv** e **test.csv**. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de treino. Nos dados de teste este valor precisa ser deduzido.
+A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, **train.csv** e **test.csv**. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de **treino**. Nos dados de teste este valor precisa ser deduzido.
 
 Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.
+
+O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O conjunto de dados é composto por: 
+
+* Class
+* Name
+* Sex 
+* Age
+* Sibling/Spouse
+* Parents/Children 
+* Ticket (*) 
+* Fare
+* Cabin (*)
+* Port of Embarkment.
 
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg" class="absolute-bg"></p>
 
