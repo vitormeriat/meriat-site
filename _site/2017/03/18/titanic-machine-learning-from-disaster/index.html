@@ -164,13 +164,40 @@
 
 <p>O <strong>Projeto Titanic</strong> é uma competição de <strong>Data Science</strong> promovida pelo <a href="kaggle.com">Kaggle.com</a>. O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic.</p>
 
-<p>O conjunto de testes conta com 418 passageiros e foi usado para treinar um modelo montado com base nos dados de treinamento, composto por 891 passageiros. O conjunto de dados continha: <strong>Class, Name, Sex, Age, Sibling/Spouse, Parents/Children, Ticket#, Fare, Cabin#, e Port of Embarkment</strong>.</p>
-
 <hr />
 
 <p>Embora os <a href="https://www.youtube.com/watch?v=JVgkvaDHmto">Mythbusters</a> em seu programa tenham provado completamente que era possível Jack e Rose ter sobrevivido utilizando a porta flutuante, o interesse aqui é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.</p>
 
+<p>A história do Titanic é muito conhecida, tendo originado diversos livros, filmes, HQs e afins. É válido lembrar que a história narrada de forma célebre por James Cameron em seu filme de 1997, ilustra perfeitamente o motivo deste desafio. Vamos começar com uma breve perspectiva sobre o tema: Em Abril de 1912 o Titanic zarpou rumo a New York com 2224 passageiros, dos quais estima-se que apenas 710 tenham sobrevivido.</p>
+
+<p>É aqui que entra nosso desafio: Desenvolver um padrão simples para identificar o perfil dos sobreviventes deste desastre.</p>
+
+<blockquote>
+  <p>Nota: Muitos dos barcos salva-vidas não estavam com a sua capacidade máxima de pessoas a bordo. Se estivessem, seria possível salvar 53,4% dos passageiros, mas apenas 31,6% deles sobreviveram.</p>
+</blockquote>
+
+<p>Neste caso não temos complicação com elementos aleatórios de sorte. A maioria dos sobreviventes eram mulheres, crianças e pessoas da alta sociedade.</p>
+
+<h1 id="start">Start</h1>
+
+<p>A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, <strong>train.csv</strong> e <strong>test.csv</strong>. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de <strong>treino</strong>. Nos dados de teste este valor precisa ser deduzido.</p>
+
 <p>Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.</p>
+
+<p>O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O conjunto de dados é composto por:</p>
+
+<ul>
+  <li>Class</li>
+  <li>Name</li>
+  <li>Sex</li>
+  <li>Age</li>
+  <li>Sibling/Spouse</li>
+  <li>Parents/Children</li>
+  <li>Ticket (*)</li>
+  <li>Fare</li>
+  <li>Cabin (*)</li>
+  <li>Port of Embarkment.</li>
+</ul>
 
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg" class="absolute-bg" /></p>
 
@@ -184,8 +211,9 @@
 <p><img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg" class="absolute-bg" /></p>
 
 <h1 id="o-repositório">O repositório</h1>
-<p>Você pode 
-<a href="https://github.com/vitormeriat/meriat-ml-notes/blob/master/Titanic%20-%20Machine%20Learning%20from%20Disaster.ipynb">Titanic: Machine Learning from Disaster</a></p>
+<p>Você pode olhar o código completo acessando o mesmo no repositório <strong>Meriat Machine Learning Notes</strong> no meu Github.</p>
+
+<p><a href="https://github.com/vitormeriat/meriat-ml-notes/blob/master/Titanic%20-%20Machine%20Learning%20from%20Disaster.ipynb">Titanic: Machine Learning from Disaster</a></p>
 
 <div style="margin-bottom: 5em;"></div>
 
@@ -219,7 +247,7 @@
   <div style="margin-top: 60px; margin-bottom: 60px;">
     
     
-      1 minutes to read
+      2 minutes to read
     
   </div>
 
@@ -254,17 +282,17 @@
 		    
 		    <li>
 			  <span>01 Apr 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</a>
+			  <a href="/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</a>
 		    </li>
 		    
 		    <li>
 			  <span>15 Feb 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
+			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
 		    </li>
 		    
 		    <li>
 			  <span>07 Feb 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
+			  <a href="/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
 		    </li>
 		    
 		</ul>
@@ -277,15 +305,15 @@
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/"><< Older</a>
+      <a href="/2017/02/15/apresentando-meriat-ml-notes/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
-    <a href="http://localhost:4000/ ">Home</a>
+    <a href="/ ">Home</a>
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <a href="http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Newer >></a>
+      <a href="/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Newer >></a>
     
   </div>
 </div> -->

@@ -3,10 +3,10 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Apr 2017 18:28:51 -0300</pubDate>
-    <lastBuildDate>Sun, 02 Apr 2017 18:28:51 -0300</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 04 Apr 2017 23:11:37 -0300</pubDate>
+    <lastBuildDate>Tue, 04 Apr 2017 23:11:37 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -61,8 +61,8 @@
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 01 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
+        <link>/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
+        <guid isPermaLink="true">/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
         
         
         <category>IA</category>
@@ -85,13 +85,40 @@
 
 &lt;p&gt;O &lt;strong&gt;Projeto Titanic&lt;/strong&gt; é uma competição de &lt;strong&gt;Data Science&lt;/strong&gt; promovida pelo &lt;a href=&quot;kaggle.com&quot;&gt;Kaggle.com&lt;/a&gt;. O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic.&lt;/p&gt;
 
-&lt;p&gt;O conjunto de testes conta com 418 passageiros e foi usado para treinar um modelo montado com base nos dados de treinamento, composto por 891 passageiros. O conjunto de dados continha: &lt;strong&gt;Class, Name, Sex, Age, Sibling/Spouse, Parents/Children, Ticket#, Fare, Cabin#, e Port of Embarkment&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;hr /&gt;
 
 &lt;p&gt;Embora os &lt;a href=&quot;https://www.youtube.com/watch?v=JVgkvaDHmto&quot;&gt;Mythbusters&lt;/a&gt; em seu programa tenham provado completamente que era possível Jack e Rose ter sobrevivido utilizando a porta flutuante, o interesse aqui é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.&lt;/p&gt;
 
+&lt;p&gt;A história do Titanic é muito conhecida, tendo originado diversos livros, filmes, HQs e afins. É válido lembrar que a história narrada de forma célebre por James Cameron em seu filme de 1997, ilustra perfeitamente o motivo deste desafio. Vamos começar com uma breve perspectiva sobre o tema: Em Abril de 1912 o Titanic zarpou rumo a New York com 2224 passageiros, dos quais estima-se que apenas 710 tenham sobrevivido.&lt;/p&gt;
+
+&lt;p&gt;É aqui que entra nosso desafio: Desenvolver um padrão simples para identificar o perfil dos sobreviventes deste desastre.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Nota: Muitos dos barcos salva-vidas não estavam com a sua capacidade máxima de pessoas a bordo. Se estivessem, seria possível salvar 53,4% dos passageiros, mas apenas 31,6% deles sobreviveram.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Neste caso não temos complicação com elementos aleatórios de sorte. A maioria dos sobreviventes eram mulheres, crianças e pessoas da alta sociedade.&lt;/p&gt;
+
+&lt;h1 id=&quot;start&quot;&gt;Start&lt;/h1&gt;
+
+&lt;p&gt;A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, &lt;strong&gt;train.csv&lt;/strong&gt; e &lt;strong&gt;test.csv&lt;/strong&gt;. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de &lt;strong&gt;treino&lt;/strong&gt;. Nos dados de teste este valor precisa ser deduzido.&lt;/p&gt;
+
 &lt;p&gt;Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.&lt;/p&gt;
+
+&lt;p&gt;O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O conjunto de dados é composto por:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Class&lt;/li&gt;
+  &lt;li&gt;Name&lt;/li&gt;
+  &lt;li&gt;Sex&lt;/li&gt;
+  &lt;li&gt;Age&lt;/li&gt;
+  &lt;li&gt;Sibling/Spouse&lt;/li&gt;
+  &lt;li&gt;Parents/Children&lt;/li&gt;
+  &lt;li&gt;Ticket (*)&lt;/li&gt;
+  &lt;li&gt;Fare&lt;/li&gt;
+  &lt;li&gt;Cabin (*)&lt;/li&gt;
+  &lt;li&gt;Port of Embarkment.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
 
@@ -105,16 +132,17 @@
 &lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;o-repositório&quot;&gt;O repositório&lt;/h1&gt;
-&lt;p&gt;Você pode 
-&lt;a href=&quot;https://github.com/vitormeriat/meriat-ml-notes/blob/master/Titanic%20-%20Machine%20Learning%20from%20Disaster.ipynb&quot;&gt;Titanic: Machine Learning from Disaster&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Você pode olhar o código completo acessando o mesmo no repositório &lt;strong&gt;Meriat Machine Learning Notes&lt;/strong&gt; no meu Github.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/vitormeriat/meriat-ml-notes/blob/master/Titanic%20-%20Machine%20Learning%20from%20Disaster.ipynb&quot;&gt;Titanic: Machine Learning from Disaster&lt;/a&gt;&lt;/p&gt;
 
 &lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
+        <link>/2017/03/18/titanic-machine-learning-from-disaster/</link>
+        <guid isPermaLink="true">/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
         
         <category>IA</category>
@@ -199,8 +227,8 @@
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
@@ -312,8 +340,8 @@
 &lt;h3 id=&quot;É-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
+        <link>/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">/2017/02/07/literatura-classica-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -396,8 +424,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</guid>
+        <link>/2017/02/05/cpbr10-workshop-machine-learning/</link>
+        <guid isPermaLink="true">/2017/02/05/cpbr10-workshop-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -425,8 +453,8 @@
 &lt;h4 id=&quot;É-isso-ai-pessoal-em-breve-continuamos-esse-bate-papo-&quot;&gt;É isso ai pessoal, em breve continuamos esse bate papo ;)&lt;/h4&gt;
 </description>
         <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</guid>
+        <link>/2017/01/19/inteligencia-artificial-historia-industria/</link>
+        <guid isPermaLink="true">/2017/01/19/inteligencia-artificial-historia-industria/</guid>
         
         
         <category>IA</category>
@@ -497,8 +525,8 @@
 &lt;p&gt;A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero ;)&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Oct 2016 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
+        <link>/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
+        <guid isPermaLink="true">/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
         
         
         <category>Data Science</category>
@@ -527,8 +555,8 @@
 &lt;p&gt;&lt;a href=&quot;http://www.iotweekend.com.br/&quot; target=&quot;_blank&quot;&gt;IoT Weekend&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 06 Aug 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
+        <link>/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
+        <guid isPermaLink="true">/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
         
         
         <category>Comunidade</category>
@@ -587,8 +615,8 @@
 &lt;h3 id=&quot;valeu-galera-&quot;&gt;Valeu galera ;)&lt;/h3&gt;
 </description>
         <pubDate>Thu, 28 Jul 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
+        <link>/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</link>
+        <guid isPermaLink="true">/2016/07/28/meetups-internet-of-things-expo-mvp-open-day-e-dias-de-aprendizado-em-nyc/</guid>
         
         
         <category>Comunidade</category>
@@ -620,8 +648,8 @@
 
 </description>
         <pubDate>Mon, 09 May 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
+        <link>/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
+        <guid isPermaLink="true">/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
         
         
         <category>Comunidade</category>
