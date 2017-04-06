@@ -3,7 +3,7 @@ layout: post
 title: Meetups, Internet of Things Expo, MVP Open Day e dias de aprendizado em NYC
 date: 2016-07-28
 categories:
-  - Comunidade
+    - Comunidade
 image-full: "http://blob.vitormeriat.com.br/images/2016/10/Cmcc5mYVIAAoB5V.jpg"
 ---
 <p align="justify">Durante o mês de junho tive a oportunidade de participar de alguns eventos de tecnologia em New York, e é claro, de aproveitar essa cidade maravilhosa.</p>

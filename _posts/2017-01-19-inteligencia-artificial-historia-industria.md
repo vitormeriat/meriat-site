@@ -3,7 +3,7 @@ layout: post
 title: "Inteligência Artificial, história indústria e economia"
 date: 2017-01-19
 categories:
-  - IA
+    - IA
 description: Apesar de ser um assunto que circunda o imaginário humano no último século, Inteligência Artificial ainda é um assunto pouco explorado em toda a suas facetas. Veremos aqui um pouco de como a IA teve sua parcela na prosperidade científica e econômica que vivemos nos dias atuais.
 ---
 

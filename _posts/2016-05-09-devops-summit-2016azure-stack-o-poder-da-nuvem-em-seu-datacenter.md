@@ -4,8 +4,8 @@ title: DevOps Summit 2016–Azure Stack - O poder da nuvem em seu datacenter
 date: 2016-05-09
 type: post
 categories:
-  - Comunidade
-  - Microsoft Azure
+    - Comunidade
+    - Microsoft Azure
 image-full: "http://blob.vitormeriat.com.br/images/2016/05/devopssummit.jpg"
 ---
 
@@ -27,4 +27,3 @@ Com o Azure Stack você aproveita o modelo de gestão operacional de recursos do
 * [Deploy Azure Stack POC](https://azure.microsoft.com/pt-br/documentation/articles/azure-stack-run-powershell-script/#prepare-the-deployment-machine)
 * [Azure IaaS for Azure Stack](https://channel9.msdn.com/Events/Ignite/2015/BRK3479)
 * [Microsoft Azure Stack](https://azure.microsoft.com/pt-br/overview/azure-stack/)
-

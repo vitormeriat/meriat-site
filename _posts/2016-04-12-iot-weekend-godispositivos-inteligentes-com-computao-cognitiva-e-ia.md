@@ -3,7 +3,7 @@ layout: post
 title: IoT Weekend GO–Dispositivos Inteligentes com Computação Cognitiva e IA
 date: 2016-04-12
 categories:
-  - Comunidade
+    - Comunidade
 image-full: "http://blob.vitormeriat.com.br/images/2016/04/iotweekend.jpg"
 ---
 <p>

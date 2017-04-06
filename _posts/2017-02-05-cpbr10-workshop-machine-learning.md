@@ -3,10 +3,10 @@ layout: post
 title: "Workshop de Machine Learning na CPBR10"
 date: 2017-02-05
 categories:
-  - IA
-  - Machine Learning
-  - Jupyter Notebook
-  - Python
+    - IA
+    - Machine Learning
+    - Jupyter Notebook
+    - Python
 description: Workshop de Machine Learning na Campus Party 2017, a CPBR10. Este ano tive a honra de mais uma vez palestrar na Campus Party. Na minha deixa pude demonstrar como iniciar um projeto de Machine Learning do zero utilizando como ferramentas o Jupyter Notebook, Python e o famoso dataset Pima Indians Diabetes Database.
 image-full: "http://blob.vitormeriat.com.br/images/2017/02/05/campus-ia.jpg"
 ---

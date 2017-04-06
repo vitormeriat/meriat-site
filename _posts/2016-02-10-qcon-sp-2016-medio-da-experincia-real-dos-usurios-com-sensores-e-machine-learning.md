@@ -3,9 +3,9 @@ layout: post
 title: QCon SP 2016 - Medição da experiência real dos usuários com sensores e Machine Learning
 date: 2016-02-10
 categories:
-  - Comunidade
-  - IoT
-  - Machine Learning
+    - Comunidade
+    - IoT
+    - Machine Learning
 image: "http://blob.vitormeriat.com.br/images/2016/02/qconsp2016.png"
 ---
 

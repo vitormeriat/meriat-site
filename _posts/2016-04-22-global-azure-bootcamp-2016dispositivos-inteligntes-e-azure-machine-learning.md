@@ -3,10 +3,10 @@ layout: post
 title: Global Azure Bootcamp 2016–Dispositivos Inteligêntes e Azure Machine Learning
 date: 2016-04-22
 categories:
-  - Azure IoT Suite
-  - IoT
-  - Machine Learning
-  - Microsoft Azure
+    - Azure IoT Suite
+    - IoT
+    - Machine Learning
+    - Microsoft Azure
 image-full: "http://blob.vitormeriat.com.br/images/2016/04/gwabbsb2016.jpg"
 ---
 Dia 16 de abril de 2016 ocorreu mais uma edição do Global Azure Bootcamp. Este é um evento mundial que ocorre quase simultâneamente, e que teve mais uma vez a participação em Brasília, desta vez sob a tutela do [Jucinei Santos](https://mvp.microsoft.com/pt-br/PublicProfile/5001388), MVP de Windows Development.
