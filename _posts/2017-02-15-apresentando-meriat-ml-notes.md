@@ -3,12 +3,12 @@ layout: post
 title: "Apresentando o Meriat Machine Learning Notes"
 date: 2017-02-15
 categories:
-  - IA
-  - Machine Learning
-  - Data Science
-  - Deep Learning
-  - Jupyter Notebook
-  - Python
+    - IA
+    - Machine Learning
+    - Data Science
+    - Deep Learning
+    - Jupyter Notebook
+    - Python
 description: Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.
 image-full: "http://blob.vitormeriat.com.br/images/2017/02/15/capa.jpg"
 ---
@@ -17,12 +17,16 @@ image-full: "http://blob.vitormeriat.com.br/images/2017/02/15/capa.jpg"
 
 No último ano tive a oportunidade de trabalhar em projetos envolvendo IoT e Machine Learning. No processo entre aplicação, estudos e desenvolvimento, acabei separando algum material e exemplos que me ajudaram a inicar nesta carreira, bem como no processo de aprendizagem.
 
-O Meriat Machine Learning Notes nada mais e que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.
+O Meriat Machine Learning Notes nada mais é que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.
 
 Minha opção pelo **Jupyter Notebook**, dentre tantos motivos, se dá pelo fato de conseguir de forma simples documentar e visualizar todo o código e anotações de forma simples. Vale dizer que o código que estou utilizando pode ser facilmente utilizado em outra IDE, conforme sua preferência.
 
 
 Algumas implementações são reprodução de exercícios dos quais eu irei apontar o material base.
+
+O material ainda está em formação, visto que ainda tenho um longo caminho a percorrer. É possível que futuramente eu altere o repositório, já que alguns estudos podem gerar um repositório separado.
+
+Por hora vou concentrando meus esforços por aqui ;)
 
 ### Github
 
@@ -35,21 +39,24 @@ Algumas implementações são reprodução de exercícios dos quais eu irei apon
 
 ## Meriat Machine Learning Note
 
-A estrutura atual está como o descrito abaixo:
+A estrutura atual está descrita logo abaixo. Vou me esforçar para manter atualizada.
 
-### File Handling
+#### File Handling
+TBA
 
-### SMS Spam Filtering
+#### SMS Spam Filtering
+TBA
 
-### Song Recommender
+#### Song Recommender
+TBA
 
-### Basic Math
+#### Basic Math
 Basic math notions with python
 
-### Basic Statistic in Python
+#### Basic Statistic in Python
 Basic math statistics with python
 
-### Basic Natural Language Processing
+#### Basic Natural Language Processing
 1. Tokenization
 2. Stopword Removal
 3. N-Grams
@@ -58,14 +65,14 @@ Basic math statistics with python
 
 *This module uses NLTK for the text processing processes. It is important to note that you will need to download nltk_data.*
 
-### Simple Probability Model
+#### Simple Probability Model
 1. Common Ground
 2. Limit Theorems
 3. Derived Distributions
   * Covariance
   * Correlation
 
-### Imbalanced Learning with Gaussians
+#### Imbalanced Learning with Gaussians
 
 <div style="margin-bottom: 5em;"></div>
 

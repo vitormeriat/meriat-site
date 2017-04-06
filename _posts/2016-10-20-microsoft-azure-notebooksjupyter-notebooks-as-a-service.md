@@ -3,9 +3,9 @@ layout: post
 title: "Microsoft Azure Notebooks–Jupyter Notebooks as a Service"
 date: 2016-10-20
 categories:
-  - Data Science
-  - Machine Learning
-  - Python
+    - Data Science
+    - Machine Learning
+    - Python
 description:
 image-full: "http://blob.vitormeriat.com.br/images/2016/10/capa.jpg"
 ---
