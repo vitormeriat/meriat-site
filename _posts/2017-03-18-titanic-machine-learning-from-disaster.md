@@ -15,7 +15,7 @@ image-full: "http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg"
 
 <img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg" class="absolute-bg">
 
-O **Projeto Titanic** é uma competição de **Data Science** promovida pelo [Kaggle.com](kaggle.com). O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic. 
+O **Projeto Titanic** é uma competição de **Data Science** promovida pelo [Kaggle.com](kaggle.com). O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic.
 
 
 <hr/>
@@ -37,20 +37,28 @@ A lista de sobreviventes e não sobreviventes já foi transformada em dois datas
 
 Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.
 
-O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O conjunto de dados é composto por: 
+<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg"></p>
+
+O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O conjunto de dados é composto por:
 
 * Class
 * Name
-* Sex 
+* Sex
 * Age
 * Sibling/Spouse
-* Parents/Children 
-* Ticket (*) 
+* Parents/Children
+* Ticket (*)
 * Fare
 * Cabin (*)
 * Port of Embarkment.
 
-<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg" class="absolute-bg"></p>
+Como na maioria das competições Kaggle, você recebe dois conjuntos de dados:
+
+* Um conjunto de treino completo com o resultado (outcome ou target variable), para um grupo de passageiros, bem como uma coleção de outros parâmetros, como sua idade, sexo, etc. Este é o conjunto de dados em que você deve treinar seu modelo preditivo.
+* Um conjunto de teste, para o qual você deve prever a variável de destino agora desconhecida com base nos outros atributos de passageiros que são fornecidos para ambos os conjuntos de dados.
+
+Este é um ótimo ponto de entrada para aprender machine learning com um conjunto de dados pequeno, gerenciável, interessante e com variáveis ​​de fácil compreensão.
+
 
 # Passo 1
 O colapso do "Titanic" está associada com a regra não escrita do salvamento no mar: "mulheres e crianças primeiro".
@@ -59,9 +67,7 @@ Nesta tarefa, os competidores precisam analisar a probabilidade de sobrevivênci
 
 Para determinar se o passageiro sobreviveu ao "Titanic", vamos usar uma árvore de decisão. Uma árvore de decisão é gerada automaticamente com base no parâmetro de entrada. A imagem abaixo mostra um exemplo de uma árvore de decisão é criada.
 
-<img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg" class="absolute-bg">
-
-
+<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg"></p>
 
 # O repositório
 Você pode olhar o código completo acessando o mesmo no repositório **Meriat Machine Learning Notes** no meu Github.
