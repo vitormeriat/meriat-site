@@ -5,9 +5,232 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 04 Apr 2017 23:11:37 -0300</pubDate>
-    <lastBuildDate>Tue, 04 Apr 2017 23:11:37 -0300</lastBuildDate>
+    <pubDate>Sun, 16 Apr 2017 21:08:28 -0300</pubDate>
+    <lastBuildDate>Sun, 16 Apr 2017 21:08:28 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Hello World R - Da base à Regressão Linear</title>
+        <description>&lt;p&gt;A linguagem R é um projeto GNU de software livre. O &lt;strong&gt;R&lt;/strong&gt; derivou de uma linguagem chamada &lt;strong&gt;S&lt;/strong&gt; (de “statistics”), criada na &lt;strong&gt;Bell Laboratories&lt;/strong&gt; nos anos 70. Esta é uma linguagem usada por programadores e cientistas de dados para computação estatística.&lt;/p&gt;
+
+&lt;p&gt;R foi desenvolvida por estatísticos para estatística, dado seu foco na resolução de problemas matemáticos, ele possui um estrutura simples o que facilita a implementação e traz ganhos na otimização no tempo de desenvolvimento. Você pode obter todas as referncias na documentação oficial em &lt;a href=&quot;https://www.rdocumentation.org/&quot;&gt;rdocumentation.org&lt;/a&gt;, fora que é possível contar com um riquíssimo ecossistema de pacotes para diferentes áreas de aplicação.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Para começar vamos criar um exemplo de regressão linear, uma espécie de &lt;strong&gt;“Hello World”&lt;/strong&gt; da computação estatística. Então, mãos a obra…&lt;/p&gt;
+
+&lt;h2 id=&quot;regressão-linear&quot;&gt;Regressão Linear&lt;/h2&gt;
+
+&lt;p&gt;A regressão linear é uma técnica estatística usada para descrever a relação entre uma variável numérica (na estatística, chamada de variável dependente) e uma ou mais variáveis explicativas (chamadas de variáveis independentes) que podem ser numéricas ou categóricas. Quando há apenas uma única variável explicativa/de previsão, a técnica é chamada de regressão linear simples. Quando houver duas ou mais variáveis independentes, a técnica é chamada de regressão linear múltipla.&lt;/p&gt;
+
+&lt;p&gt;Para iniciar vamos começar importando o arquivo de texto que será utilizado no exemplo.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;r&quot;&gt;
+    data &amp;lt;- read.table(&quot;sementes.txt&quot;, header=TRUE, sep=&quot;,&quot;)
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;No trecho de código acima estamos utilizando a importação de um &lt;strong&gt;TXT&lt;/strong&gt; como DataSet. Na operação que estamos utilizando, podemos observar que a linguagem &lt;strong&gt;R&lt;/strong&gt; usa parâmetros nomeados. O parâmetro de cabeçalho informa se a primeira linha é de cabeçalho ou não. O parâmetro &lt;strong&gt;sep&lt;/strong&gt; (separador) indica como os valores em cada linha são separados. Por exemplo, (\t) indica valores delimitados por tabulação, e (“ “) indica valores delimitados por espaço.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;O R diferencia maiúsculas de minúsculas e você geralmente pode usar o operador (&amp;lt;-) para atribuir valores, ou o operador (=). Essa escolha é uma questão de preferência pessoal, já que ambos exercem a mesma função. Tipicamente, a boa prática aponta para o uso do operador (&amp;lt;-) na atribuição de objetos e (=) para atribuição de valores de parâmetro.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Para se trabalhar com o &lt;strong&gt;CSV&lt;/strong&gt;, formato mais comun nestes casos, seria tão simples quanto passar o caminho do arquivo.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;r&quot;&gt;
+    data &amp;lt;- read.csv(&quot;sementes.csv&quot;)
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Vamos olhar a estrutura de nosso arquivo. Se trata de uma listagem de sementes classificada por cor, comprimento, largura e índice de nutrientes. Nosso objetivo aqui é prever os valores da coluna nutrientes com base nos dados anteriores da semente.&lt;/p&gt;
+
+&lt;p&gt;Uma vez que temos nosso arquivo carregado, podemos utilizar alguns comandos a fim de vizualizar o nosso conjunto de dados.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;r&quot;&gt;
+    # Exibe o shape dos dados
+    dim(data)
+
+    # Concatena duas strings
+    paste(&quot;Linhas: &quot;, dim(data)[1], sep=&quot; &quot;)
+    paste(&quot;Colunas: &quot;, dim(data)[2], sep=&quot; &quot;)
+
+    # Exibe o dados
+    print(data)
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;A primeira função exibe a estrutura básica dos dados, retornando a quantidade de linhas e colunas do dataset. Notem que estou utilizando a função &lt;strong&gt;paste()&lt;/strong&gt; para concatenar duas strings. Aqui podemos ver que o resultado pode ser lido como um &lt;strong&gt;array&lt;/strong&gt;, onde tenho na posição 1 o primeiro item, e na posição 2 o segundo item. Depois apenas nomeio qual é a coluna e qual é a linha. A próxima função irá exibir os dados como extraído do arquivo. Usamos a função &lt;strong&gt;print()&lt;/strong&gt; para exibir qualquer saída para o nosso programa.&lt;/p&gt;
+
+&lt;p&gt;Nossa saída seria algo como o que se segue abaixo:&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;r&quot;&gt;
+    8 4
+
+    'Linhas:  8'
+    'Colunas:  4'
+
+       Color Length Width Nutrients
+    1   blue    5.4   1.8       0.9
+    2   blue    4.8   1.5       0.7
+    3   blue    4.9   1.6       0.8
+    4 yellow    5.0   1.9       0.4
+    5 yellow    5.2   1.5       0.3
+    6 yellow    4.7   1.9       0.4
+    7  green    3.7   2.2       1.4
+    8  green    4.2   1.9       1.2
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Observe que a saída acima exibe os índices do &lt;strong&gt;array de dados, começando em 1&lt;/strong&gt;. Este é um ponto importante a se notar, já que na maioria das linguagens estamos acostumados com os índices de &lt;strong&gt;base 0&lt;/strong&gt;, como em C# ou Python.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Agora vamos executar a análise da função de &lt;strong&gt;Modelo Linear&lt;/strong&gt;. Para isso execute os comandos abaixo:&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.4em !important&quot;&gt;
+    &lt;code class=&quot;r&quot;&gt;
+  model &amp;lt;- lm(data$Nutrients ~ (data$Color + data$Length + data$Width))
+
+  summary(model)
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Neste trecho de código temos a variável &lt;strong&gt;model&lt;/strong&gt; que é o resultado da nossa análise de regressão linear. Aqui estamos usando a função &lt;strong&gt;lm()&lt;/strong&gt; &lt;strong&gt;(linear model)&lt;/strong&gt;, na qual temos a &lt;strong&gt;variável dependente&lt;/strong&gt; a ser prevista (data$Nutrients), e as variáveis independentes, a saber: &lt;strong&gt;data$Color, data$Length, data$Width&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;O próximo commando &lt;strong&gt;(summary(model))&lt;/strong&gt;, vai exibir o resultádo básico formatado da análise que foi armazenda no objeto model. Teremos a seguinte saída para o código acima:&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;r&quot;&gt;
+  Call:
+  lm(formula = data$Nutrients ~ (data$Color + data$Length + data$Width))
+
+  Residuals:
+          1         2         3         4         5         6         7         8
+   0.009418 -0.030030  0.020611 -0.028320  0.044164 -0.015844  0.042596 -0.042596
+
+  Coefficients:
+                   Estimate Std. Error t value Pr(&amp;gt;|t|)   
+  (Intercept)      -0.14758    0.48286  -0.306  0.77986   
+  data$Colorgreen   0.35672    0.09990   3.571  0.03754 *
+  data$Coloryellow -0.49083    0.04507 -10.891  0.00166 **
+  data$Length       0.04159    0.07876   0.528  0.63406   
+  data$Width        0.45200    0.11973   3.775  0.03255 *
+  ---
+  Signif. codes:  0 ‘\***\’ 0.001 ‘\**\’ 0.01 ‘\*\’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+  Residual standard error: 0.05179 on 3 degrees of freedom
+  Multiple R-squared:  0.9927,	Adjusted R-squared:  0.9829
+  F-statistic: 101.6 on 4 and 3 DF,  p-value: 0.00156
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Olhando para o nosso conjunto de dados responda a seguinte pergunta: Qual seria o valor de &lt;u&gt;Nutrientes&lt;/u&gt; para uma determinada semente se a &lt;u&gt;cor&lt;/u&gt; da mesma fosse &lt;u&gt;yellow&lt;/u&gt; e suas &lt;u&gt;largura&lt;/u&gt; e &lt;u&gt;altura&lt;/u&gt; fossem &lt;u&gt;1.9&lt;/u&gt; e &lt;u&gt;4.7&lt;/u&gt; respectivamente?&lt;/p&gt;
+
+&lt;p&gt;E ai? Já sabe a resposta?&lt;/p&gt;
+
+&lt;p&gt;Olhando para o nosso dataset é fácil de responder esta pergunta. Estamos falando do item &lt;u&gt;[6]&lt;/u&gt; de nossa lista. Sendo assim sabemos que o valor de nutrientes será &lt;u&gt;0.4&lt;/u&gt;.&lt;/p&gt;
+
+&lt;p&gt;Agora queremos &lt;u&gt;prever&lt;/u&gt; este valor usando nosso modelo. Como faremos isso?&lt;/p&gt;
+
+&lt;p&gt;Vamos olhar para o resultado da análse que fizemos anteriormente. Em Coefficients vamos utilizar apenas a primeira e segunda colunas. Temos aqui nossas variáveis independetes e suas estimativas.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Vale notar que temos uma constante chamada (Intercept), não associada a qualquer variável.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Quando você tem variáveis explicativas categóricas, um dos valores é descartado. Em nosso caso o valor escolhido foi o blue.&lt;/p&gt;
+
+&lt;p&gt;Para fazer uma previsão usando o modelo, é necessário calcular a soma linear dos valores das estimativas multiplicados pelos valores correspondentes em relação as variáveis independentes. Em nosso caso a equação seria:&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;r&quot;&gt;
+  -0.14758 + (0.35672 * 0) + (-0.49083 * 1) + (0.04159 * 4.7) + (0.45200 * 1.9)
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Vamos entender como chegar neste resultado. Com base nos quadro abaixo fica mais simples compreender:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;NA&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;yellow&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;green&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Length&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Width&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;-0.14758&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.35672&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;-0.49083&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.04159&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.45200&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Primeiro listamos os valores da coluna Estimate. Depois para cada valor, multiplicamos a variável correspondente. No caso do primeiro valor estamos falando da constante Intercept, logo não existe valor a ser multiplicado. Para o segundo valor, temos como resultado &lt;u&gt;(0.35672 * 0)&lt;/u&gt;. É o sugundo valor multiplicado por 0, já que nossa previsão não inclui a variável green. Multiplicamos o valor de data$Length, 0.04159 por 4.7 e temos (0.04159 * 4.7). A mesma lógica para data$Width e temos (0.45200 * 1.9).&lt;/p&gt;
+
+&lt;p&gt;O resultado será 0.415863, um valor muito próximo de 0.40, que é o valor real descrito no arquivo.&lt;/p&gt;
+
+&lt;p&gt;Na saída acima temos uma sessão, iniciada com &lt;u&gt;Residual standard error&lt;/u&gt;. Aqui temos a relação entre as variáveis independentes e a variável dependente.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;r&quot;&gt;
+  Residual standard error: 0.05179 on 3 degrees of freedom
+  Multiple R-squared:  0.9927,	Adjusted R-squared:  0.9829
+  F-statistic: 101.6 on 4 and 3 DF,  p-value: 0.00156
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;O valor de &lt;u&gt;Multiple R-squared (0,9927)&lt;/u&gt; é a porcentagem de variação na variável dependente explicada pela combinação linear das variáveis independentes. Neste caso os valores de R-squared são valores entre 0 e 1, onde os valores mais altos significam um modelo de previsão melhor. Em nosso caso, R-squared tem um valor extremamente alto, indicando que Color, Length e Width podem prever o resultado com boa precisão. F-statistic, Adjusted R-squared e p-value são outras medidas de ajuste do modelo.&lt;/p&gt;
+
+&lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.rdocumentation.org/&quot;&gt;rdocumentation.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_regression&quot;&gt;Linear Regression&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+table {
+	color:#333333;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+table th {
+	border-width: 1px;
+	padding: 12px;
+	border-style: solid;
+	background-color: #dedede;
+}
+table td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	background-color: #ffffff;
+}
+&lt;/style&gt;
+
+</description>
+        <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
+        <link>/2017/04/14/hello-world-r/</link>
+        <guid isPermaLink="true">/2017/04/14/hello-world-r/</guid>
+        
+        
+        <category>R</category>
+        
+        <category>Data Science</category>
+        
+      </item>
     
       <item>
         <title>Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</title>
@@ -105,6 +328,8 @@
 
 &lt;p&gt;Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.&lt;/p&gt;
 
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O conjunto de dados é composto por:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -120,7 +345,14 @@
   &lt;li&gt;Port of Embarkment.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Como na maioria das competições Kaggle, você recebe dois conjuntos de dados:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Um conjunto de treino completo com o resultado (outcome ou target variable), para um grupo de passageiros, bem como uma coleção de outros parâmetros, como sua idade, sexo, etc. Este é o conjunto de dados em que você deve treinar seu modelo preditivo.&lt;/li&gt;
+  &lt;li&gt;Um conjunto de teste, para o qual você deve prever a variável de destino agora desconhecida com base nos outros atributos de passageiros que são fornecidos para ambos os conjuntos de dados.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Este é um ótimo ponto de entrada para aprender machine learning com um conjunto de dados pequeno, gerenciável, interessante e com variáveis ​​de fácil compreensão.&lt;/p&gt;
 
 &lt;h1 id=&quot;passo-1&quot;&gt;Passo 1&lt;/h1&gt;
 &lt;p&gt;O colapso do “Titanic” está associada com a regra não escrita do salvamento no mar: “mulheres e crianças primeiro”.&lt;/p&gt;
@@ -129,7 +361,7 @@
 
 &lt;p&gt;Para determinar se o passageiro sobreviveu ao “Titanic”, vamos usar uma árvore de decisão. Uma árvore de decisão é gerada automaticamente com base no parâmetro de entrada. A imagem abaixo mostra um exemplo de uma árvore de decisão é criada.&lt;/p&gt;
 
-&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;o-repositório&quot;&gt;O repositório&lt;/h1&gt;
 &lt;p&gt;Você pode olhar o código completo acessando o mesmo no repositório &lt;strong&gt;Meriat Machine Learning Notes&lt;/strong&gt; no meu Github.&lt;/p&gt;
@@ -165,11 +397,15 @@
 
 &lt;p&gt;No último ano tive a oportunidade de trabalhar em projetos envolvendo IoT e Machine Learning. No processo entre aplicação, estudos e desenvolvimento, acabei separando algum material e exemplos que me ajudaram a inicar nesta carreira, bem como no processo de aprendizagem.&lt;/p&gt;
 
-&lt;p&gt;O Meriat Machine Learning Notes nada mais e que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.&lt;/p&gt;
+&lt;p&gt;O Meriat Machine Learning Notes nada mais é que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.&lt;/p&gt;
 
 &lt;p&gt;Minha opção pelo &lt;strong&gt;Jupyter Notebook&lt;/strong&gt;, dentre tantos motivos, se dá pelo fato de conseguir de forma simples documentar e visualizar todo o código e anotações de forma simples. Vale dizer que o código que estou utilizando pode ser facilmente utilizado em outra IDE, conforme sua preferência.&lt;/p&gt;
 
 &lt;p&gt;Algumas implementações são reprodução de exercícios dos quais eu irei apontar o material base.&lt;/p&gt;
+
+&lt;p&gt;O material ainda está em formação, visto que ainda tenho um longo caminho a percorrer. É possível que futuramente eu altere o repositório, já que alguns estudos podem gerar um repositório separado.&lt;/p&gt;
+
+&lt;p&gt;Por hora vou concentrando meus esforços por aqui ;)&lt;/p&gt;
 
 &lt;h3 id=&quot;github&quot;&gt;Github&lt;/h3&gt;
 
@@ -183,21 +419,24 @@
 
 &lt;h2 id=&quot;meriat-machine-learning-note&quot;&gt;Meriat Machine Learning Note&lt;/h2&gt;
 
-&lt;p&gt;A estrutura atual está como o descrito abaixo:&lt;/p&gt;
+&lt;p&gt;A estrutura atual está descrita logo abaixo. Vou me esforçar para manter atualizada.&lt;/p&gt;
 
-&lt;h3 id=&quot;file-handling&quot;&gt;File Handling&lt;/h3&gt;
+&lt;h4 id=&quot;file-handling&quot;&gt;File Handling&lt;/h4&gt;
+&lt;p&gt;TBA&lt;/p&gt;
 
-&lt;h3 id=&quot;sms-spam-filtering&quot;&gt;SMS Spam Filtering&lt;/h3&gt;
+&lt;h4 id=&quot;sms-spam-filtering&quot;&gt;SMS Spam Filtering&lt;/h4&gt;
+&lt;p&gt;TBA&lt;/p&gt;
 
-&lt;h3 id=&quot;song-recommender&quot;&gt;Song Recommender&lt;/h3&gt;
+&lt;h4 id=&quot;song-recommender&quot;&gt;Song Recommender&lt;/h4&gt;
+&lt;p&gt;TBA&lt;/p&gt;
 
-&lt;h3 id=&quot;basic-math&quot;&gt;Basic Math&lt;/h3&gt;
+&lt;h4 id=&quot;basic-math&quot;&gt;Basic Math&lt;/h4&gt;
 &lt;p&gt;Basic math notions with python&lt;/p&gt;
 
-&lt;h3 id=&quot;basic-statistic-in-python&quot;&gt;Basic Statistic in Python&lt;/h3&gt;
+&lt;h4 id=&quot;basic-statistic-in-python&quot;&gt;Basic Statistic in Python&lt;/h4&gt;
 &lt;p&gt;Basic math statistics with python&lt;/p&gt;
 
-&lt;h3 id=&quot;basic-natural-language-processing&quot;&gt;Basic Natural Language Processing&lt;/h3&gt;
+&lt;h4 id=&quot;basic-natural-language-processing&quot;&gt;Basic Natural Language Processing&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;Tokenization&lt;/li&gt;
   &lt;li&gt;Stopword Removal&lt;/li&gt;
@@ -208,7 +447,7 @@
 
 &lt;p&gt;&lt;em&gt;This module uses NLTK for the text processing processes. It is important to note that you will need to download nltk_data.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;simple-probability-model&quot;&gt;Simple Probability Model&lt;/h3&gt;
+&lt;h4 id=&quot;simple-probability-model&quot;&gt;Simple Probability Model&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;Common Ground&lt;/li&gt;
   &lt;li&gt;Limit Theorems&lt;/li&gt;
@@ -220,7 +459,7 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;imbalanced-learning-with-gaussians&quot;&gt;Imbalanced Learning with Gaussians&lt;/h3&gt;
+&lt;h4 id=&quot;imbalanced-learning-with-gaussians&quot;&gt;Imbalanced Learning with Gaussians&lt;/h4&gt;
 
 &lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
@@ -620,41 +859,6 @@
         
         
         <category>Comunidade</category>
-        
-      </item>
-    
-      <item>
-        <title>DevOps Summit 2016–Azure Stack - O poder da nuvem em seu datacenter</title>
-        <description>&lt;p&gt;Dia 07/05 na seda da Microsoft no Brasil, aconteceu a primeira edição do DevOps Summit Brasil. Esse é um evento que teve como origem a fusão dos já consagrados Azure Summit Brasil e ALM Summit Brasil com foco em promover o conhecimento de Cloud Computing e DevOps.&lt;/p&gt;
-
-&lt;p&gt;&lt;img title=&quot;spark-tela&quot; alt=&quot;spark-tela&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/05/devopssummit.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Azure Stack é o primeiro produto de uma nova categoria hybrid cloud platform. Este novo produto permite que a TI entregue os recursos do seu Datacenter no mesmo modelo de entrega de serviços da nuvem pública.&lt;/p&gt;
-
-&lt;p&gt;Com o Azure Stack você aproveita o modelo de gestão operacional de recursos do azure em seu Datacenter. É isso mesmo, com o Azure Stack conseguimos integrar os serviços da nuvem pública com a nossa capacidade computacional, a fim de entregar serviços. Você também pode explorar uma abordagem híbrida, tendo a capacidade e flexibilidade de trabalhar os recursos onde for melhor.&lt;/p&gt;
-
-&lt;iframe style=&quot;height: 685px; width: 100%&quot; marginheight=&quot;0&quot; src=&quot;https://www.slideshare.net/slideshow/embed_code/key/zW5NtNvVdGsrct&quot; frame=&quot;&quot; marginwidth=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;br /&gt; &lt;/iframe&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;referências&quot;&gt;Referências&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/blog/microsoft-azure-stack-technical-preview-is-now-available-for-download/&quot;&gt;Microsoft Azure Stack Technical Preview is now available for download&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/documentation/articles/azure-stack-run-powershell-script/#prepare-the-deployment-machine&quot;&gt;Deploy Azure Stack POC&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://channel9.msdn.com/Events/Ignite/2015/BRK3479&quot;&gt;Azure IaaS for Azure Stack&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/overview/azure-stack/&quot;&gt;Microsoft Azure Stack&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Mon, 09 May 2016 00:00:00 -0300</pubDate>
-        <link>/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</link>
-        <guid isPermaLink="true">/2016/05/09/devops-summit-2016azure-stack-o-poder-da-nuvem-em-seu-datacenter/</guid>
-        
-        
-        <category>Comunidade</category>
-        
-        <category>Microsoft Azure</category>
         
       </item>
     

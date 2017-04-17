@@ -3,7 +3,7 @@ layout: post
 title: Animações em ASCII
 date: 2013-01-16 
 categories:
-	- C#
+- C#
 image: "http://blob.vitormeriat.com.br/images/2013/01/1.png"
 ---
 <p align="center"><a href="http://blob.vitormeriat.com.br/images/2013/01/1.png"><img alt="1" src="http://blob.vitormeriat.com.br/images/2013/01/1.png" /></a></p>

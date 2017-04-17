@@ -184,6 +184,8 @@
 
 <p>Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.</p>
 
+<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg" /></p>
+
 <p>O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O conjunto de dados é composto por:</p>
 
 <ul>
@@ -199,7 +201,14 @@
   <li>Port of Embarkment.</li>
 </ul>
 
-<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg" class="absolute-bg" /></p>
+<p>Como na maioria das competições Kaggle, você recebe dois conjuntos de dados:</p>
+
+<ul>
+  <li>Um conjunto de treino completo com o resultado (outcome ou target variable), para um grupo de passageiros, bem como uma coleção de outros parâmetros, como sua idade, sexo, etc. Este é o conjunto de dados em que você deve treinar seu modelo preditivo.</li>
+  <li>Um conjunto de teste, para o qual você deve prever a variável de destino agora desconhecida com base nos outros atributos de passageiros que são fornecidos para ambos os conjuntos de dados.</li>
+</ul>
+
+<p>Este é um ótimo ponto de entrada para aprender machine learning com um conjunto de dados pequeno, gerenciável, interessante e com variáveis ​​de fácil compreensão.</p>
 
 <h1 id="passo-1">Passo 1</h1>
 <p>O colapso do “Titanic” está associada com a regra não escrita do salvamento no mar: “mulheres e crianças primeiro”.</p>
@@ -208,7 +217,7 @@
 
 <p>Para determinar se o passageiro sobreviveu ao “Titanic”, vamos usar uma árvore de decisão. Uma árvore de decisão é gerada automaticamente com base no parâmetro de entrada. A imagem abaixo mostra um exemplo de uma árvore de decisão é criada.</p>
 
-<p><img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg" class="absolute-bg" /></p>
+<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg" /></p>
 
 <h1 id="o-repositório">O repositório</h1>
 <p>Você pode olhar o código completo acessando o mesmo no repositório <strong>Meriat Machine Learning Notes</strong> no meu Github.</p>
@@ -247,7 +256,7 @@
   <div style="margin-top: 60px; margin-bottom: 60px;">
     
     
-      2 minutes to read
+      3 minutes to read
     
   </div>
 
@@ -281,6 +290,11 @@
 		<ul class="posts">
 		    
 		    <li>
+			  <span>14 Apr 2017 &raquo;</span>
+			  <a href="/2017/04/14/hello-world-r/">Hello World R - Da base à Regressão Linear</a>
+		    </li>
+		    
+		    <li>
 			  <span>01 Apr 2017 &raquo;</span>
 			  <a href="/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</a>
 		    </li>
@@ -288,11 +302,6 @@
 		    <li>
 			  <span>15 Feb 2017 &raquo;</span>
 			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
-		    </li>
-		    
-		    <li>
-			  <span>07 Feb 2017 &raquo;</span>
-			  <a href="/2017/02/07/literatura-classica-machine-learning/">Machine Learning e sua literatura clássica</a>
 		    </li>
 		    
 		</ul>
@@ -428,6 +437,8 @@
     <a href="/category/Deep Learning/" style="text-decoration: none;">Deep learning</a><br />
 
     <a href="/category/Cognitive Computing/" style="text-decoration: none;">Cognitive computing</a><br />
+
+    <a href="/category/R/" style="text-decoration: none;">R</a><br />
 
 <p /> -->
 <!-- <p class="post-meta">

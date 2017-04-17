@@ -132,15 +132,15 @@
   <div class="row">
     <div class="fh5co-spacer fh5co-spacer-sm"></div>
     <div class="col-md-12 text-center">
-      <h1>Windows Azure Storage: Azure Storage Emulator e Armazenamento na Nuvem</h1>
+      <h1>Hello World R - Da base à Regressão Linear</h1>
       
     </div>
     
       <h2 class="fh5co-uppercase-heading-sm text-center">
-        Cloud Computing &amp; Microsoft Azure &amp; Microsoft Azure Storage
+        R &amp; Data Science
       </h2>
     
-    <span><time datetime="2011-08-10T00:00:00-03:00" itemprop="datePublished">Aug 10, 2011</time></span>
+    <span><time datetime="2017-04-14T00:00:00-03:00" itemprop="datePublished">Apr 14, 2017</time></span>
   </div>
 
   <div class="fh5co-spacer fh5co-spacer-md"></div>
@@ -148,11 +148,11 @@
   <!-- <header class="section-padding-lg mast">
     <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
     <div class="mast-container" style="margin-bottom: 60px;">
-      <h1 itemprop="name headline">Windows Azure Storage: Azure Storage Emulator e Armazenamento na Nuvem</h1>
-      <span><time datetime="2011-08-10T00:00:00-03:00" itemprop="datePublished">Aug 10, 2011</time></span>
+      <h1 itemprop="name headline">Hello World R - Da base à Regressão Linear</h1>
+      <span><time datetime="2017-04-14T00:00:00-03:00" itemprop="datePublished">Apr 14, 2017</time></span>
       
         <span>
-          Posted in Cloud Computing, Microsoft Azure, Microsoft Azure Storage
+          Posted in R, Data Science
         </span>
       
       <span></span>
@@ -160,114 +160,215 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/06.png"><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;margin:0 10px 0 0;" title="06" alt="06" align="left" src="http://blob.vitormeriat.com.br/images/2011/08/06.png" width="310" height="218" /></a>
-<p align="justify">Uma das vantagens de uma oferta SaaS é poder oferecer uma baixa curva de aprendizagem para o desenvolvimento de aplicações. Como já vimos anteriormente, o Windows Azure no modelo software como serviço traz aos desenvolvedores esta facilidade. Toda a estrutura de um projeto Azure mantém familiaridade a um projeto Web comum, seja WebForm ou MVC por meio de seus papeis.
-<p align="justify">Para acessarmos nossa conta de armazenamento no Windows Azure, assim como necessário para qualquer aplicação web, devemos fornecer as credenciais para tal fim. É comum encontrarmos em ambientes de desenvolvimento com bases de produção e homologação, e é ai que se inicia a brincadeira.
-<p align="justify">É na string de conexão que informamos os parâmetros que são necessários para acessar a conta de armazenamento. Você pode configurar a string de conexão para as seguintes finalidades:
-<ul>
-<ul>
-<li>
-<div align="justify">Conectar o Windows Azure Storage Emulator para testes locais.</div>
-</li>
-<li>
-<div align="justify">Conectar a uma conta de armazenamento no Windows Azure usando os terminais (endpoints) padrão.</div>
-</li>
-<li>
-<div align="justify">Conectar a uma conta de armazenamento no Windows Azure usando terminais (endpoints) explícitos.</div>
-</li>
-</ul>
-</ul>
-<p><!--more-->
-<p align="justify">Assim como em uma aplicação Web, podemos por meio das definições de configuração fornecer uma ou mais strings de conexão. Isso nos possibilita a conforme a necessidade apontar para uma conta diferente. </p>
-<p align="justify">&nbsp;</p>
-<h3 align="justify">Armazenamento no Azure Storage Emulator</h3>
-<p align="justify">A plataforma Azure fornece um ambiente de desenvolvimento por meio do <b>Windows</b> <b>Azure storage emulator</b> que funciona como uma “nuvem local” para os serviços de armazenamento (blobs, queues, tables) para que você possa construir e testar suas aplicações antes da implantação no Windows Azure. Esta conta local possui um nome e chave comuns a todos os usuários o que nos possibilita o uso de uma sequência de “atalho” que faz referência a conta de armazenamento, a saber: <b>UseDevelopmentStorage=true</b>. Esta conta e chave comuns só permitem o acesso aos serviços locais de armazenamento. A título de informação:
-<ul>
-<ul>
-<li>
-<div align="justify"><b>AccountName</b>: devstoreaccount1</div>
-</li>
-<li>
-<div align="justify"><b>AccountKey</b>: Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1 SZFPTOtr/KBHBek soGMGw==</div>
-</li>
-</ul>
-</ul>
-<p align="justify"><font color="#777777"></font>Observe o código abaixo: </p>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/01.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="01" alt="01" src="http://blob.vitormeriat.com.br/images/2011/08/01.png" width="570" height="229" /></a>
-<p align="justify">Quando estamos desenvolvendo no ambiente de desenvolvimento temos acesso as credenciais da conta de armazenamento local por meio da propriedade DevelopmentStorageAccount da classe CloudStorageAccount que obtém um objeto do mesmo tipo que referência a conta de armazenamento de desenvolvimento.
-<p align="justify">Seguindo a lógica citada anteriormente, podemos fornecer o nome e chave de acesso a nossa conta de armazenamento de desenvolvimento como no código abaixo:
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/02.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="02" alt="02" src="http://blob.vitormeriat.com.br/images/2011/08/02.png" width="570" height="219" /></a>
-<p align="justify">Cabe aqui fazer uma observação: O esquema de URI trabalhado pelo emulador de armazenamento é diferente do esquema utilizado pelos serviços de armazenamento na nuvem. No ambiente de desenvolvimento o nome da conta faz parte do caminho hierárquico da URI já no armazenamento na nuvem o nome da conta faz parte do nome de domínio. Isto ocorre devido a resolução de nomes de domínio estarem disponíveis na nuvem, mas não no computador local. </p>
-<p align="justify">Devido a limitação citada acima, o esquema URI do emulador de armazenamento&nbsp; segue este formato:</p>
-<p align="justify"><a href="http://&lt;endereco-maquina-local&gt;:&lt;porta&gt;/&lt;nome-da-conta&gt;/&lt;recurso">http://&lt;endereco-maquina-local&gt;:&lt;porta&gt;/&lt;nome-da-conta&gt;/&lt;recurso</a>&gt;</p>
-<p align="justify">Os serviços&nbsp; podem ser acessados com os seguintes esquemas URI:</p>
-<ul>
-<ul>
-<li>
-<div align="justify">Blob: http://127.0.0.1:10000/&lt;nome-da-conta&gt;/&lt;recurso&gt;</div>
-</li>
-<li>
-<div align="justify">Queue: http://127.0.0.1:10001/&lt;nome-da-conta&gt;/&lt;recurso&gt;</div>
-</li>
-<li>
-<div align="justify">Table: http://127.0.0.1:10002/&lt;nome-da-conta&gt;/&lt;recurso&gt;</div>
-</li>
-</ul>
-</ul>
-<p align="justify"><font color="#777777">Um exemplo prático de endereço usado para acessar um blob no emulador de armazenamento seria:</font></p>
-<p align="justify"><a href="http://127.0.0.1:10000/minhaconta/meucontainer/meublob.txt">http://127.0.0.1:10000/minhaconta/meucontainer/meublob.txt</a></p>
-<blockquote><p align="justify">O emulador de armazenamento se baseia em um Microsoft SQL Server e fornece serviços semelhantes aos do armazenamento no Windows Azure. Por padrão, o emulador de armazenamento é configurado para um banco de dados Microsoft SQL Server Express nas versões 2005 ou 2008. Você pode instalar o SQL Server Management Studio Express para gerenciar sua instalação do SQL Server Express. Não é recomendado alterar a base gerada.</p>
-</blockquote>
-<p align="justify">O emulador de armazenamento é um processo (DSService.exe) que permite a utilização de uma interface para iniciar, parar, redefinir instâncias ou simplesmente desligar os serviços. Você pode acessar a interface seguindo os passos abaixo.</p>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2011/08/05.png"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="05" alt="05" src="http://blob.vitormeriat.com.br/images/2011/08/05.png" width="570" height="247" /></a></p>
-<p align="justify">&nbsp;</p>
-<h3 align="justify">Armazenamento na Nuvem</h3>
-<p align="justify">Você pode definir uma string de conexão para uma conta de armazenamento no Windows Azure de duas formas:
-<ul>
-<ul>
-<li>
-<div align="justify">Utilizar os endpoints padrão para os serviços de armazenamento. Esta é a opção mais simples uma vez que quando você usa este formato é necessário apenas informar o nome da conta e a chave e indicar se deseja conectar através de&nbsp; HTTP ou HTTPS. </div>
-</li>
-<li>
-<div align="justify">Especificar endpoints explícitos para os serviços de armazenamento, permitindo especificar endpoints para os serviços incluindo um nome de domínio personalizado ou minimizando a exposição de informações para um acesso compartilhado etc.</div>
-</li>
-</ul>
-</ul>
-<p align="justify"><font color="#777777">Formato utilizando endpoints padrão:</font></p>
-<ul>
-<li>
-<div align="justify"><code>DefaultEndpointsProtocol=[http|https];AccountName=nomeConta;AccountKey=chaveConta</code></div>
-</li>
-</ul>
-<p align="justify">Formato utilizando endpoints explícitos: </p>
-<ul>
-<li>
-<div align="left">BlobEndpoint=meuBlobEndpoint;QueueEndpoint=meuQueueEndpoint;&nbsp; TableEndpoint=meuTableEndpoint; AccountName=meuAccountName; AccountKey=meuAccountKey</div>
-</li>
-</ul>
-<p align="justify">O esquema básico de endereçamento para utilizar os recursos de armazenamento na nuvem é: &lt;http|https&gt;://&lt;account-name&gt;.&lt;service-name&gt;.core.windows.net/&lt;resource-path&gt; onde account-name representa o nome da conta, service-name o nome do serviço que esta sendo acessado e resource-path o recurso solicitado. Segue um exemplo com os esquemas URI para cada um dos serviços:</p>
-<ul>
-<ul>
-<li>
-<div align="justify">Blob: &lt;http|https&gt;://&lt;nome-da-conta&gt;.blob.core.windows.net/&lt;recurso&gt;</div>
-</li>
-<li>
-<div align="justify">Queue: &lt;http|https&gt;://&lt;nome-da-conta&gt;.queue.core.windows.net/&lt;recurso&gt;</div>
-</li>
-<li>
-<div align="justify">Table: &lt;http|https&gt;://&lt;nome-da-conta&gt;.table.core.windows.net/&lt;recurso&gt;</div>
-</li>
-</ul>
-</ul>
-<p align="justify">Um exemplo prático de endereço acessando um blob seria:</p>
-<p align="justify"><a href="http://vitormeriat.blob.core.windows.net/meucontainer/meublob.txt">http://vitormeriat.blob.core.windows.net/meucontainer/meublob.txt</a></p>
-<p align="justify">O código fonte do exemplo utilizado neste artigo pode ser baixado <a href="https://skydrive.live.com/?cid=bd055aa47a388023#!/?cid=bd055aa47a388023&amp;sc=documents&amp;uc=1&amp;id=BD055AA47A388023%21218" target="_blank">aqui!</a></p>
-<p>
+    <p>A linguagem R é um projeto GNU de software livre. O <strong>R</strong> derivou de uma linguagem chamada <strong>S</strong> (de “statistics”), criada na <strong>Bell Laboratories</strong> nos anos 70. Esta é uma linguagem usada por programadores e cientistas de dados para computação estatística.</p>
+
+<p>R foi desenvolvida por estatísticos para estatística, dado seu foco na resolução de problemas matemáticos, ele possui um estrutura simples o que facilita a implementação e traz ganhos na otimização no tempo de desenvolvimento. Você pode obter todas as referncias na documentação oficial em <a href="https://www.rdocumentation.org/">rdocumentation.org</a>, fora que é possível contar com um riquíssimo ecossistema de pacotes para diferentes áreas de aplicação.</p>
+
 <hr />
-<p>PS: Estreando outro desenho do mascote…</p>
-<p>&nbsp;</p>
-<h3>Um grande abraço e ótimo estudo!</h3>
-</p></p></p></p></p></p></p></p></p></p></p></p>
+
+<p>Para começar vamos criar um exemplo de regressão linear, uma espécie de <strong>“Hello World”</strong> da computação estatística. Então, mãos a obra…</p>
+
+<h2 id="regressão-linear">Regressão Linear</h2>
+
+<p>A regressão linear é uma técnica estatística usada para descrever a relação entre uma variável numérica (na estatística, chamada de variável dependente) e uma ou mais variáveis explicativas (chamadas de variáveis independentes) que podem ser numéricas ou categóricas. Quando há apenas uma única variável explicativa/de previsão, a técnica é chamada de regressão linear simples. Quando houver duas ou mais variáveis independentes, a técnica é chamada de regressão linear múltipla.</p>
+
+<p>Para iniciar vamos começar importando o arquivo de texto que será utilizado no exemplo.</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="r">
+    data &lt;- read.table("sementes.txt", header=TRUE, sep=",")
+    </code>
+</pre>
+
+<p>No trecho de código acima estamos utilizando a importação de um <strong>TXT</strong> como DataSet. Na operação que estamos utilizando, podemos observar que a linguagem <strong>R</strong> usa parâmetros nomeados. O parâmetro de cabeçalho informa se a primeira linha é de cabeçalho ou não. O parâmetro <strong>sep</strong> (separador) indica como os valores em cada linha são separados. Por exemplo, (\t) indica valores delimitados por tabulação, e (“ “) indica valores delimitados por espaço.</p>
+
+<blockquote>
+  <p>O R diferencia maiúsculas de minúsculas e você geralmente pode usar o operador (&lt;-) para atribuir valores, ou o operador (=). Essa escolha é uma questão de preferência pessoal, já que ambos exercem a mesma função. Tipicamente, a boa prática aponta para o uso do operador (&lt;-) na atribuição de objetos e (=) para atribuição de valores de parâmetro.</p>
+</blockquote>
+
+<p>Para se trabalhar com o <strong>CSV</strong>, formato mais comun nestes casos, seria tão simples quanto passar o caminho do arquivo.</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="r">
+    data &lt;- read.csv("sementes.csv")
+    </code>
+</pre>
+
+<p>Vamos olhar a estrutura de nosso arquivo. Se trata de uma listagem de sementes classificada por cor, comprimento, largura e índice de nutrientes. Nosso objetivo aqui é prever os valores da coluna nutrientes com base nos dados anteriores da semente.</p>
+
+<p>Uma vez que temos nosso arquivo carregado, podemos utilizar alguns comandos a fim de vizualizar o nosso conjunto de dados.</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="r">
+    # Exibe o shape dos dados
+    dim(data)
+
+    # Concatena duas strings
+    paste("Linhas: ", dim(data)[1], sep=" ")
+    paste("Colunas: ", dim(data)[2], sep=" ")
+
+    # Exibe o dados
+    print(data)
+    </code>
+</pre>
+
+<p>A primeira função exibe a estrutura básica dos dados, retornando a quantidade de linhas e colunas do dataset. Notem que estou utilizando a função <strong>paste()</strong> para concatenar duas strings. Aqui podemos ver que o resultado pode ser lido como um <strong>array</strong>, onde tenho na posição 1 o primeiro item, e na posição 2 o segundo item. Depois apenas nomeio qual é a coluna e qual é a linha. A próxima função irá exibir os dados como extraído do arquivo. Usamos a função <strong>print()</strong> para exibir qualquer saída para o nosso programa.</p>
+
+<p>Nossa saída seria algo como o que se segue abaixo:</p>
+
+<pre style="font-size: 1.2em !important">
+    <code class="r">
+    8 4
+
+    'Linhas:  8'
+    'Colunas:  4'
+
+       Color Length Width Nutrients
+    1   blue    5.4   1.8       0.9
+    2   blue    4.8   1.5       0.7
+    3   blue    4.9   1.6       0.8
+    4 yellow    5.0   1.9       0.4
+    5 yellow    5.2   1.5       0.3
+    6 yellow    4.7   1.9       0.4
+    7  green    3.7   2.2       1.4
+    8  green    4.2   1.9       1.2
+    </code>
+</pre>
+
+<blockquote>
+  <p>Observe que a saída acima exibe os índices do <strong>array de dados, começando em 1</strong>. Este é um ponto importante a se notar, já que na maioria das linguagens estamos acostumados com os índices de <strong>base 0</strong>, como em C# ou Python.</p>
+</blockquote>
+
+<p>Agora vamos executar a análise da função de <strong>Modelo Linear</strong>. Para isso execute os comandos abaixo:</p>
+
+<pre style="font-size: 1.4em !important">
+    <code class="r">
+  model &lt;- lm(data$Nutrients ~ (data$Color + data$Length + data$Width))
+
+  summary(model)
+    </code>
+</pre>
+
+<p>Neste trecho de código temos a variável <strong>model</strong> que é o resultado da nossa análise de regressão linear. Aqui estamos usando a função <strong>lm()</strong> <strong>(linear model)</strong>, na qual temos a <strong>variável dependente</strong> a ser prevista (data$Nutrients), e as variáveis independentes, a saber: <strong>data$Color, data$Length, data$Width</strong>.</p>
+
+<p>O próximo commando <strong>(summary(model))</strong>, vai exibir o resultádo básico formatado da análise que foi armazenda no objeto model. Teremos a seguinte saída para o código acima:</p>
+
+<pre style="font-size: 1.2em !important">
+    <code class="r">
+  Call:
+  lm(formula = data$Nutrients ~ (data$Color + data$Length + data$Width))
+
+  Residuals:
+          1         2         3         4         5         6         7         8
+   0.009418 -0.030030  0.020611 -0.028320  0.044164 -0.015844  0.042596 -0.042596
+
+  Coefficients:
+                   Estimate Std. Error t value Pr(&gt;|t|)   
+  (Intercept)      -0.14758    0.48286  -0.306  0.77986   
+  data$Colorgreen   0.35672    0.09990   3.571  0.03754 *
+  data$Coloryellow -0.49083    0.04507 -10.891  0.00166 **
+  data$Length       0.04159    0.07876   0.528  0.63406   
+  data$Width        0.45200    0.11973   3.775  0.03255 *
+  ---
+  Signif. codes:  0 ‘\***\’ 0.001 ‘\**\’ 0.01 ‘\*\’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+  Residual standard error: 0.05179 on 3 degrees of freedom
+  Multiple R-squared:  0.9927,	Adjusted R-squared:  0.9829
+  F-statistic: 101.6 on 4 and 3 DF,  p-value: 0.00156
+    </code>
+</pre>
+
+<p>Olhando para o nosso conjunto de dados responda a seguinte pergunta: Qual seria o valor de <u>Nutrientes</u> para uma determinada semente se a <u>cor</u> da mesma fosse <u>yellow</u> e suas <u>largura</u> e <u>altura</u> fossem <u>1.9</u> e <u>4.7</u> respectivamente?</p>
+
+<p>E ai? Já sabe a resposta?</p>
+
+<p>Olhando para o nosso dataset é fácil de responder esta pergunta. Estamos falando do item <u>[6]</u> de nossa lista. Sendo assim sabemos que o valor de nutrientes será <u>0.4</u>.</p>
+
+<p>Agora queremos <u>prever</u> este valor usando nosso modelo. Como faremos isso?</p>
+
+<p>Vamos olhar para o resultado da análse que fizemos anteriormente. Em Coefficients vamos utilizar apenas a primeira e segunda colunas. Temos aqui nossas variáveis independetes e suas estimativas.</p>
+
+<blockquote>
+  <p>Vale notar que temos uma constante chamada (Intercept), não associada a qualquer variável.</p>
+</blockquote>
+
+<p>Quando você tem variáveis explicativas categóricas, um dos valores é descartado. Em nosso caso o valor escolhido foi o blue.</p>
+
+<p>Para fazer uma previsão usando o modelo, é necessário calcular a soma linear dos valores das estimativas multiplicados pelos valores correspondentes em relação as variáveis independentes. Em nosso caso a equação seria:</p>
+
+<pre style="font-size: 1.2em !important">
+    <code class="r">
+  -0.14758 + (0.35672 * 0) + (-0.49083 * 1) + (0.04159 * 4.7) + (0.45200 * 1.9)
+    </code>
+</pre>
+
+<p>Vamos entender como chegar neste resultado. Com base nos quadro abaixo fica mais simples compreender:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">NA</th>
+      <th style="text-align: right">yellow</th>
+      <th style="text-align: right">green</th>
+      <th style="text-align: right">Length</th>
+      <th style="text-align: right">Width</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">-0.14758</td>
+      <td style="text-align: right">0.35672</td>
+      <td style="text-align: right">-0.49083</td>
+      <td style="text-align: right">0.04159</td>
+      <td style="text-align: right">0.45200</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin-bottom: 5em;"></div>
+
+<p>Primeiro listamos os valores da coluna Estimate. Depois para cada valor, multiplicamos a variável correspondente. No caso do primeiro valor estamos falando da constante Intercept, logo não existe valor a ser multiplicado. Para o segundo valor, temos como resultado <u>(0.35672 * 0)</u>. É o sugundo valor multiplicado por 0, já que nossa previsão não inclui a variável green. Multiplicamos o valor de data$Length, 0.04159 por 4.7 e temos (0.04159 * 4.7). A mesma lógica para data$Width e temos (0.45200 * 1.9).</p>
+
+<p>O resultado será 0.415863, um valor muito próximo de 0.40, que é o valor real descrito no arquivo.</p>
+
+<p>Na saída acima temos uma sessão, iniciada com <u>Residual standard error</u>. Aqui temos a relação entre as variáveis independentes e a variável dependente.</p>
+
+<pre style="font-size: 1.2em !important">
+    <code class="r">
+  Residual standard error: 0.05179 on 3 degrees of freedom
+  Multiple R-squared:  0.9927,	Adjusted R-squared:  0.9829
+  F-statistic: 101.6 on 4 and 3 DF,  p-value: 0.00156
+    </code>
+</pre>
+
+<p>O valor de <u>Multiple R-squared (0,9927)</u> é a porcentagem de variação na variável dependente explicada pela combinação linear das variáveis independentes. Neste caso os valores de R-squared são valores entre 0 e 1, onde os valores mais altos significam um modelo de previsão melhor. Em nosso caso, R-squared tem um valor extremamente alto, indicando que Color, Length e Width podem prever o resultado com boa precisão. F-statistic, Adjusted R-squared e p-value são outras medidas de ajuste do modelo.</p>
+
+<h2 id="referências">Referências</h2>
+<ul>
+  <li><a href="https://www.rdocumentation.org/">rdocumentation.org</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Linear_regression">Linear Regression</a></li>
+</ul>
+
+<style type="text/css">
+table {
+	color:#333333;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+table th {
+	border-width: 1px;
+	padding: 12px;
+	border-style: solid;
+	background-color: #dedede;
+}
+table td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	background-color: #ffffff;
+}
+</style>
+
 
   </section>
 
@@ -283,11 +384,11 @@
 
 <!-- 
   <section class="next">
-    <a class="next__link" href="/2011/08/03/windows-azure-storage-decolando-com-armazenamento-na-nuvem/" >
+    <a class="next__link" href="/2017/04/01/devopssummitbrasil-azure-cognitive-services/" >
       <div class="next-container" style="margin: 60px 0 60px 0;">
         <hr>
         <h4>Read Previous <i class="fa fa-lg fa-arrow-right"></i></h4>
-        <span style="font-size: 1.6em;">Windows Azure Storage: Decolando com armazenamento na Nuvem!</span>
+        <span style="font-size: 1.6em;">Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</span>
         <hr>
       </div>
     </a>
@@ -297,31 +398,22 @@
   <div style="margin-top: 60px; margin-bottom: 60px;">
     
     
-      5 minutes to read
+      7 minutes to read
     
   </div>
 
 
   <section class="next">
     
-    <a class="next__link" href="/2011/08/03/windows-azure-storage-decolando-com-armazenamento-na-nuvem/" >
+    <a class="next__link" href="/2017/04/01/devopssummitbrasil-azure-cognitive-services/" >
       <div class="next-container">
         <hr>
         <div style="font-size: 2em; margin-bottom: 1em; color: black;"><i class="fa fa-lg fa-arrow-left"></i> Read Older</div>
-        <span style="font-size: 1.6em;">Windows Azure Storage: Decolando com armazenamento na Nuvem!</span>
+        <span style="font-size: 1.6em;">Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</span>
         <hr>
       </div>
     </a>
     
-    
-    <a class="next__link" href="/2011/08/12/charge-da-semana-gerenciando-projetos-parte-1/" style="text-align: right;" >
-      <div class="next-container">
-        <hr>
-        <div style="font-size: 2em; margin-bottom: 1em; color: black;">Read Newer <i class="fa fa-lg fa-arrow-right"></i></div>
-        <span style="font-size: 1.6em;">Charge da Semana: Gerenciando Projetos parte 1</span>
-        <hr>
-      </div>
-    </a>
     
   </section>
 
@@ -331,11 +423,6 @@
 		<ul class="posts">
 		    
 		    <li>
-			  <span>14 Apr 2017 &raquo;</span>
-			  <a href="/2017/04/14/hello-world-r/">Hello World R - Da base à Regressão Linear</a>
-		    </li>
-		    
-		    <li>
 			  <span>01 Apr 2017 &raquo;</span>
 			  <a href="/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</a>
 		    </li>
@@ -343,6 +430,11 @@
 		    <li>
 			  <span>18 Mar 2017 &raquo;</span>
 			  <a href="/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
+		    </li>
+		    
+		    <li>
+			  <span>15 Feb 2017 &raquo;</span>
+			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
 		    </li>
 		    
 		</ul>
@@ -355,7 +447,7 @@
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="/2011/08/03/windows-azure-storage-decolando-com-armazenamento-na-nuvem/"><< Older</a>
+      <a href="/2017/04/01/devopssummitbrasil-azure-cognitive-services/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
@@ -363,7 +455,7 @@
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <a href="/2011/08/12/charge-da-semana-gerenciando-projetos-parte-1/">Newer >></a>
+      <span>Newer >></span>
     
   </div>
 </div> -->
