@@ -9,7 +9,7 @@ description: "Esta é minha primeira impressão utilizando a linguagem R, usada 
 image: "https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png"
 ---
 
-<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png" class="absolute-bg"></p>
+<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png"></p>
 
 A linguagem R é um projeto GNU de software livre. O **R** derivou de uma linguagem chamada **S** (de "statistics"), criada na **Bell Laboratories** nos anos 70. Esta é uma linguagem usada por programadores e cientistas de dados para computação estatística.
 
