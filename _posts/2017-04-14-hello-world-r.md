@@ -6,7 +6,10 @@ categories:
     - R
     - Data Science
 description: "Esta é minha primeira impressão utilizando a linguagem R, usada por programadores e cientistas de dados com ênfase em computação estatísticas. Para começar com o pé direito, nada como implementar uma regressão linear para iniciar."
+image: "https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png"
 ---
+
+<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png" class="absolute-bg"></p>
 
 A linguagem R é um projeto GNU de software livre. O **R** derivou de uma linguagem chamada **S** (de "statistics"), criada na **Bell Laboratories** nos anos 70. Esta é uma linguagem usada por programadores e cientistas de dados para computação estatística.
 
@@ -24,7 +27,7 @@ Para iniciar vamos começar importando o arquivo de texto que será utilizado no
 
 <pre style="font-size: 1.6em !important">
     <code class="r">
-    data <- read.table("sementes.txt", header=TRUE, sep=",")
+  data <- read.table("sementes.txt", header=TRUE, sep=",")
     </code>
 </pre>
 
@@ -36,7 +39,7 @@ Para se trabalhar com o **CSV**, formato mais comun nestes casos, seria tão sim
 
 <pre style="font-size: 1.6em !important">
     <code class="r">
-    data <- read.csv("sementes.csv")
+  data <- read.csv("sementes.csv")
     </code>
 </pre>
 
@@ -46,15 +49,15 @@ Uma vez que temos nosso arquivo carregado, podemos utilizar alguns comandos a fi
 
 <pre style="font-size: 1.6em !important">
     <code class="r">
-    # Exibe o shape dos dados
-    dim(data)
+  # Exibe o shape dos dados
+  dim(data)
 
-    # Concatena duas strings
-    paste("Linhas: ", dim(data)[1], sep=" ")
-    paste("Colunas: ", dim(data)[2], sep=" ")
+  # Concatena duas strings
+  paste("Linhas: ", dim(data)[1], sep=" ")
+  paste("Colunas: ", dim(data)[2], sep=" ")
 
-    # Exibe o dados
-    print(data)
+  # Exibe o dados
+  print(data)
     </code>
 </pre>
 
@@ -64,20 +67,20 @@ Nossa saída seria algo como o que se segue abaixo:
 
 <pre style="font-size: 1.2em !important">
     <code class="r">
-    8 4
+  8 4
 
-    'Linhas:  8'
-    'Colunas:  4'
+  'Linhas:  8'
+  'Colunas:  4'
 
-       Color Length Width Nutrients
-    1   blue    5.4   1.8       0.9
-    2   blue    4.8   1.5       0.7
-    3   blue    4.9   1.6       0.8
-    4 yellow    5.0   1.9       0.4
-    5 yellow    5.2   1.5       0.3
-    6 yellow    4.7   1.9       0.4
-    7  green    3.7   2.2       1.4
-    8  green    4.2   1.9       1.2
+     Color Length Width Nutrients
+  1   blue    5.4   1.8       0.9
+  2   blue    4.8   1.5       0.7
+  3   blue    4.9   1.6       0.8
+  4 yellow    5.0   1.9       0.4
+  5 yellow    5.2   1.5       0.3
+  6 yellow    4.7   1.9       0.4
+  7  green    3.7   2.2       1.4
+  8  green    4.2   1.9       1.2
     </code>
 </pre>
 
@@ -168,6 +171,11 @@ Na saída acima temos uma sessão, iniciada com <u>Residual standard error</u>. 
 
 O valor de <u>Multiple R-squared (0,9927)</u> é a porcentagem de variação na variável dependente explicada pela combinação linear das variáveis independentes. Neste caso os valores de R-squared são valores entre 0 e 1, onde os valores mais altos significam um modelo de previsão melhor. Em nosso caso, R-squared tem um valor extremamente alto, indicando que Color, Length e Width podem prever o resultado com boa precisão. F-statistic, Adjusted R-squared e p-value são outras medidas de ajuste do modelo.
 
+## Impressões
+No geral minha primeira impressão da linguagem <u><b>R</b></u> foi muito boa. Achei uma sintaxe limpa, fácil e bem direcionada ao seu propósito. Já tinha em mente que esta seria uma linguagem orientada a estatística computacional, mas esperava algo mais rebuscado, diferente da facilidade de compreensão que tive.
+
+## Conclusão
+Minha ideia aqui não era fazer um comparativo, ou muito menos explicar os principais comandos da linguagem. A documentação por si só já é eficaz, e ainda existe uma infinidade de materiais sobre este tema. Preferi aqui fazer uma analise da minha impressão ao implementar uma técnica básica como a regressão linear.
 
 ## Referências
 * [rdocumentation.org](https://www.rdocumentation.org/)
