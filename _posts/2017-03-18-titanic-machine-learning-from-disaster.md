@@ -31,7 +31,7 @@ A história do Titanic é muito conhecida, tendo originado diversos livros, film
 
 Neste caso não temos complicação com elementos aleatórios de sorte. A maioria dos sobreviventes eram mulheres, crianças e pessoas da alta sociedade.
 
-# Start
+## Start
 
 A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, **train.csv** e **test.csv**. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de **treino**. Nos dados de teste este valor precisa ser deduzido.
 
@@ -59,11 +59,15 @@ Como na maioria das competições Kaggle, você recebe dois conjuntos de dados:
 
 Este é um ótimo ponto de entrada para aprender machine learning com um conjunto de dados pequeno, gerenciável, interessante e com variáveis ​​de fácil compreensão.
 
+<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern.png"></p>
+
 
 # Passo 1
 O colapso do "Titanic" está associada com a regra não escrita do salvamento no mar: "mulheres e crianças primeiro".
 
 Nesta tarefa, os competidores precisam analisar a probabilidade de sobrevivência das diferentes categorias de passageiros.
+
+<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png"></p>
 
 Para determinar se o passageiro sobreviveu ao "Titanic", vamos usar uma árvore de decisão. Uma árvore de decisão é gerada automaticamente com base no parâmetro de entrada. A imagem abaixo mostra um exemplo de uma árvore de decisão é criada.
 
