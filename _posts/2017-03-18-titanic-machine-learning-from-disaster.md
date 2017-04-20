@@ -67,11 +67,40 @@ O colapso do "Titanic" está associada com a regra não escrita do salvamento no
 
 Nesta tarefa, os competidores precisam analisar a probabilidade de sobrevivência das diferentes categorias de passageiros.
 
-<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png"></p>
-
 Para determinar se o passageiro sobreviveu ao "Titanic", vamos usar uma árvore de decisão. Uma árvore de decisão é gerada automaticamente com base no parâmetro de entrada. A imagem abaixo mostra um exemplo de uma árvore de decisão é criada.
 
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg"></p>
+
+Vamos estipular o sexo dos passageiros e tripulantes. Este é um  dado importante, uma vez que o sexo do passageiro desempenha um papel crucial para determinar a sobrevivência do mesmo. Um simples count revela que temos 891 passageiros dos quais 65% são homens e 35% são mulheres.
+
+| Gender | Count of Passengers |  |
+|:------|:------:|------:|
+| female | 314 | 35% |
+| male | 577 | 65% |
+
+Se adicionarmos a sobrevivência a equação vamos ver que existe um padrão aqui.
+
+| Count of Passengers | Survived Status |  |  |
+|:------|:------:|------:|------:|
+| Gender | Not Survived | Survived | Total |
+| female | 81 | 233 | 314 |
+| male | 468 | 109 | 577 |
+| Total | 549 | 342 | 891 |
+
+O seguinte pode ser observado a partir dos dados acima:
+
+1. 62% (549/891) dos passageiros não sobreviveram  
+2. 38% (342/891) sobreviveram
+
+Dos 38% que sobreviveram, os passageiros do sexo feminino sobreviveram em maior número maior que os passageiros machos
+
+1. De todos os passageiros do sexo feminino (233/314) 74% sobreviveram
+2. De todos os passageiros do sexo masculino (109/577), apenas 19% sobreviveram
+
+Podemos ilustrar o comportamento usando uma árvore de decisão. Cada nó determina o resultado final com base na maioria. Os votos no nó da direita para sobreviveu já que a maioria sobreviveu ao passo que os votos de nó à esquerda para não sobreviveu já que a maioria não sobreviveu.
+
+<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png"></p>
+
 
 # O repositório
 Você pode olhar o código completo acessando o mesmo no repositório **Meriat Machine Learning Notes** no meu Github.
