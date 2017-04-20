@@ -101,6 +101,8 @@ Podemos ilustrar o comportamento usando uma árvore de decisão. Cada nó determ
 
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png"></p>
 
+Este é nosso primeiro padrão. O dataset de treino é chamado de **labelled dataset**, onde a coluna <u>Survived</u> é chamda de "label" ou **response data**. Esta abordagem é chamada de aprendizagem supervisionada, onde aprendemos com os dados de treino e aplicamos este aprendizado nos dados de teste. O resultado desta abordagem é binária, portanto estamos aplicando a técnica de classificação, utilizando duas classes, a saber, survived or not survived.
+
 
 # O repositório
 Você pode olhar o código completo acessando o mesmo no repositório **Meriat Machine Learning Notes** no meu Github.
