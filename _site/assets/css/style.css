@@ -1549,8 +1549,8 @@ td.text-right {
   width: 80px;
 }
 .author article{
-  margin-left:80px;
-  min-height: 80px;
+  margin-left:100px;
+  min-height: 100px;
   padding-left:20px;
 }
 img.profile {

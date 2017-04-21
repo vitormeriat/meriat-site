@@ -899,6 +899,9 @@
 <loc>http://localhost:4000/category/sql/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/category/statistics/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/category/testes/</loc>
 </url>
 <url>
