@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 20 Apr 2017 23:41:13 -0300</pubDate>
-    <lastBuildDate>Thu, 20 Apr 2017 23:41:13 -0300</lastBuildDate>
+    <pubDate>Fri, 21 Apr 2017 00:39:50 -0300</pubDate>
+    <lastBuildDate>Fri, 21 Apr 2017 00:39:50 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -47,6 +47,7 @@
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
 
 &lt;p&gt;Em nosso contexto, vamos considerar as linhas como observações/recursos, e as colunas vamos chamar de variáveis. As perguntas que nossas variáveis respondem são: “Qual o seu nome?” e “Qual a sua idade?”.&lt;/p&gt;
 
@@ -93,159 +94,62 @@
 
 &lt;p&gt;Sendo assim, podemos definir que se o resultado a pergunta for numérica &lt;u&gt;(&quot;Qual a sua idade?&quot;)&lt;/u&gt;, então temos uma variável numérica. Se a reposta não pode ser representada de forma númerica &lt;u&gt;(&quot;Qual a raça do seu cachorro?&quot;)&lt;/u&gt;, então temos uma variável categórica.&lt;/p&gt;
 
-&lt;p&gt;Uma variável originalmente numérica pode ser coletada de forma categórica. 
+&lt;p&gt;Uma variável originalmente numérica pode ser coletada de forma categórica.
 Por exemplo, a variável idade, medida em anos completos, é quantitativa (contínua); mas, se for informada apenas a faixa etária (0 a 5 anos, 6 a 10 anos, etc…), é qualitativa (ordinal). Outro exemplo é o peso dos lutadores de boxe, uma variável quantitativa (contínua) se trabalhamos com o valor obtido na balança, mas qualitativa (ordinal) se o classificarmos nas categorias do boxe (peso-pena, peso-leve, peso-pesado, etc.).&lt;/p&gt;
 
 &lt;p&gt;Outro ponto importante é que nem sempre uma variável representada por números é quantitativa/numérica.&lt;/p&gt;
 
 &lt;p&gt;O número do telefone de uma pessoa, o número da casa, o número de sua identidade. Às vezes o sexo do indivíduo é registrado na planilha de dados como 1 se macho e 2 se fêmea, por exemplo. Isto não significa que a variável sexo passou a ser quantitativa!&lt;/p&gt;
 
+&lt;h3 id=&quot;variáveis-ordinais&quot;&gt;Variáveis Ordinais&lt;/h3&gt;
+&lt;p&gt;Geralmente vemos isso nos formulários e questionários que muitas vezes somos obrigados a responder. Geralmente essas pesquisar vem com opções como “Discordo Fortemente”, “Discordo”, “Neutro”, “Concordo” ou “Concordo Plenamente”. Estes dados têm uma estrutura especial, uma vez que refletem uma hierarquia, onde 0 representa o item de valor mais baixo, e 4 representa o item de valor mais alto.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;0 = Discordo Totalmente&lt;/li&gt;
+  &lt;li&gt;1 = Discordo&lt;/li&gt;
+  &lt;li&gt;2 = Neutro&lt;/li&gt;
+  &lt;li&gt;3 = Concordo&lt;/li&gt;
+  &lt;li&gt;4 = Concordo Totalmente&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Um primeiro cuidado em relação a codificação numérica é nunca destuir a hierarquia real dos dados. Se fizermos como está abaixo, nosso trabalho estará destruído.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;0 = Discordo Totalmente&lt;/li&gt;
+  &lt;li&gt;2 = Discordo&lt;/li&gt;
+  &lt;li&gt;1 = Neutro&lt;/li&gt;
+  &lt;li&gt;4 = Concordo&lt;/li&gt;
+  &lt;li&gt;5 = Concordo Totalmente&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;variáveis-nominais&quot;&gt;Variáveis Nominais&lt;/h3&gt;
+&lt;p&gt;Às vezes não há hierarquia em dados categóricos. Se a cor dos olhos foi codificada 0 “Azul” 1 “Verde” 2 “Castanhos”, temos que escolher aleatoriamente qual opção recebe qual número. Não importa se os olhos azuis são zero, ou um, ou dois, porque não há hierarquia na cor dos olhos.&lt;/p&gt;
+
+&lt;h3 id=&quot;variáveis-discretas&quot;&gt;Variáveis Discretas&lt;/h3&gt;
+&lt;p&gt;Todas as variáveis ​​contínuas são numéricas, mas  nem todas as variáveis ​​numéricas são contínuas.&lt;/p&gt;
+
+&lt;p&gt;“Quantas crianças você tem?” Não tem um número infinito de respostas, tem um número finito ou “discreto”. Você não pode ter 2,7 filhos, é 2 ou 3. Você pode estar pensando “Ok - números inteiros significa variável discreta”, mas isso é uma armadilha. E quanto à variável “tamanho do sapato”? Este é muitas vezes um número como 6,5 ou 10,5, mas não há um número infinito de tamanhos de sapato que existem, que seria o fim da fabricação de calçados como sabemos!&lt;/p&gt;
+
+&lt;p&gt;As variáveis ​​discretas não precisam de codificação porque são numéricas&lt;/p&gt;
+
+&lt;h3 id=&quot;variáveis-contínuas&quot;&gt;Variáveis Contínuas&lt;/h3&gt;
+&lt;p&gt;Este conceito é difícil, mas você vai ficar bem porque já definimos o conceito de uma variável como resposta a uma pergunta .&lt;/p&gt;
+
+&lt;p&gt;Algumas perguntas têm um monte de respostas  . Se você perguntar a 100 pessoas “Qual é o número da rua de sua casa?”, Você pode obter perto de 100 respostas diferentes. Isso é um pouco irritante, mas não vai quebrar seu software estatístico.&lt;/p&gt;
+
+&lt;p&gt;Algumas perguntas têm um número infinito de  respostas . Literalmente, não existem números suficientes para capturar todas as possibilidades. Pode surpreender você saber quais variáveis ​​se enquadram nesta categoria; Como altura, peso e idade.&lt;/p&gt;
+
+&lt;p&gt;Isto é porque 1,543 metros não é o mesmo que 1,5429 metros. Estes são números diferentes. 1.54299 é diferente novamente. Assim é 1.542999 metros. Acho que você vê o que estou dizendo, há um número ilimitado de números disponíveis para nós para representar a altura de alguém. O mesmo é verdade para peso e idade (e pressão arterial, e um monte de outras medições médicas). Na prática, estamos presos com um número mais limitado de opções, mas isso não muda o fato de que a própria variável tem possibilidades infinitas. Por favor, faça uma pergunta sobre isso nos comentários se você está confuso. Uma boa regra é que quase todas as medições são contínuas.&lt;/p&gt;
+
+&lt;p&gt;Quem se importa se uma variável é contínua? Você não precisa se importar muito frequentemente. Mas quando começamos a falar sobre a probabilidade de pesos e alturas particulares, esse detalhe teórico se torna extremamente importante.&lt;/p&gt;
+
+&lt;p&gt;As variáveis ​​contínuas não exigem codificação, pois elas são sempre numéricas.&lt;/p&gt;
+
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;variáveis-codificadas&quot;&gt;Variáveis Codificadas&lt;/h2&gt;
 
 &lt;p&gt;Eu não posso analisar diretamente uma sentença como &lt;u&gt;&quot;Hoje é terça-feira&quot;&lt;/u&gt; em termos estatísticos. Quando nossa variável não é númerica, precisamos transformar cada resposta à nossa pergunta em um número, para que o mesmo possa ser analisado. Este processo de conversão é chamado de “codificação”. Como codificar uma variável vai depender do seu tipo de dado.&lt;/p&gt;
-
-&lt;p&gt;http://leg.ufpr.br/~silvia/CE055/node9.html&lt;/p&gt;
-
-&lt;p&gt;http://survivestatistics.com/variables/&lt;/p&gt;
-
-&lt;style&gt;
-div.table-title {
-  display: block;
-  margin: auto;
-  max-width: 600px;
-  padding:5px;
-  width: 100%;
-}
-
-.table-title h3 {
-   color: #fafafa;
-   font-size: 30px;
-   font-weight: 400;
-   font-style:normal;
-   font-family: &quot;Roboto&quot;, helvetica, arial, sans-serif;
-   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-   text-transform:uppercase;
-}
-
-
-/*** Table Styles **/
-
-.table-fill {
-  background: white;
-  border-radius:3px;
-  border-collapse: collapse;
-  height: 320px;
-  margin: auto;
-  max-width: 600px;
-  padding:5px;
-  width: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  animation: float 5s infinite;
-}
- 
-th {
-  color:#D5DDE5;;
-  background:#1b1e24;
-  border-bottom:4px solid #9ea7af;
-  border-right: 1px solid #343a45;
-  font-size:23px;
-  font-weight: 100;
-  padding:24px;
-  text-align:left;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  vertical-align:middle;
-}
-
-th:first-child {
-  border-top-left-radius:3px;
-}
- 
-th:last-child {
-  border-top-right-radius:3px;
-  border-right:none;
-}
-  
-tr {
-  border-top: 1px solid #C1C3D1;
-  border-bottom-: 1px solid #C1C3D1;
-  color:#666B85;
-  font-size:16px;
-  font-weight:normal;
-  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
-}
- 
-tr:hover td {
-  background:#4E5066;
-  color:#FFFFFF;
-  border-top: 1px solid #22262e;
-  border-bottom: 1px solid #22262e;
-}
- 
-tr:first-child {
-  border-top:none;
-}
-
-tr:last-child {
-  border-bottom:none;
-}
- 
-tr:nth-child(odd) td {
-  background:#EBEBEB;
-}
- 
-tr:nth-child(odd):hover td {
-  background:#4E5066;
-}
-
-tr:last-child td:first-child {
-  border-bottom-left-radius:3px;
-}
- 
-tr:last-child td:last-child {
-  border-bottom-right-radius:3px;
-}
- 
-td {
-  background:#FFFFFF;
-  padding:20px;
-  text-align:left;
-  vertical-align:middle;
-  font-weight:300;
-  font-size:18px;
-  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #C1C3D1;
-}
-
-td:last-child {
-  border-right: 0px;
-}
-
-th.text-left {
-  text-align: left;
-}
-
-th.text-center {
-  text-align: center;
-}
-
-th.text-right {
-  text-align: right;
-}
-
-td.text-left {
-  text-align: left;
-}
-
-td.text-center {
-  text-align: center;
-}
-
-td.text-right {
-  text-align: right;
-}
-
-&lt;/style&gt;
-
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
@@ -406,28 +310,25 @@ td.text-right {
 
 &lt;p&gt;Vamos entender como chegar neste resultado. Com base nos quadro abaixo fica mais simples compreender:&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;NA&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;yellow&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;green&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Length&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Width&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
+&lt;table class=&quot;table-fill&quot;&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;-0.14758&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.35672&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;-0.49083&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.04159&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.45200&lt;/td&gt;
+      &lt;th&gt;NA&lt;/th&gt;
+      &lt;th&gt;yellow&lt;/th&gt;
+      &lt;th&gt;green&lt;/th&gt;
+      &lt;th&gt;Length&lt;/th&gt;
+      &lt;th&gt;Width&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-0.14758&lt;/td&gt;
+      &lt;td&gt;0.35672&lt;/td&gt;
+      &lt;td&gt;-0.49083&lt;/td&gt;
+      &lt;td&gt;0.04159&lt;/td&gt;
+      &lt;td&gt;0.45200&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
 
 &lt;p&gt;Primeiro listamos os valores da coluna Estimate. Depois para cada valor, multiplicamos a variável correspondente. No caso do primeiro valor estamos falando da constante Intercept, logo não existe valor a ser multiplicado. Para o segundo valor, temos como resultado &lt;u&gt;(0.35672 * 0)&lt;/u&gt;. É o sugundo valor multiplicado por 0, já que nossa previsão não inclui a variável green. Multiplicamos o valor de data$Length, 0.04159 por 4.7 e temos (0.04159 * 4.7). A mesma lógica para data$Width e temos (0.45200 * 1.9).&lt;/p&gt;
 
@@ -456,27 +357,6 @@ td.text-right {
   &lt;li&gt;&lt;a href=&quot;https://www.rdocumentation.org/&quot;&gt;rdocumentation.org&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_regression&quot;&gt;Linear Regression&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;style type=&quot;text/css&quot;&gt;
-table {
-	color:#333333;
-	border-width: 1px;
-	border-collapse: collapse;
-}
-table th {
-	border-width: 1px;
-	padding: 12px;
-	border-style: solid;
-	background-color: #dedede;
-}
-table td {
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	background-color: #ffffff;
-}
-&lt;/style&gt;
-
 </description>
         <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2017/04/14/hello-world-r/</link>

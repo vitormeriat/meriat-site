@@ -149,11 +149,25 @@ Para fazer uma previsão usando o modelo, é necessário calcular a soma linear 
 
 Vamos entender como chegar neste resultado. Com base nos quadro abaixo fica mais simples compreender:
 
-| NA | yellow | green | Length | Width |
-|------:|------:|------:|------:|------:|
-| -0.14758 | 0.35672 | -0.49083 | 0.04159 | 0.45200 |
-
-<div style="margin-bottom: 5em;"></div>
+<table class="table-fill">
+  <tbody>
+    <tr>
+      <th>NA</th>
+      <th>yellow</th>
+      <th>green</th>
+      <th>Length</th>
+      <th>Width</th>
+    </tr>
+    <tr>
+      <td>-0.14758</td>
+      <td>0.35672</td>
+      <td>-0.49083</td>
+      <td>0.04159</td>
+      <td>0.45200</td>
+    </tr>
+  </tbody>
+</table>
+<div style="margin-bottom: 3em;"></div>
 
 Primeiro listamos os valores da coluna Estimate. Depois para cada valor, multiplicamos a variável correspondente. No caso do primeiro valor estamos falando da constante Intercept, logo não existe valor a ser multiplicado. Para o segundo valor, temos como resultado <u>(0.35672 * 0)</u>. É o sugundo valor multiplicado por 0, já que nossa previsão não inclui a variável green. Multiplicamos o valor de data$Length, 0.04159 por 4.7 e temos (0.04159 * 4.7). A mesma lógica para data$Width e temos (0.45200 * 1.9).
 
@@ -180,24 +194,3 @@ Minha ideia aqui não era fazer um comparativo, ou muito menos explicar os princ
 ## Referências
 * [rdocumentation.org](https://www.rdocumentation.org/)
 * [Linear Regression](https://en.wikipedia.org/wiki/Linear_regression)
-
-
-<style type="text/css">
-table {
-	color:#333333;
-	border-width: 1px;
-	border-collapse: collapse;
-}
-table th {
-	border-width: 1px;
-	padding: 12px;
-	border-style: solid;
-	background-color: #dedede;
-}
-table td {
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	background-color: #ffffff;
-}
-</style>

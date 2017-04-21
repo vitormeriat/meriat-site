@@ -306,28 +306,25 @@
 
 <p>Vamos entender como chegar neste resultado. Com base nos quadro abaixo fica mais simples compreender:</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: right">NA</th>
-      <th style="text-align: right">yellow</th>
-      <th style="text-align: right">green</th>
-      <th style="text-align: right">Length</th>
-      <th style="text-align: right">Width</th>
-    </tr>
-  </thead>
+<table class="table-fill">
   <tbody>
     <tr>
-      <td style="text-align: right">-0.14758</td>
-      <td style="text-align: right">0.35672</td>
-      <td style="text-align: right">-0.49083</td>
-      <td style="text-align: right">0.04159</td>
-      <td style="text-align: right">0.45200</td>
+      <th>NA</th>
+      <th>yellow</th>
+      <th>green</th>
+      <th>Length</th>
+      <th>Width</th>
+    </tr>
+    <tr>
+      <td>-0.14758</td>
+      <td>0.35672</td>
+      <td>-0.49083</td>
+      <td>0.04159</td>
+      <td>0.45200</td>
     </tr>
   </tbody>
 </table>
-
-<div style="margin-bottom: 5em;"></div>
+<div style="margin-bottom: 3em;"></div>
 
 <p>Primeiro listamos os valores da coluna Estimate. Depois para cada valor, multiplicamos a variável correspondente. No caso do primeiro valor estamos falando da constante Intercept, logo não existe valor a ser multiplicado. Para o segundo valor, temos como resultado <u>(0.35672 * 0)</u>. É o sugundo valor multiplicado por 0, já que nossa previsão não inclui a variável green. Multiplicamos o valor de data$Length, 0.04159 por 4.7 e temos (0.04159 * 4.7). A mesma lógica para data$Width e temos (0.45200 * 1.9).</p>
 
@@ -356,27 +353,6 @@
   <li><a href="https://www.rdocumentation.org/">rdocumentation.org</a></li>
   <li><a href="https://en.wikipedia.org/wiki/Linear_regression">Linear Regression</a></li>
 </ul>
-
-<style type="text/css">
-table {
-	color:#333333;
-	border-width: 1px;
-	border-collapse: collapse;
-}
-table th {
-	border-width: 1px;
-	padding: 12px;
-	border-style: solid;
-	background-color: #dedede;
-}
-table td {
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	background-color: #ffffff;
-}
-</style>
-
 
   </section>
 

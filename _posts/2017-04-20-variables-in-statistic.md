@@ -5,10 +5,9 @@ date: 2017-04-20
 categories:
     - Statistics
     - Data Science
-description: "Esta é minha primeira impressão utilizando a linguagem R, usada por programadores e cientistas de dados com ênfase em computação estatísticas. Para começar com o pé direito, nada como implementar uma regressão linear para iniciar."
+description: "Em Machine Lerning falamos em estática, e para ambos existe um elemento fundamental: dados. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico."
 image: "http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png"
 ---
-
 
 Em Machine Lerning falamos em estática, e para ambos existe um elemento fundamental: dados. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.
 
@@ -44,6 +43,7 @@ Observe a tabela abaixo:
     </tr>
   </tbody>
 </table>
+<div style="margin-bottom: 3em;"></div>
 
 Em nosso contexto, vamos considerar as linhas como observações/recursos, e as colunas vamos chamar de variáveis. As perguntas que nossas variáveis respondem são: "Qual o seu nome?" e "Qual a sua idade?".
 
@@ -51,7 +51,7 @@ Em nosso contexto, vamos considerar as linhas como observações/recursos, e as 
 
 **Como assim? O que você quer dizer com isso?**
 
-Se olharmos para a variável idade, não sabemos se ela se refere a idade do escritor hoje, a idade no momento de algum escrito famoso ou se foi a idade que ele tinha na época de seu falecimento. 
+Se olharmos para a variável idade, não sabemos se ela se refere a idade do escritor hoje, a idade no momento de algum escrito famoso ou se foi a idade que ele tinha na época de seu falecimento.
 
 Uma de nossas tarefas é investigar nossa fonte de dados em busca de compreender o verdadeiro significado de cada variável.
 
@@ -77,158 +77,57 @@ Variáveis podem ser classificadas da seguinte forma:
 
 > As distinções são menos rígidas do que a descrição acima nos apresenta.
 
-Sendo assim, podemos definir que se o resultado a pergunta for numérica <u>("Qual a sua idade?")</u>, então temos uma variável numérica. Se a reposta não pode ser representada de forma númerica <u>("Qual a raça do seu cachorro?")</u>, então temos uma variável categórica. 
+Sendo assim, podemos definir que se o resultado a pergunta for numérica <u>("Qual a sua idade?")</u>, então temos uma variável numérica. Se a reposta não pode ser representada de forma númerica <u>("Qual a raça do seu cachorro?")</u>, então temos uma variável categórica.
 
-Uma variável originalmente numérica pode ser coletada de forma categórica. 
+Uma variável originalmente numérica pode ser coletada de forma categórica.
 Por exemplo, a variável idade, medida em anos completos, é quantitativa (contínua); mas, se for informada apenas a faixa etária (0 a 5 anos, 6 a 10 anos, etc...), é qualitativa (ordinal). Outro exemplo é o peso dos lutadores de boxe, uma variável quantitativa (contínua) se trabalhamos com o valor obtido na balança, mas qualitativa (ordinal) se o classificarmos nas categorias do boxe (peso-pena, peso-leve, peso-pesado, etc.).
 
 Outro ponto importante é que nem sempre uma variável representada por números é quantitativa/numérica.
 
 O número do telefone de uma pessoa, o número da casa, o número de sua identidade. Às vezes o sexo do indivíduo é registrado na planilha de dados como 1 se macho e 2 se fêmea, por exemplo. Isto não significa que a variável sexo passou a ser quantitativa!
 
+### Variáveis Ordinais
+Geralmente vemos isso nos formulários e questionários que muitas vezes somos obrigados a responder. Geralmente essas pesquisar vem com opções como "Discordo Fortemente", "Discordo", "Neutro", "Concordo" ou "Concordo Plenamente". Estes dados têm uma estrutura especial, uma vez que refletem uma hierarquia, onde 0 representa o item de valor mais baixo, e 4 representa o item de valor mais alto.
+
+* 0 = Discordo Totalmente
+* 1 = Discordo
+* 2 = Neutro
+* 3 = Concordo
+* 4 = Concordo Totalmente
+
+Um primeiro cuidado em relação a codificação numérica é nunca destuir a hierarquia real dos dados. Se fizermos como está abaixo, nosso trabalho estará destruído.
+
+* 0 = Discordo Totalmente
+* 2 = Discordo
+* 1 = Neutro
+* 4 = Concordo
+* 5 = Concordo Totalmente
+
+### Variáveis Nominais
+Às vezes não há hierarquia em dados categóricos. Se a cor dos olhos foi codificada 0 "Azul" 1 "Verde" 2 "Castanhos", temos que escolher aleatoriamente qual opção recebe qual número. Não importa se os olhos azuis são zero, ou um, ou dois, porque não há hierarquia na cor dos olhos.
+
+### Variáveis Discretas
+Todas as variáveis ​​contínuas são numéricas, mas  nem todas as variáveis ​​numéricas são contínuas.
+
+"Quantas crianças você tem?" Não tem um número infinito de respostas, tem um número finito ou "discreto". Você não pode ter 2,7 filhos, é 2 ou 3. Você pode estar pensando "Ok - números inteiros significa variável discreta", mas isso é uma armadilha. E quanto à variável "tamanho do sapato"? Este é muitas vezes um número como 6,5 ou 10,5, mas não há um número infinito de tamanhos de sapato que existem, que seria o fim da fabricação de calçados como sabemos!
+
+As variáveis ​​discretas não precisam de codificação porque são numéricas
+
+### Variáveis Contínuas
+Este conceito é difícil, mas você vai ficar bem porque já definimos o conceito de uma variável como resposta a uma pergunta .
+
+Algumas perguntas têm um monte de respostas  . Se você perguntar a 100 pessoas "Qual é o número da rua de sua casa?", Você pode obter perto de 100 respostas diferentes. Isso é um pouco irritante, mas não vai quebrar seu software estatístico.
+
+Algumas perguntas têm um número infinito de  respostas . Literalmente, não existem números suficientes para capturar todas as possibilidades. Pode surpreender você saber quais variáveis ​​se enquadram nesta categoria; Como altura, peso e idade.
+
+Isto é porque 1,543 metros não é o mesmo que 1,5429 metros. Estes são números diferentes. 1.54299 é diferente novamente. Assim é 1.542999 metros. Acho que você vê o que estou dizendo, há um número ilimitado de números disponíveis para nós para representar a altura de alguém. O mesmo é verdade para peso e idade (e pressão arterial, e um monte de outras medições médicas). Na prática, estamos presos com um número mais limitado de opções, mas isso não muda o fato de que a própria variável tem possibilidades infinitas. Por favor, faça uma pergunta sobre isso nos comentários se você está confuso. Uma boa regra é que quase todas as medições são contínuas.
+
+Quem se importa se uma variável é contínua? Você não precisa se importar muito frequentemente. Mas quando começamos a falar sobre a probabilidade de pesos e alturas particulares, esse detalhe teórico se torna extremamente importante.
+
+As variáveis ​​contínuas não exigem codificação, pois elas são sempre numéricas.
+
+<hr/>
+
 ## Variáveis Codificadas
 
 Eu não posso analisar diretamente uma sentença como <u>"Hoje é terça-feira"</u> em termos estatísticos. Quando nossa variável não é númerica, precisamos transformar cada resposta à nossa pergunta em um número, para que o mesmo possa ser analisado. Este processo de conversão é chamado de "codificação". Como codificar uma variável vai depender do seu tipo de dado.
-
-
-http://leg.ufpr.br/~silvia/CE055/node9.html
-
-http://survivestatistics.com/variables/
-
-<style>
-div.table-title {
-  display: block;
-  margin: auto;
-  max-width: 600px;
-  padding:5px;
-  width: 100%;
-}
-
-.table-title h3 {
-   color: #fafafa;
-   font-size: 30px;
-   font-weight: 400;
-   font-style:normal;
-   font-family: "Roboto", helvetica, arial, sans-serif;
-   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-   text-transform:uppercase;
-}
-
-
-/*** Table Styles **/
-
-.table-fill {
-  background: white;
-  border-radius:3px;
-  border-collapse: collapse;
-  height: 320px;
-  margin: auto;
-  max-width: 600px;
-  padding:5px;
-  width: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  animation: float 5s infinite;
-}
- 
-th {
-  color:#D5DDE5;;
-  background:#1b1e24;
-  border-bottom:4px solid #9ea7af;
-  border-right: 1px solid #343a45;
-  font-size:23px;
-  font-weight: 100;
-  padding:24px;
-  text-align:left;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  vertical-align:middle;
-}
-
-th:first-child {
-  border-top-left-radius:3px;
-}
- 
-th:last-child {
-  border-top-right-radius:3px;
-  border-right:none;
-}
-  
-tr {
-  border-top: 1px solid #C1C3D1;
-  border-bottom-: 1px solid #C1C3D1;
-  color:#666B85;
-  font-size:16px;
-  font-weight:normal;
-  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
-}
- 
-tr:hover td {
-  background:#4E5066;
-  color:#FFFFFF;
-  border-top: 1px solid #22262e;
-  border-bottom: 1px solid #22262e;
-}
- 
-tr:first-child {
-  border-top:none;
-}
-
-tr:last-child {
-  border-bottom:none;
-}
- 
-tr:nth-child(odd) td {
-  background:#EBEBEB;
-}
- 
-tr:nth-child(odd):hover td {
-  background:#4E5066;
-}
-
-tr:last-child td:first-child {
-  border-bottom-left-radius:3px;
-}
- 
-tr:last-child td:last-child {
-  border-bottom-right-radius:3px;
-}
- 
-td {
-  background:#FFFFFF;
-  padding:20px;
-  text-align:left;
-  vertical-align:middle;
-  font-weight:300;
-  font-size:18px;
-  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #C1C3D1;
-}
-
-td:last-child {
-  border-right: 0px;
-}
-
-th.text-left {
-  text-align: left;
-}
-
-th.text-center {
-  text-align: center;
-}
-
-th.text-right {
-  text-align: right;
-}
-
-td.text-left {
-  text-align: left;
-}
-
-td.text-center {
-  text-align: center;
-}
-
-td.text-right {
-  text-align: right;
-}
-
-</style>
