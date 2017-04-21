@@ -3,69 +3,46 @@ layout: default
 ---
 
 <div class="container">
-
-<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <div class="row">
-    <div class="fh5co-spacer fh5co-spacer-sm"></div>
-    <div class="col-md-12 text-center">
-      <h1>{{ page.title }}</h1>
-      {% if post.subtitle %}
-      <h4 class="post-subtitle">
-          {{ post.subtitle }}
-      </h4>
-      {% endif %}
-    </div>
-    {% if page.categories.size > 0 %}
-      <h2 class="fh5co-uppercase-heading-sm text-center">
-        {{ page.categories | join: ' &amp; ' }}
-      </h2>
-    {% endif %}
-    <span><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>
-  </div>
-
-  <div class="fh5co-spacer fh5co-spacer-md"></div>
-
-  <!-- <header class="section-padding-lg mast">
-    <figure class="absolute-bg mast__img" style="background-image: url('{{ page.image }}');"></figure>
-    <div class="mast-container" style="margin-bottom: 60px;">
-      <h1 itemprop="name headline">{{ page.title }}</h1>
-      <span><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>
+  <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+      <div class="fh5co-spacer fh5co-spacer-sm"></div>
+      <div class="col-md-12 text-center">
+        <h1>{{ page.title }}</h1>
+        {% if post.subtitle %}
+        <h4 class="post-subtitle">
+            {{ post.subtitle }}
+        </h4>
+        {% endif %}
+      </div>
       {% if page.categories.size > 0 %}
-        <span>
-          Posted in {{ page.categories | join: ', ' }}
-        </span>
+        <h2 class="fh5co-uppercase-heading-sm text-center">
+          {{ page.categories | join: ' &amp; ' }}
+        </h2>
       {% endif %}
-      <span></span>
+      <span><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>
     </div>
-  </header> -->
+    <div class="fh5co-spacer fh5co-spacer-md"></div>
+    <section class="section-padding post" itemprop="articleBody">
+      {{ content }}
+    </section>
+  </article>
 
-  <section class="section-padding post" itemprop="articleBody">
-    {{ content }}
+  <hr/>
+  <section class="author">
+  	<header> <a href="{{ site.baseurl }}"> <img class="profile" src="/assets/images/profile.jpg" alt="Author's profile picture"></a></header>
+  	<article>
+  		<!-- Author Name -->
+      	<h4> {{ site.author }} </h4>
+      	<!-- Author Bio -->
+      	<p>
+      		Vitor is a computer scientist who is passionate about creating software that will positively change the world we live in.
+      	</p>
+        <p>Share this post: <a href="http://twitter.com/share?text={{page.title}}&amp;url={{site.url}}{{ page.url }}"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><i class="fa fa-twitter fa-1x"></i> Twitter</a> - <a href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><i class="fa fa-facebook fa-1x"></i> Facebook</a></p>
+      </article>
   </section>
-
-  <!-- <section class="profile">
-    <div class="profile__card">
-      <div class="profile__img">
-        <figure class="absolute-bg" style="background-image: url('{{ site.profile_img }}');"></figure>
-      </div>
-    </div>
-  </section> -->
-
-</article>
-
-<!-- {% if page.previous.url %}
-  <section class="next">
-    <a class="next__link" href="{{page.previous.url | prepend: site.baseurl }}" >
-      <div class="next-container" style="margin: 60px 0 60px 0;">
-        <hr>
-        <h4>Read Previous <i class="fa fa-lg fa-arrow-right"></i></h4>
-        <span style="font-size: 1.6em;">{{page.previous.title}}</span>
-        <hr>
-      </div>
-    </a>
-  </section>
-{% endif %} -->
+  <hr/>
 
   <div style="margin-top: 60px; margin-bottom: 60px;">
     {% capture words %}
@@ -76,80 +53,13 @@ layout: default
     {% endunless %}
   </div>
 
-
-  <section class="next">
-    {% if page.previous.url %}
-    <a class="next__link" href="{{page.previous.url | prepend: site.baseurl }}" >
-      <div class="next-container">
-        <hr>
-        <div style="font-size: 2em; margin-bottom: 1em; color: black;"><i class="fa fa-lg fa-arrow-left"></i> Read Older</div>
-        <span style="font-size: 1.6em;">{{page.previous.title}}</span>
-        <hr>
-      </div>
-    </a>
-    {% endif %}
-    {% if page.next.url %}
-    <a class="next__link" href="{{page.next.url | prepend: site.baseurl }}" style="text-align: right;" >
-      <div class="next-container">
-        <hr>
-        <div style="font-size: 2em; margin-bottom: 1em; color: black;">Read Newer <i class="fa fa-lg fa-arrow-right"></i></div>
-        <span style="font-size: 1.6em;">{{page.next.title}}</span>
-        <hr>
-      </div>
-    </a>
-    {% endif %}
-  </section>
-
-<!-- {% if site.related_posts %}
-	<div class="related">
-		<h4>Related Posts</h4>
-		<ul class="posts">
-		    {% for post in site.related_posts limit:3 %}
-		    <li>
-			  <span>{{ post.date | date_to_string }} &raquo;</span>
-			  <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
-		    </li>
-		    {% endfor %}
-		</ul>
-	</div>
-{% endif %}
-
-<br>
-<br> -->
-
-<!-- <div class="post-footer">
-  <div style="text-align: left; width: 33.33%; float: left;">
-    {% if page.previous %}
-      <a href="{{page.previous.url | prepend: site.baseurl | prepend: site.url }}"><< Older</a>
-    {% else %}
-      <span><< Older</span>
-    {% endif %}
-  </div>
-  <div style="text-align: center; width: 33.33%; float: left;">
-    <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }} ">Home</a>
-  </div>
-  <div style="text-align: right; width: 33.33%; float: left;">
-    {% if page.next %}
-      <a href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}">Newer >></a>
-    {% else %}
-      <span>Newer >></span>
-    {% endif %}
-  </div>
-</div> -->
-
-</div>
-<!-- <h3>Categories</h3>
-{% for category in site.categories %}
-    <a href="/category/{{ category[0] }}/" style="text-decoration: none;">{% if category[0] == 'aws' %}{{ category[0] | upcase }}{% else %}{{ category[0] | capitalize }}{% endif %}</a><br />
-{% endfor %}
-<p /> -->
-<!-- <p class="post-meta">
-  Posted by
-  {% if post.author %}
-    {{ post.author }}
-  {% else %}
-    {{ site.title }}
+  <div class="PageNavigation">
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}"><i class="fa fa-lg fa-arrow-left"></i> {{page.previous.title}}</a>
   {% endif %}
-  on {{ post.date | date: "%B %-d, %Y" }}
-</p> -->
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">{{page.next.title}} <i class="fa fa-lg fa-arrow-right"></i></a>
+  {% endif %}
+  </div>
+</div>
 <div style="height: 80px;"></div>

@@ -167,7 +167,8 @@ Vamos entender como chegar neste resultado. Com base nos quadro abaixo fica mais
     </tr>
   </tbody>
 </table>
-<div style="margin-bottom: 3em;"></div>
+
+<!-- <div style="margin-bottom: 3em;"></div> -->
 
 Primeiro listamos os valores da coluna Estimate. Depois para cada valor, multiplicamos a variável correspondente. No caso do primeiro valor estamos falando da constante Intercept, logo não existe valor a ser multiplicado. Para o segundo valor, temos como resultado <u>(0.35672 * 0)</u>. É o sugundo valor multiplicado por 0, já que nossa previsão não inclui a variável green. Multiplicamos o valor de data$Length, 0.04159 por 4.7 e temos (0.04159 * 4.7). A mesma lógica para data$Width e temos (0.45200 * 1.9).
 

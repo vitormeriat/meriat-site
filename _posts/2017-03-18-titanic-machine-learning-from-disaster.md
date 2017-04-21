@@ -17,9 +17,7 @@ image-full: "http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg"
 
 O **Projeto Titanic** é uma competição de **Data Science** promovida pelo [Kaggle.com](kaggle.com). O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic.
 
-
 <hr/>
-
 
 Embora os [Mythbusters](https://www.youtube.com/watch?v=JVgkvaDHmto) em seu programa tenham provado completamente que era possível Jack e Rose ter sobrevivido utilizando a porta flutuante, o interesse aqui é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.
 
@@ -39,7 +37,7 @@ Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três mode
 
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg"></p>
 
-O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O conjunto de dados é composto por:
+O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O dataset é composto por:
 
 * Class
 * Name
@@ -63,7 +61,7 @@ Este é um ótimo ponto de entrada para aprender machine learning com um conjunt
 
 
 # Passo 1
-O colapso do "Titanic" está associada com a regra não escrita do salvamento no mar: "mulheres e crianças primeiro".
+A tragédia do "Titanic" está associada com a regra não escrita do salvamento no mar: "mulheres e crianças primeiro".
 
 Nesta tarefa, os competidores precisam analisar a probabilidade de sobrevivência das diferentes categorias de passageiros.
 
@@ -73,19 +71,62 @@ Para determinar se o passageiro sobreviveu ao "Titanic", vamos usar uma árvore 
 
 Vamos estipular o sexo dos passageiros e tripulantes. Este é um  dado importante, uma vez que o sexo do passageiro desempenha um papel crucial para determinar a sobrevivência do mesmo. Um simples count revela que temos 891 passageiros dos quais 65% são homens e 35% são mulheres.
 
-| Gender | Count of Passengers |  |
-|:------|:------:|------:|
-| female | 314 | 35% |
-| male | 577 | 65% |
+<table class="table-fill">
+  <tbody>
+    <tr>
+      <th>Gender</th>
+      <th>Count of Passengers</th>
+      <th> % </th>
+    </tr>
+    <tr>
+      <td>female</td>
+      <td>314</td>
+      <td>35%</td>
+    </tr>
+    <tr>
+      <td>male</td>
+      <td>577</td>
+      <td>65%</td>
+    </tr>
+  </tbody>
+</table>
 
-Se adicionarmos a sobrevivência a equação vamos ver que existe um padrão aqui.
+Se adicionarmos a taxa de sobrevivência a equação vamos ver que existe um padrão aqui.
 
-| Count of Passengers | Survived Status |  |  |
-|:------|:------:|------:|------:|
-| Gender | Not Survived | Survived | Total |
-| female | 81 | 233 | 314 |
-| male | 468 | 109 | 577 |
-| Total | 549 | 342 | 891 |
+<table class="table-fill">
+  <tbody>
+    <tr>
+      <th>Count of Passengers</th>
+      <th>Survived Status</th>
+      <th> </th>
+      <th> </th>
+    </tr>
+    <tr>
+      <td style="background: #63dd69; color: white;">Gender</td>
+      <td style="background: #63dd69; color: white;">Not Survived</td>
+      <td style="background: #63dd69; color: white;">Survived</td>
+      <td style="background: #63dd69; color: white;">Total</td>
+    </tr>
+    <tr>
+      <td>female</td>
+      <td>81</td>
+      <td>233</td>
+      <td>314</td>
+    </tr>
+    <tr>
+      <td>male</td>
+      <td>468</td>
+      <td>109</td>
+      <td>577</td>
+    </tr>
+    <tr>
+      <td style="background: #777777; color: white;">Total</td>
+      <td style="background: #777777; color: white;">549</td>
+      <td style="background: #777777; color: white;">342</td>
+      <td style="background: #777777; color: white;">891</td>
+    </tr>
+  </tbody>
+</table>
 
 O seguinte pode ser observado a partir dos dados acima:
 
@@ -97,11 +138,11 @@ Dos 38% que sobreviveram, os passageiros do sexo feminino sobreviveram em maior 
 1. De todos os passageiros do sexo feminino (233/314) 74% sobreviveram
 2. De todos os passageiros do sexo masculino (109/577), apenas 19% sobreviveram
 
-Podemos ilustrar o comportamento usando uma árvore de decisão. Cada nó determina o resultado final com base na maioria. Os votos no nó da direita para sobreviveu já que a maioria sobreviveu ao passo que os votos de nó à esquerda para não sobreviveu já que a maioria não sobreviveu.
+Podemos ilustrar este comportamento usando uma árvore de decisão. Cada nó determina o resultado final com base na maioria. Os votos do nó à direita representam o status de sobrevivência, já que a maioria nesta opção sobreviveu. Os votos do à esquerda representam o status de não sobrevivência, uma vez que a maioria não sobreviveu.
 
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png"></p>
 
-Este é nosso primeiro padrão. O dataset de treino é chamado de **labelled dataset**, onde a coluna <u>Survived</u> é chamda de "label" ou **response data**. Esta abordagem é chamada de aprendizagem supervisionada, onde aprendemos com os dados de treino e aplicamos este aprendizado nos dados de teste. O resultado desta abordagem é binária, portanto estamos aplicando a técnica de classificação, utilizando duas classes, a saber, survived or not survived.
+Este é nosso primeiro padrão. Par facilitar vamos conceituar algumas coisas: O dataset de treino é chamado de **labelled dataset**, onde a coluna <u>Survived</u> é chamda de "label" ou **response data**. Esta abordagem é chamada de aprendizagem supervisionada, onde aprendemos com os dados de treino e aplicamos este aprendizado nos dados de teste. O resultado desta abordagem é binária, portanto estamos aplicando uma técnica de classificação, utilizando duas classes, a saber, **survived** ou **not survived**.
 
 
 # O repositório

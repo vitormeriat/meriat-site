@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Variáveis em Estatística e Macnhine Learning"
+title: "Variáveis, Estatística e Macnhine Learning"
 date: 2017-04-20
 categories:
     - Statistics
@@ -43,7 +43,8 @@ Observe a tabela abaixo:
     </tr>
   </tbody>
 </table>
-<div style="margin-bottom: 3em;"></div>
+
+<!-- <div style="margin-bottom: 3em;"></div> -->
 
 Em nosso contexto, vamos considerar as linhas como observações/recursos, e as colunas vamos chamar de variáveis. As perguntas que nossas variáveis respondem são: "Qual o seu nome?" e "Qual a sua idade?".
 
@@ -131,3 +132,5 @@ As variáveis ​​contínuas não exigem codificação, pois elas são sempre 
 ## Variáveis Codificadas
 
 Eu não posso analisar diretamente uma sentença como <u>"Hoje é terça-feira"</u> em termos estatísticos. Quando nossa variável não é númerica, precisamos transformar cada resposta à nossa pergunta em um número, para que o mesmo possa ser analisado. Este processo de conversão é chamado de "codificação". Como codificar uma variável vai depender do seu tipo de dado.
+
+Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.

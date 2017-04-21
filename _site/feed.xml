@@ -5,12 +5,12 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 21 Apr 2017 00:39:50 -0300</pubDate>
-    <lastBuildDate>Fri, 21 Apr 2017 00:39:50 -0300</lastBuildDate>
+    <pubDate>Fri, 21 Apr 2017 14:20:25 -0300</pubDate>
+    <lastBuildDate>Fri, 21 Apr 2017 14:20:25 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
-        <title>Variáveis em Estatística e Macnhine Learning</title>
+        <title>Variáveis, Estatística e Macnhine Learning</title>
         <description>&lt;p&gt;Em Machine Lerning falamos em estática, e para ambos existe um elemento fundamental: dados. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -47,7 +47,8 @@
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
+
+&lt;!-- &lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt; --&gt;
 
 &lt;p&gt;Em nosso contexto, vamos considerar as linhas como observações/recursos, e as colunas vamos chamar de variáveis. As perguntas que nossas variáveis respondem são: “Qual o seu nome?” e “Qual a sua idade?”.&lt;/p&gt;
 
@@ -150,6 +151,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;h2 id=&quot;variáveis-codificadas&quot;&gt;Variáveis Codificadas&lt;/h2&gt;
 
 &lt;p&gt;Eu não posso analisar diretamente uma sentença como &lt;u&gt;&quot;Hoje é terça-feira&quot;&lt;/u&gt; em termos estatísticos. Quando nossa variável não é númerica, precisamos transformar cada resposta à nossa pergunta em um número, para que o mesmo possa ser analisado. Este processo de conversão é chamado de “codificação”. Como codificar uma variável vai depender do seu tipo de dado.&lt;/p&gt;
+
+&lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
@@ -328,7 +331,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
+
+&lt;!-- &lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt; --&gt;
 
 &lt;p&gt;Primeiro listamos os valores da coluna Estimate. Depois para cada valor, multiplicamos a variável correspondente. No caso do primeiro valor estamos falando da constante Intercept, logo não existe valor a ser multiplicado. Para o segundo valor, temos como resultado &lt;u&gt;(0.35672 * 0)&lt;/u&gt;. É o sugundo valor multiplicado por 0, já que nossa previsão não inclui a variável green. Multiplicamos o valor de data$Length, 0.04159 por 4.7 e temos (0.04159 * 4.7). A mesma lógica para data$Width e temos (0.45200 * 1.9).&lt;/p&gt;
 
@@ -467,7 +471,7 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O conjunto de dados é composto por:&lt;/p&gt;
+&lt;p&gt;O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O dataset é composto por:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Class&lt;/li&gt;
@@ -494,7 +498,7 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;passo-1&quot;&gt;Passo 1&lt;/h1&gt;
-&lt;p&gt;O colapso do “Titanic” está associada com a regra não escrita do salvamento no mar: “mulheres e crianças primeiro”.&lt;/p&gt;
+&lt;p&gt;A tragédia do “Titanic” está associada com a regra não escrita do salvamento no mar: “mulheres e crianças primeiro”.&lt;/p&gt;
 
 &lt;p&gt;Nesta tarefa, os competidores precisam analisar a probabilidade de sobrevivência das diferentes categorias de passageiros.&lt;/p&gt;
 
@@ -504,63 +508,59 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 
 &lt;p&gt;Vamos estipular o sexo dos passageiros e tripulantes. Este é um  dado importante, uma vez que o sexo do passageiro desempenha um papel crucial para determinar a sobrevivência do mesmo. Um simples count revela que temos 891 passageiros dos quais 65% são homens e 35% são mulheres.&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Gender&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Count of Passengers&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt; &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
+&lt;table class=&quot;table-fill&quot;&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;female&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;314&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;35%&lt;/td&gt;
+      &lt;th&gt;Gender&lt;/th&gt;
+      &lt;th&gt;Count of Passengers&lt;/th&gt;
+      &lt;th&gt; % &lt;/th&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;male&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;577&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;65%&lt;/td&gt;
+      &lt;td&gt;female&lt;/td&gt;
+      &lt;td&gt;314&lt;/td&gt;
+      &lt;td&gt;35%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;male&lt;/td&gt;
+      &lt;td&gt;577&lt;/td&gt;
+      &lt;td&gt;65%&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Se adicionarmos a sobrevivência a equação vamos ver que existe um padrão aqui.&lt;/p&gt;
+&lt;p&gt;Se adicionarmos a taxa de sobrevivência a equação vamos ver que existe um padrão aqui.&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Count of Passengers&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Survived Status&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt; &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
+&lt;table class=&quot;table-fill&quot;&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Gender&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Not Survived&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;Survived&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;Total&lt;/td&gt;
+      &lt;th&gt;Count of Passengers&lt;/th&gt;
+      &lt;th&gt;Survived Status&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;female&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;81&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;233&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;314&lt;/td&gt;
+      &lt;td style=&quot;background: #63dd69; color: white;&quot;&gt;Gender&lt;/td&gt;
+      &lt;td style=&quot;background: #63dd69; color: white;&quot;&gt;Not Survived&lt;/td&gt;
+      &lt;td style=&quot;background: #63dd69; color: white;&quot;&gt;Survived&lt;/td&gt;
+      &lt;td style=&quot;background: #63dd69; color: white;&quot;&gt;Total&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;male&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;468&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;109&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;577&lt;/td&gt;
+      &lt;td&gt;female&lt;/td&gt;
+      &lt;td&gt;81&lt;/td&gt;
+      &lt;td&gt;233&lt;/td&gt;
+      &lt;td&gt;314&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Total&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;549&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;342&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;891&lt;/td&gt;
+      &lt;td&gt;male&lt;/td&gt;
+      &lt;td&gt;468&lt;/td&gt;
+      &lt;td&gt;109&lt;/td&gt;
+      &lt;td&gt;577&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;background: #777777; color: white;&quot;&gt;Total&lt;/td&gt;
+      &lt;td style=&quot;background: #777777; color: white;&quot;&gt;549&lt;/td&gt;
+      &lt;td style=&quot;background: #777777; color: white;&quot;&gt;342&lt;/td&gt;
+      &lt;td style=&quot;background: #777777; color: white;&quot;&gt;891&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -579,11 +579,11 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
   &lt;li&gt;De todos os passageiros do sexo masculino (109/577), apenas 19% sobreviveram&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Podemos ilustrar o comportamento usando uma árvore de decisão. Cada nó determina o resultado final com base na maioria. Os votos no nó da direita para sobreviveu já que a maioria sobreviveu ao passo que os votos de nó à esquerda para não sobreviveu já que a maioria não sobreviveu.&lt;/p&gt;
+&lt;p&gt;Podemos ilustrar este comportamento usando uma árvore de decisão. Cada nó determina o resultado final com base na maioria. Os votos do nó à direita representam o status de sobrevivência, já que a maioria nesta opção sobreviveu. Os votos do à esquerda representam o status de não sobrevivência, uma vez que a maioria não sobreviveu.&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Este é nosso primeiro padrão. O dataset de treino é chamado de &lt;strong&gt;labelled dataset&lt;/strong&gt;, onde a coluna &lt;u&gt;Survived&lt;/u&gt; é chamda de “label” ou &lt;strong&gt;response data&lt;/strong&gt;. Esta abordagem é chamada de aprendizagem supervisionada, onde aprendemos com os dados de treino e aplicamos este aprendizado nos dados de teste. O resultado desta abordagem é binária, portanto estamos aplicando a técnica de classificação, utilizando duas classes, a saber, survived or not survived.&lt;/p&gt;
+&lt;p&gt;Este é nosso primeiro padrão. Par facilitar vamos conceituar algumas coisas: O dataset de treino é chamado de &lt;strong&gt;labelled dataset&lt;/strong&gt;, onde a coluna &lt;u&gt;Survived&lt;/u&gt; é chamda de “label” ou &lt;strong&gt;response data&lt;/strong&gt;. Esta abordagem é chamada de aprendizagem supervisionada, onde aprendemos com os dados de treino e aplicamos este aprendizado nos dados de teste. O resultado desta abordagem é binária, portanto estamos aplicando uma técnica de classificação, utilizando duas classes, a saber, &lt;strong&gt;survived&lt;/strong&gt; ou &lt;strong&gt;not survived&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;o-repositório&quot;&gt;O repositório&lt;/h1&gt;
 &lt;p&gt;Você pode olhar o código completo acessando o mesmo no repositório &lt;strong&gt;Meriat Machine Learning Notes&lt;/strong&gt; no meu Github.&lt;/p&gt;
