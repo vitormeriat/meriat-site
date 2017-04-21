@@ -146,7 +146,7 @@
   <div class="fh5co-spacer fh5co-spacer-md"></div>
 
   <!-- <header class="section-padding-lg mast">
-    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <figure class="absolute-bg mast__img" style="background-image: url('https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png');"></figure>
     <div class="mast-container" style="margin-bottom: 60px;">
       <h1 itemprop="name headline">Hello World R - Da base à Regressão Linear</h1>
       <span><time datetime="2017-04-14T00:00:00-03:00" itemprop="datePublished">Apr 14, 2017</time></span>
@@ -160,7 +160,9 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p>A linguagem R é um projeto GNU de software livre. O <strong>R</strong> derivou de uma linguagem chamada <strong>S</strong> (de “statistics”), criada na <strong>Bell Laboratories</strong> nos anos 70. Esta é uma linguagem usada por programadores e cientistas de dados para computação estatística.</p>
+    <p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png" /></p>
+
+<p>A linguagem R é um projeto GNU de software livre. O <strong>R</strong> derivou de uma linguagem chamada <strong>S</strong> (de “statistics”), criada na <strong>Bell Laboratories</strong> nos anos 70. Esta é uma linguagem usada por programadores e cientistas de dados para computação estatística.</p>
 
 <p>R foi desenvolvida por estatísticos para estatística, dado seu foco na resolução de problemas matemáticos, ele possui um estrutura simples o que facilita a implementação e traz ganhos na otimização no tempo de desenvolvimento. Você pode obter todas as referncias na documentação oficial em <a href="https://www.rdocumentation.org/">rdocumentation.org</a>, fora que é possível contar com um riquíssimo ecossistema de pacotes para diferentes áreas de aplicação.</p>
 
@@ -176,7 +178,7 @@
 
 <pre style="font-size: 1.6em !important">
     <code class="r">
-    data &lt;- read.table("sementes.txt", header=TRUE, sep=",")
+  data &lt;- read.table("sementes.txt", header=TRUE, sep=",")
     </code>
 </pre>
 
@@ -190,7 +192,7 @@
 
 <pre style="font-size: 1.6em !important">
     <code class="r">
-    data &lt;- read.csv("sementes.csv")
+  data &lt;- read.csv("sementes.csv")
     </code>
 </pre>
 
@@ -200,15 +202,15 @@
 
 <pre style="font-size: 1.6em !important">
     <code class="r">
-    # Exibe o shape dos dados
-    dim(data)
+  # Exibe o shape dos dados
+  dim(data)
 
-    # Concatena duas strings
-    paste("Linhas: ", dim(data)[1], sep=" ")
-    paste("Colunas: ", dim(data)[2], sep=" ")
+  # Concatena duas strings
+  paste("Linhas: ", dim(data)[1], sep=" ")
+  paste("Colunas: ", dim(data)[2], sep=" ")
 
-    # Exibe o dados
-    print(data)
+  # Exibe o dados
+  print(data)
     </code>
 </pre>
 
@@ -218,20 +220,20 @@
 
 <pre style="font-size: 1.2em !important">
     <code class="r">
-    8 4
+  8 4
 
-    'Linhas:  8'
-    'Colunas:  4'
+  'Linhas:  8'
+  'Colunas:  4'
 
-       Color Length Width Nutrients
-    1   blue    5.4   1.8       0.9
-    2   blue    4.8   1.5       0.7
-    3   blue    4.9   1.6       0.8
-    4 yellow    5.0   1.9       0.4
-    5 yellow    5.2   1.5       0.3
-    6 yellow    4.7   1.9       0.4
-    7  green    3.7   2.2       1.4
-    8  green    4.2   1.9       1.2
+     Color Length Width Nutrients
+  1   blue    5.4   1.8       0.9
+  2   blue    4.8   1.5       0.7
+  3   blue    4.9   1.6       0.8
+  4 yellow    5.0   1.9       0.4
+  5 yellow    5.2   1.5       0.3
+  6 yellow    4.7   1.9       0.4
+  7  green    3.7   2.2       1.4
+  8  green    4.2   1.9       1.2
     </code>
 </pre>
 
@@ -343,6 +345,12 @@
 
 <p>O valor de <u>Multiple R-squared (0,9927)</u> é a porcentagem de variação na variável dependente explicada pela combinação linear das variáveis independentes. Neste caso os valores de R-squared são valores entre 0 e 1, onde os valores mais altos significam um modelo de previsão melhor. Em nosso caso, R-squared tem um valor extremamente alto, indicando que Color, Length e Width podem prever o resultado com boa precisão. F-statistic, Adjusted R-squared e p-value são outras medidas de ajuste do modelo.</p>
 
+<h2 id="impressões">Impressões</h2>
+<p>No geral minha primeira impressão da linguagem <u><b>R</b></u> foi muito boa. Achei uma sintaxe limpa, fácil e bem direcionada ao seu propósito. Já tinha em mente que esta seria uma linguagem orientada a estatística computacional, mas esperava algo mais rebuscado, diferente da facilidade de compreensão que tive.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+<p>Minha ideia aqui não era fazer um comparativo, ou muito menos explicar os principais comandos da linguagem. A documentação por si só já é eficaz, e ainda existe uma infinidade de materiais sobre este tema. Preferi aqui fazer uma analise da minha impressão ao implementar uma técnica básica como a regressão linear.</p>
+
 <h2 id="referências">Referências</h2>
 <ul>
   <li><a href="https://www.rdocumentation.org/">rdocumentation.org</a></li>
@@ -398,7 +406,7 @@ table td {
   <div style="margin-top: 60px; margin-bottom: 60px;">
     
     
-      7 minutes to read
+      8 minutes to read
     
   </div>
 
@@ -415,6 +423,15 @@ table td {
     </a>
     
     
+    <a class="next__link" href="/2017/04/20/variables-in-statistic/" style="text-align: right;" >
+      <div class="next-container">
+        <hr>
+        <div style="font-size: 2em; margin-bottom: 1em; color: black;">Read Newer <i class="fa fa-lg fa-arrow-right"></i></div>
+        <span style="font-size: 1.6em;">Variáveis em Estatística e Macnhine Learning</span>
+        <hr>
+      </div>
+    </a>
+    
   </section>
 
 <!-- 
@@ -423,18 +440,18 @@ table td {
 		<ul class="posts">
 		    
 		    <li>
+			  <span>20 Apr 2017 &raquo;</span>
+			  <a href="http://localhost:4000/2017/04/20/variables-in-statistic/">Variáveis em Estatística e Macnhine Learning</a>
+		    </li>
+		    
+		    <li>
 			  <span>01 Apr 2017 &raquo;</span>
-			  <a href="/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</a>
+			  <a href="http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</a>
 		    </li>
 		    
 		    <li>
 			  <span>18 Mar 2017 &raquo;</span>
-			  <a href="/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
-		    </li>
-		    
-		    <li>
-			  <span>15 Feb 2017 &raquo;</span>
-			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
+			  <a href="http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
 		    </li>
 		    
 		</ul>
@@ -447,15 +464,15 @@ table td {
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="/2017/04/01/devopssummitbrasil-azure-cognitive-services/"><< Older</a>
+      <a href="http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
-    <a href="/ ">Home</a>
+    <a href="http://localhost:4000/ ">Home</a>
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <span>Newer >></span>
+      <a href="http://localhost:4000/2017/04/20/variables-in-statistic/">Newer >></a>
     
   </div>
 </div> -->
@@ -572,6 +589,8 @@ table td {
     <a href="/category/Cognitive Computing/" style="text-decoration: none;">Cognitive computing</a><br />
 
     <a href="/category/R/" style="text-decoration: none;">R</a><br />
+
+    <a href="/category/Statistics/" style="text-decoration: none;">Statistics</a><br />
 
 <p /> -->
 <!-- <p class="post-meta">

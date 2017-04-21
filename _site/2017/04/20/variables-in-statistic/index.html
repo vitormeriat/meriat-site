@@ -132,27 +132,27 @@
   <div class="row">
     <div class="fh5co-spacer fh5co-spacer-sm"></div>
     <div class="col-md-12 text-center">
-      <h1>ASP.NET Web API – Criando e consumindo dados [Parte 2]</h1>
+      <h1>Variáveis em Estatística e Macnhine Learning</h1>
       
     </div>
     
       <h2 class="fh5co-uppercase-heading-sm text-center">
-        Services
+        Statistics &amp; Data Science
       </h2>
     
-    <span><time datetime="2013-09-23T16:06:40-03:00" itemprop="datePublished">Sep 23, 2013</time></span>
+    <span><time datetime="2017-04-20T00:00:00-03:00" itemprop="datePublished">Apr 20, 2017</time></span>
   </div>
 
   <div class="fh5co-spacer fh5co-spacer-md"></div>
 
   <!-- <header class="section-padding-lg mast">
-    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <figure class="absolute-bg mast__img" style="background-image: url('http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png');"></figure>
     <div class="mast-container" style="margin-bottom: 60px;">
-      <h1 itemprop="name headline">ASP.NET Web API – Criando e consumindo dados [Parte 2]</h1>
-      <span><time datetime="2013-09-23T16:06:40-03:00" itemprop="datePublished">Sep 23, 2013</time></span>
+      <h1 itemprop="name headline">Variáveis em Estatística e Macnhine Learning</h1>
+      <span><time datetime="2017-04-20T00:00:00-03:00" itemprop="datePublished">Apr 20, 2017</time></span>
       
         <span>
-          Posted in Services
+          Posted in Statistics, Data Science
         </span>
       
       <span></span>
@@ -160,66 +160,241 @@
   </header> -->
 
   <section class="section-padding post" itemprop="articleBody">
-    <p align="justify"><a href="http://blob.vitormeriat.com.br/images/2013/09/gg_mobile_japon.jpg"><img title="gg_mobile_japon" style="background-image:none;float:left;padding-top:0;padding-left:0;margin:0 15px 0 0;display:inline;padding-right:0;border-width:0;" alt="gg_mobile_japon" align="left" src="http://blob.vitormeriat.com.br/images/gg_mobile_japon.jpg" width="390" height="225" /></a>Nesta segunda parte do artigo vamos focar no consumo do serviço bem como em enteder algumas das nuances que fazem do ASP.NET Web API uma tecnologia com inúmeras possibilidades dentro do cenário atual.</p>
-<p><!--more-->
-<p align="justify">Agora vamos criar uma aplicação console para consumir o serviço que criamos no <a href="http://vitormeriat.com.br/2013/09/20/asp-net-web-api-criando-e-consumindo-dados-parte-1/" target="_blank">post anterior.</a> O código fonte está disponível no fim do post.</p>
-<p align="justify">Crie um novo projeto <strong>Console Application.</strong> Neste exemplo estou nomeando como <strong>AspNetWebApiCliente</strong>. É válido salientar que estou utilizando o <strong>Visual Studio 2013 RC, </strong>mas já realizei o mesmo teste no <strong>Visual Studio 2012 </strong>seguindo exatamente os mesmos passos.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/0012.png"><img title="001" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="001" src="http://blob.vitormeriat.com.br/images/001.png" width="560" height="324" /></a></p>
-<p>Clique com o botão direito sobre o projeto recém criado e selecione <strong>Manage NuGet Packeges…</strong></p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/0021.png"><img title="002" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="002" src="http://blob.vitormeriat.com.br/images/002.png" width="480" height="323" /></a></p>
-<p align="justify">Na tela que se segue selecione a opção para os pacotes Online e pesquise por <strong>Microsoft ASP.NET Web API Client Libaries</strong>. Realize a instalação e vamos estar prontos para realizar nossos testes.</p>
-<p align="justify">O próximo passo é adicionar os seguintes <strong>namespaces</strong>:</p>
-<ul>
-<ul>
-<li><strong>using System.Net.Http;</strong> </li>
-<li><strong>using System.Net.Http.Headers;</strong> </li>
-</ul>
-</ul>
-<p align="justify">Agora precisamos iniciar o cliente <strong>HTTP</strong>, definir o endereço base para o consumo e definir o cabeçalho da requisição para retorno como <strong>JSON</strong>.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/041.png"><img title="04" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="04" src="http://blob.vitormeriat.com.br/images/04.png" width="560" height="178" /></a></p>
-<p align="justify">Vamos criar nossa classe de <strong>Customer</strong> para a representação do objeto no lado do cliente. Sendo assim certifique-se que a definição da classe é a mesma que a do lado o servidor. Clique com o botão direito sobre o projeto, <strong>Add</strong> e <strong>Class… </strong>Crie uma classe chamada<strong> Customer</strong>. E insira o seguinte trecho de código:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/06.png"><img title="06" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="06" src="http://blob.vitormeriat.com.br/images/06.png" width="508" height="612" /></a></p>
-<p align="justify">Se esta é a primeira vez que você usou ou olhou um código no <strong>Visual Studio 2013 RC </strong>e está estranhando este “<strong>0 references</strong>”, fique tranquilo que já preparei um post para esplicar este recurso que é algo bem interessante. Mas vamos em frente…</p>
-<p align="justify">&#160;</p>
-<h2 align="justify">Buscando todos os Customers (HTTP GET)</h2>
-<p align="justify">Nosso primeiro método vai listar todos os <strong>Customers</strong>, ler o serviço e exibir na tela o resultado. Para isso estamos buscando os registros utilizando o método <strong>GetAsync</strong> da classe <strong>HttpClient</strong> passando como parâmetro a entidade a ser pesquisada. Após buscar os registros com sucesso, vamos realizar a leitura dos dados em formato <strong>JSON </strong>usando o método <strong>Conent.ReadAsAsync()</strong> da classe <strong>HttpResponseMessage</strong>. Como no código abaixo:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/071.png"><img title="07" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="07" src="http://blob.vitormeriat.com.br/images/07.png" width="560" height="252" /></a></p>
-<p>segue o resultado:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/getall1.png"><img title="getall" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="getall" src="http://blob.vitormeriat.com.br/images/getall.png" width="560" height="594" /></a></p>
-<p><strong>OBS:</strong> Alguém já viu alguma família Arquibaldo por aqui no Brasil??? kkk</p>
-<p>&#160;</p>
-<h2>Inserindo um Customer (HTTP POST)</h2>
-<p align="justify">Para inserir um registro, que no nosso caso será um customer, precisamos criar o <strong>Customer</strong> a ser inserido e executar o método <strong>PostAsJsonAsync</strong> da classe <strong>HttpClient</strong> passando nosso objeto <strong>Customer</strong> como parâmetro. Caso tudo tenha ocorrido com sucesso exibimos o código e o status correspondente.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/08.png"><img title="08" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="08" src="http://blob.vitormeriat.com.br/images/08.png" width="560" height="310" /></a></p>
-<p>Segue o resultado:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/created.png"><img title="created" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="created" src="http://blob.vitormeriat.com.br/images/created.png" width="560" height="219" /></a></p>
-<p>Se pesquisarmos pelo nosso ID diretamente no browser vamos ter o xml de retorno como abaixo: </p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/10.png"><img title="10" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="10" src="http://blob.vitormeriat.com.br/images/10.png" width="560" height="259" /></a></p>
-<p>&#160;</p>
-<h2>Alterando um Customer (HTTP PUT)</h2>
-<p>Para alterar um registro iremos utilizar a mesma lógica da inserção só que utilizando o método <strong>PutAsJsonAsync</strong>:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/update1.png"><img title="update" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="update" src="http://blob.vitormeriat.com.br/images/update.png" width="560" height="340" /></a></p>
-<p>Segue o resultado :</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/13.png"><img title="13" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="13" src="http://blob.vitormeriat.com.br/images/13.png" width="549" height="204" /></a></p>
-<p>Ao pesquisarmos novamente vamos ter o seguinte retorno:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/11.png"><img title="11" alt="11" src="http://blob.vitormeriat.com.br/images/11.png" width="560" height="258" /></a></p>
-<p>&#160;</p>
-<h2>Excluindo um Customer (HTTP DELETE)</h2>
-<p align="justify">Para excluir um customer é só utilizar o método DeleteAsync passando como parâmetro a URI do recurso a ser excluído:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2013/09/delete1.png"><img title="delete" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" alt="delete" src="http://blob.vitormeriat.com.br/images/delete.png" width="560" height="198" /></a></p>
-<p align="justify">Se a sua entidade tiver um ID com valor inteiro, basta apenas informar a URI como se segue: “<strong>customerID/1</strong>”.&#160; Isso por conta da engine de roteamento. Ela procura dentro do controller os métodos correspondentes e verifica o parâmetro esperado.</p>
-<p align="justify">O resultado retornado como Status vai ser um <strong>200 (OK)</strong>. Sendo assim acabamos de excluir nosso registro.</p>
-<p align="justify">Neste momento já estamos consumindo os recursos que criamos no <a href="http://vitormeriat.com.br/2013/09/20/asp-net-web-api-criando-e-consumindo-dados-parte-1/" target="_blank">post anterior.</a></p>
-<p align="justify">O código fonte deste exemplo <a href="https://skydrive.live.com/?cid=bd055aa47a388023#cid=BD055AA47A388023&amp;id=BD055AA47A388023%213194" target="_blank">pode ser baixado clicando aqui!</a></p>
-<p align="justify">&#160;</p>
-<p align="justify">No próximo post vou abordar sobre a arquitetura do ASP.NET Web API bem como trazer uma análise sobre questões referentes ao <strong>Consumo,</strong> <strong>Routing e <strong>Host</strong></strong>.</p>
-<p>&#160;</p>
-<h2>Até mais e bom estudo a todos!</h2>
-<p><a href="http://blob.vitormeriat.com.br/images/2012/06/me-azul.png"><img title="Me Azul" style="float:left;margin:0 20px 0 0;display:inline;" alt="Me Azul" align="left" src="http://blob.vitormeriat.com.br/images/me-azul.png?w=110&amp;h=110&amp;h=110" width="110" height="110" /></a></p>
-<h3><font style="font-weight:bold;" color="#4f81bd"><font color="#9bbb59">Twitter:</font> </font><a href="http://twitter.com/#!/vitormeriat"><font style="font-weight:bold;" color="#4f81bd">@vitormeriat</font></a></h3>
-<h3><a href="mailto:vitormeriat@gmail.com"><font style="font-weight:bold;" color="#4f81bd">vitormeriat@gmail.com</font></a></h3>
-<h3><a href="mailto:vitor.pereira@studentpartners.com.br"><font style="font-weight:bold;" color="#4f81bd">vitor.pereira@studentpartner.com</font></a></h3>
-</p>
+    <p>Em Machine Lerning falamos em estática, e para ambos existe um elemento fundamental: dados. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.</p>
+
+<blockquote>
+  <p>Uma variável é como uma pergunta que pode ter várias respostas possíveis.</p>
+</blockquote>
+
+<p>Observe a tabela abaixo:</p>
+
+<table class="table-fill">
+  <tbody>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+    </tr>
+    <tr>
+      <td>Machado de Assis</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td>Carlos Drummond de Andrade</td>
+      <td>85</td>
+    </tr>
+     <tr>
+      <td>Graciliano Ramos</td>
+      <td>61</td>
+    </tr>
+     <tr>
+      <td>Mário Quintana</td>
+      <td>38</td>
+    </tr>
+     <tr>
+      <td>Guimarães Rosa</td>
+      <td>59</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Em nosso contexto, vamos considerar as linhas como observações/recursos, e as colunas vamos chamar de variáveis. As perguntas que nossas variáveis respondem são: “Qual o seu nome?” e “Qual a sua idade?”.</p>
+
+<blockquote>
+  <p>Primeira dica: Apenas o título da variável não representa toda sua história.</p>
+</blockquote>
+
+<p><strong>Como assim? O que você quer dizer com isso?</strong></p>
+
+<p>Se olharmos para a variável idade, não sabemos se ela se refere a idade do escritor hoje, a idade no momento de algum escrito famoso ou se foi a idade que ele tinha na época de seu falecimento.</p>
+
+<p>Uma de nossas tarefas é investigar nossa fonte de dados em busca de compreender o verdadeiro significado de cada variável.</p>
+
+<p>Outro ponto importante é saber identificar uma variável. Se neste contexto você me perguntar meu nome, vou te responder <strong>Vitor</strong>. Não importa quantas pessoas diferentes me perguntarem eu vou continuar respondendo Vitor. Neste caso meu nome não é uma variável, e sim uma constante.</p>
+
+<p>Seguindo essa linha vamos ver que uma variável depende da pergunta que está sendo feita. A resposta para <u>"Qual a ordem em que os dias da semana ocorrem"</u> será uma constante. Sempre teremos a mesma ordem, terça sempre virá após a segunda e etc. Agora se pergunto <u>"Que dia é hoje"</u>, vamos ter como resposta uma variável, já que a resposta tem relação direta com o dia em que a pergunta é feita. <u>"Que dia hoje"</u> pode ser, segunda, terça, quarta… ou seja, teremos <strong>várias</strong> possíveis respostas corretas.</p>
+
+<h2 id="variáveis-numéricas-e-categóricas">Variáveis numéricas e categóricas</h2>
+
+<p>Podemos diferenciar variáveis pelo tipo de dado. Em estatística consideramos dois tipos de variáveis: <strong>Númericas</strong> e <strong>Categóricas</strong>.</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png" /></p>
+
+<p>Variáveis podem ser classificadas da seguinte forma:</p>
+
+<ol>
+  <li><strong>Variáveis Numéricas</strong>: são as características que podem ser medidas em uma escala quantitativa, ou seja, apresentam valores numéricos que fazem sentido. Podem ser contínuas ou discretas.
+    <ul>
+      <li><strong>Variáveis discretas</strong>: características mensuráveis que podem assumir apenas um número finito ou infinito contável de valores e, assim, somente fazem sentido valores inteiros. Geralmente são o resultado de contagens. Exemplos: número de filhos, número de bactérias por litro de leite, número de cigarros fumados por dia.</li>
+      <li><strong>Variáveis contínuas</strong>, características mensuráveis que assumem valores em uma escala contínua (na reta real), para as quais valores fracionais fazem sentido. Usualmente devem ser medidas através de algum instrumento. Exemplos: peso (balança), altura (régua), tempo (relógio), pressão arterial, idade.</li>
+    </ul>
+  </li>
+  <li><strong>Variáveis Categóricas</strong>: são as características que não possuem valores quantitativos, mas, ao contrário, são definidas por várias categorias, ou seja, representam uma classificação dos indivíduos. Podem ser nominais ou ordinais.
+    <ul>
+      <li><strong>Variáveis nominais</strong>: não existe ordenação dentre as categorias. Exemplos: sexo, cor dos olhos, fumante/não fumante, doente/sadio.</li>
+      <li><strong>Variáveis ordinais</strong>: existe uma ordenação entre as categorias. Exemplos: escolaridade (1o, 2o, 3o graus), estágio da doença (inicial, intermediário, terminal), mês de observação (janeiro, fevereiro,…, dezembro).</li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p>As distinções são menos rígidas do que a descrição acima nos apresenta.</p>
+</blockquote>
+
+<p>Sendo assim, podemos definir que se o resultado a pergunta for numérica <u>("Qual a sua idade?")</u>, então temos uma variável numérica. Se a reposta não pode ser representada de forma númerica <u>("Qual a raça do seu cachorro?")</u>, então temos uma variável categórica.</p>
+
+<p>Uma variável originalmente numérica pode ser coletada de forma categórica. 
+Por exemplo, a variável idade, medida em anos completos, é quantitativa (contínua); mas, se for informada apenas a faixa etária (0 a 5 anos, 6 a 10 anos, etc…), é qualitativa (ordinal). Outro exemplo é o peso dos lutadores de boxe, uma variável quantitativa (contínua) se trabalhamos com o valor obtido na balança, mas qualitativa (ordinal) se o classificarmos nas categorias do boxe (peso-pena, peso-leve, peso-pesado, etc.).</p>
+
+<p>Outro ponto importante é que nem sempre uma variável representada por números é quantitativa/numérica.</p>
+
+<p>O número do telefone de uma pessoa, o número da casa, o número de sua identidade. Às vezes o sexo do indivíduo é registrado na planilha de dados como 1 se macho e 2 se fêmea, por exemplo. Isto não significa que a variável sexo passou a ser quantitativa!</p>
+
+<h2 id="variáveis-codificadas">Variáveis Codificadas</h2>
+
+<p>Eu não posso analisar diretamente uma sentença como <u>"Hoje é terça-feira"</u> em termos estatísticos. Quando nossa variável não é númerica, precisamos transformar cada resposta à nossa pergunta em um número, para que o mesmo possa ser analisado. Este processo de conversão é chamado de “codificação”. Como codificar uma variável vai depender do seu tipo de dado.</p>
+
+<p>http://leg.ufpr.br/~silvia/CE055/node9.html</p>
+
+<p>http://survivestatistics.com/variables/</p>
+
+<style>
+div.table-title {
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+  border-bottom: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+</style>
+
 
   </section>
 
@@ -235,11 +410,11 @@
 
 <!-- 
   <section class="next">
-    <a class="next__link" href="/2013/09/20/asp-net-web-api-criando-e-consumindo-dados-parte-1/" >
+    <a class="next__link" href="/2017/04/14/hello-world-r/" >
       <div class="next-container" style="margin: 60px 0 60px 0;">
         <hr>
         <h4>Read Previous <i class="fa fa-lg fa-arrow-right"></i></h4>
-        <span style="font-size: 1.6em;">ASP.NET Web API - Criando e consumindo dados [Parte 1]</span>
+        <span style="font-size: 1.6em;">Hello World R - Da base à Regressão Linear</span>
         <hr>
       </div>
     </a>
@@ -249,31 +424,22 @@
   <div style="margin-top: 60px; margin-bottom: 60px;">
     
     
-      4 minutes to read
+      5 minutes to read
     
   </div>
 
 
   <section class="next">
     
-    <a class="next__link" href="/2013/09/20/asp-net-web-api-criando-e-consumindo-dados-parte-1/" >
+    <a class="next__link" href="/2017/04/14/hello-world-r/" >
       <div class="next-container">
         <hr>
         <div style="font-size: 2em; margin-bottom: 1em; color: black;"><i class="fa fa-lg fa-arrow-left"></i> Read Older</div>
-        <span style="font-size: 1.6em;">ASP.NET Web API - Criando e consumindo dados [Parte 1]</span>
+        <span style="font-size: 1.6em;">Hello World R - Da base à Regressão Linear</span>
         <hr>
       </div>
     </a>
     
-    
-    <a class="next__link" href="/2013/09/30/asp-net-web-api-base-architecture/" style="text-align: right;" >
-      <div class="next-container">
-        <hr>
-        <div style="font-size: 2em; margin-bottom: 1em; color: black;">Read Newer <i class="fa fa-lg fa-arrow-right"></i></div>
-        <span style="font-size: 1.6em;">ASP.NET Web API - Base Architecture</span>
-        <hr>
-      </div>
-    </a>
     
   </section>
 
@@ -283,11 +449,6 @@
 		<ul class="posts">
 		    
 		    <li>
-			  <span>20 Apr 2017 &raquo;</span>
-			  <a href="http://localhost:4000/2017/04/20/variables-in-statistic/">Variáveis em Estatística e Macnhine Learning</a>
-		    </li>
-		    
-		    <li>
 			  <span>14 Apr 2017 &raquo;</span>
 			  <a href="http://localhost:4000/2017/04/14/hello-world-r/">Hello World R - Da base à Regressão Linear</a>
 		    </li>
@@ -295,6 +456,11 @@
 		    <li>
 			  <span>01 Apr 2017 &raquo;</span>
 			  <a href="http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</a>
+		    </li>
+		    
+		    <li>
+			  <span>18 Mar 2017 &raquo;</span>
+			  <a href="http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/">Kaggle Competition - Titanic: Machine Learning from Disaster</a>
 		    </li>
 		    
 		</ul>
@@ -307,7 +473,7 @@
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="http://localhost:4000/2013/09/20/asp-net-web-api-criando-e-consumindo-dados-parte-1/"><< Older</a>
+      <a href="http://localhost:4000/2017/04/14/hello-world-r/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
@@ -315,7 +481,7 @@
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <a href="http://localhost:4000/2013/09/30/asp-net-web-api-base-architecture/">Newer >></a>
+      <span>Newer >></span>
     
   </div>
 </div> -->

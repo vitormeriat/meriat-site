@@ -178,7 +178,7 @@
 
 <p>Neste caso não temos complicação com elementos aleatórios de sorte. A maioria dos sobreviventes eram mulheres, crianças e pessoas da alta sociedade.</p>
 
-<h1 id="start">Start</h1>
+<h2 id="start">Start</h2>
 
 <p>A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, <strong>train.csv</strong> e <strong>test.csv</strong>. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de <strong>treino</strong>. Nos dados de teste este valor precisa ser deduzido.</p>
 
@@ -210,6 +210,8 @@
 
 <p>Este é um ótimo ponto de entrada para aprender machine learning com um conjunto de dados pequeno, gerenciável, interessante e com variáveis ​​de fácil compreensão.</p>
 
+<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern.png" /></p>
+
 <h1 id="passo-1">Passo 1</h1>
 <p>O colapso do “Titanic” está associada com a regra não escrita do salvamento no mar: “mulheres e crianças primeiro”.</p>
 
@@ -218,6 +220,89 @@
 <p>Para determinar se o passageiro sobreviveu ao “Titanic”, vamos usar uma árvore de decisão. Uma árvore de decisão é gerada automaticamente com base no parâmetro de entrada. A imagem abaixo mostra um exemplo de uma árvore de decisão é criada.</p>
 
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg" /></p>
+
+<p>Vamos estipular o sexo dos passageiros e tripulantes. Este é um  dado importante, uma vez que o sexo do passageiro desempenha um papel crucial para determinar a sobrevivência do mesmo. Um simples count revela que temos 891 passageiros dos quais 65% são homens e 35% são mulheres.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Gender</th>
+      <th style="text-align: center">Count of Passengers</th>
+      <th style="text-align: right"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">female</td>
+      <td style="text-align: center">314</td>
+      <td style="text-align: right">35%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">male</td>
+      <td style="text-align: center">577</td>
+      <td style="text-align: right">65%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Se adicionarmos a sobrevivência a equação vamos ver que existe um padrão aqui.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Count of Passengers</th>
+      <th style="text-align: center">Survived Status</th>
+      <th style="text-align: right"> </th>
+      <th style="text-align: right"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Gender</td>
+      <td style="text-align: center">Not Survived</td>
+      <td style="text-align: right">Survived</td>
+      <td style="text-align: right">Total</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">female</td>
+      <td style="text-align: center">81</td>
+      <td style="text-align: right">233</td>
+      <td style="text-align: right">314</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">male</td>
+      <td style="text-align: center">468</td>
+      <td style="text-align: right">109</td>
+      <td style="text-align: right">577</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Total</td>
+      <td style="text-align: center">549</td>
+      <td style="text-align: right">342</td>
+      <td style="text-align: right">891</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>O seguinte pode ser observado a partir dos dados acima:</p>
+
+<ol>
+  <li>62% (549/891) dos passageiros não sobreviveram</li>
+  <li>38% (342/891) sobreviveram</li>
+</ol>
+
+<p>Dos 38% que sobreviveram, os passageiros do sexo feminino sobreviveram em maior número maior que os passageiros machos</p>
+
+<ol>
+  <li>De todos os passageiros do sexo feminino (233/314) 74% sobreviveram</li>
+  <li>De todos os passageiros do sexo masculino (109/577), apenas 19% sobreviveram</li>
+</ol>
+
+<p>Podemos ilustrar o comportamento usando uma árvore de decisão. Cada nó determina o resultado final com base na maioria. Os votos no nó da direita para sobreviveu já que a maioria sobreviveu ao passo que os votos de nó à esquerda para não sobreviveu já que a maioria não sobreviveu.</p>
+
+<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png" /></p>
+
+<p>Este é nosso primeiro padrão. O dataset de treino é chamado de <strong>labelled dataset</strong>, onde a coluna <u>Survived</u> é chamda de “label” ou <strong>response data</strong>. Esta abordagem é chamada de aprendizagem supervisionada, onde aprendemos com os dados de treino e aplicamos este aprendizado nos dados de teste. O resultado desta abordagem é binária, portanto estamos aplicando a técnica de classificação, utilizando duas classes, a saber, survived or not survived.</p>
 
 <h1 id="o-repositório">O repositório</h1>
 <p>Você pode olhar o código completo acessando o mesmo no repositório <strong>Meriat Machine Learning Notes</strong> no meu Github.</p>
@@ -256,7 +341,7 @@
   <div style="margin-top: 60px; margin-bottom: 60px;">
     
     
-      3 minutes to read
+      5 minutes to read
     
   </div>
 
@@ -290,18 +375,18 @@
 		<ul class="posts">
 		    
 		    <li>
+			  <span>20 Apr 2017 &raquo;</span>
+			  <a href="http://localhost:4000/2017/04/20/variables-in-statistic/">Variáveis em Estatística e Macnhine Learning</a>
+		    </li>
+		    
+		    <li>
 			  <span>14 Apr 2017 &raquo;</span>
-			  <a href="/2017/04/14/hello-world-r/">Hello World R - Da base à Regressão Linear</a>
+			  <a href="http://localhost:4000/2017/04/14/hello-world-r/">Hello World R - Da base à Regressão Linear</a>
 		    </li>
 		    
 		    <li>
 			  <span>01 Apr 2017 &raquo;</span>
-			  <a href="/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</a>
-		    </li>
-		    
-		    <li>
-			  <span>15 Feb 2017 &raquo;</span>
-			  <a href="/2017/02/15/apresentando-meriat-ml-notes/">Apresentando o Meriat Machine Learning Notes</a>
+			  <a href="http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</a>
 		    </li>
 		    
 		</ul>
@@ -314,15 +399,15 @@
 <!-- <div class="post-footer">
   <div style="text-align: left; width: 33.33%; float: left;">
     
-      <a href="/2017/02/15/apresentando-meriat-ml-notes/"><< Older</a>
+      <a href="http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/"><< Older</a>
     
   </div>
   <div style="text-align: center; width: 33.33%; float: left;">
-    <a href="/ ">Home</a>
+    <a href="http://localhost:4000/ ">Home</a>
   </div>
   <div style="text-align: right; width: 33.33%; float: left;">
     
-      <a href="/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Newer >></a>
+      <a href="http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/">Newer >></a>
     
   </div>
 </div> -->
@@ -439,6 +524,8 @@
     <a href="/category/Cognitive Computing/" style="text-decoration: none;">Cognitive computing</a><br />
 
     <a href="/category/R/" style="text-decoration: none;">R</a><br />
+
+    <a href="/category/Statistics/" style="text-decoration: none;">Statistics</a><br />
 
 <p /> -->
 <!-- <p class="post-meta">
