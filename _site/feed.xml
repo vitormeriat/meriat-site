@@ -5,9 +5,70 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 21 Apr 2017 14:41:13 -0300</pubDate>
-    <lastBuildDate>Fri, 21 Apr 2017 14:41:13 -0300</lastBuildDate>
+    <pubDate>Sat, 22 Apr 2017 15:37:31 -0300</pubDate>
+    <lastBuildDate>Sat, 22 Apr 2017 15:37:31 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Global Azure Bootcamp Campinas 2017 - Cognitive Services no Azure</title>
+        <description>&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/22/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mais um ano tive a honra de palestrar no &lt;strong&gt;Global Azure Bootcamp&lt;/strong&gt;, evento que participo como palestrante desde a primeira edição. Depois de passar por Brasília, Recife e Sampa, tive a oportunidade de palestrar em Campinas ;)&lt;/p&gt;
+
+&lt;h2 id=&quot;o-evento&quot;&gt;O evento&lt;/h2&gt;
+
+&lt;p&gt;O &lt;a href=&quot;https://global.azurebootcamp.net/&quot;&gt;Global Azure Bootcamp&lt;/a&gt; dispensa comentários. O evento chega em mais uma edição em nível global, e cada edição mais cidades vão se engajando.&lt;/p&gt;
+
+&lt;p&gt;O evento fo realizado no polo tecnológico da &lt;strong&gt;CI&amp;amp;T&lt;/strong&gt; em campinas. O site oficial do evento para Campinas é: &lt;a href=&quot;http://campinas.azurewebsites.net/&quot;&gt;campinas.azurewebsites.net&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;a-palestra&quot;&gt;A palestra&lt;/h2&gt;
+
+&lt;p&gt;Como vimos, intligência artificial não é um assunto novo, pelo contrário, estamos falando de um assunto que vem assombrando o imaginário humano nos últimos 100 anos, e pesquisado academicamente hà mais de 5 décadas.&lt;/p&gt;
+
+&lt;p&gt;Neste mundo de AI, os serviços cognitivos estão ligados as aplicações voltadas a proximidade da linguagem natural. Temos de analise de sentimento a visão computacional, tudo de forma simples e fácil, como uma API deve ser.&lt;/p&gt;
+
+&lt;p&gt;Durante o evento consumimos várias APIs do &lt;strong&gt;Cognitive Services&lt;/strong&gt;, em destaque a API de &lt;strong&gt;face/detect&lt;/strong&gt;. Na imagem abaixo temos como resultado a identifiação de faces, onde a API me retorna a localização do rosto e de seus elementos. Assim consigo “desenhar” no python o um quadrado para identificar o rosto, e circulos para identificar os olhos, nariz e boca.&lt;/p&gt;
+
+&lt;p&gt;Notem que também temos a idade sugerida pelo serviço cognitivo. No meu caso, logo no meu caso, ganhei uns vários anos de presente. Preciso dormir mais… Muahaha…&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/22/gab1.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O mister &lt;strong&gt;Nicolas Cage&lt;/strong&gt; foi pedido do pessoal.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/22/gab2.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Muito interessante como a galera está interessada em aprender, discutir e testar os serviços cognitivos. Segunda vez que o tempo fica curto quando chega a hora das demos…&lt;/p&gt;
+
+&lt;h2 id=&quot;o-código&quot;&gt;O código&lt;/h2&gt;
+
+&lt;p&gt;Todas as demos utilizadas na apresentação foram consumindo apenas a &lt;strong&gt;API REST&lt;/strong&gt;, cuja a documentação está disponível em: &lt;a href=&quot;https://www.microsoft.com/cognitive-services/en-us/documentation&quot;&gt;Cognitive Services Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;O código apresentado já está disponível no meu GitHub no repositório &lt;a href=&quot;https://github.com/vitormeriat/cognitive-services&quot;&gt;Cognitive Services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Vale lembrar que neste repositório vou colocar vários testes incluindo outras plataformas de Cloud.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
+</description>
+        <pubDate>Sat, 22 Apr 2017 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</guid>
+        
+        
+        <category>IA</category>
+        
+        <category>Cognitive Computing</category>
+        
+        <category>Microsoft Azure</category>
+        
+        <category>Python</category>
+        
+        <category>Palestras</category>
+        
+        <category>Comunidade</category>
+        
+      </item>
     
       <item>
         <title>Variáveis, Estatística e Macnhine Learning</title>
@@ -467,6 +528,10 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 
 &lt;p&gt;A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, &lt;strong&gt;train.csv&lt;/strong&gt; e &lt;strong&gt;test.csv&lt;/strong&gt;. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de &lt;strong&gt;treino&lt;/strong&gt;. Nos dados de teste este valor precisa ser deduzido.&lt;/p&gt;
 
+&lt;p&gt;Todos os aprendizados começam com uma experiência e são um processo contínuo. Raramente tem um ponto final. Todos os aprendizados são apenas uma aproximação. O conjunto de dados de treino é tipicamente amostrado em 2 unidades, a amostra maior representando aproximadamente 80% dos dados, e uma 2ª amostra com o resto do dados.&lt;/p&gt;
+
+&lt;p&gt;A aprendizagem acontece usando o Conjunto A e a validação acontece usando o conjunto B. Podemos validar como já sabemos os resultados reais de quem Sobreviveu e quem não fez no Conjunto B e depois compará-lo com os resultados previstos. Uma vez que a aprendizagem é aperfeiçoada no Set A e Set B, o conjunto final de padrões é aplicado nos dados do teste. Apenas um rápido lembrete de que não temos o conhecimento do estado de sobrevivência do passageiro nos dados do teste. No contexto de Kaggle, o resultado da aplicação do padrão nos dados de teste é carregado para o ambiente Kaggle, o que nos permite conhecer o sucesso do modelo que desenvolvemos. Kaggle sabe os resultados dos dados de teste, portanto, é capaz de validar contra o nosso arquivo de resultados submetidos. Aqui está uma visão geral do processo de aprendizagem da máquina genérica.&lt;/p&gt;
+
 &lt;p&gt;Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg&quot; /&gt;&lt;/p&gt;
@@ -584,6 +649,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Este é nosso primeiro padrão. Par facilitar vamos conceituar algumas coisas: O dataset de treino é chamado de &lt;strong&gt;labelled dataset&lt;/strong&gt;, onde a coluna &lt;u&gt;Survived&lt;/u&gt; é chamda de “label” ou &lt;strong&gt;response data&lt;/strong&gt;. Esta abordagem é chamada de aprendizagem supervisionada, onde aprendemos com os dados de treino e aplicamos este aprendizado nos dados de teste. O resultado desta abordagem é binária, portanto estamos aplicando uma técnica de classificação, utilizando duas classes, a saber, &lt;strong&gt;survived&lt;/strong&gt; ou &lt;strong&gt;not survived&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Vamos nos referir ao conjunto de dados progressivamente ao longo deste post, começar a descobrir o conceito de aprendizagem da máquina e suas dimensões variadas. Como você pode observar a partir dos dados, os passageiros e seus atributos compõem os dados do Titanic.&lt;/p&gt;
 
 &lt;h1 id=&quot;o-repositório&quot;&gt;O repositório&lt;/h1&gt;
 &lt;p&gt;Você pode olhar o código completo acessando o mesmo no repositório &lt;strong&gt;Meriat Machine Learning Notes&lt;/strong&gt; no meu Github.&lt;/p&gt;
@@ -995,32 +1062,6 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
         <category>Machine Learning</category>
         
         <category>Python</category>
-        
-      </item>
-    
-      <item>
-        <title>IoT Weekend Recife 2016 - Como a Inteligência Artificial vai mudar a Internet das Coisas</title>
-        <description>&lt;p&gt;Olá pessoal, hoje, dia 06 de agosto de 2016 tive mais uma vez o privilégio de palestrar no IoT Weekend edição Recife. Esta é segunda vez em Recife e quarta edição geral do evento, que é inteiramente dedicado a Internet of Things, abrangendo do ponto de vista dos negócios aos famoso under the hood dos detalhes técnicos.&lt;/p&gt;
-
-&lt;p&gt;&lt;img title=&quot;capa&quot; alt=&quot;capa&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/08/capa.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Esta edição vez estive falando novamente sobre Inteligência, dessa vez abordando como inteligência artificial está mudando a maneira como fazemos e pensamos na internet das coisas, com uma visão mais abrangente sobre o tema.&lt;/p&gt;
-
-&lt;p&gt;Em suma nessa sessão tentei mostrar como os players atuais do mercado moldaram suas ferramentas e principalmente como isto pode lhe auxiliar no desenvolvimento de dispositivos cada vez mais inteligentes ou por que não dizer, cognitivos ou que aprendem.&lt;/p&gt;
-
-&lt;p&gt;Alguns termos como a própria cognição parecem ser algo místico, porém fazendo um resumo rápido da história da computação, as máquinas mais antigas eram capazes de fazer cálculos. Anos depois, surgiram os sistemas programáveis, que são aqueles utilizados até hoje em nossos celulares, por exemplo. Os próximos passos, como por exemplo a computação cognitiva, trazem uma tecnologia capaz de processar informações e de aprender com elas de forma muito semelhante ao cérebro humano, sem que precisem ser programadas para tal.&lt;/p&gt;
-
-&lt;p&gt;Existem uma série de outros temas a respeito, coisas que pretendo compartilhar em breve aqui no blog.&lt;/p&gt;
-
-&lt;h3 id=&quot;ref&quot;&gt;Ref&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.iotweekend.com.br/&quot; target=&quot;_blank&quot;&gt;IoT Weekend&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 06 Aug 2016 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/08/06/iot-weekend-recife-2016-como-a-inteligncia-artificial-vai-mudar-a-internet-das-coisas/</guid>
-        
-        
-        <category>Comunidade</category>
         
       </item>
     

@@ -33,6 +33,10 @@ Neste caso não temos complicação com elementos aleatórios de sorte. A maiori
 
 A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, **train.csv** e **test.csv**. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de **treino**. Nos dados de teste este valor precisa ser deduzido.
 
+Todos os aprendizados começam com uma experiência e são um processo contínuo. Raramente tem um ponto final. Todos os aprendizados são apenas uma aproximação. O conjunto de dados de treino é tipicamente amostrado em 2 unidades, a amostra maior representando aproximadamente 80% dos dados, e uma 2ª amostra com o resto do dados. 
+
+A aprendizagem acontece usando o Conjunto A e a validação acontece usando o conjunto B. Podemos validar como já sabemos os resultados reais de quem Sobreviveu e quem não fez no Conjunto B e depois compará-lo com os resultados previstos. Uma vez que a aprendizagem é aperfeiçoada no Set A e Set B, o conjunto final de padrões é aplicado nos dados do teste. Apenas um rápido lembrete de que não temos o conhecimento do estado de sobrevivência do passageiro nos dados do teste. No contexto de Kaggle, o resultado da aplicação do padrão nos dados de teste é carregado para o ambiente Kaggle, o que nos permite conhecer o sucesso do modelo que desenvolvemos. Kaggle sabe os resultados dos dados de teste, portanto, é capaz de validar contra o nosso arquivo de resultados submetidos. Aqui está uma visão geral do processo de aprendizagem da máquina genérica.
+
 Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.
 
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg"></p>
@@ -143,6 +147,8 @@ Podemos ilustrar este comportamento usando uma árvore de decisão. Cada nó det
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png"></p>
 
 Este é nosso primeiro padrão. Par facilitar vamos conceituar algumas coisas: O dataset de treino é chamado de **labelled dataset**, onde a coluna <u>Survived</u> é chamda de "label" ou **response data**. Esta abordagem é chamada de aprendizagem supervisionada, onde aprendemos com os dados de treino e aplicamos este aprendizado nos dados de teste. O resultado desta abordagem é binária, portanto estamos aplicando uma técnica de classificação, utilizando duas classes, a saber, **survived** ou **not survived**.
+
+Vamos nos referir ao conjunto de dados progressivamente ao longo deste post, começar a descobrir o conceito de aprendizagem da máquina e suas dimensões variadas. Como você pode observar a partir dos dados, os passageiros e seus atributos compõem os dados do Titanic.
 
 
 # O repositório
