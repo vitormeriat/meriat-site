@@ -66,7 +66,9 @@ A primeira função exibe a estrutura básica dos dados, retornando a quantidade
 Nossa saída seria algo como o que se segue abaixo:
 
 <pre style="font-size: 1.2em !important">
-    <code class="r">
+    <code class="prolog">
+  #OUTPUT
+  
   8 4
 
   'Linhas:  8'
