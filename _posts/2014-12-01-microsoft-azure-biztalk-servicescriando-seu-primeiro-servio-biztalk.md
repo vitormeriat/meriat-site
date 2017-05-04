@@ -7,14 +7,21 @@ categories:
   - Enterprise Integration
 image: "http://blob.vitormeriat.com.br/images/2014/12/capa01.png"
 ---
-<p align="justify">Este artigo é dedicado a inicialização ao <strong>Microsoft Azure Biztalk Services</strong>. A ideia é criar um serviço do Biztalk <strong>PaaS</strong>, instalar o <strong>SDK</strong> na máquina de desenvolvimento e criar um projeto utilizando o <strong>Visual Studio</strong>.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/capa01.png"><img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="CAPA01" src="http://blob.vitormeriat.com.br/images/2014/12/capa01.png" alt="CAPA01" width="700" height="363"   /></a></p>
-<p align="justify">A primeira motivação para a criação deste artigo foi a quantidade de erros que tive de solucionar em conjunto com a falta de material atual sobre o assunto (e em português nem se fala). Neste artigo minha intenção é fornecer um guia completo para se iniciar no <strong>Azure BizTalk Services</strong> abrangendo tanto a criação do serviço no <strong>Portal do Azure</strong>, quanto a configuração e instalação do <strong>SDK</strong> para o desenvolvimento.</p>
-<blockquote><p>“Vale notar que estamos falando do Azure BizTalk Services que é uma solução PaaS.”</p></blockquote>
-<p align="justify">Se você não estiver familiarizado com o conceito de <strong>PaaS</strong>, sugiro a leitura do seguinte artigo: <span style="font-size: medium;"><span style="font-weight: normal;"><a href="http://vitormeriat.com.br/2011/07/08/modelos-de-servio-na-nuvem-iaas-paas-e-saas/" target="_blank">Modelos de Serviço na Nuvem: IaaS, PaaS e Saas</a>.</span></span></p>
-<p>Também vou dividir este post em duas partes: A criação do serviço e a instalação do SDK.</p>
-<p><!--more--></p>
-<h1>Agenda</h1>
+
+Este artigo é dedicado a inicialização ao <strong>Microsoft Azure Biztalk Services</strong>. A ideia é criar um serviço do Biztalk <strong>PaaS</strong>, instalar o <strong>SDK</strong> na máquina de desenvolvimento e criar um projeto utilizando o <strong>Visual Studio</strong>.
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/capa01.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/capa01.png" alt="CAPA01" /></a></p>
+
+A primeira motivação para a criação deste artigo foi a quantidade de erros que tive de solucionar em conjunto com a falta de material atual sobre o assunto (e em português nem se fala). Neste artigo minha intenção é fornecer um guia completo para se iniciar no <strong>Azure BizTalk Services</strong> abrangendo tanto a criação do serviço no <strong>Portal do Azure</strong>, quanto a configuração e instalação do <strong>SDK</strong> para o desenvolvimento.
+
+> Vale notar que estamos falando do Azure BizTalk Services que é uma solução PaaS.
+
+Se você não estiver familiarizado com o conceito de <strong>PaaS</strong>, sugiro a leitura do seguinte artigo: <a href="http://vitormeriat.com.br/2011/07/08/modelos-de-servio-na-nuvem-iaas-paas-e-saas/" target="_blank">Modelos de Serviço na Nuvem: IaaS, PaaS e Saas</a>.
+
+Também vou dividir este post em duas partes: A criação do serviço e a instalação do SDK.
+
+# Agenda
+
 <ol>
 <li><span style="color: #666666;">Pré-requisitos </span>
 <ol>
@@ -44,14 +51,23 @@ image: "http://blob.vitormeriat.com.br/images/2014/12/capa01.png"
 <li><span style="color: #a5a5a5;">Considerações </span></li>
 <li><span style="color: #a5a5a5;">Referências</span></li>
 </ol>
-<p>Nesta parte vou cobrir os pontos 1 e 2 da agenda.</p>
+
+Nesta parte vou cobrir os pontos 1 e 2 da agenda.
 <p>&nbsp;</p>
-<h1>1 - Pré-requisitos</h1>
-<h3>Subscription ativa no Azure</h3>
-<p align="justify">Primeiro você vai precisar de uma conta ativa no Microsoft Azure. Se você não tiver uma conta, será possível criar uma conta de avaliação gratuita em questão de minutos. Consulte o post <a href="http://go.microsoft.com/fwlink/p/?linkid=239738&amp;clcid=0x416">Avaliação gratuita do Azure</a>.</p>
+
+# 1 - Pré-requisitos
+
+### Subscription ativa no Azure
+
+Primeiro você vai precisar de uma conta ativa no Microsoft Azure. Se você não tiver uma conta, será possível criar uma conta de avaliação gratuita em questão de minutos. Consulte o post <a href="http://go.microsoft.com/fwlink/p/?linkid=239738&amp;clcid=0x416">Avaliação gratuita do Azure</a>.
+
 <p>&nbsp;</p>
-<h3>Dependências no Azure</h3>
-<p>Para a criação do BizTalk Services será necessário primeiro dispor de alguns recursos criados no próprio <strong>Microsoft Azure</strong>. Você vai precisar criar:</p>
+
+### Dependências no Azure
+
+Para a criação do BizTalk Services será necessário primeiro dispor de alguns recursos criados no próprio 
+<strong>Microsoft Azure</strong>. Você vai precisar criar:
+
 <ul>
 <li>
 <div align="justify"><strong>SQL DataBase -</strong> Necessário para a gravação dos dados de <strong>Tracking</strong>. Armazena as tabelas, exibições e os procedimentos armazenados usados pelo Serviço do BizTalk, incluindo os dados de Acompanhamento. Quando você cria um serviço do BizTalk, você pode usar um Servidor SQL do Azure existente, Banco de dados SQL do Azure, ou criar automaticamente um Servidor ou Banco de dados novo. A escala do Banco de dados SQL é configurada automaticamente. Tipicamente a escala padrão é suficiente para um Serviço BizTalk. Uma dica importante em relação a este ponto é que por questões de performance você deve criar o seu Banco de Dados na mesma Região (<strong>DataCenter</strong>) em que você pretende criar o BizTalk Service;</div>
@@ -133,6 +149,9 @@ image: "http://blob.vitormeriat.com.br/images/2014/12/capa01.png"
 <p align="justify">Após registrado você terá acesso ao portal. Vou voltar neste passo em um próximo post, quando fizer o <strong>deploy</strong> de nossa aplicação.</p>
 <p><a href="http://blob.vitormeriat.com.br/images/2014/12/bz010.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz010.png" alt="bz010" /></a></p>
 <p>&nbsp;</p>
-<h3 align="justify">Na próxima parte iremos cobrir os tópicos 3, 4, 5 e 6. Todos os ativos e referências estarão nos próximos posts.</h3>
+
+Na próxima parte iremos cobrir os tópicos 3, 4, 5 e 6. Todos os ativos e referências estarão nos próximos posts.
+
 <p>&nbsp;</p>
-<h2>Bons estudos e até a próxima pessoal  ;)</h2>
+
+### Bons estudos e até a próxima pessoal  ;)
