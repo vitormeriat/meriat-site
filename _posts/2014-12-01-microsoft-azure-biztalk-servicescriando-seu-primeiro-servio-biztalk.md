@@ -122,32 +122,61 @@ Para a criação do BizTalk Services será necessário primeiro dispor de alguns
 <div align="justify"><strong>DOMAIN URL:</strong> É possível definir um domínio personalizado. Para mais informações vide a sessão referências.</div>
 </li>
 </ul>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/bz02.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz02.png" alt="bz02" /></a></p>
-<p align="justify">O próximo passo será informar as contas de armazenamento e banco de dados que criamos anteriormente. Caso você ainda não tenha feito isso, é possível realizar tanto a criação do <strong>Banco de Dados</strong>, quanto do <strong>Storage</strong> neste <strong>Wizard</strong>. Contudo um novo passo será adicionado.</p>
-<p align="justify">Levando em conta que você está seguindo exatamente como neste post, informe os dados e passe para o próximo passo.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/bz03.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz03.png" alt="bz03" /></a></p>
-<p align="justify">Confirmando todas as informações, o que se segue será o provisionamento do ambiente. Este processo é demorado, algo em torno de 20 a 30 minutos.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/bz04.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz04.png" alt="bz04" /></a></p>
-<p align="justify">Depois de jogar um pouquinho, o portal do Microsoft Azure vai exibir o status de criado. Notem que existem algumas informações preciosas…</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/bz05.png"><img src="http://blob.vitormeriat.com.br/image/2014/12s/bz05.png" alt="bz05" /></a></p>
-<p align="justify">Assim que o serviço estiver devidamente provisionado, será gerado também um certificado auto assinado e um controle de acesso.</p>
-<p align="justify"><strong><span style="color: #666666; font-size: large;">Quando criamos um Serviço do BizTalk do Azure, também é criada uma URL HTTPS constituída com o nome do seu Serviço BizTalk. Esta URL é configurada automaticamente para usar um certificado auto-assinado, funcional apenas para desenvolvimento. Quando falamos de ambiente de produção, é necessário um certificado SSL privado.</span></strong></p>
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/bz02.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz02.png" alt="bz02" /></a></p>
+
+O próximo passo será informar as contas de armazenamento e banco de dados que criamos anteriormente. Caso você ainda não tenha feito isso, é possível realizar tanto a criação do <strong>Banco de Dados</strong>, quanto do <strong>Storage</strong> neste <strong>Wizard</strong>. Contudo um novo passo será adicionado.
+
+Levando em conta que você está seguindo exatamente como neste post, informe os dados e passe para o próximo passo.
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/bz03.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz03.png" alt="bz03" /></a></p>
+
+Confirmando todas as informações, o que se segue será o provisionamento do ambiente. Este processo é demorado, algo em torno de 20 a 30 minutos.
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/bz04.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz04.png" alt="bz04" /></a></p>
+
+Depois de jogar um pouquinho, o portal do Microsoft Azure vai exibir o status de criado. Notem que existem algumas informações preciosas…
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/bz05.png"><img src="http://blob.vitormeriat.com.br/image/2014/12s/bz05.png" alt="bz05" /></a></p>
+
+Assim que o serviço estiver devidamente provisionado, será gerado também um certificado auto assinado e um controle de acesso.
+
+Quando criamos um Serviço do BizTalk do Azure, também é criada uma URL HTTPS constituída com o nome do seu Serviço BizTalk. Esta URL é configurada automaticamente para usar um certificado auto-assinado, funcional apenas para desenvolvimento. Quando falamos de ambiente de produção, é necessário um certificado SSL privado.
+
 <p>&nbsp;</p>
-<h2>Obtendo as Credenciais de Acesso</h2>
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/12/access-control.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/access-control.png" alt="Access Control" /></a>A ideia ao se criar um serviço <strong>PaaS</strong> do BizTalk, é conseguir a capacidade de integração com nosso ambiente local para o desenvolvimento. Para isso é necessário obter as credenciais para isso. Sendo assim, com o serviço selecionado, clique em <strong>CONNECTION INFORMATION</strong> na barra inferior como o indicado na imagem abaixo:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/bz06.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz06.png" alt="bz06"  /></a></p>
-<p align="justify">Ao clicar será exibido a tela com as informações de credencial relativas a sua conta. Estes valores vão nos permitir registrar e configurar o portal do nosso serviço.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/bz07.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz07.png" alt="bz07" /></a></p>
-<p align="justify">A identidade do serviço do Controle de Acesso é um conjunto de credenciais que permitem que aplicativos ou clientes façam autenticação diretamente com o <strong>Controle de Acesso</strong> e recebam de retorno um <strong>token</strong>.</p>
+
+## Obtendo as Credenciais de Acesso
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/access-control.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/access-control.png" alt="Access Control" /></a></p>
+
+A ideia ao se criar um serviço <strong>PaaS</strong> do BizTalk, é conseguir a capacidade de integração com nosso ambiente local para o desenvolvimento. Para isso é necessário obter as credenciais para isso. Sendo assim, com o serviço selecionado, clique em <strong>CONNECTION INFORMATION</strong> na barra inferior como o indicado na imagem abaixo:
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/bz06.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz06.png" alt="bz06"  /></a></p>
+
+Ao clicar será exibido a tela com as informações de credencial relativas a sua conta. Estes valores vão nos permitir registrar e configurar o portal do nosso serviço.
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/bz07.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz07.png" alt="bz07" /></a></p>
+
+A identidade do serviço do Controle de Acesso é um conjunto de credenciais que permitem que aplicativos ou clientes façam autenticação diretamente com o <strong>Controle de Acesso</strong> e recebam de retorno um <strong>token</strong>.
+
 <p>&nbsp;</p>
-<h2>Configurando o Azure BizTalk Services Portal</h2>
-<p align="justify">O portal de serviços do <strong>Azure BizTalk</strong> oferece gestão a operações <strong>B2B</strong> (<strong>EDI</strong>), dos ativos criados (schemas, transforms) e integração com o BizTalk Server (on-premisse ou IaaS).</p>
-<p align="justify">Para realizar o registro e configuração do serviço ao portal, selecione seu serviço e clique na opção <strong>MANAGE</strong> como o indicado na imagem abaixo:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/bz08.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz08.png" alt="bz08" /></a></p>
-<p align="justify">Você vai notar que uma nova aba ou janela vai se abrir com o site do portal de gestão do seu serviço <strong>BizTalk PaaS no Azure</strong>. Agora é só informar as suas credencias e clicar em <strong>REGISTER</strong> para finalizar este passo.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/bz09.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz09.png" alt="bz09" /></a></p>
-<p align="justify">Após registrado você terá acesso ao portal. Vou voltar neste passo em um próximo post, quando fizer o <strong>deploy</strong> de nossa aplicação.</p>
+
+## Configurando o Azure BizTalk Services Portal
+
+O portal de serviços do <strong>Azure BizTalk</strong> oferece gestão a operações <strong>B2B</strong> (<strong>EDI</strong>), dos ativos criados (schemas, transforms) e integração com o BizTalk Server (on-premisse ou IaaS).
+
+Para realizar o registro e configuração do serviço ao portal, selecione seu serviço e clique na opção <strong>MANAGE</strong> como o indicado na imagem abaixo:
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/bz08.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz08.png" alt="bz08" /></a></p>
+
+Você vai notar que uma nova aba ou janela vai se abrir com o site do portal de gestão do seu serviço <strong>BizTalk PaaS no Azure</strong>. Agora é só informar as suas credencias e clicar em <strong>REGISTER</strong> para finalizar este passo.
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/bz09.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz09.png" alt="bz09" /></a></p>
+
+Após registrado você terá acesso ao portal. Vou voltar neste passo em um próximo post, quando fizer o <strong>deploy</strong> de nossa aplicação.
+
 <p><a href="http://blob.vitormeriat.com.br/images/2014/12/bz010.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz010.png" alt="bz010" /></a></p>
+
 <p>&nbsp;</p>
 
 Na próxima parte iremos cobrir os tópicos 3, 4, 5 e 6. Todos os ativos e referências estarão nos próximos posts.
