@@ -70,17 +70,20 @@ Para a criação do BizTalk Services será necessário primeiro dispor de alguns
 
 <ul>
 <li>
-<div align="justify"><strong>SQL DataBase -</strong> Necessário para a gravação dos dados de <strong>Tracking</strong>. Armazena as tabelas, exibições e os procedimentos armazenados usados pelo Serviço do BizTalk, incluindo os dados de Acompanhamento. Quando você cria um serviço do BizTalk, você pode usar um Servidor SQL do Azure existente, Banco de dados SQL do Azure, ou criar automaticamente um Servidor ou Banco de dados novo. A escala do Banco de dados SQL é configurada automaticamente. Tipicamente a escala padrão é suficiente para um Serviço BizTalk. Uma dica importante em relação a este ponto é que por questões de performance você deve criar o seu Banco de Dados na mesma Região (<strong>DataCenter</strong>) em que você pretende criar o BizTalk Service;</div>
+<strong>SQL DataBase -</strong> Necessário para a gravação dos dados de <strong>Tracking</strong>. Armazena as tabelas, exibições e os procedimentos armazenados usados pelo Serviço do BizTalk, incluindo os dados de Acompanhamento. Quando você cria um serviço do BizTalk, você pode usar um Servidor SQL do Azure existente, Banco de dados SQL do Azure, ou criar automaticamente um Servidor ou Banco de dados novo. A escala do Banco de dados SQL é configurada automaticamente. Tipicamente a escala padrão é suficiente para um Serviço BizTalk. Uma dica importante em relação a este ponto é que por questões de performance você deve criar o seu Banco de Dados na mesma Região (<strong>DataCenter</strong>) em que você pretende criar o BizTalk Service;
 </li>
 <li>
-<div align="justify"><strong>Storage -</strong> Necessário para o acesso às tabelas, aos blobs e às filas usadas pelos Serviços do BizTalk para fazer o seguinte: Arquivos de log que monitoram o Serviço do BizTalk. A saída do monitoramento também é exibida na guia Monitoramento no Portal de Gerenciamento do Azure;</div>
+<strong>Storage -</strong> Necessário para o acesso às tabelas, aos blobs e às filas usadas pelos Serviços do BizTalk para fazer o seguinte: Arquivos de log que monitoram o Serviço do BizTalk. A saída do monitoramento também é exibida na guia Monitoramento no Portal de Gerenciamento do Azure;
 </li>
 <li>
-<div align="justify"><strong>Access Control -</strong> É criado um <strong>Namespace</strong> para o controle de acesso, que será utilizado pelo Visual Studio para realizar o deploy do serviço no BizTalk.</div>
+<strong>Access Control -</strong> É criado um <strong>Namespace</strong> para o controle de acesso, que será utilizado pelo Visual Studio para realizar o deploy do serviço no BizTalk.
 </li>
 </ul>
+
 <p>&nbsp;</p>
-<h3>Dependências On-premisse</h3>
+
+### Dependências On-premisse
+
 <ul>
 <li>Visual Studio 2012 - Pois é... o SDK ainda não tem suporte para o VS2013 :(</li>
 <li>SQL Server - Pode ser a versão Express, contanto que nas versões 2008 ou superiores</li>
@@ -88,38 +91,56 @@ Para a criação do BizTalk Services será necessário primeiro dispor de alguns
 <li>IIS - Internet Information Services</li>
 <li>Windows PowerShell 3.0 ou superior</li>
 </ul>
-<h1>2 - Provisionando o serviço</h1>
-<p align="justify">Neste ponto, vamos a criação do serviço cumprindo primeiro as exigências postadas de pré-requisito. Vale notar que para a criação do serviço você deve primeiro provisionar todo o seu storage na mesma região (Datacenter). Neste exemplo eu estou utilizando a região <strong>Brazil South</strong>.</p>
+
+# 2 - Provisionando o serviço
+
+Neste ponto, vamos a criação do serviço cumprindo primeiro as exigências postadas de pré-requisito. Vale notar que para a criação do serviço você deve primeiro provisionar todo o seu storage na mesma região (Datacenter). Neste exemplo eu estou utilizando a região <strong>Brazil South</strong>.
+
 <p>&nbsp;</p>
-<h2>Criando um Storage</h2>
-<p align="justify">É tão simples quanto acessar a aba de <strong>STORAGE</strong> e clicar em <strong>+NEW</strong> no canto inferior esquerdo. Depois é só definir a URL (que deve ser única), o  <strong>LOCATION</strong> e a <strong>SUBSCRIPTION</strong> que serão as mesmas nos outros passos.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/createstorage.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/createstorage.png" alt="createstorage" /></a></p>
+
+## Criando um Storage
+
+É tão simples quanto acessar a aba de <strong>STORAGE</strong> e clicar em <strong>+NEW</strong> no canto inferior esquerdo. Depois é só definir a URL (que deve ser única), o  <strong>LOCATION</strong> e a <strong>SUBSCRIPTION</strong> que serão as mesmas nos outros passos.
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/createstorage.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/createstorage.png" alt="createstorage" /></a></p>
+
 <p>&nbsp;</p>
-<h2>Criando um SQL Database</h2>
-<p align="justify">Em relação ao banco de dados temos uma série de opções a serem consideradas. No caso deste post eu estou utilizando uma versão <strong>WEB</strong>  com <strong>MAX SIZE</strong> de <strong>100MB</strong>. Isso porque a criação deste ambiente é apenas para demonstração.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/createdatabase.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/createdatabase.png" alt="createdatabase" /></a></p>
-<p align="justify">Como o BizTalk Services não é um serviço que possa ser considerado dos mais baratos, faz sentido economizar ao máximo durante os testes.</p>
-<p align="justify">Outro ponto importante: Caso você queira consultar seu banco, lembre que o serviço do Banco de dados SQL do Microsoft Azure está disponível somente com a porta <strong>TCP 1433</strong>. Para acessar um banco de dados do Banco de dados SQL do Azure em seu computador, <u>verifique se o firewall permite a comunicação TCP</u> de saída na porta TCP 1433.</p>
+
+## Criando um SQL Database
+
+Em relação ao banco de dados temos uma série de opções a serem consideradas. No caso deste post eu estou utilizando uma versão <strong>WEB</strong>  com <strong>MAX SIZE</strong> de <strong>100MB</strong>. Isso porque a criação deste ambiente é apenas para demonstração.
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/createdatabase.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/createdatabase.png" alt="createdatabase" /></a></p>
+
+Como o BizTalk Services não é um serviço que possa ser considerado dos mais baratos, faz sentido economizar ao máximo durante os testes.
+
+Outro ponto importante: Caso você queira consultar seu banco, lembre que o serviço do Banco de dados SQL do Microsoft Azure está disponível somente com a porta <strong>TCP 1433</strong>. Para acessar um banco de dados do Banco de dados SQL do Azure em seu computador, <u>verifique se o firewall permite a comunicação TCP</u> de saída na porta TCP 1433.
+
 <p>&nbsp;</p>
-<h2>Criando  o Serviço</h2>
-<p align="justify">Agora chegamos ao serviço em si. Essa será a tela que você vai ver se não houver nenhum serviço já criado. Para a criação do serviço, acesse a aba <strong>BIZTALK SERVICES</strong> e clique em <strong>+NEW </strong>no canto inferior esquerdo  da tela.</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/12/bz01.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz01.png" alt="bz01" /></a></p>
-<p align="justify">Na tela que se segue devemos preencher as informações necessárias ao serviço.</p>
+
+## Criando  o Serviço
+
+Agora chegamos ao serviço em si. Essa será a tela que você vai ver se não houver nenhum serviço já criado. Para a criação do serviço, acesse a aba <strong>BIZTALK SERVICES</strong> e clique em <strong>+NEW </strong>no canto inferior esquerdo  da tela.
+
+<p align="center"><a href="http://blob.vitormeriat.com.br/images/2014/12/bz01.png"><img src="http://blob.vitormeriat.com.br/images/2014/12/bz01.png" alt="bz01" /></a></p>
+
+Na tela que se segue devemos preencher as informações necessárias ao serviço.
+
 <ul>
 <li>
-<div align="justify"><strong>BIZTALK SERVICE NAME:</strong> Informe um nome para o serviço. Lembre-se que estamos falando de uma URI, que deve ser um valor único. De qualquer maneira, o valor será validado.</div>
+<strong>BIZTALK SERVICE NAME:</strong> Informe um nome para o serviço. Lembre-se que estamos falando de uma URI, que deve ser um valor único. De qualquer maneira, o valor será validado.
 </li>
 <li>
-<div align="justify"><strong>EDITION:</strong> Aqui selecionamos qual implementação será feita. Neste exemplo vou utilizar a edição <strong>Developer</strong>. Para mais informações vide a sessão referências.</div>
+<strong>EDITION:</strong> Aqui selecionamos qual implementação será feita. Neste exemplo vou utilizar a edição <strong>Developer</strong>. Para mais informações vide a sessão referências.
 </li>
 <li>
-<div align="justify"><strong>REGION:</strong> Aqui estamos falando do Datacenter onde a solução será hospedada.</div>
+<strong>REGION:</strong> Aqui estamos falando do Datacenter onde a solução será hospedada.
 </li>
 <li>
-<div align="justify"><strong>SUBSCRIPTION:</strong> Aponta para qual conta o serviço deve ser criado.</div>
+<strong>SUBSCRIPTION:</strong> Aponta para qual conta o serviço deve ser criado.
 </li>
 <li>
-<div align="justify"><strong>DOMAIN URL:</strong> É possível definir um domínio personalizado. Para mais informações vide a sessão referências.</div>
+<strong>DOMAIN URL:</strong> É possível definir um domínio personalizado. Para mais informações vide a sessão referências.
 </li>
 </ul>
 
