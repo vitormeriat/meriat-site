@@ -15,6 +15,19 @@ A linguagem R é um projeto GNU de software livre. O **R** derivou de uma lingua
 
 R foi desenvolvida por estatísticos para estatística, dado seu foco na resolução de problemas matemáticos, ele possui um estrutura simples o que facilita a implementação e traz ganhos na otimização no tempo de desenvolvimento. Você pode obter todas as referncias na documentação oficial em [rdocumentation.org](https://www.rdocumentation.org/), fora que é possível contar com um riquíssimo ecossistema de pacotes para diferentes áreas de aplicação.
 
+## Por quê eu devo considerar o R?
+
+Se trata de uma linguagem free (cran.r-project.org), altamente extensível e hoje já conta com mais de 10.000 pacotes, e o melhor, todos orientados a estatística, aprendizado de máquina e suas técnicas.
+
+R tem crescido como linguagem e na preferência de utilização. Abaixo segue o ranking da [IEEE](http://www.ieee.org) de 2016 para "Top Programming Languages".
+
+<p align="center"><img src="http://spectrum.ieee.org/image/Mjc5MjI0Ng.png"></p>
+
+Se tomarmos como o [Kaggle](https://www.kaggle.com) como referência, vemos que a maioria dos competidores preferem usar R para a criação dos modelos.
+
+<p align="center"><img src="http://blog.kaggle.com/wp-content/uploads/2011/11/kaggle-tools1.png"></p>
+
+
 <hr/>
 
 Para começar vamos criar um exemplo de regressão linear, uma espécie de **"Hello World"** da computação estatística. Então, mãos a obra...
@@ -188,12 +201,41 @@ Na saída acima temos uma sessão, iniciada com <u>Residual standard error</u>. 
 
 O valor de <u>Multiple R-squared (0,9927)</u> é a porcentagem de variação na variável dependente explicada pela combinação linear das variáveis independentes. Neste caso os valores de R-squared são valores entre 0 e 1, onde os valores mais altos significam um modelo de previsão melhor. Em nosso caso, R-squared tem um valor extremamente alto, indicando que Color, Length e Width podem prever o resultado com boa precisão. F-statistic, Adjusted R-squared e p-value são outras medidas de ajuste do modelo.
 
+> Bom, nem tudo é céu azul e arco-íris... Existem alguns pontos que devem ser levantados em relação a utilização do R.
+
+## R é single-threaded
+Temos aqui um ponto interessante. R por padrão é single-threaded, ou seja, é executado apenas por um único segmento na CPU. Isso pode ser limitante já que mesmo usando R em uma VM na nuvem com 64 núcleos de CPU, o R só usará um deles.
+
+Para ilustrar: Você deseja encontrar a soma de um vetor numérico, esta é uma operação que pode ser executada em paralelo na CPU com bastante facilidade. Se houver quatro núcleos de CPU disponíveis, cada núcleo pode receber cerca de um quarto dos dados a serem processados. Cada núcleo calcula o subtotal do pedaço de dados que é dado, e os quatro subtotais são adicionados para cima para encontrar a soma total do conjunto de dados inteiro.
+
+No entanto, em R, se usarmo a função **sum()**, ela será executada em série, processando todo o conjunto de dados em um núcleo de CPU. De fato, muitas operações de Big Data são de natureza semelhante a função **sum()**, com a mesma tarefa executando independentemente em muitos subconjuntos de dados. Sendo assim, realizar tais operações sequencialmente seria uma subutilização das arquiteturas de computação em paralelo, e se falarmos do poder da nuvem seria mais disperdício ainda. 
+
+É possível escrever programas em R para um melhor desempenho com foco em computação paralela, mas seria melhor a linguagem ter essa premissa de forma nativa. 
+
+## Data stored in memory
+Todos os dados processados em R tem de ser totalmente carregados na RAM. Isso significa que uma vez que os dados foram carregados, tudo isso está disponível para processamento pela CPU, o que é ótimo para o desempenho. Por outro lado, isso também significa que o tamanho máximo de dados que você pode processar depende da quantidade de RAM livre disponível em seu sistema. Lembre-se de que nem toda a RAM do seu computador está disponível para o uso do R. O sistema operacional, os processos em segundo plano e quaisquer outros aplicativos que estão sendo executados na CPU também competem pela RAM. O que está disponível para R usar pode ser uma fração da RAM total instalada no sistema.
+
+Durante o Workshop, Microsoft R for Data Science no qual eu participei, usamos uma máquina no azure com 468GB de RAM para hospedar o R Server e ser utilizado por 12 pessoas. Fora isso eventualmente era necessário olhar o desempenho da mesma já que algumas execuções se tornaram pesadas.
+
+Frequentemente usamos comandos como **mem_used()** ou **object_size(myDF)** para monitorar nosso uso das capacidades computacionais.
+
+Além disso, R também requer RAM livre para armazenar os resultados de seus cálculos. Dependendo do tipo de computação que você está executando, talvez seja necessário que a RAM disponível seja duas vezes ou mais vezes maior do que o tamanho de seus dados. Fora isso as versões de 32 bits de R também são limitadas pela quantidade de RAM que podem acessar. Dependendo do sistema operacional, eles podem ser limitados a 2 GB a 4 GB de RAM, mesmo quando há realmente mais RAM disponível.
+
+<div style="margin-bottom: 3em; margin-top: 2em;">
+
+Aparentemente tanto o problema de **single-threaded** como a questão do **data stored in memory** já estão na lista do [R Consortium](https://www.r-consortium.org/), então vamos esperar que em um futuro próximo tenhamos melhores estratégias em R.
+</div>
+
 ## Impressões
 No geral minha primeira impressão da linguagem <u><b>R</b></u> foi muito boa. Achei uma sintaxe limpa, fácil e bem direcionada ao seu propósito. Já tinha em mente que esta seria uma linguagem orientada a estatística computacional, mas esperava algo mais rebuscado, diferente da facilidade de compreensão que tive.
 
 ## Conclusão
-Minha ideia aqui não era fazer um comparativo, ou muito menos explicar os principais comandos da linguagem. A documentação por si só já é eficaz, e ainda existe uma infinidade de materiais sobre este tema. Preferi aqui fazer uma analise da minha impressão ao implementar uma técnica básica como a regressão linear.
+Minha ideia aqui não era fazer um comparativo, ou muito menos explicar os principais comandos da linguagem. A documentação por si só já é eficaz, e ainda existe uma infinidade de materiais sobre este tema. Preferi aqui fazer uma analise da minha impressão ao implementar uma técnica básica como a regressão linear, além de buscar alguns dos benefícios e possíveis problemas ao optar por utilizar R em futuros projetos.
 
 ## Referências
 * [rdocumentation.org](https://www.rdocumentation.org/)
 * [Linear Regression](https://en.wikipedia.org/wiki/Linear_regression)
+* [R Consortium](https://www.r-consortium.org/)
+* R High Performance Programming - Aloysius Lim, William Tjhi
+* [IEEE Ranking 2016](http://spectrum.ieee.org/static/interactive-the-top-programming-languages-2016)
+* [Kaggle Tools Used By Competitors](https://www.kaggle.com/wiki/Software)
