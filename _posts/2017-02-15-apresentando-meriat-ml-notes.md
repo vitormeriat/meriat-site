@@ -42,13 +42,13 @@ Por hora vou concentrando meus esforços por aqui ;)
 A estrutura atual está descrita logo abaixo. Vou me esforçar para manter atualizada.
 
 #### File Handling
-TBA
+`TBA`
 
 #### SMS Spam Filtering
-TBA
+`TBA`
 
 #### Song Recommender
-TBA
+`TBA`
 
 #### Basic Math
 Basic math notions with python
@@ -73,7 +73,9 @@ Basic math statistics with python
   * Correlation
 
 #### Imbalanced Learning with Gaussians
+`TBA`
 
-<div style="margin-bottom: 5em;"></div>
-
-### Até a próxima pessoal ;)
+#### Neural Network
+1. Adaline
+2. Perceptron
+3. Simple Neural Network
