@@ -9,11 +9,27 @@ description: "Em Machine Lerning falamos em estática, e para ambos existe um el
 image: "http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png"
 ---
 
-Em Machine Lerning falamos em estática, e para ambos existe um elemento fundamental: dados. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.
+A grosso modo podemos dividir a Estatística em três áreas: 
+
+* Estatística Descritiva 
+* Probabilidade 
+* Inferência Estatística
+
+Estatística Descritiva é, em geral, utilizada na etapa inicial da análise, quando tomamos contato com os dados pela primeira vez. 
+
+Probabilidade pode ser pensada como a teoria matemática utilizada para se estudar a incerteza oriunda de fenômenos de caráter aleatório.
+
+Inferência Estatística é o estudo de técnicas que possibilitam a extrapolação, a um grande conjunto de dados, das informações e conclusões obtidas a partir de subconjuntos de valores, usualmente de dimensão muito menor. [1]
+
+Falando em Machine Learning, sabemos que em algum determinado momento o pesquisador vai ser deparar com problemas para analisar e entender um determinado conjunto de dados que possa ser relevante aos seu objeto de estudo. Ele necessita trabalhar os dados a fim de transformá-los em informações que possam ser comparadas com outros resultados, ou ainda para julgar sua adequação a alguma teoria estipulada para o problema.
+
+Resumindo, a essência da Ciência é a observação e seu objetivo básico é a inferência que pode ser dedutiva ou indutiva. Quando falamos em estatística, a inferência estatística se trata da metodologia que objetiva a coleta, redução, análise e modelagem dos dados, a partir dos quais é possível fazer a inferência para uma população que nos permite chegar as **previsões** e assim tomar **decisões**. [2]
+
+Ao falar Machine Lerning falamos em estática, e para ambos existe um elemento fundamental (você já deve ter notado na descrição acima): Os **<u>dados</u>**. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.
 
 > Uma variável é como uma pergunta que pode ter várias respostas possíveis.
 
-Observe a tabela abaixo:
+Neste sentido vamos observar a tabela abaixo, que servirá de base para expressar os conceitos básicos que pretendo apresentar neste post:
 
 <table class="table-fill">
   <tbody>
@@ -127,10 +143,17 @@ Quem se importa se uma variável é contínua? Você não precisa se importar mu
 
 As variáveis ​​contínuas não exigem codificação, pois elas são sempre numéricas.
 
-<hr/>
-
-## Variáveis Codificadas
+## Codificando Variáveis
 
 Eu não posso analisar diretamente uma sentença como <u>"Hoje é terça-feira"</u> em termos estatísticos. Quando nossa variável não é númerica, precisamos transformar cada resposta à nossa pergunta em um número, para que o mesmo possa ser analisado. Este processo de conversão é chamado de "codificação". Como codificar uma variável vai depender do seu tipo de dado.
+
+Vou escrever um post específico sobre este conteúdo.
+
+<hr/>
+
+## Referências
+* **[1]** Noções de Probabilidade e Estatística - 6ª Edição Revista e Ampliada - Magalhães,Marcos Nascimento / Lima,Antonio Carlos Pedroso de Edusp
+* **[2]** Estatística Básica - 8ª Edição Bussab,Wilton de Oliveira / Morettin,Pedro Alberto
+
 
 Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.
