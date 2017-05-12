@@ -5,11 +5,15 @@ date: 2017-04-14
 categories:
     - R
     - Data Science
-description: "Esta é minha primeira impressão utilizando a linguagem R, usada por programadores e cientistas de dados com ênfase em computação estatísticas. Para começar com o pé direito, nada como implementar uma regressão linear para iniciar."
+description: "Esta é minha primeira impressão utilizando a linguagem R, usada por programadores e cientistas de dados com ênfase em computação estatísticas. Para começar com o pé direito, nada como implementar uma regressão linear para iniciar. Também incluí alguns pontos positivos e de atenção em relação ao R."
 image: "https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png"
 ---
 
 <p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png"></p>
+
+Antes de iniciar vale notar que além da minha impressão com a linguagem, documentei aqui alguns pontos que me fizeram atentar ao R, bem como alguns pontos de atenção que devem ser levados em consideração principalmente se você estiver pensando em realizar algum projeto com R.
+
+
 
 A linguagem R é um projeto GNU de software livre. O **R** derivou de uma linguagem chamada **S** (de "statistics"), criada na **Bell Laboratories** nos anos 70. Esta é uma linguagem usada por programadores e cientistas de dados para computação estatística.
 
@@ -21,16 +25,15 @@ Se trata de uma linguagem free (cran.r-project.org), altamente extensível e hoj
 
 R tem crescido como linguagem e na preferência de utilização. Abaixo segue o ranking da [IEEE](http://www.ieee.org) de 2016 para "Top Programming Languages".
 
-<p align="center"><img src="http://spectrum.ieee.org/image/Mjc5MjI0Ng.png"></p>
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/04/14/spectrum-ieee.png"></p>
 
 Se tomarmos como o [Kaggle](https://www.kaggle.com) como referência, vemos que a maioria dos competidores preferem usar R para a criação dos modelos.
 
-<p align="center"><img src="http://blog.kaggle.com/wp-content/uploads/2011/11/kaggle-tools1.png"></p>
-
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/04/14/kaggle-tools.png"></p>
 
 <hr/>
 
-Para começar vamos criar um exemplo de regressão linear, uma espécie de **"Hello World"** da computação estatística. Então, mãos a obra...
+Para começar vamos criar um simples exemplo de regressão linear, que neste caso serve como uma espécie de **"Hello World"** da computação estatística. Então, mãos a obra...
 
 ## Regressão Linear
 
@@ -213,18 +216,21 @@ No entanto, em R, se usarmo a função **sum()**, ela será executada em série,
 É possível escrever programas em R para um melhor desempenho com foco em computação paralela, mas seria melhor a linguagem ter essa premissa de forma nativa. 
 
 ## Data stored in memory
-Todos os dados processados em R tem de ser totalmente carregados na RAM. Isso significa que uma vez que os dados foram carregados, tudo isso está disponível para processamento pela CPU, o que é ótimo para o desempenho. Por outro lado, isso também significa que o tamanho máximo de dados que você pode processar depende da quantidade de RAM livre disponível em seu sistema. Lembre-se de que nem toda a RAM do seu computador está disponível para o uso do R. O sistema operacional, os processos em segundo plano e quaisquer outros aplicativos que estão sendo executados na CPU também competem pela RAM. O que está disponível para R usar pode ser uma fração da RAM total instalada no sistema.
+Todos os dados processados em R tem de ser **totalmente carregados na RAM**. Isso significa que uma vez que os dados foram carregados, tudo isso está disponível para processamento pela CPU, o que é ótimo para o desempenho. Por outro lado, isso também significa que o tamanho máximo de dados que você pode processar depende da quantidade de RAM livre disponível em seu sistema. Lembre-se de que nem toda a RAM do seu computador está disponível para o uso do R. O sistema operacional, os processos em segundo plano e quaisquer outros aplicativos que estão sendo executados na CPU também competem pela RAM. O que está disponível para R usar pode ser uma fração da RAM total instalada no sistema.
 
-Durante o Workshop, Microsoft R for Data Science no qual eu participei, usamos uma máquina no azure com 468GB de RAM para hospedar o R Server e ser utilizado por 12 pessoas. Fora isso eventualmente era necessário olhar o desempenho da mesma já que algumas execuções se tornaram pesadas.
+Durante o Workshop, <u>Microsoft R for Data Science</u> no qual eu participei, usamos uma máquina no azure com 468GB de RAM para hospedar o R Server e ser utilizado por 12 pessoas. Fora isso eventualmente era necessário olhar o desempenho da mesma já que algumas execuções se tornaram pesadas.
 
 Frequentemente usamos comandos como **mem_used()** ou **object_size(myDF)** para monitorar nosso uso das capacidades computacionais.
 
-Além disso, R também requer RAM livre para armazenar os resultados de seus cálculos. Dependendo do tipo de computação que você está executando, talvez seja necessário que a RAM disponível seja duas vezes ou mais vezes maior do que o tamanho de seus dados. Fora isso as versões de 32 bits de R também são limitadas pela quantidade de RAM que podem acessar. Dependendo do sistema operacional, eles podem ser limitados a 2 GB a 4 GB de RAM, mesmo quando há realmente mais RAM disponível.
+Além disso, R também requer **RAM livre para armazenar** os resultados de seus cálculos. Dependendo do tipo de computação que você for executar, talvez seja necessário que a RAM disponível seja duas vezes ou mais vezes maior do que o tamanho de seus dados. Fora isso as versões de **32 bits** de R também são limitadas pela quantidade de RAM que podem acessar. Dependendo do sistema operacional, eles podem ser limitados a **2GB a 4GB de RAM**, mesmo quando há realmente mais RAM disponível.
 
 <div style="margin-bottom: 3em; margin-top: 2em;">
 
 Aparentemente tanto o problema de **single-threaded** como a questão do **data stored in memory** já estão na lista do [R Consortium](https://www.r-consortium.org/), então vamos esperar que em um futuro próximo tenhamos melhores estratégias em R.
 </div>
+
+#### MRS - Mircrosoft R Server
+Essa é uma menção honrosa ao **MRS** ou **Mircrosoft R Server**. Vou escrever um post específico sobre este cara, mas com o MRS podemos realizar operações Multi-Threading, trabalhar com Parallel Processing e utilizar o recurso para remover limitação de dados apenas na RAM, fazendo uma combinação de RAM e Disco.
 
 ## Impressões
 No geral minha primeira impressão da linguagem <u><b>R</b></u> foi muito boa. Achei uma sintaxe limpa, fácil e bem direcionada ao seu propósito. Já tinha em mente que esta seria uma linguagem orientada a estatística computacional, mas esperava algo mais rebuscado, diferente da facilidade de compreensão que tive.
