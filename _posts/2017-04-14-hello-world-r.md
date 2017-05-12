@@ -13,15 +13,13 @@ image: "https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.p
 
 Antes de iniciar vale notar que além da minha impressão com a linguagem, documentei aqui alguns pontos que me fizeram atentar ao R, bem como alguns pontos de atenção que devem ser levados em consideração principalmente se você estiver pensando em realizar algum projeto com R.
 
-
-
 A linguagem R é um projeto GNU de software livre. O **R** derivou de uma linguagem chamada **S** (de "statistics"), criada na **Bell Laboratories** nos anos 70. Esta é uma linguagem usada por programadores e cientistas de dados para computação estatística.
 
 R foi desenvolvida por estatísticos para estatística, dado seu foco na resolução de problemas matemáticos, ele possui um estrutura simples o que facilita a implementação e traz ganhos na otimização no tempo de desenvolvimento. Você pode obter todas as referncias na documentação oficial em [rdocumentation.org](https://www.rdocumentation.org/), fora que é possível contar com um riquíssimo ecossistema de pacotes para diferentes áreas de aplicação.
 
 ## Por quê eu devo considerar o R?
 
-Se trata de uma linguagem free (cran.r-project.org), altamente extensível e hoje já conta com mais de 10.000 pacotes, e o melhor, todos orientados a estatística, aprendizado de máquina e suas técnicas.
+Se trata de uma linguagem free (cran.r-project.org), altamente extensível e hoje já conta com mais de 10.000 pacotes na [CRAN](http://crantastic.org/packages), e o melhor, todos orientados a estatística, aprendizado de máquina e suas técnicas.
 
 R tem crescido como linguagem e na preferência de utilização. Abaixo segue o ranking da [IEEE](http://www.ieee.org) de 2016 para "Top Programming Languages".
 
@@ -229,7 +227,15 @@ Além disso, R também requer **RAM livre para armazenar** os resultados de seus
 Aparentemente tanto o problema de **single-threaded** como a questão do **data stored in memory** já estão na lista do [R Consortium](https://www.r-consortium.org/), então vamos esperar que em um futuro próximo tenhamos melhores estratégias em R.
 </div>
 
-#### MRS - Mircrosoft R Server
+## Essential Open Source Packages
+Alguns dos principais pacotes em R que você deve conhecer:
+
+* Data Management: `dplyr`, `tidyr`, `data.table`
+* Visualization: `ggplot2`, `ggvis`, `htmlwidgets`, `shiny`
+* Data Importing: `haven`, `RODBC`, `readr`, `foreign`
+* Other favorites: `magrittr`, `rmarkdown`, `caret`
+
+## MRS - Mircrosoft R Server
 Essa é uma menção honrosa ao **MRS** ou **Mircrosoft R Server**. Vou escrever um post específico sobre este cara, mas com o MRS podemos realizar operações Multi-Threading, trabalhar com Parallel Processing e utilizar o recurso para remover limitação de dados apenas na RAM, fazendo uma combinação de RAM e Disco.
 
 ## Impressões
@@ -245,3 +251,7 @@ Minha ideia aqui não era fazer um comparativo, ou muito menos explicar os princ
 * R High Performance Programming - Aloysius Lim, William Tjhi
 * [IEEE Ranking 2016](http://spectrum.ieee.org/static/interactive-the-top-programming-languages-2016)
 * [Kaggle Tools Used By Competitors](https://www.kaggle.com/wiki/Software)
+* [Revolutions Blog](http://blog.revolutionanalytics.com/)
+* [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
+* [R-Bloggers](http://www.r-bloggers.com/)
+* [Microsoft R Server Tiger Blog](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
