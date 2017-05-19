@@ -5,9 +5,110 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 22 Apr 2017 15:37:31 -0300</pubDate>
-    <lastBuildDate>Sat, 22 Apr 2017 15:37:31 -0300</lastBuildDate>
+    <pubDate>Fri, 19 May 2017 00:08:27 -0300</pubDate>
+    <lastBuildDate>Fri, 19 May 2017 00:08:27 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Microsoft and Artificial Intelligence for the future</title>
+        <description>&lt;p&gt;Aproveitando o famoso &lt;a href=&quot;https://build.microsoft.com/&quot;&gt;Microsoft Build&lt;/a&gt; que em 2017 ocorreu em Seattle, e juntando ao convite para resumir o que foi apresentando durante esta conferência em relação a AI no &lt;a href=&quot;https://www.meetup.com/DeliveringSoftware/events/239680578/&quot;&gt;Delivering Software meetup&lt;/a&gt;, vou expor um pouco do histórico da Microsoft e conjecturar sobre sua visão de futuro no quesito Artificial Intelligence.&lt;/p&gt;
+
+&lt;p&gt;Segundo Harry Shum (Executive Vice President, Microsoft AI and Research), durante seu discurso no Build:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Alguns anos atrás, era difícil pensar em uma ferramenta de tecnologia popularmente usada que fazia uso do poder da AI. Em poucos anos, será difícil imaginar qualquer tecnologia que não aproveite o poder da AI.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Isso nos mostra como as grandes companias como Microsoft, Google, Amazon e etc, estão focando em produtos que explorem o poder na inteligência artificial.&lt;/p&gt;
+
+&lt;h2 id=&quot;sobre-o-build-2017&quot;&gt;Sobre o Build 2017&lt;/h2&gt;
+
+&lt;p&gt;Sobre o que foi apresentado no Build 2017, temos algumas novidades interessantes. Se comparado com o Build passado (2016), podemos dizer que a Microsoft trouxe bastante coisa nova ao cenário.&lt;/p&gt;
+
+&lt;h4 id=&quot;cognitive-services&quot;&gt;Cognitive Services&lt;/h4&gt;
+&lt;p&gt;E relação aos cognitive services, foram acrescentados 4 novos serviços aos 25 já existentes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/services/cognitive-services/bing-custom-search/&quot;&gt;Bing Custom Search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/services/cognitive-services/custom-vision-service/&quot;&gt;Custom Vision Service&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/services/cognitive-services/custom-decision-service/&quot;&gt;Custom Decision Service&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/services/cognitive-services/video-indexer/&quot;&gt;Video Indexer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;O que vale salientar aqui é que agora temos outros 3 serviços customizáveis, o que traz uma outra linha de atuação aqui. Tirando o LUIS (Language Understanding Intelligent Service) e o Custom Speech Service, todos os demais serviços se tratam de aprendizado prévio e consumível via API. Como LUIS é possível haver uma customização e aprendizagem da intenção com base no que foi estipulado. Podemos utilizar o Custom Speech Service para aprender com um determinado conjunto de linguagem, seja técnica ou não, e adaptar esse vocabulário para seu usuário final. Na prática os novos serviços customizáveis dão mais poder aos usuários, permitindo aos mesmos realizar aprendizados e experiências direcionadas aos seus problemas específicos.&lt;/p&gt;
+
+&lt;h4 id=&quot;cognitive-services-labs&quot;&gt;Cognitive Services Labs&lt;/h4&gt;
+&lt;p&gt;O Cognitive Services Labs é um ambiente para testar e dar feedback sobre as novas tecnologias sobre serviços cognitivos que estão sendo desenvolvidos pela Microsoft. Sendo assim você pode se inscrever para testar o que provavelmente serão os novos serviços a serem disponibilizados na plataforma Azure.&lt;/p&gt;
+
+&lt;p&gt;A Microsoft já havia feio o mesmo por meio do projeto Oxford, que é precessor do Cognitive Services.&lt;/p&gt;
+
+&lt;p&gt;Vale dar uma olhada nesse cara, aqui temos alguns serviços disruptivos na área, como por exemplo o Gesture API, doravante chamado de Project Prague, que cria experiências mais intuitivas e naturais, permitindo aos utilizadores controlar e interagir através de gestos.&lt;/p&gt;
+
+&lt;p&gt;Você pode acessar o &lt;a href=&quot;https://labs.cognitive.microsoft.com/&quot;&gt;Cognitive Services Labs aqui!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;azure-batch-ai-training&quot;&gt;Azure Batch AI Training&lt;/h4&gt;
+&lt;p&gt;O &lt;a href=&quot;https://batchaitraining.azure.com/&quot;&gt;Azure Batch AI Training&lt;/a&gt; é fenomenal. Este serviço possibilita que os desenvolvedores possam treinar suas próprias redes neurais profundas, utilizando as principais plataformas, incluindo o Microsoft Cognitive Toolkit, TensorFlow e etc. Outro ponto aqui é que você pode simplesmente enviar seu código em um container Docker e deixar a Microsoft lidar com isso.&lt;/p&gt;
+
+&lt;p&gt;O grande ganho aqui é poder utilizar a mesma infra-estrutura que a Microsoft usa para o seu desenvolvimento de AI por demanda. Na prática agora temos GPUs NVIDIA de ponta que serão utilizadas para o processamento. Agora não vamos mais ter que nos preocupar com a distribuição e paralelização deste processamento, jogando a responsabilidade para a nuvem.&lt;/p&gt;
+
+&lt;p&gt;Vale notar que no Build, foi exibido que será bem simples levar esses modelos de aprendizagem profunda para onde estão os dados, usando o analytics integration fornecido pelo Azure Data Lake, Azure Cosmos DB ou SQL Server.&lt;/p&gt;
+
+&lt;h4 id=&quot;presentation-translator&quot;&gt;Presentation Translator&lt;/h4&gt;
+&lt;p&gt;Certamente outro recurso que chamou atenção: A tradução em “em tempo real” de uma apresentação realizada no PowerPoint. Certamente temos aqui a utilização de um serviço cognitivo, porém já é possível notar o movimento da Microsoft integrando AI em seu famoso pacote Office.&lt;/p&gt;
+
+&lt;p&gt;Este serviço já está disponível para teste, basta apenas você se inscrever &lt;a href=&quot;https://www.aka.ms/PresentationTranslator&quot;&gt;neste formulário&lt;/a&gt; para ter a oportunidade de avaliar.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/ppt-translator.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;cortana-speaker&quot;&gt;Cortana speaker&lt;/h4&gt;
+
+&lt;p align=&quot;center&quot; style=&quot;background-color: black;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/cortana.png&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Em relação a Cortana o que vimos neste Build é sobre adoção. Foi anunciado oficialmente o uso da Cortana como assistente para o controle por voz do &lt;a href=&quot;http://www.harmankardon.com/invoke.html&quot;&gt;Invoke&lt;/a&gt;, que até então iria utilizar o Alexa da Amazon. Este produto será lançado no quarto trimestre nos EUA, e por hora não tem nenhum detalhe em relação ao preço.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Também tivemos o anúncio da parceria fechada com a HP para a construção do seu &lt;strong&gt;smart speaker&lt;/strong&gt; utilizando a Cortana.&lt;/p&gt;
+
+&lt;p&gt;Apesar de a Microsoft já ter ficado bem próxima de Apple e Google no desenvolvimento de assistentes digitais, as iniciativas recentes da Amazon e do Google para extender sua participação para as casas de seus usuários deixaram a Microsoft um pouco para trás. Mesmo agora, o Invoke será lançado apenas no final do ano, bem depois de seus concorrentes.&lt;/p&gt;
+
+&lt;h4 id=&quot;new-ai-mvp-award-category&quot;&gt;New AI MVP Award Category&lt;/h4&gt;
+
+&lt;p&gt;Firmando o compromisso da Microsoft com essas ações em AI, tivemos também o anúncio da nova categoria para o &lt;a href=&quot;https://mvp.microsoft.com/&quot;&gt;programa MVP&lt;/a&gt;, a categoria de AI.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como podemos ver acima essa área envolve do aprendizado de máquinas ao serviços cognitivos, ou seja, AI em toda a sua Glória ;)&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Parte da estratégia da Microsoft é dar um “empurrão” a fim de trazer inteligência artificial para a computação mainstream. Em resumo, sobre o que vimos no Build, na visão da Microsoft é certo dizer:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Artificial Intelligence está saindo do Research &amp;amp; Development para ficar mais próximo dos desenvolvedores&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Resumindo o motivo de estamos ouvindo falar tanto sobre AI, podemos dizer que chegamos a esse ponto graças à convergência de três forças principais: O aumento da potência computacional que hoje está exponencial na nuvem, poderosos algoritmos que funcionam em redes neurais profundas e acesso a enormes quantidades de dados.&lt;/p&gt;
+
+&lt;h2 id=&quot;project-oxford&quot;&gt;Project Oxford&lt;/h2&gt;
+&lt;p&gt;O investimento da Microsoft em AI não é novo. Como citado por Harry Shum, o departamento de Research &amp;amp; Development tem realizados pesquisas voltadas para AI nos últimos 20 anos, o que pode ser bem notado se olharmos para o histórico.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</guid>
+        
+        
+        <category>IA</category>
+        
+        <category>Cognitive Computing</category>
+        
+        <category>Microsoft Azure</category>
+        
+        <category>Deep Learning</category>
+        
+      </item>
     
       <item>
         <title>Global Azure Bootcamp Campinas 2017 - Cognitive Services no Azure</title>
@@ -72,13 +173,31 @@
     
       <item>
         <title>Variáveis, Estatística e Macnhine Learning</title>
-        <description>&lt;p&gt;Em Machine Lerning falamos em estática, e para ambos existe um elemento fundamental: dados. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.&lt;/p&gt;
+        <description>&lt;p&gt;A grosso modo podemos dividir a Estatística em três áreas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Estatística Descritiva&lt;/li&gt;
+  &lt;li&gt;Probabilidade&lt;/li&gt;
+  &lt;li&gt;Inferência Estatística&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Estatística Descritiva é, em geral, utilizada na etapa inicial da análise, quando tomamos contato com os dados pela primeira vez.&lt;/p&gt;
+
+&lt;p&gt;Probabilidade pode ser pensada como a teoria matemática utilizada para se estudar a incerteza oriunda de fenômenos de caráter aleatório.&lt;/p&gt;
+
+&lt;p&gt;Inferência Estatística é o estudo de técnicas que possibilitam a extrapolação, a um grande conjunto de dados, das informações e conclusões obtidas a partir de subconjuntos de valores, usualmente de dimensão muito menor. [1]&lt;/p&gt;
+
+&lt;p&gt;Falando em Machine Learning, sabemos que em algum determinado momento o pesquisador vai ser deparar com problemas para analisar e entender um determinado conjunto de dados que possa ser relevante aos seu objeto de estudo. Ele necessita trabalhar os dados a fim de transformá-los em informações que possam ser comparadas com outros resultados, ou ainda para julgar sua adequação a alguma teoria estipulada para o problema.&lt;/p&gt;
+
+&lt;p&gt;Resumindo, a essência da Ciência é a observação e seu objetivo básico é a inferência que pode ser dedutiva ou indutiva. Quando falamos em estatística, a inferência estatística se trata da metodologia que objetiva a coleta, redução, análise e modelagem dos dados, a partir dos quais é possível fazer a inferência para uma população que nos permite chegar as &lt;strong&gt;previsões&lt;/strong&gt; e assim tomar &lt;strong&gt;decisões&lt;/strong&gt;. [2]&lt;/p&gt;
+
+&lt;p&gt;Ao falar Machine Lerning falamos em estática, e para ambos existe um elemento fundamental (você já deve ter notado na descrição acima): Os &lt;strong&gt;&lt;u&gt;dados&lt;/u&gt;&lt;/strong&gt;. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Uma variável é como uma pergunta que pode ter várias respostas possíveis.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Observe a tabela abaixo:&lt;/p&gt;
+&lt;p&gt;Neste sentido vamos observar a tabela abaixo, que servirá de base para expressar os conceitos básicos que pretendo apresentar neste post:&lt;/p&gt;
 
 &lt;table class=&quot;table-fill&quot;&gt;
   &lt;tbody&gt;
@@ -207,11 +326,19 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 
 &lt;p&gt;As variáveis ​​contínuas não exigem codificação, pois elas são sempre numéricas.&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;variáveis-codificadas&quot;&gt;Variáveis Codificadas&lt;/h2&gt;
+&lt;h2 id=&quot;codificando-variáveis&quot;&gt;Codificando Variáveis&lt;/h2&gt;
 
 &lt;p&gt;Eu não posso analisar diretamente uma sentença como &lt;u&gt;&quot;Hoje é terça-feira&quot;&lt;/u&gt; em termos estatísticos. Quando nossa variável não é númerica, precisamos transformar cada resposta à nossa pergunta em um número, para que o mesmo possa ser analisado. Este processo de conversão é chamado de “codificação”. Como codificar uma variável vai depender do seu tipo de dado.&lt;/p&gt;
+
+&lt;p&gt;Vou escrever um post específico sobre este conteúdo.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;[1]&lt;/strong&gt; Noções de Probabilidade e Estatística - 6ª Edição Revista e Ampliada - Magalhães,Marcos Nascimento / Lima,Antonio Carlos Pedroso de Edusp&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[2]&lt;/strong&gt; Estatística Básica - 8ª Edição Bussab,Wilton de Oliveira / Morettin,Pedro Alberto&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
@@ -230,13 +357,27 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
         <title>Hello World R - Da base à Regressão Linear</title>
         <description>&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png&quot; /&gt;&lt;/p&gt;
 
+&lt;p&gt;Antes de iniciar vale notar que além da minha impressão com a linguagem, documentei aqui alguns pontos que me fizeram atentar ao R, bem como alguns pontos de atenção que devem ser levados em consideração principalmente se você estiver pensando em realizar algum projeto com R.&lt;/p&gt;
+
 &lt;p&gt;A linguagem R é um projeto GNU de software livre. O &lt;strong&gt;R&lt;/strong&gt; derivou de uma linguagem chamada &lt;strong&gt;S&lt;/strong&gt; (de “statistics”), criada na &lt;strong&gt;Bell Laboratories&lt;/strong&gt; nos anos 70. Esta é uma linguagem usada por programadores e cientistas de dados para computação estatística.&lt;/p&gt;
 
 &lt;p&gt;R foi desenvolvida por estatísticos para estatística, dado seu foco na resolução de problemas matemáticos, ele possui um estrutura simples o que facilita a implementação e traz ganhos na otimização no tempo de desenvolvimento. Você pode obter todas as referncias na documentação oficial em &lt;a href=&quot;https://www.rdocumentation.org/&quot;&gt;rdocumentation.org&lt;/a&gt;, fora que é possível contar com um riquíssimo ecossistema de pacotes para diferentes áreas de aplicação.&lt;/p&gt;
 
+&lt;h2 id=&quot;por-quê-eu-devo-considerar-o-r&quot;&gt;Por quê eu devo considerar o R?&lt;/h2&gt;
+
+&lt;p&gt;Se trata de uma linguagem free (cran.r-project.org), altamente extensível e hoje já conta com mais de 10.000 pacotes na &lt;a href=&quot;http://crantastic.org/packages&quot;&gt;CRAN&lt;/a&gt;, e o melhor, todos orientados a estatística, aprendizado de máquina e suas técnicas.&lt;/p&gt;
+
+&lt;p&gt;R tem crescido como linguagem e na preferência de utilização. Abaixo segue o ranking da &lt;a href=&quot;http://www.ieee.org&quot;&gt;IEEE&lt;/a&gt; de 2016 para “Top Programming Languages”.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/14/spectrum-ieee.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Se tomarmos como o &lt;a href=&quot;https://www.kaggle.com&quot;&gt;Kaggle&lt;/a&gt; como referência, vemos que a maioria dos competidores preferem usar R para a criação dos modelos.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/14/kaggle-tools.png&quot; /&gt;&lt;/p&gt;
+
 &lt;hr /&gt;
 
-&lt;p&gt;Para começar vamos criar um exemplo de regressão linear, uma espécie de &lt;strong&gt;“Hello World”&lt;/strong&gt; da computação estatística. Então, mãos a obra…&lt;/p&gt;
+&lt;p&gt;Para começar vamos criar um simples exemplo de regressão linear, que neste caso serve como uma espécie de &lt;strong&gt;“Hello World”&lt;/strong&gt; da computação estatística. Então, mãos a obra…&lt;/p&gt;
 
 &lt;h2 id=&quot;regressão-linear&quot;&gt;Regressão Linear&lt;/h2&gt;
 
@@ -287,7 +428,9 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p&gt;Nossa saída seria algo como o que se segue abaixo:&lt;/p&gt;
 
 &lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
-    &lt;code class=&quot;r&quot;&gt;
+    &lt;code class=&quot;prolog&quot;&gt;
+  #OUTPUT
+  
   8 4
 
   'Linhas:  8'
@@ -411,16 +554,64 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 
 &lt;p&gt;O valor de &lt;u&gt;Multiple R-squared (0,9927)&lt;/u&gt; é a porcentagem de variação na variável dependente explicada pela combinação linear das variáveis independentes. Neste caso os valores de R-squared são valores entre 0 e 1, onde os valores mais altos significam um modelo de previsão melhor. Em nosso caso, R-squared tem um valor extremamente alto, indicando que Color, Length e Width podem prever o resultado com boa precisão. F-statistic, Adjusted R-squared e p-value são outras medidas de ajuste do modelo.&lt;/p&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;Bom, nem tudo é céu azul e arco-íris… Existem alguns pontos que devem ser levantados em relação a utilização do R.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;r-é-single-threaded&quot;&gt;R é single-threaded&lt;/h2&gt;
+&lt;p&gt;Temos aqui um ponto interessante. R por padrão é single-threaded, ou seja, é executado apenas por um único segmento na CPU. Isso pode ser limitante já que mesmo usando R em uma VM na nuvem com 64 núcleos de CPU, o R só usará um deles.&lt;/p&gt;
+
+&lt;p&gt;Para ilustrar: Você deseja encontrar a soma de um vetor numérico, esta é uma operação que pode ser executada em paralelo na CPU com bastante facilidade. Se houver quatro núcleos de CPU disponíveis, cada núcleo pode receber cerca de um quarto dos dados a serem processados. Cada núcleo calcula o subtotal do pedaço de dados que é dado, e os quatro subtotais são adicionados para cima para encontrar a soma total do conjunto de dados inteiro.&lt;/p&gt;
+
+&lt;p&gt;No entanto, em R, se usarmo a função &lt;strong&gt;sum()&lt;/strong&gt;, ela será executada em série, processando todo o conjunto de dados em um núcleo de CPU. De fato, muitas operações de Big Data são de natureza semelhante a função &lt;strong&gt;sum()&lt;/strong&gt;, com a mesma tarefa executando independentemente em muitos subconjuntos de dados. Sendo assim, realizar tais operações sequencialmente seria uma subutilização das arquiteturas de computação em paralelo, e se falarmos do poder da nuvem seria mais disperdício ainda.&lt;/p&gt;
+
+&lt;p&gt;É possível escrever programas em R para um melhor desempenho com foco em computação paralela, mas seria melhor a linguagem ter essa premissa de forma nativa.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-stored-in-memory&quot;&gt;Data stored in memory&lt;/h2&gt;
+&lt;p&gt;Todos os dados processados em R tem de ser &lt;strong&gt;totalmente carregados na RAM&lt;/strong&gt;. Isso significa que uma vez que os dados foram carregados, tudo isso está disponível para processamento pela CPU, o que é ótimo para o desempenho. Por outro lado, isso também significa que o tamanho máximo de dados que você pode processar depende da quantidade de RAM livre disponível em seu sistema. Lembre-se de que nem toda a RAM do seu computador está disponível para o uso do R. O sistema operacional, os processos em segundo plano e quaisquer outros aplicativos que estão sendo executados na CPU também competem pela RAM. O que está disponível para R usar pode ser uma fração da RAM total instalada no sistema.&lt;/p&gt;
+
+&lt;p&gt;Durante o Workshop, &lt;u&gt;Microsoft R for Data Science&lt;/u&gt; no qual eu participei, usamos uma máquina no azure com 468GB de RAM para hospedar o R Server e ser utilizado por 12 pessoas. Fora isso eventualmente era necessário olhar o desempenho da mesma já que algumas execuções se tornaram pesadas.&lt;/p&gt;
+
+&lt;p&gt;Frequentemente usamos comandos como &lt;strong&gt;mem_used()&lt;/strong&gt; ou &lt;strong&gt;object_size(myDF)&lt;/strong&gt; para monitorar nosso uso das capacidades computacionais.&lt;/p&gt;
+
+&lt;p&gt;Além disso, R também requer &lt;strong&gt;RAM livre para armazenar&lt;/strong&gt; os resultados de seus cálculos. Dependendo do tipo de computação que você for executar, talvez seja necessário que a RAM disponível seja duas vezes ou mais vezes maior do que o tamanho de seus dados. Fora isso as versões de &lt;strong&gt;32 bits&lt;/strong&gt; de R também são limitadas pela quantidade de RAM que podem acessar. Dependendo do sistema operacional, eles podem ser limitados a &lt;strong&gt;2GB a 4GB de RAM&lt;/strong&gt;, mesmo quando há realmente mais RAM disponível.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 3em; margin-top: 2em;&quot;&gt;
+
+Aparentemente tanto o problema de **single-threaded** como a questão do **data stored in memory** já estão na lista do [R Consortium](https://www.r-consortium.org/), então vamos esperar que em um futuro próximo tenhamos melhores estratégias em R.
+&lt;/div&gt;
+
+&lt;h2 id=&quot;essential-open-source-packages&quot;&gt;Essential Open Source Packages&lt;/h2&gt;
+&lt;p&gt;Alguns dos principais pacotes em R que você deve conhecer:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Data Management: &lt;code&gt;dplyr&lt;/code&gt;, &lt;code&gt;tidyr&lt;/code&gt;, &lt;code&gt;data.table&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Visualization: &lt;code&gt;ggplot2&lt;/code&gt;, &lt;code&gt;ggvis&lt;/code&gt;, &lt;code&gt;htmlwidgets&lt;/code&gt;, &lt;code&gt;shiny&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Data Importing: &lt;code&gt;haven&lt;/code&gt;, &lt;code&gt;RODBC&lt;/code&gt;, &lt;code&gt;readr&lt;/code&gt;, &lt;code&gt;foreign&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Other favorites: &lt;code&gt;magrittr&lt;/code&gt;, &lt;code&gt;rmarkdown&lt;/code&gt;, &lt;code&gt;caret&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;mrs---mircrosoft-r-server&quot;&gt;MRS - Mircrosoft R Server&lt;/h2&gt;
+&lt;p&gt;Essa é uma menção honrosa ao &lt;strong&gt;MRS&lt;/strong&gt; ou &lt;strong&gt;Mircrosoft R Server&lt;/strong&gt;. Vou escrever um post específico sobre este cara, mas com o MRS podemos realizar operações Multi-Threading, trabalhar com Parallel Processing e utilizar o recurso para remover limitação de dados apenas na RAM, fazendo uma combinação de RAM e Disco.&lt;/p&gt;
+
 &lt;h2 id=&quot;impressões&quot;&gt;Impressões&lt;/h2&gt;
 &lt;p&gt;No geral minha primeira impressão da linguagem &lt;u&gt;&lt;b&gt;R&lt;/b&gt;&lt;/u&gt; foi muito boa. Achei uma sintaxe limpa, fácil e bem direcionada ao seu propósito. Já tinha em mente que esta seria uma linguagem orientada a estatística computacional, mas esperava algo mais rebuscado, diferente da facilidade de compreensão que tive.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusão&quot;&gt;Conclusão&lt;/h2&gt;
-&lt;p&gt;Minha ideia aqui não era fazer um comparativo, ou muito menos explicar os principais comandos da linguagem. A documentação por si só já é eficaz, e ainda existe uma infinidade de materiais sobre este tema. Preferi aqui fazer uma analise da minha impressão ao implementar uma técnica básica como a regressão linear.&lt;/p&gt;
+&lt;p&gt;Minha ideia aqui não era fazer um comparativo, ou muito menos explicar os principais comandos da linguagem. A documentação por si só já é eficaz, e ainda existe uma infinidade de materiais sobre este tema. Preferi aqui fazer uma analise da minha impressão ao implementar uma técnica básica como a regressão linear, além de buscar alguns dos benefícios e possíveis problemas ao optar por utilizar R em futuros projetos.&lt;/p&gt;
 
 &lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.rdocumentation.org/&quot;&gt;rdocumentation.org&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_regression&quot;&gt;Linear Regression&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.r-consortium.org/&quot;&gt;R Consortium&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;R High Performance Programming - Aloysius Lim, William Tjhi&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://spectrum.ieee.org/static/interactive-the-top-programming-languages-2016&quot;&gt;IEEE Ranking 2016&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/wiki/Software&quot;&gt;Kaggle Tools Used By Competitors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.revolutionanalytics.com/&quot;&gt;Revolutions Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.rstudio.com/resources/cheatsheets/&quot;&gt;RStudio Cheat Sheets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.r-bloggers.com/&quot;&gt;R-Bloggers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/microsoftrservertigerteam/&quot;&gt;Microsoft R Server Tiger Blog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
@@ -711,13 +902,13 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p&gt;A estrutura atual está descrita logo abaixo. Vou me esforçar para manter atualizada.&lt;/p&gt;
 
 &lt;h4 id=&quot;file-handling&quot;&gt;File Handling&lt;/h4&gt;
-&lt;p&gt;TBA&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;sms-spam-filtering&quot;&gt;SMS Spam Filtering&lt;/h4&gt;
-&lt;p&gt;TBA&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;song-recommender&quot;&gt;Song Recommender&lt;/h4&gt;
-&lt;p&gt;TBA&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;basic-math&quot;&gt;Basic Math&lt;/h4&gt;
 &lt;p&gt;Basic math notions with python&lt;/p&gt;
@@ -749,10 +940,14 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;imbalanced-learning-with-gaussians&quot;&gt;Imbalanced Learning with Gaussians&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
+&lt;h4 id=&quot;neural-network&quot;&gt;Neural Network&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Adaline&lt;/li&gt;
+  &lt;li&gt;Perceptron&lt;/li&gt;
+  &lt;li&gt;Simple Neural Network&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
@@ -986,82 +1181,6 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
         
         
         <category>IA</category>
-        
-      </item>
-    
-      <item>
-        <title>Microsoft Azure Notebooks–Jupyter Notebooks as a Service</title>
-        <description>&lt;p&gt;Essa é uma dica para a galera (que como eu), utiliza o Jupyter Notebooks como ferramenta de estudo ou trabalho.&lt;/p&gt;
-
-&lt;p style=&quot;background-color: #35424a&quot;&gt;&lt;img title=&quot;capa&quot; style=&quot;border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto&quot; alt=&quot;capa&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/capa.jpg&quot; width=&quot;752&quot; height=&quot;412&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Provavelmente se você está lendo isto, é por que já conhece o Jupyter Notebooks ou antigo IPython, e tem interesse em usar ou entender esta oferta. Caso você não conheça esta ferramenta, basta saber que o Jupyter Notebooks oferece um environment com suporte a várias linguagens de programação, incluindo Python, R, MATLAB e etc. Esta é uma ferramenta que caiu nas graças dos programadores por proporcionar um meio simples de programar, visualizar e documentar de maneira eficientes seus experimentos. Em breve escrevo algo específico sobre essa ferramenta aqui no blog.&lt;/p&gt;
-
-&lt;p&gt;Por hora vamos analisar este serviço, que no momento em que escrevo este texto, está em PREVIEW.&lt;/p&gt;
-
-&lt;p&gt;Creio que o primeiro passo é entregar algumas informações sobre o serviço. Até este momento os Notebooks estão rodando sobre environment Anaconda para o Python e Microsoft R Open para R. Sendo assim temos suporte aos pacotes já conhecidos no Anaconda. Algo muito importante de ressaltar é que temos a possibilidade de instalar pacotes de maneira normal (pip install), ou usando Conda (conda install). O mesmo vale para R.&lt;/p&gt;
-
-&lt;h2 id=&quot;environments&quot;&gt;Environments&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Anaconda 4.1.0 para Python 2.7.11&lt;/li&gt;
-  &lt;li&gt;Anaconda 4.1 para Python 3.5.1&lt;/li&gt;
-  &lt;li&gt;MRO 3.3.0 para R&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;restrictions&quot;&gt;Restrictions&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;É possível acessar o github, PyPI, CRAN, OneDrive, DropBox, Google Drive e é claro, o Azure;&lt;/li&gt;
-  &lt;li&gt;A memória é limitado a 4 GB;&lt;/li&gt;
-  &lt;li&gt;Seus dados pode ter removido após 60 dias de inatividade;&lt;/li&gt;
-  &lt;li&gt;Uso deve ser limitado a aprendizagem, investigação, computação em geral e etc. O que é meio lógico, já que o serviço (por hora gratuito), tem algumas limitações de processamento e privacidade.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;start&quot;&gt;Start&lt;/h2&gt;
-&lt;p&gt;Para utilizar o serviço é algo tão simples quanto acessar o serviço e se autenticar no serviço.&lt;/p&gt;
-
-&lt;p style=&quot;background-color: #35424a&quot;&gt;&lt;img title=&quot;azure-notebook-1&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; alt=&quot;azure-notebook-1&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-1.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Assim que você informar sua credencial, o serviço vai te solicitar a permissão para criar uma ID para sua conta no serviço. Diga sim e siga em frente…&lt;/p&gt;
-
-&lt;p&gt;Assim que tudo estiver pronto, você deve ver uma tela como abaixo:&lt;/p&gt;
-
-&lt;p&gt;&lt;img title=&quot;azure-notebook-2&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; alt=&quot;azure-notebook-2&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-2.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Done. Você já um ambiente pronto, e inclusive alguns exemplos para testar. De cara, uma coisa interessante notar é que podemos importar notebooks direto de nosso computador ou de uma URL.&lt;/p&gt;
-
-&lt;p&gt;&lt;img title=&quot;azure-notebook-3&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; alt=&quot;azure-notebook-3&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-3.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Agora perceba que todos os nossos cadernos estão vinculados a uma biblioteca chamada &lt;strong&gt;Sample notebooks&lt;/strong&gt;. Sendo assim vamos criar uma biblioteca.&lt;/p&gt;
-
-&lt;p&gt;Clique em &lt;strong&gt;My libraries&lt;/strong&gt;. Na página que se segue clique em &lt;strong&gt;New Library&lt;/strong&gt; e informe o nome, descrição e url personalizada.&lt;/p&gt;
-
-&lt;p&gt;&lt;img title=&quot;azure-notebook-4&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; alt=&quot;azure-notebook-4&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-4.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Assim que sua biblioteca estiver criada você pode optar por importar um caderno ou abrir seu Jupyter Notebooks.&lt;/p&gt;
-
-&lt;p&gt;&lt;img title=&quot;azure-notebook-5&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; border-left: 0px; display: block; padding-right: 0px; margin-right: auto&quot; alt=&quot;azure-notebook-5&quot; src=&quot;http://blob.vitormeriat.com.br/images/2016/10/azure-notebook-5.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Agora estamos em terreno conhecido. É só criar um novo Notebook usando Py2, Py3 ou R.&lt;/p&gt;
-
-&lt;p&gt;No próximo post vou mostrar como instalar pacotes de Python, R e como compartilhar sua biblioteca de forma pública.&lt;/p&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;A princípio vale notar que esta é uma ferramenta em preview. Sendo assim está em desenvolvimento ativo. Acho que hoje é uma maneira muito válida de compartilhar seus cadernos em um ambiente pronto para execução. Vejo uma ótima oportunidade para ensino aqui. Creio que em breve o serviço deve evoluir para ofertas com alto poder de processamento e armazenamento. Digo isso por que hoje já conseguimos utilizar e integrar nossos cadernos com o Azure Machine Learning, logo, creio que a intenção da Microsoft seja mais que apenas oferecer um local para treinar e repositar experimentos na nuvem… espero ;)&lt;/p&gt;
-</description>
-        <pubDate>Thu, 20 Oct 2016 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/10/20/microsoft-azure-notebooksjupyter-notebooks-as-a-service/</guid>
-        
-        
-        <category>Data Science</category>
-        
-        <category>Machine Learning</category>
-        
-        <category>Python</category>
         
       </item>
     

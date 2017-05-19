@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</loc>
+<lastmod>2017-05-17T00:00:00-03:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</loc>
 <lastmod>2017-04-22T00:00:00-03:00</lastmod>
 </url>
@@ -381,11 +385,11 @@
 <lastmod>2013-09-02T00:00:00-03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2013/05/31/github-para-desenvolvedores-microsoft/</loc>
-<lastmod>2013-05-31T18:21:20-03:00</lastmod>
+<loc>http://localhost:4000/2013/05/31/trabalhando-com-o-github-em-7-passos/</loc>
+<lastmod>2013-05-31T00:00:00-03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2013/05/31/trabalhando-com-o-github-em-7-passos/</loc>
+<loc>http://localhost:4000/2013/05/31/github-para-desenvolvedores-microsoft/</loc>
 <lastmod>2013-05-31T00:00:00-03:00</lastmod>
 </url>
 <url>

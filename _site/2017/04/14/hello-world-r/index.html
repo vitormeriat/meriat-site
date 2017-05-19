@@ -128,13 +128,27 @@
     <section class="section-padding post" itemprop="articleBody">
       <p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png" /></p>
 
+<p>Antes de iniciar vale notar que além da minha impressão com a linguagem, documentei aqui alguns pontos que me fizeram atentar ao R, bem como alguns pontos de atenção que devem ser levados em consideração principalmente se você estiver pensando em realizar algum projeto com R.</p>
+
 <p>A linguagem R é um projeto GNU de software livre. O <strong>R</strong> derivou de uma linguagem chamada <strong>S</strong> (de “statistics”), criada na <strong>Bell Laboratories</strong> nos anos 70. Esta é uma linguagem usada por programadores e cientistas de dados para computação estatística.</p>
 
 <p>R foi desenvolvida por estatísticos para estatística, dado seu foco na resolução de problemas matemáticos, ele possui um estrutura simples o que facilita a implementação e traz ganhos na otimização no tempo de desenvolvimento. Você pode obter todas as referncias na documentação oficial em <a href="https://www.rdocumentation.org/">rdocumentation.org</a>, fora que é possível contar com um riquíssimo ecossistema de pacotes para diferentes áreas de aplicação.</p>
 
+<h2 id="por-quê-eu-devo-considerar-o-r">Por quê eu devo considerar o R?</h2>
+
+<p>Se trata de uma linguagem free (cran.r-project.org), altamente extensível e hoje já conta com mais de 10.000 pacotes na <a href="http://crantastic.org/packages">CRAN</a>, e o melhor, todos orientados a estatística, aprendizado de máquina e suas técnicas.</p>
+
+<p>R tem crescido como linguagem e na preferência de utilização. Abaixo segue o ranking da <a href="http://www.ieee.org">IEEE</a> de 2016 para “Top Programming Languages”.</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/04/14/spectrum-ieee.png" /></p>
+
+<p>Se tomarmos como o <a href="https://www.kaggle.com">Kaggle</a> como referência, vemos que a maioria dos competidores preferem usar R para a criação dos modelos.</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/04/14/kaggle-tools.png" /></p>
+
 <hr />
 
-<p>Para começar vamos criar um exemplo de regressão linear, uma espécie de <strong>“Hello World”</strong> da computação estatística. Então, mãos a obra…</p>
+<p>Para começar vamos criar um simples exemplo de regressão linear, que neste caso serve como uma espécie de <strong>“Hello World”</strong> da computação estatística. Então, mãos a obra…</p>
 
 <h2 id="regressão-linear">Regressão Linear</h2>
 
@@ -185,7 +199,9 @@
 <p>Nossa saída seria algo como o que se segue abaixo:</p>
 
 <pre style="font-size: 1.2em !important">
-    <code class="r">
+    <code class="prolog">
+  #OUTPUT
+  
   8 4
 
   'Linhas:  8'
@@ -309,16 +325,64 @@
 
 <p>O valor de <u>Multiple R-squared (0,9927)</u> é a porcentagem de variação na variável dependente explicada pela combinação linear das variáveis independentes. Neste caso os valores de R-squared são valores entre 0 e 1, onde os valores mais altos significam um modelo de previsão melhor. Em nosso caso, R-squared tem um valor extremamente alto, indicando que Color, Length e Width podem prever o resultado com boa precisão. F-statistic, Adjusted R-squared e p-value são outras medidas de ajuste do modelo.</p>
 
+<blockquote>
+  <p>Bom, nem tudo é céu azul e arco-íris… Existem alguns pontos que devem ser levantados em relação a utilização do R.</p>
+</blockquote>
+
+<h2 id="r-é-single-threaded">R é single-threaded</h2>
+<p>Temos aqui um ponto interessante. R por padrão é single-threaded, ou seja, é executado apenas por um único segmento na CPU. Isso pode ser limitante já que mesmo usando R em uma VM na nuvem com 64 núcleos de CPU, o R só usará um deles.</p>
+
+<p>Para ilustrar: Você deseja encontrar a soma de um vetor numérico, esta é uma operação que pode ser executada em paralelo na CPU com bastante facilidade. Se houver quatro núcleos de CPU disponíveis, cada núcleo pode receber cerca de um quarto dos dados a serem processados. Cada núcleo calcula o subtotal do pedaço de dados que é dado, e os quatro subtotais são adicionados para cima para encontrar a soma total do conjunto de dados inteiro.</p>
+
+<p>No entanto, em R, se usarmo a função <strong>sum()</strong>, ela será executada em série, processando todo o conjunto de dados em um núcleo de CPU. De fato, muitas operações de Big Data são de natureza semelhante a função <strong>sum()</strong>, com a mesma tarefa executando independentemente em muitos subconjuntos de dados. Sendo assim, realizar tais operações sequencialmente seria uma subutilização das arquiteturas de computação em paralelo, e se falarmos do poder da nuvem seria mais disperdício ainda.</p>
+
+<p>É possível escrever programas em R para um melhor desempenho com foco em computação paralela, mas seria melhor a linguagem ter essa premissa de forma nativa.</p>
+
+<h2 id="data-stored-in-memory">Data stored in memory</h2>
+<p>Todos os dados processados em R tem de ser <strong>totalmente carregados na RAM</strong>. Isso significa que uma vez que os dados foram carregados, tudo isso está disponível para processamento pela CPU, o que é ótimo para o desempenho. Por outro lado, isso também significa que o tamanho máximo de dados que você pode processar depende da quantidade de RAM livre disponível em seu sistema. Lembre-se de que nem toda a RAM do seu computador está disponível para o uso do R. O sistema operacional, os processos em segundo plano e quaisquer outros aplicativos que estão sendo executados na CPU também competem pela RAM. O que está disponível para R usar pode ser uma fração da RAM total instalada no sistema.</p>
+
+<p>Durante o Workshop, <u>Microsoft R for Data Science</u> no qual eu participei, usamos uma máquina no azure com 468GB de RAM para hospedar o R Server e ser utilizado por 12 pessoas. Fora isso eventualmente era necessário olhar o desempenho da mesma já que algumas execuções se tornaram pesadas.</p>
+
+<p>Frequentemente usamos comandos como <strong>mem_used()</strong> ou <strong>object_size(myDF)</strong> para monitorar nosso uso das capacidades computacionais.</p>
+
+<p>Além disso, R também requer <strong>RAM livre para armazenar</strong> os resultados de seus cálculos. Dependendo do tipo de computação que você for executar, talvez seja necessário que a RAM disponível seja duas vezes ou mais vezes maior do que o tamanho de seus dados. Fora isso as versões de <strong>32 bits</strong> de R também são limitadas pela quantidade de RAM que podem acessar. Dependendo do sistema operacional, eles podem ser limitados a <strong>2GB a 4GB de RAM</strong>, mesmo quando há realmente mais RAM disponível.</p>
+
+<div style="margin-bottom: 3em; margin-top: 2em;">
+
+Aparentemente tanto o problema de **single-threaded** como a questão do **data stored in memory** já estão na lista do [R Consortium](https://www.r-consortium.org/), então vamos esperar que em um futuro próximo tenhamos melhores estratégias em R.
+</div>
+
+<h2 id="essential-open-source-packages">Essential Open Source Packages</h2>
+<p>Alguns dos principais pacotes em R que você deve conhecer:</p>
+
+<ul>
+  <li>Data Management: <code>dplyr</code>, <code>tidyr</code>, <code>data.table</code></li>
+  <li>Visualization: <code>ggplot2</code>, <code>ggvis</code>, <code>htmlwidgets</code>, <code>shiny</code></li>
+  <li>Data Importing: <code>haven</code>, <code>RODBC</code>, <code>readr</code>, <code>foreign</code></li>
+  <li>Other favorites: <code>magrittr</code>, <code>rmarkdown</code>, <code>caret</code></li>
+</ul>
+
+<h2 id="mrs---mircrosoft-r-server">MRS - Mircrosoft R Server</h2>
+<p>Essa é uma menção honrosa ao <strong>MRS</strong> ou <strong>Mircrosoft R Server</strong>. Vou escrever um post específico sobre este cara, mas com o MRS podemos realizar operações Multi-Threading, trabalhar com Parallel Processing e utilizar o recurso para remover limitação de dados apenas na RAM, fazendo uma combinação de RAM e Disco.</p>
+
 <h2 id="impressões">Impressões</h2>
 <p>No geral minha primeira impressão da linguagem <u><b>R</b></u> foi muito boa. Achei uma sintaxe limpa, fácil e bem direcionada ao seu propósito. Já tinha em mente que esta seria uma linguagem orientada a estatística computacional, mas esperava algo mais rebuscado, diferente da facilidade de compreensão que tive.</p>
 
 <h2 id="conclusão">Conclusão</h2>
-<p>Minha ideia aqui não era fazer um comparativo, ou muito menos explicar os principais comandos da linguagem. A documentação por si só já é eficaz, e ainda existe uma infinidade de materiais sobre este tema. Preferi aqui fazer uma analise da minha impressão ao implementar uma técnica básica como a regressão linear.</p>
+<p>Minha ideia aqui não era fazer um comparativo, ou muito menos explicar os principais comandos da linguagem. A documentação por si só já é eficaz, e ainda existe uma infinidade de materiais sobre este tema. Preferi aqui fazer uma analise da minha impressão ao implementar uma técnica básica como a regressão linear, além de buscar alguns dos benefícios e possíveis problemas ao optar por utilizar R em futuros projetos.</p>
 
 <h2 id="referências">Referências</h2>
 <ul>
   <li><a href="https://www.rdocumentation.org/">rdocumentation.org</a></li>
   <li><a href="https://en.wikipedia.org/wiki/Linear_regression">Linear Regression</a></li>
+  <li><a href="https://www.r-consortium.org/">R Consortium</a></li>
+  <li>R High Performance Programming - Aloysius Lim, William Tjhi</li>
+  <li><a href="http://spectrum.ieee.org/static/interactive-the-top-programming-languages-2016">IEEE Ranking 2016</a></li>
+  <li><a href="https://www.kaggle.com/wiki/Software">Kaggle Tools Used By Competitors</a></li>
+  <li><a href="http://blog.revolutionanalytics.com/">Revolutions Blog</a></li>
+  <li><a href="https://www.rstudio.com/resources/cheatsheets/">RStudio Cheat Sheets</a></li>
+  <li><a href="http://www.r-bloggers.com/">R-Bloggers</a></li>
+  <li><a href="https://blogs.msdn.microsoft.com/microsoftrservertigerteam/">Microsoft R Server Tiger Blog</a></li>
 </ul>
 
     </section>
@@ -345,7 +409,7 @@
   <div style="margin-top: 60px; margin-bottom: 60px;">
     
     
-      8 minutes to read
+      13 minutes to read
     
   </div>
 
