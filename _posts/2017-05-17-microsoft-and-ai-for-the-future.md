@@ -49,6 +49,13 @@ O grande ganho aqui é poder utilizar a mesma infra-estrutura que a Microsoft us
 
 Vale notar que no Build, foi exibido que será bem simples levar esses modelos de aprendizagem profunda para onde estão os dados, usando o analytics integration fornecido pelo Azure Data Lake, Azure Cosmos DB ou SQL Server.
 
+#### Bots
+Usando os novos Adaptive Cards ​​suportados pelo Microsoft Bot Framework, os desenvolvedores podem gravar cartões que ficam ótimos em vários aplicativos e plataformas. Outra novidade foi a possibilidade de publicar em novos canais, incluindo Bing, Cortana e Skype for Business, fora o poder de implementar a API de solicitação de pagamento da Microsoft para verificação rápida e fácil em seus bots.
+
+A Microsoft também atualizou o LUIS (Language Understanding Intelligent Service),a fim de oferecer um reconhecimento de fala mais preciso, sem falar no número crescente de entidades e intenções que o sistema pode reconhecer.
+
+#### Cortana Skills Kit
+O Cortana Skills Kit foi lançado em preview, e em suma oferece o poder de desenvolver habilidades para Cortana criando um bot e publicando-o no novo canal da Cortana Bot Framework. Isso está disponível no Windows 10, Android, iOS e no novo alto-falante Harman Kardon Invoke,que é powered by Cortana.
 
 #### Presentation Translator
 Certamente outro recurso que chamou atenção: A tradução em "em tempo real" de uma apresentação realizada no PowerPoint. Certamente temos aqui a utilização de um serviço cognitivo, porém já é possível notar o movimento da Microsoft integrando AI em seu famoso pacote Office.
@@ -89,4 +96,11 @@ Resumindo o motivo de estamos ouvindo falar tanto sobre AI, podemos dizer que ch
 ## Project Oxford
 O investimento da Microsoft em AI não é novo. Como citado por Harry Shum, o departamento de Research & Development tem realizados pesquisas voltadas para AI nos últimos 20 anos, o que pode ser bem notado se olharmos para o histórico.
 
+O projeto Oxford é a coleção da Microsoft de interfaces de programação de aplicativos (API) e de serviços de aprendizado de máquina. Durante a conferência de desenvolvedores Build deste ano, a tecnologia ajudou a empresa a marcar um raro golpe viral com seu site de adivinhação de idade, How-Old.net. Poucas horas depois de ser lançado, o site reuniu centenas de milhares de submissões de imagens quando os usuários testaram as tentativas do site de descobrir as idades e os gêneros de assuntos fotográficos, às vezes para efeito cômico.
 
+"A partir de hoje, expandimos ainda mais o alcance do Serviço Inteligente de Compreensão da Língua do Projeto Oxford (LUIS) com disponibilidade de beta pública, suporte a idioma chinês e mais modelos pré-construídos", disse Ryan Galgon, gerente sênior de programas da Microsoft Technology and Research. Em uma declaração de 26 de outubro. "Além disso, as versões beta do Project Oxford face, visão de computador e SDK de fala estão agora disponíveis no GitHub."
+
+
+## Referências
+* [Resumo do anúncio realizado por Harry Shum](https://blogs.microsoft.com/blog/2017/05/10/microsoft-build-2017-microsoft-ai-amplify-human-ingenuity/)
+* [Project Oxford](http://www.projectoxford.ai/)
