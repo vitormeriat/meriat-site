@@ -7,9 +7,7 @@ categories:
   - SOA
 ---
 <p align="justify">Atualmente estou trabalhando em um projeto com foco na integração. A ideia é implementar SOA em sua forma mais eficaz, se que posso colocar assim. O fato é que só pode existir sucesso em uma implantação <strong>SOA</strong> se houver primeiro a ciência do quão importante é a <strong>governança</strong> neste processo.</p>
-<!-- <p><a href="http://blob.vitormeriat.com.br/images/2015/04/capa.png"><img title="capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto"   alt="capa" src="http://blob.vitormeriat.com.br/images/capa.png" width="700" height="260" /></a></p> -->
-<p><!--more-->
-<p>&nbsp;</p>
+
 <h1><strong>Alinhamento com o negócio</strong></h1>
 <p align="justify">A governança SOA consiste na definição dos processos que visam a garantir que os objetivos da área de TI sejam plenamente atingidos. Com isso, a governança SOA deve se ocupar de:</p>
 <ul>
@@ -110,6 +108,3 @@ categories:
 <h2>Referências:</h2>
 <p><a href="http://pt.wikipedia.org/wiki/Governan%C3%A7a_corporativa" target="_blank">Governança corporativa</a></p>
 <p><a href="http://www.akana.com/solutions/integrated_soa_governance" target="_blank">SOA Governance - Harness the Power of Technology</a></p>
-
-<p>&nbsp;</p>
-<h3><font color="#004040">Bons estudos e até a próxima pessoal&nbsp; ;)</font></h3>
