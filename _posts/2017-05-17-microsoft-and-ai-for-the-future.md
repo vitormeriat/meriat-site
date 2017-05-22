@@ -70,7 +70,7 @@ Este serviço já está disponível para teste, basta apenas você se inscrever 
 
 Em relação a Cortana o que vimos neste Build é sobre adoção. Foi anunciado oficialmente o uso da Cortana como assistente para o controle por voz do [Invoke](http://www.harmankardon.com/invoke.html), que até então iria utilizar o Alexa da Amazon. Este produto será lançado no quarto trimestre nos EUA, e por hora não tem nenhum detalhe em relação ao preço.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png"></p>
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png" class="absolute-bg"></p>
 
 Também tivemos o anúncio da parceria fechada com a HP para a construção do seu **smart speaker** utilizando a Cortana.
 
@@ -80,7 +80,7 @@ Apesar de a Microsoft já ter ficado bem próxima de Apple e Google no desenvolv
 
 Firmando o compromisso da Microsoft com essas ações em AI, tivemos também o anúncio da nova categoria para o [programa MVP](https://mvp.microsoft.com/), a categoria de AI.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png"></p>
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png" class="absolute-bg"></p>
 
 Como podemos ver acima essa área envolve do aprendizado de máquinas ao serviços cognitivos, ou seja, AI em toda a sua Glória ;)
 
@@ -96,9 +96,19 @@ Resumindo o motivo de estamos ouvindo falar tanto sobre AI, podemos dizer que ch
 ## Project Oxford
 O investimento da Microsoft em AI não é novo. Como citado por Harry Shum, o departamento de Research & Development tem realizados pesquisas voltadas para AI nos últimos 20 anos, o que pode ser bem notado se olharmos para o histórico.
 
-O projeto Oxford é a coleção da Microsoft de interfaces de programação de aplicativos (API) e de serviços de aprendizado de máquina. Durante a conferência de desenvolvedores Build deste ano, a tecnologia ajudou a empresa a marcar um raro golpe viral com seu site de adivinhação de idade, How-Old.net. Poucas horas depois de ser lançado, o site reuniu centenas de milhares de submissões de imagens quando os usuários testaram as tentativas do site de descobrir as idades e os gêneros de assuntos fotográficos, às vezes para efeito cômico.
+O projeto Oxford é a coleção da Microsoft de APIs para serviços de aprendizado de máquina. Antes de seu lançamento oficial, a Microsoft laçou o (que na época se tornou um viral) sua aplicação para "adivinhação de idade", o How-Old.net. Poucas horas depois de ser lançado, o site reuniu centenas de milhares de submissões de imagens em que os usuários brincaram com as tentativas do site de descobrir as idades e os gêneros das pessoas nas fotos submetidas. É claro que isso ajudou a treinar o modelo de reconhecimento e analise de sentimento, tornando o serviço mais confiável.
 
-"A partir de hoje, expandimos ainda mais o alcance do Serviço Inteligente de Compreensão da Língua do Projeto Oxford (LUIS) com disponibilidade de beta pública, suporte a idioma chinês e mais modelos pré-construídos", disse Ryan Galgon, gerente sênior de programas da Microsoft Technology and Research. Em uma declaração de 26 de outubro. "Além disso, as versões beta do Project Oxford face, visão de computador e SDK de fala estão agora disponíveis no GitHub."
+O projeto Oxfor iniciou com os seguintes serviços:
+
+* Face recognition
+* Speech processing
+* Visual tools
+* Language Understanding Intelligent Service (LUIS)
+
+## Deep Learning
+Apesar do termo datar como recente para a maioria das pessoas, as pesquisas envolvendo redes neurais de N camadas para problemas complexos está no campo de pesquisa da Microsoft há decadas, e mais especificamente no área do reconhecimento de fala, como podemos ver neste paper da IEEE, datado de 2013: [Recent advances in deep learning for speech research at Microsoft](http://ieeexplore.ieee.org/abstract/document/6639345/)
+
+
 
 
 ## Referências
