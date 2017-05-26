@@ -3,10 +3,10 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 19 May 2017 00:18:55 -0300</pubDate>
-    <lastBuildDate>Fri, 19 May 2017 00:18:55 -0300</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 25 May 2017 21:46:08 -0300</pubDate>
+    <lastBuildDate>Thu, 25 May 2017 21:46:08 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -96,8 +96,8 @@
 
 </description>
         <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</guid>
+        <link>/2017/05/17/microsoft-and-ai-for-the-future/</link>
+        <guid isPermaLink="true">/2017/05/17/microsoft-and-ai-for-the-future/</guid>
         
         
         <category>IA</category>
@@ -153,8 +153,8 @@
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 22 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</guid>
+        <link>/2017/04/22/gab-azure-ml-cognitive/</link>
+        <guid isPermaLink="true">/2017/04/22/gab-azure-ml-cognitive/</guid>
         
         
         <category>IA</category>
@@ -343,8 +343,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/20/variables-in-statistic/</guid>
+        <link>/2017/04/20/variables-in-statistic/</link>
+        <guid isPermaLink="true">/2017/04/20/variables-in-statistic/</guid>
         
         
         <category>Statistics</category>
@@ -615,8 +615,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/14/hello-world-r/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/14/hello-world-r/</guid>
+        <link>/2017/04/14/hello-world-r/</link>
+        <guid isPermaLink="true">/2017/04/14/hello-world-r/</guid>
         
         
         <category>R</category>
@@ -677,8 +677,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 01 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
+        <link>/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
+        <guid isPermaLink="true">/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
         
         
         <category>IA</category>
@@ -853,8 +853,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
+        <link>/2017/03/18/titanic-machine-learning-from-disaster/</link>
+        <guid isPermaLink="true">/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
         
         <category>IA</category>
@@ -950,8 +950,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
@@ -1063,8 +1063,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;h3 id=&quot;É-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
+        <link>/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">/2017/02/07/literatura-classica-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -1147,8 +1147,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</guid>
+        <link>/2017/02/05/cpbr10-workshop-machine-learning/</link>
+        <guid isPermaLink="true">/2017/02/05/cpbr10-workshop-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -1176,8 +1176,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;h4 id=&quot;É-isso-ai-pessoal-em-breve-continuamos-esse-bate-papo-&quot;&gt;É isso ai pessoal, em breve continuamos esse bate papo ;)&lt;/h4&gt;
 </description>
         <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</guid>
+        <link>/2017/01/19/inteligencia-artificial-historia-industria/</link>
+        <guid isPermaLink="true">/2017/01/19/inteligencia-artificial-historia-industria/</guid>
         
         
         <category>IA</category>

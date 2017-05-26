@@ -24,8 +24,7 @@ Hoje os principais modelos de serviço disponibilizados no mercado são:
 * PaaS (Platform as a Service);
 * IaaS (Infrastructure as a Service).
 
-<h3 ><a href="http://research.cloudtweaks.com/"><font color="#555555"><font>Ex</font></font></a><font>plorando os Modelos de Serviço</font></h3>
-<p align="justify"><strong></strong>&nbsp;</p>
+### Explorando os Modelos de Serviço
 
 <strong>Software como Serviço</strong> <strong>(SaaS)</strong> é baseado no conceito de alugar software de um determinado provedor em vez de comprá-lo como da maneira convencional (adquirindo um DVD do produto por exemplo). O software está hospedado em servidores de rede centralizada para fazer funcionalidade disponível pela web ou intranet. Também conhecido como "software sob demanda" é atualmente o mais popular tipo de computação em nuvem por causa de sua alta flexibilidade, serviços excelentes, maior escalabilidade e menos manutenção. SaaS é muito eficaz na redução dos custos de negócio, pois proporciona a empresa um acesso a aplicações com um custo normalmente muito mais barato do que uma taxa de inscrição e licenciamento que é possível devido à sua mensalidade modelo baseado em receita (pago pelo que consumo). Com o modelo SaaS não é preciso se ​​preocupar com a instalação ou upgrades.
 
@@ -33,15 +32,14 @@ Hoje os principais modelos de serviço disponibilizados no mercado são:
 
 <strong>Infraestrutura como Serviço (IaaS)</strong> é a entrega de infra-estrutura de computação como um serviço totalmente terceirizado. Se você necessita de máquinas virtuais, armazenamento em nuvem, componentes de infra-estrutura de rede, firewalls e serviços de configuração, IaaS é a resposta! As taxas de utilização são calculados por tempo de processamento, dados armazenados por quantidade, largura de banda consumida, infra-estrutura de rede usado por hora etc. O usuário pode comprar a infra-estrutura de acordo com as exigências em qualquer momento ao invés de comprar uma infra-estrutura que pode ficar ociosa por meses. IaaS também é chamado de Hardware as a Service (Haas). Uma infra-estrutura como uma oferta de serviço também oferece uma maior flexibilidade, porque qualquer coisa que pode ser virtualizada pode também ser executada nesta plataforma.
 
-<h3 align="justify"><font>Quando optar por um SaaS?</font></h3>
-<p align="justify"><i>Quando você quer focar no seu negócio</i> em vez de desperdiçar seu tempo na substituição de peças quebradas de hardware, gerenciamento de infraestrutura de TI, e o mais crítico de todos eles - contratar e manter sua equipe de TI, etc
-<p>&nbsp;<br />
-<h3><font>Quando optar por um PaaS?</font></h3>
-<p>Quando você quer se concentrar apenas no desenvolvimento da aplicação, sem se preocupar com todos os cuidados que envolvem a plataforma.
-<p>&nbsp;<br />
-<h3><font>Quando optar por um IaaS?</font></h3>
+### Quando optar por um SaaS?
+
+Quando você quer focar no seu negócio em vez de desperdiçar seu tempo na substituição de peças quebradas de hardware, gerenciamento de infraestrutura de TI, e o mais crítico de todos eles - contratar e manter sua equipe de TI, etc
+
+### Quando optar por um PaaS?
+
+Quando você quer se concentrar apenas no desenvolvimento da aplicação, sem se preocupar com todos os cuidados que envolvem a plataforma.
+
+### Quando optar por um IaaS?
 
 Muito útil para empresas iniciantes que não sabem ou não tem mão de obra para manter sua própria infra-estrutura.
-
-
-### Um grande abraço e ótimo estudo!
