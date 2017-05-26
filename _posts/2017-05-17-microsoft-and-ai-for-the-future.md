@@ -49,6 +49,13 @@ O grande ganho aqui é poder utilizar a mesma infra-estrutura que a Microsoft us
 
 Vale notar que no Build, foi exibido que será bem simples levar esses modelos de aprendizagem profunda para onde estão os dados, usando o analytics integration fornecido pelo Azure Data Lake, Azure Cosmos DB ou SQL Server.
 
+#### Bots
+Usando os novos Adaptive Cards ​​suportados pelo Microsoft Bot Framework, os desenvolvedores podem gravar cartões que ficam ótimos em vários aplicativos e plataformas. Outra novidade foi a possibilidade de publicar em novos canais, incluindo Bing, Cortana e Skype for Business, fora o poder de implementar a API de solicitação de pagamento da Microsoft para verificação rápida e fácil em seus bots.
+
+A Microsoft também atualizou o LUIS (Language Understanding Intelligent Service),a fim de oferecer um reconhecimento de fala mais preciso, sem falar no número crescente de entidades e intenções que o sistema pode reconhecer.
+
+#### Cortana Skills Kit
+O Cortana Skills Kit foi lançado em preview, e em suma oferece o poder de desenvolver habilidades para Cortana criando um bot e publicando-o no novo canal da Cortana Bot Framework. Isso está disponível no Windows 10, Android, iOS e no novo alto-falante Harman Kardon Invoke,que é powered by Cortana.
 
 #### Presentation Translator
 Certamente outro recurso que chamou atenção: A tradução em "em tempo real" de uma apresentação realizada no PowerPoint. Certamente temos aqui a utilização de um serviço cognitivo, porém já é possível notar o movimento da Microsoft integrando AI em seu famoso pacote Office.
@@ -63,7 +70,7 @@ Este serviço já está disponível para teste, basta apenas você se inscrever 
 
 Em relação a Cortana o que vimos neste Build é sobre adoção. Foi anunciado oficialmente o uso da Cortana como assistente para o controle por voz do [Invoke](http://www.harmankardon.com/invoke.html), que até então iria utilizar o Alexa da Amazon. Este produto será lançado no quarto trimestre nos EUA, e por hora não tem nenhum detalhe em relação ao preço.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png"></p>
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png" class="absolute-bg"></p>
 
 Também tivemos o anúncio da parceria fechada com a HP para a construção do seu **smart speaker** utilizando a Cortana.
 
@@ -73,7 +80,7 @@ Apesar de a Microsoft já ter ficado bem próxima de Apple e Google no desenvolv
 
 Firmando o compromisso da Microsoft com essas ações em AI, tivemos também o anúncio da nova categoria para o [programa MVP](https://mvp.microsoft.com/), a categoria de AI.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png"></p>
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png" class="absolute-bg"></p>
 
 Como podemos ver acima essa área envolve do aprendizado de máquinas ao serviços cognitivos, ou seja, AI em toda a sua Glória ;)
 
@@ -89,4 +96,21 @@ Resumindo o motivo de estamos ouvindo falar tanto sobre AI, podemos dizer que ch
 ## Project Oxford
 O investimento da Microsoft em AI não é novo. Como citado por Harry Shum, o departamento de Research & Development tem realizados pesquisas voltadas para AI nos últimos 20 anos, o que pode ser bem notado se olharmos para o histórico.
 
+O projeto Oxford é a coleção da Microsoft de APIs para serviços de aprendizado de máquina. Antes de seu lançamento oficial, a Microsoft laçou o (que na época se tornou um viral) sua aplicação para "adivinhação de idade", o How-Old.net. Poucas horas depois de ser lançado, o site reuniu centenas de milhares de submissões de imagens em que os usuários brincaram com as tentativas do site de descobrir as idades e os gêneros das pessoas nas fotos submetidas. É claro que isso ajudou a treinar o modelo de reconhecimento e analise de sentimento, tornando o serviço mais confiável.
 
+O projeto Oxfor iniciou com os seguintes serviços:
+
+* Face recognition
+* Speech processing
+* Visual tools
+* Language Understanding Intelligent Service (LUIS)
+
+## Deep Learning
+Apesar do termo datar como recente para a maioria das pessoas, as pesquisas envolvendo redes neurais de N camadas para problemas complexos está no campo de pesquisa da Microsoft há decadas, e mais especificamente no área do reconhecimento de fala, como podemos ver neste paper da IEEE, datado de 2013: [Recent advances in deep learning for speech research at Microsoft](http://ieeexplore.ieee.org/abstract/document/6639345/)
+
+
+
+
+## Referências
+* [Resumo do anúncio realizado por Harry Shum](https://blogs.microsoft.com/blog/2017/05/10/microsoft-build-2017-microsoft-ai-amplify-human-ingenuity/)
+* [Project Oxford](http://www.projectoxford.ai/)

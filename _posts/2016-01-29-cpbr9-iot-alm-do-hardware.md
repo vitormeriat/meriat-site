@@ -27,6 +27,6 @@ Como o prometido, segue o material de utilizado no [workshop de IoT](http://camp
 
 <div id="gist-6a538009b83017ddaa24" class="gistLoad" data-id="6a538009b83017ddaa24">
 <p>
-    <script src="https://gist.github.com/jorgemaia/6a538009b83017ddaa24.js"></script>
+    <script src="https://gist.github.com/vitormeriat/b6de7aa0a28af2b45f15c3d67721e051.js"></script>
 </p>
 </div>

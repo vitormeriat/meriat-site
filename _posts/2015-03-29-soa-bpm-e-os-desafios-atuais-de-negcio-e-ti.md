@@ -96,6 +96,5 @@ categories:
 <p>&nbsp;</p>
 
 <h1>Conclusão</h1>
-<p align="justify">Este é apenas um início sobre a questão SOA, BPM e padrões de integração. Embora com o surgimento de novas terminologias e teconolgias, SOA tem um papel fundamental no mundo corporativo e tecnologico atual. Irei abordar isso melhor nos próximos posts. Aguardem algumas novidades <img class="wlEmoticon wlEmoticon-winkingsmile" style="border-top-style: none; border-bottom-style: none; border-right-style: none; border-left-style: none" alt="Smiley piscando" src="http://blob.vitormeriat.com.br/images/wlemoticon-winkingsmile.png" /></p>
-<p>&nbsp;</p>
-<h2><font color="#333333">Bons estudos e até a próxima pessoal&nbsp; ;)</font></h2>
+<p align="justify">Este é apenas um início sobre a questão SOA, BPM e padrões de integração. Embora com o surgimento de novas terminologias e teconolgias, SOA tem um papel fundamental no mundo corporativo e tecnologico atual. Irei abordar isso melhor nos próximos posts. Aguardem algumas novidades </p>
+
