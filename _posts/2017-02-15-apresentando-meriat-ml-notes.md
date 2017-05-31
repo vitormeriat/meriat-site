@@ -37,26 +37,26 @@ Por hora vou concentrando meus esforços por aqui ;)
 
 <div style="margin-bottom: 8em;"></div>
 
-## Meriat Machine Learning Note
+### Meriat Machine Learning Note
 
 A estrutura atual está descrita logo abaixo. Vou me esforçar para manter atualizada.
 
-#### File Handling
+##### File Handling
 `TBA`
 
-#### SMS Spam Filtering
+##### SMS Spam Filtering
 `TBA`
 
-#### Song Recommender
+##### Song Recommender
 `TBA`
 
-#### Basic Math
+##### Basic Math
 Basic math notions with python
 
-#### Basic Statistic in Python
+##### Basic Statistic in Python
 Basic math statistics with python
 
-#### Basic Natural Language Processing
+##### Basic Natural Language Processing
 1. Tokenization
 2. Stopword Removal
 3. N-Grams
@@ -65,17 +65,19 @@ Basic math statistics with python
 
 *This module uses NLTK for the text processing processes. It is important to note that you will need to download nltk_data.*
 
-#### Simple Probability Model
+##### Simple Probability Model
 1. Common Ground
 2. Limit Theorems
 3. Derived Distributions
   * Covariance
   * Correlation
 
-#### Imbalanced Learning with Gaussians
+##### Imbalanced Learning with Gaussians
 `TBA`
 
-#### Neural Network
+##### Neural Network
 1. Adaline
 2. Perceptron
 3. Simple Neural Network
+4. Train a Linear Classifier
+5. A simple implementation of convolutional neural networks
