@@ -108,9 +108,18 @@ O projeto Oxfor iniciou com os seguintes serviços:
 ## Deep Learning
 Apesar do termo datar como recente para a maioria das pessoas, as pesquisas envolvendo redes neurais de N camadas para problemas complexos está no campo de pesquisa da Microsoft há decadas, e mais especificamente no área do reconhecimento de fala, como podemos ver neste paper da IEEE, datado de 2013: [Recent advances in deep learning for speech research at Microsoft](http://ieeexplore.ieee.org/abstract/document/6639345/)
 
+## Microsoft Research
 
+Quando Bill Gates criou a Microsoft Research, em 1991, ele previa que os computadores um dia veriam, ouviriam e entenderiam os seres humanos – e essa perspectiva atraiu algumas das melhores mentes para os seus laboratórios, segundo a Microsoft.
+
+Vários projetos desenvolvidos no Microsoft Resarch serviram de inovação e base para novas tendências que viraram projetos de grande sucesso para a empresa. O sucesso dos bots, serviços cognitivos, cortana, HoloLens e compania sevem como base para novos projetos que hoje já sabemos ser bem aguardados como por exemplo, o Skype Translator.
+
+Em outubro de 2016, a Microsoft se tornou a primeira empresa do setor a chegar à paridade com humanos em reconhecimento de voz, segundo o anunciado por Harry Shum.
+
+A visão da Microsoft é realmente expandir, tanto que vemos anuncios como o da colaboração entre a Microsoft Research e o grupo OpenAI, que é uma empresa de pesquisa de AI sem fins lucrativos, e que é destaque por sua atuação e produção.
 
 
 ## Referências
 * [Resumo do anúncio realizado por Harry Shum](https://blogs.microsoft.com/blog/2017/05/10/microsoft-build-2017-microsoft-ai-amplify-human-ingenuity/)
 * [Project Oxford](http://www.projectoxford.ai/)
+* [Advancing our ambition to democratize artificial intelligence](https://blogs.microsoft.com/blog/2016/11/15/advancing-ambition-democratize-artificial-intelligence/)
