@@ -122,30 +122,44 @@
           Game Development &amp; HTML5 &amp; JavaScript
         </h2>
       
-      <span><time datetime="2014-06-23T20:50:53-03:00" itemprop="datePublished">Jun 23, 2014</time></span>
+      <span><time datetime="2014-06-23T00:00:00-03:00" itemprop="datePublished">Jun 23, 2014</time></span>
     </div>
     <div class="fh5co-spacer fh5co-spacer-md"></div>
     <section class="section-padding post" itemprop="articleBody">
-      <p align="justify">Olá pessoal. Saindo um pouco do habitual hoje vou falar sobre desenvolvimento de games com <strong>JavaScript</strong> e <strong>HTML5</strong>. Minha ideia é abordar alguns assuntos que&#160; acho pertinentes sobre o desenvolvimento de games com HTML5 e JavaScript. Estou levando em conta que você já conhece pelo menos o básico de HTML5 e JavaScript portanto vou logo para o lado mais denso da brincadeira.</p>
-<p align="justify">Entre os vários assuntos associados a este tema vou iniciar esta mini-série falando sobre este recurso poderoso que é o <strong>Prototype</strong>. Um dos motivos que me levaram a isso se dá ao fato deste ser o meu primeiro objeto de estudo quando decidi me aprofundar no JavaScript. Parte disso se da pelo fato da grande utilização deste padrão. Já quando falamos em desenvolver games com JavaScript, geralmente vamos ter um grande número de objetos, métodos e arquivos scripts. Manter esta estrutura de forma organizada e coesa é na maioria dos casos um desafio. </p>
-<p align="justify">
-<p align="justify"><a href="http://blob.vitormeriat.com.br/images/2014/06/capa11.png"><img title="capa1" alt="capa1" src="http://blob.vitormeriat.com.br/images/2014/06/capa1.png" width="700" height="343" /></a></p>
+      <p>Olá pessoal. Saindo um pouco do habitual hoje vou falar sobre desenvolvimento de games com <strong>JavaScript</strong> e <strong>HTML5</strong>. Minha ideia é abordar alguns assuntos que  acho pertinentes sobre o desenvolvimento de games com HTML5 e JavaScript. Estou levando em conta que você já conhece pelo menos o básico de HTML5 e JavaScript portanto vou logo para o lado mais denso da brincadeira.</p>
+
+<p>Entre os vários assuntos associados a este tema vou iniciar esta mini-série falando sobre este recurso poderoso que é o <strong>Prototype</strong>. Um dos motivos que me levaram a isso se dá ao fato deste ser o meu primeiro objeto de estudo quando decidi me aprofundar no JavaScript. Parte disso se da pelo fato da grande utilização deste padrão. Já quando falamos em desenvolver games com JavaScript, geralmente vamos ter um grande número de objetos, métodos e arquivos scripts. Manter esta estrutura de forma organizada e coesa é na maioria dos casos um desafio.</p>
+
+<p align="center"><img title="capa1" src="http://blob.vitormeriat.com.br/images/2014/06/capa11.png" /></p>
+
 <p align="justify">Sendo assim é importante entender como otimizar a criação dos objetos de certa forma que seja possível diminuir a quantidade de código e risco nas alterações futuras.</p>
 <p><!--more-->
 <p>Para facilitar, vou disponibilizar o código fonte dos exemplos que pode ser <a href="http://1drv.ms/1j7kiil" target="_blank">baixado aqui!!!</a>. </p>
 <p align="justify">Este é um assunto que causa certa estranheza para os iniciantes em <strong>JavaScript</strong>, principalmente se já desenvolvem em alguma linguagem <strong>Orientada a Objetos</strong>. O primeiro passo é lembrar que o JavaScript <strong>não é</strong> uma linguagem baseada em classes e sim <strong>orientada a protótipos</strong>. Isso significa que (de maneira resumida) o JavaScript não usa classes para definir objetos e sim objetos para criar outros objetos. </p>
-<p align="justify">Ficou um pouco confuso? Não tem problema, vou tentar esclarecer isso no decorrer deste post.</p>
-<h2 align="justify">Iniciando a conversa</h2>
-<p align="justify">As linguagens como <strong>C#</strong>, <strong>C++</strong> e <strong>Java</strong> são baseadas em classes. Como resultado desta abordagem tradicional, para criarmos um objeto é necessário primeiro criar uma classe que defina as propriedades e métodos deste objeto.&#160; Neste contexto a classe é utilizada como um modelo para ser definir e conhecer como criar o referido objeto.</p>
-<p align="justify">Uma vez que a classe foi criada é só a utilizar para a se obter novas instâncias. Criar uma instância é uma maneira elegante de se dizer que você criou um objeto da classe utilizando o famoso <strong>NEW</strong>.</p>
-<p align="justify">No JavaScript não temos classes, apenas objetos e os tipos primitivos de dados. Isso justamente por que o JavaScript utiliza o modelo <a href="http://en.wikipedia.org/wiki/Prototype-based_programming" target="_blank">Prototype-based programming</a>. Para simplificar vamos dizer que tudo em JavaScript é um objeto… tudo, até mesmo funções!!! </p>
+
+Ficou um pouco confuso? Não tem problema, vou tentar esclarecer isso no decorrer deste post.
+
+## Iniciando a conversa
+
+As linguagens como <strong>C#</strong>, <strong>C++</strong> e <strong>Java</strong> são baseadas em classes. Como resultado desta abordagem tradicional, para criarmos um objeto é necessário primeiro criar uma classe que defina as propriedades e métodos deste objeto.&#160; Neste contexto a classe é utilizada como um modelo para ser definir e conhecer como criar o referido objeto.
+
+Uma vez que a classe foi criada é só a utilizar para a se obter novas instâncias. Criar uma instância é uma maneira elegante de se dizer que você criou um objeto da classe utilizando o famoso <strong>NEW</strong>.
+
+No JavaScript não temos classes, apenas objetos e os tipos primitivos de dados. Isso justamente por que o JavaScript utiliza o modelo <a href="http://en.wikipedia.org/wiki/Prototype-based_programming" target="_blank">Prototype-based programming</a>. Para simplificar vamos dizer que tudo em JavaScript é um objeto… tudo, até mesmo funções!!! 
+
 <h2>Então como criar meus objetos?</h2>
 <p align="justify">Em JavaScript temos<strong> “basicamente”</strong> duas maneiras de se criar objetos: Usando um <strong><u>object literal</u></strong> ou <strong><u>constructor function</u></strong>.</p>
+
 <p align="justify">Já estou preparando um post específico sobre este assunto então vou apenas ilustrar estas duas maneiras de criar objetos como no código abaixo:</p>
+
 <p><a href="http://blob.vitormeriat.com.br/images/2014/06/003.png"><img title="003" alt="003" src="http://blob.vitormeriat.com.br/images/2014/06/003.png" width="700" height="768" /></a></p>
+
 <p align="justify">Existe uma série de assuntos a se considerar sobre estas abordagens. No entanto vamos abordar a criação de objetos com função de construtor, que é o mais utilizado por ser <strong>”essencialmente”</strong> uma classe.</p>
+
 <p align="justify">Observe o código abaixo:</p>
-<p><a href="http://blob.vitormeriat.com.br/images/2014/06/041.png"><img title="04" alt="04" src="http://blob.vitormeriat.com.br/images/2014/06/04.png" width="700" height="495" /></a></p>
+
+<p align="center"><img title="04" alt="04" src="http://blob.vitormeriat.com.br/images/2014/06/041.png" /></p>
+
 <p align="justify">Note que primeiro criamos nossa “função construtora de objeto”. Com ela definida podemos utilizar o bom e velho <strong>NEW</strong> para obter um novo objeto que é uma cópia do objeto <strong>“pai”</strong>, trazendo suas propriedades e métodos. </p>
 <p align="justify">Porém reparem que estou utilizando uma função <strong><u>toString()</u></strong> que não está definido no objeto inicial. Isso porque qualquer objeto em JavaScript pode utilizar esta função para retornar uma string de si mesmo. Agora como isso é possível se JavaScript <u>não é</u> uma linguagem orientada a classe? <u>A resposta é: Através do <strong>PROTOTYPE</strong>!!!</u></p>
 <p align="justify"><u></u></p>
@@ -199,7 +213,7 @@
 <p align="justify">Como vimos o&#160; prototype nos permite adicionar características e comportamentos para as <strong>&quot;classes&quot;</strong>, após sua definição, sendo assim podemos reutilizar toda a definição de uma<strong> “classe”</strong> em outra.</p>
 <p>&#160;</p>
 <h2><font color="#f79646">Bons estudos e até a próxima pessoal&#160; ;)</font></h2>
-</p></p>
+</p>
 
     </section>
   </article>

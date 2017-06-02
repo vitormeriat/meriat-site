@@ -3,9 +3,9 @@ layout: post
 title: HTML5 Game Development–Princípios da programação JavaScript com Prototype
 date: 2014-06-23
 categories:
-	- Game Development
-	- HTML5
-	- JavaScript
+- Game Development
+- HTML5
+- JavaScript
 ---
 
 Olá pessoal. Saindo um pouco do habitual hoje vou falar sobre desenvolvimento de games com <strong>JavaScript</strong> e <strong>HTML5</strong>. Minha ideia é abordar alguns assuntos que&#160; acho pertinentes sobre o desenvolvimento de games com HTML5 e JavaScript. Estou levando em conta que você já conhece pelo menos o básico de HTML5 e JavaScript portanto vou logo para o lado mais denso da brincadeira.

@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 May 2017 21:46:08 -0300</pubDate>
-    <lastBuildDate>Thu, 25 May 2017 21:46:08 -0300</lastBuildDate>
+    <pubDate>Thu, 01 Jun 2017 21:38:10 -0300</pubDate>
+    <lastBuildDate>Thu, 01 Jun 2017 21:38:10 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -53,6 +53,14 @@
 
 &lt;p&gt;Vale notar que no Build, foi exibido que será bem simples levar esses modelos de aprendizagem profunda para onde estão os dados, usando o analytics integration fornecido pelo Azure Data Lake, Azure Cosmos DB ou SQL Server.&lt;/p&gt;
 
+&lt;h4 id=&quot;bots&quot;&gt;Bots&lt;/h4&gt;
+&lt;p&gt;Usando os novos Adaptive Cards ​​suportados pelo Microsoft Bot Framework, os desenvolvedores podem gravar cartões que ficam ótimos em vários aplicativos e plataformas. Outra novidade foi a possibilidade de publicar em novos canais, incluindo Bing, Cortana e Skype for Business, fora o poder de implementar a API de solicitação de pagamento da Microsoft para verificação rápida e fácil em seus bots.&lt;/p&gt;
+
+&lt;p&gt;A Microsoft também atualizou o LUIS (Language Understanding Intelligent Service),a fim de oferecer um reconhecimento de fala mais preciso, sem falar no número crescente de entidades e intenções que o sistema pode reconhecer.&lt;/p&gt;
+
+&lt;h4 id=&quot;cortana-skills-kit&quot;&gt;Cortana Skills Kit&lt;/h4&gt;
+&lt;p&gt;O Cortana Skills Kit foi lançado em preview, e em suma oferece o poder de desenvolver habilidades para Cortana criando um bot e publicando-o no novo canal da Cortana Bot Framework. Isso está disponível no Windows 10, Android, iOS e no novo alto-falante Harman Kardon Invoke,que é powered by Cortana.&lt;/p&gt;
+
 &lt;h4 id=&quot;presentation-translator&quot;&gt;Presentation Translator&lt;/h4&gt;
 &lt;p&gt;Certamente outro recurso que chamou atenção: A tradução em “em tempo real” de uma apresentação realizada no PowerPoint. Certamente temos aqui a utilização de um serviço cognitivo, porém já é possível notar o movimento da Microsoft integrando AI em seu famoso pacote Office.&lt;/p&gt;
 
@@ -66,7 +74,7 @@
 
 &lt;p&gt;Em relação a Cortana o que vimos neste Build é sobre adoção. Foi anunciado oficialmente o uso da Cortana como assistente para o controle por voz do &lt;a href=&quot;http://www.harmankardon.com/invoke.html&quot;&gt;Invoke&lt;/a&gt;, que até então iria utilizar o Alexa da Amazon. Este produto será lançado no quarto trimestre nos EUA, e por hora não tem nenhum detalhe em relação ao preço.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Também tivemos o anúncio da parceria fechada com a HP para a construção do seu &lt;strong&gt;smart speaker&lt;/strong&gt; utilizando a Cortana.&lt;/p&gt;
 
@@ -76,7 +84,7 @@
 
 &lt;p&gt;Firmando o compromisso da Microsoft com essas ações em AI, tivemos também o anúncio da nova categoria para o &lt;a href=&quot;https://mvp.microsoft.com/&quot;&gt;programa MVP&lt;/a&gt;, a categoria de AI.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Como podemos ver acima essa área envolve do aprendizado de máquinas ao serviços cognitivos, ou seja, AI em toda a sua Glória ;)&lt;/p&gt;
 
@@ -94,6 +102,36 @@
 &lt;h2 id=&quot;project-oxford&quot;&gt;Project Oxford&lt;/h2&gt;
 &lt;p&gt;O investimento da Microsoft em AI não é novo. Como citado por Harry Shum, o departamento de Research &amp;amp; Development tem realizados pesquisas voltadas para AI nos últimos 20 anos, o que pode ser bem notado se olharmos para o histórico.&lt;/p&gt;
 
+&lt;p&gt;O projeto Oxford é a coleção da Microsoft de APIs para serviços de aprendizado de máquina. Antes de seu lançamento oficial, a Microsoft laçou o (que na época se tornou um viral) sua aplicação para “adivinhação de idade”, o How-Old.net. Poucas horas depois de ser lançado, o site reuniu centenas de milhares de submissões de imagens em que os usuários brincaram com as tentativas do site de descobrir as idades e os gêneros das pessoas nas fotos submetidas. É claro que isso ajudou a treinar o modelo de reconhecimento e analise de sentimento, tornando o serviço mais confiável.&lt;/p&gt;
+
+&lt;p&gt;O projeto Oxfor iniciou com os seguintes serviços:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Face recognition&lt;/li&gt;
+  &lt;li&gt;Speech processing&lt;/li&gt;
+  &lt;li&gt;Visual tools&lt;/li&gt;
+  &lt;li&gt;Language Understanding Intelligent Service (LUIS)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;deep-learning&quot;&gt;Deep Learning&lt;/h2&gt;
+&lt;p&gt;Apesar do termo datar como recente para a maioria das pessoas, as pesquisas envolvendo redes neurais de N camadas para problemas complexos está no campo de pesquisa da Microsoft há decadas, e mais especificamente no área do reconhecimento de fala, como podemos ver neste paper da IEEE, datado de 2013: &lt;a href=&quot;http://ieeexplore.ieee.org/abstract/document/6639345/&quot;&gt;Recent advances in deep learning for speech research at Microsoft&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;microsoft-research&quot;&gt;Microsoft Research&lt;/h2&gt;
+
+&lt;p&gt;Quando Bill Gates criou a Microsoft Research, em 1991, ele previa que os computadores um dia veriam, ouviriam e entenderiam os seres humanos – e essa perspectiva atraiu algumas das melhores mentes para os seus laboratórios, segundo a Microsoft.&lt;/p&gt;
+
+&lt;p&gt;Vários projetos desenvolvidos no Microsoft Resarch serviram de inovação e base para novas tendências que viraram projetos de grande sucesso para a empresa. O sucesso dos bots, serviços cognitivos, cortana, HoloLens e compania sevem como base para novos projetos que hoje já sabemos ser bem aguardados como por exemplo, o Skype Translator.&lt;/p&gt;
+
+&lt;p&gt;Em outubro de 2016, a Microsoft se tornou a primeira empresa do setor a chegar à paridade com humanos em reconhecimento de voz, segundo o anunciado por Harry Shum.&lt;/p&gt;
+
+&lt;p&gt;A visão da Microsoft é realmente expandir, tanto que vemos anuncios como o da colaboração entre a Microsoft Research e o grupo OpenAI, que é uma empresa de pesquisa de AI sem fins lucrativos, e que é destaque por sua atuação e produção.&lt;/p&gt;
+
+&lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.microsoft.com/blog/2017/05/10/microsoft-build-2017-microsoft-ai-amplify-human-ingenuity/&quot;&gt;Resumo do anúncio realizado por Harry Shum&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.projectoxford.ai/&quot;&gt;Project Oxford&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.microsoft.com/blog/2016/11/15/advancing-ambition-democratize-artificial-intelligence/&quot;&gt;Advancing our ambition to democratize artificial intelligence&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
         <link>/2017/05/17/microsoft-and-ai-for-the-future/</link>
@@ -897,26 +935,26 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;div style=&quot;margin-bottom: 8em;&quot;&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;meriat-machine-learning-note&quot;&gt;Meriat Machine Learning Note&lt;/h2&gt;
+&lt;h3 id=&quot;meriat-machine-learning-note&quot;&gt;Meriat Machine Learning Note&lt;/h3&gt;
 
 &lt;p&gt;A estrutura atual está descrita logo abaixo. Vou me esforçar para manter atualizada.&lt;/p&gt;
 
-&lt;h4 id=&quot;file-handling&quot;&gt;File Handling&lt;/h4&gt;
+&lt;h5 id=&quot;file-handling&quot;&gt;File Handling&lt;/h5&gt;
 &lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;sms-spam-filtering&quot;&gt;SMS Spam Filtering&lt;/h4&gt;
+&lt;h5 id=&quot;sms-spam-filtering&quot;&gt;SMS Spam Filtering&lt;/h5&gt;
 &lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;song-recommender&quot;&gt;Song Recommender&lt;/h4&gt;
+&lt;h5 id=&quot;song-recommender&quot;&gt;Song Recommender&lt;/h5&gt;
 &lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;basic-math&quot;&gt;Basic Math&lt;/h4&gt;
+&lt;h5 id=&quot;basic-math&quot;&gt;Basic Math&lt;/h5&gt;
 &lt;p&gt;Basic math notions with python&lt;/p&gt;
 
-&lt;h4 id=&quot;basic-statistic-in-python&quot;&gt;Basic Statistic in Python&lt;/h4&gt;
+&lt;h5 id=&quot;basic-statistic-in-python&quot;&gt;Basic Statistic in Python&lt;/h5&gt;
 &lt;p&gt;Basic math statistics with python&lt;/p&gt;
 
-&lt;h4 id=&quot;basic-natural-language-processing&quot;&gt;Basic Natural Language Processing&lt;/h4&gt;
+&lt;h5 id=&quot;basic-natural-language-processing&quot;&gt;Basic Natural Language Processing&lt;/h5&gt;
 &lt;ol&gt;
   &lt;li&gt;Tokenization&lt;/li&gt;
   &lt;li&gt;Stopword Removal&lt;/li&gt;
@@ -927,7 +965,7 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;p&gt;&lt;em&gt;This module uses NLTK for the text processing processes. It is important to note that you will need to download nltk_data.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;simple-probability-model&quot;&gt;Simple Probability Model&lt;/h4&gt;
+&lt;h5 id=&quot;simple-probability-model&quot;&gt;Simple Probability Model&lt;/h5&gt;
 &lt;ol&gt;
   &lt;li&gt;Common Ground&lt;/li&gt;
   &lt;li&gt;Limit Theorems&lt;/li&gt;
@@ -939,14 +977,16 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;imbalanced-learning-with-gaussians&quot;&gt;Imbalanced Learning with Gaussians&lt;/h4&gt;
+&lt;h5 id=&quot;imbalanced-learning-with-gaussians&quot;&gt;Imbalanced Learning with Gaussians&lt;/h5&gt;
 &lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;neural-network&quot;&gt;Neural Network&lt;/h4&gt;
+&lt;h5 id=&quot;neural-network&quot;&gt;Neural Network&lt;/h5&gt;
 &lt;ol&gt;
   &lt;li&gt;Adaline&lt;/li&gt;
   &lt;li&gt;Perceptron&lt;/li&gt;
   &lt;li&gt;Simple Neural Network&lt;/li&gt;
+  &lt;li&gt;Train a Linear Classifier&lt;/li&gt;
+  &lt;li&gt;A simple implementation of convolutional neural networks&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
