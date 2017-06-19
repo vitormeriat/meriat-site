@@ -19,7 +19,9 @@ O **Projeto Titanic** é uma competição de **Data Science** promovida pelo [Ka
 
 <hr/>
 
-Embora os [Mythbusters](https://www.youtube.com/watch?v=JVgkvaDHmto) em seu programa tenham provado completamente que era possível Jack e Rose ter sobrevivido utilizando a porta flutuante, o interesse aqui é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.
+Para quem assiste os [Mythbusters](https://www.youtube.com/watch?v=JVgkvaDHmto), sabe que em um de seus programas o assunto do Titanic foi mais do explorado. Não como iremos fazer aqui, já que o foco era provar que era possível Jack e Rose terem sobrevivido utilizando a porta flutuante.
+
+> Nosso foco entretanto, é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.
 
 A história do Titanic é muito conhecida, tendo originado diversos livros, filmes, HQs e afins. É válido lembrar que a história narrada de forma célebre por James Cameron em seu filme de 1997, ilustra perfeitamente o motivo deste desafio. Vamos começar com uma breve perspectiva sobre o tema: Em Abril de 1912 o Titanic zarpou rumo a New York com 2224 passageiros, dos quais estima-se que apenas 710 tenham sobrevivido.
 
@@ -65,13 +67,10 @@ Este é um ótimo ponto de entrada para aprender machine learning com um conjunt
 
 
 # Passo 1
+
 A tragédia do "Titanic" está associada com a regra não escrita do salvamento no mar: "mulheres e crianças primeiro".
 
 Nesta tarefa, os competidores precisam analisar a probabilidade de sobrevivência das diferentes categorias de passageiros.
-
-Para determinar se o passageiro sobreviveu ao "Titanic", vamos usar uma árvore de decisão. Uma árvore de decisão é gerada automaticamente com base no parâmetro de entrada. A imagem abaixo mostra um exemplo de uma árvore de decisão é criada.
-
-<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg"></p>
 
 Vamos estipular o sexo dos passageiros e tripulantes. Este é um  dado importante, uma vez que o sexo do passageiro desempenha um papel crucial para determinar a sobrevivência do mesmo. Um simples count revela que temos 891 passageiros dos quais 65% são homens e 35% são mulheres.
 
@@ -152,6 +151,7 @@ Vamos nos referir ao conjunto de dados progressivamente ao longo deste post, com
 
 
 # O repositório
+
 Você pode olhar o código completo acessando o mesmo no repositório **Meriat Machine Learning Notes** no meu Github.
 
 [Titanic: Machine Learning from Disaster](https://github.com/vitormeriat/meriat-ml-notes/blob/master/Titanic%20-%20Machine%20Learning%20from%20Disaster.ipynb)
