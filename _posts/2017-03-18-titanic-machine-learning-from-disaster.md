@@ -149,6 +149,13 @@ Este é nosso primeiro padrão. Par facilitar vamos conceituar algumas coisas: O
 
 Vamos nos referir ao conjunto de dados progressivamente ao longo deste post, começar a descobrir o conceito de aprendizagem da máquina e suas dimensões variadas. Como você pode observar a partir dos dados, os passageiros e seus atributos compõem os dados do Titanic.
 
+# Análise exploratória de dados 
+
+Em nossa fase de **Exploratory Data Analysis**, precisamos conhecer nossos dados e compreender sua qualidade para conseguir realizar nossa predição. 
+
+Neste ponto vamos combinar os dados de teste de treino antes de realizar qualquer tipo de análise exploratória. Este propósito ficará mais claro em breve. Por hora vamos combinar os 2 conjuntos de dados, e para que isso seja possível precisamos criar uma coluna adicional no conjunto de teste chamado 'sobreviveu' e marcá-los todos com -1, a fim de que sejamos capazes de distinguir em um ponto posterior no tempo os dados de teste. Também há uma necessidade de reorganizar as colunas nos dados de treino para refletir o posicionamento dos dados de teste.
+
+
 
 # O repositório
 
