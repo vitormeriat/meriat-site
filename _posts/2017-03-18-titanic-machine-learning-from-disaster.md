@@ -31,7 +31,7 @@ A história do Titanic é muito conhecida, tendo originado diversos livros, film
 
 Neste caso não temos complicação com elementos aleatórios de sorte. A maioria dos sobreviventes eram mulheres, crianças e pessoas da alta sociedade.
 
-## Start
+## Introdução
 
 A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, **train.csv** e **test.csv**. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de **treino**. Nos dados de teste este valor precisa ser deduzido.
 
@@ -66,7 +66,7 @@ Este é um ótimo ponto de entrada para aprender machine learning com um conjunt
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern.png"></p>
 
 
-# Passo 1
+# Descobrindo padrões
 
 A tragédia do "Titanic" está associada com a regra não escrita do salvamento no mar: "mulheres e crianças primeiro".
 
@@ -136,7 +136,7 @@ O seguinte pode ser observado a partir dos dados acima:
 1. 62% (549/891) dos passageiros não sobreviveram  
 2. 38% (342/891) sobreviveram
 
-Dos 38% que sobreviveram, os passageiros do sexo feminino sobreviveram em maior número maior que os passageiros machos
+Dos 38% que sobreviveram, os passageiros do sexo feminino sobreviveram em maior número maior que os passageiros do sexo masculino.
 
 1. De todos os passageiros do sexo feminino (233/314) 74% sobreviveram
 2. De todos os passageiros do sexo masculino (109/577), apenas 19% sobreviveram
@@ -149,9 +149,9 @@ Este é nosso primeiro padrão. Par facilitar vamos conceituar algumas coisas: O
 
 Vamos nos referir ao conjunto de dados progressivamente ao longo deste post, começar a descobrir o conceito de aprendizagem da máquina e suas dimensões variadas. Como você pode observar a partir dos dados, os passageiros e seus atributos compõem os dados do Titanic.
 
-# Análise exploratória de dados 
+## Exploratory Data Analysis 
 
-Em nossa fase de **Exploratory Data Analysis**, precisamos conhecer nossos dados e compreender sua qualidade para conseguir realizar nossa predição. 
+Em nossa fase de **análise exploratória de dados**, precisamos conhecer nossos dados e compreender sua qualidade para conseguir realizar nossa predição. 
 
 Neste ponto vamos combinar os dados de teste de treino antes de realizar qualquer tipo de análise exploratória. Este propósito ficará mais claro em breve. Por hora vamos combinar os 2 conjuntos de dados, e para que isso seja possível precisamos criar uma coluna adicional no conjunto de teste chamado `Survived` e marcá-los todos com `-1`, a fim de que sejamos capazes de distinguir em um ponto posterior no tempo os dados de teste. Também há uma necessidade de reorganizar as colunas nos dados de treino para refletir o posicionamento dos dados de teste.
 
@@ -163,6 +163,10 @@ Neste ponto vamos combinar os dados de teste de treino antes de realizar qualque
  mergedTitanicDS = trainTitanicDS.append(testTitanicDS)
     </code>
 </pre>
+
+## Missing Data 
+A falta de dados deve ser tratada antes de se aplicar qualquer algoritmo de aprendizado de máquina. Isso faz sentido já que se tivermos dados faltando em alguma linha, nosso resultado pode ser afetado. 
+
 
 
 # O repositório
