@@ -17,31 +17,35 @@ image-full: "http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg"
 
 O **Projeto Titanic** é uma competição de **Data Science** promovida pelo [Kaggle.com](kaggle.com). O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic.
 
-<hr/>
+Meu objetivo aqui é resumir de forma simples este problema e como chegar a sua solução, aproveitando para introduzir alguns dos conceitos envolvido no tão falado **Machine Learning**. Não vou me aprofundar em nenunhum ponto, espero embreve fazê-lo com mais tempo e foco.
+
+Este é um dos problemas iniciais favoritos dos estudantes de Data Science, e tem um dataset com a complexidade ideal para explorar alguns problemas que funcionam de pano de fundo para introduzir os conceitos de Machine Learning mais básicos.
+
+## Introdução
 
 Para quem assiste os [Mythbusters](https://www.youtube.com/watch?v=JVgkvaDHmto), sabe que em um de seus programas o assunto do Titanic foi mais do explorado. Não como iremos fazer aqui, já que o foco era provar que era possível Jack e Rose terem sobrevivido utilizando a porta flutuante.
 
 > Nosso foco entretanto, é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.
 
-A história do Titanic é muito conhecida, tendo originado diversos livros, filmes, HQs e afins. É válido lembrar que a história narrada de forma célebre por James Cameron em seu filme de 1997, ilustra perfeitamente o motivo deste desafio. Vamos começar com uma breve perspectiva sobre o tema: Em Abril de 1912 o Titanic zarpou rumo a New York com 2224 passageiros, dos quais estima-se que apenas 710 tenham sobrevivido.
+A história do Titanic é muito conhecida, tendo originado diversos livros, filmes, HQs e afins. É válido lembrar que a história narrada de forma célebre por James Cameron em seu filme de 1997, ilustra perfeitamente o motivo deste desafio. Vamos começar com uma breve perspectiva sobre o tema: Em Abril de 1912 o Titanic zarpou rumo a New York com `2224` passageiros, dos quais estima-se que apenas `710` tenham sobrevivido.
 
 É aqui que entra nosso desafio: Desenvolver um padrão simples para identificar o perfil dos sobreviventes deste desastre.
 
-> Nota: Muitos dos barcos salva-vidas não estavam com a sua capacidade máxima de pessoas a bordo. Se estivessem, seria possível salvar 53,4% dos passageiros, mas apenas 31,6% deles sobreviveram.
+> Nota: Muitos dos barcos salva-vidas não estavam com a sua capacidade máxima de pessoas a bordo. Se estivessem, seria possível salvar `53,4%` dos passageiros, mas apenas `31,6%` deles sobreviveram.
 
 Neste caso não temos complicação com elementos aleatórios de sorte. A maioria dos sobreviventes eram mulheres, crianças e pessoas da alta sociedade.
 
-## Introdução
+## Os dados
 
-A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, **train.csv** e **test.csv**. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de **treino**. Nos dados de teste este valor precisa ser deduzido.
+A lista de sobreviventes e não sobreviventes foi transformada em dois datasets, **train.csv** e **test.csv**. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de **treino**. Nos dados de teste este valor precisa ser deduzido.
 
-Todos os aprendizados começam com uma experiência e são um processo contínuo. Raramente tem um ponto final. Todos os aprendizados são apenas uma aproximação. O conjunto de dados de treino é tipicamente amostrado em 2 unidades, a amostra maior representando aproximadamente 80% dos dados, e uma 2ª amostra com o resto do dados. 
+> Todos os aprendizados começam com uma experiência e são um processo contínuo. Raramente tem um ponto final. Todos os aprendizados são apenas uma aproximação. 
 
-A aprendizagem acontece usando o Conjunto A e a validação acontece usando o conjunto B. Podemos validar como já sabemos os resultados reais de quem Sobreviveu e quem não fez no Conjunto B e depois compará-lo com os resultados previstos. Uma vez que a aprendizagem é aperfeiçoada no Set A e Set B, o conjunto final de padrões é aplicado nos dados do teste. Apenas um rápido lembrete de que não temos o conhecimento do estado de sobrevivência do passageiro nos dados do teste. No contexto de Kaggle, o resultado da aplicação do padrão nos dados de teste é carregado para o ambiente Kaggle, o que nos permite conhecer o sucesso do modelo que desenvolvemos. Kaggle sabe os resultados dos dados de teste, portanto, é capaz de validar contra o nosso arquivo de resultados submetidos. Aqui está uma visão geral do processo de aprendizagem da máquina genérica.
+Geralmente trabalhamos um experimento utilizando dois conjuntos de dados. Um de treino e um para o teste, tipicamente dividido em 80% ou 70% para treino e e restante para o teste. 
 
-Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.
+A aprendizagem acontece usando o `Conjunto A` e a validação acontece usando o `Conjunto B`. Uma vez que a aprendizagem é aperfeiçoada, aplicamos nosso modelo nos dados de teste. Vale lembrar que não temos o conhecimento do estado de sobrevivência do passageiro nos dados do teste. 
 
-<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg"></p>
+Neste desafio vamos utilizar os dados disponíveis no próprio site do Kaggle para desenvolver nosso modelo, a fim de prever as taxas de sobrevivência para os passageiros do Titanic.
 
 O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O dataset é composto por:
 
@@ -149,7 +153,7 @@ Este é nosso primeiro padrão. Par facilitar vamos conceituar algumas coisas: O
 
 Vamos nos referir ao conjunto de dados progressivamente ao longo deste post, começar a descobrir o conceito de aprendizagem da máquina e suas dimensões variadas. Como você pode observar a partir dos dados, os passageiros e seus atributos compõem os dados do Titanic.
 
-## Exploratory Data Analysis 
+# Exploratory Data Analysis 
 
 Em nossa fase de **análise exploratória de dados**, precisamos conhecer nossos dados e compreender sua qualidade para conseguir realizar nossa predição. 
 
@@ -165,8 +169,44 @@ Neste ponto vamos combinar os dados de teste de treino antes de realizar qualque
 </pre>
 
 ## Missing Data 
-A falta de dados deve ser tratada antes de se aplicar qualquer algoritmo de aprendizado de máquina. Isso faz sentido já que se tivermos dados faltando em alguma linha, nosso resultado pode ser afetado. 
 
+A falta de dados deve ser tratada antes de se aplicar qualquer algoritmo de aprendizado de máquina. Isso faz sentido já que se tivermos dados faltando em alguma linha, nosso resultado pode ser afetado. No código abaixo vamos procurar e exibir os dados de valores missing caso eles existam em nosso dataset.
+
+<pre style="font-size: 1.4em !important">
+    <code class="python">
+ for col in mergedTitanicDS:
+    if mergedTitanicDS[col].isnull().sum()>0:
+        print("Missing Values in %s %d" % (col,(mergedTitanicDS[col].isnull().sum())))
+    </code>
+</pre>
+
+Como resultado temos a seguinte saída:
+
+```
+Missing Values in Age 263
+Missing Values in Fare 1
+Missing Values in Cabin 1014
+Missing Values in Embarked 2
+```
+Sendo assim já sabemos que existem muitos valores missing em nosso dataset. Uma vez que os identificamos o próximo passo é examinar para entender qual o motivo ou causa para esse comportamento. Em Machine Learning, os dados são essenciais, e como tal, devemos olhar com toda atenção.
+
+Existem diversas técnicas para lidar como valores missing. Uma delas seria eliminar toda a linha e trabalhar somente com as linhas contendo dados completos. Em nosso caso vamos atacar cada um dos recursos em falta e definir qual estratégia usar. Vamos iniciar pelo mais simples.
+
+### Embarked
+Podemos nota que existem apenas 2 valores missing para Embarked. Vamos observar sua distribuição:
+
+<pre style="font-size: 1.4em !important">
+    <code class="python">
+ mergedTitanicDS['Embarked'].value_counts()
+    </code>
+</pre>
+
+```
+S    914
+C    270
+Q    123
+Name: Embarked, dtype: int64
+```
 
 
 # O repositório
