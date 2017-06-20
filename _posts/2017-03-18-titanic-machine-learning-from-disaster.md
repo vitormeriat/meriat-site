@@ -159,7 +159,7 @@ Em nossa fase de **análise exploratória de dados**, precisamos conhecer nossos
 
 Neste ponto vamos combinar os dados de teste de treino antes de realizar qualquer tipo de análise exploratória. Este propósito ficará mais claro em breve. Por hora vamos combinar os 2 conjuntos de dados, e para que isso seja possível precisamos criar uma coluna adicional no conjunto de teste chamado `Survived` e marcá-los todos com `-1`, a fim de que sejamos capazes de distinguir em um ponto posterior no tempo os dados de teste. Também há uma necessidade de reorganizar as colunas nos dados de treino para refletir o posicionamento dos dados de teste.
 
-<pre style="font-size: 1.4em !important">
+<pre style="font-size: 1.2em !important">
     <code class="python">
  testTitanicDS.is_copy = False
  testTitanicDS['Survived']=-1
@@ -172,7 +172,7 @@ Neste ponto vamos combinar os dados de teste de treino antes de realizar qualque
 
 A falta de dados deve ser tratada antes de se aplicar qualquer algoritmo de aprendizado de máquina. Isso faz sentido já que se tivermos dados faltando em alguma linha, nosso resultado pode ser afetado. No código abaixo vamos procurar e exibir os dados de valores missing caso eles existam em nosso dataset.
 
-<pre style="font-size: 1.4em !important">
+<pre style="font-size: 1.2em !important">
     <code class="python">
  for col in mergedTitanicDS:
     if mergedTitanicDS[col].isnull().sum()>0:
@@ -183,6 +183,8 @@ A falta de dados deve ser tratada antes de se aplicar qualquer algoritmo de apre
 Como resultado temos a seguinte saída:
 
 ```
+***** output *****
+
 Missing Values in Age 263
 Missing Values in Fare 1
 Missing Values in Cabin 1014
@@ -196,13 +198,15 @@ Existem diversas técnicas para lidar como valores missing. Uma delas seria elim
 
 Podemos nota que existem apenas 2 valores missing para Embarked. Vamos observar sua distribuição:
 
-<pre style="font-size: 1.4em !important">
+<pre style="font-size: 1.2em !important">
     <code class="python">
  mergedTitanicDS['Embarked'].value_counts()
     </code>
 </pre>
 
 ```
+***** output *****
+
 S    914
 C    270
 Q    123
@@ -211,7 +215,7 @@ Name: Embarked, dtype: int64
 
 Bem vindo as variáveis categóricas. Temos pouca massa de manobra aqui. Uma estratégia consistente neste caso poderia ser substituir os valores missing pelo valor de `S`, já que o mesmo supera tanto `C` quanto `Q` em termos de númericos. Com esta abordagem estamos influenciando muito pouco no resultado final.
 
-<pre style="font-size: 1.4em !important">
+<pre style="font-size: 1.2em !important">
     <code class="python">
  mergedTitanicDS.is_copy = False
  mergedTitanicDS.loc[mergedTitanicDS['Embarked'].isnull(),'Embarked'] = 'S'
@@ -224,19 +228,30 @@ Há apenas um passageiro com dados missing sobre a tarifa. O passageiro em quest
 
 Neste caso podemos usar como estratégia, obter a média da tarifa paga pelos passageiros da classe **Pclass 3**.
 
-<pre style="font-size: 1.4em !important">
+<pre style="font-size: 1.2em !important">
     <code class="python">
  mergedTitanicDS_Merged.loc[mergedTitanicDS_Merged['Fare'].isnull(),'Fare']=mergedTitanicDS_Merged[mergedTitanicDS_Merged['Pclass']==3]['Fare'].mean()
     </code>
 </pre>
 
+## Feature Engineering
+
+A **engenharia de recurso** tenta aumentar a capacidade de previsão dos algoritmos de aprendizado criando recursos de dados brutos que facilitam o processo de aprendizado. Basicamente esse processo tenta criar outros recursos relevantes com base nos recursos brutos existentes nos dados e aumentar a capacidade de previsão do algoritmo de aprendizado.
+
+Vamos continuar na análise dos nossos recursos agora aplicando um exemplo de feature engineering.
+
 ### Cabin
 
 Vamos evoluir nossa análise. Olhando para o problemas dos dados missing na feature **cabin**. Este cara parece ser bem complexo. Para começar ele represente mais de 70% dos dados missing em nosso dataset.
 
-Não há muito o que os dados da cabine possam oferecer em relação ao nosso problema. Nada como a relação de proximidade com o assidente ou algo do tipo.
+Não há muito o que os dados da cabine possam oferecer em relação ao nosso problema. Nada que revele uma predisposição a sobrevivência ou não, algo como a relação de proximidade com o assidente ou coisa do tipo. Como não temos informação adicional ou externa sobre este recurso, uma estratégia que podemos utilizar é criar um novo recurso indicando a existência ou não da cabine.
 
-
+<pre style="font-size: 1.2em !important">
+    <code class="python">
+ mergedTitanicDS['IsCabinDataEmpty'] = 0
+ mergedTitanicDS.loc[mergedTitanicDS['Cabin'].isnull(),'IsCabinDataEmpty'] = 1
+    </code>
+</pre>
 
 
 
@@ -248,4 +263,6 @@ Você pode olhar o código completo acessando o mesmo no repositório **Meriat M
 
 <div style="margin-bottom: 5em;"></div>
 
-### Até a próxima pessoal ;)
+# Referências
+* [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
+* [Titanic: Getting Started With R](http://trevorstephens.com/kaggle-titanic-tutorial/getting-started-with-r/)
