@@ -193,6 +193,7 @@ Sendo assim já sabemos que existem muitos valores missing em nosso dataset. Uma
 Existem diversas técnicas para lidar como valores missing. Uma delas seria eliminar toda a linha e trabalhar somente com as linhas contendo dados completos. Em nosso caso vamos atacar cada um dos recursos em falta e definir qual estratégia usar. Vamos iniciar pelo mais simples.
 
 ### Embarked
+
 Podemos nota que existem apenas 2 valores missing para Embarked. Vamos observar sua distribuição:
 
 <pre style="font-size: 1.4em !important">
@@ -207,6 +208,36 @@ C    270
 Q    123
 Name: Embarked, dtype: int64
 ```
+
+Bem vindo as variáveis categóricas. Temos pouca massa de manobra aqui. Uma estratégia consistente neste caso poderia ser substituir os valores missing pelo valor de `S`, já que o mesmo supera tanto `C` quanto `Q` em termos de númericos. Com esta abordagem estamos influenciando muito pouco no resultado final.
+
+<pre style="font-size: 1.4em !important">
+    <code class="python">
+ mergedTitanicDS.is_copy = False
+ mergedTitanicDS.loc[mergedTitanicDS['Embarked'].isnull(),'Embarked'] = 'S'
+    </code>
+</pre>
+
+### Fare
+
+Há apenas um passageiro com dados missing sobre a tarifa. O passageiro em questão é senhor **"Storey, Mr. Thomas"**. Se olharmos para os dados do senhor Thomas, veremos que ele viajou na classe `Pclass 3`.
+
+Neste caso podemos usar como estratégia, obter a média da tarifa paga pelos passageiros da classe **Pclass 3**.
+
+<pre style="font-size: 1.4em !important">
+    <code class="python">
+ mergedTitanicDS_Merged.loc[mergedTitanicDS_Merged['Fare'].isnull(),'Fare']=mergedTitanicDS_Merged[mergedTitanicDS_Merged['Pclass']==3]['Fare'].mean()
+    </code>
+</pre>
+
+### Cabin
+
+Vamos evoluir nossa análise. Olhando para o problemas dos dados missing na feature **cabin**. Este cara parece ser bem complexo. Para começar ele represente mais de 70% dos dados missing em nosso dataset.
+
+Não há muito o que os dados da cabine possam oferecer em relação ao nosso problema. Nada como a relação de proximidade com o assidente ou algo do tipo.
+
+
+
 
 
 # O repositório
