@@ -3,10 +3,10 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 01 Jun 2017 21:38:10 -0300</pubDate>
-    <lastBuildDate>Thu, 01 Jun 2017 21:38:10 -0300</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 02 Jul 2017 17:22:17 -0300</pubDate>
+    <lastBuildDate>Sun, 02 Jul 2017 17:22:17 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -134,8 +134,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
-        <link>/2017/05/17/microsoft-and-ai-for-the-future/</link>
-        <guid isPermaLink="true">/2017/05/17/microsoft-and-ai-for-the-future/</guid>
+        <link>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</guid>
         
         
         <category>IA</category>
@@ -191,8 +191,8 @@
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 22 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/22/gab-azure-ml-cognitive/</link>
-        <guid isPermaLink="true">/2017/04/22/gab-azure-ml-cognitive/</guid>
+        <link>http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</guid>
         
         
         <category>IA</category>
@@ -381,8 +381,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/20/variables-in-statistic/</link>
-        <guid isPermaLink="true">/2017/04/20/variables-in-statistic/</guid>
+        <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/20/variables-in-statistic/</guid>
         
         
         <category>Statistics</category>
@@ -653,8 +653,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/14/hello-world-r/</link>
-        <guid isPermaLink="true">/2017/04/14/hello-world-r/</guid>
+        <link>http://localhost:4000/2017/04/14/hello-world-r/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/14/hello-world-r/</guid>
         
         
         <category>R</category>
@@ -715,8 +715,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 01 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
-        <guid isPermaLink="true">/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
+        <link>http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
         
         
         <category>IA</category>
@@ -739,31 +739,41 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;p&gt;O &lt;strong&gt;Projeto Titanic&lt;/strong&gt; é uma competição de &lt;strong&gt;Data Science&lt;/strong&gt; promovida pelo &lt;a href=&quot;kaggle.com&quot;&gt;Kaggle.com&lt;/a&gt;. O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic.&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;Meu objetivo aqui é resumir de forma simples este problema e como chegar a sua solução, aproveitando para introduzir alguns dos conceitos envolvido no tão falado &lt;strong&gt;Machine Learning&lt;/strong&gt;. Não vou me aprofundar em nenunhum ponto, espero embreve fazê-lo com mais tempo e foco.&lt;/p&gt;
 
-&lt;p&gt;Embora os &lt;a href=&quot;https://www.youtube.com/watch?v=JVgkvaDHmto&quot;&gt;Mythbusters&lt;/a&gt; em seu programa tenham provado completamente que era possível Jack e Rose ter sobrevivido utilizando a porta flutuante, o interesse aqui é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.&lt;/p&gt;
+&lt;p&gt;Este é um dos problemas iniciais favoritos dos estudantes de Data Science, e tem um dataset com a complexidade ideal para explorar alguns problemas que funcionam de pano de fundo para introduzir os conceitos de Machine Learning mais básicos.&lt;/p&gt;
 
-&lt;p&gt;A história do Titanic é muito conhecida, tendo originado diversos livros, filmes, HQs e afins. É válido lembrar que a história narrada de forma célebre por James Cameron em seu filme de 1997, ilustra perfeitamente o motivo deste desafio. Vamos começar com uma breve perspectiva sobre o tema: Em Abril de 1912 o Titanic zarpou rumo a New York com 2224 passageiros, dos quais estima-se que apenas 710 tenham sobrevivido.&lt;/p&gt;
+&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt;
+
+&lt;p&gt;Para quem assiste os &lt;a href=&quot;https://www.youtube.com/watch?v=JVgkvaDHmto&quot;&gt;Mythbusters&lt;/a&gt;, sabe que em um de seus programas o assunto do Titanic foi mais do explorado. Não como iremos fazer aqui, já que o foco era provar que era possível Jack e Rose terem sobrevivido utilizando a porta flutuante.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Nosso foco entretanto, é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A história do Titanic é muito conhecida, tendo originado diversos livros, filmes, HQs e afins. É válido lembrar que a história narrada de forma célebre por James Cameron em seu filme de 1997, ilustra perfeitamente o motivo deste desafio. Vamos começar com uma breve perspectiva sobre o tema: Em Abril de 1912 o Titanic zarpou rumo a New York com &lt;code&gt;2224&lt;/code&gt; passageiros, dos quais estima-se que apenas &lt;code&gt;710&lt;/code&gt; tenham sobrevivido.&lt;/p&gt;
 
 &lt;p&gt;É aqui que entra nosso desafio: Desenvolver um padrão simples para identificar o perfil dos sobreviventes deste desastre.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Nota: Muitos dos barcos salva-vidas não estavam com a sua capacidade máxima de pessoas a bordo. Se estivessem, seria possível salvar 53,4% dos passageiros, mas apenas 31,6% deles sobreviveram.&lt;/p&gt;
+  &lt;p&gt;Nota: Muitos dos barcos salva-vidas não estavam com a sua capacidade máxima de pessoas a bordo. Se estivessem, seria possível salvar &lt;code&gt;53,4%&lt;/code&gt; dos passageiros, mas apenas &lt;code&gt;31,6%&lt;/code&gt; deles sobreviveram.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Neste caso não temos complicação com elementos aleatórios de sorte. A maioria dos sobreviventes eram mulheres, crianças e pessoas da alta sociedade.&lt;/p&gt;
 
-&lt;h2 id=&quot;start&quot;&gt;Start&lt;/h2&gt;
+&lt;h2 id=&quot;os-dados&quot;&gt;Os dados&lt;/h2&gt;
 
-&lt;p&gt;A lista de sobreviventes e não sobreviventes já foi transformada em dois datasets, &lt;strong&gt;train.csv&lt;/strong&gt; e &lt;strong&gt;test.csv&lt;/strong&gt;. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de &lt;strong&gt;treino&lt;/strong&gt;. Nos dados de teste este valor precisa ser deduzido.&lt;/p&gt;
+&lt;p&gt;A lista de sobreviventes e não sobreviventes foi transformada em dois datasets, &lt;strong&gt;train.csv&lt;/strong&gt; e &lt;strong&gt;test.csv&lt;/strong&gt;. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de &lt;strong&gt;treino&lt;/strong&gt;. Nos dados de teste este valor precisa ser deduzido.&lt;/p&gt;
 
-&lt;p&gt;Todos os aprendizados começam com uma experiência e são um processo contínuo. Raramente tem um ponto final. Todos os aprendizados são apenas uma aproximação. O conjunto de dados de treino é tipicamente amostrado em 2 unidades, a amostra maior representando aproximadamente 80% dos dados, e uma 2ª amostra com o resto do dados.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Todos os aprendizados começam com uma experiência e são um processo contínuo. Raramente tem um ponto final. Todos os aprendizados são apenas uma aproximação.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;A aprendizagem acontece usando o Conjunto A e a validação acontece usando o conjunto B. Podemos validar como já sabemos os resultados reais de quem Sobreviveu e quem não fez no Conjunto B e depois compará-lo com os resultados previstos. Uma vez que a aprendizagem é aperfeiçoada no Set A e Set B, o conjunto final de padrões é aplicado nos dados do teste. Apenas um rápido lembrete de que não temos o conhecimento do estado de sobrevivência do passageiro nos dados do teste. No contexto de Kaggle, o resultado da aplicação do padrão nos dados de teste é carregado para o ambiente Kaggle, o que nos permite conhecer o sucesso do modelo que desenvolvemos. Kaggle sabe os resultados dos dados de teste, portanto, é capaz de validar contra o nosso arquivo de resultados submetidos. Aqui está uma visão geral do processo de aprendizagem da máquina genérica.&lt;/p&gt;
+&lt;p&gt;Geralmente trabalhamos um experimento utilizando dois conjuntos de dados. Um de treino e um para o teste, tipicamente dividido em 80% ou 70% para treino e e restante para o teste.&lt;/p&gt;
 
-&lt;p&gt;Neste desafio vamos utilizar os dados do site Kaggle para desenvolver três modelos (regressão logística, árvore de probabilidade condicional e florestas aleatórias), a fim de prever as taxas de sobrevivência para os passageiros do Titanic.&lt;/p&gt;
+&lt;p&gt;A aprendizagem acontece usando o &lt;code&gt;Conjunto A&lt;/code&gt; e a validação acontece usando o &lt;code&gt;Conjunto B&lt;/code&gt;. Uma vez que a aprendizagem é aperfeiçoada, aplicamos nosso modelo nos dados de teste. Vale lembrar que não temos o conhecimento do estado de sobrevivência do passageiro nos dados do teste.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Neste desafio vamos utilizar os dados disponíveis no próprio site do Kaggle para desenvolver nosso modelo, a fim de prever as taxas de sobrevivência para os passageiros do Titanic.&lt;/p&gt;
 
 &lt;p&gt;O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O dataset é composto por:&lt;/p&gt;
 
@@ -791,14 +801,11 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern.png&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;passo-1&quot;&gt;Passo 1&lt;/h1&gt;
+&lt;h1 id=&quot;descobrindo-padrões&quot;&gt;Descobrindo padrões&lt;/h1&gt;
+
 &lt;p&gt;A tragédia do “Titanic” está associada com a regra não escrita do salvamento no mar: “mulheres e crianças primeiro”.&lt;/p&gt;
 
 &lt;p&gt;Nesta tarefa, os competidores precisam analisar a probabilidade de sobrevivência das diferentes categorias de passageiros.&lt;/p&gt;
-
-&lt;p&gt;Para determinar se o passageiro sobreviveu ao “Titanic”, vamos usar uma árvore de decisão. Uma árvore de decisão é gerada automaticamente com base no parâmetro de entrada. A imagem abaixo mostra um exemplo de uma árvore de decisão é criada.&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/decision-tree02.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Vamos estipular o sexo dos passageiros e tripulantes. Este é um  dado importante, uma vez que o sexo do passageiro desempenha um papel crucial para determinar a sobrevivência do mesmo. Um simples count revela que temos 891 passageiros dos quais 65% são homens e 35% são mulheres.&lt;/p&gt;
 
@@ -866,7 +873,7 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
   &lt;li&gt;38% (342/891) sobreviveram&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Dos 38% que sobreviveram, os passageiros do sexo feminino sobreviveram em maior número maior que os passageiros machos&lt;/p&gt;
+&lt;p&gt;Dos 38% que sobreviveram, os passageiros do sexo feminino sobreviveram em maior número maior que os passageiros do sexo masculino.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;De todos os passageiros do sexo feminino (233/314) 74% sobreviveram&lt;/li&gt;
@@ -881,18 +888,164 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;p&gt;Vamos nos referir ao conjunto de dados progressivamente ao longo deste post, começar a descobrir o conceito de aprendizagem da máquina e suas dimensões variadas. Como você pode observar a partir dos dados, os passageiros e seus atributos compõem os dados do Titanic.&lt;/p&gt;
 
+&lt;h1 id=&quot;exploratory-data-analysis&quot;&gt;Exploratory Data Analysis&lt;/h1&gt;
+
+&lt;p&gt;Em nossa fase de &lt;strong&gt;análise exploratória de dados&lt;/strong&gt;, precisamos conhecer nossos dados e compreender sua qualidade para conseguir realizar nossa predição.&lt;/p&gt;
+
+&lt;p&gt;Neste ponto vamos combinar os dados de teste de treino antes de realizar qualquer tipo de análise exploratória. Este propósito ficará mais claro em breve. Por hora vamos combinar os 2 conjuntos de dados, e para que isso seja possível precisamos criar uma coluna adicional no conjunto de teste chamado &lt;code&gt;Survived&lt;/code&gt; e marcá-los todos com &lt;code&gt;-1&lt;/code&gt;, a fim de que sejamos capazes de distinguir em um ponto posterior no tempo os dados de teste. Também há uma necessidade de reorganizar as colunas nos dados de treino para refletir o posicionamento dos dados de teste.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+ testTitanicDS.is_copy = False
+ testTitanicDS['Survived']=-1
+ trainTitanicDS =  trainTitanicDS[['PassengerId','Pclass','Name','Sex','Age','SibSp','Parch','Ticket','Fare','Cabin','Embarked','Survived']]
+ mergedTitanicDS = trainTitanicDS.append(testTitanicDS)
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;h2 id=&quot;missing-data&quot;&gt;Missing Data&lt;/h2&gt;
+
+&lt;p&gt;A falta de dados deve ser tratada antes de se aplicar qualquer algoritmo de aprendizado de máquina. Isso faz sentido já que se tivermos dados faltando em alguma linha, nosso resultado pode ser afetado. No código abaixo vamos procurar e exibir os dados de valores missing caso eles existam em nosso dataset.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+ for col in mergedTitanicDS:
+    if mergedTitanicDS[col].isnull().sum()&amp;gt;0:
+        print(&quot;Missing Values in %s %d&quot; % (col,(mergedTitanicDS[col].isnull().sum())))
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Como resultado temos a seguinte saída:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;***** output *****
+
+Missing Values in Age 263
+Missing Values in Fare 1
+Missing Values in Cabin 1014
+Missing Values in Embarked 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sendo assim já sabemos que existem muitos valores missing em nosso dataset. Uma vez que os identificamos o próximo passo é examinar para entender qual o motivo ou causa para esse comportamento. Em Machine Learning, os dados são essenciais, e como tal, devemos olhar com toda atenção.&lt;/p&gt;
+
+&lt;p&gt;Existem diversas técnicas para lidar como valores missing. Uma delas seria eliminar toda a linha e trabalhar somente com as linhas contendo dados completos. Em nosso caso vamos atacar cada um dos recursos em falta e definir qual estratégia usar. Vamos iniciar pelo mais simples.&lt;/p&gt;
+
+&lt;h4 id=&quot;embarked&quot;&gt;Embarked&lt;/h4&gt;
+
+&lt;p&gt;Podemos nota que existem apenas 2 valores missing para Embarked. Vamos observar sua distribuição:&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+ mergedTitanicDS['Embarked'].value_counts()
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;***** output *****
+
+S    914
+C    270
+Q    123
+Name: Embarked, dtype: int64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bem vindo as variáveis categóricas. Temos pouca massa de manobra aqui. Uma estratégia consistente neste caso poderia ser substituir os valores missing pelo valor de &lt;code&gt;S&lt;/code&gt;, já que o mesmo supera tanto &lt;code&gt;C&lt;/code&gt; quanto &lt;code&gt;Q&lt;/code&gt; em termos de númericos. Com esta abordagem estamos influenciando muito pouco no resultado final.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+ mergedTitanicDS.is_copy = False
+ mergedTitanicDS.loc[mergedTitanicDS['Embarked'].isnull(),'Embarked'] = 'S'
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;h4 id=&quot;fare&quot;&gt;Fare&lt;/h4&gt;
+
+&lt;p&gt;Há apenas um passageiro com dados missing sobre a tarifa. O passageiro em questão é senhor &lt;strong&gt;“Storey, Mr. Thomas”&lt;/strong&gt;. Se olharmos para os dados do senhor Thomas, veremos que ele viajou na classe &lt;code&gt;Pclass 3&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Neste caso podemos usar como estratégia, obter a média da tarifa paga pelos passageiros da classe &lt;strong&gt;Pclass 3&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+ mergedTitanicDS_Merged.loc[mergedTitanicDS_Merged['Fare'].isnull(),'Fare']=mergedTitanicDS_Merged[mergedTitanicDS_Merged['Pclass']==3]['Fare'].mean()
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;h2 id=&quot;think-outside-the-box&quot;&gt;Think outside the box&lt;/h2&gt;
+
+&lt;p&gt;Esta é uma fase muito importante. Geralmente você vai se deparar com situações durante o tratamento de dados em que vai parecer impossível realziar um tratamento. Um exemplo disso em nosso projeto é a feature &lt;strong&gt;AGE&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;age&quot;&gt;Age&lt;/h4&gt;
+
+&lt;p&gt;A idade é um ponto de dados contínuo. Há &lt;code&gt;263&lt;/code&gt; valores missing, o que representa cerca de &lt;code&gt;19%&lt;/code&gt; dos dados. Existem várias estratégias para substituição da idade, o mais simples é substituir por uma média, mediana ou moda.&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;armadilha&lt;/strong&gt; nesta estratégia é que todos os passageiros sem idade terão o mesmo valor estático, o que pode resultar em uma criança com a idade de um adulto, sendo assim, essa abordagem irá afetar diretamente no resultado final, tornando nossa privisão falha.&lt;/p&gt;
+
+&lt;p&gt;Como resolver este problema de forma satisfatória? Podemos começar olhando para o nosso dataset a fim de achar algo que nos ajude…&lt;/p&gt;
+
+&lt;h4 id=&quot;name&quot;&gt;Name&lt;/h4&gt;
+
+&lt;p&gt;Opa… &lt;strong&gt;Name&lt;/strong&gt; não possui valores missing, então o que está fazendo aqui? A questão é o que esse recurso tem a nos oferecer para resolver o problema das idades. Vamos lá…&lt;/p&gt;
+
+&lt;p&gt;Olhando para o este recurso veremos que juntamente com o nome temos os títulos. Os títulos nos dizem muito, já que podemos induzir se a pessoa é mais jovem ou mais madura com base neles.&lt;/p&gt;
+
+&lt;p&gt;Vamos ao novo&lt;/p&gt;
+
+&lt;h2 id=&quot;feature-engineering&quot;&gt;Feature Engineering&lt;/h2&gt;
+
+&lt;p&gt;A &lt;strong&gt;engenharia de recurso&lt;/strong&gt; tenta aumentar a capacidade de previsão dos algoritmos de aprendizado criando recursos de dados brutos que facilitam o processo de aprendizado. Basicamente esse processo tenta criar outros recursos relevantes com base nos recursos brutos existentes nos dados e aumentar a capacidade de previsão do algoritmo de aprendizado.&lt;/p&gt;
+
+&lt;p&gt;Vamos continuar na análise dos nossos recursos agora aplicando um exemplo de feature engineering.&lt;/p&gt;
+
+&lt;h4 id=&quot;title&quot;&gt;Title&lt;/h4&gt;
+
+&lt;p&gt;Outro ponto importante aqui, é que temos junto aos nomes os títulos de tratamento para cada pessoa. Sendo assim podemos agregar a nossa estratégia de idade a indução da mesma com base no título.&lt;/p&gt;
+
+&lt;p&gt;Neste caso vamos extrair o título do nome e encontrar a média entre idadade e o título informado, e depois substituir os valores missing. Essa estratégia serve para ajudar a evitar substituir o valor missing de uma possível criança pela idade de um adulto. Assim diminuímos a margem de erro no tratamento de dados missing.&lt;/p&gt;
+
+&lt;p&gt;Extrair e cruzar os dados de idade com os dados de título é um exemplo de Feature Engineering, que visa tornar o conjunto de dados mais rico para o aprendizado.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+ mergedTitanicDS['Title'] = [nameStr[1].strip().split('.')[0] for nameStr in
+ mergedTitanicDS['Name'].str.split(',')]
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;O gráfico abaixo exibe uma visão interessante da distribuição dos 17 títulos distintos em nosso dataset. Alguns dos títulos refletem Realeza, como por exemplo Jonkheer, título de nobreza holandesa.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+ mergedTitanicDS['Title'].value_counts().plot.bar()
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;h4 id=&quot;cabin&quot;&gt;Cabin&lt;/h4&gt;
+
+&lt;p&gt;Vamos evoluir nossa análise. Olhando para o problemas dos dados missing na feature &lt;strong&gt;cabin&lt;/strong&gt;. Este cara parece ser bem complexo. Para começar ele represente mais de 70% dos dados missing em nosso dataset.&lt;/p&gt;
+
+&lt;p&gt;Não há muito o que os dados da cabine possam oferecer em relação ao nosso problema. Nada que revele uma predisposição a sobrevivência ou não, algo como a relação de proximidade com o assidente ou coisa do tipo. Como não temos informação adicional ou externa sobre este recurso, uma estratégia que podemos utilizar é criar um novo recurso indicando a existência ou não da cabine.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+ mergedTitanicDS['IsCabinDataEmpty'] = 0
+ mergedTitanicDS.loc[mergedTitanicDS['Cabin'].isnull(),'IsCabinDataEmpty'] = 1
+    &lt;/code&gt;
+&lt;/pre&gt;
+
 &lt;h1 id=&quot;o-repositório&quot;&gt;O repositório&lt;/h1&gt;
+
 &lt;p&gt;Você pode olhar o código completo acessando o mesmo no repositório &lt;strong&gt;Meriat Machine Learning Notes&lt;/strong&gt; no meu Github.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/vitormeriat/meriat-ml-notes/blob/master/Titanic%20-%20Machine%20Learning%20from%20Disaster.ipynb&quot;&gt;Titanic: Machine Learning from Disaster&lt;/a&gt;&lt;/p&gt;
 
 &lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
+&lt;h1 id=&quot;referências&quot;&gt;Referências&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/c/titanic&quot;&gt;Titanic: Machine Learning from Disaster&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://trevorstephens.com/kaggle-titanic-tutorial/getting-started-with-r/&quot;&gt;Titanic: Getting Started With R&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
-        <link>/2017/03/18/titanic-machine-learning-from-disaster/</link>
-        <guid isPermaLink="true">/2017/03/18/titanic-machine-learning-from-disaster/</guid>
+        <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
         
         <category>IA</category>
@@ -990,8 +1143,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
@@ -1103,8 +1256,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;h3 id=&quot;É-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">/2017/02/07/literatura-classica-machine-learning/</guid>
+        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -1187,8 +1340,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/05/cpbr10-workshop-machine-learning/</link>
-        <guid isPermaLink="true">/2017/02/05/cpbr10-workshop-machine-learning/</guid>
+        <link>http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -1216,8 +1369,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;h4 id=&quot;É-isso-ai-pessoal-em-breve-continuamos-esse-bate-papo-&quot;&gt;É isso ai pessoal, em breve continuamos esse bate papo ;)&lt;/h4&gt;
 </description>
         <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
-        <link>/2017/01/19/inteligencia-artificial-historia-industria/</link>
-        <guid isPermaLink="true">/2017/01/19/inteligencia-artificial-historia-industria/</guid>
+        <link>http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</guid>
         
         
         <category>IA</category>

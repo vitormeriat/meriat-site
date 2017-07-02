@@ -194,7 +194,7 @@ Sendo assim já sabemos que existem muitos valores missing em nosso dataset. Uma
 
 Existem diversas técnicas para lidar como valores missing. Uma delas seria eliminar toda a linha e trabalhar somente com as linhas contendo dados completos. Em nosso caso vamos atacar cada um dos recursos em falta e definir qual estratégia usar. Vamos iniciar pelo mais simples.
 
-### Embarked
+#### Embarked
 
 Podemos nota que existem apenas 2 valores missing para Embarked. Vamos observar sua distribuição:
 
@@ -222,7 +222,7 @@ Bem vindo as variáveis categóricas. Temos pouca massa de manobra aqui. Uma est
     </code>
 </pre>
 
-### Fare
+#### Fare
 
 Há apenas um passageiro com dados missing sobre a tarifa. O passageiro em questão é senhor **"Storey, Mr. Thomas"**. Se olharmos para os dados do senhor Thomas, veremos que ele viajou na classe `Pclass 3`.
 
@@ -234,13 +234,58 @@ Neste caso podemos usar como estratégia, obter a média da tarifa paga pelos pa
     </code>
 </pre>
 
+## Think outside the box
+
+Esta é uma fase muito importante. Geralmente você vai se deparar com situações durante o tratamento de dados em que vai parecer impossível realziar um tratamento. Um exemplo disso em nosso projeto é a feature **AGE**. 
+
+#### Age
+
+A idade é um ponto de dados contínuo. Há `263` valores missing, o que representa cerca de `19%` dos dados. Existem várias estratégias para substituição da idade, o mais simples é substituir por uma média, mediana ou moda.
+
+A **armadilha** nesta estratégia é que todos os passageiros sem idade terão o mesmo valor estático, o que pode resultar em uma criança com a idade de um adulto, sendo assim, essa abordagem irá afetar diretamente no resultado final, tornando nossa privisão falha.
+
+Como resolver este problema de forma satisfatória? Podemos começar olhando para o nosso dataset a fim de achar algo que nos ajude... 
+
+#### Name
+
+Opa... **Name** não possui valores missing, então o que está fazendo aqui? A questão é o que esse recurso tem a nos oferecer para resolver o problema das idades. Vamos lá...
+
+Olhando para o este recurso veremos que juntamente com o nome temos os títulos. Os títulos nos dizem muito, já que podemos induzir se a pessoa é mais jovem ou mais madura com base neles. 
+
+Vamos ao novo 
+
+
 ## Feature Engineering
 
 A **engenharia de recurso** tenta aumentar a capacidade de previsão dos algoritmos de aprendizado criando recursos de dados brutos que facilitam o processo de aprendizado. Basicamente esse processo tenta criar outros recursos relevantes com base nos recursos brutos existentes nos dados e aumentar a capacidade de previsão do algoritmo de aprendizado.
 
 Vamos continuar na análise dos nossos recursos agora aplicando um exemplo de feature engineering.
 
-### Cabin
+#### Title
+
+Outro ponto importante aqui, é que temos junto aos nomes os títulos de tratamento para cada pessoa. Sendo assim podemos agregar a nossa estratégia de idade a indução da mesma com base no título.
+
+Neste caso vamos extrair o título do nome e encontrar a média entre idadade e o título informado, e depois substituir os valores missing. Essa estratégia serve para ajudar a evitar substituir o valor missing de uma possível criança pela idade de um adulto. Assim diminuímos a margem de erro no tratamento de dados missing.
+
+Extrair e cruzar os dados de idade com os dados de título é um exemplo de Feature Engineering, que visa tornar o conjunto de dados mais rico para o aprendizado.
+
+<pre style="font-size: 1.2em !important">
+    <code class="python">
+ mergedTitanicDS['Title'] = [nameStr[1].strip().split('.')[0] for nameStr in
+ mergedTitanicDS['Name'].str.split(',')]
+    </code>
+</pre>
+
+O gráfico abaixo exibe uma visão interessante da distribuição dos 17 títulos distintos em nosso dataset. Alguns dos títulos refletem Realeza, como por exemplo Jonkheer, título de nobreza holandesa.
+
+<pre style="font-size: 1.2em !important">
+    <code class="python">
+ mergedTitanicDS['Title'].value_counts().plot.bar()
+    </code>
+</pre>
+
+
+#### Cabin
 
 Vamos evoluir nossa análise. Olhando para o problemas dos dados missing na feature **cabin**. Este cara parece ser bem complexo. Para começar ele represente mais de 70% dos dados missing em nosso dataset.
 
