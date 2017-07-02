@@ -228,9 +228,9 @@ Há apenas um passageiro com dados missing sobre a tarifa. O passageiro em quest
 
 Neste caso podemos usar como estratégia, obter a média da tarifa paga pelos passageiros da classe **Pclass 3**.
 
-<pre style="font-size: 1.2em !important">
+<pre style="font-size: 1em !important">
     <code class="python">
- mergedTitanicDS_Merged.loc[mergedTitanicDS_Merged['Fare'].isnull(),'Fare']=mergedTitanicDS_Merged[mergedTitanicDS_Merged['Pclass']==3]['Fare'].mean()
+ mergedTitanicDS_Merged.loc[mergedTitanicDS_Merged['Fare'].isnull(),'Fare'] = mergedTitanicDS_Merged[mergedTitanicDS_Merged['Pclass'] == 3]['Fare'].mean()
     </code>
 </pre>
 
@@ -252,7 +252,7 @@ Opa... **Name** não possui valores missing, então o que está fazendo aqui? A 
 
 Olhando para o este recurso veremos que juntamente com o nome temos os títulos. Os títulos nos dizem muito, já que podemos induzir se a pessoa é mais jovem ou mais madura com base neles. 
 
-Vamos ao novo 
+Vamos introduzir uma nova técnica para chegar nisso, chamamos essa técnica de **feature engineering**.
 
 
 ## Feature Engineering
@@ -263,11 +263,13 @@ Vamos continuar na análise dos nossos recursos agora aplicando um exemplo de fe
 
 #### Title
 
-Outro ponto importante aqui, é que temos junto aos nomes os títulos de tratamento para cada pessoa. Sendo assim podemos agregar a nossa estratégia de idade a indução da mesma com base no título.
+Como vimos, temos junto aos nomes os **títulos de tratamento** para cada pessoa. Sendo assim podemos agregar a nossa estratégia de idade a indução da mesma com base no título.
 
-Neste caso vamos extrair o título do nome e encontrar a média entre idadade e o título informado, e depois substituir os valores missing. Essa estratégia serve para ajudar a evitar substituir o valor missing de uma possível criança pela idade de um adulto. Assim diminuímos a margem de erro no tratamento de dados missing.
+Neste caso vamos extrair o título do nome e encontrar a média entre idade e o título informado, e depois substituir os **valores missing** pela média correspondente. Essa estratégia serve para ajudar a evitar substituir o valor missing de uma possível criança pela idade de um adulto. Assim diminuímos a margem de erro no tratamento de dados missing, e obtemos um resultado final eficiente.
 
-Extrair e cruzar os dados de idade com os dados de título é um exemplo de Feature Engineering, que visa tornar o conjunto de dados mais rico para o aprendizado.
+Extrair e cruzar os dados de idade com os dados do título de treinamento é um exemplo de **Feature Engineering**, que visa tornar o conjunto de dados mais rico para o aprendizado.
+
+Traduzindo isso em código, nossa primeira tarefa será criar uma coluna chamada **Title** e extrair o valor do título de tratamento para inserir o valor nela.
 
 <pre style="font-size: 1.2em !important">
     <code class="python">
@@ -276,7 +278,7 @@ Extrair e cruzar os dados de idade com os dados de título é um exemplo de Feat
     </code>
 </pre>
 
-O gráfico abaixo exibe uma visão interessante da distribuição dos 17 títulos distintos em nosso dataset. Alguns dos títulos refletem Realeza, como por exemplo Jonkheer, título de nobreza holandesa.
+Para visualizar a importância desse novo recurso, vamos olhar a distribuição deste dado. No código abaixo geramos uu gráfico que exibe uma visão interessante da distribuição dos títulos distintos em nosso dataset. Alguns dos títulos refletem Realeza, como por exemplo Jonkheer, que é título de nobreza holandesa.
 
 <pre style="font-size: 1.2em !important">
     <code class="python">
@@ -284,10 +286,37 @@ O gráfico abaixo exibe uma visão interessante da distribuição dos 17 título
     </code>
 </pre>
 
+<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/feature engineering-title.png"></p>
+
+Sendo assim podemos analizar melhor nossa decisão. Como a grande maioria dos dados são representados pelo título `Mr`, e temos 18 títulos diferentes, sendo assim já sabemos de cara que seria um erro ter uma média generalizada.
+
+Vamos traduzir isso para código. Abaixo temos os 4 passos para o nosso objetivo:
+
+1. Agregamos a idade pelo título e aplicamos a média;
+2. Como será gerada uma nova coluna, vamos renomeá-la para Title;
+3. Realizamos o merge da nova coluna em nosso dataset;
+4. Substituímos os valores missing pela média de cada título.
+
+<pre style="font-size: 1.2em !important">
+    <code class="python">
+ # 1
+ aggAgeByTitleDS = mergedTitanicDS[['Age','Title']].groupby(['Title']).mean().reset_index()
+
+ # 2
+ aggAgeByTitleDS.columns = ['Title','Mean_Age']
+
+ # 3
+ mergedTitanicDS_Merged = pd.merge(mergedTitanicDS, aggAgeByTitleDS,on="Title")
+
+ # 4
+ mergedTitanicDS_Merged.loc[mergedTitanicDS_Merged['Age'].isnull(),'Age']=mergedTitanicDS_Merged[mergedTitanicDS_Merged['Age'].isnull()]['Mean_Age']
+    </code>
+</pre>
+
 
 #### Cabin
 
-Vamos evoluir nossa análise. Olhando para o problemas dos dados missing na feature **cabin**. Este cara parece ser bem complexo. Para começar ele represente mais de 70% dos dados missing em nosso dataset.
+Vamos evoluir em nossa análise. A feature **cabin** parece ser o maior problema, ele é parece ser realmente complexo. Para começar ele represente mais de 70% dos dados missing em nosso dataset.
 
 Não há muito o que os dados da cabine possam oferecer em relação ao nosso problema. Nada que revele uma predisposição a sobrevivência ou não, algo como a relação de proximidade com o assidente ou coisa do tipo. Como não temos informação adicional ou externa sobre este recurso, uma estratégia que podemos utilizar é criar um novo recurso indicando a existência ou não da cabine.
 
