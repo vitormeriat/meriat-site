@@ -21,6 +21,26 @@ Meu objetivo aqui é resumir de forma simples este problema e como chegar a sua 
 
 Este é um dos problemas iniciais favoritos dos estudantes de Data Science, e tem um dataset com a complexidade ideal para explorar alguns problemas que funcionam de pano de fundo para introduzir os conceitos de Machine Learning mais básicos.
 
+## Agenda
+
+* Introdução
+* Os dados
+* Descobrindo Padrões
+* Exploratory Data Analysis
+	* Missing Data
+		* Embarked
+		* Fare
+		* Age
+		* Name
+	* Feature Engineering
+		* Title
+		* Cabin
+		* Surname
+		* Family Size
+	* Data Transformation
+	* Feature Selection 
+	* Feature selection	 
+
 ## Introdução
 
 Para quem assiste os [Mythbusters](https://www.youtube.com/watch?v=JVgkvaDHmto), sabe que em um de seus programas o assunto do Titanic foi mais do explorado. Não como iremos fazer aqui, já que o foco era provar que era possível Jack e Rose terem sobrevivido utilizando a porta flutuante.
@@ -49,16 +69,18 @@ Neste desafio vamos utilizar os dados disponíveis no próprio site do Kaggle pa
 
 O conjunto de teste conta com 418 passageiros e o conjunto de treinamento é composto por 891 passageiros. O dataset é composto por:
 
-* Class
-* Name
-* Sex
-* Age
-* Sibling/Spouse
-* Parents/Children
-* Ticket (*)
-* Fare
-* Cabin (*)
-* Port of Embarkment.
+* `PassengerId`: Número de identificação do passageiro;
+* `Survived`: Indica se o passageiro sobreviveu ao desastre. É atribuído o valor de 0 para aqueles que não sobreviveram, e 1 para quem sobreviveu;
+* `Pclass`: Classe na qual o passageiro viajou. É informado 1 para primeira classe; 2 para segunda; e 3 para terceira;
+* `Name`: Nome do passageiro;
+* `Sex`: Sexo do passageiro;
+* `Age`: Idade do passageiro em anos;
+* `SibSp`: Quantidade de irmãos e cônjuges a bordo;
+* `Parch`: Quantidade de pais e filhos a bordo;
+* `Ticket`: Número da passagem;
+* `Fare`: Preço da passagem;
+* `Cabin`: Número da cabine do passageiro;
+* `Embarked`: Indica o porto no qual o passageiro embarcou. Há apenas três valores possíveis: Cherbourg, Queenstown e Southampton, indicados pelas letras **C**, **Q** e **S**, respectivamente.
 
 Como na maioria das competições Kaggle, você recebe dois conjuntos de dados:
 
@@ -153,7 +175,15 @@ Este é nosso primeiro padrão. Par facilitar vamos conceituar algumas coisas: O
 
 Vamos nos referir ao conjunto de dados progressivamente ao longo deste post, começar a descobrir o conceito de aprendizagem da máquina e suas dimensões variadas. Como você pode observar a partir dos dados, os passageiros e seus atributos compõem os dados do Titanic.
 
-# Exploratory Data Analysis 
+<div style="margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d">
+<p style="padding: 1.6em; font-family: courier;">
+Um ponto importante sobre este tutorial: Não estou colocando todo o passo a passo da solução. Aqui não temos os passos para importação de dados e etc. Estou focando na solução técnica para a criação do modelo e resolução do problema. Para ver a solução completa que inclusive enviei para o Kaggle, você deve ver o código que está na sessão entitulada, <u><b>O repositório</b></u>
+</p>
+</div>
+
+<hr style="margin-bottom: 3em;" />
+
+## Exploratory Data Analysis 
 
 Em nossa fase de **análise exploratória de dados**, precisamos conhecer nossos dados e compreender sua qualidade para conseguir realizar nossa predição. 
 
@@ -230,13 +260,17 @@ Neste caso podemos usar como estratégia, obter a média da tarifa paga pelos pa
 
 <pre style="font-size: 1em !important">
     <code class="python">
- mergedTitanicDS_Merged.loc[mergedTitanicDS_Merged['Fare'].isnull(),'Fare'] = mergedTitanicDS_Merged[mergedTitanicDS_Merged['Pclass'] == 3]['Fare'].mean()
+ mergedTitanicDS_Merged.loc[
+ 	mergedTitanicDS_Merged['Fare'].isnull(),'Fare'] = 
+ 	mergedTitanicDS_Merged[mergedTitanicDS_Merged['Pclass'] == 3]['Fare'].mean()
     </code>
 </pre>
 
-## Think outside the box
-
-Esta é uma fase muito importante. Geralmente você vai se deparar com situações durante o tratamento de dados em que vai parecer impossível realziar um tratamento. Um exemplo disso em nosso projeto é a feature **AGE**. 
+<div style="margin-bottom: 4em; margin-top: 4em; background-color: #dcbc14; color: #382d2d">
+<p style="padding: 1.6em; font-family: courier;">
+<b style="font-size: 1.8em">Think outside the box</b><br>Esta é uma fase muito importante. Geralmente você vai se deparar com situações durante o tratamento de dados em que vai parecer impossível realziar um tratamento. Um exemplo disso em nosso projeto é a feature <u><b>AGE</b></u>
+</p>
+</div>
 
 #### Age
 
@@ -313,7 +347,6 @@ Vamos traduzir isso para código. Abaixo temos os 4 passos para o nosso objetivo
     </code>
 </pre>
 
-
 #### Cabin
 
 Vamos evoluir em nossa análise. A feature **cabin** parece ser o maior problema, ele é parece ser realmente complexo. Para começar ele represente mais de 70% dos dados missing em nosso dataset.
@@ -327,7 +360,126 @@ Não há muito o que os dados da cabine possam oferecer em relação ao nosso pr
     </code>
 </pre>
 
+#### Surname
 
+Outro dado que podemos extrair e que será de extrema importância é o sobrenome do passageiro. Com este dado em mãos podemos realizar uma combinação posterior para inferir as famílias que estavam no Titanic. Podemos resolver isso com apenas uma linha de código.
+
+<pre style="font-size: 1.2em !important">
+    <code class="python">
+ mergedTitanicDS_Merged['Surname'] = [nameStr[0].strip() for 
+ 	nameStr in mergedTitanicDS_Merged['Name'].str.split(',')]
+    </code>
+</pre>
+
+Agora, qual a importância dessa ação? Aqui vai mais uma dica: Procure avaliar cada nova `feature` possível. Isso é de suma importância, já que posteriormente conseguimos avaliar se existe ou não alguma relação deste novo recurso e nossa meta.
+
+Agora já temos o sobrenome, mas isso pode acabar sendo outra armadilha, uma vez que é possível termos passageiros com o mesmo sobrenome e que não sejam da mesma família. Para isso vamos tentar melhorar nossa combinação de dados...
+
+#### Family Size
+
+Algo que pode nos ajudar nesse sentido é descobrir o tamanho da família. Udsando as features `SibSp` que representa a quantidade de irmãos e cônjuges, e `Parch` que representa a quantidade de pais e filhos, podemos inferir nosso **Family Size**.
+
+<pre style="font-size: 1.2em !important">
+    <code class="python">
+ mergedTitanicDS_Merged['FamilySize'] = 
+ 	mergedTitanicDS_Merged['SibSp'] + mergedTitanicDS_Merged['Parch'] + 1
+    </code>
+</pre>
+
+## Data Transformation
+
+Antes de prosseguirmos, vamos avalidar todos os recursos que criamos e o que já tinhamos a nossa disposição:
+
+<pre style="font-size: 1.4em !important">
+    <code class="python">
+ mergedTitanicDS_Merged.dtypes
+    </code>
+</pre>
+
+O resultado será o seguinte:
+
+```
+PassengerId           int64
+Pclass                int64
+Name                 object
+Sex                  object
+Age                 float64
+SibSp                 int64
+Parch                 int64
+Ticket               object
+Fare                float64
+Cabin                object
+Embarked             object
+Survived              int64
+IsCabinDataEmpty      int64
+Title                object
+Mean_Age            float64
+Surname              object
+FamilySize            int64
+```
+
+Observe os campos cujo o tipo são `object`:
+
+* Name
+* Sex
+* Ticket
+* Cabin
+* Embarked
+* Title
+
+Para realizarmos nosso algorítimo de forma satisfatória, precisamos "adequar" nossos dados. A priori já sabemos que para trabalhar com estatística consideramos dois tipos de dados: **numérico** ou **categórico**. 
+
+> **Nota**: Uma descrição detalhada pode ser encontrada em meu post [Variáveis, Estatística e Macnhine Learning](http://www.vitormeriat.com.br/2017/04/20/variables-in-statistic/).
+
+Sendo assim vamos aplicar alguma transformação para estes dados a fim de torná-los compativeis que nosso algorítimo.
+
+#### Sex, Embarked and Title
+
+Temos apenas dois tipos possíveis para sexo: Masculino e Feminino. Esta é uma tranformação simples, já que se trata de uma opção binária. Seguindo esta linha vamos `codificar` essa feature para que consigamos realizar uma representação onde para cara linha tenhamos uma coluna `male` e `female` onde necessáriamente um será positivo (1) e o outro negativo (0).
+
+<pre style="font-size: 1.4em !important">
+    <code class="python">
+ pd.get_dummies(mergedTitanicDS_Merged['Sex'])
+    </code>
+</pre>
+
+Teremos como resultado a seguinte saída:
+
+FIG sex
+
+O mesmo conseito pode ser aplicado para **Embarked** e **Title**:
+
+FIG embarked
+
+FIG title
+
+Utilizando o **Pandas** vamos realizar a transformação dos dados categóricos em tipos que possam ser expressos de forma númerica. Logo após fazemos o merge das novas informações em nosso **DataFrame**.
+
+<pre style="font-size: 1.2em !important">
+    <code class="python">
+ mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
+ 	pd.get_dummies(mergedTitanicDS_Merged['Embarked'])],axis = 1)
+ 
+ mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
+ 	pd.get_dummies(mergedTitanicDS_Merged['Sex'])],axis = 1)
+ 	
+ mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
+ 	pd.get_dummies(mergedTitanicDS_Merged['Title'])],axis = 1)
+    </code>
+</pre>
+
+Agora uma coisa pode parecer parecer estranha neste processo. Estamos incluindo um grande número de recursos, o que geralmente é bom para nos dar mais massa de manobra na exploração de relações com nosso alvo. O efeito colateral é que também pode trazer confusão se não for algo bem elaborado.
+
+> **Nota**: Variáveis categóricas são conhecidas por ocultar e mascarar muitas informações interessantes em um conjunto de dados. É crucial aprender os métodos de lidar com essas variáveis.
+
+## Feature Selection
+
+A seleção de recursos também é chamada seleção de variáveis (variable selection) ​​ou seleção de atributos (attribute selection). Esta técnica se resume em saber selecionar quis os atributos em seus dados são realmente relevantes para a modelagem preditiva que você está construindo.
+
+Sendo assim, vamos analisar o que temos de atributos, e ver se precisamos ou não de todos eles para a construção do nosso modelo.
+
+
+<hr style="margin-bottom: 4em; margin-top: 6em;" />
 
 # O repositório
 
