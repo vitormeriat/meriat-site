@@ -78,7 +78,7 @@ Quem já trabalhou com este tipo de treinamento, provavelmente pode cair na mesm
 
 <div style="margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d">
 <p style="padding: 1.6em; font-family: courier;">
-É importa ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.
+É importante ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.
 </p>
 </div>
 
@@ -97,9 +97,12 @@ import random
 import numpy as np
 from sklearn.model_selection import train_test_split
 
-dir_src = "C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\"
-dir_test = "C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\test\\"
-dir_train = "C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\train\\"
+dir_src = "{diretório fonte}"
+dir_test = "{diretório destino de teste}"
+dir_train = "{diretório destino de train}"
+
+# Quantidade de imagens a serem selecionadas no dataset
+qtd_images = 300
 
 print('\nDiretório\n')
 
@@ -119,7 +122,7 @@ def get_filepaths(directory):
 	
 full_file_paths = get_filepaths(dir_src)
 	
-result = random.sample(set(full_file_paths), 300)
+result = random.sample(set(full_file_paths), qtd_images)
 
 print('\nNúmero de arquivos do dataset: ' + str(len(full_file_paths)))
 
