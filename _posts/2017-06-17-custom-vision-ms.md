@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Custom Vision in Cognitive Services"
+title: "Custom Vision, Cognitive Services and Computer Vision"
 date: 2017-06-07
 categories:
     - AI

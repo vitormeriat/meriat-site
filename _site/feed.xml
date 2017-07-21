@@ -3,14 +3,14 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 21 Jul 2017 01:02:53 -0300</pubDate>
-    <lastBuildDate>Fri, 21 Jul 2017 01:02:53 -0300</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 21 Jul 2017 01:17:03 -0300</pubDate>
+    <lastBuildDate>Fri, 21 Jul 2017 01:17:03 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
-        <title>Custom Vision in Cognitive Services</title>
+        <title>Custom Vision, Cognitive Services and Computer Vision</title>
         <description>&lt;p&gt;Os serviços cognitivos da Microsoft tem evoluído muito desde seu início. Como é sabido o mesmo se iniciou no Microsoft Research com o famoso &lt;strong&gt;Project Oxford&lt;/strong&gt;, que já disponibilizava uma série de &lt;code&gt;API's&lt;/code&gt; para se trabalhar especialmente com Visão Computacional e Processamento de Linguagem Natural.&lt;/p&gt;
 
 &lt;p&gt;Focando na Visão Computacional, quando a Microsoft lançou o &lt;strong&gt;Cognitive Services&lt;/strong&gt;, as API’s de serviços cognitivos já disponibilizavam uma grande capacidade e variedade, te posssibilitando trabalhar de uma simples análise de imagens a detecção de faces com análise de sentimentos. Algumas combinações de serviços nos proporcionam inúmeras possibilidades de uso, como por exemplo, uma análise de sentimento em texto que dava a possibilidade do usuário enviar uma imagem que era interpretada via OCR, e tinha sua analise de sentimento exatamente igual ao texto digitado.&lt;/p&gt;
@@ -85,7 +85,7 @@
 
 &lt;div style=&quot;margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d&quot;&gt;
 &lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
-É importa ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.
+É importante ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.
 &lt;/p&gt;
 &lt;/div&gt;
 
@@ -106,9 +106,12 @@ import random
 import numpy as np
 from sklearn.model_selection import train_test_split
 
-dir_src = &quot;C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\&quot;
-dir_test = &quot;C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\test\\&quot;
-dir_train = &quot;C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\train\\&quot;
+dir_src = &quot;{diretório fonte}&quot;
+dir_test = &quot;{diretório destino de teste}&quot;
+dir_train = &quot;{diretório destino de train}&quot;
+
+# Quantidade de imagens a serem selecionadas no dataset
+qtd_images = 300
 
 print('\nDiretório\n')
 
@@ -128,7 +131,7 @@ def get_filepaths(directory):
 	
 full_file_paths = get_filepaths(dir_src)
 	
-result = random.sample(set(full_file_paths), 300)
+result = random.sample(set(full_file_paths), qtd_images)
 
 print('\nNúmero de arquivos do dataset: ' + str(len(full_file_paths)))
 
@@ -359,8 +362,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 </description>
         <pubDate>Wed, 07 Jun 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/06/07/custom-vision-ms/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/06/07/custom-vision-ms/</guid>
+        <link>/2017/06/07/custom-vision-ms/</link>
+        <guid isPermaLink="true">/2017/06/07/custom-vision-ms/</guid>
         
         
         <category>AI</category>
@@ -494,8 +497,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</guid>
+        <link>/2017/05/17/microsoft-and-ai-for-the-future/</link>
+        <guid isPermaLink="true">/2017/05/17/microsoft-and-ai-for-the-future/</guid>
         
         
         <category>IA</category>
@@ -551,8 +554,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 22 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</guid>
+        <link>/2017/04/22/gab-azure-ml-cognitive/</link>
+        <guid isPermaLink="true">/2017/04/22/gab-azure-ml-cognitive/</guid>
         
         
         <category>IA</category>
@@ -741,8 +744,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/20/variables-in-statistic/</guid>
+        <link>/2017/04/20/variables-in-statistic/</link>
+        <guid isPermaLink="true">/2017/04/20/variables-in-statistic/</guid>
         
         
         <category>Statistics</category>
@@ -1013,8 +1016,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/14/hello-world-r/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/14/hello-world-r/</guid>
+        <link>/2017/04/14/hello-world-r/</link>
+        <guid isPermaLink="true">/2017/04/14/hello-world-r/</guid>
         
         
         <category>R</category>
@@ -1075,8 +1078,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 01 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
+        <link>/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
+        <guid isPermaLink="true">/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
         
         
         <category>IA</category>
@@ -1605,8 +1608,8 @@ FamilySize            int64
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
+        <link>/2017/03/18/titanic-machine-learning-from-disaster/</link>
+        <guid isPermaLink="true">/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
         
         <category>IA</category>
@@ -1704,8 +1707,8 @@ FamilySize            int64
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
@@ -1817,8 +1820,8 @@ FamilySize            int64
 &lt;h3 id=&quot;é-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
+        <link>/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">/2017/02/07/literatura-classica-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -1901,8 +1904,8 @@ FamilySize            int64
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/05/cpbr10-workshop-machine-learning/</guid>
+        <link>/2017/02/05/cpbr10-workshop-machine-learning/</link>
+        <guid isPermaLink="true">/2017/02/05/cpbr10-workshop-machine-learning/</guid>
         
         
         <category>IA</category>
