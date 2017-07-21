@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+
+  ﻿<head>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-90757610-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css?v1">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
+
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+      <div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo-d.png" alt="Work Logo">
+				</a>
+			</div>
+      <div style="text-align: center;">
+        <a href="/"><h2 style="margin-top: 0px !important;">Vitor Meriat</h2></a>
+        <span style="font-size: 1em; color: black;">MVP Azure - Cloud Architect - Data science enthusiast</span>
+      </div>
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+    <main role="main">
+      <div class="container">
+  <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+      <div class="fh5co-spacer fh5co-spacer-sm"></div>
+      <div class="col-md-12 text-center">
+        <h1>Custom Vision in Cognitive Services</h1>
+        
+      </div>
+      
+        <h2 class="fh5co-uppercase-heading-sm text-center">
+          AI &amp; Cognitive Computing
+        </h2>
+      
+      <span><time datetime="2017-06-07T00:00:00-03:00" itemprop="datePublished">Jun 7, 2017</time></span>
+    </div>
+    <div class="fh5co-spacer fh5co-spacer-md"></div>
+    <section class="section-padding post" itemprop="articleBody">
+      <p>Os serviços cognitivos da Microsoft tem evoluído muito desde seu início. Como é sabido o mesmo se iniciou no Microsoft Research com o famoso <strong>Project Oxford</strong>, que já disponibilizava uma série de <code>API's</code> para se trabalhar especialmente com Visão Computacional e Processamento de Linguagem Natural.</p>
+
+<p>Focando na Visão Computacional, quando a Microsoft lançou o <strong>Cognitive Services</strong>, as API’s de serviços cognitivos já disponibilizavam uma grande capacidade e variedade, te posssibilitando trabalhar de uma simples análise de imagens a detecção de faces com análise de sentimentos. Algumas combinações de serviços nos proporcionam inúmeras possibilidades de uso, como por exemplo, uma análise de sentimento em texto que dava a possibilidade do usuário enviar uma imagem que era interpretada via OCR, e tinha sua analise de sentimento exatamente igual ao texto digitado.</p>
+
+<p>Contudo não era possível trabalhar de forma específica. Imagine que você precisa identificar um determinado elemento. Você tem diversas possibilidades, porém não era possível realizar um treino para a obtenção de um resultado definido… até agora…</p>
+
+<p>No Build deste ano (2017), a Microsoft lançou o Serviço de Visão Customizada. Este novo serviço possibilita que você trabalhe com seu próprio dataset de treino a fim de aprender e identificar estes mesmos padrões em outras imagens.</p>
+
+<p>Seu funcionamento é extremamente simples, basta enviar seu dataset de treino, definir um label para o mesmo, mandar treinar e verificar a acurácia do modelo. O próximo passo e gerar sua API de acesso para consumir seu modelo personalizado.</p>
+
+<div style="margin-bottom: 3em;"></div>
+
+<h3 id="under-the-hood">Under the Hood</h3>
+
+<p>Existe uma série de conceitos por debaixo dos panos. Não vou entrar em questões mais específicas sobre visão computacional ou esse aprendizado, nem tão pouco dicutir os algorítmos em si. Entretando alguma base é necessária para se utilizar o Custom Vision.</p>
+
+<p>De forma mais básica e genérica o possível, podemos pensar neste aprendizado e treino como o input de dados e extração de características para uma posterior classificação/reconhecimento de imagens.</p>
+
+<p>Ok, como é possível usar o Cognitive Services que já está treinado para atividades específicas, e usá-lo para reconhecer um padrão meu?</p>
+
+<p>Olhando mais a fundo estamos falando aqui do conceito de <code>Transfer Learning</code>, já que na realidade, temos os algorítimos de Deep Learning e modelos pré-treinados que são ensinados a procurar detalhes a recurso distintos em um novo dataset que é informado posteriormente.</p>
+
+<p>Transferência de aprendizagem, é um campo de pesquisa na aprendizagem de máquinas que se concentra no armazenamento de conhecimento adquirido ao resolver um problema, e o usa para resolver um problema diferente, mas relacionados.</p>
+
+<blockquote>
+  <p>Sendo assim, Transfer Learning se trata da capacidade de usar modelos pré-treinados para solucionar problemas relacionados com um treinamento reduzido.</p>
+</blockquote>
+
+<p>Em nosso caso o <code>serviço de visão computacional</code> do Azure já possui em amplo treinamento em diversos domínios, o que nos da a possibilidade de transferir essa aprendizagem a um domínio menor… e assim temos nosso <strong>Custom Vision API</strong>.</p>
+
+<p>Para conseguirmos um resultado satisfatório, nosso objetivo deve ser o reconhecimento de padrões de algo específico. O melhor cenário aqui é trabalhar na detecção de algo único, com um bom dataset das diversas posições, perspectiva, iluminação e etc.</p>
+
+<hr style="margin-bottom: 4em;margin-top: 6em;" />
+
+<h2 id="show-me-the-code---first-try">Show me the code - First Try</h2>
+
+<p>Uma vez que já temos uma base vamos aos passos necessários para realizar nosso primeiro treino com o <strong>Microsoft Congnitive Service Vision Custom</strong> e discutir um pouco sobre sua aplicação prática…</p>
+
+<div style="margin-bottom: 3em;"></div>
+
+<h4 id="criando-um-novo-projeto">Criando um novo projeto</h4>
+
+<p>Primeiro você vai precisar acessar o site específico do Custom Vision em <a href="https://customvision.ai">customvision.ai</a>. Agora é só fazer o login com sua conta do Microsoft Azure.</p>
+
+<p>Assim que você estiver logado vai ver a tela com os seus projetos, e a opção para a criação de um novo projeto. Assim como segue abaixo:</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/01-custom-vision.png" class="absolute-bg" /></p>
+
+<p>Crie um novo projeto informando o nome do mesmo, uma descrição e selecione a opção <code>General</code>. Você pode treinar um modelo usando um cenário específico, é bastante útil em caso de já utilizarmos uma <strong>memória</strong> de auxílio. No meu caso eu usei como nome do projeto <strong>vehicles</strong>, e como modo de treino a opção <strong>General</strong>.</p>
+
+<div style="margin-bottom: 3em;"></div>
+
+<h4 id="carregando-nosso-dataset">Carregando nosso dataset</h4>
+
+<p>Com o projeto criado precisamos treinar nosso modelo. Isso só é possível se tivermos dados. Então vamos lá, clique no botão upload e envie suas fotos.</p>
+
+<blockquote>
+  <p>Lembre-se da importância de um bom conjunto de dados, com fotos em diversos ângulos, tamanhos, variações de iluminação e etc. Quanto mais variado, mais caracteristicas serão aprendidas.</p>
+</blockquote>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/02-custom-vision.png" class="absolute-bg" /></p>
+
+<p>Para este teste estive procurando uma opção simples de treino. Eu utilizei conjunto de datasets disponibilizado pela <a href="http://www.caltech.edu/">Caltech</a> com foco em visão computacional. Estou utilizando neste primeiro momento o dataset <strong>CARS</strong> de 2001.</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/03-custom-vision.png" class="absolute-bg" /></p>
+
+<p>Aqui eu tenho minha primeira surpresa: Existe uma limitação na quantidade de arquivos a serem enviados. No total, para cada projeto podemos enviar apenas 1000 imagens para o treino.</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/04-custom-vision.png" class="absolute-bg" /></p>
+
+<p>Quem já trabalhou com este tipo de treinamento, provavelmente pode cair na mesma cilada, já que geralmente temos grandes quantidades de imagens para este tipo de treino.</p>
+
+<div style="margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d">
+<p style="padding: 1.6em; font-family: courier;">
+É importa ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.
+</p>
+</div>
+
+<p>Sendo assim resolvi mudar minha estratégia: Dividir minhas imagens em grupos de 300, já que estou falando de 3 tipos de veículos que quero identificar:</p>
+
+<ul>
+  <li>Cars</li>
+  <li>Motorbikes</li>
+  <li>Airplanes</li>
+</ul>
+
+<p>O que eu fiz foi criar um simples script em python para selecionar 300 imagens aleatórias do meu dataset, para cada categoria.</p>
+
+<pre style="font-size: 1.2em !important">
+    <code class="python">
+import os
+import random
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+dir_src = "C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\"
+dir_test = "C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\test\\"
+dir_train = "C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\train\\"
+
+print('\nDiretório\n')
+
+print('-'*30)
+
+def get_filepaths(directory):
+
+	file_paths = [] 
+	
+	for root, directories, files in os.walk(directory):
+		for filename in files:
+			# Supported image formats: JPEG, PNG, GIF, BMP.
+			if filename[-4::] == 'jpeg' or filename[-3::] == 'jpg' or filename[-3::] == 'png' or filename[-3::] == 'gif' or filename[-3::] == 'bmp':
+			    file_paths.append(filename)
+
+	return file_paths
+	
+full_file_paths = get_filepaths(dir_src)
+	
+result = random.sample(set(full_file_paths), 300)
+
+print('\nNúmero de arquivos do dataset: ' + str(len(full_file_paths)))
+
+print('\nItens selecionados randomicamente: ' +str(len(result)))
+
+X = y = result
+
+# use 1/4 data for testing
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)
+
+for xt in X_test:
+	os.rename(dir_src + xt, dir_test + xt)
+
+for yt in X_train:
+	os.rename(dir_src + yt, dir_train + yt)
+	
+print('\nQuantidade de arquivos no conjunto de treino: ' + str(len(X_train)))
+
+print('\nQuantidade de arquivos no conjunto de teste: ' + str(len(X_test)))
+    </code>
+</pre>
+
+<p>Você pode fazer o download deste código direto no meu gist <a href="https://gist.github.com/vitormeriat/98785f92763bcc775d0a49704a0d33fd">diretamente neste link</a>. O output será como o descrito abaixo:</p>
+
+<pre><code>λ python split.py
+
+Diretório
+
+------------------------------
+
+Número de arquivos do dataset: 526
+
+Itens selecionados randomicamente: 300
+
+Quantidade de arquivos no conjunto de treino: 225
+
+Quantidade de arquivos no conjunto de teste: 75
+</code></pre>
+
+<p>Nosso diretório vai ficar parecido como o descrito na imagem abaixo:</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/cars-folder.png" class="absolute-bg" /></p>
+
+<p>Não esqueça que esse procedimento deve ser realizado para cada uma das categorias de veículos que queremos testar.</p>
+
+<p>Agora eu posso fazer o upload dessas imagens… Quando cada uma das categorias são carregadas, é necessário informar uma <code>tag</code>. A tag vai representar aquele recurso, logo ao executarmos um teste, teremos de resposta a porcentagem da mesma ser ou não correspondente ao conjunto representado pela tag.</p>
+
+<div style="margin-bottom: 3em;"></div>
+
+<h4 id="um-pouquinho-mais-sobre-o-reconhecimento-de-objetos-e-o-tagueamento">Um pouquinho mais sobre o reconhecimento de objetos e o tagueamento</h4>
+
+<p>O serviço de visão computacional do Cognitive Service hoje, é treinado para o reconhecimento de mais de 2000 objetos, sendo eles seres vivos, cenários ou ações.</p>
+
+<p>Este reconhecimento é classificado e categorizado seguindo a seguinte taxonomia:</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/analyze_categories.jpg" class="absolute-bg" /></p>
+
+<p>Em nosso caso estamos criando um modelo simples com apenas 4 classes e que são distintas entre si. Como já vimos anteriormente temos carros, motos e aviões. Se passarmos um de nossos dados de treino para o serviço de análise de imagem do Cognitive Services teremos como resultado o que se segue abaixo:</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/car.jpg" class="absolute-bg" /></p>
+
+<pre>
+    <code class="json">
+ "categories": [
+    {
+      "name": "others_",
+      "score": 0.00390625
+    },
+    {
+      "name": "outdoor_road",
+      "score": 0.296875
+    },
+    {
+      "name": "trans_car",
+      "score": 0.67578125
+    }
+  ],
+ "description": {
+    "captions": [
+      {
+        "confidence": 0.9560722703980943,
+        "text": "a car parked on the side of a road"
+      }
+    ],
+ "tags": [
+    {
+      "confidence": 0.9992092251777649,
+      "name": "outdoor"
+    },
+    {
+      "confidence": 0.9986016154289246,
+      "name": "car"
+    },
+    {
+      "confidence": 0.9985461235046387,
+      "name": "sky"
+    },
+    {
+      "confidence": 0.9938879609107971,
+      "name": "road"
+    },
+    {
+      "confidence": 0.9547197818756104,
+      "name": "way"
+    },
+    {
+      "confidence": 0.8574815392494202,
+      "name": "scene"
+    },
+    {
+      "confidence": 0.8200963139533997,
+      "name": "street"
+    },
+    {
+      "confidence": 0.6744081974029541,
+      "name": "highway"
+    },
+    {
+      "confidence": 0.37572911381721497,
+      "name": "stopped"
+    }
+ ]
+    </code>
+</pre>
+
+<p>Observe que nossa imagem foi categorizada em 3 locais, onde as duas melhores classificações são realtivas a carros. Em relação ao tagueamento, vemos <code>car</code> na segunda posição. A descrição indica <strong>a car parked on the side of a road</strong>.</p>
+
+<p>Faça o mesmo teste com outras images, incluindo avião e moto. Você vai perceber que o serviço tem uma boa acurácia em relação ao reconhecimento dessas imagens.</p>
+
+<p>Do nosso lado, o tagueamento é importante para representar corretamente as imagens, e ter um retorno claro, já que a ideia final é consumir esse modelo via <code>REST</code>.</p>
+
+<div style="margin-bottom: 3em;"></div>
+
+<h4 id="treinando-o-modelo">Treinando o modelo</h4>
+
+<p>Agora vamos ao passo mais simples, clique no botão <code>Train</code>. No meu caso o treinamento levou <code>23.09</code> segundos.</p>
+
+<p>Com o modelo treinado, você pode ir na página <code>PERFORMANCE</code>, onde encontramos o seguinte gráfico:</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/06-custom-vision.png" class="absolute-bg" /></p>
+
+<p>Este gráfico possui duas medidas, <code>Precision</code> e <code>Recall</code>, sendo que <strong>Precision</strong> representa a probabilidade de seu classificador conseguir identificar corretamente uma imagem. <strong>Recall</strong> representa a porcentagem de imagens contendo os itens que queremos identificar no conjunto enviado.</p>
+
+<p>Em nosso caso temos uma presição de <code>99.7%</code>, o que indica que alguma imagem enviada não foi reconhecida e portanto foi descartada.</p>
+
+<p>Para fazer o <code>double check</code>, acesse a guia <strong>TRAINING IMAGES</strong> e depois <strong>Iteration History</strong>. Agora podemos ver qual imagem confundiu nosso modelo.</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/12-custom-vision.png" class="absolute-bg" /></p>
+
+<div style="margin-bottom: 3em;"></div>
+
+<h4 id="hora-do-teste">Hora do Teste</h4>
+
+<p>Agora vamos aos testes. Podemos fazer isso de forma simples utilizando o próprio site. Vamos para a aba <strong>Quick Test</strong>, selecione a opção <strong>Browse local files</strong> e selecione uma imagem para teste.</p>
+
+<p>No meu caso estou utilizando uma das imagens de teste que separei anteriormente. Você pode selecionar uma imagem da própria web.</p>
+
+<p>Ao fazer o upload, note que você já terá a classificação da imagem segundo seu modelo.</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png" class="absolute-bg" /></p>
+
+<p>Tente utilizar outras imagens de teste… temos os carros, aviões ou até mesmo coisas que não tenham nenhuma ligação com o modelo treinado.</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/14-custom-vision.png" class="absolute-bg" /></p>
+
+<p>Outra coisa interessante é que ao realizar estes testes, você pode acessar a guia <strong>PREDICTIONS</strong>. Lá você vai ver todas as imagens que foram enviadas para teste.</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/15-custom-vision.png" class="absolute-bg" /></p>
+
+<p>Note que aqui temos a classificação que foi realizada para cada imagem. Você pode deletar uma ou todas as imagens, como também realizar um novo treino com essas imagens sendo adicionadas ao dataset original. Isso pode ou não melhorar a precisão do nosso modelo.</p>
+
+<div style="margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d">
+<p style="padding: 1.6em; font-family: courier;">
+Este artigo está fortemente baseado na utilização do portal. Lembre-se que podemos fazer da <b>ingestão</b> ao <b>treino</b> via código.
+</p>
+</div>
+
+<h4 id="gerando-novos-modelos">Gerando novos modelos</h4>
+
+<p>Durante os testes você pode verificar que seu modelo precisa melhor. Você já sabe que um bom modelo vai depender da qualidade de seus dados, e segundo essa linha você adiciona novas imagens com mais angulos, cores e perspectivas diferentes.</p>
+
+<p>Pronto, agora você só precisa realizar outro treino para verificar se o novo conjunto vai ou não melhorar sua classificação.</p>
+
+<p>O resultado deste processo é que será gerado a cada treino um novo modelo que será chamado aqui de <code>Iteration</code>.</p>
+
+<h4 id="gerando-nosso-modelo-as-a-service">Gerando nosso Modelo as a Service</h4>
+
+<p>Já temos nosso modelo treinado, realizamos alguns testes e agora chegou o momento de usar consumir nosso modelo.</p>
+
+<p>Para isso você só precisa clicar em <strong>Prediction URL</strong>. Com isso veremos o <code>endpoint</code> da nossa aplicação, que vamos usar para consumir o modelo. Aqui também temos nossa <code>Prediction-Key</code>, que deve ser informada no cabeçalho da requisição.</p>
+
+<p>Um detalhe importante é que você pode definir qual <strong>Iteration</strong> você quer consumir. Sendo assim é possível usar o modelo padrão ou definir um modelo com melhor precisão.</p>
+
+<p>Em relação ao código é tudo muito simples. Você pode enviar a url ou o binário. Para efeitos práticos realizei o primeiro teste utilizando o postman.</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/custom-vision-postman.png" class="absolute-bg" /></p>
+
+<pre><code>
+</code></pre>
+
+<p>A imagem utilizada segue abaixo. Você pode acessar a imagem no seguinte link: <a href="http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg">car-train</a>. Essa foi uma imagem retirada da internet, você pode passar um link qualquer para realizar seu teste.</p>
+
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg" class="absolute-bg" /></p>
+
+<p>Neste caso estou utilizando a <code>API</code> de Custom Vision Prediction, que aponta diretamente para o nosso modelo.</p>
+
+<div style="margin-bottom: 6em;"></div>
+
+<h1 id="conclusão">Conclusão</h1>
+<p>Esta é uma parte introdutória do assunto e do serviço, porém já é possível perceber todo o potencial oferecido pelo produto. Existem ainda algumas observações importantes a serem feitas, tanto na questão mais prática em relação ao desenvolvimento, quanto na questão mais teórica, a fim de entender os propósitos e assim construir modelos satisfatórios.</p>
+
+<p>Estou roterizando um vídeo sobre o assunto, e creio que lá será mais simples expor todo o conteúdo e realizar melhor os testes. Assim que o mesmo estiver publicado, atualizo este artigo.</p>
+
+<p>Por hora, é isso ai pessoal.</p>
+
+<h1 id="referências">Referências</h1>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Artificial_neural_network">Artificial Neural Networks, Wikipedia</a></li>
+  <li><a href="http://www.saedsayad.com/artificial_neural_network.htm">Artificial Neural Networks, by Saed Sayad</a></li>
+  <li><a href="https://www.youtube.com/watch?v=bxe2T-V8XRs">Neural Networks Demystified, by Stephen Welch</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Activation_function">Activation function, Wikipedia</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer Learning</a></li>
+  <li><a href="https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/home">Computer Vision, Cognitive Services</a></li>
+  <li><a href="https://southcentralus.dev.cognitive.microsoft.com/docs/services/d9a10a4a5f8549599f1ecafc435119fa/operations/58d5835bc8cb231380095be3">Custom Vision Training</a></li>
+  <li><a href="https://southcentralus.dev.cognitive.microsoft.com/docs/services/eb68250e4e954d9bae0c2650db79c653/operations/58acd3c1ef062f0344a42814">Custom Vision Prediction</a></li>
+</ul>
+
+
+    </section>
+  </article>
+
+  <hr/>
+  <section class="author">
+  	<header> <a href=""> <img class="profile" src="/assets/images/profile.jpg" alt="Author's profile picture"></a></header>
+  	<article>
+  		<!-- Author Name -->
+      	<h4>  </h4>
+      	<!-- Author Bio -->
+      	<p>
+      		Vitor is a computer scientist who is passionate about creating software that will positively change the world we live in.
+      	</p>
+        <p>
+          MVP Azure - Cloud Architect - Data science enthusiast
+        </p>
+      </article>
+  </section>
+  <hr/>
+
+  <div style="margin-top: 60px; margin-bottom: 60px;">
+    
+    
+      12 minutes to read
+    
+  </div>
+
+  <div class="PageNavigation">
+  
+    <a class="prev" href="/2017/05/17/microsoft-and-ai-for-the-future/"><i class="fa fa-lg fa-arrow-left"></i> Microsoft and Artificial Intelligence for the future</a>
+  
+  
+  </div>
+</div>
+<div style="height: 80px;"></div>
+
+    </main>
+
+    <footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved.
+						</small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

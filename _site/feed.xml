@@ -5,9 +5,369 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Jul 2017 20:53:36 -0300</pubDate>
-    <lastBuildDate>Sun, 09 Jul 2017 20:53:36 -0300</lastBuildDate>
+    <pubDate>Fri, 21 Jul 2017 01:02:53 -0300</pubDate>
+    <lastBuildDate>Fri, 21 Jul 2017 01:02:53 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Custom Vision in Cognitive Services</title>
+        <description>&lt;p&gt;Os serviços cognitivos da Microsoft tem evoluído muito desde seu início. Como é sabido o mesmo se iniciou no Microsoft Research com o famoso &lt;strong&gt;Project Oxford&lt;/strong&gt;, que já disponibilizava uma série de &lt;code&gt;API's&lt;/code&gt; para se trabalhar especialmente com Visão Computacional e Processamento de Linguagem Natural.&lt;/p&gt;
+
+&lt;p&gt;Focando na Visão Computacional, quando a Microsoft lançou o &lt;strong&gt;Cognitive Services&lt;/strong&gt;, as API’s de serviços cognitivos já disponibilizavam uma grande capacidade e variedade, te posssibilitando trabalhar de uma simples análise de imagens a detecção de faces com análise de sentimentos. Algumas combinações de serviços nos proporcionam inúmeras possibilidades de uso, como por exemplo, uma análise de sentimento em texto que dava a possibilidade do usuário enviar uma imagem que era interpretada via OCR, e tinha sua analise de sentimento exatamente igual ao texto digitado.&lt;/p&gt;
+
+&lt;p&gt;Contudo não era possível trabalhar de forma específica. Imagine que você precisa identificar um determinado elemento. Você tem diversas possibilidades, porém não era possível realizar um treino para a obtenção de um resultado definido… até agora…&lt;/p&gt;
+
+&lt;p&gt;No Build deste ano (2017), a Microsoft lançou o Serviço de Visão Customizada. Este novo serviço possibilita que você trabalhe com seu próprio dataset de treino a fim de aprender e identificar estes mesmos padrões em outras imagens.&lt;/p&gt;
+
+&lt;p&gt;Seu funcionamento é extremamente simples, basta enviar seu dataset de treino, definir um label para o mesmo, mandar treinar e verificar a acurácia do modelo. O próximo passo e gerar sua API de acesso para consumir seu modelo personalizado.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;under-the-hood&quot;&gt;Under the Hood&lt;/h3&gt;
+
+&lt;p&gt;Existe uma série de conceitos por debaixo dos panos. Não vou entrar em questões mais específicas sobre visão computacional ou esse aprendizado, nem tão pouco dicutir os algorítmos em si. Entretando alguma base é necessária para se utilizar o Custom Vision.&lt;/p&gt;
+
+&lt;p&gt;De forma mais básica e genérica o possível, podemos pensar neste aprendizado e treino como o input de dados e extração de características para uma posterior classificação/reconhecimento de imagens.&lt;/p&gt;
+
+&lt;p&gt;Ok, como é possível usar o Cognitive Services que já está treinado para atividades específicas, e usá-lo para reconhecer um padrão meu?&lt;/p&gt;
+
+&lt;p&gt;Olhando mais a fundo estamos falando aqui do conceito de &lt;code&gt;Transfer Learning&lt;/code&gt;, já que na realidade, temos os algorítimos de Deep Learning e modelos pré-treinados que são ensinados a procurar detalhes a recurso distintos em um novo dataset que é informado posteriormente.&lt;/p&gt;
+
+&lt;p&gt;Transferência de aprendizagem, é um campo de pesquisa na aprendizagem de máquinas que se concentra no armazenamento de conhecimento adquirido ao resolver um problema, e o usa para resolver um problema diferente, mas relacionados.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sendo assim, Transfer Learning se trata da capacidade de usar modelos pré-treinados para solucionar problemas relacionados com um treinamento reduzido.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Em nosso caso o &lt;code&gt;serviço de visão computacional&lt;/code&gt; do Azure já possui em amplo treinamento em diversos domínios, o que nos da a possibilidade de transferir essa aprendizagem a um domínio menor… e assim temos nosso &lt;strong&gt;Custom Vision API&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para conseguirmos um resultado satisfatório, nosso objetivo deve ser o reconhecimento de padrões de algo específico. O melhor cenário aqui é trabalhar na detecção de algo único, com um bom dataset das diversas posições, perspectiva, iluminação e etc.&lt;/p&gt;
+
+&lt;hr style=&quot;margin-bottom: 4em;margin-top: 6em;&quot; /&gt;
+
+&lt;h2 id=&quot;show-me-the-code---first-try&quot;&gt;Show me the code - First Try&lt;/h2&gt;
+
+&lt;p&gt;Uma vez que já temos uma base vamos aos passos necessários para realizar nosso primeiro treino com o &lt;strong&gt;Microsoft Congnitive Service Vision Custom&lt;/strong&gt; e discutir um pouco sobre sua aplicação prática…&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;criando-um-novo-projeto&quot;&gt;Criando um novo projeto&lt;/h4&gt;
+
+&lt;p&gt;Primeiro você vai precisar acessar o site específico do Custom Vision em &lt;a href=&quot;https://customvision.ai&quot;&gt;customvision.ai&lt;/a&gt;. Agora é só fazer o login com sua conta do Microsoft Azure.&lt;/p&gt;
+
+&lt;p&gt;Assim que você estiver logado vai ver a tela com os seus projetos, e a opção para a criação de um novo projeto. Assim como segue abaixo:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/01-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Crie um novo projeto informando o nome do mesmo, uma descrição e selecione a opção &lt;code&gt;General&lt;/code&gt;. Você pode treinar um modelo usando um cenário específico, é bastante útil em caso de já utilizarmos uma &lt;strong&gt;memória&lt;/strong&gt; de auxílio. No meu caso eu usei como nome do projeto &lt;strong&gt;vehicles&lt;/strong&gt;, e como modo de treino a opção &lt;strong&gt;General&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;carregando-nosso-dataset&quot;&gt;Carregando nosso dataset&lt;/h4&gt;
+
+&lt;p&gt;Com o projeto criado precisamos treinar nosso modelo. Isso só é possível se tivermos dados. Então vamos lá, clique no botão upload e envie suas fotos.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lembre-se da importância de um bom conjunto de dados, com fotos em diversos ângulos, tamanhos, variações de iluminação e etc. Quanto mais variado, mais caracteristicas serão aprendidas.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/02-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para este teste estive procurando uma opção simples de treino. Eu utilizei conjunto de datasets disponibilizado pela &lt;a href=&quot;http://www.caltech.edu/&quot;&gt;Caltech&lt;/a&gt; com foco em visão computacional. Estou utilizando neste primeiro momento o dataset &lt;strong&gt;CARS&lt;/strong&gt; de 2001.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/03-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Aqui eu tenho minha primeira surpresa: Existe uma limitação na quantidade de arquivos a serem enviados. No total, para cada projeto podemos enviar apenas 1000 imagens para o treino.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/04-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Quem já trabalhou com este tipo de treinamento, provavelmente pode cair na mesma cilada, já que geralmente temos grandes quantidades de imagens para este tipo de treino.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d&quot;&gt;
+&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+É importa ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sendo assim resolvi mudar minha estratégia: Dividir minhas imagens em grupos de 300, já que estou falando de 3 tipos de veículos que quero identificar:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cars&lt;/li&gt;
+  &lt;li&gt;Motorbikes&lt;/li&gt;
+  &lt;li&gt;Airplanes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;O que eu fiz foi criar um simples script em python para selecionar 300 imagens aleatórias do meu dataset, para cada categoria.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+import os
+import random
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+dir_src = &quot;C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\&quot;
+dir_test = &quot;C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\test\\&quot;
+dir_train = &quot;C:\\Users\\vitor.meriat\\Desktop\\cars_brad\\train\\&quot;
+
+print('\nDiretório\n')
+
+print('-'*30)
+
+def get_filepaths(directory):
+
+	file_paths = [] 
+	
+	for root, directories, files in os.walk(directory):
+		for filename in files:
+			# Supported image formats: JPEG, PNG, GIF, BMP.
+			if filename[-4::] == 'jpeg' or filename[-3::] == 'jpg' or filename[-3::] == 'png' or filename[-3::] == 'gif' or filename[-3::] == 'bmp':
+			    file_paths.append(filename)
+
+	return file_paths
+	
+full_file_paths = get_filepaths(dir_src)
+	
+result = random.sample(set(full_file_paths), 300)
+
+print('\nNúmero de arquivos do dataset: ' + str(len(full_file_paths)))
+
+print('\nItens selecionados randomicamente: ' +str(len(result)))
+
+X = y = result
+
+# use 1/4 data for testing
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)
+
+for xt in X_test:
+	os.rename(dir_src + xt, dir_test + xt)
+
+for yt in X_train:
+	os.rename(dir_src + yt, dir_train + yt)
+	
+print('\nQuantidade de arquivos no conjunto de treino: ' + str(len(X_train)))
+
+print('\nQuantidade de arquivos no conjunto de teste: ' + str(len(X_test)))
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Você pode fazer o download deste código direto no meu gist &lt;a href=&quot;https://gist.github.com/vitormeriat/98785f92763bcc775d0a49704a0d33fd&quot;&gt;diretamente neste link&lt;/a&gt;. O output será como o descrito abaixo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;λ python split.py
+
+Diretório
+
+------------------------------
+
+Número de arquivos do dataset: 526
+
+Itens selecionados randomicamente: 300
+
+Quantidade de arquivos no conjunto de treino: 225
+
+Quantidade de arquivos no conjunto de teste: 75
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nosso diretório vai ficar parecido como o descrito na imagem abaixo:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/cars-folder.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Não esqueça que esse procedimento deve ser realizado para cada uma das categorias de veículos que queremos testar.&lt;/p&gt;
+
+&lt;p&gt;Agora eu posso fazer o upload dessas imagens… Quando cada uma das categorias são carregadas, é necessário informar uma &lt;code&gt;tag&lt;/code&gt;. A tag vai representar aquele recurso, logo ao executarmos um teste, teremos de resposta a porcentagem da mesma ser ou não correspondente ao conjunto representado pela tag.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;um-pouquinho-mais-sobre-o-reconhecimento-de-objetos-e-o-tagueamento&quot;&gt;Um pouquinho mais sobre o reconhecimento de objetos e o tagueamento&lt;/h4&gt;
+
+&lt;p&gt;O serviço de visão computacional do Cognitive Service hoje, é treinado para o reconhecimento de mais de 2000 objetos, sendo eles seres vivos, cenários ou ações.&lt;/p&gt;
+
+&lt;p&gt;Este reconhecimento é classificado e categorizado seguindo a seguinte taxonomia:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/analyze_categories.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Em nosso caso estamos criando um modelo simples com apenas 4 classes e que são distintas entre si. Como já vimos anteriormente temos carros, motos e aviões. Se passarmos um de nossos dados de treino para o serviço de análise de imagem do Cognitive Services teremos como resultado o que se segue abaixo:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+    &lt;code class=&quot;json&quot;&gt;
+ &quot;categories&quot;: [
+    {
+      &quot;name&quot;: &quot;others_&quot;,
+      &quot;score&quot;: 0.00390625
+    },
+    {
+      &quot;name&quot;: &quot;outdoor_road&quot;,
+      &quot;score&quot;: 0.296875
+    },
+    {
+      &quot;name&quot;: &quot;trans_car&quot;,
+      &quot;score&quot;: 0.67578125
+    }
+  ],
+ &quot;description&quot;: {
+    &quot;captions&quot;: [
+      {
+        &quot;confidence&quot;: 0.9560722703980943,
+        &quot;text&quot;: &quot;a car parked on the side of a road&quot;
+      }
+    ],
+ &quot;tags&quot;: [
+    {
+      &quot;confidence&quot;: 0.9992092251777649,
+      &quot;name&quot;: &quot;outdoor&quot;
+    },
+    {
+      &quot;confidence&quot;: 0.9986016154289246,
+      &quot;name&quot;: &quot;car&quot;
+    },
+    {
+      &quot;confidence&quot;: 0.9985461235046387,
+      &quot;name&quot;: &quot;sky&quot;
+    },
+    {
+      &quot;confidence&quot;: 0.9938879609107971,
+      &quot;name&quot;: &quot;road&quot;
+    },
+    {
+      &quot;confidence&quot;: 0.9547197818756104,
+      &quot;name&quot;: &quot;way&quot;
+    },
+    {
+      &quot;confidence&quot;: 0.8574815392494202,
+      &quot;name&quot;: &quot;scene&quot;
+    },
+    {
+      &quot;confidence&quot;: 0.8200963139533997,
+      &quot;name&quot;: &quot;street&quot;
+    },
+    {
+      &quot;confidence&quot;: 0.6744081974029541,
+      &quot;name&quot;: &quot;highway&quot;
+    },
+    {
+      &quot;confidence&quot;: 0.37572911381721497,
+      &quot;name&quot;: &quot;stopped&quot;
+    }
+ ]
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Observe que nossa imagem foi categorizada em 3 locais, onde as duas melhores classificações são realtivas a carros. Em relação ao tagueamento, vemos &lt;code&gt;car&lt;/code&gt; na segunda posição. A descrição indica &lt;strong&gt;a car parked on the side of a road&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Faça o mesmo teste com outras images, incluindo avião e moto. Você vai perceber que o serviço tem uma boa acurácia em relação ao reconhecimento dessas imagens.&lt;/p&gt;
+
+&lt;p&gt;Do nosso lado, o tagueamento é importante para representar corretamente as imagens, e ter um retorno claro, já que a ideia final é consumir esse modelo via &lt;code&gt;REST&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;treinando-o-modelo&quot;&gt;Treinando o modelo&lt;/h4&gt;
+
+&lt;p&gt;Agora vamos ao passo mais simples, clique no botão &lt;code&gt;Train&lt;/code&gt;. No meu caso o treinamento levou &lt;code&gt;23.09&lt;/code&gt; segundos.&lt;/p&gt;
+
+&lt;p&gt;Com o modelo treinado, você pode ir na página &lt;code&gt;PERFORMANCE&lt;/code&gt;, onde encontramos o seguinte gráfico:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/06-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Este gráfico possui duas medidas, &lt;code&gt;Precision&lt;/code&gt; e &lt;code&gt;Recall&lt;/code&gt;, sendo que &lt;strong&gt;Precision&lt;/strong&gt; representa a probabilidade de seu classificador conseguir identificar corretamente uma imagem. &lt;strong&gt;Recall&lt;/strong&gt; representa a porcentagem de imagens contendo os itens que queremos identificar no conjunto enviado.&lt;/p&gt;
+
+&lt;p&gt;Em nosso caso temos uma presição de &lt;code&gt;99.7%&lt;/code&gt;, o que indica que alguma imagem enviada não foi reconhecida e portanto foi descartada.&lt;/p&gt;
+
+&lt;p&gt;Para fazer o &lt;code&gt;double check&lt;/code&gt;, acesse a guia &lt;strong&gt;TRAINING IMAGES&lt;/strong&gt; e depois &lt;strong&gt;Iteration History&lt;/strong&gt;. Agora podemos ver qual imagem confundiu nosso modelo.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/12-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;hora-do-teste&quot;&gt;Hora do Teste&lt;/h4&gt;
+
+&lt;p&gt;Agora vamos aos testes. Podemos fazer isso de forma simples utilizando o próprio site. Vamos para a aba &lt;strong&gt;Quick Test&lt;/strong&gt;, selecione a opção &lt;strong&gt;Browse local files&lt;/strong&gt; e selecione uma imagem para teste.&lt;/p&gt;
+
+&lt;p&gt;No meu caso estou utilizando uma das imagens de teste que separei anteriormente. Você pode selecionar uma imagem da própria web.&lt;/p&gt;
+
+&lt;p&gt;Ao fazer o upload, note que você já terá a classificação da imagem segundo seu modelo.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tente utilizar outras imagens de teste… temos os carros, aviões ou até mesmo coisas que não tenham nenhuma ligação com o modelo treinado.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/14-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Outra coisa interessante é que ao realizar estes testes, você pode acessar a guia &lt;strong&gt;PREDICTIONS&lt;/strong&gt;. Lá você vai ver todas as imagens que foram enviadas para teste.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/15-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note que aqui temos a classificação que foi realizada para cada imagem. Você pode deletar uma ou todas as imagens, como também realizar um novo treino com essas imagens sendo adicionadas ao dataset original. Isso pode ou não melhorar a precisão do nosso modelo.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d&quot;&gt;
+&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+Este artigo está fortemente baseado na utilização do portal. Lembre-se que podemos fazer da &lt;b&gt;ingestão&lt;/b&gt; ao &lt;b&gt;treino&lt;/b&gt; via código.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;gerando-novos-modelos&quot;&gt;Gerando novos modelos&lt;/h4&gt;
+
+&lt;p&gt;Durante os testes você pode verificar que seu modelo precisa melhor. Você já sabe que um bom modelo vai depender da qualidade de seus dados, e segundo essa linha você adiciona novas imagens com mais angulos, cores e perspectivas diferentes.&lt;/p&gt;
+
+&lt;p&gt;Pronto, agora você só precisa realizar outro treino para verificar se o novo conjunto vai ou não melhorar sua classificação.&lt;/p&gt;
+
+&lt;p&gt;O resultado deste processo é que será gerado a cada treino um novo modelo que será chamado aqui de &lt;code&gt;Iteration&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;gerando-nosso-modelo-as-a-service&quot;&gt;Gerando nosso Modelo as a Service&lt;/h4&gt;
+
+&lt;p&gt;Já temos nosso modelo treinado, realizamos alguns testes e agora chegou o momento de usar consumir nosso modelo.&lt;/p&gt;
+
+&lt;p&gt;Para isso você só precisa clicar em &lt;strong&gt;Prediction URL&lt;/strong&gt;. Com isso veremos o &lt;code&gt;endpoint&lt;/code&gt; da nossa aplicação, que vamos usar para consumir o modelo. Aqui também temos nossa &lt;code&gt;Prediction-Key&lt;/code&gt;, que deve ser informada no cabeçalho da requisição.&lt;/p&gt;
+
+&lt;p&gt;Um detalhe importante é que você pode definir qual &lt;strong&gt;Iteration&lt;/strong&gt; você quer consumir. Sendo assim é possível usar o modelo padrão ou definir um modelo com melhor precisão.&lt;/p&gt;
+
+&lt;p&gt;Em relação ao código é tudo muito simples. Você pode enviar a url ou o binário. Para efeitos práticos realizei o primeiro teste utilizando o postman.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/custom-vision-postman.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A imagem utilizada segue abaixo. Você pode acessar a imagem no seguinte link: &lt;a href=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg&quot;&gt;car-train&lt;/a&gt;. Essa foi uma imagem retirada da internet, você pode passar um link qualquer para realizar seu teste.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Neste caso estou utilizando a &lt;code&gt;API&lt;/code&gt; de Custom Vision Prediction, que aponta diretamente para o nosso modelo.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 6em;&quot;&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;conclusão&quot;&gt;Conclusão&lt;/h1&gt;
+&lt;p&gt;Esta é uma parte introdutória do assunto e do serviço, porém já é possível perceber todo o potencial oferecido pelo produto. Existem ainda algumas observações importantes a serem feitas, tanto na questão mais prática em relação ao desenvolvimento, quanto na questão mais teórica, a fim de entender os propósitos e assim construir modelos satisfatórios.&lt;/p&gt;
+
+&lt;p&gt;Estou roterizando um vídeo sobre o assunto, e creio que lá será mais simples expor todo o conteúdo e realizar melhor os testes. Assim que o mesmo estiver publicado, atualizo este artigo.&lt;/p&gt;
+
+&lt;p&gt;Por hora, é isso ai pessoal.&lt;/p&gt;
+
+&lt;h1 id=&quot;referências&quot;&gt;Referências&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Artificial_neural_network&quot;&gt;Artificial Neural Networks, Wikipedia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.saedsayad.com/artificial_neural_network.htm&quot;&gt;Artificial Neural Networks, by Saed Sayad&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=bxe2T-V8XRs&quot;&gt;Neural Networks Demystified, by Stephen Welch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Activation_function&quot;&gt;Activation function, Wikipedia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Transfer_learning&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/home&quot;&gt;Computer Vision, Cognitive Services&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://southcentralus.dev.cognitive.microsoft.com/docs/services/d9a10a4a5f8549599f1ecafc435119fa/operations/58d5835bc8cb231380095be3&quot;&gt;Custom Vision Training&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://southcentralus.dev.cognitive.microsoft.com/docs/services/eb68250e4e954d9bae0c2650db79c653/operations/58acd3c1ef062f0344a42814&quot;&gt;Custom Vision Prediction&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 07 Jun 2017 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2017/06/07/custom-vision-ms/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/07/custom-vision-ms/</guid>
+        
+        
+        <category>AI</category>
+        
+        <category>Cognitive Computing</category>
+        
+      </item>
     
       <item>
         <title>Microsoft and Artificial Intelligence for the future</title>
@@ -1454,7 +1814,7 @@ FamilySize            int64
 
 &lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;É-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
+&lt;h3 id=&quot;é-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
@@ -1552,29 +1912,6 @@ FamilySize            int64
         <category>Jupyter Notebook</category>
         
         <category>Python</category>
-        
-      </item>
-    
-      <item>
-        <title>Inteligência Artificial, história indústria e economia</title>
-        <description>&lt;p&gt;A importância científica, industrial e econômica da &lt;span style=&quot;font-size: 1.6em;&quot;&gt;I&lt;/span&gt;nteligência &lt;span style=&quot;font-size: 1.6em;&quot;&gt;A&lt;/span&gt;rtificial, bem como o seu previsível impacto social têm crescido muito nos últimos anos, estimando-se que cresça muito mais, apoiada quer na banalização da potência de cálculo (necessária à complexidade das suas operações), quer nos progressos reais verificados na investigação fundamental, cujos resultados saem agora dos laboratórios para a indústria. Na sua vertente tecnológica, a IA comporta uma importante faceta de engenharia. Na verdade, pretende em última análise programar computadores (a que poderão estar acoplados sensores e actuadores) de forma que desempenhem com êxito e eficiência tarefas que requerem inteligência.&lt;/p&gt;
-
-&lt;p&gt;Tal desempenho tem como suporte a combinação racional de métodos gerais e automatizados de abordagem à formulação e resolução lógica de problemas. É pela generalidade, computabilidade, e combinabilidade lógica desses métodos que a IA se distingue como disciplina científica. Em contraste, outras disciplinas científicas usam técnicas inteligentes mas específicas do seu domínio; técnicas gerais mas sem explicitação do raciocínio; técnicas múltiplas mas não articuladas num todo automatizado.&lt;/p&gt;
-
-&lt;p&gt;As técnicas da IA encontram-se em evolução rápida, e algumas vão-se consubstanciando em instrumentos de “software” comercialmente disponíveis, de utilização acessível àqueles com um mínimo de inclinação informática. Outras dessas técnicas, não existindo sob a forma de instrumento acabado acessível ao leigo, necessitam de um especialista para a sua aplicação casuística.&lt;/p&gt;
-
-&lt;p&gt;A utilização da IA começa a generalizar-se com muitos êxitos de aplicação. Ocorrem anualmente inúmeros colóquios internacionais expressamente dedicados a essas aplicações. Em Portugal verifica-se um potencial considerável em IA, já consolidado em grande parte a nível do ensino e da investigação.&lt;/p&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;É-isso-ai-pessoal-em-breve-continuamos-esse-bate-papo-&quot;&gt;É isso ai pessoal, em breve continuamos esse bate papo ;)&lt;/h4&gt;
-</description>
-        <pubDate>Thu, 19 Jan 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/01/19/inteligencia-artificial-historia-industria/</guid>
-        
-        
-        <category>IA</category>
         
       </item>
     
