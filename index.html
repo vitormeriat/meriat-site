@@ -24,8 +24,12 @@ menuhome: fh5co-active
              <img style="width: 100%;" src="{{ post.image-full }}" class="absolute-bg" >
             {% endif %}
             {% if post.image %}
-              <div style="width: 100%;">
-                <img src="{{ post.image }}" >
+                {% if post.color %}
+                  <div style="width: 100%; margin-bottom: 2em; background-color: {{ post.color }};">
+                {% else %}
+                  <div style="width: 100%; margin-bottom: 2em;">
+                {% endif %}
+                  <img src="{{ post.image }}" >
               </div>
             {% endif %}
             </div>
