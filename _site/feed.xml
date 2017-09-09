@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Sep 2017 23:07:07 -0300</pubDate>
-    <lastBuildDate>Fri, 08 Sep 2017 23:07:07 -0300</lastBuildDate>
+    <pubDate>Fri, 08 Sep 2017 23:42:16 -0300</pubDate>
+    <lastBuildDate>Fri, 08 Sep 2017 23:42:16 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -36,6 +36,8 @@
   &lt;li&gt;Conclusão&lt;/li&gt;
   &lt;li&gt;Referências&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div style=&quot;margin-bottom: 4em;&quot;&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;O objetivo&lt;/strong&gt; neste post é passar por uma leve introdução ao &lt;code&gt;NLP&lt;/code&gt;, &lt;code&gt;Interfaces Conversacionais&lt;/code&gt;, &lt;code&gt;bots&lt;/code&gt; e suas significancias, e em conjunto analisar o seu funcionamento adaptando todos os conceitos de forma que seja possível ao fim do mesmo, melhorar suas habilidades em criação de diálogos, bem como o fazê-lo utilizando o serviço de sua preferência.&lt;/p&gt;
 
@@ -193,7 +195,7 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;h3 id=&quot;luisai&quot;&gt;Luis.ai&lt;/h3&gt;
 &lt;p align=&quot;center&quot; style=&quot;background-color: #219680; width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/luis.jpg&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;O Microsoft Language Understanding Intelligent Service, ou como é mais citado LUIS, é a plataforma da Microsoft que compoem dentre outras o chamado &lt;code&gt;Bot Framework&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;Microsoft Language Understanding Intelligent Service&lt;/strong&gt;, ou como é mais citado LUIS, é a plataforma da Microsoft que compoem dentre outras o chamado &lt;code&gt;Bot Framework&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;No LUIS é possível de forma simples e intuitiva treinar seus modelos, criar e selecionar suas entidades, visualizar os gráficos de utilização e tudo que temos na web conseguimos fazer via API. Após nosso modelo devidamente treinado é só consumir tudo via API.&lt;/p&gt;
 
@@ -219,7 +221,11 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;h3 id=&quot;ibm-watson&quot;&gt;IBM Watson&lt;/h3&gt;
 &lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/watson.jpg&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Você provavelmente se lembra do famoso jogo da IBM Watson quando ganhou contra dois humanos no programa de teste de TV “Jeopardy” em 2011. Portanto, a boa notícia é que a IBM moveu a tecnologia por trás do Watson para a nuvem e lançou o conjunto de API que você pode use em seus próprios aplicativos de conversação.&lt;/p&gt;
+&lt;p&gt;Talvez o &lt;strong&gt;IBM Watson&lt;/strong&gt; seja o mais famoso da lista. Isto se dá pela IBM ser um dos primeiros players de mercado a investir tanto na tecnologia quanto no marketing de suas soluções, tanto no poder de processamento, quanto no quesito IA.&lt;/p&gt;
+
+&lt;p&gt;Temos a participação do Watson no famoso jogo da TV “Jeopardy” em 2011. Essa foi uma vitória memorável por vários motivos, mas o que importa agora é que temos todo este poder em nossas mãos, ou melhor, em uam API.&lt;/p&gt;
+
+&lt;p&gt;A IBM nos oferece o seu &lt;strong&gt;Watson Natural Language Understanding&lt;/strong&gt;,&lt;/p&gt;
 
 &lt;p&gt;O conjunto de API inclui ofertas de compreensão de linguagem de um classificador de linguagem natural para idéias conceituais e processamento de diálogo. Há muitos blocos de construção que você pode usar em seu aplicativo, mas você provavelmente gastará uma boa quantidade de tempo integrando-os em uma única solução.&lt;/p&gt;
 
@@ -260,11 +266,26 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 
 &lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://aws.amazon.com/pt/lex/&quot;&gt;aws.amazon.com/lex&lt;/a&gt;&lt;/p&gt;
 
+&lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
+
+&lt;h3 id=&quot;menção-honrosa&quot;&gt;Menção honrosa&lt;/h3&gt;
+&lt;p&gt;Vou deixar aqui registrado alguns serviços que não consegui testar ainda, mas que são utilizados pela comunidade e também devem ter sua consideração. São eles:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://recast.ai/&quot;&gt;Recast.ai&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://kueri.me/&quot;&gt;Kueri.me&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;div style=&quot;margin-bottom: 6em;&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; Até este momento não testei de forma massiva todos os serviços, logo, se houver algum erro por favor me informe. Todos os comentários são bem-vindos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; Até este momento não testei de forma massiva todos os serviços, logo, se houver algum erro por favor me informe. Todos os comentários são bem-vindos. Se houver mais algum serviço não mencionado, sinta-se convidade o colaborar ;)&lt;/p&gt;
 
 &lt;h1 id=&quot;conclusão&quot;&gt;Conclusão&lt;/h1&gt;
+&lt;p&gt;Espero que esta pequena jornada seja útil para te ajudar a encontrar um melhor caminho na construção de diálogos inteligentes e cada vez mais naturais. Entender um pouco da problemática é importante para este fim.&lt;/p&gt;
+
+&lt;p&gt;Outro ponto que abordei aqui foram as plataformas que temos hoje para iniciar de maneira rápida e barata no mundo das interfaces conversacionais. No geral as citadas tem todos os requisitos para que você consiga montar um diálogo de forma mais natural.&lt;/p&gt;
+
+&lt;p&gt;Este é apenas uma introdução ao tema. Espero em breve poder trazer mais conteúdo sobre este tema que tem tudo para evoluir a maneira como interagimos quanto sociedade.&lt;/p&gt;
 
 &lt;h1 id=&quot;referências&quot;&gt;Referências&lt;/h1&gt;
 

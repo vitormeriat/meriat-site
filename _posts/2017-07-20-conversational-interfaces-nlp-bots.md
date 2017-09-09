@@ -9,6 +9,7 @@ categories:
 image: "http://meriatblob.blob.core.windows.net/demos/new-bot.png"
 lang: pt
 color: "#202020"
+description: "Este é um breve tratado sobre o processamento de linguagem natural, interfaces conversacionais e diálogos com foco em bots."
 ---
 
 <p align="center" style="background-color: #202020; width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/new-bot.png" style="margin-bottom: 0px !important;"></p>
@@ -32,6 +33,8 @@ color: "#202020"
 	* Amazon Lex 	
 * Conclusão
 * Referências
+
+<div style="margin-bottom: 4em;"></div>
 
 **O objetivo** neste post é passar por uma leve introdução ao `NLP`, `Interfaces Conversacionais`, `bots` e suas significancias, e em conjunto analisar o seu funcionamento adaptando todos os conceitos de forma que seja possível ao fim do mesmo, melhorar suas habilidades em criação de diálogos, bem como o fazê-lo utilizando o serviço de sua preferência.
 
@@ -176,7 +179,7 @@ Até o momento deste post, o Api.ai tem uma oferta free com limitação de banda
 ### Luis.ai
 <p align="center" style="background-color: #219680; width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/luis.jpg" style="margin-bottom: 0px !important;"></p>
 
-O Microsoft Language Understanding Intelligent Service, ou como é mais citado LUIS, é a plataforma da Microsoft que compoem dentre outras o chamado `Bot Framework`.
+O **Microsoft Language Understanding Intelligent Service**, ou como é mais citado LUIS, é a plataforma da Microsoft que compoem dentre outras o chamado `Bot Framework`.
 
 No LUIS é possível de forma simples e intuitiva treinar seus modelos, criar e selecionar suas entidades, visualizar os gráficos de utilização e tudo que temos na web conseguimos fazer via API. Após nosso modelo devidamente treinado é só consumir tudo via API.
 
@@ -203,7 +206,11 @@ Até o momento deste post, o Wit.ai encontra-se free.
 ### IBM Watson
 <p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/watson.jpg" style="margin-bottom: 0px !important;"></p>
 
-Você provavelmente se lembra do famoso jogo da IBM Watson quando ganhou contra dois humanos no programa de teste de TV "Jeopardy" em 2011. Portanto, a boa notícia é que a IBM moveu a tecnologia por trás do Watson para a nuvem e lançou o conjunto de API que você pode use em seus próprios aplicativos de conversação.
+Talvez o **IBM Watson** seja o mais famoso da lista. Isto se dá pela IBM ser um dos primeiros players de mercado a investir tanto na tecnologia quanto no marketing de suas soluções, tanto no poder de processamento, quanto no quesito IA.
+
+Temos a participação do Watson no famoso jogo da TV "Jeopardy" em 2011. Essa foi uma vitória memorável por vários motivos, mas o que importa agora é que temos todo este poder em nossas mãos, ou melhor, em uam API.
+
+A IBM nos oferece o seu **Watson Natural Language Understanding**,
 
 O conjunto de API inclui ofertas de compreensão de linguagem de um classificador de linguagem natural para idéias conceituais e processamento de diálogo. Há muitos blocos de construção que você pode usar em seu aplicativo, mas você provavelmente gastará uma boa quantidade de tempo integrando-os em uma única solução.
 
@@ -244,14 +251,25 @@ Amazon revelou Amazon Lex - uma API de interface conversacional com recursos de 
 
 **SITE:** [aws.amazon.com/lex](https://aws.amazon.com/pt/lex/)
 
+<hr style="border: 1px dashed #f00; margin-top: 4em;" />
+
+### Menção honrosa
+Vou deixar aqui registrado alguns serviços que não consegui testar ainda, mas que são utilizados pela comunidade e também devem ter sua consideração. São eles:
+
+* [Recast.ai](https://recast.ai/)
+* [Kueri.me](http://kueri.me/)
 
 <div style="margin-bottom: 6em;"></div>
 
-**Disclaimer:** Até este momento não testei de forma massiva todos os serviços, logo, se houver algum erro por favor me informe. Todos os comentários são bem-vindos.
+**Disclaimer:** Até este momento não testei de forma massiva todos os serviços, logo, se houver algum erro por favor me informe. Todos os comentários são bem-vindos. Se houver mais algum serviço não mencionado, sinta-se convidade o colaborar ;)
 
 
 # Conclusão
+Espero que esta pequena jornada seja útil para te ajudar a encontrar um melhor caminho na construção de diálogos inteligentes e cada vez mais naturais. Entender um pouco da problemática é importante para este fim.
 
+Outro ponto que abordei aqui foram as plataformas que temos hoje para iniciar de maneira rápida e barata no mundo das interfaces conversacionais. No geral as citadas tem todos os requisitos para que você consiga montar um diálogo de forma mais natural.
+
+Este é apenas uma introdução ao tema. Espero em breve poder trazer mais conteúdo sobre este tema que tem tudo para evoluir a maneira como interagimos quanto sociedade.
 
 
 # Referências
