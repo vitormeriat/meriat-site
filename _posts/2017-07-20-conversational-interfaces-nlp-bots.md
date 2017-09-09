@@ -84,6 +84,8 @@ Vamos pensar na estrutura de um diálogo step-by-setp. Aproveitando a brincadeir
 
 > desenho de uma pessoa falando com o bot e perguntando onde comprar uma pizza em vila mariana.
 
+<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/c4.png" style="margin-bottom: 0px !important;"></p>
+
 Olhando para o exemplo acima, podemos imaginar uma variedade de significados e formas diferentes de realizar a mesma pergunta:
 
 * Lugares com pizza
@@ -102,6 +104,8 @@ Sendo assim se pergunto ao bot **"onde acho pizzarias em Vila Mariana"**, posso 
 
 > desenho de uma pessoa perguntando o texto acima e uma engine procurando em qual intenção classificar a sentença
 
+<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/c3.png" style="margin-bottom: 0px !important;"></p>
+
 Podemos perceber com base neste exemplo simples, que toda `comunicação` dos usuários tem uma intenção que leva a alguma ação. Logo concluimos que a `intenção` é o conceito central na construção de uma interface conversacional. Sendo assim a primeira coisa que podemos fazer com a mensagem enviada pelo usuário é entender sua intenção, ou seja, devemos mapear a sentença para uma ação específica.
 
 Junto com o intenção, é necessário identificar e extrair parâmetros, ou que na literatura clássica chamamos como `entidades`, que são a base para a tomada de ações na frase. Se olharmos para o nosso exemplo **"localizar pizzaria"**, as palavras **"próximo"**, **"na minha região"** correspondem à localização atual do usuário.
@@ -111,6 +115,8 @@ O reconhecimento de entidades nomeadas é uma técnica amplamente utilizada em P
 
 > desenho **"Vitor Meriat mora em Vila Mariana e trabalha na ESX."**
 
+<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/c2.png" style="margin-bottom: 0px !important;"></p>
+
 
 Ao efetuar a extração das entidades nomeadas, temos **[Vitor Meriat]**, **[Vila Mariana]** e **[ESX]**. Olhando para as entidades podemos atribuir para cada uma delas uma categoria apropriada, neste caso temos, **pessoa**, **localização** e **organização**.
 
@@ -119,6 +125,8 @@ Reconhecer e classificar categorias a entidades nomeadas presentes em um texto n
 > desenho **"A Mercedes esteve em crise nos últimos meses. A empresa afirma que..."**
 
 > desenho **"Hoje foi um ótimo dia para Mercedes."**
+
+<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/c1.png" style="margin-bottom: 0px !important;"></p>
 
 Para o primeiro exemplo, o contexto poderia auxiliar na desambiguação. Ou seja, havendo uma relação entre os sintagmas [a Mercedes] e [a empresa], podemos aferir a categoria "Organização" a entidade “Mercedes”, uma vez que o sintagma nominal [a empresa] identifica uma organização.
 
