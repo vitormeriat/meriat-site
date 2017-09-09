@@ -306,10 +306,10 @@ ul ul, ul ol, ol ul, ol ol {
   padding-left: 25px;
 }
 
-p, img {
+/*p, img {
   margin: 0 0 20px 0;
-  /*text-align: justify;*/
-}
+  text-align: justify;
+}*/
 
 ul, ol {
   padding-left: 15px;

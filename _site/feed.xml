@@ -3,11 +3,288 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 21 Jul 2017 01:17:03 -0300</pubDate>
-    <lastBuildDate>Fri, 21 Jul 2017 01:17:03 -0300</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 08 Sep 2017 23:07:07 -0300</pubDate>
+    <lastBuildDate>Fri, 08 Sep 2017 23:07:07 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Conversational Interfaces, NLP and bots</title>
+        <description>&lt;p align=&quot;center&quot; style=&quot;background-color: #202020; width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/new-bot.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;agenda&quot;&gt;Agenda&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Introdução&lt;/li&gt;
+  &lt;li&gt;A origem do problema&lt;/li&gt;
+  &lt;li&gt;A arte da compreensão semântica&lt;/li&gt;
+  &lt;li&gt;Geração de significado&lt;/li&gt;
+  &lt;li&gt;Analisando um Diálogo - Under the hood&lt;/li&gt;
+  &lt;li&gt;Evolução tecnológica&lt;/li&gt;
+  &lt;li&gt;Dos serviços de NLP
+    &lt;ul&gt;
+      &lt;li&gt;Api.ai&lt;/li&gt;
+      &lt;li&gt;Luis.ai&lt;/li&gt;
+      &lt;li&gt;Wit.ai&lt;/li&gt;
+      &lt;li&gt;IBM Watson&lt;/li&gt;
+      &lt;li&gt;Google Cloud Natural Language&lt;/li&gt;
+      &lt;li&gt;Amazon Alexa Skill&lt;/li&gt;
+      &lt;li&gt;Amazon Lex&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Conclusão&lt;/li&gt;
+  &lt;li&gt;Referências&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;O objetivo&lt;/strong&gt; neste post é passar por uma leve introdução ao &lt;code&gt;NLP&lt;/code&gt;, &lt;code&gt;Interfaces Conversacionais&lt;/code&gt;, &lt;code&gt;bots&lt;/code&gt; e suas significancias, e em conjunto analisar o seu funcionamento adaptando todos os conceitos de forma que seja possível ao fim do mesmo, melhorar suas habilidades em criação de diálogos, bem como o fazê-lo utilizando o serviço de sua preferência.&lt;/p&gt;
+
+&lt;h2 id=&quot;intodução&quot;&gt;Intodução&lt;/h2&gt;
+
+&lt;p&gt;Um dos assuntos do momento tem sido a construção de interfaces conversacionais, tanto para &lt;code&gt;bots&lt;/code&gt; quanto &lt;code&gt;assitentes de voz&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Uma interface conversacional é qualquer &lt;code&gt;UI&lt;/code&gt; que simula uma conversa real junto a um ser humano. A idéia aqui é que, em vez de se comunicar com um computador em seus próprios termos, seja usando sua tradução gráfica, seja inserindo comandos específicos de sintaxe, nós possamos utilizar a linguagem diária tal qual falamos com outros seres humanos.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
+&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+O objetivo das interfaces de conversacionais é chegar ao ponto em que permitirão aos os humanos que conversem com os computadores de uma maneira na qual a responsabilidade da interpretação e de descobrir o que deve ser feito seja do software, e não no usuário. Esse é o objetivo na evolução do NLP, e certamente tende a influenciar a maneira como interagimos com os computadores.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Apesar desta não ser uma disciplina moderna (se assim posso dizer), alguns problemas de ordem linguistica tem colocado as implementações atuais de &lt;strong&gt;bots&lt;/strong&gt; em um patamar ainda amador. Deixe-me explicar melhor isso…&lt;/p&gt;
+
+&lt;h2 id=&quot;a-origem-do-problema&quot;&gt;A origem do problema&lt;/h2&gt;
+
+&lt;p&gt;O primeiro e maior problema quando falamos na construção de &lt;strong&gt;interfaces de conversação&lt;/strong&gt;, é ter um diálogo que possa parecer o mais perto o possível da linguagem natural e fluida falada por duas pessoas.&lt;/p&gt;
+
+&lt;p&gt;Para conseguir construir uma boa interface conversacional, é necessário ir além das expressões regulares, é necessário entender a estrutura da linguagem falada a fim de conseguir abstrair o sentido dado o contexto.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-arte-da-compreensão-semântica&quot;&gt;A arte da compreensão semântica&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A comunicação humana está essencialmente ligada à capacidade de utilizar meios semióticos (como a linguagem) para transmitir as “intenções comunicativas” de um indivíduo e a capacidade de reconhecer tais intenções. &lt;em&gt;DASCAL, Marcelo. Interpretação e compreensão. 2006&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;O estudo da semântica alude à parte da linguagem referente ao significado das palavras e expressões que a mesma pode gerar. Neste contexto, cada palavra possui uma semântica própria, que difere da sua classificação enquanto função sintática ou morfológica.&lt;/p&gt;
+
+&lt;p&gt;Contudo, de maneira geral, a semântica não é tratada de forma isolada em cada palavra, mas sim generalizada a contextos mais amplos. Assim, em um diálogo, por exemplo, pode-se identificar um significado particular em cada frase e um significado mais geral pertinente ao assunto tratado pelas pessoas que promovem o diálogo. Da mesma forma, em um texto dissertativo, embora cada parágrafo possa expressar um sentido particular, é a união de todos os parágrafos que formarão o sentido do texto.&lt;/p&gt;
+
+&lt;p&gt;Como pode ser notado, a função básica de uma linguagem, ou seja, a comunicação, está centrada no significado das expressões lingüísticas produzidas. Isto torna o estudo da semântica essencial para implementações computacionais que envolvam compreensão e produção de linguagem. Uma barreira porém a este objetivo gira em torno da necessidade da utilização da intuição na compreensão do sentido de um texto, atos dificilmente aplicáveis a máquinas inspiradas na arquitetura de Von Neumman.&lt;/p&gt;
+
+&lt;p&gt;O fato é que quando um usuário comum utiliza um programa de tradução de textos e percebe que ao final de todo o processamento - que geralmente requer um tempo considerável se analisado sob parâmetros computacionais - o texto resultante da tradução apresenta inúmeras deficiências, como faltam de pronomes, erros nos gêneros das palavras, bem como outros detalhes que embora não comprometam - ao menos nos sistemas atuais - a compreensão do contexto do documento, exigem sua revisão, pode ocorrer que aquele se sinta enganado pelo sistema.&lt;/p&gt;
+
+&lt;p&gt;Ocorre que o processo de tratamento computacional da linguagem natural esbarra em enormes dificuldades, as quais são típicas da comunicação entre os seres humanos e que são tratadas pelo cérebro de uma forma tão normal e aparentemente simples que passam desapercebidas por exemplo a um usuário de computador que imagina que sua máquina possua as mesmas capacidades de seu cérebro no processamento de informações.&lt;/p&gt;
+
+&lt;h2 id=&quot;geração-de-significado&quot;&gt;Geração de significado&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Entender&lt;/strong&gt; um texto significa reconhecer o contexto, fazer análise sintática, semântica, léxica e morfológica, criar resumos, extrair informação, interpretar os sentidos, analisar sentimentos e até aprender conceitos com os textos processados.&lt;/p&gt;
+
+&lt;p&gt;No próximo tópico vamos analizar uma possível estrutura de diálogo com o objetivo de entender os conceitos por trás das ferramentas de processamento de linguagem natural, focando nos serviços comumente utilizados hoje.&lt;/p&gt;
+
+&lt;h2 id=&quot;analisando-um-diálogo---under-the-hood&quot;&gt;Analisando um Diálogo - Under the hood&lt;/h2&gt;
+
+&lt;p&gt;Vamos pensar na estrutura de um diálogo step-by-setp. Aproveitando a brincadeira da pizza, vamos tentar pedir uma pizza utilizando um bot imaginário.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;desenho de uma pessoa falando com o bot e perguntando onde comprar uma pizza em vila mariana.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Olhando para o exemplo acima, podemos imaginar uma variedade de significados e formas diferentes de realizar a mesma pergunta:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lugares com pizza&lt;/li&gt;
+  &lt;li&gt;Pizzarias nas proximidades&lt;/li&gt;
+  &lt;li&gt;Pizzas na região de Vila Mariana&lt;/li&gt;
+  &lt;li&gt;Quero comprar pizza aqui perto de casa&lt;/li&gt;
+  &lt;li&gt;Me lista as pizzarias no meu bairro, por favor&lt;/li&gt;
+  &lt;li&gt;Onde tem pizza para entrega perto da minha localidade?&lt;/li&gt;
+  &lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Se olharmos para o cerne da questão, todas as perguntas estão relacionadas ao que chamamos de &lt;code&gt;intenção&lt;/code&gt;, que neste caso é a busca por uma pizzaria em Vila Mariana. Para fins de classificação vamos atribuir uma &lt;code&gt;label&lt;/code&gt; a nossa intenção. Para este caso vamos chamar de &lt;strong&gt;localizar-pizzaria&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ao definir uma determinada intenção, geramos um conjunto de sentenças, ou &lt;code&gt;enunciados&lt;/code&gt; que no geral denotam um sentido comum.&lt;/p&gt;
+
+&lt;p&gt;Sendo assim se pergunto ao bot &lt;strong&gt;“onde acho pizzarias em Vila Mariana”&lt;/strong&gt;, posso &lt;code&gt;classificar&lt;/code&gt; essa nova sentença como sendo pertencente a intenção &lt;strong&gt;localizar-pizzaria&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;desenho de uma pessoa perguntando o texto acima e uma engine procurando em qual intenção classificar a sentença&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Podemos perceber com base neste exemplo simples, que toda &lt;code&gt;comunicação&lt;/code&gt; dos usuários tem uma intenção que leva a alguma ação. Logo concluimos que a &lt;code&gt;intenção&lt;/code&gt; é o conceito central na construção de uma interface conversacional. Sendo assim a primeira coisa que podemos fazer com a mensagem enviada pelo usuário é entender sua intenção, ou seja, devemos mapear a sentença para uma ação específica.&lt;/p&gt;
+
+&lt;p&gt;Junto com o intenção, é necessário identificar e extrair parâmetros, ou que na literatura clássica chamamos como &lt;code&gt;entidades&lt;/code&gt;, que são a base para a tomada de ações na frase. Se olharmos para o nosso exemplo &lt;strong&gt;“localizar pizzaria”&lt;/strong&gt;, as palavras &lt;strong&gt;“próximo”&lt;/strong&gt;, &lt;strong&gt;“na minha região”&lt;/strong&gt; correspondem à localização atual do usuário.&lt;/p&gt;
+
+&lt;p&gt;O reconhecimento de entidades nomeadas é uma técnica amplamente utilizada em Processamento da Linguagem Natural e consiste na identificação de nomes de entidades-chave, presentes na forma livre de dados textuais. Nesse sentido, a entrada para um sistema de extração de entidades nomeadas e um texto em sua forma livre, e sua saída é um conjunto de textos anotados, ou seja, uma representação estruturada a partir da entrada de um texto não estruturado. Vamos ao exemplo:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;desenho &lt;strong&gt;“Vitor Meriat mora em Vila Mariana e trabalha na ESX.”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ao efetuar a extração das entidades nomeadas, temos &lt;strong&gt;[Vitor Meriat]&lt;/strong&gt;, &lt;strong&gt;[Vila Mariana]&lt;/strong&gt; e &lt;strong&gt;[ESX]&lt;/strong&gt;. Olhando para as entidades podemos atribuir para cada uma delas uma categoria apropriada, neste caso temos, &lt;strong&gt;pessoa&lt;/strong&gt;, &lt;strong&gt;localização&lt;/strong&gt; e &lt;strong&gt;organização&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Reconhecer e classificar categorias a entidades nomeadas presentes em um texto não é uma tarefa fácil. Isso fica evidente quando o assunto são nomes próprios e organizações. Este caso pode remeter a mais de uma categoria, ou simplesmente não possuir um contexto mais determinístico, em nível suficiente para auxiliar a tarefa de desambiguação. Vamos ao exemplo:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;desenho &lt;strong&gt;“A Mercedes esteve em crise nos últimos meses. A empresa afirma que…“&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;desenho &lt;strong&gt;“Hoje foi um ótimo dia para Mercedes.”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Para o primeiro exemplo, o contexto poderia auxiliar na desambiguação. Ou seja, havendo uma relação entre os sintagmas [a Mercedes] e [a empresa], podemos aferir a categoria “Organização” a entidade “Mercedes”, uma vez que o sintagma nominal [a empresa] identifica uma organização.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
+&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarquizada de elementos linguísticos, que compõem uma unidade na sentença.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Isso ajuda a ilustrar o processo, bem como as dificuldades&lt;/p&gt;
+
+&lt;p&gt;Até agora já vimos a representação das intenções e entidades. Um outro fator complicador é a questão do &lt;code&gt;contexto&lt;/code&gt; conversacional.&lt;/p&gt;
+
+&lt;p&gt;Um exemplo disto é quando eu pergunto &lt;strong&gt;“onde compro pizza na minha região?”&lt;/strong&gt;. O contexto compreende o período do início da conversação, as interações (perguntas e respostas) até chegar na conclusão, que é &lt;strong&gt;localizar uma pizzaria&lt;/strong&gt; na sua atual localidade.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;desenho da conversação completa até o resultado final. Usuário com cara de feliz.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Notem que no processo temos um estado intermediário, que é em muitas vezes essencial para a tomada de decisão final. É ai que entra o contexto conversacional. Para armazenar o estado intermediário usamos o contexto.&lt;/p&gt;
+
+&lt;p&gt;Podemos pensar no contexto como uma memória de curto prazo. Por exemplo, durante o bate-papo a procura de uma pizzaria, podemos armazenar a intenção &lt;strong&gt;“comprar pizza”&lt;/strong&gt; e posteriormente adicionar outros parâmetros como localidade e hora (que podem já ter sido informados), e assim tomar uma decisão que pode dar início a uma &lt;code&gt;ramificação&lt;/code&gt; do diálogo original.&lt;/p&gt;
+
+&lt;p&gt;No geral podemos ter mais de um contexto conversacional dentro do mesmo diálogo. Contudo isso faz sentido se em algum momento eles convergirem para o resultado que o final seja uma resposta mais completa e assim leve o usuário a ideia de uma conversação fluída.&lt;/p&gt;
+
+&lt;p&gt;Sendo assim, após identificar que o usuário quer comprar uma pizza, eu posso iniciar um novo contexto com o objetivo de obter as informações necessárias para um pedido.&lt;/p&gt;
+
+&lt;p&gt;Lógico que isso é uma visão genérica levando em consideração disciplinas de linguagem natural, linguagem formal e que já foi traduzido como serviços focando nas habilidades necessárias para a montagem de diálogos para interfaces conversacionais.&lt;/p&gt;
+
+&lt;h2 id=&quot;evolução-tecnológica&quot;&gt;Evolução tecnológica&lt;/h2&gt;
+
+&lt;p&gt;Já é algo bem consolidado mais vale notar que &lt;code&gt;AI&lt;/code&gt; é um campo amplamente explorado nas últimas 5 décadas. Alguns fatores influenciaram o &lt;strong&gt;boom&lt;/strong&gt; que vivemos hoje, porém o mais importante para o nosso assunto é que recentemente tanto a maturidade quanto a disponibilidade de AI como serviço fornecida por grandes players de mercado como Microsoft, Google, IBM e Amazon, tem levado ao grande público as ferramentas necessárias para a criação de interfaces conversacionais robustas.&lt;/p&gt;
+
+&lt;p&gt;Ferramentas de processamento de linguagem natural (NLP), com capacidade de entender as intenções e  expressas em uma frase e extrair suas entidades estão se tornando amplamente disponíveis e a custo acessível.&lt;/p&gt;
+
+&lt;p&gt;Outro fator é a quantidade de ferramentas.&lt;/p&gt;
+
+&lt;p&gt;Além disso, os frameworks focados na criação de ChatBots já pensando em toda a estrutura para integração com diversos &lt;code&gt;canais&lt;/code&gt; de comunicação vem crescendo e se tornando mais completos.&lt;/p&gt;
+
+&lt;p&gt;A conclusão é que a tecnologia necessária para construir bots inteligentes já está disponível para desenvolvedores e corporações de forma satisfatória.&lt;/p&gt;
+
+&lt;h2 id=&quot;dos-serviços-de-nlp&quot;&gt;Dos serviços de NLP&lt;/h2&gt;
+
+&lt;p&gt;Na data em que escrevo este texto, seja por pesquisa ou por experiência, resolvi classificar as ferramentas citadas abaixo como os principais serviços para ser consumir &lt;strong&gt;NLP&lt;/strong&gt; de forma simples e confiável focados em interfaces conversacionais. Todas as ferramentas listadas neste texto seguem os princípios listados no tópico sobre analise de diálogos.&lt;/p&gt;
+
+&lt;hr style=&quot;border: 1px dashed #f00; margin-top: 5em;&quot; /&gt;
+
+&lt;h3 id=&quot;apiai&quot;&gt;Api.ai&lt;/h3&gt;
+&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/api.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O &lt;strong&gt;Api.ai&lt;/strong&gt; é um serviço diferenciado. Recentemente adquirido pela Google, ele surgiu como um serviço de NLP para suportar um assistente pessoal em app e evoluiu rapidamente dado seu uso e adoção. O Api.ai fornece todos os recursos que já vimos inclusive uma habilidade ainda não citada, &lt;code&gt;speech to text&lt;/code&gt; e &lt;code&gt;text to speech&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Até o momento deste post, o Api.ai tem uma oferta free com limitação de banda e no reconhecimento de voz.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://www.api.ai&quot;&gt;api.ai&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
+
+&lt;h3 id=&quot;luisai&quot;&gt;Luis.ai&lt;/h3&gt;
+&lt;p align=&quot;center&quot; style=&quot;background-color: #219680; width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/luis.jpg&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O Microsoft Language Understanding Intelligent Service, ou como é mais citado LUIS, é a plataforma da Microsoft que compoem dentre outras o chamado &lt;code&gt;Bot Framework&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;No LUIS é possível de forma simples e intuitiva treinar seus modelos, criar e selecionar suas entidades, visualizar os gráficos de utilização e tudo que temos na web conseguimos fazer via API. Após nosso modelo devidamente treinado é só consumir tudo via API.&lt;/p&gt;
+
+&lt;p&gt;Até o momento deste post, o LUIS encontra-se free para testes e em modo preview.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://www.luis.ai&quot;&gt;wuis.ai&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
+
+&lt;h3 id=&quot;witai&quot;&gt;Wit.ai&lt;/h3&gt;
+&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/wit.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O &lt;strong&gt;Wit.ai&lt;/strong&gt; assim como seu concorrente Api.ai veio como foco de auxiliar os desenvolvedores nas capacidades de linguagem natural. Seu bom trabalho e plataforma brilharam os olhos do &lt;strong&gt;Facebook&lt;/strong&gt; que em 2015 fez a aquisição da mesma. Durante o próximo ano o Facebook realizou algumas alterações levando a ferramenta a compor seu &lt;code&gt;Bot Engine&lt;/code&gt;, o que mudou a orientação principal do Wit.ai de uma ferramenta guiada por intenções, para uma ferramenta guiada por &lt;code&gt;história&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Construir uma interface de conversação guiada pela “história” pode ser mais natural e mais fácil do que se basear em intenção, já que vamos trabalhado o todo. No geral o mecanismo não se altera já que continuamos defindo nossas intenções, entidades e etc.&lt;/p&gt;
+
+&lt;p&gt;Até o momento deste post, o Wit.ai encontra-se free.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://wit.ai&quot;&gt;wit.ai&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
+
+&lt;h3 id=&quot;ibm-watson&quot;&gt;IBM Watson&lt;/h3&gt;
+&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/watson.jpg&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Você provavelmente se lembra do famoso jogo da IBM Watson quando ganhou contra dois humanos no programa de teste de TV “Jeopardy” em 2011. Portanto, a boa notícia é que a IBM moveu a tecnologia por trás do Watson para a nuvem e lançou o conjunto de API que você pode use em seus próprios aplicativos de conversação.&lt;/p&gt;
+
+&lt;p&gt;O conjunto de API inclui ofertas de compreensão de linguagem de um classificador de linguagem natural para idéias conceituais e processamento de diálogo. Há muitos blocos de construção que você pode usar em seu aplicativo, mas você provavelmente gastará uma boa quantidade de tempo integrando-os em uma única solução.&lt;/p&gt;
+
+&lt;p&gt;Utilizamos o IBM Alchemy Language para análise de sentimentos e extração de palavras-chave para nossos experimentos e funcionou bem. Nós pensamos que a solução da IBM é a escolha ideal para as empresas que desejam estar 100% seguras de seu provedor de API.&lt;/p&gt;
+
+&lt;p&gt;Para uma demonstração recente do IBM Watson, você pode assistir a um bate-papo com o Dr. John Kelly , que lidera a equipe da Watson na IBM, no TechCrunch Disrupt 2015 em San Francisco.&lt;/p&gt;
+
+&lt;p&gt;O IBM Watson é, no entanto, uma solução dispendiosa e você pode esperar pagar até US $ 0,02 por API no Dialogue API, por isso pode ser muito caro experimentar com a construção de bots para o Facebook Messenger quando você ainda não tem um negócio de trabalho modelo.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://wit.ai&quot;&gt;wit.ai&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
+
+&lt;h3 id=&quot;google-cloud-natural-language&quot;&gt;Google Cloud Natural Language&lt;/h3&gt;
+&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/google-cloud.jpg&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://cloud.google.com/natural-language/&quot;&gt;cloud.google.com/natural-language&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
+
+&lt;h3 id=&quot;amazon-alexa-skill&quot;&gt;Amazon Alexa Skill&lt;/h3&gt;
+&lt;p align=&quot;center&quot; style=&quot;background-color: #009ad4; width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/alexa.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Primeiro ponto a ser notado é que este serviço só é utilizado para o device Alexa. Fora isso o mecanismo é o mesmo, definimos intenções, entidades e ações. O grande ponto do Alexa Skill é o seu foco na linguagem falada.&lt;/p&gt;
+
+&lt;p&gt;O treino é mais complexo já que você necessita informar um conjunto maior de “dados” para que as expressões possam ser reconhecidas e classificadas em uma determinada intenção.&lt;/p&gt;
+
+&lt;p&gt;Outro ponto interessante é a integração do Alexa Skills Kit e o Amazon Lambda, que traz uma grande facilidade no desenvolvimento.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit&quot;&gt;developer.amazon.com/alexa-skills-kit&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
+
+&lt;h3 id=&quot;amazon-lex&quot;&gt;Amazon Lex&lt;/h3&gt;
+&lt;p align=&quot;center&quot; style=&quot;background-color: #FFFFFF; width: 100%;&quot;&gt;&lt;img src=&quot;https://d0.awsstatic.com/Digital%20Marketing/House/Editorial/products/ai/AI-380x186.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Amazon revelou Amazon Lex - uma API de interface conversacional com recursos de PNL e integração apertada aos serviços da Amazon, como Lambda, Dynamo DB, SNS / SES e outros. Vamos olhar para Amazônia Lex internos, uma vez que se torna disponível.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://aws.amazon.com/pt/lex/&quot;&gt;aws.amazon.com/lex&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 6em;&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; Até este momento não testei de forma massiva todos os serviços, logo, se houver algum erro por favor me informe. Todos os comentários são bem-vindos.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusão&quot;&gt;Conclusão&lt;/h1&gt;
+
+&lt;h1 id=&quot;referências&quot;&gt;Referências&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DASCAL, Marcelo. Interpretação e compreensão. Tradução de Márcia Heloisa Lima da Rocha. São Leopoldo: Editora Unisinos, 2006, p.729.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stanfy.com/blog/advanced-natural-language-processing-tools-for-bot-makers/&quot;&gt;Advanced NLP tools for bot makers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 06 Aug 2017 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</guid>
+        
+        
+        <category>AI</category>
+        
+        <category>NLP</category>
+        
+        <category>Bot</category>
+        
+      </item>
     
       <item>
         <title>Custom Vision, Cognitive Services and Computer Vision</title>
@@ -362,8 +639,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 </description>
         <pubDate>Wed, 07 Jun 2017 00:00:00 -0300</pubDate>
-        <link>/2017/06/07/custom-vision-ms/</link>
-        <guid isPermaLink="true">/2017/06/07/custom-vision-ms/</guid>
+        <link>http://localhost:4000/2017/06/07/custom-vision-ms/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/07/custom-vision-ms/</guid>
         
         
         <category>AI</category>
@@ -497,8 +774,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
-        <link>/2017/05/17/microsoft-and-ai-for-the-future/</link>
-        <guid isPermaLink="true">/2017/05/17/microsoft-and-ai-for-the-future/</guid>
+        <link>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</guid>
         
         
         <category>IA</category>
@@ -554,8 +831,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 22 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/22/gab-azure-ml-cognitive/</link>
-        <guid isPermaLink="true">/2017/04/22/gab-azure-ml-cognitive/</guid>
+        <link>http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</guid>
         
         
         <category>IA</category>
@@ -744,8 +1021,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/20/variables-in-statistic/</link>
-        <guid isPermaLink="true">/2017/04/20/variables-in-statistic/</guid>
+        <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/20/variables-in-statistic/</guid>
         
         
         <category>Statistics</category>
@@ -1016,8 +1293,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/14/hello-world-r/</link>
-        <guid isPermaLink="true">/2017/04/14/hello-world-r/</guid>
+        <link>http://localhost:4000/2017/04/14/hello-world-r/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/14/hello-world-r/</guid>
         
         
         <category>R</category>
@@ -1078,8 +1355,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Sat, 01 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
-        <guid isPermaLink="true">/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
+        <link>http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
         
         
         <category>IA</category>
@@ -1608,8 +1885,8 @@ FamilySize            int64
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
-        <link>/2017/03/18/titanic-machine-learning-from-disaster/</link>
-        <guid isPermaLink="true">/2017/03/18/titanic-machine-learning-from-disaster/</guid>
+        <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
         
         <category>IA</category>
@@ -1707,8 +1984,8 @@ FamilySize            int64
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
@@ -1820,8 +2097,8 @@ FamilySize            int64
 &lt;h3 id=&quot;é-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">/2017/02/07/literatura-classica-machine-learning/</guid>
+        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -1831,90 +2108,6 @@ FamilySize            int64
         <category>Data Science</category>
         
         <category>Deep Learning</category>
-        
-      </item>
-    
-      <item>
-        <title>Workshop de Machine Learning na CPBR10</title>
-        <description>&lt;div style=&quot;width: 100%; -ms-align-items: center; -webkit-align-items: center; align-items: center;&quot;&gt;
-    &lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/02/05/campus-ia.jpg&quot; class=&quot;absolute-bg&quot; /&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Este ano tive a honra de mais uma vez palestrar na Campus Party. Como de costume minha participação foi em conjunto com a comunidade CrazyTechGuys.&lt;/p&gt;
-
-&lt;p&gt;Nesta oportunidade dividi as ações com o mestre Jorge Maia, no workshop de &lt;a href=&quot;http://campuse.ro/events/campus-party-brasil-2017/workshop/sensores-internet-das-coisas-e-inteligencia-artificial-de-perto-e-sem-mitos/&quot;&gt;IoT e Machine Learning&lt;/a&gt;. Nesta atividade trabalhamos além dos conceitos básicos de IoT e Machine Learning, novidade de mercado, protocolos, linguagens e plataformas.&lt;/p&gt;
-
-&lt;p&gt;Na minha deixa pude demonstrar como iniciar um projeto de Machine Learning do zero utilizando como ferramentas o Jupyter Notebook, Python e o famoso dataset Pima Indians Diabetes Database que é normalmente utilizando para tarefas de classificação e, é largamente utilizado para prever o início de diabetes com base em diagnósticos já realizados.&lt;/p&gt;
-
-&lt;p&gt;É possível encontrar diversos exemplos de utilização do dataset, bem como uma ampla gama de exemplos de diferentes explorações e tratamentos dos dados.&lt;/p&gt;
-
-&lt;p&gt;Neste workshop demonstrei como utilizar o Jupyter Notebook bem como os principais módulos para se trabalhar com Data Science e Python. Vimos os principais conceitos envolvidos nesta atividade e como aplicar em exercício prático.&lt;/p&gt;
-
-&lt;h1 id=&quot;resumindo&quot;&gt;Resumindo&lt;/h1&gt;
-
-&lt;p&gt;Quando falamos de ML, temos duas pricipais tecnicas para trabalhar:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Aprendizagem supervisionada&lt;/li&gt;
-  &lt;li&gt;Aprendizagem Nao supervisionada&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Quando falamos de aprendizagem supervisionada e não supervisionada, tendemos a pensar que a diferença está na predição com ou sem a supervisão humana, mas na realidade tudo está ligado aos dados.&lt;/p&gt;
-
-&lt;p&gt;Quando se trata de Aprendizagem supervisionada, cada linha possui diversos atributos, que serão os inputs e os possíveis outputs, ou seja, o valor que esperamos para o conjunto de atributos da linha.&lt;/p&gt;
-
-&lt;p&gt;Se usamos como exemplo determinar o valor de casas em uma determinada região, podemos pegar como atributos o tamanho, quantidade de quartos, área da casa, localidade e claro, o preço.&lt;/p&gt;
-
-&lt;p&gt;Logo após passamos esses dados em um algorítimo de ML, com todos os dados de entrada e os possíveis dados de saída, que neste caso será o valor da casa. O algorítimo determina a relação entre os atributos da casa e seu valor final.&lt;/p&gt;
-
-&lt;p&gt;Depois o resultante do algorítimo será um Modelo, que nada mais é que uma função matemática. Este Modelo será o cara que vai receber os novos dados e ser capaz de prever o preço final.&lt;/p&gt;
-
-&lt;p&gt;O modelo é capaz de prever o preço, pq ele aplica a função matemática que ele aprendeu durante o processo no novo conjunto de dados. A medida que temos novos dados, podemos melhorar nosso modelo e realizar o tão famoso aprendizado de máquina…&lt;/p&gt;
-
-&lt;p&gt;No processo de aprendizagem não supervisionada, o algorítimo busca em seu conjunto de dados, clusters, ou agrupamentos de dados com características semelhantes.&lt;/p&gt;
-
-&lt;p&gt;Sendo assim, o algorítimo identifica a partir dos dados de entrada grupos de dados que compartilhem as mesmas características. Neste caso, não precisamos apresentar os possíveis dados de saída.&lt;/p&gt;
-
-&lt;p&gt;Imagine um conjunto de gravações com pessoas falando. Podemos gerar um dataset com os atributos das vozes das pessoas como entonação, inflexção, altura e etc. Passamos estes dados em um algorítimo de aprendizagem não supervisionado.&lt;/p&gt;
-
-&lt;p&gt;O algorítimo analisa os dados e cria um modelo que classifica clusters de dados que compartilham os mesmos padrões de voz. Com isso o algorítimo será capaz de isolar uma única voz a partir dos dados aprendidos.&lt;/p&gt;
-
-&lt;p&gt;Podemos rezumir de forma simples da segunte maneira:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Aprendizagem supervisionada&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Previsão de valores&lt;/li&gt;
-  &lt;li&gt;Nossos dados de treino devem ter valores de entrada e saída, para que o mesmo possa aprender a partir dos novos dados de entrada, a gerar uma saída correta.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Aprendizagem não supervisionada&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Idendificação de grupos de dados&lt;/li&gt;
-  &lt;li&gt;Nossos dados precisam apenas possuir entradas&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;source&quot;&gt;Source&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/vitormeriat/workshop-cpbr10&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;dataset&quot;&gt;Dataset&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabetes&quot;&gt;UCI&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/uciml/pima-indians-diabetes-database&quot;&gt;Kaggle&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 05 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/05/cpbr10-workshop-machine-learning/</link>
-        <guid isPermaLink="true">/2017/02/05/cpbr10-workshop-machine-learning/</guid>
-        
-        
-        <category>IA</category>
-        
-        <category>Machine Learning</category>
-        
-        <category>Jupyter Notebook</category>
-        
-        <category>Python</category>
         
       </item>
     
