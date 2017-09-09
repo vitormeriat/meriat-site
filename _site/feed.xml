@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Sep 2017 23:49:52 -0300</pubDate>
-    <lastBuildDate>Fri, 08 Sep 2017 23:49:52 -0300</lastBuildDate>
+    <pubDate>Sat, 09 Sep 2017 01:29:38 -0300</pubDate>
+    <lastBuildDate>Sat, 09 Sep 2017 01:29:38 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -225,22 +225,18 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 
 &lt;p&gt;Temos a participação do Watson no famoso jogo da TV “Jeopardy” em 2011. Essa foi uma vitória memorável por vários motivos, mas o que importa agora é que temos todo este poder em nossas mãos, ou melhor, em uam API.&lt;/p&gt;
 
-&lt;p&gt;A IBM nos oferece o seu &lt;strong&gt;Watson Natural Language Understanding&lt;/strong&gt;,&lt;/p&gt;
+&lt;p&gt;Seguindo nossa listagem temos &lt;strong&gt;Watson Conversation&lt;/strong&gt;, que é a ferramenta direcionada para a construção de bots. Ele trabalha em um esquema direcional, onde você constroi um diálogo estruturado baseado em perguntas e respostas.&lt;/p&gt;
 
-&lt;p&gt;O conjunto de API inclui ofertas de compreensão de linguagem de um classificador de linguagem natural para idéias conceituais e processamento de diálogo. Há muitos blocos de construção que você pode usar em seu aplicativo, mas você provavelmente gastará uma boa quantidade de tempo integrando-os em uma única solução.&lt;/p&gt;
+&lt;p&gt;A IBM também nos oferece o seu &lt;strong&gt;Watson Natural Language Understanding&lt;/strong&gt;, que permite ao usuário extrair metadados chave de seus textos, incluindo entidades, relações, conceitos, sentimentos e emoções.&lt;/p&gt;
 
-&lt;p&gt;Utilizamos o IBM Alchemy Language para análise de sentimentos e extração de palavras-chave para nossos experimentos e funcionou bem. Nós pensamos que a solução da IBM é a escolha ideal para as empresas que desejam estar 100% seguras de seu provedor de API.&lt;/p&gt;
-
-&lt;p&gt;Para uma demonstração recente do IBM Watson, você pode assistir a um bate-papo com o Dr. John Kelly , que lidera a equipe da Watson na IBM, no TechCrunch Disrupt 2015 em San Francisco.&lt;/p&gt;
-
-&lt;p&gt;O IBM Watson é, no entanto, uma solução dispendiosa e você pode esperar pagar até US $ 0,02 por API no Dialogue API, por isso pode ser muito caro experimentar com a construção de bots para o Facebook Messenger quando você ainda não tem um negócio de trabalho modelo.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://wit.ai&quot;&gt;wit.ai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://www.ibm.com/watson/services/conversation/&quot;&gt;watson conversation&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
 
 &lt;h3 id=&quot;google-cloud-natural-language&quot;&gt;Google Cloud Natural Language&lt;/h3&gt;
 &lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/google-cloud.jpg&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O &lt;strong&gt;Google Cloud Natural Language&lt;/strong&gt; oferece aos desenvolvedores acesso à análise de sentimentos, ao reconhecimento de entidades e análises de sintaxe.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://cloud.google.com/natural-language/&quot;&gt;cloud.google.com/natural-language&lt;/a&gt;&lt;/p&gt;
 
@@ -262,7 +258,7 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;h3 id=&quot;amazon-lex&quot;&gt;Amazon Lex&lt;/h3&gt;
 &lt;p align=&quot;center&quot; style=&quot;background-color: #FFFFFF; width: 100%;&quot;&gt;&lt;img src=&quot;https://d0.awsstatic.com/Digital%20Marketing/House/Editorial/products/ai/AI-380x186.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Amazon revelou Amazon Lex - uma API de interface conversacional com recursos de PNL e integração apertada aos serviços da Amazon, como Lambda, Dynamo DB, SNS / SES e outros. Vamos olhar para Amazônia Lex internos, uma vez que se torna disponível.&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;Amazon Lex&lt;/strong&gt; é a solução da Amazon para a construção de interfaces conversacionais se utilizando dos recursos de NLP e integração com outros serviços da Amazon, como Lambda, Dynamo DB entre outros.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;SITE:&lt;/strong&gt; &lt;a href=&quot;https://aws.amazon.com/pt/lex/&quot;&gt;aws.amazon.com/lex&lt;/a&gt;&lt;/p&gt;
 
@@ -274,6 +270,7 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://recast.ai/&quot;&gt;Recast.ai&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://kueri.me/&quot;&gt;Kueri.me&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.opencalais.com/&quot;&gt;Thomson Reuters Open Calais&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div style=&quot;margin-bottom: 6em;&quot;&gt;&lt;/div&gt;
@@ -283,7 +280,9 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;h1 id=&quot;conclusão&quot;&gt;Conclusão&lt;/h1&gt;
 &lt;p&gt;Espero que esta pequena jornada seja útil para te ajudar a encontrar um melhor caminho na construção de diálogos inteligentes e cada vez mais naturais. Entender um pouco da problemática é importante para este fim.&lt;/p&gt;
 
-&lt;p&gt;Outro ponto que abordei aqui foram as plataformas que temos hoje para iniciar de maneira rápida e barata no mundo das interfaces conversacionais. No geral as citadas tem todos os requisitos para que você consiga montar um diálogo de forma mais natural.&lt;/p&gt;
+&lt;p&gt;Outro ponto que abordei aqui foram as plataformas que temos hoje para iniciar de maneira rápida e barata no mundo das interfaces conversacionais. No geral mesmo as APIs citadas sendo projetadas para trabalhar em resposta a uma única intenção ou ação, elas possuem todos os requisitos para que você consiga montar um bom diálogo.&lt;/p&gt;
+
+&lt;p&gt;Ainda falta uma melhora no quesito do conhecimento especializado, já que o único ponto de aprendizado é por meio das sentenças que informamos as APIs, sem um aprendizado coletivo das intenções.&lt;/p&gt;
 
 &lt;p&gt;Este é apenas uma introdução ao tema. Espero em breve poder trazer mais conteúdo sobre este tema que tem tudo para evoluir a maneira como interagimos quanto sociedade.&lt;/p&gt;
 

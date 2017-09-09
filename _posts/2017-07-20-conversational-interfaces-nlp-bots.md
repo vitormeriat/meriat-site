@@ -210,22 +210,19 @@ Talvez o **IBM Watson** seja o mais famoso da lista. Isto se dá pela IBM ser um
 
 Temos a participação do Watson no famoso jogo da TV "Jeopardy" em 2011. Essa foi uma vitória memorável por vários motivos, mas o que importa agora é que temos todo este poder em nossas mãos, ou melhor, em uam API.
 
-A IBM nos oferece o seu **Watson Natural Language Understanding**,
+Seguindo nossa listagem temos **Watson Conversation**, que é a ferramenta direcionada para a construção de bots. Ele trabalha em um esquema direcional, onde você constroi um diálogo estruturado baseado em perguntas e respostas. 
 
-O conjunto de API inclui ofertas de compreensão de linguagem de um classificador de linguagem natural para idéias conceituais e processamento de diálogo. Há muitos blocos de construção que você pode usar em seu aplicativo, mas você provavelmente gastará uma boa quantidade de tempo integrando-os em uma única solução.
+A IBM também nos oferece o seu **Watson Natural Language Understanding**, que permite ao usuário extrair metadados chave de seus textos, incluindo entidades, relações, conceitos, sentimentos e emoções.
 
-Utilizamos o IBM Alchemy Language para análise de sentimentos e extração de palavras-chave para nossos experimentos e funcionou bem. Nós pensamos que a solução da IBM é a escolha ideal para as empresas que desejam estar 100% seguras de seu provedor de API.
+**SITE:** [watson conversation](https://www.ibm.com/watson/services/conversation/)
 
-Para uma demonstração recente do IBM Watson, você pode assistir a um bate-papo com o Dr. John Kelly , que lidera a equipe da Watson na IBM, no TechCrunch Disrupt 2015 em San Francisco.
-
-O IBM Watson é, no entanto, uma solução dispendiosa e você pode esperar pagar até US $ 0,02 por API no Dialogue API, por isso pode ser muito caro experimentar com a construção de bots para o Facebook Messenger quando você ainda não tem um negócio de trabalho modelo.
-
-**SITE:** [wit.ai](https://wit.ai)
 
 <hr style="border: 1px dashed #f00; margin-top: 4em;" />
 
 ### Google Cloud Natural Language
 <p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/google-cloud.jpg" style="margin-bottom: 0px !important;"></p>
+
+O **Google Cloud Natural Language** oferece aos desenvolvedores acesso à análise de sentimentos, ao reconhecimento de entidades e análises de sintaxe.
 
 **SITE:** [cloud.google.com/natural-language](https://cloud.google.com/natural-language/)
 
@@ -247,7 +244,7 @@ Outro ponto interessante é a integração do Alexa Skills Kit e o Amazon Lambda
 ### Amazon Lex
 <p align="center" style="background-color: #FFFFFF; width: 100%;"><img src="https://d0.awsstatic.com/Digital%20Marketing/House/Editorial/products/ai/AI-380x186.png" style="margin-bottom: 0px !important;"></p>
 
-Amazon revelou Amazon Lex - uma API de interface conversacional com recursos de PNL e integração apertada aos serviços da Amazon, como Lambda, Dynamo DB, SNS / SES e outros. Vamos olhar para Amazônia Lex internos, uma vez que se torna disponível.
+O **Amazon Lex** é a solução da Amazon para a construção de interfaces conversacionais se utilizando dos recursos de NLP e integração com outros serviços da Amazon, como Lambda, Dynamo DB entre outros. 
 
 **SITE:** [aws.amazon.com/lex](https://aws.amazon.com/pt/lex/)
 
@@ -258,6 +255,7 @@ Vou deixar aqui registrado alguns serviços que não consegui testar ainda, mas 
 
 * [Recast.ai](https://recast.ai/)
 * [Kueri.me](http://kueri.me/)
+* [Thomson Reuters Open Calais](http://www.opencalais.com/)
 
 <div style="margin-bottom: 6em;"></div>
 
@@ -267,7 +265,9 @@ Vou deixar aqui registrado alguns serviços que não consegui testar ainda, mas 
 # Conclusão
 Espero que esta pequena jornada seja útil para te ajudar a encontrar um melhor caminho na construção de diálogos inteligentes e cada vez mais naturais. Entender um pouco da problemática é importante para este fim.
 
-Outro ponto que abordei aqui foram as plataformas que temos hoje para iniciar de maneira rápida e barata no mundo das interfaces conversacionais. No geral as citadas tem todos os requisitos para que você consiga montar um diálogo de forma mais natural.
+Outro ponto que abordei aqui foram as plataformas que temos hoje para iniciar de maneira rápida e barata no mundo das interfaces conversacionais. No geral mesmo as APIs citadas sendo projetadas para trabalhar em resposta a uma única intenção ou ação, elas possuem todos os requisitos para que você consiga montar um bom diálogo.
+
+Ainda falta uma melhora no quesito do conhecimento especializado, já que o único ponto de aprendizado é por meio das sentenças que informamos as APIs, sem um aprendizado coletivo das intenções.
 
 Este é apenas uma introdução ao tema. Espero em breve poder trazer mais conteúdo sobre este tema que tem tudo para evoluir a maneira como interagimos quanto sociedade.
 
