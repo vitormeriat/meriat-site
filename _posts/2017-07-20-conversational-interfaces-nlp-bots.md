@@ -108,10 +108,9 @@ Junto com o intenção, é necessário identificar e extrair parâmetros, ou que
 
 O reconhecimento de entidades nomeadas é uma técnica amplamente utilizada em Processamento da Linguagem Natural e consiste na identificação de nomes de entidades-chave, presentes na forma livre de dados textuais. Nesse sentido, a entrada para um sistema de extração de entidades nomeadas e um texto em sua forma livre, e sua saída é um conjunto de textos anotados, ou seja, uma representação estruturada a partir da entrada de um texto não estruturado. Vamos ao exemplo:
 
+<h4>"<span style="color:#62a84e">Vitor Meriat</span> mora em <span style="color:#62a84e">Vila Mariana</span> e trabalha na <span style="color:#62a84e">ESX</span>."</h4>
 
-> desenho **"Vitor Meriat mora em Vila Mariana e trabalha na ESX."**
-
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/c2.png" style="margin-bottom: 0px !important;"></p>
+<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/c1.png" style="margin-bottom: 0px !important;"></p>
 
 
 Ao efetuar a extração das entidades nomeadas, temos **[Vitor Meriat]**, **[Vila Mariana]** e **[ESX]**. Olhando para as entidades podemos atribuir para cada uma delas uma categoria apropriada, neste caso temos, **pessoa**, **localização** e **organização**.
@@ -158,6 +157,16 @@ Outro fator é a quantidade de ferramentas.
 Além disso, os frameworks focados na criação de ChatBots já pensando em toda a estrutura para integração com diversos `canais` de comunicação vem crescendo e se tornando mais completos.
 
 A conclusão é que a tecnologia necessária para construir bots inteligentes já está disponível para desenvolvedores e corporações de forma satisfatória.
+
+## Resumindo a conversação
+
+No geral temos os seguintes termos para expressar todos os recursos de um diálogo:
+
+* **Intenção:** Intenção é o conceito central de construção de interface conversacional. Em suma, intenção é a tarefa que o usuário deseja realizar ou o problema que o usuário deseja resolver.
+* **Utterance:** Por Utterances (ou Stories), temos os exemplos de frases que o usuário pode digitar ou dizer quando ele se refere a uma determinada intenção.
+* **Entidade:** Entidades (ou Parâmetros) incluem os detalhes importantes para uma melhor resolução da intenção do usuário. Pode ser qualquer coisa: localização, data, hora etc.
+* **Contexto:** Contexto ajuda a salvar e compartilhar os parâmetros de sua conversação.
+
 
 ## Dos serviços de NLP
 
@@ -245,6 +254,10 @@ Outro ponto interessante é a integração do Alexa Skills Kit e o Amazon Lambda
 <p align="center" style="background-color: #FFFFFF; width: 100%;"><img src="https://d0.awsstatic.com/Digital%20Marketing/House/Editorial/products/ai/AI-380x186.png" style="margin-bottom: 0px !important;"></p>
 
 O **Amazon Lex** é a solução da Amazon para a construção de interfaces conversacionais se utilizando dos recursos de NLP e integração com outros serviços da Amazon, como Lambda, Dynamo DB entre outros. 
+
+O Lex foi construído com base no Amazon Alexa Skill Kit. Isso é uma notícia verdadeiramente emocionante, uma vez que o Alexa já foi testada e treinada por mais de 3 milhões de usuários da Amazon Alexa.
+
+A interface web Lex te fornece não só os recursos de configuração, mas também um painel de monitoramento onde você pode analisar diferentes métricas do serviço.
 
 **SITE:** [aws.amazon.com/lex](https://aws.amazon.com/pt/lex/)
 
