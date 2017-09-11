@@ -82,9 +82,7 @@ No próximo tópico vamos analizar uma possível estrutura de diálogo com o obj
 
 Vamos pensar na estrutura de um diálogo step-by-setp. Aproveitando a brincadeira da pizza, vamos tentar pedir uma pizza utilizando um bot imaginário.
 
-> desenho de uma pessoa falando com o bot e perguntando onde comprar uma pizza em vila mariana.
-
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/c4.png" style="margin-bottom: 0px !important;"></p>
+<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-1.png" style="margin-bottom: 0px !important;"></p>
 
 Olhando para o exemplo acima, podemos imaginar uma variedade de significados e formas diferentes de realizar a mesma pergunta:
 
@@ -102,9 +100,7 @@ Ao definir uma determinada intenção, geramos um conjunto de sentenças, ou `en
 
 Sendo assim se pergunto ao bot **"onde acho pizzarias em Vila Mariana"**, posso `classificar` essa nova sentença como sendo pertencente a intenção **localizar-pizzaria**.
 
-> desenho de uma pessoa perguntando o texto acima e uma engine procurando em qual intenção classificar a sentença
-
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/c3.png" style="margin-bottom: 0px !important;"></p>
+<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-2.png" style="margin-bottom: 0px !important;"></p>
 
 Podemos perceber com base neste exemplo simples, que toda `comunicação` dos usuários tem uma intenção que leva a alguma ação. Logo concluimos que a `intenção` é o conceito central na construção de uma interface conversacional. Sendo assim a primeira coisa que podemos fazer com a mensagem enviada pelo usuário é entender sua intenção, ou seja, devemos mapear a sentença para uma ação específica.
 
@@ -122,11 +118,7 @@ Ao efetuar a extração das entidades nomeadas, temos **[Vitor Meriat]**, **[Vil
 
 Reconhecer e classificar categorias a entidades nomeadas presentes em um texto não é uma tarefa fácil. Isso fica evidente quando o assunto são nomes próprios e organizações. Este caso pode remeter a mais de uma categoria, ou simplesmente não possuir um contexto mais determinístico, em nível suficiente para auxiliar a tarefa de desambiguação. Vamos ao exemplo:
 
-> desenho **"A Mercedes esteve em crise nos últimos meses. A empresa afirma que..."**
-
-> desenho **"Hoje foi um ótimo dia para Mercedes."**
-
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/c1.png" style="margin-bottom: 0px !important;"></p>
+<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-4.png" style="margin-bottom: 0px !important;"></p>
 
 Para o primeiro exemplo, o contexto poderia auxiliar na desambiguação. Ou seja, havendo uma relação entre os sintagmas [a Mercedes] e [a empresa], podemos aferir a categoria "Organização" a entidade “Mercedes”, uma vez que o sintagma nominal [a empresa] identifica uma organização.
 
