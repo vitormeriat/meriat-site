@@ -10,7 +10,8 @@ tags:
     - ai
     - machine learning
     - data science
-image-full: "http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png"
+image: "http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png"
+color: "#f2f2f2"
 lang: pt
 description: "Neste post vamos passo a passo criar uma máquina virtual Linux no Azure, instalar o Jupyter Notebook via Anaconda. Também vamos conectar em nossa VM via um túnel SSH para conseguir utilinar nossos Notebooks como se estevessem rodando local.\nEm poucos passos vamos ter a disposição todo o poder da Cloud Computing para rodar nossos algorítimos com muito mais robustez."
 ---
