@@ -52,9 +52,9 @@ Acesse o portal do Microsoft Azure: [portal.azure.com](https://portal.azure.com/
 7. Em `Public ip address` selecione **um ip estático** e prossiga para a confirmação;
 8. Finalize a instalação, aguarde o provisionamento e na tela que se seguirá, copie o `IP` que será criado para sua nova VM.
 
+Agora que temos nossa VM criada no Azure, vamos executar os passos para a instalação do Jupyter Notebook.
 
-
-Acesse o seu servidor recém criado via SSH
+O primeiro passo será acessar o servidor recém criado via SSH. Informe o usuário e o ip conforme o exemplo abaixo:
 
 <pre style="font-size: 1.6em !important">
     <code class="bash">
@@ -62,11 +62,13 @@ $ ssh {seu-usuário}@{ip-vm}
     </code>
 </pre>
 
-Baixar o Anaconda installer bash script. Sempre utilizar a última versão
+Assim que você realizar o acesso, informe sua senha e pronto. Você já vai estar conectado em sua VM. Agora vamos baixar o `Anaconda installer bash script`. Neste ponto acesso o site abaixo e verifique qual a última versão do **Anaconda**.
 
-* [Anaconda]()
+No momento deste post, a versão da última distribuição do Anaconda é a `5.0.1 For Linux`. Todos os exemplos vão utilizar essa versão, então lembre-se de trocar caso necessário.
 
-Vamos utilizar a pasta tmp.
+* [Anaconda](https://www.anaconda.com/download/#linux)
+
+Por questões de boas práticas, vamos acessar nossa pasta `tmp` para realizar o donwload do script acima.
 
 <pre style="font-size: 1.6em !important">
     <code class="bash">
@@ -74,7 +76,7 @@ $ cd /tmp
     </code>
 </pre>
 
-Now it's time for downloading the bash script. Use curl to download the file.
+Agora vamos utilizar o comando `curl` para fazer o download do arquivo.
 
 <pre style="font-size: 1.6em !important">
     <code class="bash">
@@ -82,9 +84,7 @@ $ curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
     </code>
 </pre>
 
-
-
-Agora vamos validar o script verificando seu hash 
+Outra boa prática é validar a integridade do download antes da instalação. Neste caso específico vamos executar o script abaixo para fazer o double-check junto ao site do **Anaconda**.
 
 <pre style="font-size: 1.6em !important">
     <code class="bash">
@@ -92,9 +92,32 @@ $ sha256sum Anaconda3-5.0.1-Linux-x86_64.sh
     </code>
 </pre>
 
-O resultado deste comando é o hash que vamos utilizar para fazer o double-check
+Acesse [esse link](https://docs.anaconda.com/anaconda/install/hashes/Anaconda3-5.0.1-Linux-x86_64.sh-hash) para verificar se os `hashes` correspondem. 
 
-Agora vamos ativar a instalação
+Com as informações validadas, execute o comando abaixo para inicializar a instalação.
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ bash Anaconda3-5.0.1-Linux-x86_64.sh
+    </code>
+</pre>
+
+Neste ponto você vai receber algumas mensagens, para confirmar a instalação, para confirmar que leu e concorda com os termos da instalação e posteriormente para confirmar qual o caminho onde a instalação será realizada. 
+
+Confirme todos os passos e por último, após a instalação ser realizada com sucesso você vai receber a mensagem abaixo:
+
+```
+Output
+...
+installation finished.
+Do you wish the installer to prepend the Anaconda3     install location
+to PATH in your /home/vitormeriat/.bashrc ? [yes|no]
+[no] >>> 
+```
+
+Esta é uma confirmação necessária para utilizarmos o `conda command utility`, que devo explicar melhor em um próximo vídeo. Inform **yes** e finalize o procedimento.
+
+Agora é só executar o comando abaixo para ativar a instalação e vamos estar prontos para testar nosso **Jupyter Notebook**.
 
 <pre style="font-size: 1.6em !important">
     <code class="bash">
@@ -109,16 +132,6 @@ Para verficar se a instalação ocorreu como o esperado, vamos listar todos os p
 $ conda list
     </code>
 </pre>
-
-Seu output deve ser a lista com todos os pacotes de forma ordenada.
-
-<pre style="font-size: 1.6em !important">
-    <code class="python">
- import psutil
- psutil.cpu_count()
-    </code>
-</pre>
-
 
 
 
