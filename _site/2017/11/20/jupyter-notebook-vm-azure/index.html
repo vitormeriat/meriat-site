@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+  ﻿<head>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-90757610-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"d4823b90-66dc-43d1-84c6-7da8a3796ebd"
+    });
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
+
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vitor Meriat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Vitor Meriat" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="author" content="Vitor Meriat" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/assets/css/style.css?v1">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/obsidian.css">
+
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+  <body>
+    <!-- Header -->
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+      <div id="fh5co-logo">
+				<a href="/">
+					<img src="/assets/images/logo-d.png" alt="Work Logo">
+				</a>
+			</div>
+      <div style="text-align: center;">
+        <a href="/"><h2 style="margin-top: 0px !important;">Vitor Meriat</h2></a>
+        <span style="font-size: 1em; color: black;">MVP Azure - Cloud Architect - Data science enthusiast</span>
+      </div>
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
+			<!-- Main Nav -->
+			<div id="fh5co-main-nav">
+				<nav id="fh5co-nav" role="navigation">
+					<ul>
+						<li class="">
+							<a href="/">Blog</a>
+						</li>
+						<li class="">
+							<a href="/archive/">Archives</a>
+						</li>
+            <li class="">
+							<a href="/category/">Categories</a>
+						</li>
+            <li class="">
+							<a href="/about/"> About me </a>
+						</li>
+					</ul>
+					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
+          <!-- <a href="/about/" class="">About me</a> -->
+				</nav>
+			</div>
+			<!-- Main Nav -->
+		</div>
+	</header>
+	<!-- Header -->
+    <main role="main">
+      <div class="container">
+  <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+      <div class="fh5co-spacer fh5co-spacer-sm"></div>
+      <div class="col-md-12 text-center">
+        <h1>Provision the Jupyter Notebook in Azure VM for Linux</h1>
+        
+      </div>
+      
+        <h2 class="fh5co-uppercase-heading-sm text-center">
+          AI &amp; Machine Learning &amp; Data Science
+        </h2>
+      
+      <span><time datetime="2017-11-20T00:00:00-02:00" itemprop="datePublished">Nov 20, 2017</time></span>
+    </div>
+    <div class="fh5co-spacer fh5co-spacer-md"></div>
+    <section class="section-padding post" itemprop="articleBody">
+      <p align="center" style="background-color: #202020; width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/new-bot.png" style="margin-bottom: 0px !important;" /></p>
+
+<p>Neste post vamos passo a passo criar uma máquina virtual Linux no Azure, instalar o Jupyter Notebook via Anaconda. Também vamos conectar em nossa VM via um túnel SSH para conseguir utilinar nossos Notebooks como se estevessem rodando local.</p>
+
+<h2 id="justificativa">Justificativa</h2>
+
+<p>Para facilatar deixe-me explicar o motivo deste texto: Estes são os passos que executei em algumas demonstrações que fiz abordando o quanto a <code>Cloud Computing</code> é importante para o avanço da inteligência artificial. Estamos falando de uma área da computação que é estudada desde a década de 40.</p>
+
+<p>Os grande avanços nessa área se dão basicamente por que hoje (em grande parte graças a Cloud Computing), temos um grande <code>poder computacional</code> bem como <code>poder de armazenamento</code> de dados, isso de forma acessível. Já preparei um vídeo apenas sobre este assunto que vai estar disponível em breve no meu canal.</p>
+
+<p>Sendo assim nada mais justo do que usar todo este poder computacional ao nosso favor, utilizando os grande players de mercado para provisionar em minutos a infra necessária para treinar nossos modelos de manira rápida. Assim conseguimos nos concetrar em atividades mais importantes.</p>
+
+<h1 id="demo-da-instalação">Demo da instalação</h1>
+
+<p align="center"><iframe height="506" src="https://www.youtube.com/embed/5aWCxfHYhlg?rel=0" width="900" allowfullscreen="" style="border: 0px;"></iframe></p>
+
+<h2 id="requisitos">Requisitos</h2>
+
+<p>Para finalizar este tutorial, você vai precisar de uma conta ativa no Microsoft Azure, e caso sua máquina seja Windows, de acesso ao <code>bash</code> ou utilizar o <code>cmd</code> com ajuda do <code>putty</code>. Abaixo segue as referências.</p>
+
+<ul>
+  <li><a href="">Como criar uma contra no Microsoft Azure</a></li>
+  <li><a href="">Como habilitar o bash no Windows 10</a></li>
+  <li><a href="">Como conectar via SSH no Windows utilizando o Putty</a></li>
+</ul>
+
+<p>Acesse o seu servidor recém criado via SSH</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ ssh {seu-usuário}@{ip-vm}
+    </code>
+</pre>
+
+<p>Baixar o Anaconda installer bash script. Sempre utilizar a última versão</p>
+
+<ul>
+  <li><a href="">Anaconda</a></li>
+</ul>
+
+<p>Vamos utilizar a pasta tmp.</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ cd /tmp
+    </code>
+</pre>
+
+<p>Now it’s time for downloading the bash script. Use curl to download the file.</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+    </code>
+</pre>
+
+<p>Agora vamos validar o script verificando seu hash</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ sha256sum Anaconda3-5.0.1-Linux-x86_64.sh
+    </code>
+</pre>
+
+<p>O resultado deste comando é o hash que vamos utilizar para fazer o double-check</p>
+
+<p>Agora vamos ativar a instalação</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ source ~/.bashrc
+    </code>
+</pre>
+
+<p>Para verficar se a instalação ocorreu como o esperado, vamos listar todos os pacotes instalados pelo Conda utilizando o comando abaixo:</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ conda list
+    </code>
+</pre>
+
+<p>Seu output deve ser a lista com todos os pacotes de forma ordenada.</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="python">
+ import psutil
+ psutil.cpu_count()
+    </code>
+</pre>
+
+<h2 id="referências">Referências</h2>
+
+<ul>
+  <li><a href="https://poweruphosting.com/blog/install-anaconda-python-ubuntu-16-04/">How to install Anaconda Python on Ubuntu</a></li>
+  <li><a href="">How to create a Virtual Machine Linux on Azure</a></li>
+</ul>
+
+<p>https://www.youtube.com/watch?v=5aWCxfHYhlg</p>
+
+    </section>
+  </article>
+
+  <hr/>
+  <section class="author">
+  	<header> <a href=""> <img class="profile" src="/assets/images/profile.jpg" alt="Author's profile picture"></a></header>
+  	<article>
+  		<!-- Author Name -->
+      	<h4>  </h4>
+      	<!-- Author Bio -->
+      	<p>
+      		Vitor is a computer scientist who is passionate about creating software that will positively change the world we live in.
+      	</p>
+        <p>
+          MVP Azure - Cloud Architect - Data science enthusiast
+        </p>
+      </article>
+  </section>
+  <hr/>
+
+  <div style="margin-top: 60px; margin-bottom: 60px;">
+    
+    
+      2 minutes to read
+    
+  </div>
+
+  <div class="PageNavigation">
+  
+    <a class="prev" href="/2017/08/06/conversational-interfaces-nlp-bots/"><i class="fa fa-lg fa-arrow-left"></i> Conversational Interfaces, NLP and bots</a>
+  
+  
+  </div>
+</div>
+<div style="height: 80px;"></div>
+
+    </main>
+
+    <footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-push-6 col-md-9">
+					<ul class="fh5co-footer-social">
+						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					</ul>
+					<p class="fh5co-copyright">
+						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved.
+						</small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Go To Top -->
+	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+
+	<!-- jQuery -->
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/js/bootstrap.js"></script>
+	<!-- Owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+ <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Easy Responsive Tabs -->
+	<script src="/assets/js/easyResponsiveTabs.js"></script>
+	<!-- FastClick for Mobile/Tablets -->
+	<script src="/assets/js/fastclick.js"></script>
+	<!-- Velocity -->
+	<script src="/assets/js/velocity.min.js"></script>
+	<!-- Main JS -->
+	<script src="/assets/js/main.js"></script>
+
+
+  </body>
+</html>

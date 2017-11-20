@@ -5,9 +5,130 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Sep 2017 00:04:55 -0300</pubDate>
-    <lastBuildDate>Mon, 11 Sep 2017 00:04:55 -0300</lastBuildDate>
+    <pubDate>Mon, 20 Nov 2017 12:43:11 -0200</pubDate>
+    <lastBuildDate>Mon, 20 Nov 2017 12:43:11 -0200</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Provision the Jupyter Notebook in Azure VM for Linux</title>
+        <description>&lt;p align=&quot;center&quot; style=&quot;background-color: #202020; width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/new-bot.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Neste post vamos passo a passo criar uma máquina virtual Linux no Azure, instalar o Jupyter Notebook via Anaconda. Também vamos conectar em nossa VM via um túnel SSH para conseguir utilinar nossos Notebooks como se estevessem rodando local.&lt;/p&gt;
+
+&lt;h2 id=&quot;justificativa&quot;&gt;Justificativa&lt;/h2&gt;
+
+&lt;p&gt;Para facilatar deixe-me explicar o motivo deste texto: Estes são os passos que executei em algumas demonstrações que fiz abordando o quanto a &lt;code&gt;Cloud Computing&lt;/code&gt; é importante para o avanço da inteligência artificial. Estamos falando de uma área da computação que é estudada desde a década de 40.&lt;/p&gt;
+
+&lt;p&gt;Os grande avanços nessa área se dão basicamente por que hoje (em grande parte graças a Cloud Computing), temos um grande &lt;code&gt;poder computacional&lt;/code&gt; bem como &lt;code&gt;poder de armazenamento&lt;/code&gt; de dados, isso de forma acessível. Já preparei um vídeo apenas sobre este assunto que vai estar disponível em breve no meu canal.&lt;/p&gt;
+
+&lt;p&gt;Sendo assim nada mais justo do que usar todo este poder computacional ao nosso favor, utilizando os grande players de mercado para provisionar em minutos a infra necessária para treinar nossos modelos de manira rápida. Assim conseguimos nos concetrar em atividades mais importantes.&lt;/p&gt;
+
+&lt;h1 id=&quot;demo-da-instalação&quot;&gt;Demo da instalação&lt;/h1&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;iframe height=&quot;506&quot; src=&quot;https://www.youtube.com/embed/5aWCxfHYhlg?rel=0&quot; width=&quot;900&quot; allowfullscreen=&quot;&quot; style=&quot;border: 0px;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;requisitos&quot;&gt;Requisitos&lt;/h2&gt;
+
+&lt;p&gt;Para finalizar este tutorial, você vai precisar de uma conta ativa no Microsoft Azure, e caso sua máquina seja Windows, de acesso ao &lt;code&gt;bash&lt;/code&gt; ou utilizar o &lt;code&gt;cmd&lt;/code&gt; com ajuda do &lt;code&gt;putty&lt;/code&gt;. Abaixo segue as referências.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Como criar uma contra no Microsoft Azure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Como habilitar o bash no Windows 10&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Como conectar via SSH no Windows utilizando o Putty&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Acesse o seu servidor recém criado via SSH&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;bash&quot;&gt;
+$ ssh {seu-usuário}@{ip-vm}
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Baixar o Anaconda installer bash script. Sempre utilizar a última versão&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Anaconda&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vamos utilizar a pasta tmp.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;bash&quot;&gt;
+$ cd /tmp
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Now it’s time for downloading the bash script. Use curl to download the file.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;bash&quot;&gt;
+$ curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Agora vamos validar o script verificando seu hash&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;bash&quot;&gt;
+$ sha256sum Anaconda3-5.0.1-Linux-x86_64.sh
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;O resultado deste comando é o hash que vamos utilizar para fazer o double-check&lt;/p&gt;
+
+&lt;p&gt;Agora vamos ativar a instalação&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;bash&quot;&gt;
+$ source ~/.bashrc
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Para verficar se a instalação ocorreu como o esperado, vamos listar todos os pacotes instalados pelo Conda utilizando o comando abaixo:&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;bash&quot;&gt;
+$ conda list
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Seu output deve ser a lista com todos os pacotes de forma ordenada.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+ import psutil
+ psutil.cpu_count()
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://poweruphosting.com/blog/install-anaconda-python-ubuntu-16-04/&quot;&gt;How to install Anaconda Python on Ubuntu&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;How to create a Virtual Machine Linux on Azure&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;https://www.youtube.com/watch?v=5aWCxfHYhlg&lt;/p&gt;
+</description>
+        <pubDate>Mon, 20 Nov 2017 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</guid>
+        
+        <category>ai</category>
+        
+        <category>machine learning</category>
+        
+        <category>data science</category>
+        
+        
+        <category>AI</category>
+        
+        <category>Machine Learning</category>
+        
+        <category>Data Science</category>
+        
+      </item>
     
       <item>
         <title>Conversational Interfaces, NLP and bots</title>
@@ -2024,115 +2145,6 @@ FamilySize            int64
         <category>Jupyter Notebook</category>
         
         <category>Python</category>
-        
-      </item>
-    
-      <item>
-        <title>Machine Learning e sua literatura clássica</title>
-        <description>&lt;p&gt;A listagem a seguir pode ser categorizada como, &lt;strong&gt;Popular Science Machine Learning Books&lt;/strong&gt; ou &lt;strong&gt;Beginner Machine Learning Books&lt;/strong&gt;. É possível ainda encontrar vários livros desta listagem em categorias como &lt;strong&gt;Introductory Machine Learning Books&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;machine-learning-books-selection&quot;&gt;Machine Learning Books Selection&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0465065708&quot;&gt;The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1119145678&quot;&gt;Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0143125087&quot;&gt;The Signal and the Noise: Why So Many Predictions Fail–but Some Don’t&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/039334777X&quot;&gt;Naked Statistics: Stripping the Dread from the Data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0307275175&quot;&gt;The Drunkard’s Walk: How Randomness Rules Our Lives&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1449361323&quot;&gt;Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/111866146X&quot;&gt;Data Smart: Using Data Science to Transform Information into Insight&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0128042915&quot;&gt;Data Mining, Fourth Edition: Practical Machine Learning Tools and Techniques&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1449358659&quot;&gt;Doing Data Science: Straight Talk from the Frontline&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/B007A0BNP4&quot;&gt;Machine Learning for Hackers: Case Studies and Algorithms to Get You Started&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1617290181&quot;&gt;Machine Learning in Action&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0596529325&quot;&gt;Programming Collective Intelligence: Building Smart Web 2.0 Applications&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1461471370&quot;&gt;An Introduction to Statistical Learning: with Applications in R (Springer Texts in Statistics)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1461468485&quot;&gt;Applied Predictive Modeling&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0387848576&quot;&gt;The Elements of Statistical Learning: Data Mining, Inference, and Prediction&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0387310738&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0262018020&quot;&gt;Machine Learning: A Probabilistic Perspective&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/B00YDJC98K&quot;&gt;Learning From Data by Yaser S. Abu-Mostafa, Malik Magdon-Ismail, Hsuan-Tien Lin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0070428077&quot;&gt;Machine Learning 1st Edition&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1107422221&quot;&gt;Machine Learning: The Art and Science of Algorithms that Make Sense of Data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/026201825X&quot;&gt;Foundations of Machine Learning (Adaptive Computation and Machine Learning series)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0596529325&quot;&gt;Programming Collective Intelligence: Building Smart Web 2.0 Applications&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1118675029&quot;&gt;Time Series Analysis: Forecasting and Control&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0997847913&quot;&gt;Practical Time Series Forecasting with R: A Hands-On Guide&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/3319298526&quot;&gt;Introduction to Time Series and Forecasting&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0987507109&quot;&gt;Forecasting: principles and practice&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;com-foco-em-python&quot;&gt;Com foco em Python&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1783555130&quot;&gt;Python Machine Learning&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/149190142X&quot;&gt;Data Science from Scratch: First Principles with Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491962291&quot;&gt;Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques for Building Intelligent Systems&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1449369413&quot;&gt;Introduction to Machine Learning with Python: A Guide for Data Scientists&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B01N4FUDSE&quot;&gt;Vital Introduction to Machine Learning with Python: Best Practices to Improve and Optimize Machine Learning Systems and Algorithms&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1118961749&quot;&gt;Machine Learning in Python: Essential Techniques for Predictive Analysis&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491912057&quot;&gt;Python Data Science Handbook: Essential Tools for Working with Data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1633430030&quot;&gt;Introducing Data Science: Big Data, Machine Learning, and more, using Python tools&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617291927&quot;&gt;Real-World Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;com-foco-em-r&quot;&gt;Com foco em R&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491910399&quot;&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1784393908&quot;&gt;Machine Learning with R&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1783982047&quot;&gt;Machine Learning With R Cookbook – 110 Recipes for Building Powerful Predictive Models with R&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1784390844&quot;&gt;R Machine Learning By Example&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/178398774X&quot;&gt;R Machine Learning Essentials&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/178398452X&quot;&gt;Mastering Machine Learning with R&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1461471370&quot;&gt;An Introduction to Statistical Learning: with Applications in R&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617291560&quot;&gt;Practical Data Science with R&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1461468485&quot;&gt;Applied Predictive Modeling&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0123969638&quot;&gt;R and Data Mining: Examples and Case Studies&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Aqui vale fazer uma consideração: Temos a seguir uma listagem separada sobre Deep Learning. Isso se deve por essa ser uma técnica de Machine Learning que diz respeito a oportunidade de aprendizagem profunda com o uso de redes neurais.&lt;/p&gt;
-
-&lt;p&gt;Em momento oportuno devo vou compartilhar aqui mais informações sobre Deep Learning, como meus estudos, códigos e referências. Por hora, segue a bibliografia melhor avaliada sobre o tema.&lt;/p&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;deep-learning&quot;&gt;Deep Learning&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0262035618&quot;&gt;Deep Learning&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491914254&quot;&gt;Deep Learning: A Practitioner’s Approach&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491925612&quot;&gt;Fundamentals of Deep Learning: Designing Next-Generation Machine Intelligence Algorithms&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491978511&quot;&gt;Learning TensorFlow: A guide to building deep learning systems&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617293873&quot;&gt;Machine Learning with TensorFlow&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1786462168&quot;&gt;TensorFlow Machine Learning Cookbook&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1786468573&quot;&gt;Getting Started with TensorFlow&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1939902452&quot;&gt;TensorFlow for Machine Intelligence: A Hands-On Introduction to Learning Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;é-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
-</description>
-        <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
-        
-        
-        <category>IA</category>
-        
-        <category>Machine Learning</category>
-        
-        <category>Data Science</category>
-        
-        <category>Deep Learning</category>
         
       </item>
     
