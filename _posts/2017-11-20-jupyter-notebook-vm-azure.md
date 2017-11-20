@@ -58,7 +58,7 @@ O primeiro passo será acessar o servidor recém criado via SSH. Informe o usuá
 
 <pre style="font-size: 1.6em !important">
     <code class="bash">
-$ ssh {seu-usuário}@{ip-vm}
+$ ssh {username}@{server_address}
     </code>
 </pre>
 
@@ -133,12 +133,45 @@ $ conda list
     </code>
 </pre>
 
+## Acessando a VM via SSH tunneling
 
+Use o comando abaixo para especificar qual porta será utilizada para rodar o Jupyter Notebook na máquina loca, qual a porta onde o Jupyter Notebook está rodando no servidor e as informações base do acesso via `SSH`.
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ ssh -L 8080:localhost:8888 {username}@{server_address}
+    </code>
+</pre>
+
+Você vai precisar informar sua senha, e se tudo estiver correto vamos conseguir estabelecer o túnel SSH com sucesso. Execute o próximo comando e pronto, é só acessar seu browser local utilizando o endereço `http://localhost:8080` que você vai acessar o seu Notebook rodando na nuvem ;)
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ jupyter notebook --no-browser
+    </code>
+</pre>
+
+Não esqueça copiar o `token` gerado para acessar seu Notebook. Ele vai aparecer no seu `command` após o último comando.
+
+
+## Verificando minha VM
+
+Como o demonstrado no vídeo, você pode utilizar o pacote `psutil` para ter acesso ao `SO`. Execute o o scritp abaixo em seu Jupyter Notebook para verificar o mesmo rodando em sua VM. 
+
+<pre style="font-size: 1.6em !important">
+    <code class="python">
+ import psutil
+ psutil.cpu_count()
+    </code>
+</pre>
+
+## Conclusão
+
+Agora é só meter a mão na massa. Minha dica é utilizar essa VM para executar treinamentos pesados, já que aqui você pode contar com muitos `vCPUs` para te auxiliar. Outra utilidade será quando você necessitar de grande quantidade memória `RAM`, como no caso do `PySpark`.
+
+Não sofra esperando horas de treinamento... use esse tempo para o seu aprendizado. 
 
 ## Referências
 
 * [How to install Anaconda Python on Ubuntu](https://poweruphosting.com/blog/install-anaconda-python-ubuntu-16-04/)
 * [How to create a Virtual Machine Linux on Azure]()
-
-
-https://www.youtube.com/watch?v=5aWCxfHYhlg
