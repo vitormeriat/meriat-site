@@ -122,11 +122,11 @@
           AI &amp; Machine Learning &amp; Data Science
         </h2>
       
-      <span><time datetime="2017-11-20T00:00:00-02:00" itemprop="datePublished">Nov 20, 2017</time></span>
+      <span><time datetime="2017-11-20T00:00:00-05:00" itemprop="datePublished">Nov 20, 2017</time></span>
     </div>
     <div class="fh5co-spacer fh5co-spacer-md"></div>
     <section class="section-padding post" itemprop="articleBody">
-      <p align="center" style="background-color: #202020; width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/new-bot.png" style="margin-bottom: 0px !important;" /></p>
+      <p align="center" style="background-color: #f2f2f2; width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png" style="margin-bottom: 0px !important;" /></p>
 
 <p>Neste post vamos passo a passo criar uma máquina virtual Linux no Azure, instalar o Jupyter Notebook via Anaconda. Também vamos conectar em nossa VM via um túnel SSH para conseguir utilinar nossos Notebooks como se estevessem rodando local.</p>
 
@@ -138,7 +138,7 @@
 
 <p>Sendo assim nada mais justo do que usar todo este poder computacional ao nosso favor, utilizando os grande players de mercado para provisionar em minutos a infra necessária para treinar nossos modelos de manira rápida. Assim conseguimos nos concetrar em atividades mais importantes.</p>
 
-<h1 id="demo-da-instalação">Demo da instalação</h1>
+<h2 id="demonstração-da-instalação">Demonstração da instalação</h2>
 
 <p align="center"><iframe height="506" src="https://www.youtube.com/embed/5aWCxfHYhlg?rel=0" width="900" allowfullscreen="" style="border: 0px;"></iframe></p>
 
@@ -147,26 +147,45 @@
 <p>Para finalizar este tutorial, você vai precisar de uma conta ativa no Microsoft Azure, e caso sua máquina seja Windows, de acesso ao <code>bash</code> ou utilizar o <code>cmd</code> com ajuda do <code>putty</code>. Abaixo segue as referências.</p>
 
 <ul>
-  <li><a href="">Como criar uma contra no Microsoft Azure</a></li>
-  <li><a href="">Como habilitar o bash no Windows 10</a></li>
-  <li><a href="">Como conectar via SSH no Windows utilizando o Putty</a></li>
+  <li><a href="https://azure.microsoft.com/pt-br/free/">Como criar uma conta gratuita no Microsoft Azure</a></li>
+  <li><a href="http://www.techtudo.com.br/dicas-e-tutoriais/noticia/2016/04/como-instalar-e-usar-o-shell-bash-do-linux-no-windows-10.html">Como habilitar o bash no Windows 10</a></li>
+  <li><a href="https://technet.microsoft.com/pt-br/library/hh225041(v=sc.12).aspx">Como conectar via SSH no Windows utilizando o Putty</a></li>
 </ul>
 
-<p>Acesse o seu servidor recém criado via SSH</p>
+<h2 id="hands-on">Hands on</h2>
+
+<p>Acesse o portal do Microsoft Azure: <a href="https://portal.azure.com/">portal.azure.com</a>. Após o login execute os seguintes passo como o exemplificado no vídeo:</p>
+
+<ol>
+  <li>Clique em <code>+ New</code> no menu a esquerda;</li>
+  <li>Em <code>Search the Market Place</code> pesquise por <strong>Ubuntu Server 17.10</strong>;</li>
+  <li>Clique em <code>Create</code>;</li>
+  <li>Informe o nome da sua VM. Insira um Username e um Password. Crie um Resource Group e clique em <strong>OK</strong>;</li>
+  <li>Escolha o Size da sua máquina virtual e clique em <strong>OK</strong>;</li>
+  <li>No próximo passo acesso o <code>Network security group</code> e adicione uma nova <code>inbound rule</code> para a porta <strong>8888</strong>, que é onde vamos acessar nosso <strong>Notebook</strong>;</li>
+  <li>Em <code>Public ip address</code> selecione <strong>um ip estático</strong> e prossiga para a confirmação;</li>
+  <li>Finalize a instalação, aguarde o provisionamento e na tela que se seguirá, copie o <code>IP</code> que será criado para sua nova VM.</li>
+</ol>
+
+<p>Agora que temos nossa VM criada no Azure, vamos executar os passos para a instalação do Jupyter Notebook.</p>
+
+<p>O primeiro passo será acessar o servidor recém criado via SSH. Informe o usuário e o ip conforme o exemplo abaixo:</p>
 
 <pre style="font-size: 1.6em !important">
     <code class="bash">
-$ ssh {seu-usuário}@{ip-vm}
+$ ssh {username}@{server_address}
     </code>
 </pre>
 
-<p>Baixar o Anaconda installer bash script. Sempre utilizar a última versão</p>
+<p>Assim que você realizar o acesso, informe sua senha e pronto. Você já vai estar conectado em sua VM. Agora vamos baixar o <code>Anaconda installer bash script</code>. Neste ponto acesso o site abaixo e verifique qual a última versão do <strong>Anaconda</strong>.</p>
+
+<p>No momento deste post, a versão da última distribuição do Anaconda é a <code>5.0.1 For Linux</code>. Todos os exemplos vão utilizar essa versão, então lembre-se de trocar caso necessário.</p>
 
 <ul>
-  <li><a href="">Anaconda</a></li>
+  <li><a href="https://www.anaconda.com/download/#linux">Anaconda</a></li>
 </ul>
 
-<p>Vamos utilizar a pasta tmp.</p>
+<p>Por questões de boas práticas, vamos acessar nossa pasta <code>tmp</code> para realizar o donwload do script acima.</p>
 
 <pre style="font-size: 1.6em !important">
     <code class="bash">
@@ -174,7 +193,7 @@ $ cd /tmp
     </code>
 </pre>
 
-<p>Now it’s time for downloading the bash script. Use curl to download the file.</p>
+<p>Agora vamos utilizar o comando <code>curl</code> para fazer o download do arquivo.</p>
 
 <pre style="font-size: 1.6em !important">
     <code class="bash">
@@ -182,7 +201,7 @@ $ curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
     </code>
 </pre>
 
-<p>Agora vamos validar o script verificando seu hash</p>
+<p>Outra boa prática é validar a integridade do download antes da instalação. Neste caso específico vamos executar o script abaixo para fazer o double-check junto ao site do <strong>Anaconda</strong>.</p>
 
 <pre style="font-size: 1.6em !important">
     <code class="bash">
@@ -190,9 +209,31 @@ $ sha256sum Anaconda3-5.0.1-Linux-x86_64.sh
     </code>
 </pre>
 
-<p>O resultado deste comando é o hash que vamos utilizar para fazer o double-check</p>
+<p>Acesse <a href="https://docs.anaconda.com/anaconda/install/hashes/Anaconda3-5.0.1-Linux-x86_64.sh-hash">esse link</a> para verificar se os <code>hashes</code> correspondem.</p>
 
-<p>Agora vamos ativar a instalação</p>
+<p>Com as informações validadas, execute o comando abaixo para inicializar a instalação.</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ bash Anaconda3-5.0.1-Linux-x86_64.sh
+    </code>
+</pre>
+
+<p>Neste ponto você vai receber algumas mensagens, para confirmar a instalação, para confirmar que leu e concorda com os termos da instalação e posteriormente para confirmar qual o caminho onde a instalação será realizada.</p>
+
+<p>Confirme todos os passos e por último, após a instalação ser realizada com sucesso você vai receber a mensagem abaixo:</p>
+
+<pre><code>Output
+...
+installation finished.
+Do you wish the installer to prepend the Anaconda3     install location
+to PATH in your /home/vitormeriat/.bashrc ? [yes|no]
+[no] &gt;&gt;&gt; 
+</code></pre>
+
+<p>Esta é uma confirmação necessária para utilizarmos o <code>conda command utility</code>, que devo explicar melhor em um próximo vídeo. Inform <strong>yes</strong> e finalize o procedimento.</p>
+
+<p>Agora é só executar o comando abaixo para ativar a instalação e vamos estar prontos para testar nosso <strong>Jupyter Notebook</strong>.</p>
 
 <pre style="font-size: 1.6em !important">
     <code class="bash">
@@ -208,7 +249,29 @@ $ conda list
     </code>
 </pre>
 
-<p>Seu output deve ser a lista com todos os pacotes de forma ordenada.</p>
+<h2 id="acessando-a-vm-via-ssh-tunneling">Acessando a VM via SSH tunneling</h2>
+
+<p>Use o comando abaixo para especificar qual porta será utilizada para rodar o Jupyter Notebook na máquina loca, qual a porta onde o Jupyter Notebook está rodando no servidor e as informações base do acesso via <code>SSH</code>.</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ ssh -L 8080:localhost:8888 {username}@{server_address}
+    </code>
+</pre>
+
+<p>Você vai precisar informar sua senha, e se tudo estiver correto vamos conseguir estabelecer o túnel SSH com sucesso. Execute o próximo comando e pronto, é só acessar seu browser local utilizando o endereço <code>http://localhost:8080</code> que você vai acessar o seu Notebook rodando na nuvem ;)</p>
+
+<pre style="font-size: 1.6em !important">
+    <code class="bash">
+$ jupyter notebook --no-browser
+    </code>
+</pre>
+
+<p>Não esqueça copiar o <code>token</code> gerado para acessar seu Notebook. Ele vai aparecer no seu <code>command</code> após o último comando.</p>
+
+<h2 id="verificando-minha-vm">Verificando minha VM</h2>
+
+<p>Como o demonstrado no vídeo, você pode utilizar o pacote <code>psutil</code> para ter acesso ao <code>SO</code>. Execute o o scritp abaixo em seu Jupyter Notebook para verificar o mesmo rodando em sua VM.</p>
 
 <pre style="font-size: 1.6em !important">
     <code class="python">
@@ -217,14 +280,18 @@ $ conda list
     </code>
 </pre>
 
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Agora é só meter a mão na massa. Minha dica é utilizar essa VM para executar treinamentos pesados, já que aqui você pode contar com muitos <code>vCPUs</code> para te auxiliar. Outra utilidade será quando você necessitar de grande quantidade memória <code>RAM</code>, como no caso do <code>PySpark</code>.</p>
+
+<p>Não sofra esperando horas de treinamento… use esse tempo para o seu aprendizado.</p>
+
 <h2 id="referências">Referências</h2>
 
 <ul>
   <li><a href="https://poweruphosting.com/blog/install-anaconda-python-ubuntu-16-04/">How to install Anaconda Python on Ubuntu</a></li>
   <li><a href="">How to create a Virtual Machine Linux on Azure</a></li>
 </ul>
-
-<p>https://www.youtube.com/watch?v=5aWCxfHYhlg</p>
 
     </section>
   </article>
@@ -249,7 +316,7 @@ $ conda list
   <div style="margin-top: 60px; margin-bottom: 60px;">
     
     
-      2 minutes to read
+      6 minutes to read
     
   </div>
 
@@ -265,24 +332,25 @@ $ conda list
     </main>
 
     <footer id="fh5co-footer" role="contentinfo">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-push-6 col-md-9">
-					<ul class="fh5co-footer-social">
-						<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
-						<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
-						<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
-						<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
-						<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
-					</ul>
-					<p class="fh5co-copyright">
-						<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved.
-						</small>
-					</p>
-				</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" style="text-align: right;">
+				<ul class="fh5co-footer-social">
+					<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
+					<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
+					<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
+					<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
+					<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
+					<li><a href="https://www.youtube.com/user/vitormeriat/" target="_blank"><i class="fa fa-youtube fa-1x"></i> Youtube</a></li>
+				</ul>
+				<p class="fh5co-copyright">
+					<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved.
+					</small>
+				</p>
 			</div>
 		</div>
-	</footer>
+	</div>
+</footer>
 
 	<!-- Go To Top -->
 	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>

@@ -5,13 +5,13 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Nov 2017 12:43:11 -0200</pubDate>
-    <lastBuildDate>Mon, 20 Nov 2017 12:43:11 -0200</lastBuildDate>
+    <pubDate>Fri, 09 Mar 2018 02:38:26 -0500</pubDate>
+    <lastBuildDate>Fri, 09 Mar 2018 02:38:26 -0500</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
         <title>Provision the Jupyter Notebook in Azure VM for Linux</title>
-        <description>&lt;p align=&quot;center&quot; style=&quot;background-color: #202020; width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/new-bot.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p align=&quot;center&quot; style=&quot;background-color: #f2f2f2; width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Neste post vamos passo a passo criar uma máquina virtual Linux no Azure, instalar o Jupyter Notebook via Anaconda. Também vamos conectar em nossa VM via um túnel SSH para conseguir utilinar nossos Notebooks como se estevessem rodando local.&lt;/p&gt;
 
@@ -23,7 +23,7 @@
 
 &lt;p&gt;Sendo assim nada mais justo do que usar todo este poder computacional ao nosso favor, utilizando os grande players de mercado para provisionar em minutos a infra necessária para treinar nossos modelos de manira rápida. Assim conseguimos nos concetrar em atividades mais importantes.&lt;/p&gt;
 
-&lt;h1 id=&quot;demo-da-instalação&quot;&gt;Demo da instalação&lt;/h1&gt;
+&lt;h2 id=&quot;demonstração-da-instalação&quot;&gt;Demonstração da instalação&lt;/h2&gt;
 
 &lt;p align=&quot;center&quot;&gt;&lt;iframe height=&quot;506&quot; src=&quot;https://www.youtube.com/embed/5aWCxfHYhlg?rel=0&quot; width=&quot;900&quot; allowfullscreen=&quot;&quot; style=&quot;border: 0px;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
 
@@ -32,26 +32,45 @@
 &lt;p&gt;Para finalizar este tutorial, você vai precisar de uma conta ativa no Microsoft Azure, e caso sua máquina seja Windows, de acesso ao &lt;code&gt;bash&lt;/code&gt; ou utilizar o &lt;code&gt;cmd&lt;/code&gt; com ajuda do &lt;code&gt;putty&lt;/code&gt;. Abaixo segue as referências.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Como criar uma contra no Microsoft Azure&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Como habilitar o bash no Windows 10&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Como conectar via SSH no Windows utilizando o Putty&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/pt-br/free/&quot;&gt;Como criar uma conta gratuita no Microsoft Azure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.techtudo.com.br/dicas-e-tutoriais/noticia/2016/04/como-instalar-e-usar-o-shell-bash-do-linux-no-windows-10.html&quot;&gt;Como habilitar o bash no Windows 10&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://technet.microsoft.com/pt-br/library/hh225041(v=sc.12).aspx&quot;&gt;Como conectar via SSH no Windows utilizando o Putty&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Acesse o seu servidor recém criado via SSH&lt;/p&gt;
+&lt;h2 id=&quot;hands-on&quot;&gt;Hands on&lt;/h2&gt;
+
+&lt;p&gt;Acesse o portal do Microsoft Azure: &lt;a href=&quot;https://portal.azure.com/&quot;&gt;portal.azure.com&lt;/a&gt;. Após o login execute os seguintes passo como o exemplificado no vídeo:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Clique em &lt;code&gt;+ New&lt;/code&gt; no menu a esquerda;&lt;/li&gt;
+  &lt;li&gt;Em &lt;code&gt;Search the Market Place&lt;/code&gt; pesquise por &lt;strong&gt;Ubuntu Server 17.10&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Clique em &lt;code&gt;Create&lt;/code&gt;;&lt;/li&gt;
+  &lt;li&gt;Informe o nome da sua VM. Insira um Username e um Password. Crie um Resource Group e clique em &lt;strong&gt;OK&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Escolha o Size da sua máquina virtual e clique em &lt;strong&gt;OK&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;No próximo passo acesso o &lt;code&gt;Network security group&lt;/code&gt; e adicione uma nova &lt;code&gt;inbound rule&lt;/code&gt; para a porta &lt;strong&gt;8888&lt;/strong&gt;, que é onde vamos acessar nosso &lt;strong&gt;Notebook&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Em &lt;code&gt;Public ip address&lt;/code&gt; selecione &lt;strong&gt;um ip estático&lt;/strong&gt; e prossiga para a confirmação;&lt;/li&gt;
+  &lt;li&gt;Finalize a instalação, aguarde o provisionamento e na tela que se seguirá, copie o &lt;code&gt;IP&lt;/code&gt; que será criado para sua nova VM.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Agora que temos nossa VM criada no Azure, vamos executar os passos para a instalação do Jupyter Notebook.&lt;/p&gt;
+
+&lt;p&gt;O primeiro passo será acessar o servidor recém criado via SSH. Informe o usuário e o ip conforme o exemplo abaixo:&lt;/p&gt;
 
 &lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
     &lt;code class=&quot;bash&quot;&gt;
-$ ssh {seu-usuário}@{ip-vm}
+$ ssh {username}@{server_address}
     &lt;/code&gt;
 &lt;/pre&gt;
 
-&lt;p&gt;Baixar o Anaconda installer bash script. Sempre utilizar a última versão&lt;/p&gt;
+&lt;p&gt;Assim que você realizar o acesso, informe sua senha e pronto. Você já vai estar conectado em sua VM. Agora vamos baixar o &lt;code&gt;Anaconda installer bash script&lt;/code&gt;. Neste ponto acesso o site abaixo e verifique qual a última versão do &lt;strong&gt;Anaconda&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;No momento deste post, a versão da última distribuição do Anaconda é a &lt;code&gt;5.0.1 For Linux&lt;/code&gt;. Todos os exemplos vão utilizar essa versão, então lembre-se de trocar caso necessário.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Anaconda&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.anaconda.com/download/#linux&quot;&gt;Anaconda&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Vamos utilizar a pasta tmp.&lt;/p&gt;
+&lt;p&gt;Por questões de boas práticas, vamos acessar nossa pasta &lt;code&gt;tmp&lt;/code&gt; para realizar o donwload do script acima.&lt;/p&gt;
 
 &lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
     &lt;code class=&quot;bash&quot;&gt;
@@ -59,7 +78,7 @@ $ cd /tmp
     &lt;/code&gt;
 &lt;/pre&gt;
 
-&lt;p&gt;Now it’s time for downloading the bash script. Use curl to download the file.&lt;/p&gt;
+&lt;p&gt;Agora vamos utilizar o comando &lt;code&gt;curl&lt;/code&gt; para fazer o download do arquivo.&lt;/p&gt;
 
 &lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
     &lt;code class=&quot;bash&quot;&gt;
@@ -67,7 +86,7 @@ $ curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
     &lt;/code&gt;
 &lt;/pre&gt;
 
-&lt;p&gt;Agora vamos validar o script verificando seu hash&lt;/p&gt;
+&lt;p&gt;Outra boa prática é validar a integridade do download antes da instalação. Neste caso específico vamos executar o script abaixo para fazer o double-check junto ao site do &lt;strong&gt;Anaconda&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
     &lt;code class=&quot;bash&quot;&gt;
@@ -75,9 +94,31 @@ $ sha256sum Anaconda3-5.0.1-Linux-x86_64.sh
     &lt;/code&gt;
 &lt;/pre&gt;
 
-&lt;p&gt;O resultado deste comando é o hash que vamos utilizar para fazer o double-check&lt;/p&gt;
+&lt;p&gt;Acesse &lt;a href=&quot;https://docs.anaconda.com/anaconda/install/hashes/Anaconda3-5.0.1-Linux-x86_64.sh-hash&quot;&gt;esse link&lt;/a&gt; para verificar se os &lt;code&gt;hashes&lt;/code&gt; correspondem.&lt;/p&gt;
 
-&lt;p&gt;Agora vamos ativar a instalação&lt;/p&gt;
+&lt;p&gt;Com as informações validadas, execute o comando abaixo para inicializar a instalação.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;bash&quot;&gt;
+$ bash Anaconda3-5.0.1-Linux-x86_64.sh
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Neste ponto você vai receber algumas mensagens, para confirmar a instalação, para confirmar que leu e concorda com os termos da instalação e posteriormente para confirmar qual o caminho onde a instalação será realizada.&lt;/p&gt;
+
+&lt;p&gt;Confirme todos os passos e por último, após a instalação ser realizada com sucesso você vai receber a mensagem abaixo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Output
+...
+installation finished.
+Do you wish the installer to prepend the Anaconda3     install location
+to PATH in your /home/vitormeriat/.bashrc ? [yes|no]
+[no] &amp;gt;&amp;gt;&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Esta é uma confirmação necessária para utilizarmos o &lt;code&gt;conda command utility&lt;/code&gt;, que devo explicar melhor em um próximo vídeo. Inform &lt;strong&gt;yes&lt;/strong&gt; e finalize o procedimento.&lt;/p&gt;
+
+&lt;p&gt;Agora é só executar o comando abaixo para ativar a instalação e vamos estar prontos para testar nosso &lt;strong&gt;Jupyter Notebook&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
     &lt;code class=&quot;bash&quot;&gt;
@@ -93,7 +134,29 @@ $ conda list
     &lt;/code&gt;
 &lt;/pre&gt;
 
-&lt;p&gt;Seu output deve ser a lista com todos os pacotes de forma ordenada.&lt;/p&gt;
+&lt;h2 id=&quot;acessando-a-vm-via-ssh-tunneling&quot;&gt;Acessando a VM via SSH tunneling&lt;/h2&gt;
+
+&lt;p&gt;Use o comando abaixo para especificar qual porta será utilizada para rodar o Jupyter Notebook na máquina loca, qual a porta onde o Jupyter Notebook está rodando no servidor e as informações base do acesso via &lt;code&gt;SSH&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;bash&quot;&gt;
+$ ssh -L 8080:localhost:8888 {username}@{server_address}
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Você vai precisar informar sua senha, e se tudo estiver correto vamos conseguir estabelecer o túnel SSH com sucesso. Execute o próximo comando e pronto, é só acessar seu browser local utilizando o endereço &lt;code&gt;http://localhost:8080&lt;/code&gt; que você vai acessar o seu Notebook rodando na nuvem ;)&lt;/p&gt;
+
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;bash&quot;&gt;
+$ jupyter notebook --no-browser
+    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Não esqueça copiar o &lt;code&gt;token&lt;/code&gt; gerado para acessar seu Notebook. Ele vai aparecer no seu &lt;code&gt;command&lt;/code&gt; após o último comando.&lt;/p&gt;
+
+&lt;h2 id=&quot;verificando-minha-vm&quot;&gt;Verificando minha VM&lt;/h2&gt;
+
+&lt;p&gt;Como o demonstrado no vídeo, você pode utilizar o pacote &lt;code&gt;psutil&lt;/code&gt; para ter acesso ao &lt;code&gt;SO&lt;/code&gt;. Execute o o scritp abaixo em seu Jupyter Notebook para verificar o mesmo rodando em sua VM.&lt;/p&gt;
 
 &lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
     &lt;code class=&quot;python&quot;&gt;
@@ -102,16 +165,20 @@ $ conda list
     &lt;/code&gt;
 &lt;/pre&gt;
 
+&lt;h2 id=&quot;conclusão&quot;&gt;Conclusão&lt;/h2&gt;
+
+&lt;p&gt;Agora é só meter a mão na massa. Minha dica é utilizar essa VM para executar treinamentos pesados, já que aqui você pode contar com muitos &lt;code&gt;vCPUs&lt;/code&gt; para te auxiliar. Outra utilidade será quando você necessitar de grande quantidade memória &lt;code&gt;RAM&lt;/code&gt;, como no caso do &lt;code&gt;PySpark&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Não sofra esperando horas de treinamento… use esse tempo para o seu aprendizado.&lt;/p&gt;
+
 &lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://poweruphosting.com/blog/install-anaconda-python-ubuntu-16-04/&quot;&gt;How to install Anaconda Python on Ubuntu&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;&quot;&gt;How to create a Virtual Machine Linux on Azure&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;https://www.youtube.com/watch?v=5aWCxfHYhlg&lt;/p&gt;
 </description>
-        <pubDate>Mon, 20 Nov 2017 00:00:00 -0200</pubDate>
+        <pubDate>Mon, 20 Nov 2017 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</guid>
         
@@ -419,7 +486,7 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
   &lt;li&gt;&lt;a href=&quot;https://stanfy.com/blog/advanced-natural-language-processing-tools-for-bot-makers/&quot;&gt;Advanced NLP tools for bot makers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sun, 06 Aug 2017 00:00:00 -0300</pubDate>
+        <pubDate>Sun, 06 Aug 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</guid>
         
@@ -784,7 +851,7 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;/ul&gt;
 
 </description>
-        <pubDate>Wed, 07 Jun 2017 00:00:00 -0300</pubDate>
+        <pubDate>Wed, 07 Jun 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/06/07/custom-vision-ms/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/06/07/custom-vision-ms/</guid>
         
@@ -919,7 +986,7 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
   &lt;li&gt;&lt;a href=&quot;https://blogs.microsoft.com/blog/2016/11/15/advancing-ambition-democratize-artificial-intelligence/&quot;&gt;Advancing our ambition to democratize artificial intelligence&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
+        <pubDate>Wed, 17 May 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</guid>
         
@@ -976,7 +1043,7 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
-        <pubDate>Sat, 22 Apr 2017 00:00:00 -0300</pubDate>
+        <pubDate>Sat, 22 Apr 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</guid>
         
@@ -1166,7 +1233,7 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 
 &lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
+        <pubDate>Thu, 20 Apr 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/04/20/variables-in-statistic/</guid>
         
@@ -1438,7 +1505,7 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
   &lt;li&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/microsoftrservertigerteam/&quot;&gt;Microsoft R Server Tiger Blog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
+        <pubDate>Fri, 14 Apr 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/04/14/hello-world-r/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/04/14/hello-world-r/</guid>
         
@@ -1500,7 +1567,7 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
-        <pubDate>Sat, 01 Apr 2017 00:00:00 -0300</pubDate>
+        <pubDate>Sat, 01 Apr 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
         
@@ -2030,7 +2097,7 @@ FamilySize            int64
   &lt;li&gt;&lt;a href=&quot;http://trevorstephens.com/kaggle-titanic-tutorial/getting-started-with-r/&quot;&gt;Titanic: Getting Started With R&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
+        <pubDate>Sat, 18 Mar 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
@@ -2129,7 +2196,7 @@ FamilySize            int64
   &lt;li&gt;A simple implementation of convolutional neural networks&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
+        <pubDate>Wed, 15 Feb 2017 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
