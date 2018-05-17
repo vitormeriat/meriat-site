@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Mar 2018 02:38:26 -0500</pubDate>
-    <lastBuildDate>Fri, 09 Mar 2018 02:38:26 -0500</lastBuildDate>
+    <pubDate>Sun, 13 May 2018 21:02:08 -0300</pubDate>
+    <lastBuildDate>Sun, 13 May 2018 21:02:08 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -178,7 +178,7 @@ $ jupyter notebook --no-browser
   &lt;li&gt;&lt;a href=&quot;&quot;&gt;How to create a Virtual Machine Linux on Azure&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 20 Nov 2017 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 20 Nov 2017 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</guid>
         
@@ -486,7 +486,7 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
   &lt;li&gt;&lt;a href=&quot;https://stanfy.com/blog/advanced-natural-language-processing-tools-for-bot-makers/&quot;&gt;Advanced NLP tools for bot makers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sun, 06 Aug 2017 00:00:00 -0400</pubDate>
+        <pubDate>Sun, 06 Aug 2017 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</guid>
         
@@ -851,7 +851,7 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;/ul&gt;
 
 </description>
-        <pubDate>Wed, 07 Jun 2017 00:00:00 -0400</pubDate>
+        <pubDate>Wed, 07 Jun 2017 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2017/06/07/custom-vision-ms/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/06/07/custom-vision-ms/</guid>
         
@@ -986,7 +986,7 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
   &lt;li&gt;&lt;a href=&quot;https://blogs.microsoft.com/blog/2016/11/15/advancing-ambition-democratize-artificial-intelligence/&quot;&gt;Advancing our ambition to democratize artificial intelligence&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Wed, 17 May 2017 00:00:00 -0400</pubDate>
+        <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</guid>
         
@@ -1043,7 +1043,7 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
-        <pubDate>Sat, 22 Apr 2017 00:00:00 -0400</pubDate>
+        <pubDate>Sat, 22 Apr 2017 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/04/22/gab-azure-ml-cognitive/</guid>
         
@@ -1233,7 +1233,7 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 
 &lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 20 Apr 2017 00:00:00 -0400</pubDate>
+        <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/04/20/variables-in-statistic/</guid>
         
@@ -1505,7 +1505,7 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
   &lt;li&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/microsoftrservertigerteam/&quot;&gt;Microsoft R Server Tiger Blog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Fri, 14 Apr 2017 00:00:00 -0400</pubDate>
+        <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2017/04/14/hello-world-r/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/04/14/hello-world-r/</guid>
         
@@ -1567,7 +1567,7 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
 </description>
-        <pubDate>Sat, 01 Apr 2017 00:00:00 -0400</pubDate>
+        <pubDate>Sat, 01 Apr 2017 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
         
@@ -2097,7 +2097,7 @@ FamilySize            int64
   &lt;li&gt;&lt;a href=&quot;http://trevorstephens.com/kaggle-titanic-tutorial/getting-started-with-r/&quot;&gt;Titanic: Getting Started With R&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sat, 18 Mar 2017 00:00:00 -0400</pubDate>
+        <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
         <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
@@ -2196,7 +2196,7 @@ FamilySize            int64
   &lt;li&gt;A simple implementation of convolutional neural networks&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Wed, 15 Feb 2017 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
         <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
