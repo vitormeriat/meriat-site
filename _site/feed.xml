@@ -3,10 +3,10 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 27 Sep 2018 00:26:11 -0300</pubDate>
-    <lastBuildDate>Thu, 27 Sep 2018 00:26:11 -0300</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 27 Sep 2018 01:11:09 -0300</pubDate>
+    <lastBuildDate>Thu, 27 Sep 2018 01:11:09 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -147,8 +147,8 @@ Hoje temos boas &lt;b&gt;CPUs&lt;/b&gt; com cerca de &lt;b&gt;50GB/s&lt;/b&gt; p
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 27 Sep 2018 00:00:00 -0300</pubDate>
-        <link>/2018/09/27/gpu-for-deeplearning/</link>
-        <guid isPermaLink="true">/2018/09/27/gpu-for-deeplearning/</guid>
+        <link>http://localhost:4000/2018/09/27/gpu-for-deeplearning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/09/27/gpu-for-deeplearning/</guid>
         
         <category>ai</category>
         
@@ -335,8 +335,8 @@ $ jupyter notebook --no-browser
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 20 Nov 2017 00:00:00 -0200</pubDate>
-        <link>/2017/11/20/jupyter-notebook-vm-azure/</link>
-        <guid isPermaLink="true">/2017/11/20/jupyter-notebook-vm-azure/</guid>
+        <link>http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</guid>
         
         <category>ai</category>
         
@@ -643,8 +643,8 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 06 Aug 2017 00:00:00 -0300</pubDate>
-        <link>/2017/08/06/conversational-interfaces-nlp-bots/</link>
-        <guid isPermaLink="true">/2017/08/06/conversational-interfaces-nlp-bots/</guid>
+        <link>http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</guid>
         
         
         <category>AI</category>
@@ -1008,8 +1008,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 </description>
         <pubDate>Wed, 07 Jun 2017 00:00:00 -0300</pubDate>
-        <link>/2017/06/07/custom-vision-ms/</link>
-        <guid isPermaLink="true">/2017/06/07/custom-vision-ms/</guid>
+        <link>http://localhost:4000/2017/06/07/custom-vision-ms/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/07/custom-vision-ms/</guid>
         
         
         <category>AI</category>
@@ -1143,8 +1143,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
-        <link>/2017/05/17/microsoft-and-ai-for-the-future/</link>
-        <guid isPermaLink="true">/2017/05/17/microsoft-and-ai-for-the-future/</guid>
+        <link>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</guid>
         
         
         <category>IA</category>
@@ -1154,67 +1154,6 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
         <category>Microsoft Azure</category>
         
         <category>Deep Learning</category>
-        
-      </item>
-    
-      <item>
-        <title>Global Azure Bootcamp Campinas 2017 - Cognitive Services no Azure</title>
-        <description>&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/22/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Mais um ano tive a honra de palestrar no &lt;strong&gt;Global Azure Bootcamp&lt;/strong&gt;, evento que participo como palestrante desde a primeira edição. Depois de passar por Brasília, Recife e Sampa, tive a oportunidade de palestrar em Campinas ;)&lt;/p&gt;
-
-&lt;h2 id=&quot;o-evento&quot;&gt;O evento&lt;/h2&gt;
-
-&lt;p&gt;O &lt;a href=&quot;https://global.azurebootcamp.net/&quot;&gt;Global Azure Bootcamp&lt;/a&gt; dispensa comentários. O evento chega em mais uma edição em nível global, e cada edição mais cidades vão se engajando.&lt;/p&gt;
-
-&lt;p&gt;O evento fo realizado no polo tecnológico da &lt;strong&gt;CI&amp;amp;T&lt;/strong&gt; em campinas. O site oficial do evento para Campinas é: &lt;a href=&quot;http://campinas.azurewebsites.net/&quot;&gt;campinas.azurewebsites.net&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;a-palestra&quot;&gt;A palestra&lt;/h2&gt;
-
-&lt;p&gt;Como vimos, intligência artificial não é um assunto novo, pelo contrário, estamos falando de um assunto que vem assombrando o imaginário humano nos últimos 100 anos, e pesquisado academicamente hà mais de 5 décadas.&lt;/p&gt;
-
-&lt;p&gt;Neste mundo de AI, os serviços cognitivos estão ligados as aplicações voltadas a proximidade da linguagem natural. Temos de analise de sentimento a visão computacional, tudo de forma simples e fácil, como uma API deve ser.&lt;/p&gt;
-
-&lt;p&gt;Durante o evento consumimos várias APIs do &lt;strong&gt;Cognitive Services&lt;/strong&gt;, em destaque a API de &lt;strong&gt;face/detect&lt;/strong&gt;. Na imagem abaixo temos como resultado a identifiação de faces, onde a API me retorna a localização do rosto e de seus elementos. Assim consigo “desenhar” no python o um quadrado para identificar o rosto, e circulos para identificar os olhos, nariz e boca.&lt;/p&gt;
-
-&lt;p&gt;Notem que também temos a idade sugerida pelo serviço cognitivo. No meu caso, logo no meu caso, ganhei uns vários anos de presente. Preciso dormir mais… Muahaha…&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/22/gab1.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;O mister &lt;strong&gt;Nicolas Cage&lt;/strong&gt; foi pedido do pessoal.&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/22/gab2.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Muito interessante como a galera está interessada em aprender, discutir e testar os serviços cognitivos. Segunda vez que o tempo fica curto quando chega a hora das demos…&lt;/p&gt;
-
-&lt;h2 id=&quot;o-código&quot;&gt;O código&lt;/h2&gt;
-
-&lt;p&gt;Todas as demos utilizadas na apresentação foram consumindo apenas a &lt;strong&gt;API REST&lt;/strong&gt;, cuja a documentação está disponível em: &lt;a href=&quot;https://www.microsoft.com/cognitive-services/en-us/documentation&quot;&gt;Cognitive Services Documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;O código apresentado já está disponível no meu GitHub no repositório &lt;a href=&quot;https://github.com/vitormeriat/cognitive-services&quot;&gt;Cognitive Services&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Vale lembrar que neste repositório vou colocar vários testes incluindo outras plataformas de Cloud.&lt;/p&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 22 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/22/gab-azure-ml-cognitive/</link>
-        <guid isPermaLink="true">/2017/04/22/gab-azure-ml-cognitive/</guid>
-        
-        
-        <category>IA</category>
-        
-        <category>Cognitive Computing</category>
-        
-        <category>Microsoft Azure</category>
-        
-        <category>Python</category>
-        
-        <category>Palestras</category>
-        
-        <category>Comunidade</category>
         
       </item>
     
@@ -1390,8 +1329,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/20/variables-in-statistic/</link>
-        <guid isPermaLink="true">/2017/04/20/variables-in-statistic/</guid>
+        <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/20/variables-in-statistic/</guid>
         
         
         <category>Statistics</category>
@@ -1662,83 +1601,13 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/14/hello-world-r/</link>
-        <guid isPermaLink="true">/2017/04/14/hello-world-r/</guid>
+        <link>http://localhost:4000/2017/04/14/hello-world-r/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/14/hello-world-r/</guid>
         
         
         <category>R</category>
         
         <category>Data Science</category>
-        
-      </item>
-    
-      <item>
-        <title>Devops Summit Brasil 2017 - Minha palestra sobre Azure Cognitive Services</title>
-        <description>&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/01/palestra-0.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Como o prometido, vou fazer um compliado do que vimos na minha apresentação sobre Azure Cognitive Services no DevOpsSummit Brasil 2017.&lt;/p&gt;
-
-&lt;p&gt;A ideia era apresentar a plataforma, entendendo o que são serviços cognitivos, sua importância e como eles foram incorporados e distribuídos no ecossistema da Microsoft.&lt;/p&gt;
-
-&lt;h2 id=&quot;cognitive-services--ai&quot;&gt;Cognitive Services &amp;amp; AI&lt;/h2&gt;
-&lt;p&gt;Como vimos, intligência artificial não é um assunto novo, pelo contrário, estamos falando de um assunto que vem assombrando o imaginário humano nos últimos 100 anos, e pesquisado academicamente hà mais de 5 décadas.&lt;/p&gt;
-
-&lt;p&gt;Neste mundo de AI, os serviços cognitivos estão ligados as aplicações voltadas a proximidade da linguagem natural. Temos de analise de sentimento a visão computacional, tudo de forma simples e fácil, como uma API deve ser.&lt;/p&gt;
-
-&lt;h2 id=&quot;o-evento&quot;&gt;O evento&lt;/h2&gt;
-&lt;p&gt;O evento ocorreu na sede da Microsoft em São Paulo, e foi dividido em 4 trilhas:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TECNOLOGIAS NA NUVEM&lt;/li&gt;
-  &lt;li&gt;DESENVOLVIMENTO MODERNO&lt;/li&gt;
-  &lt;li&gt;MELHORIA CONTÍNUA&lt;/li&gt;
-  &lt;li&gt;PRÁTICAS E PROCESSOS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Tive a honra de palestrar na trilha de &lt;strong&gt;Desenvolvimento Moderno&lt;/strong&gt; explorando um tema que tem gerado muito interesse nos últimos tempos: Computação Cognitiva.&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/01/palestra-1.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/01/palestra-2.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Vale lembrar que mesmo não tendo tempo para todas as demonstrações, conseguimos rodar a API de &lt;strong&gt;Face Detect&lt;/strong&gt;, o resultado foi o seguinte:&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/01/demo-final.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;os-materiais&quot;&gt;Os materiais&lt;/h2&gt;
-
-&lt;p&gt;Todas as demos utilizadas na apresentação foram consumindo apenas a &lt;strong&gt;API REST&lt;/strong&gt;, cuja a documentação está disponível em: &lt;a href=&quot;https://www.microsoft.com/cognitive-services/en-us/documentation&quot;&gt;Cognitive Services Documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;O código apresentado já está disponível no meu GitHub no repositório &lt;a href=&quot;https://github.com/vitormeriat/cognitive-services&quot;&gt;Cognitive Services&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Vale lembrar que neste repositório vou colocar vários testes incluindo outras plataformas de Cloud.&lt;/p&gt;
-
-&lt;p&gt;Abaixo é só clicar na imagem para baixar ou visualizar os slides da apresentação.&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;//www.slideshare.net/VitorMeriat/devopssummit-2017-azure-cognitive-services&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/01/devops-summit-brasil-ppt.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;No próximo post&lt;/p&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;até-a-próxima-pessoal-&quot;&gt;Até a próxima pessoal ;)&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 01 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/01/devopssummitbrasil-azure-cognitive-services/</link>
-        <guid isPermaLink="true">/2017/04/01/devopssummitbrasil-azure-cognitive-services/</guid>
-        
-        
-        <category>IA</category>
-        
-        <category>Cognitive Computing</category>
-        
-        <category>Microsoft Azure</category>
-        
-        <category>Python</category>
-        
-        <category>Palestras</category>
-        
-        <category>Comunidade</category>
         
       </item>
     
@@ -2254,8 +2123,8 @@ FamilySize            int64
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
-        <link>/2017/03/18/titanic-machine-learning-from-disaster/</link>
-        <guid isPermaLink="true">/2017/03/18/titanic-machine-learning-from-disaster/</guid>
+        <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
         
         <category>IA</category>
@@ -2269,6 +2138,214 @@ FamilySize            int64
         <category>Jupyter Notebook</category>
         
         <category>Python</category>
+        
+      </item>
+    
+      <item>
+        <title>Apresentando o Meriat Machine Learning Notes</title>
+        <description>&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/02/15/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;No último ano tive a oportunidade de trabalhar em projetos envolvendo IoT e Machine Learning. No processo entre aplicação, estudos e desenvolvimento, acabei separando algum material e exemplos que me ajudaram a inicar nesta carreira, bem como no processo de aprendizagem.&lt;/p&gt;
+
+&lt;p&gt;O Meriat Machine Learning Notes nada mais é que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.&lt;/p&gt;
+
+&lt;p&gt;Minha opção pelo &lt;strong&gt;Jupyter Notebook&lt;/strong&gt;, dentre tantos motivos, se dá pelo fato de conseguir de forma simples documentar e visualizar todo o código e anotações de forma simples. Vale dizer que o código que estou utilizando pode ser facilmente utilizado em outra IDE, conforme sua preferência.&lt;/p&gt;
+
+&lt;p&gt;Algumas implementações são reprodução de exercícios dos quais eu irei apontar o material base.&lt;/p&gt;
+
+&lt;p&gt;O material ainda está em formação, visto que ainda tenho um longo caminho a percorrer. É possível que futuramente eu altere o repositório, já que alguns estudos podem gerar um repositório separado.&lt;/p&gt;
+
+&lt;p&gt;Por hora vou concentrando meus esforços por aqui ;)&lt;/p&gt;
+
+&lt;h3 id=&quot;github&quot;&gt;Github&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/vitormeriat/meriat-ml-notes&quot;&gt;Meriat Machine Learning Note&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 8em;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;meriat-machine-learning-note&quot;&gt;Meriat Machine Learning Note&lt;/h3&gt;
+
+&lt;p&gt;A estrutura atual está descrita logo abaixo. Vou me esforçar para manter atualizada.&lt;/p&gt;
+
+&lt;h5 id=&quot;file-handling&quot;&gt;File Handling&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;sms-spam-filtering&quot;&gt;SMS Spam Filtering&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;song-recommender&quot;&gt;Song Recommender&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;basic-math&quot;&gt;Basic Math&lt;/h5&gt;
+&lt;p&gt;Basic math notions with python&lt;/p&gt;
+
+&lt;h5 id=&quot;basic-statistic-in-python&quot;&gt;Basic Statistic in Python&lt;/h5&gt;
+&lt;p&gt;Basic math statistics with python&lt;/p&gt;
+
+&lt;h5 id=&quot;basic-natural-language-processing&quot;&gt;Basic Natural Language Processing&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Tokenization&lt;/li&gt;
+  &lt;li&gt;Stopword Removal&lt;/li&gt;
+  &lt;li&gt;N-Grams&lt;/li&gt;
+  &lt;li&gt;WordSense Disambiguation&lt;/li&gt;
+  &lt;li&gt;Parts-of-Speech&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;This module uses NLTK for the text processing processes. It is important to note that you will need to download nltk_data.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;simple-probability-model&quot;&gt;Simple Probability Model&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Common Ground&lt;/li&gt;
+  &lt;li&gt;Limit Theorems&lt;/li&gt;
+  &lt;li&gt;Derived Distributions
+    &lt;ul&gt;
+      &lt;li&gt;Covariance&lt;/li&gt;
+      &lt;li&gt;Correlation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;imbalanced-learning-with-gaussians&quot;&gt;Imbalanced Learning with Gaussians&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;neural-network&quot;&gt;Neural Network&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Adaline&lt;/li&gt;
+  &lt;li&gt;Perceptron&lt;/li&gt;
+  &lt;li&gt;Simple Neural Network&lt;/li&gt;
+  &lt;li&gt;Train a Linear Classifier&lt;/li&gt;
+  &lt;li&gt;A simple implementation of convolutional neural networks&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        
+        
+        <category>IA</category>
+        
+        <category>Machine Learning</category>
+        
+        <category>Data Science</category>
+        
+        <category>Deep Learning</category>
+        
+        <category>Jupyter Notebook</category>
+        
+        <category>Python</category>
+        
+      </item>
+    
+      <item>
+        <title>Machine Learning e sua literatura clássica</title>
+        <description>&lt;p&gt;A listagem a seguir pode ser categorizada como, &lt;strong&gt;Popular Science Machine Learning Books&lt;/strong&gt; ou &lt;strong&gt;Beginner Machine Learning Books&lt;/strong&gt;. É possível ainda encontrar vários livros desta listagem em categorias como &lt;strong&gt;Introductory Machine Learning Books&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;machine-learning-books-selection&quot;&gt;Machine Learning Books Selection&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0465065708&quot;&gt;The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1119145678&quot;&gt;Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0143125087&quot;&gt;The Signal and the Noise: Why So Many Predictions Fail–but Some Don’t&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/039334777X&quot;&gt;Naked Statistics: Stripping the Dread from the Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0307275175&quot;&gt;The Drunkard’s Walk: How Randomness Rules Our Lives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1449361323&quot;&gt;Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/111866146X&quot;&gt;Data Smart: Using Data Science to Transform Information into Insight&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0128042915&quot;&gt;Data Mining, Fourth Edition: Practical Machine Learning Tools and Techniques&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1449358659&quot;&gt;Doing Data Science: Straight Talk from the Frontline&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/B007A0BNP4&quot;&gt;Machine Learning for Hackers: Case Studies and Algorithms to Get You Started&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1617290181&quot;&gt;Machine Learning in Action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0596529325&quot;&gt;Programming Collective Intelligence: Building Smart Web 2.0 Applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1461471370&quot;&gt;An Introduction to Statistical Learning: with Applications in R (Springer Texts in Statistics)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1461468485&quot;&gt;Applied Predictive Modeling&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0387848576&quot;&gt;The Elements of Statistical Learning: Data Mining, Inference, and Prediction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0387310738&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0262018020&quot;&gt;Machine Learning: A Probabilistic Perspective&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/B00YDJC98K&quot;&gt;Learning From Data by Yaser S. Abu-Mostafa, Malik Magdon-Ismail, Hsuan-Tien Lin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0070428077&quot;&gt;Machine Learning 1st Edition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1107422221&quot;&gt;Machine Learning: The Art and Science of Algorithms that Make Sense of Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/026201825X&quot;&gt;Foundations of Machine Learning (Adaptive Computation and Machine Learning series)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0596529325&quot;&gt;Programming Collective Intelligence: Building Smart Web 2.0 Applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1118675029&quot;&gt;Time Series Analysis: Forecasting and Control&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0997847913&quot;&gt;Practical Time Series Forecasting with R: A Hands-On Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/3319298526&quot;&gt;Introduction to Time Series and Forecasting&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0987507109&quot;&gt;Forecasting: principles and practice&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;com-foco-em-python&quot;&gt;Com foco em Python&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1783555130&quot;&gt;Python Machine Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/149190142X&quot;&gt;Data Science from Scratch: First Principles with Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491962291&quot;&gt;Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques for Building Intelligent Systems&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1449369413&quot;&gt;Introduction to Machine Learning with Python: A Guide for Data Scientists&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B01N4FUDSE&quot;&gt;Vital Introduction to Machine Learning with Python: Best Practices to Improve and Optimize Machine Learning Systems and Algorithms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1118961749&quot;&gt;Machine Learning in Python: Essential Techniques for Predictive Analysis&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491912057&quot;&gt;Python Data Science Handbook: Essential Tools for Working with Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1633430030&quot;&gt;Introducing Data Science: Big Data, Machine Learning, and more, using Python tools&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617291927&quot;&gt;Real-World Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;com-foco-em-r&quot;&gt;Com foco em R&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491910399&quot;&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1784393908&quot;&gt;Machine Learning with R&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1783982047&quot;&gt;Machine Learning With R Cookbook – 110 Recipes for Building Powerful Predictive Models with R&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1784390844&quot;&gt;R Machine Learning By Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/178398774X&quot;&gt;R Machine Learning Essentials&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/178398452X&quot;&gt;Mastering Machine Learning with R&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1461471370&quot;&gt;An Introduction to Statistical Learning: with Applications in R&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617291560&quot;&gt;Practical Data Science with R&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1461468485&quot;&gt;Applied Predictive Modeling&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0123969638&quot;&gt;R and Data Mining: Examples and Case Studies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Aqui vale fazer uma consideração: Temos a seguir uma listagem separada sobre Deep Learning. Isso se deve por essa ser uma técnica de Machine Learning que diz respeito a oportunidade de aprendizagem profunda com o uso de redes neurais.&lt;/p&gt;
+
+&lt;p&gt;Em momento oportuno devo vou compartilhar aqui mais informações sobre Deep Learning, como meus estudos, códigos e referências. Por hora, segue a bibliografia melhor avaliada sobre o tema.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;deep-learning&quot;&gt;Deep Learning&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0262035618&quot;&gt;Deep Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491914254&quot;&gt;Deep Learning: A Practitioner’s Approach&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491925612&quot;&gt;Fundamentals of Deep Learning: Designing Next-Generation Machine Intelligence Algorithms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491978511&quot;&gt;Learning TensorFlow: A guide to building deep learning systems&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617293873&quot;&gt;Machine Learning with TensorFlow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1786462168&quot;&gt;TensorFlow Machine Learning Cookbook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1786468573&quot;&gt;Getting Started with TensorFlow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1939902452&quot;&gt;TensorFlow for Machine Intelligence: A Hands-On Introduction to Learning Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;é-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
+</description>
+        <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
+        
+        
+        <category>IA</category>
+        
+        <category>Machine Learning</category>
+        
+        <category>Data Science</category>
+        
+        <category>Deep Learning</category>
         
       </item>
     
