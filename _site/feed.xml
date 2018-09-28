@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 27 Sep 2018 01:11:09 -0300</pubDate>
-    <lastBuildDate>Thu, 27 Sep 2018 01:11:09 -0300</lastBuildDate>
+    <pubDate>Fri, 28 Sep 2018 00:01:09 -0300</pubDate>
+    <lastBuildDate>Fri, 28 Sep 2018 00:01:09 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -76,6 +76,8 @@ De fato, vamos ver nos testes que é necessário calcular se nossa empreitada é
 &lt;p&gt;Como vimos, a CPU é otimizada para latência enquanto a GPU é otimizada para largura de banda.&lt;/p&gt;
 
 &lt;p&gt;A CPU é muito rápida porém lida com uma quantidade pequena de informação. Já a GPU é mais lenta porém lida com uma enorme quantidade de informação.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Para ambos os hardwares, existe a necessidade do tráfego de pacotes de dados. A CPU pode buscar alguns pacotes da memória RAM de forma muito veloz, enquanto a GPU para a mesma tarefa vai enfrentar uma latência maior. O ponto aqui é que a CPU precisa ir muitas vezes na memória para buscar as informações enquanto a GPU pode trabalhar uma quantidade muito superior.&lt;/p&gt;
 

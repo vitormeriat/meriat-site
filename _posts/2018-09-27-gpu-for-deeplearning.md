@@ -81,6 +81,8 @@ Como vimos, a CPU é otimizada para latência enquanto a GPU é otimizada para l
 
 A CPU é muito rápida porém lida com uma quantidade pequena de informação. Já a GPU é mais lenta porém lida com uma enorme quantidade de informação.
 
+<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap.png" style="margin-bottom: 0px !important;"></p>
+
 Para ambos os hardwares, existe a necessidade do tráfego de pacotes de dados. A CPU pode buscar alguns pacotes da memória RAM de forma muito veloz, enquanto a GPU para a mesma tarefa vai enfrentar uma latência maior. O ponto aqui é que a CPU precisa ir muitas vezes na memória para buscar as informações enquanto a GPU pode trabalhar uma quantidade muito superior.
 
 Em outras palavras, a CPU é boa em buscar pequenas quantidades de memória de forma extremamente rápida, enquanto a GPU consegue buscar grandes quantidades de memória por vez.
