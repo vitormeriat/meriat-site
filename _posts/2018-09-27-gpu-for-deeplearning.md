@@ -142,7 +142,7 @@ O importante é notar que além da evolução nos algorítmos e tecnicas, temos 
 
 ## Testes
 
-Este é um breve resumo dos testes realizados, toda a demonstração está no vídeo abaixo. Aqui vou apenas fazer um breve resumo e incluir alguns resultados que consegui. Todo o código fonte está no meu **github**, e pode ser baixado no seguinte link: [gpucpudemonstration](http://www.localhost/). 
+Este é um breve resumo dos testes realizados, toda a demonstração está no vídeo abaixo. Aqui vou apenas fazer um breve resumo e incluir alguns resultados que consegui. Todo o código fonte está no meu **github**, e pode ser baixado no seguinte link: [github.com/vitormeriat/presentations/gpu-for-deeplearning](https://github.com/vitormeriat/presentations/tree/master/06-gpu-for-deeplearning). 
 
 A primeira parte do nosso teste é verificar se temos uma GPU disponível. Fazemos isso rodando alguns comandos do **Linux** e outros do próprio **Tensorflow**.
 

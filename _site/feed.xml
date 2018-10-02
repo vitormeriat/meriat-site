@@ -3,10 +3,10 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Oct 2018 02:04:18 -0300</pubDate>
-    <lastBuildDate>Tue, 02 Oct 2018 02:04:18 -0300</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 02 Oct 2018 11:02:40 -0300</pubDate>
+    <lastBuildDate>Tue, 02 Oct 2018 11:02:40 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -138,7 +138,7 @@ Este é outro ponto a se considerar, temos vantagens em usar a GPU somente quand
 
 &lt;h2 id=&quot;testes&quot;&gt;Testes&lt;/h2&gt;
 
-&lt;p&gt;Este é um breve resumo dos testes realizados, toda a demonstração está no vídeo abaixo. Aqui vou apenas fazer um breve resumo e incluir alguns resultados que consegui. Todo o código fonte está no meu &lt;strong&gt;github&lt;/strong&gt;, e pode ser baixado no seguinte link: &lt;a href=&quot;http://www.localhost/&quot;&gt;gpucpudemonstration&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este é um breve resumo dos testes realizados, toda a demonstração está no vídeo abaixo. Aqui vou apenas fazer um breve resumo e incluir alguns resultados que consegui. Todo o código fonte está no meu &lt;strong&gt;github&lt;/strong&gt;, e pode ser baixado no seguinte link: &lt;a href=&quot;https://github.com/vitormeriat/presentations/tree/master/06-gpu-for-deeplearning&quot;&gt;github.com/vitormeriat/presentations/gpu-for-deeplearning&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;A primeira parte do nosso teste é verificar se temos uma GPU disponível. Fazemos isso rodando alguns comandos do &lt;strong&gt;Linux&lt;/strong&gt; e outros do próprio &lt;strong&gt;Tensorflow&lt;/strong&gt;.&lt;/p&gt;
 
@@ -215,8 +215,8 @@ CPU times [0.28919482231140137, 0.36597657203674316, 0.4756290912628174, 0.61246
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 27 Sep 2018 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2018/09/27/gpu-for-deeplearning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/09/27/gpu-for-deeplearning/</guid>
+        <link>/2018/09/27/gpu-for-deeplearning/</link>
+        <guid isPermaLink="true">/2018/09/27/gpu-for-deeplearning/</guid>
         
         <category>ai</category>
         
@@ -403,8 +403,8 @@ $ jupyter notebook --no-browser
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 20 Nov 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</guid>
+        <link>/2017/11/20/jupyter-notebook-vm-azure/</link>
+        <guid isPermaLink="true">/2017/11/20/jupyter-notebook-vm-azure/</guid>
         
         <category>ai</category>
         
@@ -711,8 +711,8 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 06 Aug 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</guid>
+        <link>/2017/08/06/conversational-interfaces-nlp-bots/</link>
+        <guid isPermaLink="true">/2017/08/06/conversational-interfaces-nlp-bots/</guid>
         
         
         <category>AI</category>
@@ -1076,8 +1076,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 </description>
         <pubDate>Wed, 07 Jun 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/06/07/custom-vision-ms/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/06/07/custom-vision-ms/</guid>
+        <link>/2017/06/07/custom-vision-ms/</link>
+        <guid isPermaLink="true">/2017/06/07/custom-vision-ms/</guid>
         
         
         <category>AI</category>
@@ -1211,8 +1211,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</guid>
+        <link>/2017/05/17/microsoft-and-ai-for-the-future/</link>
+        <guid isPermaLink="true">/2017/05/17/microsoft-and-ai-for-the-future/</guid>
         
         
         <category>IA</category>
@@ -1397,8 +1397,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/20/variables-in-statistic/</guid>
+        <link>/2017/04/20/variables-in-statistic/</link>
+        <guid isPermaLink="true">/2017/04/20/variables-in-statistic/</guid>
         
         
         <category>Statistics</category>
@@ -1669,8 +1669,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/14/hello-world-r/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/14/hello-world-r/</guid>
+        <link>/2017/04/14/hello-world-r/</link>
+        <guid isPermaLink="true">/2017/04/14/hello-world-r/</guid>
         
         
         <category>R</category>
@@ -2191,8 +2191,8 @@ FamilySize            int64
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
+        <link>/2017/03/18/titanic-machine-learning-from-disaster/</link>
+        <guid isPermaLink="true">/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
         
         <category>IA</category>
@@ -2290,8 +2290,8 @@ FamilySize            int64
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
@@ -2403,8 +2403,8 @@ FamilySize            int64
 &lt;h3 id=&quot;é-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
 </description>
         <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
+        <link>/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">/2017/02/07/literatura-classica-machine-learning/</guid>
         
         
         <category>IA</category>
