@@ -100,8 +100,6 @@
 							<a href="/about/"> About me </a>
 						</li>
 					</ul>
-					<!-- <a href="http://www.vitormeriat.com.br/" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Blog</a> -->
-          <!-- <a href="/about/" class="">About me</a> -->
 				</nav>
 			</div>
 			<!-- Main Nav -->
@@ -192,7 +190,7 @@ De fato, vamos ver nos testes que é necessário calcular se nossa empreitada é
 
 <p>A CPU é muito rápida porém lida com uma quantidade pequena de informação. Já a GPU é mais lenta porém lida com uma enorme quantidade de informação.</p>
 
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap" style="margin-bottom: 0px !important;" /></p>
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap.png" style="width: 100%; margin-bottom: 0px !important;" /></p>
 
 <p>Para ambos os hardwares, existe a necessidade do tráfego de pacotes de dados. A CPU pode buscar alguns pacotes da memória RAM de forma muito veloz, enquanto a GPU para a mesma tarefa vai enfrentar uma latência maior. O ponto aqui é que a CPU precisa ir muitas vezes na memória para buscar as informações enquanto a GPU pode trabalhar uma quantidade muito superior.</p>
 
@@ -212,7 +210,17 @@ Hoje temos boas <b>CPUs</b> com cerca de <b>50GB/s</b> para a largura de banda d
 
 <p>A GPU separa uma porção muito grande de sua área útil para tarefas de processamento, ao passo que a CPU usa bastante desta área para implementar a sua memória de cache.</p>
 
-<p>Para uma comparação mais realista, a <strong>NVIDIA GTX 670</strong> - uma placa gráfica de uso geral - possui 1344 núcleos CUDA de 980 MHz cada, enquanto um processador Intel Sandybridge i7-2600 com 4 núcleos trabalha em 3,4 GHz.</p>
+<p>Para uma comparação mais realista, a <strong>NVIDIA GTX 670</strong> - uma placa gráfica de uso geral - possui 1.344 núcleos CUDA trabalhando em 980 MHz, enquanto um processador Intel Sandybridge i7-2600 com 4 núcleos trabalha em 3,4 GHz.</p>
+
+<p>Ainda em relação a questão de desempenho, no geral a GPU é instalada no barramento PCIe, que conhecidamente possui uma comunicação mais lenta se comparada com a comunicação da CPU e a memória do sistema.</p>
+
+<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
+<p style="padding: 1.6em; font-family: courier;">
+Este é outro ponto a se considerar, temos vantagens em usar a GPU somente quando a quantidade de cálculos a serem feitos, somado ao tempo de transferência do sistema-GPU se torna insignificante em relação ao tempo de cálculo em si.
+</p>
+</div>
+
+<p>Não existe uma proporção indicada. Neste momento estou me aprofundando no tema, revisando códigos e estudos que realizei tenando comparar o desempenho de determinadas implementações na CPU e na GPU. Particularmente, minha  tendência foi programar tudo o possível no <strong>Tensorflow</strong> para GPU, o que hoje, aprendi ser um erro.</p>
 
 <h2 id="frameworks-para-gpu">Frameworks para GPU</h2>
 
@@ -226,6 +234,8 @@ Hoje temos boas <b>CPUs</b> com cerca de <b>50GB/s</b> para a largura de banda d
 <p>A principal diferença entre o <strong>CUDA</strong> e o <strong>OpenCL</strong> é que o CUDA é uma estrutura proprietária criada pela Nvidia e OpenCL é open source. Cada uma dessas abordagens traz suas próprias vantagens e desvantagens.</p>
 
 <p>O consenso geral é que, se houver a possibilidade, prefira utilizar o CUDA, uma vez que os seus resultados em relação a desempenho hoje são considerados melhores. A razão deste ganho, é que a <strong>NVIDIA</strong>, proprietária do CUDA, fornece um grande suporte sem falar em todas as pesquisas e atualizações mantidas pela empresa.</p>
+
+<p>Não estou elencado aqui <strong>frameworks</strong> como <strong>Tensorflow</strong>, <strong>Keras</strong>, <strong>CNTK</strong> e afins, uma vez que estes são frameworks criados com foco em <strong>deep learning</strong>, onde apenas existe suporte a utilização da GPU. Eles não são focados na programação efetiva da GPU.</p>
 
 <h2 id="the-future">The Future</h2>
 
@@ -241,9 +251,63 @@ Hoje temos boas <b>CPUs</b> com cerca de <b>50GB/s</b> para a largura de banda d
 
 <h2 id="testes">Testes</h2>
 
-<p>Estou gravando um vídeo para demonstrar o ganho na utilização de GPU x CPU para cálculos matriciais. O vídeo será uma comparação de diversos cálculos sendo processados na CPU e na GPU.</p>
+<p>Este é um breve resumo dos testes realizados, toda a demonstração está no vídeo abaixo. Aqui vou apenas fazer um breve resumo e incluir alguns resultados que consegui. Todo o código fonte está no meu <strong>github</strong>, e pode ser baixado no seguinte link: <a href="http://www.localhost/">gpucpudemonstration</a>.</p>
 
-<p>Assim que o vídeo estiver pronto, posto o link aqui…</p>
+<p>A primeira parte do nosso teste é verificar se temos uma GPU disponível. Fazemos isso rodando alguns comandos do <strong>Linux</strong> e outros do próprio <strong>Tensorflow</strong>.</p>
+
+<p>O código que eu utilizo é basicamente criar uma matriz de <strong>N</strong> por <strong>N</strong>, onde <strong>N</strong> é um número que vamos aumentando gradativamente para verificar a capacidade dos devices (<strong>GPU, CPU</strong>), para realizar esses cálculos.</p>
+
+<p>Para verificar a importância dos <strong>frameworks</strong> especializados em <strong>Deep Learning</strong>, fiz o primeiro teste rodando sobre <strong>Numpy</strong>, depois as mesmas operações rodando sobre <strong>Tensorflow</strong>, tanto na CPU quanto na GPU. No caso do Tensorflow, isso é determinado pela variável <strong>device_name</strong>. O Numpy, como descrito no vídeo, não oferece suporte a GPU.</p>
+
+<h5 id="numpy">Numpy</h5>
+<pre style="font-size: 1.4em !important">
+    <code class="python">
+  A=np.random.normal(size=(shapeMtx, shapeMtx))
+  B=np.random.normal(size=(shapeMtx, shapeMtx))
+
+  subtract = np.subtract(A, B)
+  add = np.divide(A, B)
+  multiply = np.multiply(A, B)
+    </code>
+</pre>
+
+<h5 id="tensorflow">Tensorflow</h5>
+<pre style="font-size: 1.4em !important">
+    <code class="python">
+  with tf.device(device_name):
+    A = tf.random_uniform(shape=shape, minval=0, maxval=1)
+    B = tf.random_uniform(shape=shape, minval=0, maxval=1)
+    
+    subtract_operation = tf.subtract(A, B)
+    divide_operation = tf.divide(A, B)
+    multiply_operation = tf.multiply(A, B)
+
+  startTime = datetime.now()
+  with tf.Session(config=tf.ConfigProto(allow_soft_placement=True, log_device_placement=True)) as session:
+    session.run(subtract_operation)
+    session.run(divide_operation)
+    session.run(multiply_operation)
+    </code>
+</pre>
+
+<p>Como o exemplificado no vídeo, os tempos se alteram a medida em que aumentamos as dimensões de nossa matriz. Vemos que a CPU tem vantagem quando os cáculos são menores, enquando a GPU vai ganhando a medida em que os cálculos vão se tornando maiores.</p>
+
+<p>Em relação a performance, podemos observar no segundo teste, que a GPU possui um aumento muito menor de tempo para realizar determinados cálculos se comparado a CPU.</p>
+
+<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/graphic_test_performance.png" style="width: 100%; margin-bottom: 0px !important;" /></p>
+
+<p>Neste teste especificamente, o tempo de execução na GPU tem um aumento tão pequeno em relação ao da CPU, que aparentemente temos a impressão que para o gráfico que estamos analisando apenas os tempos da CPU sofreram alteração. Como pode ser visto abaixo, ao imprimir os tempos, é possível realizar uma validação mais precisa.</p>
+
+<pre><code>Output
+...
+
+GPU times [0.13785886764526367, 0.007532835006713867, 0.00854039192199707, 0.009807109832763672, 0.010930776596069336, 0.011966943740844727, 0.012804269790649414, 0.014283418655395508, 0.01694202423095703, 0.01774454116821289, 0.019214153289794922, 0.019917011260986328, 0.0216977596282959, 0.022628068923950195, 0.025137662887573242, 0.02427196502685547, 0.028975486755371094, 0.029575824737548828, 0.028879880905151367, 0.03321361541748047, 0.032982587814331055, 0.03345513343811035, 0.03653764724731445, 0.035642385482788086, 0.03930830955505371, 0.04390144348144531, 0.045243024826049805, 0.0432429313659668, 0.04667401313781738, 0.051265716552734375, 0.05484771728515625, 0.05348992347717285, 0.05866360664367676, 0.05812430381774902, 0.05793881416320801, 0.0610194206237793, 0.06328725814819336, 0.06955838203430176, 0.06947898864746094, 0.07118368148803711]
+
+CPU times [0.28919482231140137, 0.36597657203674316, 0.4756290912628174, 0.6124699115753174, 0.7608673572540283, 0.9239287376403809, 1.092865228652954, 1.3050789833068848, 1.5583577156066895, 1.8389079570770264, 2.1097397804260254, 2.445690393447876, 2.819725275039673, 3.2182812690734863, 3.6523375511169434, 4.114335775375366, 4.665944337844849, 5.188570737838745, 5.789913654327393, 6.40700364112854, 7.094855308532715, 7.836256980895996, 8.639605522155762, 9.486554145812988, 10.296368837356567, 11.298496007919312, 12.23202109336853, 13.28882646560669, 14.383679151535034, 15.580460548400879, 16.79129123687744, 18.077450037002563, 19.419445753097534, 20.82856273651123, 22.34893012046814, 23.885477781295776, 25.47702121734619, 27.175251007080078, 28.97485899925232, 30.87795114517212] 
+</code></pre>
+<p>Abaixo segue o vídeo da demonstração completa…</p>
+
+<p align="center"><iframe height="506" src="https://www.youtube.com/embed/0qyZkh9OuaY?rel=0" width="100%" allowfullscreen="" style="border: 0px;"></iframe></p>
 
 <h2 id="conlusão">Conlusão</h2>
 
@@ -286,7 +350,7 @@ Hoje temos boas <b>CPUs</b> com cerca de <b>50GB/s</b> para a largura de banda d
   <div style="margin-top: 60px; margin-bottom: 60px;">
     
     
-      11 minutes to read
+      14 minutes to read
     
   </div>
 
@@ -310,7 +374,6 @@ Hoje temos boas <b>CPUs</b> com cerca de <b>50GB/s</b> para a largura de banda d
 					<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
 					<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
 					<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
-					<li><a href="https://www.facebook.com/vitormeriat/" target="_blank"><i class="fa fa-facebook fa-1x"></i> Facebook</a></li>
 					<li><a href="https://www.youtube.com/user/vitormeriat/" target="_blank"><i class="fa fa-youtube fa-1x"></i> Youtube</a></li>
 				</ul>
 				<p class="fh5co-copyright">

@@ -8,7 +8,7 @@ categories:
     - Microsoft Azure
     - Deep Learning
 description: "Microsoft and Artificial Intelligence in Build 2017"
-image-full: "https://qzprod.files.wordpress.com/2016/03/microsoft_tai.png"
+image-full: "http://meriatblob.blob.core.windows.net/images/2017/05/17/microsoft_tai.png"
 ---
 
 Aproveitando o famoso [Microsoft Build](https://build.microsoft.com/) que em 2017 ocorreu em Seattle, e juntando ao convite para resumir o que foi apresentando durante esta conferência em relação a AI no [Delivering Software meetup](https://www.meetup.com/DeliveringSoftware/events/239680578/), vou expor um pouco do histórico da Microsoft e conjecturar sobre sua visão de futuro no quesito Artificial Intelligence.

@@ -81,7 +81,7 @@ Como vimos, a CPU é otimizada para latência enquanto a GPU é otimizada para l
 
 A CPU é muito rápida porém lida com uma quantidade pequena de informação. Já a GPU é mais lenta porém lida com uma enorme quantidade de informação.
 
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap.png" style="margin-bottom: 0px !important;"></p>
+<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap.png" style="width: 100%; margin-bottom: 0px !important;"></p>
 
 Para ambos os hardwares, existe a necessidade do tráfego de pacotes de dados. A CPU pode buscar alguns pacotes da memória RAM de forma muito veloz, enquanto a GPU para a mesma tarefa vai enfrentar uma latência maior. O ponto aqui é que a CPU precisa ir muitas vezes na memória para buscar as informações enquanto a GPU pode trabalhar uma quantidade muito superior.
 
@@ -101,7 +101,17 @@ A GPU é um magnífico exemplo de hardware paralelo. Parafraseando o Manual de
 
 A GPU separa uma porção muito grande de sua área útil para tarefas de processamento, ao passo que a CPU usa bastante desta área para implementar a sua memória de cache.
 
-Para uma comparação mais realista, a **NVIDIA GTX 670** - uma placa gráfica de uso geral - possui 1344 núcleos CUDA de 980 MHz cada, enquanto um processador Intel Sandybridge i7-2600 com 4 núcleos trabalha em 3,4 GHz.
+Para uma comparação mais realista, a **NVIDIA GTX 670** - uma placa gráfica de uso geral - possui 1.344 núcleos CUDA trabalhando em 980 MHz, enquanto um processador Intel Sandybridge i7-2600 com 4 núcleos trabalha em 3,4 GHz.
+
+Ainda em relação a questão de desempenho, no geral a GPU é instalada no barramento PCIe, que conhecidamente possui uma comunicação mais lenta se comparada com a comunicação da CPU e a memória do sistema.
+
+<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
+<p style="padding: 1.6em; font-family: courier;">
+Este é outro ponto a se considerar, temos vantagens em usar a GPU somente quando a quantidade de cálculos a serem feitos, somado ao tempo de transferência do sistema-GPU se torna insignificante em relação ao tempo de cálculo em si.
+</p>
+</div>
+
+Não existe uma proporção indicada. Neste momento estou me aprofundando no tema, revisando códigos e estudos que realizei tenando comparar o desempenho de determinadas implementações na CPU e na GPU. Particularmente, minha  tendência foi programar tudo o possível no **Tensorflow** para GPU, o que hoje, aprendi ser um erro.
 
 
 ## Frameworks para GPU
@@ -114,6 +124,9 @@ Em relação a programação para GPU, podemos elencar 2 frameworks como princip
 A principal diferença entre o **CUDA** e o **OpenCL** é que o CUDA é uma estrutura proprietária criada pela Nvidia e OpenCL é open source. Cada uma dessas abordagens traz suas próprias vantagens e desvantagens.
 
 O consenso geral é que, se houver a possibilidade, prefira utilizar o CUDA, uma vez que os seus resultados em relação a desempenho hoje são considerados melhores. A razão deste ganho, é que a **NVIDIA**, proprietária do CUDA, fornece um grande suporte sem falar em todas as pesquisas e atualizações mantidas pela empresa.
+
+Não estou elencado aqui **frameworks** como **Tensorflow**, **Keras**, **CNTK** e afins, uma vez que estes são frameworks criados com foco em **deep learning**, onde apenas existe suporte a utilização da GPU. Eles não são focados na programação efetiva da GPU.
+
 
 ## The Future
 
@@ -129,9 +142,64 @@ O importante é notar que além da evolução nos algorítmos e tecnicas, temos 
 
 ## Testes
 
-Estou gravando um vídeo para demonstrar o ganho na utilização de GPU x CPU para cálculos matriciais. O vídeo será uma comparação de diversos cálculos sendo processados na CPU e na GPU.
+Este é um breve resumo dos testes realizados, toda a demonstração está no vídeo abaixo. Aqui vou apenas fazer um breve resumo e incluir alguns resultados que consegui. Todo o código fonte está no meu **github**, e pode ser baixado no seguinte link: [gpucpudemonstration](http://www.localhost/). 
 
-Assim que o vídeo estiver pronto, posto o link aqui... 
+A primeira parte do nosso teste é verificar se temos uma GPU disponível. Fazemos isso rodando alguns comandos do **Linux** e outros do próprio **Tensorflow**.
+
+O código que eu utilizo é basicamente criar uma matriz de **N** por **N**, onde **N** é um número que vamos aumentando gradativamente para verificar a capacidade dos devices (**GPU, CPU**), para realizar esses cálculos.
+
+Para verificar a importância dos **frameworks** especializados em **Deep Learning**, fiz o primeiro teste rodando sobre **Numpy**, depois as mesmas operações rodando sobre **Tensorflow**, tanto na CPU quanto na GPU. No caso do Tensorflow, isso é determinado pela variável **device_name**. O Numpy, como descrito no vídeo, não oferece suporte a GPU.
+
+##### Numpy
+<pre style="font-size: 1.4em !important">
+    <code class="python">
+  A=np.random.normal(size=(shapeMtx, shapeMtx))
+  B=np.random.normal(size=(shapeMtx, shapeMtx))
+
+  subtract = np.subtract(A, B)
+  add = np.divide(A, B)
+  multiply = np.multiply(A, B)
+    </code>
+</pre>
+
+##### Tensorflow
+<pre style="font-size: 1.4em !important">
+    <code class="python">
+  with tf.device(device_name):
+    A = tf.random_uniform(shape=shape, minval=0, maxval=1)
+    B = tf.random_uniform(shape=shape, minval=0, maxval=1)
+    
+    subtract_operation = tf.subtract(A, B)
+    divide_operation = tf.divide(A, B)
+    multiply_operation = tf.multiply(A, B)
+
+  startTime = datetime.now()
+  with tf.Session(config=tf.ConfigProto(allow_soft_placement=True, log_device_placement=True)) as session:
+    session.run(subtract_operation)
+    session.run(divide_operation)
+    session.run(multiply_operation)
+    </code>
+</pre>
+
+Como o exemplificado no vídeo, os tempos se alteram a medida em que aumentamos as dimensões de nossa matriz. Vemos que a CPU tem vantagem quando os cáculos são menores, enquando a GPU vai ganhando a medida em que os cálculos vão se tornando maiores.
+
+Em relação a performance, podemos observar no segundo teste, que a GPU possui um aumento muito menor de tempo para realizar determinados cálculos se comparado a CPU. 
+
+<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/graphic_test_performance.png" style="width: 100%; margin-bottom: 0px !important;"></p>
+
+Neste teste especificamente, o tempo de execução na GPU tem um aumento tão pequeno em relação ao da CPU, que aparentemente temos a impressão que para o gráfico que estamos analisando apenas os tempos da CPU sofreram alteração. Como pode ser visto abaixo, ao imprimir os tempos, é possível realizar uma validação mais precisa. 
+
+```
+Output
+...
+
+GPU times [0.13785886764526367, 0.007532835006713867, 0.00854039192199707, 0.009807109832763672, 0.010930776596069336, 0.011966943740844727, 0.012804269790649414, 0.014283418655395508, 0.01694202423095703, 0.01774454116821289, 0.019214153289794922, 0.019917011260986328, 0.0216977596282959, 0.022628068923950195, 0.025137662887573242, 0.02427196502685547, 0.028975486755371094, 0.029575824737548828, 0.028879880905151367, 0.03321361541748047, 0.032982587814331055, 0.03345513343811035, 0.03653764724731445, 0.035642385482788086, 0.03930830955505371, 0.04390144348144531, 0.045243024826049805, 0.0432429313659668, 0.04667401313781738, 0.051265716552734375, 0.05484771728515625, 0.05348992347717285, 0.05866360664367676, 0.05812430381774902, 0.05793881416320801, 0.0610194206237793, 0.06328725814819336, 0.06955838203430176, 0.06947898864746094, 0.07118368148803711]
+
+CPU times [0.28919482231140137, 0.36597657203674316, 0.4756290912628174, 0.6124699115753174, 0.7608673572540283, 0.9239287376403809, 1.092865228652954, 1.3050789833068848, 1.5583577156066895, 1.8389079570770264, 2.1097397804260254, 2.445690393447876, 2.819725275039673, 3.2182812690734863, 3.6523375511169434, 4.114335775375366, 4.665944337844849, 5.188570737838745, 5.789913654327393, 6.40700364112854, 7.094855308532715, 7.836256980895996, 8.639605522155762, 9.486554145812988, 10.296368837356567, 11.298496007919312, 12.23202109336853, 13.28882646560669, 14.383679151535034, 15.580460548400879, 16.79129123687744, 18.077450037002563, 19.419445753097534, 20.82856273651123, 22.34893012046814, 23.885477781295776, 25.47702121734619, 27.175251007080078, 28.97485899925232, 30.87795114517212] 
+```
+Abaixo segue o vídeo da demonstração completa...
+
+<p align="center"><iframe height="506" src="https://www.youtube.com/embed/0qyZkh9OuaY?rel=0" width="100%" allowfullscreen style="border: 0px;"></iframe></p>
 
 
 ## Conlusão
