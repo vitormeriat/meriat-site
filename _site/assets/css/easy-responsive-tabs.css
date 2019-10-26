@@ -136,7 +136,6 @@ h2.resp-tab-title:last-child {
 .resp-arrow {
     float: right;
     margin-top: 10px;
-    -webkit-transition: all .2s ease;
     transition:         all .2s ease;
 }
 

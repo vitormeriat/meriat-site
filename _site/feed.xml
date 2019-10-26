@@ -3,11 +3,331 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Oct 2018 23:14:21 -0300</pubDate>
-    <lastBuildDate>Thu, 04 Oct 2018 23:14:21 -0300</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 26 Oct 2019 16:11:31 -0300</pubDate>
+    <lastBuildDate>Sat, 26 Oct 2019 16:11:31 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>NLP under the hood</title>
+        <description>&lt;div align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/capa.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;introdução&quot;&gt;Introdução&lt;/h1&gt;
+
+&lt;p&gt;O método científico supõe que a observação dos fatos seja anterior ao
+estabelecimento de uma hipótese e que os fatos observados sejam examinados sistematicamente mediante experimentação e uma teoria adequada.&lt;/p&gt;
+
+&lt;p&gt;Com isso em mente, se faz necessário o estudo de alguns pontos utilizados na disciplina de processamento de linguagem natural de forma  a obter a base necessária para uma correta exploração e aplicação das possibilidades.&lt;/p&gt;
+
+&lt;p&gt;Esse trabalho se propõe a trazer uma introdução ao estudo do &lt;code&gt;Processamento de Linguagem Natural&lt;/code&gt; (&lt;code&gt;Natural Language Processing&lt;/code&gt;). Minha intenção é olhar para sua base teórica enquanto disciplina. Sendo assim vamos passar por algumas definições e conceitos antes de avançar nas questões práticas. Vamos falar sobre a estrutura de uma linguagem, compiladores, árvores sintáticas e as complexidades da linguagem natural antes do famoso mão na massa, até por que &lt;code&gt;talk is cheap, show me the code&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Antes de iniciar, se faz importante informar que alguns dos termos utilizados serão apresentados em inlgês e português. Para que não seja causada nenhuma estranheza ao leitor, vou priorizar os termos técnicos em inglês, e achando necessário realizo a explicação/tradução do mesmo. Para facilitar a leitura, algumas referências serão colocadas durante o texto. As demais estão todas na sessão de &lt;strong&gt;Referências&lt;/strong&gt; ao final deste texto.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 4em; margin-top: 4em; background-color: #35d648; color: #382d2d&quot;&gt;
+&lt;p style=&quot;padding: 1.8em; font-family: courier; font-size: 1.4em;&quot;&gt;
+“Minha pátria é minha língua.” &lt;b&gt;Fernando Pessoa&lt;/b&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;conceituação-e-história&quot;&gt;Conceituação e história&lt;/h1&gt;
+
+&lt;p&gt;Este tópico é de grande importância, visto que muito da problemática encontrada na linguagem natural e sua compreensão, fazem parte do domínio computacional. Sendo assim, nosso objetivo quanto pesquisadores em Processamento de Linguagem Natural também inclui a resolução desses desafios.&lt;/p&gt;
+
+&lt;h2 id=&quot;teoria-da-comunicação&quot;&gt;Teoria da comunicação&lt;/h2&gt;
+
+&lt;p&gt;Os seres humanos são considerados animais sociais e como tal, sabemos que a linguagem é nossa principal ferramenta de comunicação. Sabemos que a música é tão remota quanto o início da comunicação verbalizada, mas a principal diferença está nos papéis exercidos. Enquanto os sinais sonoros emitidos por instrumentos rudimentares foram seguindo o caminho da subjetividade, os sons cada vez mais coordenados dos seres humanos foram seguindo para se tornarem mais claros. Partimos dos grunidos para linguagens extramamente sofisticadas.&lt;/p&gt;
+
+&lt;p&gt;Mesmo após tanta evolução na comunicação falada e escrita, ainda vemos que a linguagem é um assunto complexo. A linguagem é cheia de abstrações, fluída, ambígua e muitas vezes confusa. Apesar das definições gramaticais, a linguagem é um organismo vivo e se renova muito rapidamente. Diversos termos novos surgem a cada dia, e termos conhecidos recebem uma nova significância da forma já habitual.&lt;/p&gt;
+
+&lt;p&gt;Quando falamos em teoria da comunicação, em termos básicos temos o papel do emissor, receptor, mensagem, código, contexto e canal. Cada um desses componentes é importante para determinar uma comunicação de sucesso. Se o emissor enviar uma mensagem para um receptor usando um código que não é conhecido pelo mesmo, ou se o contexto for desconhecido pelo receptor, ou se o canal de comunicação for insuficiente, a comunicação pode ser ruidosa e falha. Se tudo isso ainda for certeiro, temos de levar em conta que a mensagem vai ser interpretada por um receptor que vai levar em consideração sua perspectiva de mundo.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;
+&lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/theory_of_communications_2.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;
+&lt;/div&gt;
+&lt;div align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;
+&lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/theory_of_communications.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A fonte (source) produz uma mensagem. Uma mensagem pode ser um sinal de fumaça, telégrafo, rádio e etc.&lt;/li&gt;
+  &lt;li&gt;Um transmissor (transmitter) traduz a mensagem em um sinal que possa ser enviado por um meio específico.&lt;/li&gt;
+  &lt;li&gt;O canal (medium) é apenas o meio usado para transmitir o sinal do transmissor para o receptor. Pode ser um par de fios, um cabo coaxial, banda de radiofrequência, feixe de luz e etc.&lt;/li&gt;
+  &lt;li&gt;O ruído (Noise) é tudo aquilo que possa interferir no sinal.&lt;/li&gt;
+  &lt;li&gt;O receptor (receiver) normalmente executa a operação inversa da realizada pelo transmissor, reconstruindo a mensagem a partir do sinal, para que o destino possa compreender.&lt;/li&gt;
+  &lt;li&gt;O destino (destination) é a pessoa (ou coisa) a quem a mensagem se destina.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;linguística-base&quot;&gt;Linguística base&lt;/h2&gt;
+
+&lt;p&gt;Se tratando em linguística, temos o estudo sobre o uso e funcionamento das línguas naturais, independentemente da sua especificidade e diversidade. Nesta ciência possuímos diversas nomenclaturas, para nosso objetivo, precisamos conhecer os itens abaixo:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Língua&lt;/strong&gt;: A língua é, sobretudo, um instrumento de comunicação, e é essa a sua maior finalidade. Ela pertence aos falantes, que dela apropriam-se para estabelecer interações com a sociedade onde vivem. Quando dizemos que a língua é um instrumento do povo, dizemos que, embora existam as normas gramaticais que regem um idioma, cada falante opta por uma forma de expressão que mais lhe convém, originando aquilo que chamamos de fala. A fala, embora possa ser criativa, deve ser regida por regras maiores e socialmente estabelecidas, caso contrário, cada um de nós criaria sua própria língua, o que impossibilitaria a comunicação. Na fala encontramos as variações linguísticas, que jamais devem ser vistas como transgressões ao idioma, mas sim como uma prova de que a língua é viva e dinâmica.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Idioma&lt;/strong&gt;: O idioma é uma língua própria de um povo. Está relacionado com a existência de um Estado político, sendo utilizado para identificar uma nação em relação às demais. Por exemplo, no Brasil, o idioma oficial é o Português, comum à maioria dos falantes. Mesmo que existam comunidades que utilizem outros idiomas, apenas a língua portuguesa recebe o status de língua oficial. Existem países, como o Canadá, por exemplo, em que dois idiomas são considerados como oficiais, nesse caso, o francês e o inglês.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Dialeto&lt;/strong&gt;: O dialeto é a variedade de uma língua própria de uma região ou território e está relacionado com as variações linguísticas encontradas na fala de determinados grupos sociais. As variações linguísticas podem ser compreendidas a partir da análise de três diferentes fenômenos: exposição aos saberes convencionais (diferentes grupos sociais com maior ou menor acesso à educação formal utilizam a língua de maneiras diferentes); situação de uso (os falantes adequam-se linguisticamente às situações comunicacionais de acordo com o nível de formalidade) e contexto sociocultural (gírias e jargões podem dizer muito sobre grupos específicos formados por algum tipo de “simbiose” cultural).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Outros conceitos importantes e que serão abordados ao longo deste texto:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fonética&lt;/strong&gt;: estudo da realidade acústica, do funcionamento articulatório e anatómico e da interpretação percetiva dos sons de uma determinada língua natural.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fonologia&lt;/strong&gt;: estudo do sistema sonoro de uma língua, das regras subjacentes à combinação desses sons e do modo como esses sons exprimem distinções de significado.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Morfologia&lt;/strong&gt;: estudo da formação e da estrutura interna das palavras na língua.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Sintaxe&lt;/strong&gt;: estudo das regras subjacentes à organização das palavras numa frase gramaticalmente bem formada.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Semântica&lt;/strong&gt;: estudo do significado da produção e interpretação de palavras e frases.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Pragmática&lt;/strong&gt;: estudo do uso da língua em contexto por oposição ao estudo do sistema da língua.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;influências-e-formação-da-linguagem&quot;&gt;Influências e formação da linguagem&lt;/h2&gt;
+
+&lt;div align=&quot;center&quot; style=&quot;width: 100%; font-size: 0.8em; font-family: courier;&quot;&gt;
+&lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/lusofonos.jpg&quot; style=&quot;margin-bottom: 0px !important; width: 80%;&quot; /&gt;
+&lt;p&gt;ilustração: Guilhere Lira/Mundo Estranho&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Vamos fazer um exercício olhando para nossa lingua natal. Quantos países têm a lingua portuguesa como sua lingua mater? Desses países, todos falam exatamente a mesma lingua? Se iniciarmos uma comparação básica entre o que é falado no Brasil, Portugal, Moçanbique e Angola, haverá muita diferença?&lt;/p&gt;
+
+&lt;p&gt;As grandes diferenças são as influências de línguas nativas e estrangeiras, que resultam em palavras e expressões particulares. O português brasileiro tem influência de línguas indígenas e de vários idiomas externos utilizados pelos os imigrantes, como árabes e italianos.&lt;/p&gt;
+
+&lt;p&gt;Em Angola, há 11 línguas e diversos dialetos que transformam o português incluindo diveras palavras ao vocabulário. Em Moçambique, o português é influenciado pelas 20 línguas locais. Apesar de ser o idioma oficial do país, em Moçambique ele é falado por apenas 40% da população. O português de Portugal possui grandes diferenças em relação ao portugês brasileiro. Em questões gramaticais, o português de Angola e Moçambique são mais próximos do português europeu do que o brasileiro.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Por tudo isso, nos três países, há regionalismos que podem deixar o idioma incompreensível mesmo entre os lusófonos.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Por exemplo, aqui no Brasil nós adoramos abusar do tempo verbal gerúndio, muito pouco usado em outros países em questão. Por exemplo, usamos a frase &lt;strong&gt;“estou fazendo isso”&lt;/strong&gt; no lugar de &lt;strong&gt;“estou a fazer isso”&lt;/strong&gt;. Há também o gerundismo (uso desnecessário do gerúndio) como em &lt;strong&gt;“vamos estar averiguando”&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; style=&quot;width: 100%; font-size: 0.8em; font-family: courier;&quot;&gt;
+&lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/same-language.jpg&quot; style=&quot;margin-bottom: 0px !important; width: 80%;&quot; /&gt;
+&lt;p&gt; ilustração: Pilar Hernandez&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Em Moçambique, a língua portuguesa também sofre modificações baseadas nas regras gramaticais de línguas locais. É o caso do verbo “nascer”, que lá é usado como na língua changana: “Meus pais nasceram minha irmã”. O mesmo vale para “Nos disseram que hoje não há aula”, que fica: “Nós fomos ditos que hoje não há aulas”.&lt;/p&gt;
+
+&lt;p&gt;Essas estruturas são fundamentais para um correto entendimento e aplicação dos fundamentos em processamento de linguagem natural.&lt;/p&gt;
+
+&lt;h2 id=&quot;história&quot;&gt;História&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1250…&lt;/li&gt;
+  &lt;li&gt;1350…&lt;/li&gt;
+  &lt;li&gt;1450…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div align=&quot;center&quot; style=&quot;width: 100%; font-size: 0.8em; font-family: courier;&quot;&gt;
+&lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/imitation-game.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;linguagem-natural-e-sua-complexidade&quot;&gt;Linguagem Natural e sua Complexidade&lt;/h1&gt;
+
+&lt;p&gt;A complexidade envolvida na linguagem natural passa por sua estruturação formal (gramática), a questões mais subjetivas como interpretação. Adicione a isso o fato que temos diversas linguagens no mundo, todas com estruturas e significâncias diferentes. Ainda temos toda a problemática envolvendo as questões de engenharia, como por exemplo, processar grandes quantidades de texto, mas isso será abordado em outro momento. Para ilustração, vamos a um exemplo simples:&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; style=&quot;width: 100%; font-size: 0.8em; font-family: courier;&quot;&gt;
+&lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/linguistics_club.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;
+&lt;p&gt;ref: https://www.xkcd.com/1602/&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;No exemplo acima, um dos personangens pergunta se o outro irá participar da convensão de linguística. A resposta é dizer que só uma pessoa que sabe o significado da palavra em inglês &lt;strong&gt;sesquiannual&lt;/strong&gt; pode participar. Isso por que essa é uma palavra pouco usada, e portanto, se você a usar em uma conversação, é provável que a outra pessoa não entenda o seu propósito. A palavra em questão se refere a um período de 18 meses, ou um ano e meio.&lt;/p&gt;
+
+&lt;p&gt;sesquiannual: Occurring once every one and a half years (i.e. once every 18 months).&lt;/p&gt;
+
+&lt;h2 id=&quot;compreensão-semântica&quot;&gt;Compreensão semântica&lt;/h2&gt;
+
+&lt;p&gt;O estudo da semântica alude à parte da linguagem referente ao significado das palavras e expressões que a mesma pode gerar. Neste contexto, cada palavra possui uma semântica própria, que difere da sua classificação enquanto função sintática ou morfológica.&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
+&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+A comunicação humana está essencialmente ligada à capacidade de utilizar meios &lt;b&gt;semióticos&lt;/b&gt; (como a linguagem) para transmitir as &lt;b&gt;&quot;intenções comunicativas&quot;&lt;/b&gt; de um indivíduo e a capacidade de reconhecer tais intenções. DASCAL, Marcelo. Interpretação e compreensão. 2006
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Contudo, de maneira geral, a semântica não é tratada de forma isolada em cada palavra, mas sim generalizada a contextos mais amplos. Assim, em um diálogo, por exemplo, pode-se identificar um significado particular em cada frase e um significado mais geral pertinente ao assunto tratado pelas pessoas que promovem o diálogo. Da mesma forma, em um texto dissertativo, embora cada parágrafo possa expressar um sentido particular, é a união de todos os parágrafos que formarão o sentido do texto.&lt;/p&gt;
+
+&lt;p&gt;Como pode ser notado, a função básica de uma linguagem, ou seja, a comunicação, está centrada no significado das expressões linguísticas produzidas. Isto torna o estudo da semântica essencial para implementações computacionais que envolvam compreensão e produção de linguagem. Uma barreira porém a este objetivo gira em torno da necessidade da utilização da intuição na compreensão do sentido de um texto, atos dificilmente aplicáveis a máquinas inspiradas na arquitetura de &lt;code&gt;Von Neumman&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Se utilizarmos um dos programas atuais de tradução de textos, vamos perceber ao final de todo o processamento que o resultado obtido apresenta em grande parte das vezes, inúmeras deficiências como falta de pronomes, erros de gênero e troca de palavras. Nos sistemas modernos, percebemos que essas falhas, mesmo não comprometendo a compreensão do contexto do documento traduzido, irá nos requerer uma revisão para a correta compreensão do assunto tratado.&lt;/p&gt;
+
+&lt;p&gt;O que destaco aqui, é que o processamento e tratamento computacional da linguagem natural, colide com enormes barreiras, as quais são típicas da comunicação humana. Essas dificuldades são tratadas pelo cérebro de forma natural, embora já conhecemos os ríscos que estão associados a comunicação humana.&lt;/p&gt;
+
+&lt;h1 id=&quot;natural-language-processing&quot;&gt;Natural Language Processing&lt;/h1&gt;
+
+&lt;p&gt;Podemos conceituar &lt;code&gt;NLP&lt;/code&gt; da seguinte maneira:&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
+&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+&lt;b&gt;Natural Language Processing&lt;/b&gt; é a disciplina que consiste no desenvolvimento de modelos computacionais que utilizam informação expressa em uma determinada língua natural.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Como objetivo, podemos definir que em &lt;code&gt;NLP&lt;/code&gt; queremos construir mecanismos artificiais que permitem o entedimento da linguagem natural para a realização de tarefas que visam simular um comportamento humano (e.g. tradução e interpretação de textos, busca de informações em documentos, detecção de tópicos).&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;NLP&lt;/code&gt; se encaixa no mundo da computação como uma subárea de Inteligência Artificial, e constantemente associada a Linguística Computacional, embora sejam matérias diferentes.&lt;/p&gt;
+
+&lt;p&gt;Quando comparamos as aplicações desenvolvidas nessas duas áreas, é fácil entender a confusão. Geralmente compartilham as mesmas conferências, colaboram em artigos, mas tem como essência, objetivos diferentes.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;CL&lt;/strong&gt; – Computational Linguistics
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Profissional:&lt;/strong&gt; Linguistas&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Objetivo:&lt;/strong&gt; Uso da computação para o estudo da linguagem&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;NLP&lt;/strong&gt; – Natural Language Processing
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Profissional:&lt;/strong&gt; Cientistas da Computação&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Objetivo:&lt;/strong&gt; Aplicações envolvendo linguagem natural&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;computational-linguistics&quot;&gt;Computational Linguistics&lt;/h2&gt;
+
+&lt;p&gt;Como matéria segue a linha das ciências naturais como à biologia computacional, e se propõem a desenvolver métodos computacionais a fim de responder às questões científicas sobre linguística.&lt;/p&gt;
+
+&lt;p&gt;As questões centrais da linguística envolvem a natureza das representações linguísticas e do conhecimento linguístico, e como o conhecimento linguístico é adquirido e implantado na produção e compreensão da linguagem. Responder a essas perguntas descreve a capacidade da linguagem humana e pode ajudar a explicar a distribuição de dados e comportamentos linguísticos que realmente observamos.&lt;/p&gt;
+
+&lt;p&gt;Na linguística computacional, são propostas respostas formais para essas questões. Os linguistas estão realmente perguntando o que e como os humanos estão associando. Por isso, definimos matematicamente classes de representações linguísticas e gramáticas formais (ou seja, modelos probabilísticos) que parecem adequadas para capturar a variedade de fenômenos presentes nas línguas humanas. São estudadas suas propriedades matemáticas a fim de guiar o desenvolvimento de algoritmos eficientes para o aprendizado, produção e compreensão da linguagem natural.&lt;/p&gt;
+
+&lt;h2 id=&quot;nlp-uma-questão-de-engenharia&quot;&gt;NLP, uma questão de engenharia&lt;/h2&gt;
+
+&lt;p&gt;Em comparação com o a linguística computacional, podemos perceber que enquando a &lt;code&gt;CL&lt;/code&gt; foca na descoberta de fatos linguísticos, a &lt;code&gt;NLP&lt;/code&gt; tem seu foco no desenvolvimento de tecnologias utilizando linguagem natural.&lt;/p&gt;
+
+&lt;p&gt;Em muitos casos isso é visto como uma questão de ciência versus engenharia. Não se trata de provar que as línguas X ou Y estão relacionadas historicamente. Tem mais ligação com as questões práticas e como produzir ferramentas que vão ajudar as pessoas a se comunicarem melhor (seja com o computar ou entre si), bem como trabalhar e extrair conhecimento da quantidade incomensurável de informação em linguagem natural que temos hoje.&lt;/p&gt;
+
+&lt;p&gt;Dado sua natureza prática, &lt;code&gt;NLP&lt;/code&gt; é muito relacionada a questões comerciais embora tenha um papel importante em outras ciências possibilitando análises que hoje são consideradas fundamentas em áreas como política, medicina e econômia.&lt;/p&gt;
+
+&lt;h2 id=&quot;e-sobre-natrual-language-understanding&quot;&gt;E sobre Natrual Language Understanding?&lt;/h2&gt;
+
+&lt;p&gt;Podemos enquadrar &lt;code&gt;NLU&lt;/code&gt; como uma subárea em &lt;code&gt;NLP&lt;/code&gt;. Para uma boa aplicação baseada em processamento de linguagem natural, um bom &lt;strong&gt;entendimento da linguagem&lt;/strong&gt; é simplesmente fundamental.&lt;/p&gt;
+
+&lt;h1 id=&quot;garbage&quot;&gt;Garbage&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Trabalhar com NLP é um assunto como desafios complexos, como por exemplo, podemos pensar de forma intuítiva na criação de um sistema de perguntas simples e suas respostas. A forma ingenua seria construir um sistema baseado na busca de termos, palavras chave ou padrões de palavras. Essa é uma atividade relativamente fácil, principalmente pela capacidade computacional que temos hoje. Já se pensarmos no mesmo sistema construído para responder perguntas complexas, precisamos solucionar outros problemas com as inferências.&lt;/p&gt;
+
+&lt;p&gt;Conforme, a pesquisa em Pln está voltada, essencialmente, a três aspectos da comunicação em língua natural:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;som: fonologia&lt;/li&gt;
+  &lt;li&gt;estrutura: morfologia e sintaxe&lt;/li&gt;
+  &lt;li&gt;signiﬁcado: semântica e pragmática&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A fonologia está relacionada ao reconhecimento dos sons que compõem as palavras de uma língua.&lt;/p&gt;
+
+&lt;p&gt;A morfologia reconhece as palavras em termos das unidades primitivas que a compõem (e.g. caçou → caç+ou).&lt;/p&gt;
+
+&lt;p&gt;A sintaxe deﬁne a estrutura de uma frase, com base na forma como as palavras se relacionam nessa frase (ﬁgura 1).&lt;/p&gt;
+
+&lt;p&gt;A semântica associa signiﬁcado a uma estrutura sintática, em termos dos signiﬁcados das palavras que a compõem (e.g. à estrutura da ﬁgura 1, podemos associar o signiﬁcado “um animal perseguiu/capturou outro animal”). Finalmente, a pragmática veriﬁca se o signiﬁcado associado à uma estrutura sintática é realmente o signiﬁcado mais apropriado no contexto considerado (e.g. no contexto predador-presa, “perseguiu/capturou” → “comeu”).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/nlp-001.png&quot; alt=&quot;0&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como podemos ver a PNL é uma área da pesquisa muito vasta, que envolve diversas disciplinas do conhecimento humano. Neste artigo vou abordar apenas a análise sintática de algumas frases em português. O objetivo é definir uma gramática capaz de gerar um conjunto finito de sentenças e decidir se uma determinada sentença pertence ou não à linguagem definida nesta gramática. Em seguida, vamos estender essa gramática para tratar concordância de gênero e número, bem como tempos verbais. Com isso conseguimos montar uma árvore sintática de uma sentença de forma automática.&lt;/p&gt;
+
+&lt;h1 id=&quot;gramática-e-análise-sintática&quot;&gt;Gramática e análise sintática&lt;/h1&gt;
+
+&lt;p&gt;Uma gramática é uma especiﬁcação formal da estrutura das sentenças permitidas numa linguagem. O modo mais simples de deﬁnir uma gramática é especiﬁcando um conjunto de símbolos terminais, denotando palavras da linguagem, um conjunto de símbolos não-terminais, denotando os componentes das sentenças, e um conjunto de regras de produção, que expandem símbolos não-terminais numa sequência de símbolos terminais e não-terminais [3]. Além disso, a gramática deve ter um símbolo não-terminal inicial. Por exemplo, a gramática a seguir deﬁne um fragmento da língua portuguesa:&lt;/p&gt;
+
+&lt;h4 id=&quot;gramática-1&quot;&gt;Gramática 1.&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;frase ⇒ sujeito predicado&lt;/li&gt;
+  &lt;li&gt;sujeito ⇒ artigo substantivo&lt;/li&gt;
+  &lt;li&gt;predicado ⇒ verbo artigo substantivo&lt;/li&gt;
+  &lt;li&gt;artigo ⇒ o&lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;substantivo ⇒ gato&lt;/td&gt;
+          &lt;td&gt;rato&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;verbo ⇒ caçou&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Nessa gramática, os símbolos terminais são o, gato e rato, sendo os demais símbolos não-terminais. A regra de produção frase ⇒ sujeito predicado estabelece que uma frase é composta de um sujeito seguido de um predicado; enquanto a regra substantivo ⇒ gato&lt;/td&gt;
+      &lt;td&gt;rato estabelece que um substantivo pode ser a palavra “gato” ou “rato”. Além disso, para essa gramática, o símbolo não-terminal inicial será frase. Nas gramáticas livres de contexto (do tipo que consideramos nesse artigo), o lado esquerdo de uma regra de produção será sempre um único símbolo não terminal, enquanto o lado direito pode conter símbolos terminais e não terminais. Como veremos a seguir, uma gramática pode ser usada tanto para reconhecimento, ou seja, para decidir se essa frase pertence à linguagem deﬁnida pela gramática; quanto para geração, ou seja, para construir uma frase pertencente à linguagem deﬁnida pela gramática.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Se a comunicação é algo complexo mesmo para nós os seres humanos, como podemos trabalhar isso em computação?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Bom, o primeiro passo é transformar a nossa linguagem natural em algo que possa ser trabalhado por máquina. Fazemos isso transformando nosso dado textual em algum padrão de representação numérica, algo que seja processável e compreendido por uma máquina. Somente realizando esse passo é possível iniciar o processo de examinar os dados para criação de modelos matemáticos.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;conlusão&quot;&gt;Conlusão&lt;/h2&gt;
+
+&lt;p&gt;Além da característica técnica na utilização de &lt;code&gt;DeepLearning&lt;/code&gt; para criação de &lt;code&gt;Face Swapping&lt;/code&gt;, as &lt;code&gt;DeepFakes&lt;/code&gt; tem por propósito objetivos escusos. Desde sua aplicação massíva na pornografia, ao seu potêncial risco na contra informação, as &lt;strong&gt;DeepFakes&lt;/strong&gt; ganharam visibilidade e ainda existe um amplo campo para evolução.&lt;/p&gt;
+
+&lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Computational Linguistics and Natural Language Processing, Jun’ichi Tsujii, University of Tokyo&lt;/li&gt;
+  &lt;li&gt;Introduction to Computational Linguistics, Jason Eisner, Johns Hopkins University&lt;/li&gt;
+  &lt;li&gt;Interpretação e compreensão. Marcelo DASCAL&lt;/li&gt;
+  &lt;li&gt;SILVA, M.C.S; KOCH, I.V. Linguística Aplicada ao Português: Morfologia. 18ª ed. – São Paulo: Cortez, 2012.&lt;/li&gt;
+  &lt;li&gt;Diferenças entre língua, idioma e dialeto; PEREZ, Luana Castro Alves, Brasil Escola.&lt;/li&gt;
+  &lt;li&gt;INTRODUÇÃO À LINGÜÍSTICA VOLUMES 1 E 2, José Luiz Fiorin&lt;/li&gt;
+  &lt;li&gt;A Mathematical Theory of Communication, C. E. SHANNON, harvard&lt;/li&gt;
+  &lt;li&gt;A Mind at Play: How Claude Shannon Invented the Information Age, Jimmy Soni and Rob Goodman&lt;/li&gt;
+  &lt;li&gt;COMPUTING MACHINERY AND INTELLIGENCE, A. M. Turing, &lt;a href=&quot;https://www.csee.umbc.edu/courses/471/papers/turing.pdf&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 01 Oct 2019 00:00:00 -0300</pubDate>
+        <link>/2019/10/01/nlp-under-the-hood/</link>
+        <guid isPermaLink="true">/2019/10/01/nlp-under-the-hood/</guid>
+        
+        <category>ai</category>
+        
+        <category>deep learning</category>
+        
+        <category>nlp</category>
+        
+        <category>data science</category>
+        
+        
+        <category>IA</category>
+        
+        <category>Machine Learning</category>
+        
+        <category>Data Science</category>
+        
+        <category>NLP</category>
+        
+      </item>
     
       <item>
         <title>GPU for Deep Learning</title>
@@ -215,8 +535,8 @@ CPU times [0.28919482231140137, 0.36597657203674316, 0.4756290912628174, 0.61246
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 27 Sep 2018 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2018/09/27/gpu-for-deeplearning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/09/27/gpu-for-deeplearning/</guid>
+        <link>/2018/09/27/gpu-for-deeplearning/</link>
+        <guid isPermaLink="true">/2018/09/27/gpu-for-deeplearning/</guid>
         
         <category>ai</category>
         
@@ -403,8 +723,8 @@ $ jupyter notebook --no-browser
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 20 Nov 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</guid>
+        <link>/2017/11/20/jupyter-notebook-vm-azure/</link>
+        <guid isPermaLink="true">/2017/11/20/jupyter-notebook-vm-azure/</guid>
         
         <category>ai</category>
         
@@ -711,8 +1031,8 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 06 Aug 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</guid>
+        <link>/2017/08/06/conversational-interfaces-nlp-bots/</link>
+        <guid isPermaLink="true">/2017/08/06/conversational-interfaces-nlp-bots/</guid>
         
         
         <category>AI</category>
@@ -1076,8 +1396,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 </description>
         <pubDate>Wed, 07 Jun 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/06/07/custom-vision-ms/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/06/07/custom-vision-ms/</guid>
+        <link>/2017/06/07/custom-vision-ms/</link>
+        <guid isPermaLink="true">/2017/06/07/custom-vision-ms/</guid>
         
         
         <category>AI</category>
@@ -1211,8 +1531,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</guid>
+        <link>/2017/05/17/microsoft-and-ai-for-the-future/</link>
+        <guid isPermaLink="true">/2017/05/17/microsoft-and-ai-for-the-future/</guid>
         
         
         <category>IA</category>
@@ -1397,8 +1717,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/20/variables-in-statistic/</guid>
+        <link>/2017/04/20/variables-in-statistic/</link>
+        <guid isPermaLink="true">/2017/04/20/variables-in-statistic/</guid>
         
         
         <category>Statistics</category>
@@ -1669,8 +1989,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/04/14/hello-world-r/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/14/hello-world-r/</guid>
+        <link>/2017/04/14/hello-world-r/</link>
+        <guid isPermaLink="true">/2017/04/14/hello-world-r/</guid>
         
         
         <category>R</category>
@@ -2191,8 +2511,8 @@ FamilySize            int64
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
+        <link>/2017/03/18/titanic-machine-learning-from-disaster/</link>
+        <guid isPermaLink="true">/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
         
         <category>IA</category>
@@ -2290,8 +2610,8 @@ FamilySize            int64
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
@@ -2305,115 +2625,6 @@ FamilySize            int64
         <category>Jupyter Notebook</category>
         
         <category>Python</category>
-        
-      </item>
-    
-      <item>
-        <title>Machine Learning e sua literatura clássica</title>
-        <description>&lt;p&gt;A listagem a seguir pode ser categorizada como, &lt;strong&gt;Popular Science Machine Learning Books&lt;/strong&gt; ou &lt;strong&gt;Beginner Machine Learning Books&lt;/strong&gt;. É possível ainda encontrar vários livros desta listagem em categorias como &lt;strong&gt;Introductory Machine Learning Books&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;machine-learning-books-selection&quot;&gt;Machine Learning Books Selection&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0465065708&quot;&gt;The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1119145678&quot;&gt;Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0143125087&quot;&gt;The Signal and the Noise: Why So Many Predictions Fail–but Some Don’t&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/039334777X&quot;&gt;Naked Statistics: Stripping the Dread from the Data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0307275175&quot;&gt;The Drunkard’s Walk: How Randomness Rules Our Lives&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1449361323&quot;&gt;Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/111866146X&quot;&gt;Data Smart: Using Data Science to Transform Information into Insight&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0128042915&quot;&gt;Data Mining, Fourth Edition: Practical Machine Learning Tools and Techniques&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1449358659&quot;&gt;Doing Data Science: Straight Talk from the Frontline&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/B007A0BNP4&quot;&gt;Machine Learning for Hackers: Case Studies and Algorithms to Get You Started&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1617290181&quot;&gt;Machine Learning in Action&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0596529325&quot;&gt;Programming Collective Intelligence: Building Smart Web 2.0 Applications&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1461471370&quot;&gt;An Introduction to Statistical Learning: with Applications in R (Springer Texts in Statistics)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1461468485&quot;&gt;Applied Predictive Modeling&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0387848576&quot;&gt;The Elements of Statistical Learning: Data Mining, Inference, and Prediction&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0387310738&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0262018020&quot;&gt;Machine Learning: A Probabilistic Perspective&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/B00YDJC98K&quot;&gt;Learning From Data by Yaser S. Abu-Mostafa, Malik Magdon-Ismail, Hsuan-Tien Lin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0070428077&quot;&gt;Machine Learning 1st Edition&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1107422221&quot;&gt;Machine Learning: The Art and Science of Algorithms that Make Sense of Data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/026201825X&quot;&gt;Foundations of Machine Learning (Adaptive Computation and Machine Learning series)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0596529325&quot;&gt;Programming Collective Intelligence: Building Smart Web 2.0 Applications&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1118675029&quot;&gt;Time Series Analysis: Forecasting and Control&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0997847913&quot;&gt;Practical Time Series Forecasting with R: A Hands-On Guide&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/3319298526&quot;&gt;Introduction to Time Series and Forecasting&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0987507109&quot;&gt;Forecasting: principles and practice&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;com-foco-em-python&quot;&gt;Com foco em Python&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1783555130&quot;&gt;Python Machine Learning&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/149190142X&quot;&gt;Data Science from Scratch: First Principles with Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491962291&quot;&gt;Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques for Building Intelligent Systems&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1449369413&quot;&gt;Introduction to Machine Learning with Python: A Guide for Data Scientists&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B01N4FUDSE&quot;&gt;Vital Introduction to Machine Learning with Python: Best Practices to Improve and Optimize Machine Learning Systems and Algorithms&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1118961749&quot;&gt;Machine Learning in Python: Essential Techniques for Predictive Analysis&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491912057&quot;&gt;Python Data Science Handbook: Essential Tools for Working with Data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1633430030&quot;&gt;Introducing Data Science: Big Data, Machine Learning, and more, using Python tools&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617291927&quot;&gt;Real-World Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;com-foco-em-r&quot;&gt;Com foco em R&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491910399&quot;&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1784393908&quot;&gt;Machine Learning with R&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1783982047&quot;&gt;Machine Learning With R Cookbook – 110 Recipes for Building Powerful Predictive Models with R&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1784390844&quot;&gt;R Machine Learning By Example&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/178398774X&quot;&gt;R Machine Learning Essentials&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/178398452X&quot;&gt;Mastering Machine Learning with R&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1461471370&quot;&gt;An Introduction to Statistical Learning: with Applications in R&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617291560&quot;&gt;Practical Data Science with R&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1461468485&quot;&gt;Applied Predictive Modeling&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0123969638&quot;&gt;R and Data Mining: Examples and Case Studies&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Aqui vale fazer uma consideração: Temos a seguir uma listagem separada sobre Deep Learning. Isso se deve por essa ser uma técnica de Machine Learning que diz respeito a oportunidade de aprendizagem profunda com o uso de redes neurais.&lt;/p&gt;
-
-&lt;p&gt;Em momento oportuno devo vou compartilhar aqui mais informações sobre Deep Learning, como meus estudos, códigos e referências. Por hora, segue a bibliografia melhor avaliada sobre o tema.&lt;/p&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;deep-learning&quot;&gt;Deep Learning&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0262035618&quot;&gt;Deep Learning&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491914254&quot;&gt;Deep Learning: A Practitioner’s Approach&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491925612&quot;&gt;Fundamentals of Deep Learning: Designing Next-Generation Machine Intelligence Algorithms&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491978511&quot;&gt;Learning TensorFlow: A guide to building deep learning systems&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617293873&quot;&gt;Machine Learning with TensorFlow&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1786462168&quot;&gt;TensorFlow Machine Learning Cookbook&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1786468573&quot;&gt;Getting Started with TensorFlow&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1939902452&quot;&gt;TensorFlow for Machine Intelligence: A Hands-On Introduction to Learning Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;é-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
-</description>
-        <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
-        
-        
-        <category>IA</category>
-        
-        <category>Machine Learning</category>
-        
-        <category>Data Science</category>
-        
-        <category>Deep Learning</category>
         
       </item>
     

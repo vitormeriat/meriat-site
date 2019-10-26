@@ -38,7 +38,6 @@ body {
 }
 
 a {
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   color: #1d2dfd;
   border-bottom: 2px solid transparent;
@@ -172,7 +171,6 @@ figure.fh5co-with-caption figcaption {
 
 #search .input[type=text] {
     width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
 
@@ -565,7 +563,6 @@ pre {
   text-transform: uppercase;
   text-indent: -55px;
   background: #252525;
-  -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle i::before, .fh5co-nav-toggle i::after {
@@ -575,7 +572,6 @@ pre {
   background: #252525;
   position: absolute;
   left: 0;
-  -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i {
@@ -707,7 +703,6 @@ pre {
   margin-bottom: 10px;
   display: block;
   color: #7b7b7b;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .fh5co-view .fh5co-icon-view i {
@@ -732,7 +727,6 @@ pre {
   margin-top: -29px;
   z-index: 9999;
   position: absolute;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -834,7 +828,6 @@ pre {
   width: 10px;
   height: 10px;
   background: #ccc;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border: 2px solid transparent;
 }
@@ -1375,7 +1368,6 @@ a > img.fh5co-align-center {
 }
 .fh5co-link > i {
   margin-right: 5px;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .fh5co-link:hover > i {
