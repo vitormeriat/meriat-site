@@ -35,11 +35,11 @@ Antes de iniciar, se faz importante informar que alguns dos termos utilizados se
 </p>
 </div>
 
-# Conceituação e história
+## Conceituação e história
 
 Este tópico é de grande importância, visto que muito da problemática encontrada na linguagem natural e sua compreensão, fazem parte do domínio computacional. Sendo assim, nosso objetivo quanto pesquisadores em Processamento de Linguagem Natural também inclui a resolução desses desafios.
 
-## Teoria da comunicação
+### Teoria da comunicação
 
 Os seres humanos são considerados animais sociais e como tal, sabemos que a linguagem é nossa principal ferramenta de comunicação. Sabemos que a música é tão remota quanto o início da comunicação verbalizada, mas a principal diferença está nos papéis exercidos. Enquanto os sinais sonoros emitidos por instrumentos rudimentares foram seguindo o caminho da subjetividade, os sons cada vez mais coordenados dos seres humanos foram seguindo para se tornarem mais claros. Partimos dos grunidos para linguagens extramamente sofisticadas.
 
@@ -61,7 +61,7 @@ Quando falamos em teoria da comunicação, em termos básicos temos o papel do e
 5. O receptor (receiver) normalmente executa a operação inversa da realizada pelo transmissor, reconstruindo a mensagem a partir do sinal, para que o destino possa compreender.
 6. O destino (destination) é a pessoa (ou coisa) a quem a mensagem se destina.
 
-## Linguística base
+### Linguística base
 
 Se tratando em linguística, temos o estudo sobre o uso e funcionamento das línguas naturais, independentemente da sua especificidade e diversidade. Nesta ciência possuímos diversas nomenclaturas, para nosso objetivo, precisamos conhecer os itens abaixo:
 
@@ -85,7 +85,7 @@ Outros conceitos importantes e que serão abordados ao longo deste texto:
 
 * **Pragmática**: estudo do uso da língua em contexto por oposição ao estudo do sistema da língua.
 
-## Influências e formação da linguagem
+### Influências e formação da linguagem
 
 <div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
 <img src="https://meriatblob.blob.core.windows.net/draft/lusofonos.jpg" style="margin-bottom: 0px !important; width: 80%;">
@@ -111,7 +111,9 @@ Em Moçambique, a língua portuguesa também sofre modificações baseadas nas r
 
 Essas estruturas são fundamentais para um correto entendimento e aplicação dos fundamentos em processamento de linguagem natural.
 
-## História
+### História
+
+Este é um 
 
 * 1250...
 * 1350...
@@ -229,10 +231,10 @@ Uma gramática é uma especiﬁcação formal da estrutura das sentenças permit
 * sujeito ⇒ artigo substantivo
 * predicado ⇒ verbo artigo substantivo
 * artigo ⇒ o
-* substantivo ⇒ gato | rato
+* substantivo ⇒ gato > rato
 * verbo ⇒ caçou
 
-Nessa gramática, os símbolos terminais são o, gato e rato, sendo os demais símbolos não-terminais. A regra de produção frase ⇒ sujeito predicado estabelece que uma frase é composta de um sujeito seguido de um predicado; enquanto a regra substantivo ⇒ gato | rato estabelece que um substantivo pode ser a palavra “gato” ou “rato”. Além disso, para essa gramática, o símbolo não-terminal inicial será frase. Nas gramáticas livres de contexto (do tipo que consideramos nesse artigo), o lado esquerdo de uma regra de produção será sempre um único símbolo não terminal, enquanto o lado direito pode conter símbolos terminais e não terminais. Como veremos a seguir, uma gramática pode ser usada tanto para reconhecimento, ou seja, para decidir se essa frase pertence à linguagem deﬁnida pela gramática; quanto para geração, ou seja, para construir uma frase pertencente à linguagem deﬁnida pela gramática.
+Nessa gramática, os símbolos terminais são o, gato e rato, sendo os demais símbolos não-terminais. A regra de produção frase ⇒ sujeito predicado estabelece que uma frase é composta de um sujeito seguido de um predicado; enquanto a regra substantivo ⇒ gato > rato estabelece que um substantivo pode ser a palavra “gato” ou “rato”. Além disso, para essa gramática, o símbolo não-terminal inicial será frase. Nas gramáticas livres de contexto (do tipo que consideramos nesse artigo), o lado esquerdo de uma regra de produção será sempre um único símbolo não terminal, enquanto o lado direito pode conter símbolos terminais e não terminais. Como veremos a seguir, uma gramática pode ser usada tanto para reconhecimento, ou seja, para decidir se essa frase pertence à linguagem deﬁnida pela gramática; quanto para geração, ou seja, para construir uma frase pertencente à linguagem deﬁnida pela gramática.
 
 ---
 
@@ -244,7 +246,9 @@ Bom, o primeiro passo é transformar a nossa linguagem natural em algo que possa
 
 ## Conlusão
 
-Além da característica técnica na utilização de `DeepLearning` para criação de `Face Swapping`, as `DeepFakes` tem por propósito objetivos escusos. Desde sua aplicação massíva na pornografia, ao seu potêncial risco na contra informação, as **DeepFakes** ganharam visibilidade e ainda existe um amplo campo para evolução.
+Existe muita confusão quanso se fala em NLP. Temos diversas terminologias e conceitos que são errôneamente relacionados a essa materia. NLP é um campo onde uma certa complexidade está associada, então um correto entendimento dos conceitos é fundamental para conseguir atingir um nível avançado de trabalho. 
+
+Fora isso a pesquisa e desenvolviemnto explorando o estado da arte em NLP requer um forte conhecimento em áreas como a linguística, uma vez diversos dos problemas que hoje queremos resolver, extrapolam a engenharia para algo mais conceitual.
 
 ## Referências
 

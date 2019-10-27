@@ -3,10 +3,10 @@
   <channel>
     <title>Vitor Meriat</title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Oct 2019 16:11:31 -0300</pubDate>
-    <lastBuildDate>Sat, 26 Oct 2019 16:11:31 -0300</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 26 Oct 2019 17:03:13 -0300</pubDate>
+    <lastBuildDate>Sat, 26 Oct 2019 17:03:13 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -30,11 +30,11 @@ estabelecimento de uma hipótese e que os fatos observados sejam examinados sist
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&quot;conceituação-e-história&quot;&gt;Conceituação e história&lt;/h1&gt;
+&lt;h2 id=&quot;conceituação-e-história&quot;&gt;Conceituação e história&lt;/h2&gt;
 
 &lt;p&gt;Este tópico é de grande importância, visto que muito da problemática encontrada na linguagem natural e sua compreensão, fazem parte do domínio computacional. Sendo assim, nosso objetivo quanto pesquisadores em Processamento de Linguagem Natural também inclui a resolução desses desafios.&lt;/p&gt;
 
-&lt;h2 id=&quot;teoria-da-comunicação&quot;&gt;Teoria da comunicação&lt;/h2&gt;
+&lt;h3 id=&quot;teoria-da-comunicação&quot;&gt;Teoria da comunicação&lt;/h3&gt;
 
 &lt;p&gt;Os seres humanos são considerados animais sociais e como tal, sabemos que a linguagem é nossa principal ferramenta de comunicação. Sabemos que a música é tão remota quanto o início da comunicação verbalizada, mas a principal diferença está nos papéis exercidos. Enquanto os sinais sonoros emitidos por instrumentos rudimentares foram seguindo o caminho da subjetividade, os sons cada vez mais coordenados dos seres humanos foram seguindo para se tornarem mais claros. Partimos dos grunidos para linguagens extramamente sofisticadas.&lt;/p&gt;
 
@@ -58,7 +58,7 @@ estabelecimento de uma hipótese e que os fatos observados sejam examinados sist
   &lt;li&gt;O destino (destination) é a pessoa (ou coisa) a quem a mensagem se destina.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;linguística-base&quot;&gt;Linguística base&lt;/h2&gt;
+&lt;h3 id=&quot;linguística-base&quot;&gt;Linguística base&lt;/h3&gt;
 
 &lt;p&gt;Se tratando em linguística, temos o estudo sobre o uso e funcionamento das línguas naturais, independentemente da sua especificidade e diversidade. Nesta ciência possuímos diversas nomenclaturas, para nosso objetivo, precisamos conhecer os itens abaixo:&lt;/p&gt;
 
@@ -97,7 +97,7 @@ estabelecimento de uma hipótese e que os fatos observados sejam examinados sist
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;influências-e-formação-da-linguagem&quot;&gt;Influências e formação da linguagem&lt;/h2&gt;
+&lt;h3 id=&quot;influências-e-formação-da-linguagem&quot;&gt;Influências e formação da linguagem&lt;/h3&gt;
 
 &lt;div align=&quot;center&quot; style=&quot;width: 100%; font-size: 0.8em; font-family: courier;&quot;&gt;
 &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/lusofonos.jpg&quot; style=&quot;margin-bottom: 0px !important; width: 80%;&quot; /&gt;
@@ -125,7 +125,9 @@ estabelecimento de uma hipótese e que os fatos observados sejam examinados sist
 
 &lt;p&gt;Essas estruturas são fundamentais para um correto entendimento e aplicação dos fundamentos em processamento de linguagem natural.&lt;/p&gt;
 
-&lt;h2 id=&quot;história&quot;&gt;História&lt;/h2&gt;
+&lt;h3 id=&quot;história&quot;&gt;História&lt;/h3&gt;
+
+&lt;p&gt;Este é um&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;1250…&lt;/li&gt;
@@ -256,27 +258,11 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
   &lt;li&gt;sujeito ⇒ artigo substantivo&lt;/li&gt;
   &lt;li&gt;predicado ⇒ verbo artigo substantivo&lt;/li&gt;
   &lt;li&gt;artigo ⇒ o&lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;substantivo ⇒ gato&lt;/td&gt;
-          &lt;td&gt;rato&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
+  &lt;li&gt;substantivo ⇒ gato &amp;gt; rato&lt;/li&gt;
   &lt;li&gt;verbo ⇒ caçou&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Nessa gramática, os símbolos terminais são o, gato e rato, sendo os demais símbolos não-terminais. A regra de produção frase ⇒ sujeito predicado estabelece que uma frase é composta de um sujeito seguido de um predicado; enquanto a regra substantivo ⇒ gato&lt;/td&gt;
-      &lt;td&gt;rato estabelece que um substantivo pode ser a palavra “gato” ou “rato”. Além disso, para essa gramática, o símbolo não-terminal inicial será frase. Nas gramáticas livres de contexto (do tipo que consideramos nesse artigo), o lado esquerdo de uma regra de produção será sempre um único símbolo não terminal, enquanto o lado direito pode conter símbolos terminais e não terminais. Como veremos a seguir, uma gramática pode ser usada tanto para reconhecimento, ou seja, para decidir se essa frase pertence à linguagem deﬁnida pela gramática; quanto para geração, ou seja, para construir uma frase pertencente à linguagem deﬁnida pela gramática.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;Nessa gramática, os símbolos terminais são o, gato e rato, sendo os demais símbolos não-terminais. A regra de produção frase ⇒ sujeito predicado estabelece que uma frase é composta de um sujeito seguido de um predicado; enquanto a regra substantivo ⇒ gato &amp;gt; rato estabelece que um substantivo pode ser a palavra “gato” ou “rato”. Além disso, para essa gramática, o símbolo não-terminal inicial será frase. Nas gramáticas livres de contexto (do tipo que consideramos nesse artigo), o lado esquerdo de uma regra de produção será sempre um único símbolo não terminal, enquanto o lado direito pode conter símbolos terminais e não terminais. Como veremos a seguir, uma gramática pode ser usada tanto para reconhecimento, ou seja, para decidir se essa frase pertence à linguagem deﬁnida pela gramática; quanto para geração, ou seja, para construir uma frase pertencente à linguagem deﬁnida pela gramática.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -290,7 +276,9 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 
 &lt;h2 id=&quot;conlusão&quot;&gt;Conlusão&lt;/h2&gt;
 
-&lt;p&gt;Além da característica técnica na utilização de &lt;code&gt;DeepLearning&lt;/code&gt; para criação de &lt;code&gt;Face Swapping&lt;/code&gt;, as &lt;code&gt;DeepFakes&lt;/code&gt; tem por propósito objetivos escusos. Desde sua aplicação massíva na pornografia, ao seu potêncial risco na contra informação, as &lt;strong&gt;DeepFakes&lt;/strong&gt; ganharam visibilidade e ainda existe um amplo campo para evolução.&lt;/p&gt;
+&lt;p&gt;Existe muita confusão quanso se fala em NLP. Temos diversas terminologias e conceitos que são errôneamente relacionados a essa materia. NLP é um campo onde uma certa complexidade está associada, então um correto entendimento dos conceitos é fundamental para conseguir atingir um nível avançado de trabalho.&lt;/p&gt;
+
+&lt;p&gt;Fora isso a pesquisa e desenvolviemnto explorando o estado da arte em NLP requer um forte conhecimento em áreas como a linguística, uma vez diversos dos problemas que hoje queremos resolver, extrapolam a engenharia para algo mais conceitual.&lt;/p&gt;
 
 &lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
 
@@ -307,8 +295,8 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 01 Oct 2019 00:00:00 -0300</pubDate>
-        <link>/2019/10/01/nlp-under-the-hood/</link>
-        <guid isPermaLink="true">/2019/10/01/nlp-under-the-hood/</guid>
+        <link>http://localhost:4000/2019/10/01/nlp-under-the-hood/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/10/01/nlp-under-the-hood/</guid>
         
         <category>ai</category>
         
@@ -535,8 +523,8 @@ CPU times [0.28919482231140137, 0.36597657203674316, 0.4756290912628174, 0.61246
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 27 Sep 2018 00:00:00 -0300</pubDate>
-        <link>/2018/09/27/gpu-for-deeplearning/</link>
-        <guid isPermaLink="true">/2018/09/27/gpu-for-deeplearning/</guid>
+        <link>http://localhost:4000/2018/09/27/gpu-for-deeplearning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/09/27/gpu-for-deeplearning/</guid>
         
         <category>ai</category>
         
@@ -723,8 +711,8 @@ $ jupyter notebook --no-browser
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 20 Nov 2017 00:00:00 -0200</pubDate>
-        <link>/2017/11/20/jupyter-notebook-vm-azure/</link>
-        <guid isPermaLink="true">/2017/11/20/jupyter-notebook-vm-azure/</guid>
+        <link>http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/20/jupyter-notebook-vm-azure/</guid>
         
         <category>ai</category>
         
@@ -1031,8 +1019,8 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 06 Aug 2017 00:00:00 -0300</pubDate>
-        <link>/2017/08/06/conversational-interfaces-nlp-bots/</link>
-        <guid isPermaLink="true">/2017/08/06/conversational-interfaces-nlp-bots/</guid>
+        <link>http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/06/conversational-interfaces-nlp-bots/</guid>
         
         
         <category>AI</category>
@@ -1396,8 +1384,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 </description>
         <pubDate>Wed, 07 Jun 2017 00:00:00 -0300</pubDate>
-        <link>/2017/06/07/custom-vision-ms/</link>
-        <guid isPermaLink="true">/2017/06/07/custom-vision-ms/</guid>
+        <link>http://localhost:4000/2017/06/07/custom-vision-ms/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/07/custom-vision-ms/</guid>
         
         
         <category>AI</category>
@@ -1531,8 +1519,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 17 May 2017 00:00:00 -0300</pubDate>
-        <link>/2017/05/17/microsoft-and-ai-for-the-future/</link>
-        <guid isPermaLink="true">/2017/05/17/microsoft-and-ai-for-the-future/</guid>
+        <link>http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/17/microsoft-and-ai-for-the-future/</guid>
         
         
         <category>IA</category>
@@ -1717,8 +1705,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 &lt;p&gt;Por hoje é só galera. Em breve devo soltar mais conteúdo direcionado as bases do Machine Learning.&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/20/variables-in-statistic/</link>
-        <guid isPermaLink="true">/2017/04/20/variables-in-statistic/</guid>
+        <link>http://localhost:4000/2017/04/20/variables-in-statistic/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/20/variables-in-statistic/</guid>
         
         
         <category>Statistics</category>
@@ -1989,8 +1977,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 14 Apr 2017 00:00:00 -0300</pubDate>
-        <link>/2017/04/14/hello-world-r/</link>
-        <guid isPermaLink="true">/2017/04/14/hello-world-r/</guid>
+        <link>http://localhost:4000/2017/04/14/hello-world-r/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/14/hello-world-r/</guid>
         
         
         <category>R</category>
@@ -2511,8 +2499,8 @@ FamilySize            int64
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Mar 2017 00:00:00 -0300</pubDate>
-        <link>/2017/03/18/titanic-machine-learning-from-disaster/</link>
-        <guid isPermaLink="true">/2017/03/18/titanic-machine-learning-from-disaster/</guid>
+        <link>http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/18/titanic-machine-learning-from-disaster/</guid>
         
         
         <category>IA</category>
@@ -2610,8 +2598,8 @@ FamilySize            int64
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
         
         
         <category>IA</category>
