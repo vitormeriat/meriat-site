@@ -54,36 +54,34 @@ Quando falamos em teoria da comunicação, em termos básicos temos o papel do e
 <img src="https://meriatblob.blob.core.windows.net/draft/theory_of_communications.png" style="margin-bottom: 0px !important;">
 </div>
 
-1. A fonte (source) produz uma mensagem. Uma mensagem pode ser um sinal de fumaça, telégrafo, rádio e etc.
-2. Um transmissor (transmitter) traduz a mensagem em um sinal que possa ser enviado por um meio específico.
-3. O canal (medium) é apenas o meio usado para transmitir o sinal do transmissor para o receptor. Pode ser um par de fios, um cabo coaxial, banda de radiofrequência, feixe de luz e etc.
-4. O ruído (Noise) é tudo aquilo que possa interferir no sinal.
-5. O receptor (receiver) normalmente executa a operação inversa da realizada pelo transmissor, reconstruindo a mensagem a partir do sinal, para que o destino possa compreender.
-6. O destino (destination) é a pessoa (ou coisa) a quem a mensagem se destina.
+1. A fonte (**source**) produz uma mensagem. Uma mensagem pode ser um sinal de fumaça, telégrafo, rádio e etc.
+2. Um transmissor (**transmitter**) traduz a mensagem em um sinal que possa ser enviado por um meio específico.
+3. O canal (**medium**) é apenas o meio usado para transmitir o sinal do transmissor para o receptor. Pode ser um par de fios, um cabo coaxial, banda de radiofrequência, feixe de luz e etc.
+4. O ruído (**noise**) é tudo aquilo que possa interferir no sinal.
+5. O receptor (**receiver**) normalmente executa a operação inversa da realizada pelo transmissor, reconstruindo a mensagem a partir do sinal, para que o destino possa compreender.
+6. O destino (**destination**) é a pessoa/coisa a quem a mensagem se destina.
 
 ### Linguística base
 
 Se tratando em linguística, temos o estudo sobre o uso e funcionamento das línguas naturais, independentemente da sua especificidade e diversidade. Nesta ciência possuímos diversas nomenclaturas, para nosso objetivo, precisamos conhecer os itens abaixo:
 
-* **Língua**: A língua é, sobretudo, um instrumento de comunicação, e é essa a sua maior finalidade. Ela pertence aos falantes, que dela apropriam-se para estabelecer interações com a sociedade onde vivem. Quando dizemos que a língua é um instrumento do povo, dizemos que, embora existam as normas gramaticais que regem um idioma, cada falante opta por uma forma de expressão que mais lhe convém, originando aquilo que chamamos de fala. A fala, embora possa ser criativa, deve ser regida por regras maiores e socialmente estabelecidas, caso contrário, cada um de nós criaria sua própria língua, o que impossibilitaria a comunicação. Na fala encontramos as variações linguísticas, que jamais devem ser vistas como transgressões ao idioma, mas sim como uma prova de que a língua é viva e dinâmica.
+* **Língua**: Podemos falar que a língua é, sobretudo, um instrumento de comunicação, e é essa a sua maior finalidade. Uma de suas riquezas e dificuldades, é que embora existam as normas gramaticais que regem um idioma, cada falante opta por uma forma de expressão que mais lhe convém, originando aquilo que chamamos de fala. A fala, embora possa ser criativa, deve ser regida por regras maiores e socialmente estabelecidas, caso contrário, cada um de nós criaria sua própria língua, o que impossibilitaria a comunicação. Na fala encontramos as variações linguísticas, visto que a língua é viva e dinâmica.
 
-* **Idioma**: O idioma é uma língua própria de um povo. Está relacionado com a existência de um Estado político, sendo utilizado para identificar uma nação em relação às demais. Por exemplo, no Brasil, o idioma oficial é o Português, comum à maioria dos falantes. Mesmo que existam comunidades que utilizem outros idiomas, apenas a língua portuguesa recebe o status de língua oficial. Existem países, como o Canadá, por exemplo, em que dois idiomas são considerados como oficiais, nesse caso, o francês e o inglês.
+* **Idioma**: É uma língua própria de um povo. Está relacionado com a existência de um Estado político, sendo utilizado para identificar uma nação em relação às demais. Existem países, como o Canadá, por exemplo, em que dois idiomas são considerados como oficiais, nesse caso, o francês e o inglês.
 
-* **Dialeto**: O dialeto é a variedade de uma língua própria de uma região ou território e está relacionado com as variações linguísticas encontradas na fala de determinados grupos sociais. As variações linguísticas podem ser compreendidas a partir da análise de três diferentes fenômenos: exposição aos saberes convencionais (diferentes grupos sociais com maior ou menor acesso à educação formal utilizam a língua de maneiras diferentes); situação de uso (os falantes adequam-se linguisticamente às situações comunicacionais de acordo com o nível de formalidade) e contexto sociocultural (gírias e jargões podem dizer muito sobre grupos específicos formados por algum tipo de “simbiose” cultural).
+* **Dialeto**: Variedade de uma língua própria de uma região ou território e está relacionado com as variações linguísticas encontradas na fala de determinados grupos sociais. As variações linguísticas podem ser compreendidas a partir da análise de três diferentes fenômenos: exposição aos saberes convencionais (diferentes grupos sociais com maior ou menor acesso à educação formal utilizam a língua de maneiras diferentes); situação de uso (os falantes adequam-se linguisticamente às situações comunicacionais de acordo com o nível de formalidade) e contexto sociocultural (gírias e jargões podem dizer muito sobre grupos específicos formados por algum tipo de “simbiose” cultural).
 
-Outros conceitos importantes e que serão abordados ao longo deste texto:
+* **Fonética**: Estudo da realidade acústica, do funcionamento articulatório e anatómico e da interpretação percetiva dos sons de uma determinada língua natural.
 
-* **Fonética**: estudo da realidade acústica, do funcionamento articulatório e anatómico e da interpretação percetiva dos sons de uma determinada língua natural.
+* **Fonologia**: Estudo do sistema sonoro de uma língua, das regras subjacentes à combinação desses sons e do modo como esses sons exprimem distinções de significado.
 
-* **Fonologia**: estudo do sistema sonoro de uma língua, das regras subjacentes à combinação desses sons e do modo como esses sons exprimem distinções de significado.
+* **Morfologia**: Estudo da formação e da estrutura interna das palavras na língua.
 
-* **Morfologia**: estudo da formação e da estrutura interna das palavras na língua.
+* **Sintaxe**: Estudo das regras subjacentes à organização das palavras numa frase gramaticalmente bem formada.
 
-* **Sintaxe**: estudo das regras subjacentes à organização das palavras numa frase gramaticalmente bem formada.
+* **Semântica**: Estudo do significado da produção e interpretação de palavras e frases.
 
-* **Semântica**: estudo do significado da produção e interpretação de palavras e frases.
-
-* **Pragmática**: estudo do uso da língua em contexto por oposição ao estudo do sistema da língua.
+* **Pragmática**: Estudo do uso da língua em contexto por oposição ao estudo do sistema da língua.
 
 ### Influências e formação da linguagem
 
