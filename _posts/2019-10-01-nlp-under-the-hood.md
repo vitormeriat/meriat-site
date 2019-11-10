@@ -20,26 +20,25 @@ description: Esse trabalho se propõe a trazer uma introdução ao estudo do Pro
 
 # Introdução
 
-O método científico supõe que a observação dos fatos seja anterior ao
-estabelecimento de uma hipótese e que os fatos observados sejam examinados sistematicamente mediante experimentação e uma teoria adequada.
+O método científico supõe que a observação dos fatos seja anterior ao estabelecimento de uma hipótese e que os fatos observados sejam examinados sistematicamente mediante experimentação e uma teoria adequada.
 
-Com isso em mente, se faz necessário o estudo de alguns pontos utilizados na disciplina de processamento de linguagem natural de forma  a obter a base necessária para uma correta exploração e aplicação das possibilidades.
+Com isso em mente, se faz necessário o estudo de alguns pontos utilizados na disciplina de processamento de linguagem natural de forma a obter a base necessária para uma correta exploração e aplicação das possibilidades.
 
 Esse trabalho se propõe a trazer uma introdução ao estudo do `Processamento de Linguagem Natural` (`Natural Language Processing`). Minha intenção é olhar para sua base teórica enquanto disciplina. Sendo assim vamos passar por algumas definições e conceitos antes de avançar nas questões práticas. Vamos falar sobre a estrutura de uma linguagem, compiladores, árvores sintáticas e as complexidades da linguagem natural antes do famoso mão na massa, até por que `talk is cheap, show me the code`.
 
 Antes de iniciar, se faz importante informar que alguns dos termos utilizados serão apresentados em inlgês e português. Para que não seja causada nenhuma estranheza ao leitor, vou priorizar os termos técnicos em inglês, e achando necessário realizo a explicação/tradução do mesmo. Para facilitar a leitura, algumas referências serão colocadas durante o texto. As demais estão todas na sessão de **Referências** ao final deste texto.
 
-<div style="margin-bottom: 4em; margin-top: 4em; background-color: #35d648; color: #382d2d">
+<div style="margin-bottom: 5em; margin-top: 5em; background-color: #35d648; color: #382d2d">
 <p style="padding: 1.8em; font-family: courier; font-size: 1.4em;">
 “Minha pátria é minha língua.” <b>Fernando Pessoa</b>
 </p>
 </div>
 
-## Conceituação e história
+# Conceituação base
 
-Este tópico é de grande importância, visto que muito da problemática encontrada na linguagem natural e sua compreensão, fazem parte do domínio computacional. Sendo assim, nosso objetivo quanto pesquisadores em Processamento de Linguagem Natural também inclui a resolução desses desafios.
+Este tópico é de grande importância, visto que muito da problemática encontrada na linguagem natural e sua compreensão, fazem parte do domínio computacional. Sendo assim, nosso objetivo quanto pesquisadores em Processamento de Linguagem Natural também inclui a resolução desses desafios, o que nos leva a procurar uma correta compreensão de seus conceitos base.
 
-### Teoria da comunicação
+## Teoria da comunicação
 
 Os seres humanos são considerados animais sociais e como tal, sabemos que a linguagem é nossa principal ferramenta de comunicação. Sabemos que a música é tão remota quanto o início da comunicação verbalizada, mas a principal diferença está nos papéis exercidos. Enquanto os sinais sonoros emitidos por instrumentos rudimentares foram seguindo o caminho da subjetividade, os sons cada vez mais coordenados dos seres humanos foram seguindo para se tornarem mais claros. Partimos dos grunidos para linguagens extramamente sofisticadas.
 
@@ -51,7 +50,7 @@ Quando falamos em teoria da comunicação, em termos básicos temos o papel do e
 <img src="https://meriatblob.blob.core.windows.net/draft/theory_of_communications_2.png" style="margin-bottom: 0px !important;">
 </div>
 <div align="center" style="width: 100%;">
-<img src="https://meriatblob.blob.core.windows.net/draft/theory_of_communications.png" style="margin-bottom: 0px !important;">
+<img src="https://meriatblob.blob.core.windows.net/draft/theory_of_communications.jpg" style="margin-bottom: 0px !important;">
 </div>
 
 1. A fonte (**source**) produz uma mensagem. Uma mensagem pode ser um sinal de fumaça, telégrafo, rádio e etc.
@@ -61,21 +60,21 @@ Quando falamos em teoria da comunicação, em termos básicos temos o papel do e
 5. O receptor (**receiver**) normalmente executa a operação inversa da realizada pelo transmissor, reconstruindo a mensagem a partir do sinal, para que o destino possa compreender.
 6. O destino (**destination**) é a pessoa/coisa a quem a mensagem se destina.
 
-### Linguística base
+## Linguística básica e nomenclaturas
 
 Se tratando em linguística, temos o estudo sobre o uso e funcionamento das línguas naturais, independentemente da sua especificidade e diversidade. Nesta ciência possuímos diversas nomenclaturas, para nosso objetivo, precisamos conhecer os itens abaixo:
 
-* **Língua**: Podemos falar que a língua é, sobretudo, um instrumento de comunicação, e é essa a sua maior finalidade. Uma de suas riquezas e dificuldades, é que embora existam as normas gramaticais que regem um idioma, cada falante opta por uma forma de expressão que mais lhe convém, originando aquilo que chamamos de fala. A fala, embora possa ser criativa, deve ser regida por regras maiores e socialmente estabelecidas, caso contrário, cada um de nós criaria sua própria língua, o que impossibilitaria a comunicação. Na fala encontramos as variações linguísticas, visto que a língua é viva e dinâmica.
+* **Língua**: Podemos definir que a língua é, sobretudo, um instrumento de comunicação, e é essa a sua maior finalidade. Uma de suas riquezas e dificuldades, é que embora existam as normas gramaticais que regem um idioma, cada falante opta por uma forma de expressão que mais lhe convém, originando aquilo que chamamos de fala. A fala, embora possa ser criativa, deve ser regida por regras maiores e socialmente estabelecidas, caso contrário, cada um de nós criaria sua própria língua, o que impossibilitaria a comunicação. Na fala encontramos as variações linguísticas, visto que a língua é viva e dinâmica.
 
 * **Idioma**: É uma língua própria de um povo. Está relacionado com a existência de um Estado político, sendo utilizado para identificar uma nação em relação às demais. Existem países, como o Canadá, por exemplo, em que dois idiomas são considerados como oficiais, nesse caso, o francês e o inglês.
 
-* **Dialeto**: Variedade de uma língua própria de uma região ou território e está relacionado com as variações linguísticas encontradas na fala de determinados grupos sociais. As variações linguísticas podem ser compreendidas a partir da análise de três diferentes fenômenos: exposição aos saberes convencionais (diferentes grupos sociais com maior ou menor acesso à educação formal utilizam a língua de maneiras diferentes); situação de uso (os falantes adequam-se linguisticamente às situações comunicacionais de acordo com o nível de formalidade) e contexto sociocultural (gírias e jargões podem dizer muito sobre grupos específicos formados por algum tipo de “simbiose” cultural).
+* **Dialeto**: Por dialeto, temos o estudo da variedade de uma língua própria de uma região ou território e está relacionado com as variações linguísticas encontradas na fala de determinados grupos sociais. As variações linguísticas podem ser compreendidas a partir da análise de três diferentes fenômenos: exposição aos saberes convencionais (diferentes grupos sociais com maior ou menor acesso à educação formal utilizam a língua de maneiras diferentes); situação de uso (os falantes adequam-se linguisticamente às situações comunicacionais de acordo com o nível de formalidade) e contexto sociocultural (gírias e jargões podem dizer muito sobre grupos específicos formados por algum tipo de “simbiose” cultural).
 
-* **Fonética**: Estudo da realidade acústica, do funcionamento articulatório e anatómico e da interpretação percetiva dos sons de uma determinada língua natural.
+* **Fonética**: Podemos dizer que a fonética é o estudo da realidade acústica, do funcionamento articulatório e anatómico e da interpretação percetiva dos sons de uma determinada língua natural.
 
-* **Fonologia**: Estudo do sistema sonoro de uma língua, das regras subjacentes à combinação desses sons e do modo como esses sons exprimem distinções de significado.
+* **Fonologia**: É o estudo do sistema sonoro de uma língua, das regras subjacentes à combinação desses sons e do modo como esses sons exprimem distinções de significado.
 
-* **Morfologia**: Estudo da formação e da estrutura interna das palavras na língua.
+* **Morfologia**: A morfologia é a área da linguística que faz o estudo da formação e da estrutura interna das palavras dada uma determinada língua.
 
 * **Sintaxe**: Estudo das regras subjacentes à organização das palavras numa frase gramaticalmente bem formada.
 
@@ -83,7 +82,9 @@ Se tratando em linguística, temos o estudo sobre o uso e funcionamento das lín
 
 * **Pragmática**: Estudo do uso da língua em contexto por oposição ao estudo do sistema da língua.
 
-### Influências e formação da linguagem
+* **Gramática**: A gramática formaliza a língua, seja realizando sua descrição, seja traçando as normas para o seu uso. A linguística analisa os fatos da língua na sua situação de uso e tenta explicá-los. Ambas tratam do mesmo assunto, mas sob ângulos diferentes.
+
+## Influências e formação da linguagem
 
 <div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
 <img src="https://meriatblob.blob.core.windows.net/draft/lusofonos.jpg" style="margin-bottom: 0px !important; width: 80%;">
@@ -109,30 +110,39 @@ Em Moçambique, a língua portuguesa também sofre modificações baseadas nas r
 
 Essas estruturas são fundamentais para um correto entendimento e aplicação dos fundamentos em processamento de linguagem natural.
 
-### História
+## História
 
-Este é um 
+Quando como seres humanos cientes de nossa colocação no mundo nos preocupamos com o estudo da linguagem? Mais ainda, por que isso seria interessante? Este é um bônus, um ponto importante para ilustrar não só a mutabilidade como o papel da linguagem na construção e identidade de uma sociedade. A curiosidade humana sobre a linguagem é remoto e pode ser percebido por meio de vários mitos, lendas e rituais antigos.
 
-* 1250...
-* 1350...
-* 1450...
+O início dessa jornada data do século IV a.c, onde os religiosos hindus iniciaram um estudo da língua a fim de preservar os textos sagrados do Veda. Esses estudos levaram a uma rápida evolução, e mais tarde o gramático Panini (século IV a.c.) em conjunto com outros estudiosos, produziram modelos de análise dado uma minunciosa descrição da própria língua. Estes modelos só foram descobertos pelo ocidente no final do século XVIII, quando principalmente os gregos se propuseram a definir as relações entre o conceito e a palavra que o designa. 
+
+Sendo assim os gregos levaram o estudo da linguagem a outro nível. Eles questionaram coisas como: existe relação necessária entre a palavra e o seu significado? Podemos ver Platão discutindo esse ponto específico no Crátilo. Aristóteles desenvolveu estudos em outro foco, tentando proceder a uma análise precisa da estrutura linguística, chegando a elaborar uma teoria sobre distinguir as partes do discurso e a enumerar as categorias gramaticais.
+
+Entre estudiosos latinos, temos como destaque Varrão que, na esteira dos gregos, dedicou-se à gramática, em um esforço para defini-la como ciência e arte.
+
+> No século XVI, a religiosidade ativada pela Reforma provoca a tradução dos livros sagrados em numerosas línguas, apesar de manter-se o prestígio do latim como língua universal. Viajantes, comerciantes e diplomatas trazem de suas experiências no estrangeiro o conhecimento de línguas até então desconhecidas. Em 1502 surge o mais antigo dicionário poliglota, do italiano Ambrosio Calepino. "Introdução à linguística Volumes 1 e 2, José Luiz Fiorin"
+
+Em relação ao período moderno, podemos citar Franz Bopp como um dos principais criadores da gramática comparada. Sua obra publicada em 1816 se intitulava: `Über das Conjugationssystem der Sanskritsprache in Vergleichung mit jenem der griechischen, lateinischen, persischen und germanischen Sprache` **(Sobre o sistema de conjugação do sânscrito em comparação com o do grego, latim, persa e germânico)**. Esse trabalho evidenciou diversas semelhanças entre as línguas em questão.
 
 <div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
-<img src="https://meriatblob.blob.core.windows.net/draft/imitation-game.png" style="margin-bottom: 0px !important;">
+<img src="https://meriatblob.blob.core.windows.net/draft/indo-european-tree.jpeg" style="margin-bottom: 0px !important;">
+<p> ilustração: Minna Sundberg</p>
 </div>
+
+Ao expor as semelhanças entre essas línguas, foi notório uma relação de parentesco que originou o que hoje chamamos de família `indo-européia`, em que existe uma origem comum, comprovada pelo método histórico-comparativo.
+
+Somente no início do século XX a Linguística ganhou status de estudo científico. Como estudo ela sempre foi um anexo em estudos de lógica, filosofia, retórica, história ou crítica literária. O marco foi a divulgação dos trabalhos de Ferdinand de Saussure, professor da Universidade de Genebra. Em 1916, dois alunos de Saussure, a partir de anotações de aula, publicam o Curso de Lingüística geral, obra fundadora da nova ciência.
 
 # Linguagem Natural e sua Complexidade
 
-A complexidade envolvida na linguagem natural passa por sua estruturação formal (gramática), a questões mais subjetivas como interpretação. Adicione a isso o fato que temos diversas linguagens no mundo, todas com estruturas e significâncias diferentes. Ainda temos toda a problemática envolvendo as questões de engenharia, como por exemplo, processar grandes quantidades de texto, mas isso será abordado em outro momento. Para ilustração, vamos a um exemplo simples:
+A complexidade envolvida na linguagem natural passa por sua estruturação formal (gramática), a questões mais subjetivas como interpretação. Adicione a isso o fato que temos diversas linguagens no mundo, todas com estruturas e significâncias diferentes. Ainda temos toda a problemática envolvendo as questões de engenharia, como por exemplo, processar grandes quantidades de texto. Para ilustração, vamos a um exemplo simples:
 
 <div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
 <img src="https://meriatblob.blob.core.windows.net/draft/linguistics_club.png" style="margin-bottom: 0px !important;">
 <p>ref: https://www.xkcd.com/1602/</p>
 </div>
 
-No exemplo acima, um dos personangens pergunta se o outro irá participar da convensão de linguística. A resposta é dizer que só uma pessoa que sabe o significado da palavra em inglês **sesquiannual** pode participar. Isso por que essa é uma palavra pouco usada, e portanto, se você a usar em uma conversação, é provável que a outra pessoa não entenda o seu propósito. A palavra em questão se refere a um período de 18 meses, ou um ano e meio.
-
-sesquiannual: Occurring once every one and a half years (i.e. once every 18 months).
+No exemplo acima, temos uma anedota em torno da palavra **sesquiannual**, que representa um período de 18 meses. O punch aqui é que somente uma pessoa que conhece o significa dessa palavra sabe quando o encontro vai acontecer. Este é um exemplo simples onde temos uma palavra que pertence domínio geral da língua, está nos principais dicionários porém não é de uso comum da população.
 
 ## Compreensão semântica
 
@@ -195,9 +205,37 @@ Dado sua natureza prática, `NLP` é muito relacionada a questões comerciais em
 
 Podemos enquadrar `NLU` como uma subárea em `NLP`. Para uma boa aplicação baseada em processamento de linguagem natural, um bom **entendimento da linguagem** é simplesmente fundamental. 
 
+---
+
 # Garbage
 
----
+Linguagem de computação e sua relação com o processamento de linguagem natural...
+
+The Turing Test: Language, computers, and artificial intelligence
+Computers and language have gone together for decades. Natural language processing can be traced back to the 1950s, as many computer programmers began experimenting with simple language input to train computers to complete tasks. Then, in the 1960s, natural language understanding began developing out of a desire to get computers to understand more complex language input.
+
+<div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
+<img src="https://meriatblob.blob.core.windows.net/draft/imitation-game.png" style="margin-bottom: 0px !important;">
+<p>ref: Computing Machinery and Intelligence, A. M. Turing</p>
+</div>
+
+Gramática...
+Gramática é o conjunto de regras que indicam o uso mais correto de uma língua.
+
+No início, a gramática tinha como função apenas estabelecer regras quanto à escrita e à leitura. É por isso que a palavra gramática, de origem grega (grámma), significa “letra”.
+
+Tipos de Gramática
+Há 4 tipos de gramáticas: normativa, descritiva, histórica e comparativa. Ao mesmo tempo, a gramática da língua portuguesa é dividida em fonologia, morfologia e sintaxe. Nessa divisão, há gramáticos que incluem a semântica.
+
+1. Normativa: A gramática normativa é sinônimo de norma culta. Ela estabelece os usos certos e errados em oposição ao uso popular. Isso porque, apesar de ser compreensível, no cotidiano, há sérias transgressões ao modelo estabelecido. Essa é a gramática oficial e, que portanto, é ensinada nas escolas.
+
+2. Descritiva: A gramática descritiva analisa a língua com o objetivo de entender as suas alterações com o passar do tempo, especialmente em decorrência do seu uso oral.
+
+3. Histórica: A gramática histórica trata justamente da história da língua, desde a sua origem às transformações.
+
+4. Comparativa: A gramática comparativa estuda a gramática fazendo uma comparação com as gramáticas pertencentes às mesmas famílias linguísticas.
+
+O português pertence à família das línguas indo-europeias, em que se inclui as línguas itálicas. São exemplos as línguas espanhola e francesa.
 
 Trabalhar com NLP é um assunto como desafios complexos, como por exemplo, podemos pensar de forma intuítiva na criação de um sistema de perguntas simples e suas respostas. A forma ingenua seria construir um sistema baseado na busca de termos, palavras chave ou padrões de palavras. Essa é uma atividade relativamente fácil, principalmente pela capacidade computacional que temos hoje. Já se pensarmos no mesmo sistema construído para responder perguntas complexas, precisamos solucionar outros problemas com as inferências.
 
@@ -242,20 +280,20 @@ Bom, o primeiro passo é transformar a nossa linguagem natural em algo que possa
 
 ---
 
-## Conlusão
+# Conlusão
 
 Existe muita confusão quanso se fala em NLP. Temos diversas terminologias e conceitos que são errôneamente relacionados a essa materia. NLP é um campo onde uma certa complexidade está associada, então um correto entendimento dos conceitos é fundamental para conseguir atingir um nível avançado de trabalho. 
 
 Fora isso a pesquisa e desenvolviemnto explorando o estado da arte em NLP requer um forte conhecimento em áreas como a linguística, uma vez diversos dos problemas que hoje queremos resolver, extrapolam a engenharia para algo mais conceitual.
 
-## Referências
+# Referências
 
 * Computational Linguistics and Natural Language Processing, Jun’ichi Tsujii, University of Tokyo
 * Introduction to Computational Linguistics, Jason Eisner, Johns Hopkins University
 * Interpretação e compreensão. Marcelo DASCAL
 * SILVA, M.C.S; KOCH, I.V. Linguística Aplicada ao Português: Morfologia. 18ª ed. – São Paulo: Cortez, 2012.
 * Diferenças entre língua, idioma e dialeto; PEREZ, Luana Castro Alves, Brasil Escola.
-* INTRODUÇÃO À LINGÜÍSTICA VOLUMES 1 E 2, José Luiz Fiorin
+* Introdução à linguística Volumes 1 e 2, José Luiz Fiorin
 * A Mathematical Theory of Communication, C. E. SHANNON, harvard
 * A Mind at Play: How Claude Shannon Invented the Information Age, Jimmy Soni and Rob Goodman
-* COMPUTING MACHINERY AND INTELLIGENCE, A. M. Turing, [link](https://www.csee.umbc.edu/courses/471/papers/turing.pdf)
+* Computing Machinery and Intelligence, A. M. Turing, [link](https://www.csee.umbc.edu/courses/471/papers/turing.pdf)
