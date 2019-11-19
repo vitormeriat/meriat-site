@@ -29,9 +29,7 @@ Esse trabalho se propõe a trazer uma introdução ao estudo do `Processamento d
 Antes de iniciar, se faz importante informar que alguns dos termos utilizados serão apresentados em inlgês e português. Para que não seja causada nenhuma estranheza ao leitor, vou priorizar os termos técnicos em inglês, e achando necessário realizo a explicação/tradução do mesmo. Para facilitar a leitura, algumas referências serão colocadas durante o texto. As demais estão todas na sessão de **Referências** ao final deste texto.
 
 <div style="margin-bottom: 5em; margin-top: 5em; background-color: #35d648; color: #382d2d">
-<p style="padding: 1.8em; font-family: courier; font-size: 1.4em;">
-“Minha pátria é minha língua.” <b>Fernando Pessoa</b>
-</p>
+<p style="padding: 1.8em; font-family: courier; font-size: 1.4em;">"Minha pátria é minha língua." <b>Fernando Pessoa</b></p>
 </div>
 
 # Conceituação base
@@ -76,13 +74,17 @@ Se tratando em linguística, temos o estudo sobre o uso e funcionamento das lín
 
 * **Morfologia**: A morfologia é a área da linguística que faz o estudo da formação e da estrutura interna das palavras dada uma determinada língua.
 
-* **Sintaxe**: Estudo das regras subjacentes à organização das palavras numa frase gramaticalmente bem formada.
+* **Sintaxe**: Estudo das regras subjacentes à organização das palavras numa frase gramaticalmente bem formada. Refere-se à estrutura das frases. Regras pelas quais palavras podem ser combinadas em frases gramaticalmente aceitáveis.
 
-* **Semântica**: Estudo do significado da produção e interpretação de palavras e frases.
+* **Semântica**: Estudo do significado da produção e interpretação de palavras e frases. As regras definidas na semântica servem para definir os significados de morfemas, palavras e frases, indivíduos e sentenças. Reconhecimento de palavras e sentenças ambíguas, anômalas, paráfrases, etc.
 
-* **Pragmática**: Estudo do uso da língua em contexto por oposição ao estudo do sistema da língua.
+* **Pragmática**: Estudo do uso da língua em contexto por oposição ao estudo do sistema da língua. Nela temos a percepção das regras que governam o uso da linguagem em contextos sociais, o que inclui o conhecimento de tipos de sentenças que são mais adequados para produzir resposta desejada, percepção da informação de fundo necessária para transmitir a mensagem visada e o entendimento dos princípios cooperativos que estão por trás das trocas na conversação.
 
 * **Gramática**: A gramática formaliza a língua, seja realizando sua descrição, seja traçando as normas para o seu uso. A linguística analisa os fatos da língua na sua situação de uso e tenta explicá-los. Ambas tratam do mesmo assunto, mas sob ângulos diferentes.
+
+* **Semiótica**: Por semiótica temos o estudo dos signos, o que abrange todos os elementos que representam algum significado e sentido para o ser humano, abarcando as linguagens verbais e não-verbais.
+
+Com estes itens em mente, podemos prosseguir para nosso estudo visando nos aprofundar na teoria.
 
 ## Influências e formação da linguagem
 
@@ -99,22 +101,27 @@ Em Angola, há 11 línguas e diversos dialetos que transformam o português incl
 
 > Por tudo isso, nos três países, há regionalismos que podem deixar o idioma incompreensível mesmo entre os lusófonos.
 
-Por exemplo, aqui no Brasil nós adoramos abusar do tempo verbal gerúndio, muito pouco usado em outros países em questão. Por exemplo, usamos a frase **"estou fazendo isso"** no lugar de **"estou a fazer isso"**. Há também o gerundismo (uso desnecessário do gerúndio) como em **"vamos estar averiguando"**.
+Por exemplo, aqui no Brasil nós adoramos abusar do tempo verbal gerúndio, muito pouco usado em outros países em questão. Por exemplo, usamos a frase **"estou fazendo isso"** no lugar de **"estou a fazer isso"**. Há também o `gerundismo` (uso desnecessário do gerúndio) como em **"vamos estar averiguando"**.
 
 <div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
 <img src="https://meriatblob.blob.core.windows.net/draft/same-language.jpg" style="margin-bottom: 0px !important; width: 80%;">
 <p> ilustração: Pilar Hernandez</p>
 </div>
 
-Em Moçambique, a língua portuguesa também sofre modificações baseadas nas regras gramaticais de línguas locais. É o caso do verbo "nascer", que lá é usado como na língua changana: "Meus pais nasceram minha irmã". O mesmo vale para "Nos disseram que hoje não há aula", que fica: "Nós fomos ditos que hoje não há aulas".
+Outro país onde a língua portuguesa sofre diversas alterações com base nas regras gramaticias das línguas locais é Moçambique. Como exemplo podemos usar o caso do verbo **"nascer"**, que lá é usado como na língua **changana**: **"Meus pais nasceram minha irmã"**. O mesmo vale para **"Nos disseram que hoje não há aula"**, que fica: **"Nós fomos ditos que hoje não há aulas"**.
 
 Essas estruturas são fundamentais para um correto entendimento e aplicação dos fundamentos em processamento de linguagem natural.
+
+<div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
+<img src="https://meriatblob.blob.core.windows.net/draft/luis_de_camoes.png" style="margin-bottom: 0px !important;">
+<p>Luís de Camões, considerado um dos maiores escritores de língua portuguesa e ainda, um dos maiores representantes da literatura mundial.</p>
+</div>
 
 ## História
 
 Quando como seres humanos cientes de nossa colocação no mundo nos preocupamos com o estudo da linguagem? Mais ainda, por que isso seria interessante? Este é um bônus, um ponto importante para ilustrar não só a mutabilidade como o papel da linguagem na construção e identidade de uma sociedade. A curiosidade humana sobre a linguagem é remoto e pode ser percebido por meio de vários mitos, lendas e rituais antigos.
 
-O início dessa jornada data do século IV a.c, onde os religiosos hindus iniciaram um estudo da língua a fim de preservar os textos sagrados do Veda. Esses estudos levaram a uma rápida evolução, e mais tarde o gramático Panini (século IV a.c.) em conjunto com outros estudiosos, produziram modelos de análise dado uma minunciosa descrição da própria língua. Estes modelos só foram descobertos pelo ocidente no final do século XVIII, quando principalmente os gregos se propuseram a definir as relações entre o conceito e a palavra que o designa. 
+O início dessa jornada data do século IV a.c, onde os religiosos hindus iniciaram um estudo da língua a fim de preservar os textos sagrados do Veda. Esses estudos levaram a uma rápida evolução, e mais tarde o gramático Panini (século IV a.c.) em conjunto com outros estudiosos, produziram modelos de análise dado uma minunciosa descrição da própria língua. Estes modelos só foram descobertos pelo ocidente no final do século XVIII, quando principalmente os gregos se propuseram a definir as relações entre o conceito e a palavra que o designa.
 
 Sendo assim os gregos levaram o estudo da linguagem a outro nível. Eles questionaram coisas como: existe relação necessária entre a palavra e o seu significado? Podemos ver Platão discutindo esse ponto específico no Crátilo. Aristóteles desenvolveu estudos em outro foco, tentando proceder a uma análise precisa da estrutura linguística, chegando a elaborar uma teoria sobre distinguir as partes do discurso e a enumerar as categorias gramaticais.
 
@@ -126,7 +133,7 @@ Em relação ao período moderno, podemos citar Franz Bopp como um dos principai
 
 <div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
 <img src="https://meriatblob.blob.core.windows.net/draft/indo-european-tree.jpeg" style="margin-bottom: 0px !important;">
-<p> ilustração: Minna Sundberg</p>
+<p>ilustração: Minna Sundberg</p>
 </div>
 
 Ao expor as semelhanças entre essas línguas, foi notório uma relação de parentesco que originou o que hoje chamamos de família `indo-européia`, em que existe uma origem comum, comprovada pelo método histórico-comparativo.
@@ -135,14 +142,14 @@ Somente no início do século XX a Linguística ganhou status de estudo científ
 
 # Linguagem Natural e sua Complexidade
 
-A complexidade envolvida na linguagem natural passa por sua estruturação formal (gramática), a questões mais subjetivas como interpretação. Adicione a isso o fato que temos diversas linguagens no mundo, todas com estruturas e significâncias diferentes. Ainda temos toda a problemática envolvendo as questões de engenharia, como por exemplo, processar grandes quantidades de texto. Para ilustração, vamos a um exemplo simples:
+A complexidade envolvida na linguagem natural passa por sua estruturação formal (gramática), até as questões mais subjetivas como interpretação. Adicione a isso o fato que temos diversas linguagens no mundo, todas com estruturas e significâncias diferentes. Se isso ainda não for suficiente, ainda temos toda a problemática envolvendo as questões de engenharia, como por exemplo, processar grandes quantidades de texto.
 
 <div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
 <img src="https://meriatblob.blob.core.windows.net/draft/linguistics_club.png" style="margin-bottom: 0px !important;">
 <p>ref: https://www.xkcd.com/1602/</p>
 </div>
 
-No exemplo acima, temos uma anedota em torno da palavra **sesquiannual**, que representa um período de 18 meses. O punch aqui é que somente uma pessoa que conhece o significa dessa palavra sabe quando o encontro vai acontecer. Este é um exemplo simples onde temos uma palavra que pertence domínio geral da língua, está nos principais dicionários porém não é de uso comum da população.
+No exemplo acima, temos uma anedota em torno da palavra **sesquiannual**, que representa um período de 18 meses. O punch aqui é que somente uma pessoa que conhece o significa dessa palavra sabe quando o encontro vai acontecer. Este é um exemplo simples onde temos uma palavra que pertence domínio geral da língua, está nos presente nos dicionários porém não é de uso comum da população.
 
 ## Compreensão semântica
 
@@ -154,17 +161,70 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 </p>
 </div>
 
-Contudo, de maneira geral, a semântica não é tratada de forma isolada em cada palavra, mas sim generalizada a contextos mais amplos. Assim, em um diálogo, por exemplo, pode-se identificar um significado particular em cada frase e um significado mais geral pertinente ao assunto tratado pelas pessoas que promovem o diálogo. Da mesma forma, em um texto dissertativo, embora cada parágrafo possa expressar um sentido particular, é a união de todos os parágrafos que formarão o sentido do texto.
+Contudo, de maneira geral, a semântica não é tratada de forma isolada em cada palavra, mas sim generalizada a contextos mais amplos. Sendo assim, ao considerar um diálogo, podemos identificar um significado particular em cada frase e um significado mais geral pertinente ao assunto tratado pelas pessoas que promovem o diálogo. Da mesma forma, em um texto dissertativo, mesmo considerando que cada parágrafo possa expressar um sentido particular, é somente com a junção de todas as sentenças que poderemos formar o sentido de um determinado texto.
 
-Como pode ser notado, a função básica de uma linguagem, ou seja, a comunicação, está centrada no significado das expressões linguísticas produzidas. Isto torna o estudo da semântica essencial para implementações computacionais que envolvam compreensão e produção de linguagem. Uma barreira porém a este objetivo gira em torno da necessidade da utilização da intuição na compreensão do sentido de um texto, atos dificilmente aplicáveis a máquinas inspiradas na arquitetura de `Von Neumman`.
+Podemos concluir que a função base de uma linguagem é a comunicação, e esta está centrada na significância das expressões linguísticas produzidas. Como isto, o estudo da semântica ganha papel de fundamento para as implementações computacionais que envolvem compreensão e produção de linguagem. Isso dialóga diretamente com as dificuldades da envolvidas no processamento da linguagem natural, uma vez que nós utilizamos a intuição na compreensão do sentido de um determinado texto, algo que é discutível quando falamos de sua aplicação prática na computação.
 
-Se utilizarmos um dos programas atuais de tradução de textos, vamos perceber ao final de todo o processamento que o resultado obtido apresenta em grande parte das vezes, inúmeras deficiências como falta de pronomes, erros de gênero e troca de palavras. Nos sistemas modernos, percebemos que essas falhas, mesmo não comprometendo a compreensão do contexto do documento traduzido, irá nos requerer uma revisão para a correta compreensão do assunto tratado.
+<style>
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+  background: #9865d0;
+  color: #ffffff;
+  margin: 4em 0 4em 0;
+}
 
-O que destaco aqui, é que o processamento e tratamento computacional da linguagem natural, colide com enormes barreiras, as quais são típicas da comunicação humana. Essas dificuldades são tratadas pelo cérebro de forma natural, embora já conhecemos os ríscos que estão associados a comunicação humana.
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.main {
+  font-size: 1.8em;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.aside-1 {
+  font-size: 0.8em;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+}
+</style>
+
+<div class="wrapper">
+  <article class="main">
+    <p>Como trabalhar o correto entendimento de um texto em uma máquina baseada na arquitetura de Von Neumman?</p>  
+  </article>
+  <aside class="aside aside-1">
+	  <img src="https://meriatblob.blob.core.windows.net/draft/von-neumann.png" style="margin-bottom: 0px !important;">
+	  <p>Von Neumman</p>
+  </aside>
+</div>
+
+Um teste simples utilizando qualquer um dos grandes tradutores online da atualidade vai nos mostrar que a tradução obtida, na maioria dos casos apresenta diversas deficiências. Mesmo que isso não compremeta a compreensão geral do contexto da tradução, se faz necessário a revisão humana para uma correta compreensão do mesmo. 
+
+> O que temos de pontuar aqui, é que o processamento e tratamento computacional da linguagem natural precisa transpassar diversas barreiras, as mesmas que são típicas da comunicação humana.
+
+Essas dificuldades são tratadas pelo cérebro de forma natural, embora já conhecemos os ríscos que estão associados a comunicação humana, por mais eficiênte que ela possa se dar.
 
 # Natural Language Processing
 
-Podemos conceituar `NLP` da seguinte maneira:
+Partindo para a área computacional, podemos conceituar `NLP` da seguinte maneira:
 
 <div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
 <p style="padding: 1.6em; font-family: courier;">
@@ -172,7 +232,7 @@ Podemos conceituar `NLP` da seguinte maneira:
 </p>
 </div>
 
-Como objetivo, podemos definir que em `NLP` queremos construir mecanismos artificiais que permitem o entedimento da linguagem natural para a realização de tarefas que visam simular um comportamento humano (e.g. tradução e interpretação de textos, busca de informações em documentos, detecção de tópicos).
+Como objetivo, podemos definir que em `NLP`, queremos construir mecanismos artificiais que permitem o entedimento da linguagem natural para a realização de tarefas que visam simular um comportamento humano (e.g. tradução e interpretação de textos, busca de informações em documentos, detecção de tópicos).
 
 `NLP` se encaixa no mundo da computação como uma subárea de Inteligência Artificial, e constantemente associada a Linguística Computacional, embora sejam matérias diferentes.
 
@@ -203,29 +263,50 @@ Dado sua natureza prática, `NLP` é muito relacionada a questões comerciais em
 
 ## E sobre Natrual Language Understanding?
 
-Podemos enquadrar `NLU` como uma subárea em `NLP`. Para uma boa aplicação baseada em processamento de linguagem natural, um bom **entendimento da linguagem** é simplesmente fundamental. 
+Podemos enquadrar `NLU` como uma subárea em `NLP`. Para uma boa aplicação baseada em processamento de linguagem natural, um bom **entendimento da linguagem** é simplesmente fundamental.
 
----
+## Linguagem de programação e sua relação com NLP
 
-# Garbage
-
-Linguagem de computação e sua relação com o processamento de linguagem natural...
-
-The Turing Test: Language, computers, and artificial intelligence
-Computers and language have gone together for decades. Natural language processing can be traced back to the 1950s, as many computer programmers began experimenting with simple language input to train computers to complete tasks. Then, in the 1960s, natural language understanding began developing out of a desire to get computers to understand more complex language input.
+Quando falamos de NLP, existe uma correlação com a Linguagem de programação que é pouco explorada. Antes de entrar no aspecto técnico, podemos citar um exemplo emblemático.
 
 <div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
 <img src="https://meriatblob.blob.core.windows.net/draft/imitation-game.png" style="margin-bottom: 0px !important;">
 <p>ref: Computing Machinery and Intelligence, A. M. Turing</p>
 </div>
 
-Gramática...
-Gramática é o conjunto de regras que indicam o uso mais correto de uma língua.
+Em meados de 1950, nos primordios da computação como conheçemos hoje, Alan Turing escreveu o famoso artigo que mais tarde ficou famoso como o teste de Turing. Basicamente ele sugere que um computador pode ser considerado inteligênte caso ele consiga por meio de uma interface conversacional, manter um diálogo com um ser humano sem que o mesmo consiga identificar que se trata de uma máquina. 
 
-No início, a gramática tinha como função apenas estabelecer regras quanto à escrita e à leitura. É por isso que a palavra gramática, de origem grega (grámma), significa “letra”.
+É nesta época, em conjunto com a evolução da linguagem de programação que temos os primeiros programadores experimentando entradas simples de linguagem escrita para executar tarefas computacionais. Uma década após, se inicia um movimento de pesquisas sobre a utilização de textos mais próximos da linguagem natural como input para tarefas computacionais.
 
-Tipos de Gramática
-Há 4 tipos de gramáticas: normativa, descritiva, histórica e comparativa. Ao mesmo tempo, a gramática da língua portuguesa é dividida em fonologia, morfologia e sintaxe. Nessa divisão, há gramáticos que incluem a semântica.
+Grande parte do interesse nessa atividade veio da possibilidade de dar ao usuário comum, o poder de interagir com a máquina a fim de realizar tarefas e obter informações sem a necessidade de programação explícita. Isso vai se tornar popular no imaginário mundial, por meio de obras SyFy (Science Fiction) como o grande clássico de Kubrick, 2001: A Space Odyssey. Esse filme de 1968 em particular, possui diversos diálogos entre homem e máquina. O nível de compreensão exibido pelo famoso computador HAL9000 é até hoje impensável.
+
+<div align="center" style="font-size: 0.8em; font-family: courier;">
+<img style="width: 100%;" src="https://ichef.bbci.co.uk/wwfeatures/wm/live/1600_640/images/live/p0/63/9f/p0639ffn.jpg">
+<p>ref: 2001: A Space Odyssey. 1968, Stanley Kubrick</p>
+</div>
+
+Saindo da história para a engenharia, em grande parte o entendimento da estrutura interna de uma linguagem de programação traça um bom paralelo com a utilização da linguagem natural na computação. Em ambos os casos para um correto entendimento precisamos conhecer as regras que as formam. Novamente em ambos os casos, essas regras são definidas pelo que chamamos de gramática.
+
+## Gramática
+
+Já vimos que a gramática é o conjunto de regras que indicam o uso mais correto de uma língua. No início, a gramática tinha como função apenas estabelecer regras quanto à escrita e à leitura. É por isso que a palavra gramática, de origem grega (grámma), significa “letra”.
+
+No estudo da língua podemos definir 4 tipos de gramáticas: normativa, descritiva, histórica e comparativa. Ao mesmo tempo, a gramática da língua portuguesa é dividida em fonologia, morfologia e sintaxe, sendo que muitos gramáticos ainda incluem nesse pacote a semântica.
+
+Uma vez que enxergamos a gramática como uma especiﬁcação formal da estrutura geral de numa linguagem, podemos definir uma maneira simples de implementação que funciona para a criação de qualquer linguagem. Primeiro precisamos de um mecanismo que denote as palavras da linguagem, podemos chamar essa mecanismo de símbolos terminais. O próximo mecanismo será utilizado para denotar os componentes de uma sentença. Vamos chamá-los de símbolos não terminais. Para que isso possa ser aplicável, temos um conjunto de regras de produção, que expandem os símbolos não-terminais em uma sequência de símbolos terminais e não-terminais. Com isso a gramática de se iniciar com um símbolo não-terminal inicial. No exemplo abaixo, temos uma gramática que deﬁne um fragmento da língua portuguesa:
+
+**Gramática 1.**
+
+* frase ⇒ sujeito predicado
+* sujeito ⇒ artigo substantivo
+* predicado ⇒ verbo artigo substantivo
+* artigo ⇒ o
+* substantivo ⇒ gato > rato
+* verbo ⇒ caçou
+
+Nessa gramática, os símbolos terminais são o, gato e rato, sendo os demais símbolos não-terminais. A regra de produção frase ⇒ sujeito predicado estabelece que uma frase é composta de um sujeito seguido de um predicado; enquanto a regra substantivo ⇒ gato > rato estabelece que um substantivo pode ser a palavra “gato” ou “rato”. Além disso, para essa gramática, o símbolo não-terminal inicial será frase. Nas gramáticas livres de contexto (do tipo que consideramos nesse artigo), o lado esquerdo de uma regra de produção será sempre um único símbolo não terminal, enquanto o lado direito pode conter símbolos terminais e não terminais. Como veremos a seguir, uma gramática pode ser usada tanto para reconhecimento, ou seja, para decidir se essa frase pertence à linguagem deﬁnida pela gramática; quanto para geração, ou seja, para construir uma frase pertencente à linguagem deﬁnida pela gramática.
+
+---
 
 1. Normativa: A gramática normativa é sinônimo de norma culta. Ela estabelece os usos certos e errados em oposição ao uso popular. Isso porque, apesar de ser compreensível, no cotidiano, há sérias transgressões ao modelo estabelecido. Essa é a gramática oficial e, que portanto, é ensinada nas escolas.
 
@@ -257,23 +338,6 @@ A semântica associa signiﬁcado a uma estrutura sintática, em termos dos sign
 
 Como podemos ver a PNL é uma área da pesquisa muito vasta, que envolve diversas disciplinas do conhecimento humano. Neste artigo vou abordar apenas a análise sintática de algumas frases em português. O objetivo é definir uma gramática capaz de gerar um conjunto finito de sentenças e decidir se uma determinada sentença pertence ou não à linguagem definida nesta gramática. Em seguida, vamos estender essa gramática para tratar concordância de gênero e número, bem como tempos verbais. Com isso conseguimos montar uma árvore sintática de uma sentença de forma automática.
 
-# Gramática e análise sintática
-
-Uma gramática é uma especiﬁcação formal da estrutura das sentenças permitidas numa linguagem. O modo mais simples de deﬁnir uma gramática é especiﬁcando um conjunto de símbolos terminais, denotando palavras da linguagem, um conjunto de símbolos não-terminais, denotando os componentes das sentenças, e um conjunto de regras de produção, que expandem símbolos não-terminais numa sequência de símbolos terminais e não-terminais [3]. Além disso, a gramática deve ter um símbolo não-terminal inicial. Por exemplo, a gramática a seguir deﬁne um fragmento da língua portuguesa:
-
-#### Gramática 1. 
-
-* frase ⇒ sujeito predicado
-* sujeito ⇒ artigo substantivo
-* predicado ⇒ verbo artigo substantivo
-* artigo ⇒ o
-* substantivo ⇒ gato > rato
-* verbo ⇒ caçou
-
-Nessa gramática, os símbolos terminais são o, gato e rato, sendo os demais símbolos não-terminais. A regra de produção frase ⇒ sujeito predicado estabelece que uma frase é composta de um sujeito seguido de um predicado; enquanto a regra substantivo ⇒ gato > rato estabelece que um substantivo pode ser a palavra “gato” ou “rato”. Além disso, para essa gramática, o símbolo não-terminal inicial será frase. Nas gramáticas livres de contexto (do tipo que consideramos nesse artigo), o lado esquerdo de uma regra de produção será sempre um único símbolo não terminal, enquanto o lado direito pode conter símbolos terminais e não terminais. Como veremos a seguir, uma gramática pode ser usada tanto para reconhecimento, ou seja, para decidir se essa frase pertence à linguagem deﬁnida pela gramática; quanto para geração, ou seja, para construir uma frase pertencente à linguagem deﬁnida pela gramática.
-
----
-
 > Se a comunicação é algo complexo mesmo para nós os seres humanos, como podemos trabalhar isso em computação?
 
 Bom, o primeiro passo é transformar a nossa linguagem natural em algo que possa ser trabalhado por máquina. Fazemos isso transformando nosso dado textual em algum padrão de representação numérica, algo que seja processável e compreendido por uma máquina. Somente realizando esse passo é possível iniciar o processo de examinar os dados para criação de modelos matemáticos.
@@ -297,3 +361,4 @@ Fora isso a pesquisa e desenvolviemnto explorando o estado da arte em NLP requer
 * A Mathematical Theory of Communication, C. E. SHANNON, harvard
 * A Mind at Play: How Claude Shannon Invented the Information Age, Jimmy Soni and Rob Goodman
 * Computing Machinery and Intelligence, A. M. Turing, [link](https://www.csee.umbc.edu/courses/471/papers/turing.pdf)
+* Introdução a semiótica, José David Campos Fernandes, [link](http://www.cchla.ufpb.br/clv/images/docs/modulos/p8/p8_4.pdf)
