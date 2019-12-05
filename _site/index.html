@@ -27,7 +27,7 @@
 	<title>Vitor Meriat</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Vitor Meriat" />
-	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist" />
+	<meta name="keywords" content="cloud computing, machine learning, big data, iot, developer, data scientist, data science, deep learning, statistics, math, nlp, computer vision" />
 	<meta name="author" content="Vitor Meriat" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -35,11 +35,6 @@
 
 	<!-- Google Webfont -->
 	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<!-- Themify Icons -->
-	<link rel="stylesheet" href="/assets/css/themify-icons.css">
-	<!-- Icomoon Icons -->
-	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="/assets/css/bootstrap.css">
 	<!-- Owl Carousel -->
@@ -51,20 +46,21 @@
 	<link rel="stylesheet" href="/assets/css/easy-responsive-tabs.css">
 	<!-- Theme Style -->
 	<link rel="stylesheet" href="/assets/css/style.css?v2">
-
-	<link href="/assets/css/font-awesome.min.css" rel="stylesheet">
-
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<!-- Icomoon Icons 
+	<link rel="stylesheet" href="/assets/css/icomoon-icons.css">-->
+	
+	
 	<link rel="stylesheet" href="/assets/css/default.min.css">
     <script src="/assets/js/highlight.min.js"></script>
 	<link rel="stylesheet" href="/assets/css/obsidian.css">
 
-	<script>hljs.initHighlightingOnLoad();</script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet">
 
-	<!-- FOR IE9 below -->
-	<!--[if lte IE 9]>
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+	<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 
@@ -79,7 +75,7 @@
 			</div>
       <div style="text-align: center;">
         <a href="/"><h2 style="margin-top: 0px !important;">Vitor Meriat</h2></a>
-        <span style="font-size: 1em; color: black;">Microsoft <b>A</b>rtificial <b>I</b>ntelligence MVP - Data science & Machine Learning Engineer</span>
+        <span style="font-size: 1em; color: black;">Microsoft <b>AI</b> MVP - Data science & Machine Learning Engineer</span>
       </div>
 			<!-- Mobile Toggle Menu Button -->
 			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
@@ -88,18 +84,10 @@
 			<div id="fh5co-main-nav">
 				<nav id="fh5co-nav" role="navigation">
 					<ul>
-						<li class="fh5co-active">
-							<a href="/">Blog</a>
-						</li>
-						<li class="">
-							<a href="/archive/">Archives</a>
-						</li>
-            <li class="">
-							<a href="/category/">Categories</a>
-						</li>
-            <li class="">
-							<a href="/about/"> About me </a>
-						</li>
+						<li class="fh5co-active"><a href="/">Blog</a></li>
+						<li class=""><a href="/archive/">Archives</a></li>
+            			<li class=""><a href="/category/">Categories</a></li>
+						<li class=""><a href="/about/"> About me </a></li>
 					</ul>
 				</nav>
 			</div>
@@ -111,315 +99,298 @@
       <div class="fh5co-spacer fh5co-spacer-sm"></div>
 
 <div class="container">
-<section itemscope itemtype="http://schema.org/Blog">
-
-  <div class="section-padding archives__container">
-    
+  <section itemscope itemtype="http://schema.org/Blog">
+    <div class="section-padding archives__container">
+      
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2019/10/01/nlp-under-the-hood/" itemprop="url">
-          <div style="text-align: center;">
+          <div class="image-content" style="text-align: center;">
             <span class="index-title">NLP under the hood</span>
             <p>
               <span class="post-date">Oct 1, 2019</span>
               
-                in <span class="post-cat">IA, Machine Learning, Data Science, NLP</span>
+              in <span class="post-cat">IA, Machine Learning, Data Science, NLP</span>
               
             </p>
             
+            <div align="center" style="margin-bottom: 2em;">
             
-                
-                  <div style="width: 100%; margin-bottom: 2em;">
-                
-                  <img src="https://meriatblob.blob.core.windows.net/draft/capa.png" >
-              </div>
-            
+              <img src="https://meriatblob.blob.core.windows.net/draft/capa.png">
             </div>
-          </a>
-            
-              <p class="post-description">Esse trabalho se propõe a trazer uma introdução ao estudo do Processamento de Linguagem Natural, (Natural Language Processing). Minha intenção é olhar para sua base teórica enquanto disciplina. Sendo assim vamos passar por algumas definições e conceitos antes de avançar nas questões práticas. Vamos falar sobre compiladores, árvores sintáticas e suas complexidades.</p>
-            
-            <a href="/2019/10/01/nlp-under-the-hood/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
-            <div class="fh5co-spacer fh5co-spacer-md"></div>
-
+          </div>
+        </a>
+        
+        <p class="post-description">Esse trabalho se propõe a trazer uma introdução ao estudo do Processamento de Linguagem Natural, (Natural Language Processing). Minha intenção é olhar para sua base teórica enquanto disciplina. Sendo assim vamos passar por algumas definições e conceitos antes de avançar nas questões práticas. Vamos falar sobre compiladores, árvores sintáticas e suas complexidades.</p>
+        
+        <a href="/2019/10/01/nlp-under-the-hood/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
+        <div class="fh5co-spacer fh5co-spacer-md"></div>
       </article>
-    
+      
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2018/09/27/gpu-for-deeplearning/" itemprop="url">
-          <div style="text-align: center;">
+          <div class="image-content" style="text-align: center;">
             <span class="index-title">GPU for Deep Learning</span>
             <p>
               <span class="post-date">Sep 27, 2018</span>
               
-                in <span class="post-cat">AI, Deep Learning</span>
+              in <span class="post-cat">AI, Deep Learning</span>
               
             </p>
             
+            <div align="center" style="margin-bottom: 2em;">
             
-                
-                  <div style="width: 100%; margin-bottom: 2em;">
-                
-                  <img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/capa.png" >
-              </div>
-            
+              <img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/capa.png">
             </div>
-          </a>
-            
-              <p class="post-description">Chegamos a um tópico importante dentro do campo de estudo da Deep Learning, a programação em GPU. Minha intenção com este artigo é demonstrar qual a relação entre Deep Learning e GPU, e a importância deste hardware especializado nas atividade de programação em redes neurais artificiais profundas.</p>
-            
-            <a href="/2018/09/27/gpu-for-deeplearning/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
-            <div class="fh5co-spacer fh5co-spacer-md"></div>
-
+          </div>
+        </a>
+        
+        <p class="post-description">Chegamos a um tópico importante dentro do campo de estudo da Deep Learning, a programação em GPU. Minha intenção com este artigo é demonstrar qual a relação entre Deep Learning e GPU, e a importância deste hardware especializado nas atividade de programação em redes neurais artificiais profundas.</p>
+        
+        <a href="/2018/09/27/gpu-for-deeplearning/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
+        <div class="fh5co-spacer fh5co-spacer-md"></div>
       </article>
-    
+      
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2017/11/20/jupyter-notebook-vm-azure/" itemprop="url">
-          <div style="text-align: center;">
+          <div class="image-content" style="text-align: center;">
             <span class="index-title">Provision the Jupyter Notebook in Azure VM for Linux</span>
             <p>
               <span class="post-date">Nov 20, 2017</span>
               
-                in <span class="post-cat">AI, Machine Learning, Data Science</span>
+              in <span class="post-cat">AI, Machine Learning, Data Science</span>
               
             </p>
             
+            <div align="center" style="margin-bottom: 2em; background-color: #f2f2f2;">
             
-                
-                  <div style="width: 100%; margin-bottom: 2em; background-color: #f2f2f2;">
-                
-                  <img src="http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png" >
-              </div>
-            
+              <img src="http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png">
             </div>
-          </a>
-            
-              <p class="post-description">Neste post vamos passo a passo criar uma máquina virtual Linux no Azure, instalar o Jupyter Notebook via Anaconda. Também vamos conectar em nossa VM via um túnel SSH para conseguir utilinar nossos Notebooks como se estevessem rodando local.
+          </div>
+        </a>
+        
+        <p class="post-description">Neste post vamos passo a passo criar uma máquina virtual Linux no Azure, instalar o Jupyter Notebook via Anaconda. Também vamos conectar em nossa VM via um túnel SSH para conseguir utilinar nossos Notebooks como se estevessem rodando local.
 Em poucos passos vamos ter a disposição todo o poder da Cloud Computing para rodar nossos algorítimos com muito mais robustez.</p>
-            
-            <a href="/2017/11/20/jupyter-notebook-vm-azure/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
-            <div class="fh5co-spacer fh5co-spacer-md"></div>
-
+        
+        <a href="/2017/11/20/jupyter-notebook-vm-azure/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
+        <div class="fh5co-spacer fh5co-spacer-md"></div>
       </article>
-    
+      
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2017/08/06/conversational-interfaces-nlp-bots/" itemprop="url">
-          <div style="text-align: center;">
+          <div class="image-content" style="text-align: center;">
             <span class="index-title">Conversational Interfaces, NLP and bots</span>
             <p>
               <span class="post-date">Aug 6, 2017</span>
               
-                in <span class="post-cat">AI, NLP, Bot</span>
+              in <span class="post-cat">AI, NLP, Bot</span>
               
             </p>
             
+            <div align="center" style="margin-bottom: 2em; background-color: #202020;">
             
-                
-                  <div style="width: 100%; margin-bottom: 2em; background-color: #202020;">
-                
-                  <img src="http://meriatblob.blob.core.windows.net/demos/new-bot.png" >
-              </div>
-            
+              <img src="http://meriatblob.blob.core.windows.net/demos/new-bot.png">
             </div>
-          </a>
-            
-              <p class="post-description">Este é um breve tratado sobre o processamento de linguagem natural, interfaces conversacionais e diálogos com foco em bots.</p>
-            
-            <a href="/2017/08/06/conversational-interfaces-nlp-bots/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
-            <div class="fh5co-spacer fh5co-spacer-md"></div>
-
+          </div>
+        </a>
+        
+        <p class="post-description">Este é um breve tratado sobre o processamento de linguagem natural, interfaces conversacionais e diálogos com foco em bots.</p>
+        
+        <a href="/2017/08/06/conversational-interfaces-nlp-bots/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
+        <div class="fh5co-spacer fh5co-spacer-md"></div>
       </article>
-    
+      
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2017/06/07/custom-vision-ms/" itemprop="url">
-          <div style="text-align: center;">
+          <div class="image-content" style="text-align: center;">
             <span class="index-title">Custom Vision, Cognitive Services and Computer Vision</span>
             <p>
               <span class="post-date">Jun 7, 2017</span>
               
-                in <span class="post-cat">AI, Cognitive Computing</span>
+              in <span class="post-cat">AI, Cognitive Computing</span>
               
             </p>
             
-             <img style="width: 100%;" src="http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png" class="absolute-bg" >
+            <div align="center" style="margin-bottom: 2em;">
             
-            
+              <img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png">
             </div>
-          </a>
-            
-              <p class="post-description">Os serviços cognitivos da Microsoft tem evoluído muito desde seu início. Como é sabido o mesmo se iniciou no Microsoft Research com o famoso Project Oxford, que já disponibilizava uma série de API's para se trabalhar especialmente com Visão Computacional e Processamento de Linguagem Natural. Focando na Visão Computacional, quando a Microsoft lançou o Cognitive Services, as API’s de serviços cognitivos já disponibilizavam uma grande capacidade e variedade, te posssibilitando trabalhar de uma simples análise de imagens a detecção de...</p>
-            
-            <a href="/2017/06/07/custom-vision-ms/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
-            <div class="fh5co-spacer fh5co-spacer-md"></div>
-
+          </div>
+        </a>
+        
+        <p class="post-description">Os serviços cognitivos da Microsoft tem evoluído muito desde seu início. Como é sabido o mesmo se iniciou no Microsoft Research com o famoso Project Oxford, que já disponibilizava uma série de API's para se trabalhar especialmente com Visão Computacional e Processamento de Linguagem Natural. Focando na Visão Computacional, quando a Microsoft lançou o Cognitive Services, as API’s de serviços cognitivos já disponibilizavam uma grande capacidade e variedade, te posssibilitando trabalhar de uma simples análise de imagens a detecção de...</p>
+        
+        <a href="/2017/06/07/custom-vision-ms/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
+        <div class="fh5co-spacer fh5co-spacer-md"></div>
       </article>
-    
+      
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2017/05/17/microsoft-and-ai-for-the-future/" itemprop="url">
-          <div style="text-align: center;">
+          <div class="image-content" style="text-align: center;">
             <span class="index-title">Microsoft and Artificial Intelligence for the future</span>
             <p>
               <span class="post-date">May 17, 2017</span>
               
-                in <span class="post-cat">IA, Cognitive Computing, Microsoft Azure, Deep Learning</span>
+              in <span class="post-cat">IA, Cognitive Computing, Microsoft Azure, Deep Learning</span>
               
             </p>
             
-             <img style="width: 100%;" src="http://meriatblob.blob.core.windows.net/images/2017/05/17/microsoft_tai.png" class="absolute-bg" >
+            <div align="center" style="margin-bottom: 2em;">
             
-            
+              <img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/microsoft_tai.png">
             </div>
-          </a>
-            
-              <p class="post-description">Microsoft and Artificial Intelligence in Build 2017</p>
-            
-            <a href="/2017/05/17/microsoft-and-ai-for-the-future/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
-            <div class="fh5co-spacer fh5co-spacer-md"></div>
-
+          </div>
+        </a>
+        
+        <p class="post-description">Microsoft and Artificial Intelligence in Build 2017</p>
+        
+        <a href="/2017/05/17/microsoft-and-ai-for-the-future/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
+        <div class="fh5co-spacer fh5co-spacer-md"></div>
       </article>
-    
+      
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2017/04/20/variables-in-statistic/" itemprop="url">
-          <div style="text-align: center;">
+          <div class="image-content" style="text-align: center;">
             <span class="index-title">Variáveis, Estatística e Macnhine Learning</span>
             <p>
               <span class="post-date">Apr 20, 2017</span>
               
-                in <span class="post-cat">Statistics, Data Science</span>
+              in <span class="post-cat">Statistics, Data Science</span>
               
             </p>
             
+            <div align="center" style="margin-bottom: 2em;">
             
-                
-                  <div style="width: 100%; margin-bottom: 2em;">
-                
-                  <img src="http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png" >
-              </div>
-            
+              <img src="http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png">
             </div>
-          </a>
-            
-              <p class="post-description">Em Machine Lerning falamos em estática, e para ambos existe um elemento fundamental: dados. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.</p>
-            
-            <a href="/2017/04/20/variables-in-statistic/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
-            <div class="fh5co-spacer fh5co-spacer-md"></div>
-
+          </div>
+        </a>
+        
+        <p class="post-description">Em Machine Lerning falamos em estática, e para ambos existe um elemento fundamental: dados. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.</p>
+        
+        <a href="/2017/04/20/variables-in-statistic/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
+        <div class="fh5co-spacer fh5co-spacer-md"></div>
       </article>
-    
+      
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2017/04/14/hello-world-r/" itemprop="url">
-          <div style="text-align: center;">
+          <div class="image-content" style="text-align: center;">
             <span class="index-title">Hello World R - Da base à Regressão Linear</span>
             <p>
               <span class="post-date">Apr 14, 2017</span>
               
-                in <span class="post-cat">R, Data Science</span>
+              in <span class="post-cat">R, Data Science</span>
               
             </p>
             
+            <div align="center" style="margin-bottom: 2em;">
             
-                
-                  <div style="width: 100%; margin-bottom: 2em;">
-                
-                  <img src="https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png" >
-              </div>
-            
+              <img src="https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png">
             </div>
-          </a>
-            
-              <p class="post-description">Esta é minha primeira impressão utilizando a linguagem R, usada por programadores e cientistas de dados com ênfase em computação estatísticas. Para começar com o pé direito, nada como implementar uma regressão linear para iniciar. Também incluí alguns pontos positivos e de atenção em relação ao R.</p>
-            
-            <a href="/2017/04/14/hello-world-r/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
-            <div class="fh5co-spacer fh5co-spacer-md"></div>
-
+          </div>
+        </a>
+        
+        <p class="post-description">Esta é minha primeira impressão utilizando a linguagem R, usada por programadores e cientistas de dados com ênfase em computação estatísticas. Para começar com o pé direito, nada como implementar uma regressão linear para iniciar. Também incluí alguns pontos positivos e de atenção em relação ao R.</p>
+        
+        <a href="/2017/04/14/hello-world-r/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
+        <div class="fh5co-spacer fh5co-spacer-md"></div>
       </article>
-    
+      
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2017/03/18/titanic-machine-learning-from-disaster/" itemprop="url">
-          <div style="text-align: center;">
+          <div class="image-content" style="text-align: center;">
             <span class="index-title">Kaggle Competition - Titanic: Machine Learning from Disaster</span>
             <p>
               <span class="post-date">Mar 18, 2017</span>
               
-                in <span class="post-cat">IA, Machine Learning, Data Science, Deep Learning, Jupyter Notebook, Python</span>
+              in <span class="post-cat">IA, Machine Learning, Data Science, Deep Learning, Jupyter Notebook, Python</span>
               
             </p>
             
-             <img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg" class="absolute-bg" >
+            <div align="center" style="margin-bottom: 2em;">
             
-            
+              <img src="http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg">
             </div>
-          </a>
-            
-              <p class="post-description">Getting Started Prediction Competition. Start here! Predict survival on the Titanic and get familiar with ML basics</p>
-            
-            <a href="/2017/03/18/titanic-machine-learning-from-disaster/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
-            <div class="fh5co-spacer fh5co-spacer-md"></div>
-
+          </div>
+        </a>
+        
+        <p class="post-description">Getting Started Prediction Competition. Start here! Predict survival on the Titanic and get familiar with ML basics</p>
+        
+        <a href="/2017/03/18/titanic-machine-learning-from-disaster/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
+        <div class="fh5co-spacer fh5co-spacer-md"></div>
       </article>
-    
+      
       <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/2017/02/15/apresentando-meriat-ml-notes/" itemprop="url">
-          <div style="text-align: center;">
+          <div class="image-content" style="text-align: center;">
             <span class="index-title">Apresentando o Meriat Machine Learning Notes</span>
             <p>
               <span class="post-date">Feb 15, 2017</span>
               
-                in <span class="post-cat">IA, Machine Learning, Data Science, Deep Learning, Jupyter Notebook, Python</span>
+              in <span class="post-cat">IA, Machine Learning, Data Science, Deep Learning, Jupyter Notebook, Python</span>
               
             </p>
             
-             <img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/02/15/capa.jpg" class="absolute-bg" >
+            <div align="center" style="margin-bottom: 2em;">
             
-            
+              <img src="http://blob.vitormeriat.com.br/images/2017/02/15/capa.jpg">
             </div>
-          </a>
-            
-              <p class="post-description">Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.</p>
-            
-            <a href="/2017/02/15/apresentando-meriat-ml-notes/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
-            <div class="fh5co-spacer fh5co-spacer-md"></div>
-
+          </div>
+        </a>
+        
+        <p class="post-description">Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.</p>
+        
+        <a href="/2017/02/15/apresentando-meriat-ml-notes/" class="btn btn-outline fh5co-btn-icon fh5co-btn-icon">Read Post</a>
+        <div class="fh5co-spacer fh5co-spacer-md"></div>
       </article>
-    
+      
 
-    
+      
       <div class="paginator">
         <ul>
-        
+          
           <li><span>&laquo; Prev</span></li>
-        
+          
 
-        
           
-            <li><em style="background: #808080; color: #ffffff; padding: 0px 10px 0px 10px;">1</em></li>
           
-        
+          <li><em style="background: #808080; color: #ffffff; padding: 0px 10px 0px 10px;">1</em></li>
           
-            <li><a href="/page-2">2</a></li>
           
-        
           
-            <li><a href="/page-3">3</a></li>
+          <li><a
+              href="/page-2">2</a>
+          </li>
           
-        
           
-            <li><a href="/page-4">4</a></li>
           
-        
+          <li><a
+              href="/page-3">3</a>
+          </li>
           
-            <li><a href="/page-5">5</a></li>
           
-        
+          
+          <li><a
+              href="/page-4">4</a>
+          </li>
+          
+          
+          
+          <li><a
+              href="/page-5">5</a>
+          </li>
+          
+          
 
-        
-          <li><a href="/page-2">Next &raquo;</a></li>
-        
+          
+          <li><a href="/page-2">Next &raquo;</a>
+          </li>
+          
         </ul>
       </div>
-    
-  </div>
-</section>
+      
+    </div>
+  </section>
 </div>
-
     </main>
 
     <footer id="fh5co-footer" role="contentinfo">
@@ -427,11 +398,11 @@ Em poucos passos vamos ter a disposição todo o poder da Cloud Computing para r
 		<div class="row">
 			<div class="col-md-12" style="text-align: right;">
 				<ul class="fh5co-footer-social">
-					<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fa fa-twitter fa-1x"></i> Twitter</a></li>
-					<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fa fa-github fa-1x"></i> Github</a></li>
-					<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fa fa-linkedin fa-1x"></i> LinkedIn</a></li>
-					<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fa fa-instagram fa-1x"></i> Instagram</a></li>
-					<li><a href="https://www.youtube.com/user/vitormeriat/" target="_blank"><i class="fa fa-youtube fa-1x"></i> Youtube</a></li>
+					<li><a href="https://twitter.com/vitormeriat" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+					<li><a href="https://github.com/vitormeriat" target="_blank"><i class="fab fa-github"></i> Github</a></li>
+					<li><a href="https://www.linkedin.com/in/vitormeriat" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+					<li><a href="https://www.instagram.com/vitormeriat/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+					<li><a href="https://www.youtube.com/user/vitormeriat/" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
 				</ul>
 				<p class="fh5co-copyright">
 					<small>(c) 2017 <a href="/">Meriat's</a>. All Rights Reserved.
@@ -443,7 +414,7 @@ Em poucos passos vamos ter a disposição todo o poder da Cloud Computing para r
 </footer>
 
 	<!-- Go To Top -->
-	<a href="#" class="fh5co-gotop"><i class="ti-shift-left"></i></a>
+	<a href="#" class="fh5co-gotop"><i class="fas fa-rocket"></i></a>
 
 	<!-- jQuery -->
 	<script src="/assets/js/jquery-1.10.2.min.js"></script>
@@ -454,7 +425,7 @@ Em poucos passos vamos ter a disposição todo o poder da Cloud Computing para r
 	<!-- Owl carousel -->
 	<script src="/assets/js/owl.carousel.min.js"></script>
 	<!-- Magnific Popup -->
- <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+ 	<script src="/assets/js/jquery.magnific-popup.min.js"></script>
 	<!-- Easy Responsive Tabs -->
 	<script src="/assets/js/easyResponsiveTabs.js"></script>
 	<!-- FastClick for Mobile/Tablets -->

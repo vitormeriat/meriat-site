@@ -7,7 +7,7 @@ categories:
   - IoT
   - Node.js
   - Socket.io
-image-full: "http://blob.vitormeriat.com.br/images/2015/07/capa-control-led-io.png"
+image: "http://blob.vitormeriat.com.br/images/2015/07/capa-control-led-io.png"
 ---
 <p align="justify"><img src="http://blob.vitormeriat.com.br/images/2015/07/capa-control-led-io.png" alt="capa control led io" width="100%" /></p>
 <p align="justify"><strong>Primeiro acenda um LED, depois domine o mundo!</strong> Seguindo esta premissa estou disponibilizando meu primeiro projeto/estudo em <strong>Node.js</strong> no <strong>Arduino</strong>. Trata-se de um simples <strong>blink</strong> utilizando Node.js, <strong>Socket.io</strong>, <strong>Firmata </strong>e <strong>Johnny-five</strong> no <strong>Visual Studio</strong>. Abaixo segue o vídeo de demonstração:</p>

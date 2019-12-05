@@ -4,7 +4,7 @@ title: IoT além do Hardware
 date: 2016-02-07
 categories:
   - IoT
-image-full: "http://blob.vitormeriat.com.br/images/2016/02/capa-iot-alem-do-hardware.png"
+image: "http://blob.vitormeriat.com.br/images/2016/02/capa-iot-alem-do-hardware.png"
 ---
 
 Tenho participado de muitos eventos e falado bastante sobre <strong>IoT</strong> no último ano. Uma pergunta recorrente que me é feita é sobre qual placa comprar para iniciar no mundo do IoT. OK... mas porque você tem de comprar uma placa para iniciar no mundo do IoT?

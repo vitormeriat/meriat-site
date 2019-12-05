@@ -5,7 +5,7 @@ date: 2016-01-27
 categories:
    - Big Data
    - Spark
-image-full: "http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"
+image: "http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"
 ---
 <p style="background-color: #000000" align="center"><a href="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"><img title="spark-capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto"   alt="spark-capa" src="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg" width="819" height="518" /></a></p>
 

@@ -10,7 +10,7 @@ categories:
     - Jupyter Notebook
     - Python
 description: Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.
-image-full: "http://blob.vitormeriat.com.br/images/2017/02/15/capa.jpg"
+image: "http://blob.vitormeriat.com.br/images/2017/02/15/capa.jpg"
 ---
 
 <img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/02/15/capa.jpg" class="absolute-bg">

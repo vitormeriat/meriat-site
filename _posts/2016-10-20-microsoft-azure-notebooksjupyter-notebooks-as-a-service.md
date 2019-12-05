@@ -7,7 +7,7 @@ categories:
     - Machine Learning
     - Python
 description:
-image-full: "http://blob.vitormeriat.com.br/images/2016/10/capa.jpg"
+image: "http://blob.vitormeriat.com.br/images/2016/10/capa.jpg"
 ---
 
 Essa é uma dica para a galera (que como eu), utiliza o Jupyter Notebooks como ferramenta de estudo ou trabalho.

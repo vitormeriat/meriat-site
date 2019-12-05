@@ -16,7 +16,30 @@ image: "https://meriatblob.blob.core.windows.net/draft/capa.png"
 description: Esse trabalho se propõe a trazer uma introdução ao estudo do Processamento de Linguagem Natural, (Natural Language Processing). Minha intenção é olhar para sua base teórica enquanto disciplina. Sendo assim vamos passar por algumas definições e conceitos antes de avançar nas questões práticas. Vamos falar sobre compiladores, árvores sintáticas e suas complexidades. 
 ---
 
-<div align="center" style="width: 100%;"><img src="https://meriatblob.blob.core.windows.net/draft/capa.png" style="margin-bottom: 0px !important;"></div>
+# Sumário
+
+1. Introdução
+2. Conceituação base
+   1. Teoria da comunicação
+   2. Linguística básica e nomenclaturas
+   3. Influência e formação da linguagem
+   4. História
+3. Linguagem Natura e sua Complexidade
+   1. Compreensão semântica
+   2. Apresentando a Codificação
+4. Natural Language Processing
+   1. Computational Linguistics
+   2. Natural Language Understanding
+   3. NLP, uma questão de engenharia
+   4. Gramáticas
+      1. Linguagens Formais e Análise Sintática
+      2. Alfabeto, cadeias e linguagens
+5. Conclusão
+6. Referências
+
+<div align="center" class="image-content">
+  <img src="https://meriatblob.blob.core.windows.net/draft/capa.png">
+</div>
 
 # Introdução
 
@@ -26,10 +49,10 @@ Com isso em mente, se faz necessário o estudo de alguns pontos utilizados na di
 
 Esse trabalho se propõe a trazer uma introdução ao estudo do `Processamento de Linguagem Natural` (`Natural Language Processing`). Minha intenção é olhar para sua base teórica enquanto disciplina. Sendo assim vamos passar por algumas definições e conceitos antes de avançar nas questões práticas. Vamos falar sobre a estrutura de uma linguagem, compiladores, árvores sintáticas e as complexidades da linguagem natural antes do famoso mão na massa, até por que `talk is cheap, show me the code`.
 
-Antes de iniciar, se faz importante informar que alguns dos termos utilizados serão apresentados em inlgês e português. Para que não seja causada nenhuma estranheza ao leitor, vou priorizar os termos técnicos em inglês, e achando necessário realizo a explicação/tradução do mesmo. Para facilitar a leitura, algumas referências serão colocadas durante o texto. As demais estão todas na sessão de **Referências** ao final deste texto.
+Antes de iniciar, se faz importante informar que alguns dos termos utilizados serão apresentados em inglês e português. Para que não seja causada nenhuma estranheza ao leitor, vou priorizar os termos técnicos em inglês, e achando necessário realizo a explicação/tradução do mesmo. Para facilitar a leitura, algumas referências serão colocadas durante o texto. As demais estão todas na sessão de **Referências** ao final deste texto.
 
-<div style="margin-bottom: 5em; margin-top: 5em; background-color: #35d648; color: #382d2d">
-<p style="padding: 1.8em; font-family: courier; font-size: 1.4em;">"Minha pátria é minha língua." <b>Fernando Pessoa</b></p>
+<div style="padding: 1.8em; font-size: 1.8em; text-align: center; margin-bottom: 5em; margin-top: 5em; background-color: #68a7c5; color: #382d2d">
+  <p>"Minha pátria é minha língua." <b>Fernando Pessoa</b></p>
 </div>
 
 # Conceituação base
@@ -38,17 +61,14 @@ Este tópico é de grande importância, visto que muito da problemática encontr
 
 ## Teoria da comunicação
 
-Os seres humanos são considerados animais sociais e como tal, sabemos que a linguagem é nossa principal ferramenta de comunicação. Sabemos que a música é tão remota quanto o início da comunicação verbalizada, mas a principal diferença está nos papéis exercidos. Enquanto os sinais sonoros emitidos por instrumentos rudimentares foram seguindo o caminho da subjetividade, os sons cada vez mais coordenados dos seres humanos foram seguindo para se tornarem mais claros. Partimos dos grunidos para linguagens extramamente sofisticadas.
+Os seres humanos são considerados animais sociais e como tal, sabemos que a linguagem é nossa principal ferramenta de comunicação. Sabemos que a música é tão remota quanto o início da comunicação verbalizada, mas a principal diferença está nos papéis exercidos. Enquanto os sinais sonoros emitidos por instrumentos rudimentares foram seguindo o caminho da subjetividade, os sons cada vez mais coordenados dos seres humanos foram seguindo para se tornarem mais claros. Partimos dos grunhidos para linguagens extremamente sofisticadas.
 
 Mesmo após tanta evolução na comunicação falada e escrita, ainda vemos que a linguagem é um assunto complexo. A linguagem é cheia de abstrações, fluída, ambígua e muitas vezes confusa. Apesar das definições gramaticais, a linguagem é um organismo vivo e se renova muito rapidamente. Diversos termos novos surgem a cada dia, e termos conhecidos recebem uma nova significância da forma já habitual.
 
 Quando falamos em teoria da comunicação, em termos básicos temos o papel do emissor, receptor, mensagem, código, contexto e canal. Cada um desses componentes é importante para determinar uma comunicação de sucesso. Se o emissor enviar uma mensagem para um receptor usando um código que não é conhecido pelo mesmo, ou se o contexto for desconhecido pelo receptor, ou se o canal de comunicação for insuficiente, a comunicação pode ser ruidosa e falha. Se tudo isso ainda for certeiro, temos de levar em conta que a mensagem vai ser interpretada por um receptor que vai levar em consideração sua perspectiva de mundo.
 
-<div align="center" style="width: 100%;">
-<img src="https://meriatblob.blob.core.windows.net/draft/theory_of_communications_2.png" style="margin-bottom: 0px !important;">
-</div>
-<div align="center" style="width: 100%;">
-<img src="https://meriatblob.blob.core.windows.net/draft/theory_of_communications.jpg" style="margin-bottom: 0px !important;">
+<div align="center" class="image-content" style="background-color: #F5F4F0;">
+  <img src="https://meriatblob.blob.core.windows.net/draft/theory_of_communications.jpg">
 </div>
 
 1. A fonte (**source**) produz uma mensagem. Uma mensagem pode ser um sinal de fumaça, telégrafo, rádio e etc.
@@ -58,6 +78,8 @@ Quando falamos em teoria da comunicação, em termos básicos temos o papel do e
 5. O receptor (**receiver**) normalmente executa a operação inversa da realizada pelo transmissor, reconstruindo a mensagem a partir do sinal, para que o destino possa compreender.
 6. O destino (**destination**) é a pessoa/coisa a quem a mensagem se destina.
 
+No decorrer deste texto vamos encontrar outra estrutura que se assemelha a base da teoria da comunicação.
+
 ## Linguística básica e nomenclaturas
 
 Se tratando em linguística, temos o estudo sobre o uso e funcionamento das línguas naturais, independentemente da sua especificidade e diversidade. Nesta ciência possuímos diversas nomenclaturas, para nosso objetivo, precisamos conhecer os itens abaixo:
@@ -66,9 +88,9 @@ Se tratando em linguística, temos o estudo sobre o uso e funcionamento das lín
 
 * **Idioma**: É uma língua própria de um povo. Está relacionado com a existência de um Estado político, sendo utilizado para identificar uma nação em relação às demais. Existem países, como o Canadá, por exemplo, em que dois idiomas são considerados como oficiais, nesse caso, o francês e o inglês.
 
-* **Dialeto**: Por dialeto, temos o estudo da variedade de uma língua própria de uma região ou território e está relacionado com as variações linguísticas encontradas na fala de determinados grupos sociais. As variações linguísticas podem ser compreendidas a partir da análise de três diferentes fenômenos: exposição aos saberes convencionais (diferentes grupos sociais com maior ou menor acesso à educação formal utilizam a língua de maneiras diferentes); situação de uso (os falantes adequam-se linguisticamente às situações comunicacionais de acordo com o nível de formalidade) e contexto sociocultural (gírias e jargões podem dizer muito sobre grupos específicos formados por algum tipo de “simbiose” cultural).
+* **Dialeto**: Por dialeto, temos o estudo da variedade de uma língua própria de uma região ou território e está relacionado com as variações linguísticas encontradas na fala de determinados grupos sociais. As variações linguísticas podem ser compreendidas a partir da análise de três diferentes fenômenos: exposição aos saberes convencionais (diferentes grupos sociais com maior ou menor acesso à educação formal utilizam a língua de maneiras diferentes); situação de uso (os falantes adequam-se linguisticamente às situações comunicacionais de acordo com o nível de formalidade) e contexto sociocultural (gírias e jargões podem dizer muito sobre grupos específicos formados por algum tipo de "simbiose" cultural).
 
-* **Fonética**: Podemos dizer que a fonética é o estudo da realidade acústica, do funcionamento articulatório e anatómico e da interpretação percetiva dos sons de uma determinada língua natural.
+* **Fonética**: Podemos dizer que a fonética é o estudo da realidade acústica, do funcionamento articulatório e anatómico e da interpretação perceptiva dos sons de uma determinada língua natural.
 
 * **Fonologia**: É o estudo do sistema sonoro de uma língua, das regras subjacentes à combinação desses sons e do modo como esses sons exprimem distinções de significado.
 
@@ -88,68 +110,68 @@ Com estes itens em mente, podemos prosseguir para nosso estudo visando nos aprof
 
 ## Influências e formação da linguagem
 
-<div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
-<img src="https://meriatblob.blob.core.windows.net/draft/lusofonos.jpg" style="margin-bottom: 0px !important; width: 80%;">
-<p>ilustração: Guilhere Lira/Mundo Estranho</p>
+<div align="center" class="image-content" style="background-color: #BFE6F6;">
+  <img src="https://meriatblob.blob.core.windows.net/draft/lusofonos.jpg">
+  <p>ilustração: Guilhere Lira/Mundo Estranho</p>
 </div>
 
-Vamos fazer um exercício olhando para nossa lingua natal. Quantos países têm a lingua portuguesa como sua lingua mater? Desses países, todos falam exatamente a mesma lingua? Se iniciarmos uma comparação básica entre o que é falado no Brasil, Portugal, Moçanbique e Angola, haverá muita diferença?
+Vamos fazer um exercício olhando para nossa língua natal. Quantos países têm a língua portuguesa como sua **língua mater**? Desses países, todos falam exatamente a mesma língua? Se iniciarmos uma comparação básica entre o que é falado no Brasil, Portugal, Moçambique e Angola, haverá muita diferença?
 
 As grandes diferenças são as influências de línguas nativas e estrangeiras, que resultam em palavras e expressões particulares. O português brasileiro tem influência de línguas indígenas e de vários idiomas externos utilizados pelos os imigrantes, como árabes e italianos.
 
-Em Angola, há 11 línguas e diversos dialetos que transformam o português incluindo diveras palavras ao vocabulário. Em Moçambique, o português é influenciado pelas 20 línguas locais. Apesar de ser o idioma oficial do país, em Moçambique ele é falado por apenas 40% da população. O português de Portugal possui grandes diferenças em relação ao portugês brasileiro. Em questões gramaticais, o português de Angola e Moçambique são mais próximos do português europeu do que o brasileiro.
+Em Angola, há 11 línguas e diversos dialetos que transformam o português incluindo diversas palavras ao vocabulário. Em Moçambique, o português é influenciado pelas 20 línguas locais. Apesar de ser o idioma oficial do país, em Moçambique ele é falado por apenas 40% da população. O português de Portugal possui grandes diferenças em relação ao português brasileiro. Em questões gramaticais, o português de Angola e Moçambique são mais próximos do português europeu do que o brasileiro.
 
 > Por tudo isso, nos três países, há regionalismos que podem deixar o idioma incompreensível mesmo entre os lusófonos.
 
 Por exemplo, aqui no Brasil nós adoramos abusar do tempo verbal gerúndio, muito pouco usado em outros países em questão. Por exemplo, usamos a frase **"estou fazendo isso"** no lugar de **"estou a fazer isso"**. Há também o `gerundismo` (uso desnecessário do gerúndio) como em **"vamos estar averiguando"**.
 
-<div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
-<img src="https://meriatblob.blob.core.windows.net/draft/same-language.jpg" style="margin-bottom: 0px !important; width: 80%;">
-<p> ilustração: Pilar Hernandez</p>
+<div align="center" class="image-content">
+  <img src="https://meriatblob.blob.core.windows.net/draft/same-language.jpg">
+  <p> ilustração: Pilar Hernandez</p>
 </div>
 
-Outro país onde a língua portuguesa sofre diversas alterações com base nas regras gramaticias das línguas locais é Moçambique. Como exemplo podemos usar o caso do verbo **"nascer"**, que lá é usado como na língua **changana**: **"Meus pais nasceram minha irmã"**. O mesmo vale para **"Nos disseram que hoje não há aula"**, que fica: **"Nós fomos ditos que hoje não há aulas"**.
+Outro país onde a língua portuguesa sofre diversas alterações com base nas regras gramaticais das línguas locais é Moçambique. Como exemplo podemos usar o caso do verbo **"nascer"**, que lá é usado como na língua **changana**: **"Meus pais nasceram minha irmã"**. O mesmo vale para **"Nos disseram que hoje não há aula"**, que fica: **"Nós fomos ditos que hoje não há aulas"**.
 
 Essas estruturas são fundamentais para um correto entendimento e aplicação dos fundamentos em processamento de linguagem natural.
 
-<div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
-<img src="https://meriatblob.blob.core.windows.net/draft/luis_de_camoes.png" style="margin-bottom: 0px !important;">
-<p>Luís de Camões, considerado um dos maiores escritores de língua portuguesa e ainda, um dos maiores representantes da literatura mundial.</p>
+<div align="center" class="image-content" style="background-color: #fdf0e0; color: black;">
+  <img src="https://meriatblob.blob.core.windows.net/draft/luis-vas-de-camoes.png">
+  <span>Luís de Camões é considerado um dos maiores escritores de língua portuguesa e ainda, um dos maiores representantes da literatura mundial.</span>
 </div>
 
 ## História
 
 Quando como seres humanos cientes de nossa colocação no mundo nos preocupamos com o estudo da linguagem? Mais ainda, por que isso seria interessante? Este é um bônus, um ponto importante para ilustrar não só a mutabilidade como o papel da linguagem na construção e identidade de uma sociedade. A curiosidade humana sobre a linguagem é remoto e pode ser percebido por meio de vários mitos, lendas e rituais antigos.
 
-O início dessa jornada data do século IV a.c, onde os religiosos hindus iniciaram um estudo da língua a fim de preservar os textos sagrados do Veda. Esses estudos levaram a uma rápida evolução, e mais tarde o gramático Panini (século IV a.c.) em conjunto com outros estudiosos, produziram modelos de análise dado uma minunciosa descrição da própria língua. Estes modelos só foram descobertos pelo ocidente no final do século XVIII, quando principalmente os gregos se propuseram a definir as relações entre o conceito e a palavra que o designa.
+O início dessa jornada data do século `IV a.c`, onde os religiosos hindus iniciaram um estudo da língua a fim de preservar os textos sagrados do Veda. Esses estudos levaram a uma rápida evolução, e mais tarde o gramático **Panini** (século `IV a.c`.) em conjunto com outros estudiosos, produziram modelos de análise dado uma minuciosa descrição da própria língua. Estes modelos só foram descobertos pelo ocidente no final do século XVIII, quando principalmente os gregos se propuseram a definir as relações entre o conceito e a palavra que o designa.
 
-Sendo assim os gregos levaram o estudo da linguagem a outro nível. Eles questionaram coisas como: existe relação necessária entre a palavra e o seu significado? Podemos ver Platão discutindo esse ponto específico no Crátilo. Aristóteles desenvolveu estudos em outro foco, tentando proceder a uma análise precisa da estrutura linguística, chegando a elaborar uma teoria sobre distinguir as partes do discurso e a enumerar as categorias gramaticais.
+Sendo assim os gregos levaram o estudo da linguagem a outro nível. Eles questionaram coisas como: existe relação necessária entre a palavra e o seu significado? Podemos ver Platão discutindo esse ponto específico no **Crátilo**. Aristóteles desenvolveu estudos em outro foco, tentando proceder a uma análise precisa da estrutura linguística, chegando a elaborar uma teoria sobre distinguir as partes do discurso e a enumerar as categorias gramaticais.
 
-Entre estudiosos latinos, temos como destaque Varrão que, na esteira dos gregos, dedicou-se à gramática, em um esforço para defini-la como ciência e arte.
+Entre estudiosos latinos, temos como destaque Varrão que, na esteira dos gregos, dedicou-se à gramática, em um esforço para defini-lá como ciência e arte.
 
-> No século XVI, a religiosidade ativada pela Reforma provoca a tradução dos livros sagrados em numerosas línguas, apesar de manter-se o prestígio do latim como língua universal. Viajantes, comerciantes e diplomatas trazem de suas experiências no estrangeiro o conhecimento de línguas até então desconhecidas. Em 1502 surge o mais antigo dicionário poliglota, do italiano Ambrosio Calepino. "Introdução à linguística Volumes 1 e 2, José Luiz Fiorin"
+> No século XVI, a religiosidade ativada pela Reforma provoca a tradução dos livros sagrados em numerosas línguas, apesar de manter-se o prestígio do latim como língua universal. Viajantes, comerciantes e diplomatas trazem de suas experiências no estrangeiro o conhecimento de línguas até então desconhecidas. Em 1502 surge o mais antigo dicionário poliglota, do italiano `Ambrosio Calepino`. Introdução à linguística Volumes 1 e 2, José Luiz Fiorin
 
 Em relação ao período moderno, podemos citar Franz Bopp como um dos principais criadores da gramática comparada. Sua obra publicada em 1816 se intitulava: `Über das Conjugationssystem der Sanskritsprache in Vergleichung mit jenem der griechischen, lateinischen, persischen und germanischen Sprache` **(Sobre o sistema de conjugação do sânscrito em comparação com o do grego, latim, persa e germânico)**. Esse trabalho evidenciou diversas semelhanças entre as línguas em questão.
 
-<div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
-<img src="https://meriatblob.blob.core.windows.net/draft/indo-european-tree.jpeg" style="margin-bottom: 0px !important;">
+<div align="center" class="image-content">
+<img src="https://meriatblob.blob.core.windows.net/draft/indo-european-tree.jpeg">
 <p>ilustração: Minna Sundberg</p>
 </div>
 
 Ao expor as semelhanças entre essas línguas, foi notório uma relação de parentesco que originou o que hoje chamamos de família `indo-européia`, em que existe uma origem comum, comprovada pelo método histórico-comparativo.
 
-Somente no início do século XX a Linguística ganhou status de estudo científico. Como estudo ela sempre foi um anexo em estudos de lógica, filosofia, retórica, história ou crítica literária. O marco foi a divulgação dos trabalhos de Ferdinand de Saussure, professor da Universidade de Genebra. Em 1916, dois alunos de Saussure, a partir de anotações de aula, publicam o Curso de Lingüística geral, obra fundadora da nova ciência.
+Somente no início do século XX a Linguística ganhou status de estudo científico. Como estudo ela sempre foi um anexo em estudos de lógica, filosofia, retórica, história ou crítica literária. O marco foi a divulgação dos trabalhos de **Ferdinand de Saussure**, professor da **Universidade de Genebra**. Em 1916, dois alunos de Saussure, a partir de anotações de aula, publicam o Curso de Linguística geral, obra fundadora da nova ciência.
 
 # Linguagem Natural e sua Complexidade
 
 A complexidade envolvida na linguagem natural passa por sua estruturação formal (gramática), até as questões mais subjetivas como interpretação. Adicione a isso o fato que temos diversas linguagens no mundo, todas com estruturas e significâncias diferentes. Se isso ainda não for suficiente, ainda temos toda a problemática envolvendo as questões de engenharia, como por exemplo, processar grandes quantidades de texto.
 
-<div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
-<img src="https://meriatblob.blob.core.windows.net/draft/linguistics_club.png" style="margin-bottom: 0px !important;">
-<p>ref: https://www.xkcd.com/1602/</p>
+<div align="center" class="image-content">
+  <img src="https://meriatblob.blob.core.windows.net/draft/linguistics_club.png">
+  <p>ref: https://www.xkcd.com/1602/</p>
 </div>
 
-No exemplo acima, temos uma anedota em torno da palavra **sesquiannual**, que representa um período de 18 meses. O punch aqui é que somente uma pessoa que conhece o significa dessa palavra sabe quando o encontro vai acontecer. Este é um exemplo simples onde temos uma palavra que pertence domínio geral da língua, está nos presente nos dicionários porém não é de uso comum da população.
+No exemplo acima, temos uma anedota em torno da palavra **sesquiannual**, que representa um período de 18 meses. O **punch** aqui é que somente uma pessoa que conhece o significa dessa palavra sabe quando o encontro vai acontecer. Este é um exemplo simples onde temos uma palavra que pertence domínio geral da língua, está nos presente nos dicionários porém não é de uso comum da população.
 
 ## Compreensão semântica
 
@@ -163,87 +185,106 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 
 Contudo, de maneira geral, a semântica não é tratada de forma isolada em cada palavra, mas sim generalizada a contextos mais amplos. Sendo assim, ao considerar um diálogo, podemos identificar um significado particular em cada frase e um significado mais geral pertinente ao assunto tratado pelas pessoas que promovem o diálogo. Da mesma forma, em um texto dissertativo, mesmo considerando que cada parágrafo possa expressar um sentido particular, é somente com a junção de todas as sentenças que poderemos formar o sentido de um determinado texto.
 
-Podemos concluir que a função base de uma linguagem é a comunicação, e esta está centrada na significância das expressões linguísticas produzidas. Como isto, o estudo da semântica ganha papel de fundamento para as implementações computacionais que envolvem compreensão e produção de linguagem. Isso dialóga diretamente com as dificuldades da envolvidas no processamento da linguagem natural, uma vez que nós utilizamos a intuição na compreensão do sentido de um determinado texto, algo que é discutível quando falamos de sua aplicação prática na computação.
-
-<style>
-.wrapper {
-  display: flex;  
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
-  background: #9865d0;
-  color: #ffffff;
-  margin: 4em 0 4em 0;
-}
-
-.wrapper > * {
-  padding: 10px;
-  flex: 1 100%;
-}
-
-.main {
-  font-size: 1.8em;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.aside-1 {
-  font-size: 0.8em;
-}
-
-@media all and (min-width: 600px) {
-  .aside { flex: 1 0 0; }
-}
-
-@media all and (min-width: 800px) {
-  .main    { flex: 3 0px; }
-  .aside-1 { order: 1; } 
-  .main    { order: 2; }
-}
-</style>
+Podemos concluir que a função base de uma linguagem é a comunicação, e esta está centrada na significância das expressões linguísticas produzidas. Como isto, o estudo da semântica ganha papel de fundamento para as implementações computacionais que envolvem compreensão e produção de linguagem. Isso dialoga diretamente com as dificuldades da envolvidas no processamento da linguagem natural, uma vez que nós utilizamos a intuição na compreensão do sentido de um determinado texto, algo que é discutível quando falamos de sua aplicação prática na computação.
 
 <div class="wrapper">
-  <article class="main">
+  <article class="main-neumman">
     <p>Como trabalhar o correto entendimento de um texto em uma máquina baseada na arquitetura de Von Neumman?</p>  
   </article>
   <aside class="aside aside-1">
-	  <img src="https://meriatblob.blob.core.windows.net/draft/von-neumann.png" style="margin-bottom: 0px !important;">
+	  <img src="https://meriatblob.blob.core.windows.net/draft/von-neumann.png">
 	  <p>Von Neumman</p>
   </aside>
 </div>
 
-Um teste simples utilizando qualquer um dos grandes tradutores online da atualidade vai nos mostrar que a tradução obtida, na maioria dos casos apresenta diversas deficiências. Mesmo que isso não compremeta a compreensão geral do contexto da tradução, se faz necessário a revisão humana para uma correta compreensão do mesmo. 
+Um teste simples utilizando qualquer um dos grandes tradutores online da atualidade vai nos mostrar que a tradução obtida, na maioria dos casos apresenta diversas deficiências. Mesmo que isso não comprometa a compreensão geral do contexto da tradução, se faz necessário a revisão humana para uma correta compreensão do mesmo.
 
 > O que temos de pontuar aqui, é que o processamento e tratamento computacional da linguagem natural precisa transpassar diversas barreiras, as mesmas que são típicas da comunicação humana.
 
-Essas dificuldades são tratadas pelo cérebro de forma natural, embora já conhecemos os ríscos que estão associados a comunicação humana, por mais eficiênte que ela possa se dar.
+Essas dificuldades são tratadas pelo cérebro de forma natural, embora já conhecemos os riscos que estão associados a comunicação humana, por mais eficiente que ela possa se dar.
+
+## Apresentando a Codificação
+
+> Se a comunicação é algo complexo mesmo para nós os seres humanos, como podemos trabalhar isso em computação?
+
+Bom, o primeiro passo é transformar a nossa linguagem natural em algo que possa ser trabalhado por máquina. Fazemos isso transformando nosso dado textual em algum padrão de representação numérica, algo que seja processável e compreendido por uma máquina. Somente realizando esse passo é possível iniciar o processo de examinar os dados para criação de modelos matemáticos.
+
+Esse trabalho é conhecido como codificação, e nos permite transformar um determinado sinal (imagens, sons, vídeos, textos), em algo que possas ser processado digitalmente por uma máquina. Aqui reside nosso primeiro desafio, como representar de forma eficiente dados textuais em linguagem de máquina?
+
+Estou preparando um material específico sobre este tema, mas em resumo a técnica mais simples, e uma das primeiras a serem utilizadas é a chamada `One-Hot` ou `1-of-N`. Esse tipo de representação, que na engenharia de software conhecemos como codificação a quente (hot encoding), simplesmente representa as palavras utilizando vetores **N-dimensionais**. Vejamos um exemplo baseado na fala Fernando Pessoa citada no início deste texto:
+
+> Minha pátria é minha língua.
+
+O primeiro passo é criar uma representação baseada nas palavras únicas: **[minha, pátria, é, língua]**. O processo de codificação determina a geração de um vetor representativo para cada token/item/palavra do texto. Com isso chegamos ao seguinte resultado:
+
+<div align="center">
+  <table class="table-fill">
+    <tr>
+      <th>minha</th>
+      <td class="text-color">1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>pátria</th>
+      <td>0</td>
+      <td class="text-color">1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>é</th>
+      <td>0</td>
+      <td>0</td>
+      <td class="text-color">1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>língua</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td class="text-color">1</td>
+    </tr>
+  </table>
+</div>
+
+Essa é a representação baseada em 1 de N, e para um texto com 5 palavras, me gera 4 vetores de 4 posições. Sendo assim o número de colunas e linhas aumenta para cada palavra única. Agora imagine o quanto uma tarefa computacional pode ficar cara (processamento, armazenamento em memória) a media em que trabalhamos essa técnica em textos realmente grandes.
 
 # Natural Language Processing
 
 Partindo para a área computacional, podemos conceituar `NLP` da seguinte maneira:
 
 <div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
-<b>Natural Language Processing</b> é a disciplina que consiste no desenvolvimento de modelos computacionais que utilizam informação expressa em uma determinada língua natural.
-</p>
+  <p style="padding: 1.6em; font-family: courier;"><b>Natural Language Processing</b> é a disciplina que consiste no desenvolvimento de modelos computacionais que utilizam informação expressa em uma determinada língua natural.
+  </p>
 </div>
 
-Como objetivo, podemos definir que em `NLP`, queremos construir mecanismos artificiais que permitem o entedimento da linguagem natural para a realização de tarefas que visam simular um comportamento humano (e.g. tradução e interpretação de textos, busca de informações em documentos, detecção de tópicos).
+Como objetivo, podemos definir que em `NLP`, queremos construir mecanismos artificiais que permitem o entendimento da linguagem natural para a realização de tarefas que visam simular um comportamento humano (e.g. tradução e interpretação de textos, busca de informações em documentos, detecção de tópicos).
 
 `NLP` se encaixa no mundo da computação como uma subárea de Inteligência Artificial, e constantemente associada a Linguística Computacional, embora sejam matérias diferentes.
 
 Quando comparamos as aplicações desenvolvidas nessas duas áreas, é fácil entender a confusão. Geralmente compartilham as mesmas conferências, colaboram em artigos, mas tem como essência, objetivos diferentes.
 
-* **CL** – Computational Linguistics
-  * **Profissional:** Linguistas
-  * **Objetivo:** Uso da computação para o estudo da linguagem
-* **NLP** – Natural Language Processing
-  * **Profissional:** Cientistas da Computação
-  * **Objetivo:** Aplicações envolvendo linguagem natural
+<div class="nlp-cl-table">
+  <div class="nlp-cl-comparation">
+    <i class="fas fa-language"></i>
+    <p>Computational Linguistics</p>
+    <hr />
+    <p>Profissional: Linguistas.</p>
+    <hr />
+    <p>Objetivo: Uso da computação para o estudo da linguagem.</p>
+  </div>
+  <div class="nlp-cl-comparation">
+    <i class="fas fa-comment-alt"></i>
+    <p>Natural Language Processing</p>
+    <hr />
+    <p>Profissional: Cientistas da Computação</p>
+    <hr />
+    <p>Objetivo: Aplicações envolvendo linguagem natural</p>
+  </div>
+</div>
 
 ## Computational Linguistics
 
@@ -253,102 +294,143 @@ As questões centrais da linguística envolvem a natureza das representações l
 
 Na linguística computacional, são propostas respostas formais para essas questões. Os linguistas estão realmente perguntando o que e como os humanos estão associando. Por isso, definimos matematicamente classes de representações linguísticas e gramáticas formais (ou seja, modelos probabilísticos) que parecem adequadas para capturar a variedade de fenômenos presentes nas línguas humanas. São estudadas suas propriedades matemáticas a fim de guiar o desenvolvimento de algoritmos eficientes para o aprendizado, produção e compreensão da linguagem natural.
 
+## Natrual Language Understanding
+
+Podemos enquadrar `NLU` como uma subárea em `NLP`. Para uma boa aplicação baseada em processamento de linguagem natural, um bom **entendimento** de um determinado texto é simplesmente fundamental.
+
+Quando falamos de entendimento, estamos falando da compreensão de um dado texto e seu contexto, o que é algo realmente complexo. Parte desta complexidade se concentra em resolver alguns desafios presentes nas linguagens naturas, entre elas, destaco alguns exemplos de ambiguidades:
+
+* **Ambiguidade Lexical** - Quando uma determinada palavra têm vários significados. A palavra Cobre pode ser tratar do elemento de número atômico 29 da nossa tabela periódica, ou simplesmente se tratar do verbo Cobrir.
+* **Ambiguidade Semântica** - Quando uma determinada Sentença têm um predicado indeterminado. Na sentença "a crítica do autor", não sabemos (sem o contexto) se o autor é o objeto ou agente da crítica.
+* **Ambiguidade Pedicativa** - Quando uma Frase ou Palavra é mencionada anteriormente, mas no momento presente possui um outro significado.
+
 ## NLP, uma questão de engenharia
 
-Em comparação com o a linguística computacional, podemos perceber que enquando a `CL` foca na descoberta de fatos linguísticos, a `NLP` tem seu foco no desenvolvimento de tecnologias utilizando linguagem natural.
+Em comparação com o a linguística computacional, podemos perceber que enquanto a `CL` foca na descoberta de fatos linguísticos, a `NLP` tem seu foco no desenvolvimento de tecnologias utilizando linguagem natural.
 
 Em muitos casos isso é visto como uma questão de ciência versus engenharia. Não se trata de provar que as línguas X ou Y estão relacionadas historicamente. Tem mais ligação com as questões práticas e como produzir ferramentas que vão ajudar as pessoas a se comunicarem melhor (seja com o computar ou entre si), bem como trabalhar e extrair conhecimento da quantidade incomensurável de informação em linguagem natural que temos hoje.
 
-Dado sua natureza prática, `NLP` é muito relacionada a questões comerciais embora tenha um papel importante em outras ciências possibilitando análises que hoje são consideradas fundamentas em áreas como política, medicina e econômia.
-
-## E sobre Natrual Language Understanding?
-
-Podemos enquadrar `NLU` como uma subárea em `NLP`. Para uma boa aplicação baseada em processamento de linguagem natural, um bom **entendimento da linguagem** é simplesmente fundamental.
+Dado sua natureza prática, `NLP` é muito relacionada a questões comerciais embora tenha um papel importante em outras ciências possibilitando análises que hoje são consideradas fundamentas em áreas como política, medicina e economia.
 
 ## Linguagem de programação e sua relação com NLP
 
 Quando falamos de NLP, existe uma correlação com a Linguagem de programação que é pouco explorada. Antes de entrar no aspecto técnico, podemos citar um exemplo emblemático.
 
-<div align="center" style="width: 100%; font-size: 0.8em; font-family: courier;">
-<img src="https://meriatblob.blob.core.windows.net/draft/imitation-game.png" style="margin-bottom: 0px !important;">
-<p>ref: Computing Machinery and Intelligence, A. M. Turing</p>
+<div align="center" class="image-content">
+  <img src="https://meriatblob.blob.core.windows.net/draft/imitation-game.png">
+  <p>ref: Computing Machinery and Intelligence, A. M. Turing</p>
 </div>
 
-Em meados de 1950, nos primordios da computação como conheçemos hoje, Alan Turing escreveu o famoso artigo que mais tarde ficou famoso como o teste de Turing. Basicamente ele sugere que um computador pode ser considerado inteligênte caso ele consiga por meio de uma interface conversacional, manter um diálogo com um ser humano sem que o mesmo consiga identificar que se trata de uma máquina. 
+Em meados de 1950, nos primórdios da computação como conhecemos hoje, `Alan Turing` escreveu o famoso artigo que mais tarde ficou famoso como o teste de Turing. Basicamente ele sugere que um computador pode ser considerado inteligente caso ele consiga por meio de uma interface conversacional, manter um diálogo com um ser humano sem que o mesmo consiga identificar que se trata de uma máquina.
 
 É nesta época, em conjunto com a evolução da linguagem de programação que temos os primeiros programadores experimentando entradas simples de linguagem escrita para executar tarefas computacionais. Uma década após, se inicia um movimento de pesquisas sobre a utilização de textos mais próximos da linguagem natural como input para tarefas computacionais.
 
-Grande parte do interesse nessa atividade veio da possibilidade de dar ao usuário comum, o poder de interagir com a máquina a fim de realizar tarefas e obter informações sem a necessidade de programação explícita. Isso vai se tornar popular no imaginário mundial, por meio de obras SyFy (Science Fiction) como o grande clássico de Kubrick, 2001: A Space Odyssey. Esse filme de 1968 em particular, possui diversos diálogos entre homem e máquina. O nível de compreensão exibido pelo famoso computador HAL9000 é até hoje impensável.
+Grande parte do interesse nessa atividade veio da possibilidade de dar ao usuário comum, o poder de interagir com a máquina a fim de realizar tarefas e obter informações sem a necessidade de programação explícita. Isso vai se tornar popular no imaginário mundial, por meio das obras `SyFy` (**Science Fiction**) como o clássico filme de **Kubrick**, `2001: A Space Odyssey`. Esse filme de 1968 em particular, possui diversos diálogos entre homem e máquina. O nível da conversação realizada pelo famoso computador **HAL-9000** é até hoje algo só visto em filme.
 
-<div align="center" style="font-size: 0.8em; font-family: courier;">
-<img style="width: 100%;" src="https://ichef.bbci.co.uk/wwfeatures/wm/live/1600_640/images/live/p0/63/9f/p0639ffn.jpg">
-<p>ref: 2001: A Space Odyssey. 1968, Stanley Kubrick</p>
+<div align="center" class="image-content">
+  <img src="https://meriatblob.blob.core.windows.net/draft/hall-9000.png">
+  <p>ref: 2001: A Space Odyssey. 1968, Stanley Kubrick</p>
+</div>
+
+A busca por realizar as tarefas computacionais com entradas complexas em linguagem natural se estende do início da computação moderna aos dias atuais. O famosos `bots` e `assistentes virtuais` são oriundos das interfaces conversacionais que são exploradas há décadas.
+
+## Interfaces Conversacionais, NLP, NLU, BOTs, OMG
+
+Em relação ao processamento aplicadas Nas questões práticas, houveram diversas tentativas de no passado para utilizar linguagem natural para se trabalhar com máquinas. Partindo de `Alan Turing`, tivemos diversos projetos, os quais, alguns ostentam um papel de influência na história do processamento de linguagem natural.
+
+Um caso clássico é programa `ELIZA` desenvolvido pelo professor **Weizenbaum** do MIT em 1966. Esse programa tinha entre outros, o objetivo fazer com que usuários humanos achassem que estavam conversando com outros seres humanos, e não com uma máquina. Isso te parece familiar?
+
+<div align="center" class="image-content">
+  <img src="https://meriatblob.blob.core.windows.net/draft/eliza.png">
+</div>
+
+Sim meus caros, estamos falando do que foi considerado a primeira interface de conversação da computação moderna, em outras palavras, o primeiro bot da era da ciência da computação. Seu objeto primordial era simular uma conversa com um terapeuta, onde o terapeuta (`ELIZA`) conduzia a conversa com perguntas e respostas.
+
+Seu funcionamento era simples e baseano na extração de tokens/palavras chave dando a capacidade ao programa de decidir por um conjunto de respostas pré-programadas. Se um ser humano disser algo como "Sempre brinquei com meus irmãos na minha infância", o software selecionaria a palavra "irmão" e faria uma pergunta como "Me conte mais sobre sua família". Isso dava uma clara sensação ao usuário que a interação se passava com outro ser humano.
+
+Outro exemplo clássico é o `SHRDLU`, que além de um nome **super cool** ainda integra uma entrada de linguagem natural para uma ação em processamento gráfico da máquina. Abaixo é possível ver como se dava a interface com o usuário:
+
+<div align="center" class="image-content" style="background-color: #252525;">
+  <a href="https://meriatblob.blob.core.windows.net/draft/shrdlu.mp4" target="_blank"><img src="https://meriatblob.blob.core.windows.net/draft/shrdlu.jpg"></a>
+</div>
+
+O `SHRDLU` é considerado um software de inteligência artificial baseado em compreensão de linguagem natural. Foi desenvolvido entre os anos de 1968-1970 também no MIT por Terry Winograd. Seu funcionamento se baseava no usuário humano movendo os objetos da tela por meio de descrições abertas es linguagem natural. O esquema arquitetural utilizado no `SHRDLU` mostra a rápida evolução em relação ao desenvolvimento do processamento de linguagem natural na computação.
+
+<div align="center" class="image-content">
+  <img src="https://meriatblob.blob.core.windows.net/draft/shrdlu-architecture.gif">
+</div>
+
+A descrição do trabalho foi explorada no artigo `Procedures as a representationfor data in a computer program for Understanding Natural Language`. Também foi gravado um vídeo disponibilizado pelo MIT onde é possível observar o programa em ação. Abaixo temos um exemplo da interação homem/máquina do `SHRDLU`.
+
+* **Person**: PICK UP A BIG RED BLOCK.
+* **Computer**: OK. (does it)
+* **Person**: GRASP THE PYRAMID.
+* **Computer**: I DON'T UNDERSTAND WHICH PYRAMID YOU MEAN.
+* **Person**: FIND A BLOCK WHICH IS TALLER THAN THE ONE YOU ARE HOLDING AND PUT IT INTO THE BOX.
+* **Computer**: BY "IT", I ASSUME YOU MEAN THE BLOCK WHICH IS TALLER THAN THE ONE I AM HOLDING.
+* **Computer**: OK. (does it)
+Tudo isso foi de certa forma possível devido a participação dos linguistas que começaram a desenvolver diversos estudos e projetos de cunho computacional, o que nos leva ao próximo ponto.
+
+<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
+  <p style="padding: 1.6em;">Embora se relacione a nomenclatura do <b>SHRDLU</b> com a clássica disposição das letras no Linotype, segundo o autor, sua escolha foi baseada mais em relação ao famoso conto SYFY de <b>Frederic Brown</b> escrito em 1942 chamado <b>ETAOIN SHRDLU</b>. Esse conto fala sobre uma máquina Linotype que adquiri inteligência e tenta dominar o mundo (acho que já vi isso em algum lugar). A máquina ficou super inteligente por conseguir aprender tudo o que lhe era digitado. Sabendo disso, nosso herói salva a humanidade transcrevendo todos so livros sobre budismo existentes. Sendo assim o computador se convence da futilidade absoluta de todo esse esforço, alcança o Nirvana e assim a humanidade é salva. Sim, SYFY, Filosofia, Teologia e ação em 1942 ;)
+  </p>
 </div>
 
 Saindo da história para a engenharia, em grande parte o entendimento da estrutura interna de uma linguagem de programação traça um bom paralelo com a utilização da linguagem natural na computação. Em ambos os casos para um correto entendimento precisamos conhecer as regras que as formam. Novamente em ambos os casos, essas regras são definidas pelo que chamamos de gramática.
 
 ## Gramática
 
-Já vimos que a gramática é o conjunto de regras que indicam o uso mais correto de uma língua. No início, a gramática tinha como função apenas estabelecer regras quanto à escrita e à leitura. É por isso que a palavra gramática, de origem grega (grámma), significa “letra”.
+Já vimos que a gramática é o conjunto de regras que indicam o uso mais correto de uma língua. No início, a gramática tinha como função apenas estabelecer regras quanto à escrita e à leitura. A palavra gramática é de origem grega vem do radical (`grámma`) que significa "letra".
 
-No estudo da língua podemos definir 4 tipos de gramáticas: normativa, descritiva, histórica e comparativa. Ao mesmo tempo, a gramática da língua portuguesa é dividida em fonologia, morfologia e sintaxe, sendo que muitos gramáticos ainda incluem nesse pacote a semântica.
+<div align="center" class="image-content">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Noam_Chomsky_%281977%29.jpg" style="width: 20%;">
+  <p>Noam Chomsky</p>
+</div>
 
-Uma vez que enxergamos a gramática como uma especiﬁcação formal da estrutura geral de numa linguagem, podemos definir uma maneira simples de implementação que funciona para a criação de qualquer linguagem. Primeiro precisamos de um mecanismo que denote as palavras da linguagem, podemos chamar essa mecanismo de símbolos terminais. O próximo mecanismo será utilizado para denotar os componentes de uma sentença. Vamos chamá-los de símbolos não terminais. Para que isso possa ser aplicável, temos um conjunto de regras de produção, que expandem os símbolos não-terminais em uma sequência de símbolos terminais e não-terminais. Com isso a gramática de se iniciar com um símbolo não-terminal inicial. No exemplo abaixo, temos uma gramática que deﬁne um fragmento da língua portuguesa:
+Não se engane com a etimologia da palavra gramática. Como falado anteriormente, no início da década de 1950, já existiam os computadores armazenados baseados na arquitetura de `Von Neumann`, e que por suas limitações, dependiam de uma linguagem de montagem para a tradução do código de máquina. Já era possível na época imaginar que o próximo passo seria uma linguagem de alto nível, porém essa era uma tarefa que parecia no mínimo dispendiosa.
 
-**Gramática 1.**
+Este cenário mudou bem rápido. Nos anos seguintes tivemos a criação do `Fortran` e a primeira linguagem de alto nível para computadores. Em paralelo `Noam Chomsky` inicia os estudos direcionados em algoritmos para o reconhecimento da estrutura da linguagem natrual e suas complexidades gramaticais.
 
-* frase ⇒ sujeito predicado
-* sujeito ⇒ artigo substantivo
-* predicado ⇒ verbo artigo substantivo
-* artigo ⇒ o
-* substantivo ⇒ gato > rato
-* verbo ⇒ caçou
+Qual a relação aqui? O trabalho de **Chomsky** sobre a sintaxe das linguagens coincidiu nitidamente com o desenvolvimento inicial das linguagens de programação, onde houve uma aplicação prática e imediata.
 
-Nessa gramática, os símbolos terminais são o, gato e rato, sendo os demais símbolos não-terminais. A regra de produção frase ⇒ sujeito predicado estabelece que uma frase é composta de um sujeito seguido de um predicado; enquanto a regra substantivo ⇒ gato > rato estabelece que um substantivo pode ser a palavra “gato” ou “rato”. Além disso, para essa gramática, o símbolo não-terminal inicial será frase. Nas gramáticas livres de contexto (do tipo que consideramos nesse artigo), o lado esquerdo de uma regra de produção será sempre um único símbolo não terminal, enquanto o lado direito pode conter símbolos terminais e não terminais. Como veremos a seguir, uma gramática pode ser usada tanto para reconhecimento, ou seja, para decidir se essa frase pertence à linguagem deﬁnida pela gramática; quanto para geração, ou seja, para construir uma frase pertencente à linguagem deﬁnida pela gramática.
+O foco da pesquisa de Chomsky era a linguística, entretanto logo em seu início foi possível perceber que estes estudos seriam fundamentais para o desenvolvimento das linguagens artificiais, em especial as linguagens computacionais.
 
----
+Em um momento oportuno quero falar mais amplamente sobre compiladores, visto que este é um assunto que acho deveras intessante. Por hora nosso estudo da linguagem natural nos leva a analisar a estrutura de uma dada gramática. Este comportamento nos ajuda a entender como estruturar uma língua, seja ela para comunicação de um sociedade, seja ela para comunicação homem-máquina.
 
-1. Normativa: A gramática normativa é sinônimo de norma culta. Ela estabelece os usos certos e errados em oposição ao uso popular. Isso porque, apesar de ser compreensível, no cotidiano, há sérias transgressões ao modelo estabelecido. Essa é a gramática oficial e, que portanto, é ensinada nas escolas.
+### Linguagens Formais e Análise Sintática
 
-2. Descritiva: A gramática descritiva analisa a língua com o objetivo de entender as suas alterações com o passar do tempo, especialmente em decorrência do seu uso oral.
+Primeiro devo informar ao leitor que este assunto é extenso. No meu caso foi objeto de 2 semestres de estudos na faculdade. Provavelmente devo aprofundar este tema quando estiver escrevendo sobre compiladores. Por hora vamos aos conceitos principais que evidenciam o tema central.
 
-3. Histórica: A gramática histórica trata justamente da história da língua, desde a sua origem às transformações.
+Como vimos anteriormente, os estudos do que foi chamado `Lingugens Formais` trouxe uma luz para o que até então era um cenário de alta complexidade na computação. Com sua exploração das análises léxica e sintática formaram a base que pavimentou o caminho para as novas linguagens de computação. Estudar a teoria da computação fornece os conceitos base para entender a natureza geral da computação, o que envolve por definição o processamento de linguagem natural.
 
-4. Comparativa: A gramática comparativa estuda a gramática fazendo uma comparação com as gramáticas pertencentes às mesmas famílias linguísticas.
+Por linguagem formal nos referimos a uma abstração das características gerais de uma linguagem de programação, contendo um conjunto de símbolos, regras de formação de sentenças e afins. Entre as linguagens o trabalho de **Chomsky** define uma ordem hierárquica que ficou intitulada como `Hierarquia de Chomsky`.
 
-O português pertence à família das línguas indo-europeias, em que se inclui as línguas itálicas. São exemplos as línguas espanhola e francesa.
+<div align="center" class="image-content">
+  <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190227115949/Comsky-1.png">
+</div>
 
-Trabalhar com NLP é um assunto como desafios complexos, como por exemplo, podemos pensar de forma intuítiva na criação de um sistema de perguntas simples e suas respostas. A forma ingenua seria construir um sistema baseado na busca de termos, palavras chave ou padrões de palavras. Essa é uma atividade relativamente fácil, principalmente pela capacidade computacional que temos hoje. Já se pensarmos no mesmo sistema construído para responder perguntas complexas, precisamos solucionar outros problemas com as inferências.
+Essa definição de classes tenta delimitar os potenciais modelos de linguagens naturais. Cada linguagem é definida por uma determinada gramática e interpretada por um determinado reconhecedor.
 
-Conforme, a pesquisa em Pln está voltada, essencialmente, a três aspectos da comunicação em língua natural:
+Tipo 0: Linguagens Enumeráveis Recursivamente > Gramáticas Irrestritas > Máquinas de Turing
+Tipo 1: Linguagens Sensíveis ao Contexto > Gramáticas Sensíveis ao Contexto > Autômato Limitado Linearmente
+Tipo 2: Linguagens Livres de Contexto > Gramáticas Livres de Contexto > Autômatos com Pilha
+Tipo 3: Linguagens Regulares > Gramáticas Regulares > Autômatos Finitos
 
-* som: fonologia
-* estrutura: morfologia e sintaxe
-* signiﬁcado: semântica e pragmática
+### Alfabeto, cadeias e linguagens
 
-A fonologia está relacionada ao reconhecimento dos sons que compõem as palavras de uma língua.
+Dizemos que uma linguagem é capaz de expressar ideias, fatos e conceitos por meio de símbolos e regras de manipulação. Para este entendimento, devemos conhecer as regras e símbolos que nos permitem realizar tal tarefa, ou seja, os elementos para se montar uma gramática.
 
-A morfologia reconhece as palavras em termos das unidades primitivas que a compõem (e.g. caçou → caç+ou).
+Um alfabeto é um conjunto finito de símbolos. Um símbolo de um dado alfabeto é uma entidade base, representando uma letra, número, desenho e afins. Uma cadeia de caracteres de um determinado alfabeto, é uma sequencia finita de símbolos justapostos do alfabeto em questão. O tamanho de uma determinada cadeia de caracteres é o número de símbolos que formam esta cadeia. Uma linguagem formal, ou simplesmente linguagem, é um conjunto de palavras formadas com um dado alfabeto.
 
-A sintaxe deﬁne a estrutura de uma frase, com base na forma como as palavras se relacionam nessa frase (ﬁgura 1).
+Simples não? Mas essa é a base para a formação das gramáticas utilizadas nas linguagens de computação.
 
-A semântica associa signiﬁcado a uma estrutura sintática, em termos dos signiﬁcados das palavras que a compõem (e.g. à estrutura da ﬁgura 1, podemos associar o signiﬁcado “um animal perseguiu/capturou outro animal”). Finalmente, a pragmática veriﬁca se o signiﬁcado associado à uma estrutura sintática é realmente o signiﬁcado mais apropriado no contexto considerado (e.g. no contexto predador-presa, “perseguiu/capturou” → “comeu”).
-
-![0](https://meriatblob.blob.core.windows.net/draft/nlp-001.png)
-
-Como podemos ver a PNL é uma área da pesquisa muito vasta, que envolve diversas disciplinas do conhecimento humano. Neste artigo vou abordar apenas a análise sintática de algumas frases em português. O objetivo é definir uma gramática capaz de gerar um conjunto finito de sentenças e decidir se uma determinada sentença pertence ou não à linguagem definida nesta gramática. Em seguida, vamos estender essa gramática para tratar concordância de gênero e número, bem como tempos verbais. Com isso conseguimos montar uma árvore sintática de uma sentença de forma automática.
-
-> Se a comunicação é algo complexo mesmo para nós os seres humanos, como podemos trabalhar isso em computação?
-
-Bom, o primeiro passo é transformar a nossa linguagem natural em algo que possa ser trabalhado por máquina. Fazemos isso transformando nosso dado textual em algum padrão de representação numérica, algo que seja processável e compreendido por uma máquina. Somente realizando esse passo é possível iniciar o processo de examinar os dados para criação de modelos matemáticos.
-
----
+Na faculdade pude utilizar o [ANTLR](https://www.antlr.org/), uma ferramenta para criação de linguagens a partir de uma gramática, gerando um analisador de linguagens formais.
 
 # Conlusão
 
-Existe muita confusão quanso se fala em NLP. Temos diversas terminologias e conceitos que são errôneamente relacionados a essa materia. NLP é um campo onde uma certa complexidade está associada, então um correto entendimento dos conceitos é fundamental para conseguir atingir um nível avançado de trabalho. 
+Existe muita confusão quando se fala em NLP. Temos diversas terminologias e conceitos que são erroneamente relacionados a essa matéria. NLP é um campo onde uma certa complexidade está associada, então um correto entendimento dos conceitos é fundamental para conseguir atingir um nível avançado de trabalho.
 
-Fora isso a pesquisa e desenvolviemnto explorando o estado da arte em NLP requer um forte conhecimento em áreas como a linguística, uma vez diversos dos problemas que hoje queremos resolver, extrapolam a engenharia para algo mais conceitual.
+Fora isso a pesquisa e desenvolvimento explorando o estado da arte em NLP requer um forte conhecimento em áreas como a linguística, uma vez diversos dos problemas que hoje queremos resolver, extrapolam a engenharia para algo mais conceitual.
 
 # Referências
 
@@ -362,3 +444,29 @@ Fora isso a pesquisa e desenvolviemnto explorando o estado da arte em NLP requer
 * A Mind at Play: How Claude Shannon Invented the Information Age, Jimmy Soni and Rob Goodman
 * Computing Machinery and Intelligence, A. M. Turing, [link](https://www.csee.umbc.edu/courses/471/papers/turing.pdf)
 * Introdução a semiótica, José David Campos Fernandes, [link](http://www.cchla.ufpb.br/clv/images/docs/modulos/p8/p8_4.pdf)
+* Implementação de Linguagens de Programação: Compiladores, Ana Price & Simão Toscani, editora Sagra Luzzato, 2005
+* Introduction to Natural Language Understanding [by Paul Renvoisé](https://cai.tools.sap/blog/natural-language-understanding/)
+* Terry Winograd, "Procedures as a Representation for Data in a Computer Program for Understanding
+Natural Language", MIT AI Technical Report 235, February 1971
+* Joseph, Sethunya & Sedimo, Kutlwano & Kaniwa, Freeson & Hlomani, Hlomani & Letsholo, Keletso. (2016). Natural Language Processing: A Review. Natural Language Processing: A Review. 6. 207-210.
+
+<style>
+.wrapper { display: flex; flex-flow: row wrap; font-weight: bold; text-align: center; background: #9865d0; color: #ffffff; margin: 4em 0 4em 0; }
+.wrapper > * { padding: 10px; flex: 1 100%; }
+.main-neumman { font-size: 1.8em; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center; }
+.aside-1 { font-size: 0.8em; }
+@media all and (min-width: 600px) { .aside { flex: 1 0 0; } }
+@media all and (min-width: 800px) { .main-neumman { flex: 3 0px; } .aside-1 { order: 1; } .main-neumman { order: 2; } }
+.nlp-cl-table { display: table; width: 100%; margin-bottom: 2em; margin-top: 2em; }
+.nlp-cl-comparation { width: 50%; background:white; float: left; padding: 2%; text-align: center; }
+.nlp-cl-comparation hr { border:none; border-bottom: 1px solid #F0F0F0; }
+.nlp-cl-comparation i { font-size: 4.4rem; color: #40B36; margin-bottom: 1em; }
+.nlp-cl-comparation span { margin: 10px 0; color: #212121; transition: all .3s ease-in-out; }
+.nlp-cl-comparation p { color: #999; padding: 0 10px; line-height: 1.3; }
+.table-fill { background: white; margin-bottom: 3em; margin-top: 3em; border-collapse: collapse; padding:15px; box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); }
+.table-fill th { color:#FFF; background:#1b1e24; font-size:2em; padding:24px; text-align:left; vertical-align:middle; }
+.table-fill tr { border: 5px solid #C1C3D1; }
+.table-fill td { border: 5px solid #C1C3D1; padding:20px; text-align:center; vertical-align:middle; font-size:2em; border-right: 1px solid #C1C3D1; }
+.text-color { background: #DBDBE0; }
+.table-fill tr:hover td { background:#4E5066; color:#FFFFFF; }
+</style>

@@ -9,14 +9,15 @@
     <div class="tab">
       <ul style="list-style-type: none;">
         {% for post in site.categories[page.title] %}
-          <li class="preview" style="margin-top: 40px;">
-            <a class="preview-link" href="{{ post.url | prepend: site.baseurl }}">
-              <span style="font-size: 2em; color: #336699" class="preview-header">{{ post.title }}</span>
-              <!-- <span class="preview-date">{{ post.date | date: "%b %-d, %Y" }}</span> -->
-              <p class="preview-excerpt"><b>{{ post.date | date: "%b %-d, %Y" }}</b> {{ post.content | strip_html | truncatewords: 30 }}</p>
-              <!-- <span class="preview-more">Read More</span> -->
-            </a>
-          </li>
+        <li class="preview" style="margin-top: 40px;">
+          <a class="preview-link" href="{{ post.url | prepend: site.baseurl }}">
+            <span style="font-size: 2em; color: #336699" class="preview-header">{{ post.title }}</span>
+            <!-- <span class="preview-date">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+            <p class="preview-excerpt"><b>{{ post.date | date: "%b %-d, %Y" }}</b>
+              {{ post.content | strip_html | truncatewords: 30 }}</p>
+            <!-- <span class="preview-more">Read More</span> -->
+          </a>
+        </li>
         {% endfor %}
       </ul>
     </div>

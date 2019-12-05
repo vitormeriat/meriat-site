@@ -5,7 +5,7 @@ date: 2015-07-03
 categories:
   - Desing Patterns
   - JavaScript
-image-full: "http://blob.vitormeriat.com.br/images/2015/07/capaJSMP.png"
+image: "http://blob.vitormeriat.com.br/images/2015/07/capaJSMP.png"
 ---
 <p align="center"><img src="http://blob.vitormeriat.com.br/images/2015/07/capaJSMP.png" alt="capaJSMP" /></p>
 <p align="justify">Quem trabalha com JavaScript conhece bem a problemática em relação ao escopo e criação de variáveis. Uma das grandes preocupações dos desenvolvedores JavaScript é evitar o uso indiscriminado de variáveis globais, o que pode levar a erros terríveis e de difícil rastreabilidade.</p>

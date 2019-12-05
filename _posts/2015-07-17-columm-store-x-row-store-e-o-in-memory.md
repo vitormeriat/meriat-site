@@ -5,7 +5,7 @@ date: 2015-07-17
 categories:
   - Big Data
   - NoSQL
-image-full: "http://blob.vitormeriat.com.br/images/2015/07/Untitled-8.png"
+image: "http://blob.vitormeriat.com.br/images/2015/07/Untitled-8.png"
 ---
 
 **IoT**, **Mobile**, **Big Data**, **Stream Analytics** e por ai vai. Cada vez temos mais referências da necessidade dos chamados **NoSQLs**. A verdade é que o cenário de armazenamento de dados clássico tem se tornado inviável em alguns cenários. Para aqueles de nós que já estão vendo este futuro hoje, vale entender as bases deste novo mundo cheio de diferenças em relação ao nosso tradicional modelo relacional de armazenamento de dados.</p>

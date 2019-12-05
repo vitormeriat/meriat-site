@@ -14,8 +14,8 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
   font-style: normal;
 }
 body {
-  font-family: "PT Mono", sans-serif;
-  font-size: 16px;
+  font-family: courier, sans-serif;
+  font-size: 1.6em;
   line-height: 26px;
   color: #7b7b7b;
   font-weight: 300;
@@ -1279,20 +1279,20 @@ a > img.fh5co-align-center {
   right: 20px;
   display: none;
   color: #ffffff !important;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(115, 14, 191, 0.3);
   padding: 10px;
   border-radius: 6px;
-  z-index: 18;
+  /* z-index: 18; */
 }
 .fh5co-gotop > i {
   position: relative;
   display: block;
-  font-size: 20px;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
+  font-size: 1.4em;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 /* Easy Rsponsive Tabs */
@@ -1300,23 +1300,18 @@ a > img.fh5co-align-center {
   clear: both;
   display: block;
 }
-
 .fh5co-tab h2 {
   line-height: 3 !important;
 }
-
 .resp-tab-active {
   color: #1d2dfd;
 }
-
 .resp-tabs-list li {
   font-family: "PT Mono", sans-serif;
 }
-
 .resp-content-active, .resp-accordion-active {
   display: block;
 }
-
 .fh5co-tab-menu-icon {
   font-size: 20px;
   position: relative;
@@ -1397,15 +1392,12 @@ a > img.fh5co-align-center {
   border: 2px solid #1d2dfd;
   border-top: none;
 }
-
 .fh5co-no-margin-bottom {
   margin-bottom: 0 !important;
 }
-
 .fh5co-letter-space {
   letter-spacing: 4px;
 }
-
 .fh5co-link {
   font-family: "PT Mono", sans-serif;
 }
@@ -1420,12 +1412,10 @@ a > img.fh5co-align-center {
 .fh5co-link:hover > i {
   margin-right: 15px;
 }
-
 .fh5co-btn-other-option {
   float: left;
   margin-right: 10px;
 }
-
 .fh5co-other-option {
   margin-top: 12px;
   display: inline-block;
@@ -1435,126 +1425,12 @@ a > img.fh5co-align-center {
   margin-left: 10px;
   margin-right: 10px;
 }
-
 .fh5co-uppercase-heading-sm {
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #7b7b7b;
-}
-
-/*** Table Styles ***/
-.table-fill {
-  background: white;
-  border-radius:3px;
-  border-collapse: collapse;
-  margin: auto;
-  padding:5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  animation: float 5s infinite;
-  margin-bottom: 3em;
-}
-
-th {
-  color:#D5DDE5;;
-  background:#1b1e24;
-  border-bottom:4px solid #9ea7af;
-  border-right: 1px solid #343a45;
-  font-size:23px;
-  font-weight: 100;
-  padding:24px;
-  text-align:left;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  vertical-align:middle;
-}
-
-th:first-child {
-  border-top-left-radius:3px;
-}
-
-th:last-child {
-  border-top-right-radius:3px;
-  border-right:none;
-}
-
-tr {
-  border-top: 1px solid #C1C3D1;
-  border-bottom-: 1px solid #C1C3D1;
-  color:#666B85;
-  font-size:16px;
-  font-weight:normal;
-  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
-}
-
-tr:hover td {
-  background:#4E5066;
-  color:#FFFFFF;
-  border-top: 1px solid #22262e;
-  border-bottom: 1px solid #22262e;
-}
-
-tr:first-child {
-  border-top:none;
-}
-
-tr:last-child {
-  border-bottom:none;
-}
-
-tr:nth-child(odd) td {
-  background:#EBEBEB;
-}
-
-tr:nth-child(odd):hover td {
-  background:#4E5066;
-}
-
-tr:last-child td:first-child {
-  border-bottom-left-radius:3px;
-}
-
-tr:last-child td:last-child {
-  border-bottom-right-radius:3px;
-}
-
-td {
-  background:#FFFFFF;
-  padding:20px;
-  text-align:left;
-  vertical-align:middle;
-  font-weight:300;
-  font-size:18px;
-  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #C1C3D1;
-}
-
-td:last-child {
-  border-right: 0px;
-}
-
-th.text-left {
-  text-align: left;
-}
-
-th.text-center {
-  text-align: center;
-}
-
-th.text-right {
-  text-align: right;
-}
-
-td.text-left {
-  text-align: left;
-}
-
-td.text-center {
-  text-align: center;
-}
-
-td.text-right {
-  text-align: right;
 }
 
 /* ==========================================================================
@@ -1596,3 +1472,6 @@ img.profile {
   height:auto;
     border-radius: 50px;
 }
+
+.image-content { width: 100%; font-size: 0.8em; margin-bottom: 4em; margin-top: 4em;}
+.image-content img { max-width: 100%; display: block; height: auto;}

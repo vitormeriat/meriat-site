@@ -10,16 +10,17 @@ layout: default
         <h1>{{ page.title }}</h1>
         {% if post.subtitle %}
         <h4 class="post-subtitle">
-            {{ post.subtitle }}
+          {{ post.subtitle }}
         </h4>
         {% endif %}
       </div>
       {% if page.categories.size > 0 %}
-        <h2 class="fh5co-uppercase-heading-sm text-center">
-          {{ page.categories | join: ' &amp; ' }}
-        </h2>
+      <h2 class="fh5co-uppercase-heading-sm text-center">
+        {{ page.categories | join: ' &amp; ' }}
+      </h2>
       {% endif %}
-      <span><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>
+      <span><time datetime="{{ page.date | date_to_xmlschema }}"
+          itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>
     </div>
     <div class="fh5co-spacer fh5co-spacer-md"></div>
     <section class="section-padding post" itemprop="articleBody">
@@ -27,39 +28,35 @@ layout: default
     </section>
   </article>
 
-  <hr/>
+  <hr style="margin-top: 4em !important;" />
   <section class="author">
-  	<header> <a href="{{ site.baseurl }}"> <img class="profile" src="/assets/images/profile.jpg" alt="Author's profile picture"></a></header>
-  	<article>
-  		<!-- Author Name -->
-      	<h4> {{ site.author }} </h4>
-      	<!-- Author Bio -->
-      	<p>
-      		Vitor is a computer scientist who is passionate about creating software that will positively change the world we live in.
-      	</p>
-        <p>
-          Microsoft MVP in AI - Cloud Architect - Data science enthusiast
-        </p>
-      </article>
+    <header><img class="profile" src="/assets/images/profile.jpg" alt="It's me!"></header>
+    <!-- Author Bio -->
+    <article>      
+      <p>Vitor Meriat is a computer scientist who is passionate about creating software that will positively change the
+        world we live in. <a href="/about"><span style="font-size: 1.2em; color: brown;">More About Me</span>riat</a>
+      </p>
+      <p>Data Scientist | Machine Learning Engineer | MBA Professor | MVP AI</p>
+    </article>
   </section>
-  <hr/>
+  <hr />
 
-  <div style="margin-top: 60px; margin-bottom: 60px;">
+  <div style="margin-top: 1em; margin-bottom: 3em">
     {% capture words %}
-      {{ content | number_of_words | minus: 180 }}
+    {{ content | number_of_words | minus: 180 }}
     {% endcapture %}
     {% unless words contains "-" %}
-      {{ words | plus: 180 | divided_by: 180 | append: " minutes to read" }}
+    {{ words | plus: 180 | divided_by: 180 | append: " minutes to read" }}
     {% endunless %}
   </div>
 
   <div class="PageNavigation">
-  {% if page.previous.url %}
+    {% if page.previous.url %}
     <a class="prev" href="{{page.previous.url}}"><i class="fa fa-lg fa-arrow-left"></i> {{page.previous.title}}</a>
-  {% endif %}
-  {% if page.next.url %}
+    {% endif %}
+    {% if page.next.url %}
     <a class="next" href="{{page.next.url}}">{{page.next.title}} <i class="fa fa-lg fa-arrow-right"></i></a>
-  {% endif %}
+    {% endif %}
   </div>
 </div>
-<div style="height: 80px;"></div>
+<div style="height: 4em;"></div>

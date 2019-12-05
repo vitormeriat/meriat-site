@@ -5,7 +5,7 @@ date: 2015-07-12
 categories:
   - Arduino
   - IoT
-image-full: "http://blob.vitormeriat.com.br/images/2015/07/vs-e-arduino.png"
+image: "http://blob.vitormeriat.com.br/images/2015/07/vs-e-arduino.png"
 ---
 <p align="justify">Recentemente fui questionado sobre opções para se trabalhar com o <strong>Arduino</strong> no Visual Studio. Como acho esse um tema interessante (um tanto pelo interesse do público em <strong>IoT</strong>, um tanto por ser da comunidade Microsoft), resolvi condesar aqui as minhas dicas de como utilizar o <strong>Visual Studio</strong> para programar um Arduino.
 <p style="background-color: #e5e204;"><img alt="vs e arduino" src="http://blob.vitormeriat.com.br/images/2015/07/vs-e-arduino.png" width="100%" />

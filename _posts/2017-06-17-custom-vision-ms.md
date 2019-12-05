@@ -5,7 +5,7 @@ date: 2017-06-07
 categories:
     - AI
     - Cognitive Computing
-image-full: "http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png"
+image: "http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png"
 ---
 
 Os serviços cognitivos da Microsoft tem evoluído muito desde seu início. Como é sabido o mesmo se iniciou no Microsoft Research com o famoso **Project Oxford**, que já disponibilizava uma série de `API's` para se trabalhar especialmente com Visão Computacional e Processamento de Linguagem Natural.

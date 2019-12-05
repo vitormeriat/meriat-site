@@ -10,7 +10,7 @@ categories:
     - Jupyter Notebook
     - Python
 description: "Getting Started Prediction Competition. Start here! Predict survival on the Titanic and get familiar with ML basics"
-image-full: "http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg"
+image: "http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg"
 ---
 
 <img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg" class="absolute-bg">
