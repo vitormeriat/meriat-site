@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "NLP under the hood"
-date: 2019-10-01
+title: "NLP Under The Hood - An Introduction"
+date: 2019-12-10
 categories:
     - IA
     - Machine Learning
@@ -13,8 +13,12 @@ tags:
     - nlp
     - data science
 image: "https://meriatblob.blob.core.windows.net/draft/capa.png"
-description: Esse trabalho se propõe a trazer uma introdução ao estudo do Processamento de Linguagem Natural, (Natural Language Processing). Minha intenção é olhar para sua base teórica enquanto disciplina. Sendo assim vamos passar por algumas definições e conceitos antes de avançar nas questões práticas. Vamos falar sobre compiladores, árvores sintáticas e suas complexidades. 
+description: Esse trabalho se propõe a trazer uma introdução ao estudo do Processamento de Linguagem Natural, (Natural Language Processing). Minha intenção é olhar para sua base teórica enquanto disciplina. Sendo assim vamos passar por algumas definições e conceitos antes de avançar nas questões práticas. Vamos falar de história, engenharia, linguística, linguagem, compiladores, árvores sintáticas e suas complexidades.
 ---
+
+<div align="center" class="image-content">
+  <img src="https://meriatblob.blob.core.windows.net/draft/capa.png">
+</div>
 
 # Sumário
 
@@ -31,14 +35,17 @@ description: Esse trabalho se propõe a trazer uma introdução ao estudo do Pro
    1. Computational Linguistics
    2. Natural Language Understanding
    3. NLP, uma questão de engenharia
-   4. Gramáticas
+   4. Linguagem de programação e sua relação com NLP
+   5. Interfaces Conversacionais, NLP, NLU, BOTs, OMG
+   6. Gramática
       1. Linguagens Formais e Análise Sintática
       2. Alfabeto, cadeias e linguagens
+      3. Sobre a lógica proposicional
 5. Conclusão
 6. Referências
 
-<div align="center" class="image-content">
-  <img src="https://meriatblob.blob.core.windows.net/draft/capa.png">
+<div style="padding: 1.8em; font-size: 1.8em; text-align: center; margin-bottom: 5em; margin-top: 5em; background-color: #68a7c5; color: #382d2d">
+  <p>"Minha pátria é minha língua." <b>Fernando Pessoa</b></p>
 </div>
 
 # Introdução
@@ -51,8 +58,11 @@ Esse trabalho se propõe a trazer uma introdução ao estudo do `Processamento d
 
 Antes de iniciar, se faz importante informar que alguns dos termos utilizados serão apresentados em inglês e português. Para que não seja causada nenhuma estranheza ao leitor, vou priorizar os termos técnicos em inglês, e achando necessário realizo a explicação/tradução do mesmo. Para facilitar a leitura, algumas referências serão colocadas durante o texto. As demais estão todas na sessão de **Referências** ao final deste texto.
 
-<div style="padding: 1.8em; font-size: 1.8em; text-align: center; margin-bottom: 5em; margin-top: 5em; background-color: #68a7c5; color: #382d2d">
-  <p>"Minha pátria é minha língua." <b>Fernando Pessoa</b></p>
+<div class="container-warning">	
+	<i class="fab fa-grav container-warning-image"></i>
+	<div class="container-warning-text">
+		<p>"Um aviso importante: Este texto se encontra em construção. Nos próximos dias estarei concluindo todas as referências, imagens e textos faltantes. Sinta-se a vontade para entrar em contato e fazer sua contribuição."</p>		
+	</div>
 </div>
 
 # Conceituação base
@@ -215,10 +225,10 @@ Estou preparando um material específico sobre este tema, mas em resumo a técni
 
 > Minha pátria é minha língua.
 
-O primeiro passo é criar uma representação baseada nas palavras únicas: **[minha, pátria, é, língua]**. O processo de codificação determina a geração de um vetor representativo para cada token/item/palavra do texto. Com isso chegamos ao seguinte resultado:
+O primeiro passo é criar uma representação baseada nas palavras únicas: [**minha**, **pátria**, **é**, **língua**]. O processo de codificação determina a geração de um vetor representativo para cada token/item/palavra do texto. Com isso chegamos ao seguinte resultado:
 
 <div align="center">
-  <table class="table-fill">
+  <table class="table-fill" style="font-size: 1.4em;">
     <tr>
       <th>minha</th>
       <td class="text-color">1</td>
@@ -250,7 +260,7 @@ O primeiro passo é criar uma representação baseada nas palavras únicas: **[m
   </table>
 </div>
 
-Essa é a representação baseada em 1 de N, e para um texto com 5 palavras, me gera 4 vetores de 4 posições. Sendo assim o número de colunas e linhas aumenta para cada palavra única. Agora imagine o quanto uma tarefa computacional pode ficar cara (processamento, armazenamento em memória) a media em que trabalhamos essa técnica em textos realmente grandes.
+Essa é a representação baseada em 1 de N, e para um texto com 5 palavras, me gera 4 vetores de 4 posições. Sendo assim o número de colunas e linhas aumenta para cada palavra única. Agora imagine o quanto uma tarefa computacional pode ficar cara (processamento, memória, etc), e a media em que trabalhamos essa técnica em textos realmente grandes, isso pode muitas vezes se tornar um fator limitante. Lembre-se sempre que embora alguns desafios possam ser tecnicamente resolvidos, a relação **tempo/entrega/financiamento** pode ser o determinante para a continuação ou não de um **projeto/pesquisa**.
 
 # Natural Language Processing
 
@@ -261,7 +271,14 @@ Partindo para a área computacional, podemos conceituar `NLP` da seguinte maneir
   </p>
 </div>
 
-Como objetivo, podemos definir que em `NLP`, queremos construir mecanismos artificiais que permitem o entendimento da linguagem natural para a realização de tarefas que visam simular um comportamento humano (e.g. tradução e interpretação de textos, busca de informações em documentos, detecção de tópicos).
+Como objetivo, podemos definir que em `NLP`, queremos construir mecanismos artificiais que permitem o entendimento da linguagem natural para a realização de tarefas que visam simular um comportamento humano (e.g. tradução e interpretação de textos, busca de informações em documentos, detecção de tópicos). PLN está relacionado com:
+
+* Linguística Computacional;
+* Compiladores (autômatos);
+* Prova de teoremas;
+* Modelos probabilísticos;
+* Aprendizado de máquina;
+* Interação humano-computador;
 
 `NLP` se encaixa no mundo da computação como uma subárea de Inteligência Artificial, e constantemente associada a Linguística Computacional, embora sejam matérias diferentes.
 
@@ -304,6 +321,12 @@ Quando falamos de entendimento, estamos falando da compreensão de um dado texto
 * **Ambiguidade Semântica** - Quando uma determinada Sentença têm um predicado indeterminado. Na sentença "a crítica do autor", não sabemos (sem o contexto) se o autor é o objeto ou agente da crítica.
 * **Ambiguidade Pedicativa** - Quando uma Frase ou Palavra é mencionada anteriormente, mas no momento presente possui um outro significado.
 
+O que dizer do sarcasmo? 
+
+> "Alguns causam felicidade aonde quer que vão. Outros causam sempre que se vão" Oscar Wilde
+
+Assim como a Visão Computacional, entendimento perfeito da linguagem é um problema conhecido como "IA-complete" o "IA-hard". Esses por sua vez, são considerados os problemas mais complexos na computação, o que implica na resolução pro problema central da inteligência artificial: Conseguir criar um computador tão inteligente quanto um ser humano.
+
 ## NLP, uma questão de engenharia
 
 Em comparação com o a linguística computacional, podemos perceber que enquanto a `CL` foca na descoberta de fatos linguísticos, a `NLP` tem seu foco no desenvolvimento de tecnologias utilizando linguagem natural.
@@ -321,7 +344,16 @@ Quando falamos de NLP, existe uma correlação com a Linguagem de programação 
   <p>ref: Computing Machinery and Intelligence, A. M. Turing</p>
 </div>
 
-Em meados de 1950, nos primórdios da computação como conhecemos hoje, `Alan Turing` escreveu o famoso artigo que mais tarde ficou famoso como o teste de Turing. Basicamente ele sugere que um computador pode ser considerado inteligente caso ele consiga por meio de uma interface conversacional, manter um diálogo com um ser humano sem que o mesmo consiga identificar que se trata de uma máquina.
+Em meados de 1950, nos primórdios da computação como conhecemos hoje, `Alan Turing` escreveu o famoso artigo que mais tarde ficou famoso como o teste de Turing. Basicamente ele sugere que um computador pode ser considerado inteligente caso ele consiga por meio de uma interface conversacional, manter um diálogo com um ser humano sem que o mesmo consiga identificar que se trata de uma máquina. Sua suposição é baseada na seguinte argumentação:
+
+> Não sabemos definir precisamente o que é inteligência e, consequentemente, não podemos definir o que é inteligência artificial. Entretanto, embora não tenhamos uma definição de inteligência, podemos assumir que o ser humano é inteligente. Portanto, se uma máquina fosse capaz de se comportar de tal forma que não pudéssemos distingui-la de um ser humano, essa máquina estaria demonstrando algum tipo de inteligência que, nesse caso, só poderia ser inteligência artificial.
+
+Sendo assim programar sistema de computador capaz de passar no Teste de Turing é uma tarefa muito difícil. Tal sistema precisaria ter pelo menos as seguintes capacidades:
+
+* Processamento de linguagem natural: para comunicar-se com o usuário;
+* Representação de conhecimento: para armazenar o que sabe ou aprende;
+* Raciocínio automatizado: Para usar o conhecimento armazenado com a finalidade de responder perguntas ou tirar novas conclusões;
+* Aprendizado de máquina: Para adaptar-se a novas circunstâncias, detectar e extrapolar padrões, a fim de atualizar o seu conhecimento armazenado.
 
 É nesta época, em conjunto com a evolução da linguagem de programação que temos os primeiros programadores experimentando entradas simples de linguagem escrita para executar tarefas computacionais. Uma década após, se inicia um movimento de pesquisas sobre a utilização de textos mais próximos da linguagem natural como input para tarefas computacionais.
 
@@ -382,8 +414,8 @@ Saindo da história para a engenharia, em grande parte o entendimento da estrutu
 
 Já vimos que a gramática é o conjunto de regras que indicam o uso mais correto de uma língua. No início, a gramática tinha como função apenas estabelecer regras quanto à escrita e à leitura. A palavra gramática é de origem grega vem do radical (`grámma`) que significa "letra".
 
-<div align="center" class="image-content">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Noam_Chomsky_%281977%29.jpg" style="width: 20%;">
+<div align="center" class="image-content" style="background: antiquewhite;">
+  <img src="https://meriatblob.blob.core.windows.net/draft/noam-chomsky.png">
   <p>Noam Chomsky</p>
 </div>
 
@@ -411,20 +443,120 @@ Por linguagem formal nos referimos a uma abstração das características gerais
 
 Essa definição de classes tenta delimitar os potenciais modelos de linguagens naturais. Cada linguagem é definida por uma determinada gramática e interpretada por um determinado reconhecedor.
 
-Tipo 0: Linguagens Enumeráveis Recursivamente > Gramáticas Irrestritas > Máquinas de Turing
-Tipo 1: Linguagens Sensíveis ao Contexto > Gramáticas Sensíveis ao Contexto > Autômato Limitado Linearmente
-Tipo 2: Linguagens Livres de Contexto > Gramáticas Livres de Contexto > Autômatos com Pilha
-Tipo 3: Linguagens Regulares > Gramáticas Regulares > Autômatos Finitos
+<div align="center">
+  <table class="table-fill">
+    <tr>
+      <th>Tipo 0</th>
+      <td>Linguagens Enumeráveis Recursivamente</td>
+      <td>Gramáticas Irrestritas</td>
+      <td>Máquinas de Turing</td>
+    </tr>
+    <tr>
+      <th>Tipo 1</th>
+      <td>Linguagens Sensíveis ao Contexto</td>
+      <td>Gramáticas Sensíveis ao Contexto</td>
+      <td>Autômato Limitado Linearmente</td>
+    </tr>
+    <tr>
+      <th>Tipo 2</th>
+      <td>Linguagens Livres de Contexto</td>
+      <td>Gramáticas Livres de Contexto</td>
+      <td>Autômatos com Pilha</td>
+    </tr>
+    <tr>
+      <th>Tipo 3</th>
+      <td>Linguagens Regulares</td>
+      <td>Gramáticas Regulares</td>
+      <td>Autômatos Finitos</td>
+    </tr>
+  </table>
+</div>
 
 ### Alfabeto, cadeias e linguagens
 
 Dizemos que uma linguagem é capaz de expressar ideias, fatos e conceitos por meio de símbolos e regras de manipulação. Para este entendimento, devemos conhecer as regras e símbolos que nos permitem realizar tal tarefa, ou seja, os elementos para se montar uma gramática.
 
-Um alfabeto é um conjunto finito de símbolos. Um símbolo de um dado alfabeto é uma entidade base, representando uma letra, número, desenho e afins. Uma cadeia de caracteres de um determinado alfabeto, é uma sequencia finita de símbolos justapostos do alfabeto em questão. O tamanho de uma determinada cadeia de caracteres é o número de símbolos que formam esta cadeia. Uma linguagem formal, ou simplesmente linguagem, é um conjunto de palavras formadas com um dado alfabeto.
+Um alfabeto é um conjunto finito de símbolos. Um símbolo de um dado alfabeto é uma entidade base, representando uma letra, número, desenho e afins. Uma cadeia de caracteres de um determinado alfabeto, é uma sequencia finita de símbolos justapostos do alfabeto em questão. O tamanho de uma determinada cadeia de caracteres é o número de símbolos que formam esta cadeia. Uma linguagem formal, ou simplesmente linguagem, é um conjunto de palavras formadas com um dado alfabeto. Também podemos dizer que 
 
-Simples não? Mas essa é a base para a formação das gramáticas utilizadas nas linguagens de computação.
+Simples não? Mas essa é a base para a formação das gramáticas utilizadas dentre otras, nas linguagens de computação.
 
-Na faculdade pude utilizar o [ANTLR](https://www.antlr.org/), uma ferramenta para criação de linguagens a partir de uma gramática, gerando um analisador de linguagens formais.
+Uma linguagem é um conjunto de sentenças, formadas pela concatenação de símbolos. Linguagens formais são linguagens artificiais (tais como lógica proposicional ou Pascal) que podem ser matematicamente definidas, de forma rigorosa.
+Linguagens naturais (tais como português ou inglês) não são matematicamente definidas. Embora a correspondência não seja perfeita, podemos tratar linguagens naturais como tratamos linguagens formais.
+
+Uma gramática é uma especificação matemática da estrutura das sentenças de uma linguagem.
+
+Tendo isso em mente podemos explorar um pouco sua estruturação. Formalmente, uma gramática é definida por:
+
+* S: o símbolo inicial da gramática (S∈N)
+* T: um conjunto de símbolos terminais, denotando palavras da linguagem (léxico).
+* N: um conjunto de símbolos não-terminais, denotando componentes de sentenças.
+* R: um conjunto de regras de produção, que especificam como símbolos não-terminais podem ser expandidos em símbolos não-terminais e terminais.
+
+O professor Silvio do Lago Pereira, exemplifica a produção de uma grámatica com a seguinte árvore sintática:
+
+<div align="center" class="image-content">
+  <img src="https://meriatblob.blob.core.windows.net/draft/arvore-sintatica.png">
+  <p>Árvore Sintática</p>
+</div>
+
+Nessa gramática, os símbolos terminais são o, gato e rato, sendo os demais símbolos não-terminais. A regra de produção $S$ frase ⇒ sujeito predicado, estabelece que uma frase é composta de um sujeito seguido de um predicado;
+enquanto a regra substantivo ⇒ gato | rato estabelece que um substantivo pode ser a palavra “gato” ou “rato”. Além disso, para essa gramática, o símbolo não-terminal inicial será frase.
+
+Nas gramáticas livres de contexto (do tipo que consideramos nesse artigo), o lado esquerdo de uma regra de produção será sempre um unico símbolo não-terminal, enquanto o lado direito pode conter símbolos terminais e não terminais.
+
+Notem que podemos descrever as regras da produção da seguinte maneira:
+
+```bash
+S = {frase}
+T = {o, gato, rato, caçou}
+N = {frase, sujeito, predicado, artigo, substantivo, verbo}
+R = {frase --> sujeito, predicado;
+    sujeito --> artigo, substantivo;
+    predicado --> verbo, artigo, substantivo;
+    artigo --> [o];
+    substantivo --> [gato] | [rato];
+    verbo --> [caçou]}
+```
+
+De acordo com esta gramática:
+
+* Uma frase é um sujeito seguido de um predicado
+* Um sujeito é um artigo seguido de um substantivo
+* Um predicado é um verbo, seguido de um artigo, seguido de um substantivo
+* Um artigo é o símbolo terminal `o`
+* Um substantivo é o símbolo terminal `gato` ou `rato`
+* Um verbo é o símbolo terminal `caçou`
+
+Uma gramática pode ser usada tanto para reconhecimento, ou seja, para decidir se essa frase pertence a linguagem definida pela gramática; quanto para geração, ou seja, para construir uma frase pertencente a linguagem definida pela gramática. Neste caso podemos deizer que `abbab` e `aaabbbba` são cadeias sobre o alfabeto `{a,b}`.
+
+Na faculdade pude utilizar o [ANTLR](https://www.antlr.org/), uma ferramenta para criação de linguagens a partir de uma gramática, gerando um analisador de linguagens formais. Com essa ferramenta é possível montar sua própria gramática e linguagem artificial de maneira simples. Recomendo para todos que queiram realizar essa tarefa ou se aprofundar no mundo das linguagens formais.
+
+### Sobre a lógica proposicional
+
+Com a criação de uma gramática, estamos estabelecendo uma relação formal com a lógica proposicional. De fato, usamos uma dada lógica proposicional pra determinar a relação entre componentes utilizados em nossa produção.
+
+A lógica em si tem um grande salto e importância que se passa de Aristóteles (384 a.C.–322 a.C.) escrevendo os primeiros grandes trabalhos de lógica, a Leibniz (1646–1716) propondo o uso de símbolos para mecanizar o processo de raciocínio dedutivo.
+
+Como primeira e indispensável parte da Lógica Matemática temos o cálculo proposicional, sentencial ou como visto em algumas bibliografias clássicas, cálculo das sentenças. Isso por que neste contexto, uma proposição é a constituição de sentenças declarativas afirmativas (expressão de uma linguagem) da qual seja possível determinar se a mesma é verdadeira ou falsa. Em lógica e matemática, uma lógica proposicional se torna um sistema formal no qual as fórmulas representam proposições que podem ser formadas pela combinação de outras proposições usando conectores lógicos, por meio de um sistema de regras de derivação, que permita que certas fórmulas sejam estabelecidas como "teoremas" do sistema formal.
+
+Mas por que estamos falando sobre isso?
+
+Bom, para começar a lógica é a base do pensamento matemático. Par ser mais objetivo, este assunto ilustra como as gramáticas são pensadas (assim como quase todas as proposições computacionais), e expõem um mais ponto na complexidade do processamento de linguagem natural. Considere a lógica:
+
+1. Sócrates é homem.
+2. Todo homem é mortal.
+3. Logo, Sócrates é mortal.
+
+Intuitivamente, deduzimos que esse argumento é válido. No entanto, usando lógica proposicional, a formalização desse argumento resulta na seguinte formação:
+
+```python
+{p, q} |= r 
+```
+
+Neste caso não há como mostrar que a conslusão é uma consequência lógica das premissas anterioreis (`p` e `q`). Isso acontece porque a validade desse argumento depende do significado da palavra todo, palavra essa que não pode ser expresso na lógica proposicional. De fato, para tratar argumentos desse tipo precisamos recorrer a lógica de predicados.
+
+Não vou entrar nesse mérito, apenas quero ilustrar que do ponto de vista mais primitivo, criar lógica matemática (basicamente o que esperamos do computador) pode ser um desafio por si só, sem incluirmos as complexidades envolvidas em algo como a comunicação humana.
+
 
 # Conlusão
 
@@ -432,8 +564,11 @@ Existe muita confusão quando se fala em NLP. Temos diversas terminologias e con
 
 Fora isso a pesquisa e desenvolvimento explorando o estado da arte em NLP requer um forte conhecimento em áreas como a linguística, uma vez diversos dos problemas que hoje queremos resolver, extrapolam a engenharia para algo mais conceitual.
 
+Parte do conhecimento necessário para performar nas atividades de NLP dependem deste conhecimento de base. Um exemplo simples seria a montagem de um bom corpus. O executor precisa conhecer a importância dos fenômenos linguisticos no contexto do problema que será explorado, caso contrário a ativdade pode não ter a representatividade e variedade necessárias para uma boa performance.
+
 # Referências
 
+* Introduction to the Theory of Computing, John Watrous, School of Computer Science and Institute for Quantum Computing, University of Waterloo [link](https://cs.uwaterloo.ca/~watrous/CS360.Spring2017/Lectures)
 * Computational Linguistics and Natural Language Processing, Jun’ichi Tsujii, University of Tokyo
 * Introduction to Computational Linguistics, Jason Eisner, Johns Hopkins University
 * Interpretação e compreensão. Marcelo DASCAL
@@ -449,9 +584,14 @@ Fora isso a pesquisa e desenvolvimento explorando o estado da arte em NLP requer
 * Terry Winograd, "Procedures as a Representation for Data in a Computer Program for Understanding
 Natural Language", MIT AI Technical Report 235, February 1971
 * Joseph, Sethunya & Sedimo, Kutlwano & Kaniwa, Freeson & Hlomani, Hlomani & Letsholo, Keletso. (2016). Natural Language Processing: A Review. Natural Language Processing: A Review. 6. 207-210.
+* Weinreich, U. On the semantic structure of language. In: GREENBERG, J. (Ed.) Universals of Language. 2nd ed. Cambridge: MIT Press, 1963.
+* Russell, S. and Norvig, P. Artificial Intelligence - a modern approach, Prentice - Hall, 1995.
+* Prof. Dr. Silvio do Lago Pereira [link](https://www.ime.usp.br/~slago/)
+* Russell, S. & Norvig, P. Artificial Intelligence - A Modern Approach, PrenticeHall, 1995.
+
 
 <style>
-.wrapper { display: flex; flex-flow: row wrap; font-weight: bold; text-align: center; background: #9865d0; color: #ffffff; margin: 4em 0 4em 0; }
+.wrapper { display: flex; flex-flow: row wrap; font-weight: bold; text-align: center; background: #2e6798; color: #ffffff; margin: 4em 0 4em 0; }
 .wrapper > * { padding: 10px; flex: 1 100%; }
 .main-neumman { font-size: 1.8em; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center; }
 .aside-1 { font-size: 0.8em; }
@@ -463,10 +603,16 @@ Natural Language", MIT AI Technical Report 235, February 1971
 .nlp-cl-comparation i { font-size: 4.4rem; color: #40B36; margin-bottom: 1em; }
 .nlp-cl-comparation span { margin: 10px 0; color: #212121; transition: all .3s ease-in-out; }
 .nlp-cl-comparation p { color: #999; padding: 0 10px; line-height: 1.3; }
+
 .table-fill { background: white; margin-bottom: 3em; margin-top: 3em; border-collapse: collapse; padding:15px; box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); }
-.table-fill th { color:#FFF; background:#1b1e24; font-size:2em; padding:24px; text-align:left; vertical-align:middle; }
+.table-fill th { color:#FFF; background:#1b1e24; padding:24px; text-align:left; vertical-align:middle; }
 .table-fill tr { border: 5px solid #C1C3D1; }
-.table-fill td { border: 5px solid #C1C3D1; padding:20px; text-align:center; vertical-align:middle; font-size:2em; border-right: 1px solid #C1C3D1; }
+.table-fill td { border: 5px solid #C1C3D1; padding:1em; text-align:center; vertical-align:middle; border-right: 1px solid #C1C3D1; }
 .text-color { background: #DBDBE0; }
 .table-fill tr:hover td { background:#4E5066; color:#FFFFFF; }
+
+.container-warning { background-color: #dcbc14; color: #382d2d; padding: 30px 40px 5px; margin-bottom: 2em; margin-top: 2em; }
+.container-warning-image { margin: 0 30px 30px 0; float: left; font-size: 4em; }
+.container-warning-text { display: inline; font-family: courier;  font-size: 1.4em; }
 </style>
+
