@@ -12,7 +12,9 @@ color: "#202020"
 description: "Este é um breve tratado sobre o processamento de linguagem natural, interfaces conversacionais e diálogos com foco em bots."
 ---
 
-<p align="center" style="background-color: #202020; width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/new-bot.png" style="margin-bottom: 0px !important;"></p>
+<div align="center" class="image-content" style="background-color: #202020;">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/new-bot.png">
+</div>
 
 
 ## Agenda
@@ -44,8 +46,8 @@ Um dos assuntos do momento tem sido a construção de interfaces conversacionais
 
 Uma interface conversacional é qualquer `UI` que simula uma conversa real junto a um ser humano. A idéia aqui é que, em vez de se comunicar com um computador em seus próprios termos, seja usando sua tradução gráfica, seja inserindo comandos específicos de sintaxe, nós possamos utilizar a linguagem diária tal qual falamos com outros seres humanos.
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
+<div class="especial-box yellow-box">
+<p style="padding: 1.6em !important;">
 O objetivo das interfaces de conversacionais é chegar ao ponto em que permitirão aos os humanos que conversem com os computadores de uma maneira na qual a responsabilidade da interpretação e de descobrir o que deve ser feito seja do software, e não no usuário. Esse é o objetivo na evolução do NLP, e certamente tende a influenciar a maneira como interagimos com os computadores.
 </p>
 </div>
@@ -82,7 +84,9 @@ No próximo tópico vamos analizar uma possível estrutura de diálogo com o obj
 
 Vamos pensar na estrutura de um diálogo step-by-setp. Aproveitando a brincadeira da pizza, vamos tentar pedir uma pizza utilizando um bot imaginário.
 
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-1.png" style="margin-bottom: 0px !important;"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-1.png">
+</div>
 
 Olhando para o exemplo acima, podemos imaginar uma variedade de significados e formas diferentes de realizar a mesma pergunta:
 
@@ -100,7 +104,9 @@ Ao definir uma determinada intenção, geramos um conjunto de sentenças, ou `en
 
 Sendo assim se pergunto ao bot **"onde acho pizzarias em Vila Mariana"**, posso `classificar` essa nova sentença como sendo pertencente a intenção **localizar-pizzaria**.
 
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-2.png" style="margin-bottom: 0px !important;"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-2.png">
+</div>
 
 Podemos perceber com base neste exemplo simples, que toda `comunicação` dos usuários tem uma intenção que leva a alguma ação. Logo concluimos que a `intenção` é o conceito central na construção de uma interface conversacional. Sendo assim a primeira coisa que podemos fazer com a mensagem enviada pelo usuário é entender sua intenção, ou seja, devemos mapear a sentença para uma ação específica.
 
@@ -110,19 +116,22 @@ O reconhecimento de entidades nomeadas é uma técnica amplamente utilizada em P
 
 <h4>"<span style="color:#62a84e">Vitor Meriat</span> mora em <span style="color:#62a84e">Vila Mariana</span> e trabalha na <span style="color:#62a84e">ESX</span>."</h4>
 
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/c1.png" style="margin-bottom: 0px !important;"></p>
-
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/c1.png">
+</div>
 
 Ao efetuar a extração das entidades nomeadas, temos **[Vitor Meriat]**, **[Vila Mariana]** e **[ESX]**. Olhando para as entidades podemos atribuir para cada uma delas uma categoria apropriada, neste caso temos, **pessoa**, **localização** e **organização**.
 
 Reconhecer e classificar categorias a entidades nomeadas presentes em um texto não é uma tarefa fácil. Isso fica evidente quando o assunto são nomes próprios e organizações. Este caso pode remeter a mais de uma categoria, ou simplesmente não possuir um contexto mais determinístico, em nível suficiente para auxiliar a tarefa de desambiguação. Vamos ao exemplo:
 
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-4.png" style="margin-bottom: 0px !important;"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-4.png">
+</div>
 
 Para o primeiro exemplo, o contexto poderia auxiliar na desambiguação. Ou seja, havendo uma relação entre os sintagmas [a Mercedes] e [a empresa], podemos aferir a categoria "Organização" a entidade “Mercedes”, uma vez que o sintagma nominal [a empresa] identifica uma organização.
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
+<div class="especial-box yellow-box">
+<p style="padding: 1.6em !important;">
 O termo <b>"sintagma"</b> designa uma sequência hierarquizada de elementos linguísticos, que compõem uma unidade na sentença.
 </p>
 </div>
@@ -175,7 +184,10 @@ Na data em que escrevo este texto, seja por pesquisa ou por experiência, resolv
 <hr style="border: 1px dashed #f00; margin-top: 5em;" />
 
 ### Api.ai
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/api.png" style="margin-bottom: 0px !important;"></p>
+
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/api.png">
+</div>
 
 O **Api.ai** é um serviço diferenciado. Recentemente adquirido pela Google, ele surgiu como um serviço de NLP para suportar um assistente pessoal em app e evoluiu rapidamente dado seu uso e adoção. O Api.ai fornece todos os recursos que já vimos inclusive uma habilidade ainda não citada, `speech to text` e `text to speech`.
 
@@ -186,7 +198,10 @@ Até o momento deste post, o Api.ai tem uma oferta free com limitação de banda
 <hr style="border: 1px dashed #f00; margin-top: 4em;" />
 
 ### Luis.ai
-<p align="center" style="background-color: #219680; width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/luis.jpg" style="margin-bottom: 0px !important;"></p>
+
+<div align="center" class="image-content" style="background-color: #219680;">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/luis.jpg">
+</div>
 
 O **Microsoft Language Understanding Intelligent Service**, ou como é mais citado LUIS, é a plataforma da Microsoft que compoem dentre outras o chamado `Bot Framework`.
 
@@ -199,7 +214,10 @@ Até o momento deste post, o LUIS encontra-se free para testes e em modo preview
 <hr style="border: 1px dashed #f00; margin-top: 4em;" />
 
 ### Wit.ai
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/wit.png" style="margin-bottom: 0px !important;"></p>
+
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/wit.png">
+</div>
 
 O **Wit.ai** assim como seu concorrente Api.ai veio como foco de auxiliar os desenvolvedores nas capacidades de linguagem natural. Seu bom trabalho e plataforma brilharam os olhos do **Facebook** que em 2015 fez a aquisição da mesma. Durante o próximo ano o Facebook realizou algumas alterações levando a ferramenta a compor seu `Bot Engine`, o que mudou a orientação principal do Wit.ai de uma ferramenta guiada por intenções, para uma ferramenta guiada por `história`.
 
@@ -213,7 +231,10 @@ Até o momento deste post, o Wit.ai encontra-se free.
   
 
 ### IBM Watson
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/watson.jpg" style="margin-bottom: 0px !important;"></p>
+
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/watson.jpg">
+</div>
 
 Talvez o **IBM Watson** seja o mais famoso da lista. Isto se dá pela IBM ser um dos primeiros players de mercado a investir tanto na tecnologia quanto no marketing de suas soluções, tanto no poder de processamento, quanto no quesito IA.
 
@@ -229,7 +250,10 @@ A IBM também nos oferece o seu **Watson Natural Language Understanding**, que p
 <hr style="border: 1px dashed #f00; margin-top: 4em;" />
 
 ### Google Cloud Natural Language
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/google-cloud.jpg" style="margin-bottom: 0px !important;"></p>
+
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/google-cloud.jpg">
+</div>
 
 O **Google Cloud Natural Language** oferece aos desenvolvedores acesso à análise de sentimentos, ao reconhecimento de entidades e análises de sintaxe.
 
@@ -238,7 +262,10 @@ O **Google Cloud Natural Language** oferece aos desenvolvedores acesso à análi
 <hr style="border: 1px dashed #f00; margin-top: 4em;" />
 
 ### Amazon Alexa Skill
-<p align="center" style="background-color: #009ad4; width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/alexa.png" style="margin-bottom: 0px !important;"></p>
+
+<div align="center" class="image-content" style="background-color: #009ad4;">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/07/20/alexa.png">
+</div>
 
 Primeiro ponto a ser notado é que este serviço só é utilizado para o device Alexa. Fora isso o mecanismo é o mesmo, definimos intenções, entidades e ações. O grande ponto do Alexa Skill é o seu foco na linguagem falada.
 
@@ -251,7 +278,10 @@ Outro ponto interessante é a integração do Alexa Skills Kit e o Amazon Lambda
 <hr style="border: 1px dashed #f00; margin-top: 4em;" />
 
 ### Amazon Lex
-<p align="center" style="background-color: #FFFFFF; width: 100%;"><img src="https://d0.awsstatic.com/Digital%20Marketing/House/Editorial/products/ai/AI-380x186.png" style="margin-bottom: 0px !important;"></p>
+
+<div align="center" class="image-content">
+<img src="https://d0.awsstatic.com/Digital%20Marketing/House/Editorial/products/ai/AI-380x186.png">
+</div>
 
 O **Amazon Lex** é a solução da Amazon para a construção de interfaces conversacionais se utilizando dos recursos de NLP e integração com outros serviços da Amazon, como Lambda, Dynamo DB entre outros. 
 
