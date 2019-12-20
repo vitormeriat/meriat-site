@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Dec 2019 00:17:58 -0300</pubDate>
-    <lastBuildDate>Fri, 20 Dec 2019 00:17:58 -0300</lastBuildDate>
+    <pubDate>Fri, 20 Dec 2019 00:25:21 -0300</pubDate>
+    <lastBuildDate>Fri, 20 Dec 2019 00:25:21 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -1511,7 +1511,9 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 
 &lt;p&gt;Assim que você estiver logado vai ver a tela com os seus projetos, e a opção para a criação de um novo projeto. Assim como segue abaixo:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/01-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/01-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Crie um novo projeto informando o nome do mesmo, uma descrição e selecione a opção &lt;code&gt;General&lt;/code&gt;. Você pode treinar um modelo usando um cenário específico, é bastante útil em caso de já utilizarmos uma &lt;strong&gt;memória&lt;/strong&gt; de auxílio. No meu caso eu usei como nome do projeto &lt;strong&gt;vehicles&lt;/strong&gt;, e como modo de treino a opção &lt;strong&gt;General&lt;/strong&gt;.&lt;/p&gt;
 
@@ -1525,15 +1527,21 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
   &lt;p&gt;Lembre-se da importância de um bom conjunto de dados, com fotos em diversos ângulos, tamanhos, variações de iluminação e etc. Quanto mais variado, mais caracteristicas serão aprendidas.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/02-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/02-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Para este teste estive procurando uma opção simples de treino. Eu utilizei conjunto de datasets disponibilizado pela &lt;a href=&quot;http://www.caltech.edu/&quot;&gt;Caltech&lt;/a&gt; com foco em visão computacional. Estou utilizando neste primeiro momento o dataset &lt;strong&gt;CARS&lt;/strong&gt; de 2001.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/03-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/03-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Aqui eu tenho minha primeira surpresa: Existe uma limitação na quantidade de arquivos a serem enviados. No total, para cada projeto podemos enviar apenas 1000 imagens para o treino.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/04-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/04-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Quem já trabalhou com este tipo de treinamento, provavelmente pode cair na mesma cilada, já que geralmente temos grandes quantidades de imagens para este tipo de treino.&lt;/p&gt;
 
@@ -1627,7 +1635,9 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Nosso diretório vai ficar parecido como o descrito na imagem abaixo:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/cars-folder.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/cars-folder.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Não esqueça que esse procedimento deve ser realizado para cada uma das categorias de veículos que queremos testar.&lt;/p&gt;
 
@@ -1641,11 +1651,15 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Este reconhecimento é classificado e categorizado seguindo a seguinte taxonomia:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/analyze_categories.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/analyze_categories.jpg&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Em nosso caso estamos criando um modelo simples com apenas 4 classes e que são distintas entre si. Como já vimos anteriormente temos carros, motos e aviões. Se passarmos um de nossos dados de treino para o serviço de análise de imagem do Cognitive Services teremos como resultado o que se segue abaixo:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car.jpg&quot; /&gt;
+&lt;/div&gt;
 
 &lt;pre&gt;
     &lt;code class=&quot;json&quot;&gt;
@@ -1725,7 +1739,9 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Com o modelo treinado, você pode ir na página &lt;code&gt;PERFORMANCE&lt;/code&gt;, onde encontramos o seguinte gráfico:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/06-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/06-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Este gráfico possui duas medidas, &lt;code&gt;Precision&lt;/code&gt; e &lt;code&gt;Recall&lt;/code&gt;, sendo que &lt;strong&gt;Precision&lt;/strong&gt; representa a probabilidade de seu classificador conseguir identificar corretamente uma imagem. &lt;strong&gt;Recall&lt;/strong&gt; representa a porcentagem de imagens contendo os itens que queremos identificar no conjunto enviado.&lt;/p&gt;
 
@@ -1733,7 +1749,9 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Para fazer o &lt;code&gt;double check&lt;/code&gt;, acesse a guia &lt;strong&gt;TRAINING IMAGES&lt;/strong&gt; e depois &lt;strong&gt;Iteration History&lt;/strong&gt;. Agora podemos ver qual imagem confundiu nosso modelo.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/12-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/12-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
 
@@ -1745,15 +1763,21 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Ao fazer o upload, note que você já terá a classificação da imagem segundo seu modelo.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Tente utilizar outras imagens de teste… temos os carros, aviões ou até mesmo coisas que não tenham nenhuma ligação com o modelo treinado.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/14-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/14-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Outra coisa interessante é que ao realizar estes testes, você pode acessar a guia &lt;strong&gt;PREDICTIONS&lt;/strong&gt;. Lá você vai ver todas as imagens que foram enviadas para teste.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/15-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/15-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Note que aqui temos a classificação que foi realizada para cada imagem. Você pode deletar uma ou todas as imagens, como também realizar um novo treino com essas imagens sendo adicionadas ao dataset original. Isso pode ou não melhorar a precisão do nosso modelo.&lt;/p&gt;
 
@@ -1781,14 +1805,18 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;p&gt;Em relação ao código é tudo muito simples. Você pode enviar a url ou o binário. Para efeitos práticos realizei o primeiro teste utilizando o postman.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/custom-vision-postman.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/custom-vision-postman.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;pre&gt;&lt;code&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;A imagem utilizada segue abaixo. Você pode acessar a imagem no seguinte link: &lt;a href=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg&quot;&gt;car-train&lt;/a&gt;. Essa foi uma imagem retirada da internet, você pode passar um link qualquer para realizar seu teste.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #F6F6F6&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Neste caso estou utilizando a &lt;code&gt;API&lt;/code&gt; de Custom Vision Prediction, que aponta diretamente para o nosso modelo.&lt;/p&gt;
 
