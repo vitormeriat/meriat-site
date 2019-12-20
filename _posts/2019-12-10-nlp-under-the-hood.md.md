@@ -187,8 +187,8 @@ No exemplo acima, temos uma anedota em torno da palavra **sesquiannual**, que re
 
 O estudo da semântica alude à parte da linguagem referente ao significado das palavras e expressões que a mesma pode gerar. Neste contexto, cada palavra possui uma semântica própria, que difere da sua classificação enquanto função sintática ou morfológica.
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
+<div class="especial-box yellow-box">
+<p>
 A comunicação humana está essencialmente ligada à capacidade de utilizar meios <b>semióticos</b> (como a linguagem) para transmitir as <b>"intenções comunicativas"</b> de um indivíduo e a capacidade de reconhecer tais intenções. DASCAL, Marcelo. Interpretação e compreensão. 2006
 </p>
 </div>
@@ -266,8 +266,8 @@ Essa é a representação baseada em 1 de N, e para um texto com 5 palavras, me 
 
 Partindo para a área computacional, podemos conceituar `NLP` da seguinte maneira:
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-  <p style="padding: 1.6em; font-family: courier;"><b>Natural Language Processing</b> é a disciplina que consiste no desenvolvimento de modelos computacionais que utilizam informação expressa em uma determinada língua natural.
+<div class="especial-box yellow-box">
+  <p style="padding: 1.6em !important;"><b>Natural Language Processing</b> é a disciplina que consiste no desenvolvimento de modelos computacionais que utilizam informação expressa em uma determinada língua natural.
   </p>
 </div>
 
@@ -403,8 +403,8 @@ A descrição do trabalho foi explorada no artigo `Procedures as a representatio
 * **Computer**: OK. (does it)
 Tudo isso foi de certa forma possível devido a participação dos linguistas que começaram a desenvolver diversos estudos e projetos de cunho computacional, o que nos leva ao próximo ponto.
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-  <p style="padding: 1.6em;">Embora se relacione a nomenclatura do <b>SHRDLU</b> com a clássica disposição das letras no Linotype, segundo o autor, sua escolha foi baseada mais em relação ao famoso conto SYFY de <b>Frederic Brown</b> escrito em 1942 chamado <b>ETAOIN SHRDLU</b>. Esse conto fala sobre uma máquina Linotype que adquiri inteligência e tenta dominar o mundo (acho que já vi isso em algum lugar). A máquina ficou super inteligente por conseguir aprender tudo o que lhe era digitado. Sabendo disso, nosso herói salva a humanidade transcrevendo todos so livros sobre budismo existentes. Sendo assim o computador se convence da futilidade absoluta de todo esse esforço, alcança o Nirvana e assim a humanidade é salva. Sim, SYFY, Filosofia, Teologia e ação em 1942 ;)
+<div class="especial-box yellow-box">
+  <p>Embora se relacione a nomenclatura do <b>SHRDLU</b> com a clássica disposição das letras no Linotype, segundo o autor, sua escolha foi baseada mais em relação ao famoso conto SYFY de <b>Frederic Brown</b> escrito em 1942 chamado <b>ETAOIN SHRDLU</b>. Esse conto fala sobre uma máquina Linotype que adquiri inteligência e tenta dominar o mundo (acho que já vi isso em algum lugar). A máquina ficou super inteligente por conseguir aprender tudo o que lhe era digitado. Sabendo disso, nosso herói salva a humanidade transcrevendo todos so livros sobre budismo existentes. Sendo assim o computador se convence da futilidade absoluta de todo esse esforço, alcança o Nirvana e assim a humanidade é salva. Sim, SYFY, Filosofia, Teologia e ação em 1942 ;)
   </p>
 </div>
 
@@ -506,17 +506,19 @@ Nas gramáticas livres de contexto (do tipo que consideramos nesse artigo), o la
 
 Notem que podemos descrever as regras da produção da seguinte maneira:
 
-```bash
-S = {frase}
-T = {o, gato, rato, caçou}
-N = {frase, sujeito, predicado, artigo, substantivo, verbo}
-R = {frase --> sujeito, predicado;
+<pre style="font-size: 1.4em !important">
+    <code class="python">
+  S = {frase}
+  T = {o, gato, rato, caçou}
+  N = {frase, sujeito, predicado, artigo, substantivo, verbo}
+  R = {frase --> sujeito, predicado;
     sujeito --> artigo, substantivo;
     predicado --> verbo, artigo, substantivo;
     artigo --> [o];
     substantivo --> [gato] | [rato];
     verbo --> [caçou]}
-```
+    </code>
+</pre>
 
 De acordo com esta gramática:
 
@@ -549,9 +551,11 @@ Bom, para começar a lógica é a base do pensamento matemático. Par ser mais o
 
 Intuitivamente, deduzimos que esse argumento é válido. No entanto, usando lógica proposicional, a formalização desse argumento resulta na seguinte formação:
 
-```python
-{p, q} |= r 
-```
+<pre style="font-size: 1.6em !important">
+    <code class="python">
+  {p, q} |= r 
+    </code>
+</pre>
 
 Neste caso não há como mostrar que a conslusão é uma consequência lógica das premissas anterioreis (`p` e `q`). Isso acontece porque a validade desse argumento depende do significado da palavra todo, palavra essa que não pode ser expresso na lógica proposicional. De fato, para tratar argumentos desse tipo precisamos recorrer a lógica de predicados.
 
