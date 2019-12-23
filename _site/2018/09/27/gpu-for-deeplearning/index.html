@@ -114,7 +114,9 @@
     </div>
     <div class="fh5co-spacer fh5co-spacer-md"></div>
     <section class="section-padding post" itemprop="articleBody">
-      <p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/capa.png" style="margin-bottom: 0px !important;" /></p>
+      <div align="center" class="image-content">
+  <img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/capa.png" />
+</div>
 
 <h2 id="introdução">Introdução</h2>
 
@@ -126,8 +128,8 @@
 
 <p>Em meados dos anos 90, já havia uma vasta utilização dos computadores, mas pouco se conhecia sobre processamento gráfico. Já havia a utilização do <strong>VGA (Video Graphics Array)</strong>, componente usado como um “vetor de imagens gráficas”, uma área contínua de dados que podem ser lidos e representados em uma tela. Dentro desta arquitetura, a responsabilidade de processar essa memória vinha inteiramente da <strong>CPU</strong>. Esse processamento devia acontecer várias vezes por segundo, exatamente como fazemos para simularmos a noção de movimento.</p>
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
+<div class="especial-box yellow-box">
+<p>
 A CPU (Central Processing Unit) é a unidade de processamento central do computador.
 </p>
 </div>
@@ -154,12 +156,14 @@ A CPU (Central Processing Unit) é a unidade de processamento central do computa
 
 <p>Arquiteturalmente a GPU possui um número muito superior de unidades de processamento comparado a CPU. Observe a figura abaixo:</p>
 
-<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/01.png" style="width: 100%; margin-bottom: 0px !important;" /></p>
+<div align="center" class="image-content">
+<img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/01.png" />
+</div>
 
 <p>O primeiro ponto a ser observado é que as unidades de processamento de uma GPU são mais simples e mais lentas que as unidades de processamento de uma CPU. Em relação ao barramento de comunicação, o usual é termos uma desvantagem na utilização da GPU.</p>
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
+<div class="especial-box yellow-box">
+<p>
 De fato, vamos ver nos testes que é necessário calcular se nossa empreitada é algo que vale ser processado na <b>GPU</b>. Descobri que às vezes a sobrecarga de transferência de dados para e da <b>GPU</b> elimina completamente o ganho de velocidade do paralelismo que temos na <b>GPU</b>. Nem sempre é uma boa ideia ir para a <b>GPU</b>. 
 </p>
 </div>
@@ -180,14 +184,16 @@ De fato, vamos ver nos testes que é necessário calcular se nossa empreitada é
 
 <p>A CPU é muito rápida porém lida com uma quantidade pequena de informação. Já a GPU é mais lenta porém lida com uma enorme quantidade de informação.</p>
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap.png" style="width: 100%; margin-bottom: 0px !important;" /></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap.png" />
+</div>
 
 <p>Para ambos os hardwares, existe a necessidade do tráfego de pacotes de dados. A CPU pode buscar alguns pacotes da memória RAM de forma muito veloz, enquanto a GPU para a mesma tarefa vai enfrentar uma latência maior. O ponto aqui é que a CPU precisa ir muitas vezes na memória para buscar as informações enquanto a GPU pode trabalhar uma quantidade muito superior.</p>
 
 <p>Em outras palavras, a CPU é boa em buscar pequenas quantidades de memória de forma extremamente rápida, enquanto a GPU consegue buscar grandes quantidades de memória por vez.</p>
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
+<div class="especial-box yellow-box">
+<p>
 Hoje temos boas <b>CPUs</b> com cerca de <b>50GB/s</b> para a largura de banda de memória, enquanto boas <b>GPUs</b> trabalham com <b>750GB/s</b>.
 </p>
 </div>
@@ -196,7 +202,9 @@ Hoje temos boas <b>CPUs</b> com cerca de <b>50GB/s</b> para a largura de banda d
 
 <p>A GPU é um magnífico exemplo de hardware paralelo. Parafraseando o Manual de Boas Práticas da Nvidia: <strong>“As GPUs da Nvidia suportam até 768 threads ativas por multiprocessador; algumas GPUs elevando este número a 1.024. Em dispositivos que possuem 30 multiprocessadores, tais como a GeForce GTX 280, isto faz com que 30,000 threads possam estar ativas simultaneamente”</strong>. Este hardware poderosíssimo tem permitido que algumas aplicações pudessem executar até 100 vezes mais rapidamente que suas rivais restritas à CPU.</p>
 
-<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/geforce-gtx-670.png" style="width: 100%; margin-bottom: 0px !important;" /></p>
+<div align="center" class="image-content">
+<img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/geforce-gtx-670.png" />
+</div>
 
 <p>A GPU separa uma porção muito grande de sua área útil para tarefas de processamento, ao passo que a CPU usa bastante desta área para implementar a sua memória de cache.</p>
 
@@ -204,8 +212,8 @@ Hoje temos boas <b>CPUs</b> com cerca de <b>50GB/s</b> para a largura de banda d
 
 <p>Ainda em relação a questão de desempenho, no geral a GPU é instalada no barramento PCIe, que conhecidamente possui uma comunicação mais lenta se comparada com a comunicação da CPU e a memória do sistema.</p>
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
+<div class="especial-box yellow-box">
+<p>
 Este é outro ponto a se considerar, temos vantagens em usar a GPU somente quando a quantidade de cálculos a serem feitos, somado ao tempo de transferência do sistema-GPU se torna insignificante em relação ao tempo de cálculo em si.
 </p>
 </div>
@@ -231,7 +239,9 @@ Este é outro ponto a se considerar, temos vantagens em usar a GPU somente quand
 
 <p>Neste texto introdutório estive abordando especificamente a ligação e importância do processamento de GPU para as técnicas de Deep Learning. Porém este é apenas o início da problemática. Da criação das primeiras GPUs até os dias atuais, diversar novas arquiteturas e outros componentes físicos foram entrando na jogada.</p>
 
-<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/the_future.png" style="width: 100%; margin-bottom: 0px !important;" /></p>
+<div align="center" class="image-content">
+<img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/the_future.png" />
+</div>
 
 <p>Com a evolução constante da GPU, diversas novas técnicas estão sendo apresentadas, por meio de pesquisas e frentes levantadas por grandes empresas como o caso da Microsoft que está liderando as pesquisas em relação a programação com <strong>FPGA (Field Programmable Gate Array)</strong>.</p>
 
@@ -284,7 +294,9 @@ Este é outro ponto a se considerar, temos vantagens em usar a GPU somente quand
 
 <p>Em relação a performance, podemos observar no segundo teste, que a GPU possui um aumento muito menor de tempo para realizar determinados cálculos se comparado a CPU.</p>
 
-<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/graphic_test_performance.png" style="width: 100%; margin-bottom: 0px !important;" /></p>
+<div align="center" class="image-content">
+<img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/graphic_test_performance.png" />
+</div>
 
 <p>Neste teste especificamente, o tempo de execução na GPU tem um aumento tão pequeno em relação ao da CPU, que aparentemente temos a impressão que para o gráfico que estamos analisando apenas os tempos da CPU sofreram alteração. Como pode ser visto abaixo, ao imprimir os tempos, é possível realizar uma validação mais precisa.</p>
 
@@ -297,7 +309,9 @@ CPU times [0.28919482231140137, 0.36597657203674316, 0.4756290912628174, 0.61246
 </code></pre>
 <p>Abaixo segue o vídeo da demonstração completa…</p>
 
-<p align="center"><iframe height="506" src="https://www.youtube.com/embed/0qyZkh9OuaY?rel=0" width="100%" allowfullscreen="" style="border: 0px;"></iframe></p>
+<div align="center" class="video-container">
+  <iframe src="https://www.youtube.com/embed/0qyZkh9OuaY?rel=0" allowfullscreen="" style="border: 0px;"></iframe>
+</div>
 
 <h2 id="conlusão">Conlusão</h2>
 

@@ -52,7 +52,9 @@ Primeiro você vai precisar acessar o site específico do Custom Vision em [cust
 
 Assim que você estiver logado vai ver a tela com os seus projetos, e a opção para a criação de um novo projeto. Assim como segue abaixo:
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/01-custom-vision.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/01-custom-vision.png">
+</div>
 
 Crie um novo projeto informando o nome do mesmo, uma descrição e selecione a opção `General`. Você pode treinar um modelo usando um cenário específico, é bastante útil em caso de já utilizarmos uma **memória** de auxílio. No meu caso eu usei como nome do projeto **vehicles**, e como modo de treino a opção **General**.
 
@@ -64,15 +66,21 @@ Com o projeto criado precisamos treinar nosso modelo. Isso só é possível se t
 
 > Lembre-se da importância de um bom conjunto de dados, com fotos em diversos ângulos, tamanhos, variações de iluminação e etc. Quanto mais variado, mais caracteristicas serão aprendidas.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/02-custom-vision.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/02-custom-vision.png">
+</div>
 
 Para este teste estive procurando uma opção simples de treino. Eu utilizei conjunto de datasets disponibilizado pela [Caltech](http://www.caltech.edu/) com foco em visão computacional. Estou utilizando neste primeiro momento o dataset **CARS** de 2001.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/03-custom-vision.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/03-custom-vision.png">
+</div>
 
 Aqui eu tenho minha primeira surpresa: Existe uma limitação na quantidade de arquivos a serem enviados. No total, para cada projeto podemos enviar apenas 1000 imagens para o treino.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/04-custom-vision.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/04-custom-vision.png">
+</div>
 
 Quem já trabalhou com este tipo de treinamento, provavelmente pode cair na mesma cilada, já que geralmente temos grandes quantidades de imagens para este tipo de treino.
 
@@ -165,7 +173,9 @@ Quantidade de arquivos no conjunto de teste: 75
 
 Nosso diretório vai ficar parecido como o descrito na imagem abaixo:
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/cars-folder.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/cars-folder.png">
+</div>
 
 Não esqueça que esse procedimento deve ser realizado para cada uma das categorias de veículos que queremos testar.
 
@@ -179,11 +189,15 @@ O serviço de visão computacional do Cognitive Service hoje, é treinado para o
 
 Este reconhecimento é classificado e categorizado seguindo a seguinte taxonomia:
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/analyze_categories.jpg" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/analyze_categories.jpg">
+</div>
 
 Em nosso caso estamos criando um modelo simples com apenas 4 classes e que são distintas entre si. Como já vimos anteriormente temos carros, motos e aviões. Se passarmos um de nossos dados de treino para o serviço de análise de imagem do Cognitive Services teremos como resultado o que se segue abaixo:
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/car.jpg" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/car.jpg">
+</div>
 
 <pre>
     <code class="json">
@@ -263,7 +277,9 @@ Agora vamos ao passo mais simples, clique no botão `Train`. No meu caso o trein
 
 Com o modelo treinado, você pode ir na página `PERFORMANCE`, onde encontramos o seguinte gráfico:
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/06-custom-vision.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/06-custom-vision.png">
+</div>
 
 Este gráfico possui duas medidas, `Precision` e `Recall`, sendo que **Precision** representa a probabilidade de seu classificador conseguir identificar corretamente uma imagem. **Recall** representa a porcentagem de imagens contendo os itens que queremos identificar no conjunto enviado.
 
@@ -271,7 +287,9 @@ Em nosso caso temos uma presição de `99.7%`, o que indica que alguma imagem en
 
 Para fazer o `double check`, acesse a guia **TRAINING IMAGES** e depois **Iteration History**. Agora podemos ver qual imagem confundiu nosso modelo.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/12-custom-vision.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/12-custom-vision.png">
+</div>
 
 <div style="margin-bottom: 3em;"></div>
 
@@ -283,15 +301,21 @@ No meu caso estou utilizando uma das imagens de teste que separei anteriormente.
 
 Ao fazer o upload, note que você já terá a classificação da imagem segundo seu modelo.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png">
+</div>
 
 Tente utilizar outras imagens de teste... temos os carros, aviões ou até mesmo coisas que não tenham nenhuma ligação com o modelo treinado.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/14-custom-vision.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/14-custom-vision.png">
+</div>
 
 Outra coisa interessante é que ao realizar estes testes, você pode acessar a guia **PREDICTIONS**. Lá você vai ver todas as imagens que foram enviadas para teste.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/15-custom-vision.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/15-custom-vision.png">
+</div>
 
 Note que aqui temos a classificação que foi realizada para cada imagem. Você pode deletar uma ou todas as imagens, como também realizar um novo treino com essas imagens sendo adicionadas ao dataset original. Isso pode ou não melhorar a precisão do nosso modelo.
 
@@ -319,7 +343,9 @@ Um detalhe importante é que você pode definir qual **Iteration** você quer co
 
 Em relação ao código é tudo muito simples. Você pode enviar a url ou o binário. Para efeitos práticos realizei o primeiro teste utilizando o postman. 
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/custom-vision-postman.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/custom-vision-postman.png">
+</div>
 
 ```
 
@@ -327,7 +353,9 @@ Em relação ao código é tudo muito simples. Você pode enviar a url ou o bin�
 
 A imagem utilizada segue abaixo. Você pode acessar a imagem no seguinte link: [car-train](http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg). Essa foi uma imagem retirada da internet, você pode passar um link qualquer para realizar seu teste.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg" class="absolute-bg"></p>
+<div align="center" class="image-content" style="background-color: #F6F6F6">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg">
+</div>
 
 Neste caso estou utilizando a `API` de Custom Vision Prediction, que aponta diretamente para o nosso modelo.
 

@@ -16,7 +16,9 @@ lang: pt
 description: "Neste post vamos passo a passo criar uma máquina virtual Linux no Azure, instalar o Jupyter Notebook via Anaconda. Também vamos conectar em nossa VM via um túnel SSH para conseguir utilinar nossos Notebooks como se estevessem rodando local.\nEm poucos passos vamos ter a disposição todo o poder da Cloud Computing para rodar nossos algorítimos com muito mais robustez."
 ---
 
-<p align="center" style="background-color: #f2f2f2; width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png" style="margin-bottom: 0px !important;"></p>
+<div align="center" class="image-content" style="background-color: #f2f2f2;">
+  <img src="http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png">
+</div>
 
 Neste post vamos passo a passo criar uma máquina virtual Linux no Azure, instalar o Jupyter Notebook via Anaconda. Também vamos conectar em nossa VM via um túnel SSH para conseguir utilinar nossos Notebooks como se estevessem rodando local.
 
@@ -30,7 +32,9 @@ Sendo assim nada mais justo do que usar todo este poder computacional ao nosso f
 
 ## Demonstração da instalação
 
-<p align="center"><iframe height="506" src="https://www.youtube.com/embed/5aWCxfHYhlg?rel=0" width="900" allowfullscreen style="border: 0px;"></iframe></p>
+<div align="center" class="video-container">
+  <iframe  src="https://www.youtube.com/embed/5aWCxfHYhlg?rel=0" allowfullscreen style="border: 0px;"></iframe>
+</div>
 
 ## Requisitos
 
@@ -107,14 +111,16 @@ Neste ponto você vai receber algumas mensagens, para confirmar a instalação, 
 
 Confirme todos os passos e por último, após a instalação ser realizada com sucesso você vai receber a mensagem abaixo:
 
-```
+<pre style="font-size: 1.4em !important">
+    <code class="bash">
 Output
 ...
 installation finished.
 Do you wish the installer to prepend the Anaconda3     install location
 to PATH in your /home/vitormeriat/.bashrc ? [yes|no]
 [no] >>> 
-```
+    </code>
+</pre>
 
 Esta é uma confirmação necessária para utilizarmos o `conda command utility`, que devo explicar melhor em um próximo vídeo. Inform **yes** e finalize o procedimento.
 

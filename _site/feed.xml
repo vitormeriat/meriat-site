@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 Dec 2019 10:03:06 -0300</pubDate>
-    <lastBuildDate>Sat, 14 Dec 2019 10:03:06 -0300</lastBuildDate>
+    <pubDate>Fri, 20 Dec 2019 00:25:21 -0300</pubDate>
+    <lastBuildDate>Fri, 20 Dec 2019 00:25:21 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -216,8 +216,8 @@
 
 &lt;p&gt;O estudo da semântica alude à parte da linguagem referente ao significado das palavras e expressões que a mesma pode gerar. Neste contexto, cada palavra possui uma semântica própria, que difere da sua classificação enquanto função sintática ou morfológica.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;
 A comunicação humana está essencialmente ligada à capacidade de utilizar meios &lt;b&gt;semióticos&lt;/b&gt; (como a linguagem) para transmitir as &lt;b&gt;&quot;intenções comunicativas&quot;&lt;/b&gt; de um indivíduo e a capacidade de reconhecer tais intenções. DASCAL, Marcelo. Interpretação e compreensão. 2006
 &lt;/p&gt;
 &lt;/div&gt;
@@ -301,8 +301,8 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 
 &lt;p&gt;Partindo para a área computacional, podemos conceituar &lt;code&gt;NLP&lt;/code&gt; da seguinte maneira:&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-  &lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;&lt;b&gt;Natural Language Processing&lt;/b&gt; é a disciplina que consiste no desenvolvimento de modelos computacionais que utilizam informação expressa em uma determinada língua natural.
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+  &lt;p style=&quot;padding: 1.6em !important;&quot;&gt;&lt;b&gt;Natural Language Processing&lt;/b&gt; é a disciplina que consiste no desenvolvimento de modelos computacionais que utilizam informação expressa em uma determinada língua natural.
   &lt;/p&gt;
 &lt;/div&gt;
 
@@ -450,8 +450,8 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 Tudo isso foi de certa forma possível devido a participação dos linguistas que começaram a desenvolver diversos estudos e projetos de cunho computacional, o que nos leva ao próximo ponto.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-  &lt;p style=&quot;padding: 1.6em;&quot;&gt;Embora se relacione a nomenclatura do &lt;b&gt;SHRDLU&lt;/b&gt; com a clássica disposição das letras no Linotype, segundo o autor, sua escolha foi baseada mais em relação ao famoso conto SYFY de &lt;b&gt;Frederic Brown&lt;/b&gt; escrito em 1942 chamado &lt;b&gt;ETAOIN SHRDLU&lt;/b&gt;. Esse conto fala sobre uma máquina Linotype que adquiri inteligência e tenta dominar o mundo (acho que já vi isso em algum lugar). A máquina ficou super inteligente por conseguir aprender tudo o que lhe era digitado. Sabendo disso, nosso herói salva a humanidade transcrevendo todos so livros sobre budismo existentes. Sendo assim o computador se convence da futilidade absoluta de todo esse esforço, alcança o Nirvana e assim a humanidade é salva. Sim, SYFY, Filosofia, Teologia e ação em 1942 ;)
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+  &lt;p&gt;Embora se relacione a nomenclatura do &lt;b&gt;SHRDLU&lt;/b&gt; com a clássica disposição das letras no Linotype, segundo o autor, sua escolha foi baseada mais em relação ao famoso conto SYFY de &lt;b&gt;Frederic Brown&lt;/b&gt; escrito em 1942 chamado &lt;b&gt;ETAOIN SHRDLU&lt;/b&gt;. Esse conto fala sobre uma máquina Linotype que adquiri inteligência e tenta dominar o mundo (acho que já vi isso em algum lugar). A máquina ficou super inteligente por conseguir aprender tudo o que lhe era digitado. Sabendo disso, nosso herói salva a humanidade transcrevendo todos so livros sobre budismo existentes. Sendo assim o computador se convence da futilidade absoluta de todo esse esforço, alcança o Nirvana e assim a humanidade é salva. Sim, SYFY, Filosofia, Teologia e ação em 1942 ;)
   &lt;/p&gt;
 &lt;/div&gt;
 
@@ -555,16 +555,19 @@ enquanto a regra substantivo ⇒ gato | rato estabelece que um substantivo pode 
 
 &lt;p&gt;Notem que podemos descrever as regras da produção da seguinte maneira:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;S = {frase}
-T = {o, gato, rato, caçou}
-N = {frase, sujeito, predicado, artigo, substantivo, verbo}
-R = {frase --&amp;gt; sujeito, predicado;
+&lt;pre style=&quot;font-size: 1.4em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+  S = {frase}
+  T = {o, gato, rato, caçou}
+  N = {frase, sujeito, predicado, artigo, substantivo, verbo}
+  R = {frase --&amp;gt; sujeito, predicado;
     sujeito --&amp;gt; artigo, substantivo;
     predicado --&amp;gt; verbo, artigo, substantivo;
     artigo --&amp;gt; [o];
     substantivo --&amp;gt; [gato] | [rato];
     verbo --&amp;gt; [caçou]}
-&lt;/code&gt;&lt;/pre&gt;
+    &lt;/code&gt;
+&lt;/pre&gt;
 
 &lt;p&gt;De acordo com esta gramática:&lt;/p&gt;
 
@@ -601,8 +604,11 @@ R = {frase --&amp;gt; sujeito, predicado;
 
 &lt;p&gt;Intuitivamente, deduzimos que esse argumento é válido. No entanto, usando lógica proposicional, a formalização desse argumento resulta na seguinte formação:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;{p, q} |= r 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre style=&quot;font-size: 1.6em !important&quot;&gt;
+    &lt;code class=&quot;python&quot;&gt;
+  {p, q} |= r 
+    &lt;/code&gt;
+&lt;/pre&gt;
 
 &lt;p&gt;Neste caso não há como mostrar que a conslusão é uma consequência lógica das premissas anterioreis (&lt;code&gt;p&lt;/code&gt; e &lt;code&gt;q&lt;/code&gt;). Isso acontece porque a validade desse argumento depende do significado da palavra todo, palavra essa que não pode ser expresso na lógica proposicional. De fato, para tratar argumentos desse tipo precisamos recorrer a lógica de predicados.&lt;/p&gt;
 
@@ -693,7 +699,9 @@ Natural Language”, MIT AI Technical Report 235, February 1971&lt;/li&gt;
     
       <item>
         <title>GPU for Deep Learning</title>
-        <description>&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2018/09/27/capa.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+        <description>&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2018/09/27/capa.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt;
 
@@ -705,8 +713,8 @@ Natural Language”, MIT AI Technical Report 235, February 1971&lt;/li&gt;
 
 &lt;p&gt;Em meados dos anos 90, já havia uma vasta utilização dos computadores, mas pouco se conhecia sobre processamento gráfico. Já havia a utilização do &lt;strong&gt;VGA (Video Graphics Array)&lt;/strong&gt;, componente usado como um “vetor de imagens gráficas”, uma área contínua de dados que podem ser lidos e representados em uma tela. Dentro desta arquitetura, a responsabilidade de processar essa memória vinha inteiramente da &lt;strong&gt;CPU&lt;/strong&gt;. Esse processamento devia acontecer várias vezes por segundo, exatamente como fazemos para simularmos a noção de movimento.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;
 A CPU (Central Processing Unit) é a unidade de processamento central do computador.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -733,12 +741,14 @@ A CPU (Central Processing Unit) é a unidade de processamento central do computa
 
 &lt;p&gt;Arquiteturalmente a GPU possui um número muito superior de unidades de processamento comparado a CPU. Observe a figura abaixo:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2018/09/27/01.png&quot; style=&quot;width: 100%; margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2018/09/27/01.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;O primeiro ponto a ser observado é que as unidades de processamento de uma GPU são mais simples e mais lentas que as unidades de processamento de uma CPU. Em relação ao barramento de comunicação, o usual é termos uma desvantagem na utilização da GPU.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;
 De fato, vamos ver nos testes que é necessário calcular se nossa empreitada é algo que vale ser processado na &lt;b&gt;GPU&lt;/b&gt;. Descobri que às vezes a sobrecarga de transferência de dados para e da &lt;b&gt;GPU&lt;/b&gt; elimina completamente o ganho de velocidade do paralelismo que temos na &lt;b&gt;GPU&lt;/b&gt;. Nem sempre é uma boa ideia ir para a &lt;b&gt;GPU&lt;/b&gt;. 
 &lt;/p&gt;
 &lt;/div&gt;
@@ -759,14 +769,16 @@ De fato, vamos ver nos testes que é necessário calcular se nossa empreitada é
 
 &lt;p&gt;A CPU é muito rápida porém lida com uma quantidade pequena de informação. Já a GPU é mais lenta porém lida com uma enorme quantidade de informação.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap.png&quot; style=&quot;width: 100%; margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Para ambos os hardwares, existe a necessidade do tráfego de pacotes de dados. A CPU pode buscar alguns pacotes da memória RAM de forma muito veloz, enquanto a GPU para a mesma tarefa vai enfrentar uma latência maior. O ponto aqui é que a CPU precisa ir muitas vezes na memória para buscar as informações enquanto a GPU pode trabalhar uma quantidade muito superior.&lt;/p&gt;
 
 &lt;p&gt;Em outras palavras, a CPU é boa em buscar pequenas quantidades de memória de forma extremamente rápida, enquanto a GPU consegue buscar grandes quantidades de memória por vez.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;
 Hoje temos boas &lt;b&gt;CPUs&lt;/b&gt; com cerca de &lt;b&gt;50GB/s&lt;/b&gt; para a largura de banda de memória, enquanto boas &lt;b&gt;GPUs&lt;/b&gt; trabalham com &lt;b&gt;750GB/s&lt;/b&gt;.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -775,7 +787,9 @@ Hoje temos boas &lt;b&gt;CPUs&lt;/b&gt; com cerca de &lt;b&gt;50GB/s&lt;/b&gt; p
 
 &lt;p&gt;A GPU é um magnífico exemplo de hardware paralelo. Parafraseando o Manual de Boas Práticas da Nvidia: &lt;strong&gt;“As GPUs da Nvidia suportam até 768 threads ativas por multiprocessador; algumas GPUs elevando este número a 1.024. Em dispositivos que possuem 30 multiprocessadores, tais como a GeForce GTX 280, isto faz com que 30,000 threads possam estar ativas simultaneamente”&lt;/strong&gt;. Este hardware poderosíssimo tem permitido que algumas aplicações pudessem executar até 100 vezes mais rapidamente que suas rivais restritas à CPU.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2018/09/27/geforce-gtx-670.png&quot; style=&quot;width: 100%; margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2018/09/27/geforce-gtx-670.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;A GPU separa uma porção muito grande de sua área útil para tarefas de processamento, ao passo que a CPU usa bastante desta área para implementar a sua memória de cache.&lt;/p&gt;
 
@@ -783,8 +797,8 @@ Hoje temos boas &lt;b&gt;CPUs&lt;/b&gt; com cerca de &lt;b&gt;50GB/s&lt;/b&gt; p
 
 &lt;p&gt;Ainda em relação a questão de desempenho, no geral a GPU é instalada no barramento PCIe, que conhecidamente possui uma comunicação mais lenta se comparada com a comunicação da CPU e a memória do sistema.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;
 Este é outro ponto a se considerar, temos vantagens em usar a GPU somente quando a quantidade de cálculos a serem feitos, somado ao tempo de transferência do sistema-GPU se torna insignificante em relação ao tempo de cálculo em si.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -810,7 +824,9 @@ Este é outro ponto a se considerar, temos vantagens em usar a GPU somente quand
 
 &lt;p&gt;Neste texto introdutório estive abordando especificamente a ligação e importância do processamento de GPU para as técnicas de Deep Learning. Porém este é apenas o início da problemática. Da criação das primeiras GPUs até os dias atuais, diversar novas arquiteturas e outros componentes físicos foram entrando na jogada.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2018/09/27/the_future.png&quot; style=&quot;width: 100%; margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2018/09/27/the_future.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Com a evolução constante da GPU, diversas novas técnicas estão sendo apresentadas, por meio de pesquisas e frentes levantadas por grandes empresas como o caso da Microsoft que está liderando as pesquisas em relação a programação com &lt;strong&gt;FPGA (Field Programmable Gate Array)&lt;/strong&gt;.&lt;/p&gt;
 
@@ -863,7 +879,9 @@ Este é outro ponto a se considerar, temos vantagens em usar a GPU somente quand
 
 &lt;p&gt;Em relação a performance, podemos observar no segundo teste, que a GPU possui um aumento muito menor de tempo para realizar determinados cálculos se comparado a CPU.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2018/09/27/graphic_test_performance.png&quot; style=&quot;width: 100%; margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2018/09/27/graphic_test_performance.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Neste teste especificamente, o tempo de execução na GPU tem um aumento tão pequeno em relação ao da CPU, que aparentemente temos a impressão que para o gráfico que estamos analisando apenas os tempos da CPU sofreram alteração. Como pode ser visto abaixo, ao imprimir os tempos, é possível realizar uma validação mais precisa.&lt;/p&gt;
 
@@ -876,7 +894,9 @@ CPU times [0.28919482231140137, 0.36597657203674316, 0.4756290912628174, 0.61246
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Abaixo segue o vídeo da demonstração completa…&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;iframe height=&quot;506&quot; src=&quot;https://www.youtube.com/embed/0qyZkh9OuaY?rel=0&quot; width=&quot;100%&quot; allowfullscreen=&quot;&quot; style=&quot;border: 0px;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;video-container&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/0qyZkh9OuaY?rel=0&quot; allowfullscreen=&quot;&quot; style=&quot;border: 0px;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;conlusão&quot;&gt;Conlusão&lt;/h2&gt;
 
@@ -917,7 +937,9 @@ CPU times [0.28919482231140137, 0.36597657203674316, 0.4756290912628174, 0.61246
     
       <item>
         <title>Provision the Jupyter Notebook in Azure VM for Linux</title>
-        <description>&lt;p align=&quot;center&quot; style=&quot;background-color: #f2f2f2; width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+        <description>&lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #f2f2f2;&quot;&gt;
+  &lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Neste post vamos passo a passo criar uma máquina virtual Linux no Azure, instalar o Jupyter Notebook via Anaconda. Também vamos conectar em nossa VM via um túnel SSH para conseguir utilinar nossos Notebooks como se estevessem rodando local.&lt;/p&gt;
 
@@ -931,7 +953,9 @@ CPU times [0.28919482231140137, 0.36597657203674316, 0.4756290912628174, 0.61246
 
 &lt;h2 id=&quot;demonstração-da-instalação&quot;&gt;Demonstração da instalação&lt;/h2&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;iframe height=&quot;506&quot; src=&quot;https://www.youtube.com/embed/5aWCxfHYhlg?rel=0&quot; width=&quot;900&quot; allowfullscreen=&quot;&quot; style=&quot;border: 0px;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;video-container&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/5aWCxfHYhlg?rel=0&quot; allowfullscreen=&quot;&quot; style=&quot;border: 0px;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;requisitos&quot;&gt;Requisitos&lt;/h2&gt;
 
@@ -1014,13 +1038,16 @@ $ bash Anaconda3-5.0.1-Linux-x86_64.sh
 
 &lt;p&gt;Confirme todos os passos e por último, após a instalação ser realizada com sucesso você vai receber a mensagem abaixo:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Output
+&lt;pre style=&quot;font-size: 1.4em !important&quot;&gt;
+    &lt;code class=&quot;bash&quot;&gt;
+Output
 ...
 installation finished.
 Do you wish the installer to prepend the Anaconda3     install location
 to PATH in your /home/vitormeriat/.bashrc ? [yes|no]
 [no] &amp;gt;&amp;gt;&amp;gt; 
-&lt;/code&gt;&lt;/pre&gt;
+    &lt;/code&gt;
+&lt;/pre&gt;
 
 &lt;p&gt;Esta é uma confirmação necessária para utilizarmos o &lt;code&gt;conda command utility&lt;/code&gt;, que devo explicar melhor em um próximo vídeo. Inform &lt;strong&gt;yes&lt;/strong&gt; e finalize o procedimento.&lt;/p&gt;
 
@@ -1105,7 +1132,9 @@ $ jupyter notebook --no-browser
     
       <item>
         <title>Conversational Interfaces, NLP and bots</title>
-        <description>&lt;p align=&quot;center&quot; style=&quot;background-color: #202020; width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/new-bot.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+        <description>&lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #202020;&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/new-bot.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;agenda&quot;&gt;Agenda&lt;/h2&gt;
 
@@ -1141,8 +1170,8 @@ $ jupyter notebook --no-browser
 
 &lt;p&gt;Uma interface conversacional é qualquer &lt;code&gt;UI&lt;/code&gt; que simula uma conversa real junto a um ser humano. A idéia aqui é que, em vez de se comunicar com um computador em seus próprios termos, seja usando sua tradução gráfica, seja inserindo comandos específicos de sintaxe, nós possamos utilizar a linguagem diária tal qual falamos com outros seres humanos.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p style=&quot;padding: 1.6em !important;&quot;&gt;
 O objetivo das interfaces de conversacionais é chegar ao ponto em que permitirão aos os humanos que conversem com os computadores de uma maneira na qual a responsabilidade da interpretação e de descobrir o que deve ser feito seja do software, e não no usuário. Esse é o objetivo na evolução do NLP, e certamente tende a influenciar a maneira como interagimos com os computadores.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -1181,7 +1210,9 @@ O objetivo das interfaces de conversacionais é chegar ao ponto em que permitir�
 
 &lt;p&gt;Vamos pensar na estrutura de um diálogo step-by-setp. Aproveitando a brincadeira da pizza, vamos tentar pedir uma pizza utilizando um bot imaginário.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-1.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-1.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Olhando para o exemplo acima, podemos imaginar uma variedade de significados e formas diferentes de realizar a mesma pergunta:&lt;/p&gt;
 
@@ -1201,7 +1232,9 @@ O objetivo das interfaces de conversacionais é chegar ao ponto em que permitir�
 
 &lt;p&gt;Sendo assim se pergunto ao bot &lt;strong&gt;“onde acho pizzarias em Vila Mariana”&lt;/strong&gt;, posso &lt;code&gt;classificar&lt;/code&gt; essa nova sentença como sendo pertencente a intenção &lt;strong&gt;localizar-pizzaria&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-2.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-2.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Podemos perceber com base neste exemplo simples, que toda &lt;code&gt;comunicação&lt;/code&gt; dos usuários tem uma intenção que leva a alguma ação. Logo concluimos que a &lt;code&gt;intenção&lt;/code&gt; é o conceito central na construção de uma interface conversacional. Sendo assim a primeira coisa que podemos fazer com a mensagem enviada pelo usuário é entender sua intenção, ou seja, devemos mapear a sentença para uma ação específica.&lt;/p&gt;
 
@@ -1211,18 +1244,22 @@ O objetivo das interfaces de conversacionais é chegar ao ponto em que permitir�
 
 &lt;h4&gt;&quot;&lt;span style=&quot;color:#62a84e&quot;&gt;Vitor Meriat&lt;/span&gt; mora em &lt;span style=&quot;color:#62a84e&quot;&gt;Vila Mariana&lt;/span&gt; e trabalha na &lt;span style=&quot;color:#62a84e&quot;&gt;ESX&lt;/span&gt;.&quot;&lt;/h4&gt;
 
-&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/c1.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/c1.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Ao efetuar a extração das entidades nomeadas, temos &lt;strong&gt;[Vitor Meriat]&lt;/strong&gt;, &lt;strong&gt;[Vila Mariana]&lt;/strong&gt; e &lt;strong&gt;[ESX]&lt;/strong&gt;. Olhando para as entidades podemos atribuir para cada uma delas uma categoria apropriada, neste caso temos, &lt;strong&gt;pessoa&lt;/strong&gt;, &lt;strong&gt;localização&lt;/strong&gt; e &lt;strong&gt;organização&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Reconhecer e classificar categorias a entidades nomeadas presentes em um texto não é uma tarefa fácil. Isso fica evidente quando o assunto são nomes próprios e organizações. Este caso pode remeter a mais de uma categoria, ou simplesmente não possuir um contexto mais determinístico, em nível suficiente para auxiliar a tarefa de desambiguação. Vamos ao exemplo:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-4.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/conversation-4.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Para o primeiro exemplo, o contexto poderia auxiliar na desambiguação. Ou seja, havendo uma relação entre os sintagmas [a Mercedes] e [a empresa], podemos aferir a categoria “Organização” a entidade “Mercedes”, uma vez que o sintagma nominal [a empresa] identifica uma organização.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p style=&quot;padding: 1.6em !important;&quot;&gt;
 O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarquizada de elementos linguísticos, que compõem uma unidade na sentença.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -1277,7 +1314,10 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;hr style=&quot;border: 1px dashed #f00; margin-top: 5em;&quot; /&gt;
 
 &lt;h3 id=&quot;apiai&quot;&gt;Api.ai&lt;/h3&gt;
-&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/api.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/api.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;O &lt;strong&gt;Api.ai&lt;/strong&gt; é um serviço diferenciado. Recentemente adquirido pela Google, ele surgiu como um serviço de NLP para suportar um assistente pessoal em app e evoluiu rapidamente dado seu uso e adoção. O Api.ai fornece todos os recursos que já vimos inclusive uma habilidade ainda não citada, &lt;code&gt;speech to text&lt;/code&gt; e &lt;code&gt;text to speech&lt;/code&gt;.&lt;/p&gt;
 
@@ -1288,7 +1328,10 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
 
 &lt;h3 id=&quot;luisai&quot;&gt;Luis.ai&lt;/h3&gt;
-&lt;p align=&quot;center&quot; style=&quot;background-color: #219680; width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/luis.jpg&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #219680;&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/luis.jpg&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;O &lt;strong&gt;Microsoft Language Understanding Intelligent Service&lt;/strong&gt;, ou como é mais citado LUIS, é a plataforma da Microsoft que compoem dentre outras o chamado &lt;code&gt;Bot Framework&lt;/code&gt;.&lt;/p&gt;
 
@@ -1301,7 +1344,10 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
 
 &lt;h3 id=&quot;witai&quot;&gt;Wit.ai&lt;/h3&gt;
-&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/wit.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/wit.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;O &lt;strong&gt;Wit.ai&lt;/strong&gt; assim como seu concorrente Api.ai veio como foco de auxiliar os desenvolvedores nas capacidades de linguagem natural. Seu bom trabalho e plataforma brilharam os olhos do &lt;strong&gt;Facebook&lt;/strong&gt; que em 2015 fez a aquisição da mesma. Durante o próximo ano o Facebook realizou algumas alterações levando a ferramenta a compor seu &lt;code&gt;Bot Engine&lt;/code&gt;, o que mudou a orientação principal do Wit.ai de uma ferramenta guiada por intenções, para uma ferramenta guiada por &lt;code&gt;história&lt;/code&gt;.&lt;/p&gt;
 
@@ -1314,7 +1360,10 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
 
 &lt;h3 id=&quot;ibm-watson&quot;&gt;IBM Watson&lt;/h3&gt;
-&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/watson.jpg&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/watson.jpg&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Talvez o &lt;strong&gt;IBM Watson&lt;/strong&gt; seja o mais famoso da lista. Isto se dá pela IBM ser um dos primeiros players de mercado a investir tanto na tecnologia quanto no marketing de suas soluções, tanto no poder de processamento, quanto no quesito IA.&lt;/p&gt;
 
@@ -1329,7 +1378,10 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
 
 &lt;h3 id=&quot;google-cloud-natural-language&quot;&gt;Google Cloud Natural Language&lt;/h3&gt;
-&lt;p align=&quot;center&quot; style=&quot;width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/google-cloud.jpg&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/google-cloud.jpg&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;O &lt;strong&gt;Google Cloud Natural Language&lt;/strong&gt; oferece aos desenvolvedores acesso à análise de sentimentos, ao reconhecimento de entidades e análises de sintaxe.&lt;/p&gt;
 
@@ -1338,7 +1390,10 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
 
 &lt;h3 id=&quot;amazon-alexa-skill&quot;&gt;Amazon Alexa Skill&lt;/h3&gt;
-&lt;p align=&quot;center&quot; style=&quot;background-color: #009ad4; width: 100%;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/alexa.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #009ad4;&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/07/20/alexa.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Primeiro ponto a ser notado é que este serviço só é utilizado para o device Alexa. Fora isso o mecanismo é o mesmo, definimos intenções, entidades e ações. O grande ponto do Alexa Skill é o seu foco na linguagem falada.&lt;/p&gt;
 
@@ -1351,7 +1406,10 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 &lt;hr style=&quot;border: 1px dashed #f00; margin-top: 4em;&quot; /&gt;
 
 &lt;h3 id=&quot;amazon-lex&quot;&gt;Amazon Lex&lt;/h3&gt;
-&lt;p align=&quot;center&quot; style=&quot;background-color: #FFFFFF; width: 100%;&quot;&gt;&lt;img src=&quot;https://d0.awsstatic.com/Digital%20Marketing/House/Editorial/products/ai/AI-380x186.png&quot; style=&quot;margin-bottom: 0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;https://d0.awsstatic.com/Digital%20Marketing/House/Editorial/products/ai/AI-380x186.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;O &lt;strong&gt;Amazon Lex&lt;/strong&gt; é a solução da Amazon para a construção de interfaces conversacionais se utilizando dos recursos de NLP e integração com outros serviços da Amazon, como Lambda, Dynamo DB entre outros.&lt;/p&gt;
 
@@ -1453,7 +1511,9 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 
 &lt;p&gt;Assim que você estiver logado vai ver a tela com os seus projetos, e a opção para a criação de um novo projeto. Assim como segue abaixo:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/01-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/01-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Crie um novo projeto informando o nome do mesmo, uma descrição e selecione a opção &lt;code&gt;General&lt;/code&gt;. Você pode treinar um modelo usando um cenário específico, é bastante útil em caso de já utilizarmos uma &lt;strong&gt;memória&lt;/strong&gt; de auxílio. No meu caso eu usei como nome do projeto &lt;strong&gt;vehicles&lt;/strong&gt;, e como modo de treino a opção &lt;strong&gt;General&lt;/strong&gt;.&lt;/p&gt;
 
@@ -1467,15 +1527,21 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
   &lt;p&gt;Lembre-se da importância de um bom conjunto de dados, com fotos em diversos ângulos, tamanhos, variações de iluminação e etc. Quanto mais variado, mais caracteristicas serão aprendidas.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/02-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/02-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Para este teste estive procurando uma opção simples de treino. Eu utilizei conjunto de datasets disponibilizado pela &lt;a href=&quot;http://www.caltech.edu/&quot;&gt;Caltech&lt;/a&gt; com foco em visão computacional. Estou utilizando neste primeiro momento o dataset &lt;strong&gt;CARS&lt;/strong&gt; de 2001.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/03-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/03-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Aqui eu tenho minha primeira surpresa: Existe uma limitação na quantidade de arquivos a serem enviados. No total, para cada projeto podemos enviar apenas 1000 imagens para o treino.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/04-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/04-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Quem já trabalhou com este tipo de treinamento, provavelmente pode cair na mesma cilada, já que geralmente temos grandes quantidades de imagens para este tipo de treino.&lt;/p&gt;
 
@@ -1569,7 +1635,9 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Nosso diretório vai ficar parecido como o descrito na imagem abaixo:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/cars-folder.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/cars-folder.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Não esqueça que esse procedimento deve ser realizado para cada uma das categorias de veículos que queremos testar.&lt;/p&gt;
 
@@ -1583,11 +1651,15 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Este reconhecimento é classificado e categorizado seguindo a seguinte taxonomia:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/analyze_categories.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/analyze_categories.jpg&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Em nosso caso estamos criando um modelo simples com apenas 4 classes e que são distintas entre si. Como já vimos anteriormente temos carros, motos e aviões. Se passarmos um de nossos dados de treino para o serviço de análise de imagem do Cognitive Services teremos como resultado o que se segue abaixo:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car.jpg&quot; /&gt;
+&lt;/div&gt;
 
 &lt;pre&gt;
     &lt;code class=&quot;json&quot;&gt;
@@ -1667,7 +1739,9 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Com o modelo treinado, você pode ir na página &lt;code&gt;PERFORMANCE&lt;/code&gt;, onde encontramos o seguinte gráfico:&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/06-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/06-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Este gráfico possui duas medidas, &lt;code&gt;Precision&lt;/code&gt; e &lt;code&gt;Recall&lt;/code&gt;, sendo que &lt;strong&gt;Precision&lt;/strong&gt; representa a probabilidade de seu classificador conseguir identificar corretamente uma imagem. &lt;strong&gt;Recall&lt;/strong&gt; representa a porcentagem de imagens contendo os itens que queremos identificar no conjunto enviado.&lt;/p&gt;
 
@@ -1675,7 +1749,9 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Para fazer o &lt;code&gt;double check&lt;/code&gt;, acesse a guia &lt;strong&gt;TRAINING IMAGES&lt;/strong&gt; e depois &lt;strong&gt;Iteration History&lt;/strong&gt;. Agora podemos ver qual imagem confundiu nosso modelo.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/12-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/12-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt;
 
@@ -1687,15 +1763,21 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Ao fazer o upload, note que você já terá a classificação da imagem segundo seu modelo.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/13-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Tente utilizar outras imagens de teste… temos os carros, aviões ou até mesmo coisas que não tenham nenhuma ligação com o modelo treinado.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/14-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/14-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Outra coisa interessante é que ao realizar estes testes, você pode acessar a guia &lt;strong&gt;PREDICTIONS&lt;/strong&gt;. Lá você vai ver todas as imagens que foram enviadas para teste.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/15-custom-vision.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/15-custom-vision.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Note que aqui temos a classificação que foi realizada para cada imagem. Você pode deletar uma ou todas as imagens, como também realizar um novo treino com essas imagens sendo adicionadas ao dataset original. Isso pode ou não melhorar a precisão do nosso modelo.&lt;/p&gt;
 
@@ -1723,14 +1805,18 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;p&gt;Em relação ao código é tudo muito simples. Você pode enviar a url ou o binário. Para efeitos práticos realizei o primeiro teste utilizando o postman.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/custom-vision-postman.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/custom-vision-postman.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;pre&gt;&lt;code&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;A imagem utilizada segue abaixo. Você pode acessar a imagem no seguinte link: &lt;a href=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg&quot;&gt;car-train&lt;/a&gt;. Essa foi uma imagem retirada da internet, você pode passar um link qualquer para realizar seu teste.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #F6F6F6&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Neste caso estou utilizando a &lt;code&gt;API&lt;/code&gt; de Custom Vision Prediction, que aponta diretamente para o nosso modelo.&lt;/p&gt;
 

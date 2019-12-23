@@ -15,7 +15,9 @@ lang: pt
 description: "Chegamos a um tópico importante dentro do campo de estudo da Deep Learning, a programação em GPU. Minha intenção com este artigo é demonstrar qual a relação entre Deep Learning e GPU, e a importância deste hardware especializado nas atividade de programação em redes neurais artificiais profundas."
 ---
 
-<p align="center" style="width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/capa.png" style="margin-bottom: 0px !important;"></p>
+<div align="center" class="image-content">
+  <img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/capa.png">
+</div>
 
 ## Introdução
 
@@ -27,11 +29,12 @@ Todas as referências utilizadas neste artigo se seguem ao final do texto. Por h
 
 Em meados dos anos 90, já havia uma vasta utilização dos computadores, mas pouco se conhecia sobre processamento gráfico. Já havia a utilização do **VGA (Video Graphics Array)**, componente usado como um "vetor de imagens gráficas", uma área contínua de dados que podem ser lidos e representados em uma tela. Dentro desta arquitetura, a responsabilidade de processar essa memória vinha inteiramente da **CPU**. Esse processamento devia acontecer várias vezes por segundo, exatamente como fazemos para simularmos a noção de movimento.
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
+<div class="especial-box yellow-box">
+<p>
 A CPU (Central Processing Unit) é a unidade de processamento central do computador.
 </p>
 </div>
+
 
 Estamos falando de uma época onde computadores ainda não eram populares. Com isso a utilização das aplicações gráficas ainda não eram um problema. A questão é que a medida em que os computadores foram se tornando populares, as aplicações que antes só trabalhavam com gráficos simples, bidimensionais e de baixa resolução baixa, partiram para aplicações mais elaboradas como jogos, aplicações para manipulação de imagens, **CAD (Computer-Aided Design)** e outras tantas.
 
@@ -55,12 +58,14 @@ Atualmente, as GPUs são processadores dedicados para processamento gráfico da 
 
 Arquiteturalmente a GPU possui um número muito superior de unidades de processamento comparado a CPU. Observe a figura abaixo:
 
-<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/01.png" style="width: 100%; margin-bottom: 0px !important;"></p>
+<div align="center" class="image-content">
+<img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/01.png">
+</div>
 
 O primeiro ponto a ser observado é que as unidades de processamento de uma GPU são mais simples e mais lentas que as unidades de processamento de uma CPU. Em relação ao barramento de comunicação, o usual é termos uma desvantagem na utilização da GPU. 
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
+<div class="especial-box yellow-box">
+<p>
 De fato, vamos ver nos testes que é necessário calcular se nossa empreitada é algo que vale ser processado na <b>GPU</b>. Descobri que às vezes a sobrecarga de transferência de dados para e da <b>GPU</b> elimina completamente o ganho de velocidade do paralelismo que temos na <b>GPU</b>. Nem sempre é uma boa ideia ir para a <b>GPU</b>. 
 </p>
 </div>
@@ -81,14 +86,16 @@ Como vimos, a CPU é otimizada para latência enquanto a GPU é otimizada para l
 
 A CPU é muito rápida porém lida com uma quantidade pequena de informação. Já a GPU é mais lenta porém lida com uma enorme quantidade de informação.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap.png" style="width: 100%; margin-bottom: 0px !important;"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2018/09/27/cpu-v-gpu-cap.png">
+</div>
 
 Para ambos os hardwares, existe a necessidade do tráfego de pacotes de dados. A CPU pode buscar alguns pacotes da memória RAM de forma muito veloz, enquanto a GPU para a mesma tarefa vai enfrentar uma latência maior. O ponto aqui é que a CPU precisa ir muitas vezes na memória para buscar as informações enquanto a GPU pode trabalhar uma quantidade muito superior.
 
 Em outras palavras, a CPU é boa em buscar pequenas quantidades de memória de forma extremamente rápida, enquanto a GPU consegue buscar grandes quantidades de memória por vez.
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
+<div class="especial-box yellow-box">
+<p>
 Hoje temos boas <b>CPUs</b> com cerca de <b>50GB/s</b> para a largura de banda de memória, enquanto boas <b>GPUs</b> trabalham com <b>750GB/s</b>.
 </p>
 </div>
@@ -97,7 +104,9 @@ Quando falamos de desempenho, quanto mais memória suas operações computaciona
 
 A GPU é um magnífico exemplo de hardware paralelo. Parafraseando o Manual de Boas Práticas da Nvidia: **“As GPUs da Nvidia suportam até 768 threads ativas por multiprocessador; algumas GPUs elevando este número a 1.024. Em dispositivos que possuem 30 multiprocessadores, tais como a GeForce GTX 280, isto faz com que 30,000 threads possam estar ativas simultaneamente"**. Este hardware poderosíssimo tem permitido que algumas aplicações pudessem executar até 100 vezes mais rapidamente que suas rivais restritas à CPU. 
 
-<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/geforce-gtx-670.png" style="width: 100%; margin-bottom: 0px !important;"></p>
+<div align="center" class="image-content">
+<img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/geforce-gtx-670.png">
+</div>
 
 A GPU separa uma porção muito grande de sua área útil para tarefas de processamento, ao passo que a CPU usa bastante desta área para implementar a sua memória de cache.
 
@@ -105,8 +114,8 @@ Para uma comparação mais realista, a **NVIDIA GTX 670** - uma placa gráfica d
 
 Ainda em relação a questão de desempenho, no geral a GPU é instalada no barramento PCIe, que conhecidamente possui uma comunicação mais lenta se comparada com a comunicação da CPU e a memória do sistema.
 
-<div style="margin-bottom: 2em; margin-top: 2em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
+<div class="especial-box yellow-box">
+<p>
 Este é outro ponto a se considerar, temos vantagens em usar a GPU somente quando a quantidade de cálculos a serem feitos, somado ao tempo de transferência do sistema-GPU se torna insignificante em relação ao tempo de cálculo em si.
 </p>
 </div>
@@ -132,7 +141,9 @@ Não estou elencado aqui **frameworks** como **Tensorflow**, **Keras**, **CNTK**
 
 Neste texto introdutório estive abordando especificamente a ligação e importância do processamento de GPU para as técnicas de Deep Learning. Porém este é apenas o início da problemática. Da criação das primeiras GPUs até os dias atuais, diversar novas arquiteturas e outros componentes físicos foram entrando na jogada.
 
-<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/the_future.png" style="width: 100%; margin-bottom: 0px !important;"></p>
+<div align="center" class="image-content">
+<img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/the_future.png">
+</div>
 
 Com a evolução constante da GPU, diversas novas técnicas estão sendo apresentadas, por meio de pesquisas e frentes levantadas por grandes empresas como o caso da Microsoft que está liderando as pesquisas em relação a programação com **FPGA (Field Programmable Gate Array)**.
 
@@ -185,7 +196,9 @@ Como o exemplificado no vídeo, os tempos se alteram a medida em que aumentamos 
 
 Em relação a performance, podemos observar no segundo teste, que a GPU possui um aumento muito menor de tempo para realizar determinados cálculos se comparado a CPU. 
 
-<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/graphic_test_performance.png" style="width: 100%; margin-bottom: 0px !important;"></p>
+<div align="center" class="image-content">
+<img src="https://meriatblob.blob.core.windows.net/images/2018/09/27/graphic_test_performance.png">
+</div>
 
 Neste teste especificamente, o tempo de execução na GPU tem um aumento tão pequeno em relação ao da CPU, que aparentemente temos a impressão que para o gráfico que estamos analisando apenas os tempos da CPU sofreram alteração. Como pode ser visto abaixo, ao imprimir os tempos, é possível realizar uma validação mais precisa. 
 
@@ -199,7 +212,9 @@ CPU times [0.28919482231140137, 0.36597657203674316, 0.4756290912628174, 0.61246
 ```
 Abaixo segue o vídeo da demonstração completa...
 
-<p align="center"><iframe height="506" src="https://www.youtube.com/embed/0qyZkh9OuaY?rel=0" width="100%" allowfullscreen style="border: 0px;"></iframe></p>
+<div align="center" class="video-container">
+  <iframe  src="https://www.youtube.com/embed/0qyZkh9OuaY?rel=0" allowfullscreen style="border: 0px;"></iframe>
+</div>
 
 
 ## Conlusão

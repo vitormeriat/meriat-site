@@ -114,7 +114,9 @@
     </div>
     <div class="fh5co-spacer fh5co-spacer-md"></div>
     <section class="section-padding post" itemprop="articleBody">
-      <p align="center" style="background-color: #f2f2f2; width: 100%;"><img src="http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png" style="margin-bottom: 0px !important;" /></p>
+      <div align="center" class="image-content" style="background-color: #f2f2f2;">
+  <img src="http://meriatblob.blob.core.windows.net/images/2017/11/20/capa-jupyter-azure.png" />
+</div>
 
 <p>Neste post vamos passo a passo criar uma máquina virtual Linux no Azure, instalar o Jupyter Notebook via Anaconda. Também vamos conectar em nossa VM via um túnel SSH para conseguir utilinar nossos Notebooks como se estevessem rodando local.</p>
 
@@ -128,7 +130,9 @@
 
 <h2 id="demonstração-da-instalação">Demonstração da instalação</h2>
 
-<p align="center"><iframe height="506" src="https://www.youtube.com/embed/5aWCxfHYhlg?rel=0" width="900" allowfullscreen="" style="border: 0px;"></iframe></p>
+<div align="center" class="video-container">
+  <iframe src="https://www.youtube.com/embed/5aWCxfHYhlg?rel=0" allowfullscreen="" style="border: 0px;"></iframe>
+</div>
 
 <h2 id="requisitos">Requisitos</h2>
 
@@ -211,13 +215,16 @@ $ bash Anaconda3-5.0.1-Linux-x86_64.sh
 
 <p>Confirme todos os passos e por último, após a instalação ser realizada com sucesso você vai receber a mensagem abaixo:</p>
 
-<pre><code>Output
+<pre style="font-size: 1.4em !important">
+    <code class="bash">
+Output
 ...
 installation finished.
 Do you wish the installer to prepend the Anaconda3     install location
 to PATH in your /home/vitormeriat/.bashrc ? [yes|no]
 [no] &gt;&gt;&gt; 
-</code></pre>
+    </code>
+</pre>
 
 <p>Esta é uma confirmação necessária para utilizarmos o <code>conda command utility</code>, que devo explicar melhor em um próximo vídeo. Inform <strong>yes</strong> e finalize o procedimento.</p>
 
