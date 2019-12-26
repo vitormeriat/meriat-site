@@ -45,7 +45,11 @@ Este é um dos problemas iniciais favoritos dos estudantes de Data Science, e te
 
 Para quem assiste os [Mythbusters](https://www.youtube.com/watch?v=JVgkvaDHmto), sabe que em um de seus programas o assunto do Titanic foi mais do explorado. Não como iremos fazer aqui, já que o foco era provar que era possível Jack e Rose terem sobrevivido utilizando a porta flutuante.
 
-> Nosso foco entretanto, é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.
+<div class="especial-box yellow-box">
+  <p>
+  Nosso foco entretanto, é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.
+  </p>
+</div>
 
 A história do Titanic é muito conhecida, tendo originado diversos livros, filmes, HQs e afins. É válido lembrar que a história narrada de forma célebre por James Cameron em seu filme de 1997, ilustra perfeitamente o motivo deste desafio. Vamos começar com uma breve perspectiva sobre o tema: Em Abril de 1912 o Titanic zarpou rumo a New York com `2224` passageiros, dos quais estima-se que apenas `710` tenham sobrevivido.
 
@@ -59,7 +63,11 @@ Neste caso não temos complicação com elementos aleatórios de sorte. A maiori
 
 A lista de sobreviventes e não sobreviventes foi transformada em dois datasets, **train.csv** e **test.csv**. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de **treino**. Nos dados de teste este valor precisa ser deduzido.
 
-> Todos os aprendizados começam com uma experiência e são um processo contínuo. Raramente tem um ponto final. Todos os aprendizados são apenas uma aproximação. 
+<div class="especial-box yellow-box">
+  <p>
+  Todos os aprendizados começam com uma experiência e são um processo contínuo. Raramente tem um ponto final. Todos os aprendizados são apenas uma aproximação.
+  </p>
+</div>
 
 Geralmente trabalhamos um experimento utilizando dois conjuntos de dados. Um de treino e um para o teste, tipicamente dividido em 80% ou 70% para treino e e restante para o teste. 
 
@@ -89,8 +97,9 @@ Como na maioria das competições Kaggle, você recebe dois conjuntos de dados:
 
 Este é um ótimo ponto de entrada para aprender machine learning com um conjunto de dados pequeno, gerenciável, interessante e com variáveis ​​de fácil compreensão.
 
-<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern.png"></p>
-
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern.png">
+</div>
 
 # Descobrindo padrões
 
@@ -100,8 +109,8 @@ Nesta tarefa, os competidores precisam analisar a probabilidade de sobrevivênci
 
 Vamos estipular o sexo dos passageiros e tripulantes. Este é um  dado importante, uma vez que o sexo do passageiro desempenha um papel crucial para determinar a sobrevivência do mesmo. Um simples count revela que temos 891 passageiros dos quais 65% são homens e 35% são mulheres.
 
-<table class="table-fill">
-  <tbody>
+<div align="center">
+  <table class="table-fill">
     <tr>
       <th>Gender</th>
       <th>Count of Passengers</th>
@@ -117,13 +126,13 @@ Vamos estipular o sexo dos passageiros e tripulantes. Este é um  dado important
       <td>577</td>
       <td>65%</td>
     </tr>
-  </tbody>
-</table>
+  </table>
+</div>
 
 Se adicionarmos a taxa de sobrevivência a equação vamos ver que existe um padrão aqui.
 
-<table class="table-fill">
-  <tbody>
+<div align="center">
+  <table class="table-fill">
     <tr>
       <th>Count of Passengers</th>
       <th>Survived Status</th>
@@ -154,8 +163,8 @@ Se adicionarmos a taxa de sobrevivência a equação vamos ver que existe um pad
       <td style="background: #777777; color: white;">342</td>
       <td style="background: #777777; color: white;">891</td>
     </tr>
-  </tbody>
-</table>
+  </table>
+</div>
 
 O seguinte pode ser observado a partir dos dados acima:
 
@@ -169,16 +178,18 @@ Dos 38% que sobreviveram, os passageiros do sexo feminino sobreviveram em maior 
 
 Podemos ilustrar este comportamento usando uma árvore de decisão. Cada nó determina o resultado final com base na maioria. Os votos do nó à direita representam o status de sobrevivência, já que a maioria nesta opção sobreviveu. Os votos do à esquerda representam o status de não sobrevivência, uma vez que a maioria não sobreviveu.
 
-<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png"></p>
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png">
+</div>
 
 Este é nosso primeiro padrão. Par facilitar vamos conceituar algumas coisas: O dataset de treino é chamado de **labelled dataset**, onde a coluna <u>Survived</u> é chamda de "label" ou **response data**. Esta abordagem é chamada de aprendizagem supervisionada, onde aprendemos com os dados de treino e aplicamos este aprendizado nos dados de teste. O resultado desta abordagem é binária, portanto estamos aplicando uma técnica de classificação, utilizando duas classes, a saber, **survived** ou **not survived**.
 
 Vamos nos referir ao conjunto de dados progressivamente ao longo deste post, começar a descobrir o conceito de aprendizagem da máquina e suas dimensões variadas. Como você pode observar a partir dos dados, os passageiros e seus atributos compõem os dados do Titanic.
 
-<div style="margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
-Um ponto importante sobre este tutorial: Não estou colocando todo o passo a passo da solução. Aqui não temos os passos para importação de dados e etc. Estou focando na solução técnica para a criação do modelo e resolução do problema. Para ver a solução completa que inclusive enviei para o Kaggle, você deve ver o código que está na sessão entitulada, <u><b>O repositório</b></u>
-</p>
+<div class="especial-box yellow-box">
+  <p>
+    Um ponto importante sobre este tutorial: Não estou colocando todo o passo a passo da solução. Aqui não temos os passos para importação de dados e etc. Estou focando na solução técnica para a criação do modelo e resolução do problema. Para ver a solução completa que inclusive enviei para o Kaggle, você deve ver o código que está na sessão entitulada, <u><b>O repositório</b></u>
+  </p>
 </div>
 
 <hr style="margin-bottom: 3em;" />
@@ -260,16 +271,17 @@ Neste caso podemos usar como estratégia, obter a média da tarifa paga pelos pa
 
 <pre style="font-size: 1em !important">
     <code class="python">
- mergedTitanicDS_Merged.loc[
+  mergedTitanicDS_Merged.loc[
  	mergedTitanicDS_Merged['Fare'].isnull(),'Fare'] = 
  	mergedTitanicDS_Merged[mergedTitanicDS_Merged['Pclass'] == 3]['Fare'].mean()
     </code>
 </pre>
 
-<div style="margin-bottom: 4em; margin-top: 4em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
-<b style="font-size: 1.8em">Think outside the box</b><br>Esta é uma fase muito importante. Geralmente você vai se deparar com situações durante o tratamento de dados em que vai parecer impossível realziar um tratamento. Um exemplo disso em nosso projeto é a feature <u><b>AGE</b></u>
-</p>
+<div class="especial-box yellow-box">  
+  <p>
+    <b style="font-size: 1.6em">Think outside the box</b><br>
+    Esta é uma fase muito importante. Geralmente você vai se deparar com situações durante o tratamento de dados em que vai parecer impossível realziar um tratamento. Um exemplo disso em nosso projeto é a feature <u><b>AGE</b></u>
+  </p>
 </div>
 
 #### Age
@@ -307,8 +319,8 @@ Traduzindo isso em código, nossa primeira tarefa será criar uma coluna chamada
 
 <pre style="font-size: 1.2em !important">
     <code class="python">
- mergedTitanicDS['Title'] = [nameStr[1].strip().split('.')[0] for nameStr in
- mergedTitanicDS['Name'].str.split(',')]
+  mergedTitanicDS['Title'] = [nameStr[1].strip().split('.')[0] for nameStr in
+  mergedTitanicDS['Name'].str.split(',')]
     </code>
 </pre>
 
@@ -316,11 +328,13 @@ Para visualizar a importância desse novo recurso, vamos olhar a distribuição 
 
 <pre style="font-size: 1.2em !important">
     <code class="python">
- mergedTitanicDS['Title'].value_counts().plot.bar()
+  mergedTitanicDS['Title'].value_counts().plot.bar()
     </code>
 </pre>
 
-<p align="center"><img src="http://blob.vitormeriat.com.br/images/2017/03/18/feature engineering-title.png"></p>
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2017/03/18/feature engineering-title.png">
+</div>
 
 Sendo assim podemos analizar melhor nossa decisão. Como a grande maioria dos dados são representados pelo título `Mr`, e temos 18 títulos diferentes, sendo assim já sabemos de cara que seria um erro ter uma média generalizada.
 
@@ -355,8 +369,8 @@ Não há muito o que os dados da cabine possam oferecer em relação ao nosso pr
 
 <pre style="font-size: 1.2em !important">
     <code class="python">
- mergedTitanicDS['IsCabinDataEmpty'] = 0
- mergedTitanicDS.loc[mergedTitanicDS['Cabin'].isnull(),'IsCabinDataEmpty'] = 1
+  mergedTitanicDS['IsCabinDataEmpty'] = 0
+  mergedTitanicDS.loc[mergedTitanicDS['Cabin'].isnull(),'IsCabinDataEmpty'] = 1
     </code>
 </pre>
 
@@ -366,8 +380,8 @@ Outro dado que podemos extrair e que será de extrema importância é o sobrenom
 
 <pre style="font-size: 1.2em !important">
     <code class="python">
- mergedTitanicDS_Merged['Surname'] = [nameStr[0].strip() for 
- 	nameStr in mergedTitanicDS_Merged['Name'].str.split(',')]
+  mergedTitanicDS_Merged['Surname'] = [nameStr[0].strip() for 
+  nameStr in mergedTitanicDS_Merged['Name'].str.split(',')]
     </code>
 </pre>
 
@@ -381,8 +395,8 @@ Algo que pode nos ajudar nesse sentido é descobrir o tamanho da família. Udsan
 
 <pre style="font-size: 1.2em !important">
     <code class="python">
- mergedTitanicDS_Merged['FamilySize'] = 
- 	mergedTitanicDS_Merged['SibSp'] + mergedTitanicDS_Merged['Parch'] + 1
+  mergedTitanicDS_Merged['FamilySize'] = 
+  mergedTitanicDS_Merged['SibSp'] + mergedTitanicDS_Merged['Parch'] + 1
     </code>
 </pre>
 
@@ -392,30 +406,30 @@ Antes de prosseguirmos, vamos avalidar todos os recursos que criamos e o que já
 
 <pre style="font-size: 1.4em !important">
     <code class="python">
- mergedTitanicDS_Merged.dtypes
+  mergedTitanicDS_Merged.dtypes
     </code>
 </pre>
 
 O resultado será o seguinte:
 
 ```
-PassengerId           int64
-Pclass                int64
-Name                 object
-Sex                  object
-Age                 float64
-SibSp                 int64
-Parch                 int64
-Ticket               object
-Fare                float64
-Cabin                object
-Embarked             object
-Survived              int64
-IsCabinDataEmpty      int64
-Title                object
-Mean_Age            float64
-Surname              object
-FamilySize            int64
+  PassengerId           int64
+  Pclass                int64
+  Name                 object
+  Sex                  object
+  Age                 float64
+  SibSp                 int64
+  Parch                 int64
+  Ticket               object
+  Fare                float64
+  Cabin                object
+  Embarked             object
+  Survived              int64
+  IsCabinDataEmpty      int64
+  Title                object
+  Mean_Age            float64
+  Surname              object
+  FamilySize            int64
 ```
 
 Observe os campos cujo o tipo são `object`:
@@ -439,7 +453,7 @@ Temos apenas dois tipos possíveis para sexo: Masculino e Feminino. Esta é uma 
 
 <pre style="font-size: 1.4em !important">
     <code class="python">
- pd.get_dummies(mergedTitanicDS_Merged['Sex'])
+  pd.get_dummies(mergedTitanicDS_Merged['Sex'])
     </code>
 </pre>
 
@@ -457,14 +471,14 @@ Utilizando o **Pandas** vamos realizar a transformação dos dados categóricos 
 
 <pre style="font-size: 1.2em !important">
     <code class="python">
- mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
- 	pd.get_dummies(mergedTitanicDS_Merged['Embarked'])],axis = 1)
+  mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
+  pd.get_dummies(mergedTitanicDS_Merged['Embarked'])],axis = 1)
  
- mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
- 	pd.get_dummies(mergedTitanicDS_Merged['Sex'])],axis = 1)
+  mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
+  pd.get_dummies(mergedTitanicDS_Merged['Sex'])],axis = 1)
  	
- mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
- 	pd.get_dummies(mergedTitanicDS_Merged['Title'])],axis = 1)
+  mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
+  pd.get_dummies(mergedTitanicDS_Merged['Title'])],axis = 1)
     </code>
 </pre>
 
