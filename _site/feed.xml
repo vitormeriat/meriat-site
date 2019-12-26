@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Dec 2019 00:25:21 -0300</pubDate>
-    <lastBuildDate>Fri, 20 Dec 2019 00:25:21 -0300</lastBuildDate>
+    <pubDate>Thu, 26 Dec 2019 14:43:08 -0300</pubDate>
+    <lastBuildDate>Thu, 26 Dec 2019 14:43:08 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -446,9 +446,10 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
   &lt;li&gt;&lt;strong&gt;Computer&lt;/strong&gt;: I DON’T UNDERSTAND WHICH PYRAMID YOU MEAN.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Person&lt;/strong&gt;: FIND A BLOCK WHICH IS TALLER THAN THE ONE YOU ARE HOLDING AND PUT IT INTO THE BOX.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Computer&lt;/strong&gt;: BY “IT”, I ASSUME YOU MEAN THE BLOCK WHICH IS TALLER THAN THE ONE I AM HOLDING.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Computer&lt;/strong&gt;: OK. (does it)
-Tudo isso foi de certa forma possível devido a participação dos linguistas que começaram a desenvolver diversos estudos e projetos de cunho computacional, o que nos leva ao próximo ponto.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Computer&lt;/strong&gt;: OK. (does it)&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Tudo isso foi de certa forma possível devido a participação dos linguistas que começaram a desenvolver diversos estudos e projetos de cunho computacional, o que nos leva ao próximo ponto.&lt;/p&gt;
 
 &lt;div class=&quot;especial-box yellow-box&quot;&gt;
   &lt;p&gt;Embora se relacione a nomenclatura do &lt;b&gt;SHRDLU&lt;/b&gt; com a clássica disposição das letras no Linotype, segundo o autor, sua escolha foi baseada mais em relação ao famoso conto SYFY de &lt;b&gt;Frederic Brown&lt;/b&gt; escrito em 1942 chamado &lt;b&gt;ETAOIN SHRDLU&lt;/b&gt;. Esse conto fala sobre uma máquina Linotype que adquiri inteligência e tenta dominar o mundo (acho que já vi isso em algum lugar). A máquina ficou super inteligente por conseguir aprender tudo o que lhe era digitado. Sabendo disso, nosso herói salva a humanidade transcrevendo todos so livros sobre budismo existentes. Sendo assim o computador se convence da futilidade absoluta de todo esse esforço, alcança o Nirvana e assim a humanidade é salva. Sim, SYFY, Filosofia, Teologia e ação em 1942 ;)
@@ -660,13 +661,6 @@ Natural Language”, MIT AI Technical Report 235, February 1971&lt;/li&gt;
 .nlp-cl-comparation i { font-size: 4.4rem; color: #40B36; margin-bottom: 1em; }
 .nlp-cl-comparation span { margin: 10px 0; color: #212121; transition: all .3s ease-in-out; }
 .nlp-cl-comparation p { color: #999; padding: 0 10px; line-height: 1.3; }
-
-.table-fill { background: white; margin-bottom: 3em; margin-top: 3em; border-collapse: collapse; padding:15px; box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); }
-.table-fill th { color:#FFF; background:#1b1e24; padding:24px; text-align:left; vertical-align:middle; }
-.table-fill tr { border: 5px solid #C1C3D1; }
-.table-fill td { border: 5px solid #C1C3D1; padding:1em; text-align:center; vertical-align:middle; border-right: 1px solid #C1C3D1; }
-.text-color { background: #DBDBE0; }
-.table-fill tr:hover td { background:#4E5066; color:#FFFFFF; }
 
 .container-warning { background-color: #dcbc14; color: #382d2d; padding: 30px 40px 5px; margin-bottom: 2em; margin-top: 2em; }
 .container-warning-image { margin: 0 30px 30px 0; float: left; font-size: 4em; }
@@ -1545,10 +1539,8 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 
 &lt;p&gt;Quem já trabalhou com este tipo de treinamento, provavelmente pode cair na mesma cilada, já que geralmente temos grandes quantidades de imagens para este tipo de treino.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
-É importante ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.
-&lt;/p&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;É importante ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Sendo assim resolvi mudar minha estratégia: Dividir minhas imagens em grupos de 300, já que estou falando de 3 tipos de veículos que quero identificar:&lt;/p&gt;
@@ -1781,10 +1773,8 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Note que aqui temos a classificação que foi realizada para cada imagem. Você pode deletar uma ou todas as imagens, como também realizar um novo treino com essas imagens sendo adicionadas ao dataset original. Isso pode ou não melhorar a precisão do nosso modelo.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
-Este artigo está fortemente baseado na utilização do portal. Lembre-se que podemos fazer da &lt;b&gt;ingestão&lt;/b&gt; ao &lt;b&gt;treino&lt;/b&gt; via código.
-&lt;/p&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;Este artigo está fortemente baseado na utilização do portal. Lembre-se que podemos fazer da &lt;b&gt;ingestão&lt;/b&gt; ao &lt;b&gt;treino&lt;/b&gt; via código.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h4 id=&quot;gerando-novos-modelos&quot;&gt;Gerando novos modelos&lt;/h4&gt;
@@ -1808,9 +1798,6 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
 &lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/custom-vision-postman.png&quot; /&gt;
 &lt;/div&gt;
-
-&lt;pre&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;A imagem utilizada segue abaixo. Você pode acessar a imagem no seguinte link: &lt;a href=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg&quot;&gt;car-train&lt;/a&gt;. Essa foi uma imagem retirada da internet, você pode passar um link qualquer para realizar seu teste.&lt;/p&gt;
 
@@ -1911,15 +1898,21 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;p&gt;Este serviço já está disponível para teste, basta apenas você se inscrever &lt;a href=&quot;https://www.aka.ms/PresentationTranslator&quot;&gt;neste formulário&lt;/a&gt; para ter a oportunidade de avaliar.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/ppt-translator.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/ppt-translator.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;h4 id=&quot;cortana-speaker&quot;&gt;Cortana speaker&lt;/h4&gt;
 
-&lt;p align=&quot;center&quot; style=&quot;background-color: black;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/cortana.png&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #000;&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/cortana.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Em relação a Cortana o que vimos neste Build é sobre adoção. Foi anunciado oficialmente o uso da Cortana como assistente para o controle por voz do &lt;a href=&quot;http://www.harmankardon.com/invoke.html&quot;&gt;Invoke&lt;/a&gt;, que até então iria utilizar o Alexa da Amazon. Este produto será lançado no quarto trimestre nos EUA, e por hora não tem nenhum detalhe em relação ao preço.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Também tivemos o anúncio da parceria fechada com a HP para a construção do seu &lt;strong&gt;smart speaker&lt;/strong&gt; utilizando a Cortana.&lt;/p&gt;
 
@@ -1929,7 +1922,9 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;p&gt;Firmando o compromisso da Microsoft com essas ações em AI, tivemos também o anúncio da nova categoria para o &lt;a href=&quot;https://mvp.microsoft.com/&quot;&gt;programa MVP&lt;/a&gt;, a categoria de AI.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Como podemos ver acima essa área envolve do aprendizado de máquinas ao serviços cognitivos, ou seja, AI em toda a sua Glória ;)&lt;/p&gt;
 
@@ -2015,14 +2010,14 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;p&gt;Ao falar Machine Lerning falamos em estática, e para ambos existe um elemento fundamental (você já deve ter notado na descrição acima): Os &lt;strong&gt;&lt;u&gt;dados&lt;/u&gt;&lt;/strong&gt;. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Uma variável é como uma pergunta que pode ter várias respostas possíveis.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;Uma variável é como uma pergunta que pode ter várias respostas possíveis.&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Neste sentido vamos observar a tabela abaixo, que servirá de base para expressar os conceitos básicos que pretendo apresentar neste post:&lt;/p&gt;
 
-&lt;table class=&quot;table-fill&quot;&gt;
-  &lt;tbody&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;table class=&quot;table-fill&quot; style=&quot;font-size: 1.2em;&quot;&gt;
     &lt;tr&gt;
       &lt;th&gt;Nome&lt;/th&gt;
       &lt;th&gt;Idade&lt;/th&gt;
@@ -2047,8 +2042,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
       &lt;td&gt;Guimarães Rosa&lt;/td&gt;
       &lt;td&gt;59&lt;/td&gt;
     &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
 
 &lt;!-- &lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt; --&gt;
 
@@ -2072,7 +2067,9 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;p&gt;Podemos diferenciar variáveis pelo tipo de dado. Em estatística consideramos dois tipos de variáveis: &lt;strong&gt;Númericas&lt;/strong&gt; e &lt;strong&gt;Categóricas&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Variáveis podem ser classificadas da seguinte forma:&lt;/p&gt;
 
@@ -2091,9 +2088,9 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;As distinções são menos rígidas do que a descrição acima nos apresenta.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;As distinções são menos rígidas do que a descrição acima nos apresenta.&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Sendo assim, podemos definir que se o resultado a pergunta for numérica &lt;u&gt;(&quot;Qual a sua idade?&quot;)&lt;/u&gt;, então temos uma variável numérica. Se a reposta não pode ser representada de forma númerica &lt;u&gt;(&quot;Qual a raça do seu cachorro?&quot;)&lt;/u&gt;, então temos uma variável categórica.&lt;/p&gt;
 
@@ -2177,7 +2174,9 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
     
       <item>
         <title>Hello World R - Da base à Regressão Linear</title>
-        <description>&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png&quot; /&gt;&lt;/p&gt;
+        <description>&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Antes de iniciar vale notar que além da minha impressão com a linguagem, documentei aqui alguns pontos que me fizeram atentar ao R, bem como alguns pontos de atenção que devem ser levados em consideração principalmente se você estiver pensando em realizar algum projeto com R.&lt;/p&gt;
 
@@ -2191,11 +2190,15 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 
 &lt;p&gt;R tem crescido como linguagem e na preferência de utilização. Abaixo segue o ranking da &lt;a href=&quot;http://www.ieee.org&quot;&gt;IEEE&lt;/a&gt; de 2016 para “Top Programming Languages”.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/14/spectrum-ieee.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/14/spectrum-ieee.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Se tomarmos como o &lt;a href=&quot;https://www.kaggle.com&quot;&gt;Kaggle&lt;/a&gt; como referência, vemos que a maioria dos competidores preferem usar R para a criação dos modelos.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/14/kaggle-tools.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/14/kaggle-tools.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;hr /&gt;
 
@@ -2339,8 +2342,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 
 &lt;p&gt;Vamos entender como chegar neste resultado. Com base nos quadro abaixo fica mais simples compreender:&lt;/p&gt;
 
-&lt;table class=&quot;table-fill&quot;&gt;
-  &lt;tbody&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;table class=&quot;table-fill&quot; style=&quot;font-size: 1.4em&quot;&gt;
     &lt;tr&gt;
       &lt;th&gt;NA&lt;/th&gt;
       &lt;th&gt;yellow&lt;/th&gt;
@@ -2355,8 +2358,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
       &lt;td&gt;0.04159&lt;/td&gt;
       &lt;td&gt;0.45200&lt;/td&gt;
     &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
 
 &lt;!-- &lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt; --&gt;
 
@@ -2449,7 +2452,9 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
     
       <item>
         <title>Kaggle Competition - Titanic: Machine Learning from Disaster</title>
-        <description>&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+        <description>&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;O &lt;strong&gt;Projeto Titanic&lt;/strong&gt; é uma competição de &lt;strong&gt;Data Science&lt;/strong&gt; promovida pelo &lt;a href=&quot;kaggle.com&quot;&gt;Kaggle.com&lt;/a&gt;. O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic.&lt;/p&gt;
 
@@ -2492,9 +2497,11 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;p&gt;Para quem assiste os &lt;a href=&quot;https://www.youtube.com/watch?v=JVgkvaDHmto&quot;&gt;Mythbusters&lt;/a&gt;, sabe que em um de seus programas o assunto do Titanic foi mais do explorado. Não como iremos fazer aqui, já que o foco era provar que era possível Jack e Rose terem sobrevivido utilizando a porta flutuante.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Nosso foco entretanto, é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+  &lt;p&gt;
+  Nosso foco entretanto, é medir a chance real de sobrevivência dos passageiros a bordo do Titanic em 14 de abril de 1912.
+  &lt;/p&gt;
+&lt;/div&gt;
 
 &lt;p&gt;A história do Titanic é muito conhecida, tendo originado diversos livros, filmes, HQs e afins. É válido lembrar que a história narrada de forma célebre por James Cameron em seu filme de 1997, ilustra perfeitamente o motivo deste desafio. Vamos começar com uma breve perspectiva sobre o tema: Em Abril de 1912 o Titanic zarpou rumo a New York com &lt;code&gt;2224&lt;/code&gt; passageiros, dos quais estima-se que apenas &lt;code&gt;710&lt;/code&gt; tenham sobrevivido.&lt;/p&gt;
 
@@ -2510,9 +2517,11 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;p&gt;A lista de sobreviventes e não sobreviventes foi transformada em dois datasets, &lt;strong&gt;train.csv&lt;/strong&gt; e &lt;strong&gt;test.csv&lt;/strong&gt;. Existe apenas uma diferença entre os dois arquivos, a lista de status de sobrevivência que está presente apenas nos dados de &lt;strong&gt;treino&lt;/strong&gt;. Nos dados de teste este valor precisa ser deduzido.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Todos os aprendizados começam com uma experiência e são um processo contínuo. Raramente tem um ponto final. Todos os aprendizados são apenas uma aproximação.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+  &lt;p&gt;
+  Todos os aprendizados começam com uma experiência e são um processo contínuo. Raramente tem um ponto final. Todos os aprendizados são apenas uma aproximação.
+  &lt;/p&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Geralmente trabalhamos um experimento utilizando dois conjuntos de dados. Um de treino e um para o teste, tipicamente dividido em 80% ou 70% para treino e e restante para o teste.&lt;/p&gt;
 
@@ -2546,7 +2555,9 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;p&gt;Este é um ótimo ponto de entrada para aprender machine learning com um conjunto de dados pequeno, gerenciável, interessante e com variáveis ​​de fácil compreensão.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;h1 id=&quot;descobrindo-padrões&quot;&gt;Descobrindo padrões&lt;/h1&gt;
 
@@ -2556,8 +2567,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;p&gt;Vamos estipular o sexo dos passageiros e tripulantes. Este é um  dado importante, uma vez que o sexo do passageiro desempenha um papel crucial para determinar a sobrevivência do mesmo. Um simples count revela que temos 891 passageiros dos quais 65% são homens e 35% são mulheres.&lt;/p&gt;
 
-&lt;table class=&quot;table-fill&quot;&gt;
-  &lt;tbody&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;table class=&quot;table-fill&quot;&gt;
     &lt;tr&gt;
       &lt;th&gt;Gender&lt;/th&gt;
       &lt;th&gt;Count of Passengers&lt;/th&gt;
@@ -2573,13 +2584,13 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
       &lt;td&gt;577&lt;/td&gt;
       &lt;td&gt;65%&lt;/td&gt;
     &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Se adicionarmos a taxa de sobrevivência a equação vamos ver que existe um padrão aqui.&lt;/p&gt;
 
-&lt;table class=&quot;table-fill&quot;&gt;
-  &lt;tbody&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;table class=&quot;table-fill&quot;&gt;
     &lt;tr&gt;
       &lt;th&gt;Count of Passengers&lt;/th&gt;
       &lt;th&gt;Survived Status&lt;/th&gt;
@@ -2610,8 +2621,8 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
       &lt;td style=&quot;background: #777777; color: white;&quot;&gt;342&lt;/td&gt;
       &lt;td style=&quot;background: #777777; color: white;&quot;&gt;891&lt;/td&gt;
     &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
 
 &lt;p&gt;O seguinte pode ser observado a partir dos dados acima:&lt;/p&gt;
 
@@ -2629,16 +2640,18 @@ Aparentemente tanto o problema de **single-threaded** como a questão do **data 
 
 &lt;p&gt;Podemos ilustrar este comportamento usando uma árvore de decisão. Cada nó determina o resultado final com base na maioria. Os votos do nó à direita representam o status de sobrevivência, já que a maioria nesta opção sobreviveu. Os votos do à esquerda representam o status de não sobrevivência, uma vez que a maioria não sobreviveu.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/ml-pattern-all.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Este é nosso primeiro padrão. Par facilitar vamos conceituar algumas coisas: O dataset de treino é chamado de &lt;strong&gt;labelled dataset&lt;/strong&gt;, onde a coluna &lt;u&gt;Survived&lt;/u&gt; é chamda de “label” ou &lt;strong&gt;response data&lt;/strong&gt;. Esta abordagem é chamada de aprendizagem supervisionada, onde aprendemos com os dados de treino e aplicamos este aprendizado nos dados de teste. O resultado desta abordagem é binária, portanto estamos aplicando uma técnica de classificação, utilizando duas classes, a saber, &lt;strong&gt;survived&lt;/strong&gt; ou &lt;strong&gt;not survived&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Vamos nos referir ao conjunto de dados progressivamente ao longo deste post, começar a descobrir o conceito de aprendizagem da máquina e suas dimensões variadas. Como você pode observar a partir dos dados, os passageiros e seus atributos compõem os dados do Titanic.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
-Um ponto importante sobre este tutorial: Não estou colocando todo o passo a passo da solução. Aqui não temos os passos para importação de dados e etc. Estou focando na solução técnica para a criação do modelo e resolução do problema. Para ver a solução completa que inclusive enviei para o Kaggle, você deve ver o código que está na sessão entitulada, &lt;u&gt;&lt;b&gt;O repositório&lt;/b&gt;&lt;/u&gt;
-&lt;/p&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+  &lt;p&gt;
+    Um ponto importante sobre este tutorial: Não estou colocando todo o passo a passo da solução. Aqui não temos os passos para importação de dados e etc. Estou focando na solução técnica para a criação do modelo e resolução do problema. Para ver a solução completa que inclusive enviei para o Kaggle, você deve ver o código que está na sessão entitulada, &lt;u&gt;&lt;b&gt;O repositório&lt;/b&gt;&lt;/u&gt;
+  &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;hr style=&quot;margin-bottom: 3em;&quot; /&gt;
@@ -2718,16 +2731,17 @@ Name: Embarked, dtype: int64
 
 &lt;pre style=&quot;font-size: 1em !important&quot;&gt;
     &lt;code class=&quot;python&quot;&gt;
- mergedTitanicDS_Merged.loc[
+  mergedTitanicDS_Merged.loc[
  	mergedTitanicDS_Merged['Fare'].isnull(),'Fare'] = 
  	mergedTitanicDS_Merged[mergedTitanicDS_Merged['Pclass'] == 3]['Fare'].mean()
     &lt;/code&gt;
 &lt;/pre&gt;
 
-&lt;div style=&quot;margin-bottom: 4em; margin-top: 4em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
-&lt;b style=&quot;font-size: 1.8em&quot;&gt;Think outside the box&lt;/b&gt;&lt;br /&gt;Esta é uma fase muito importante. Geralmente você vai se deparar com situações durante o tratamento de dados em que vai parecer impossível realziar um tratamento. Um exemplo disso em nosso projeto é a feature &lt;u&gt;&lt;b&gt;AGE&lt;/b&gt;&lt;/u&gt;
-&lt;/p&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;  
+  &lt;p&gt;
+    &lt;b style=&quot;font-size: 1.6em&quot;&gt;Think outside the box&lt;/b&gt;&lt;br /&gt;
+    Esta é uma fase muito importante. Geralmente você vai se deparar com situações durante o tratamento de dados em que vai parecer impossível realziar um tratamento. Um exemplo disso em nosso projeto é a feature &lt;u&gt;&lt;b&gt;AGE&lt;/b&gt;&lt;/u&gt;
+  &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h4 id=&quot;age&quot;&gt;Age&lt;/h4&gt;
@@ -2764,8 +2778,8 @@ Name: Embarked, dtype: int64
 
 &lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
     &lt;code class=&quot;python&quot;&gt;
- mergedTitanicDS['Title'] = [nameStr[1].strip().split('.')[0] for nameStr in
- mergedTitanicDS['Name'].str.split(',')]
+  mergedTitanicDS['Title'] = [nameStr[1].strip().split('.')[0] for nameStr in
+  mergedTitanicDS['Name'].str.split(',')]
     &lt;/code&gt;
 &lt;/pre&gt;
 
@@ -2773,11 +2787,13 @@ Name: Embarked, dtype: int64
 
 &lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
     &lt;code class=&quot;python&quot;&gt;
- mergedTitanicDS['Title'].value_counts().plot.bar()
+  mergedTitanicDS['Title'].value_counts().plot.bar()
     &lt;/code&gt;
 &lt;/pre&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/feature engineering-title.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/03/18/feature engineering-title.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Sendo assim podemos analizar melhor nossa decisão. Como a grande maioria dos dados são representados pelo título &lt;code&gt;Mr&lt;/code&gt;, e temos 18 títulos diferentes, sendo assim já sabemos de cara que seria um erro ter uma média generalizada.&lt;/p&gt;
 
@@ -2814,8 +2830,8 @@ Name: Embarked, dtype: int64
 
 &lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
     &lt;code class=&quot;python&quot;&gt;
- mergedTitanicDS['IsCabinDataEmpty'] = 0
- mergedTitanicDS.loc[mergedTitanicDS['Cabin'].isnull(),'IsCabinDataEmpty'] = 1
+  mergedTitanicDS['IsCabinDataEmpty'] = 0
+  mergedTitanicDS.loc[mergedTitanicDS['Cabin'].isnull(),'IsCabinDataEmpty'] = 1
     &lt;/code&gt;
 &lt;/pre&gt;
 
@@ -2825,8 +2841,8 @@ Name: Embarked, dtype: int64
 
 &lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
     &lt;code class=&quot;python&quot;&gt;
- mergedTitanicDS_Merged['Surname'] = [nameStr[0].strip() for 
- 	nameStr in mergedTitanicDS_Merged['Name'].str.split(',')]
+  mergedTitanicDS_Merged['Surname'] = [nameStr[0].strip() for 
+  nameStr in mergedTitanicDS_Merged['Name'].str.split(',')]
     &lt;/code&gt;
 &lt;/pre&gt;
 
@@ -2840,8 +2856,8 @@ Name: Embarked, dtype: int64
 
 &lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
     &lt;code class=&quot;python&quot;&gt;
- mergedTitanicDS_Merged['FamilySize'] = 
- 	mergedTitanicDS_Merged['SibSp'] + mergedTitanicDS_Merged['Parch'] + 1
+  mergedTitanicDS_Merged['FamilySize'] = 
+  mergedTitanicDS_Merged['SibSp'] + mergedTitanicDS_Merged['Parch'] + 1
     &lt;/code&gt;
 &lt;/pre&gt;
 
@@ -2851,29 +2867,29 @@ Name: Embarked, dtype: int64
 
 &lt;pre style=&quot;font-size: 1.4em !important&quot;&gt;
     &lt;code class=&quot;python&quot;&gt;
- mergedTitanicDS_Merged.dtypes
+  mergedTitanicDS_Merged.dtypes
     &lt;/code&gt;
 &lt;/pre&gt;
 
 &lt;p&gt;O resultado será o seguinte:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;PassengerId           int64
-Pclass                int64
-Name                 object
-Sex                  object
-Age                 float64
-SibSp                 int64
-Parch                 int64
-Ticket               object
-Fare                float64
-Cabin                object
-Embarked             object
-Survived              int64
-IsCabinDataEmpty      int64
-Title                object
-Mean_Age            float64
-Surname              object
-FamilySize            int64
+&lt;pre&gt;&lt;code&gt;  PassengerId           int64
+  Pclass                int64
+  Name                 object
+  Sex                  object
+  Age                 float64
+  SibSp                 int64
+  Parch                 int64
+  Ticket               object
+  Fare                float64
+  Cabin                object
+  Embarked             object
+  Survived              int64
+  IsCabinDataEmpty      int64
+  Title                object
+  Mean_Age            float64
+  Surname              object
+  FamilySize            int64
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Observe os campos cujo o tipo são &lt;code&gt;object&lt;/code&gt;:&lt;/p&gt;
@@ -2901,7 +2917,7 @@ FamilySize            int64
 
 &lt;pre style=&quot;font-size: 1.4em !important&quot;&gt;
     &lt;code class=&quot;python&quot;&gt;
- pd.get_dummies(mergedTitanicDS_Merged['Sex'])
+  pd.get_dummies(mergedTitanicDS_Merged['Sex'])
     &lt;/code&gt;
 &lt;/pre&gt;
 
@@ -2917,16 +2933,16 @@ FamilySize            int64
 
 &lt;p&gt;Utilizando o &lt;strong&gt;Pandas&lt;/strong&gt; vamos realizar a transformação dos dados categóricos em tipos que possam ser expressos de forma númerica. Logo após fazemos o merge das novas informações em nosso &lt;strong&gt;DataFrame&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;pre style=&quot;font-size: 1.2em !important&quot;&gt;
+&lt;pre style=&quot;font-size: 1.2em&quot;&gt;
     &lt;code class=&quot;python&quot;&gt;
- mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
- 	pd.get_dummies(mergedTitanicDS_Merged['Embarked'])],axis = 1)
+  mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
+  pd.get_dummies(mergedTitanicDS_Merged['Embarked'])],axis = 1)
  
- mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
- 	pd.get_dummies(mergedTitanicDS_Merged['Sex'])],axis = 1)
+  mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
+  pd.get_dummies(mergedTitanicDS_Merged['Sex'])],axis = 1)
  	
- mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
- 	pd.get_dummies(mergedTitanicDS_Merged['Title'])],axis = 1)
+  mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
+  pd.get_dummies(mergedTitanicDS_Merged['Title'])],axis = 1)
     &lt;/code&gt;
 &lt;/pre&gt;
 
@@ -2978,88 +2994,104 @@ FamilySize            int64
       </item>
     
       <item>
-        <title>Apresentando o Meriat Machine Learning Notes</title>
-        <description>&lt;p&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;http://blob.vitormeriat.com.br/images/2017/02/15/capa.jpg&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+        <title>Machine Learning e sua literatura clássica</title>
+        <description>&lt;p&gt;A listagem a seguir pode ser categorizada como, &lt;strong&gt;Popular Science Machine Learning Books&lt;/strong&gt; ou &lt;strong&gt;Beginner Machine Learning Books&lt;/strong&gt;. É possível ainda encontrar vários livros desta listagem em categorias como &lt;strong&gt;Introductory Machine Learning Books&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;No último ano tive a oportunidade de trabalhar em projetos envolvendo IoT e Machine Learning. No processo entre aplicação, estudos e desenvolvimento, acabei separando algum material e exemplos que me ajudaram a inicar nesta carreira, bem como no processo de aprendizagem.&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg&quot; /&gt;
+&lt;/div&gt;
 
-&lt;p&gt;O Meriat Machine Learning Notes nada mais é que um compendio destes estudos que resolvi compartilhar no github utilizando o Jupyter Notebook.&lt;/p&gt;
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;Minha opção pelo &lt;strong&gt;Jupyter Notebook&lt;/strong&gt;, dentre tantos motivos, se dá pelo fato de conseguir de forma simples documentar e visualizar todo o código e anotações de forma simples. Vale dizer que o código que estou utilizando pode ser facilmente utilizado em outra IDE, conforme sua preferência.&lt;/p&gt;
+&lt;h3 id=&quot;machine-learning-books-selection&quot;&gt;Machine Learning Books Selection&lt;/h3&gt;
 
-&lt;p&gt;Algumas implementações são reprodução de exercícios dos quais eu irei apontar o material base.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0465065708&quot;&gt;The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1119145678&quot;&gt;Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0143125087&quot;&gt;The Signal and the Noise: Why So Many Predictions Fail–but Some Don’t&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/039334777X&quot;&gt;Naked Statistics: Stripping the Dread from the Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0307275175&quot;&gt;The Drunkard’s Walk: How Randomness Rules Our Lives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1449361323&quot;&gt;Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/111866146X&quot;&gt;Data Smart: Using Data Science to Transform Information into Insight&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0128042915&quot;&gt;Data Mining, Fourth Edition: Practical Machine Learning Tools and Techniques&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1449358659&quot;&gt;Doing Data Science: Straight Talk from the Frontline&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/B007A0BNP4&quot;&gt;Machine Learning for Hackers: Case Studies and Algorithms to Get You Started&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1617290181&quot;&gt;Machine Learning in Action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0596529325&quot;&gt;Programming Collective Intelligence: Building Smart Web 2.0 Applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1461471370&quot;&gt;An Introduction to Statistical Learning: with Applications in R (Springer Texts in Statistics)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1461468485&quot;&gt;Applied Predictive Modeling&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0387848576&quot;&gt;The Elements of Statistical Learning: Data Mining, Inference, and Prediction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0387310738&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0262018020&quot;&gt;Machine Learning: A Probabilistic Perspective&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/B00YDJC98K&quot;&gt;Learning From Data by Yaser S. Abu-Mostafa, Malik Magdon-Ismail, Hsuan-Tien Lin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0070428077&quot;&gt;Machine Learning 1st Edition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/1107422221&quot;&gt;Machine Learning: The Art and Science of Algorithms that Make Sense of Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/026201825X&quot;&gt;Foundations of Machine Learning (Adaptive Computation and Machine Learning series)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/dp/0596529325&quot;&gt;Programming Collective Intelligence: Building Smart Web 2.0 Applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1118675029&quot;&gt;Time Series Analysis: Forecasting and Control&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0997847913&quot;&gt;Practical Time Series Forecasting with R: A Hands-On Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/3319298526&quot;&gt;Introduction to Time Series and Forecasting&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0987507109&quot;&gt;Forecasting: principles and practice&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;O material ainda está em formação, visto que ainda tenho um longo caminho a percorrer. É possível que futuramente eu altere o repositório, já que alguns estudos podem gerar um repositório separado.&lt;/p&gt;
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;Por hora vou concentrando meus esforços por aqui ;)&lt;/p&gt;
+&lt;h3 id=&quot;com-foco-em-python&quot;&gt;Com foco em Python&lt;/h3&gt;
 
-&lt;h3 id=&quot;github&quot;&gt;Github&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1783555130&quot;&gt;Python Machine Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/149190142X&quot;&gt;Data Science from Scratch: First Principles with Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491962291&quot;&gt;Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques for Building Intelligent Systems&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1449369413&quot;&gt;Introduction to Machine Learning with Python: A Guide for Data Scientists&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B01N4FUDSE&quot;&gt;Vital Introduction to Machine Learning with Python: Best Practices to Improve and Optimize Machine Learning Systems and Algorithms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1118961749&quot;&gt;Machine Learning in Python: Essential Techniques for Predictive Analysis&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491912057&quot;&gt;Python Data Science Handbook: Essential Tools for Working with Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1633430030&quot;&gt;Introducing Data Science: Big Data, Machine Learning, and more, using Python tools&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617291927&quot;&gt;Real-World Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Study Notes on machine learning, data analysis, algorithms and best practices using Python and Jupyter Notebook.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/vitormeriat/meriat-ml-notes&quot;&gt;Meriat Machine Learning Note&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;com-foco-em-r&quot;&gt;Com foco em R&lt;/h3&gt;
 
-&lt;div style=&quot;margin-bottom: 8em;&quot;&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491910399&quot;&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1784393908&quot;&gt;Machine Learning with R&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1783982047&quot;&gt;Machine Learning With R Cookbook – 110 Recipes for Building Powerful Predictive Models with R&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1784390844&quot;&gt;R Machine Learning By Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/178398774X&quot;&gt;R Machine Learning Essentials&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/178398452X&quot;&gt;Mastering Machine Learning with R&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1461471370&quot;&gt;An Introduction to Statistical Learning: with Applications in R&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617291560&quot;&gt;Practical Data Science with R&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1461468485&quot;&gt;Applied Predictive Modeling&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0123969638&quot;&gt;R and Data Mining: Examples and Case Studies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;meriat-machine-learning-note&quot;&gt;Meriat Machine Learning Note&lt;/h3&gt;
+&lt;p&gt;Aqui vale fazer uma consideração: Temos a seguir uma listagem separada sobre Deep Learning. Isso se deve por essa ser uma técnica de Machine Learning que diz respeito a oportunidade de aprendizagem profunda com o uso de redes neurais.&lt;/p&gt;
 
-&lt;p&gt;A estrutura atual está descrita logo abaixo. Vou me esforçar para manter atualizada.&lt;/p&gt;
+&lt;p&gt;Em momento oportuno devo vou compartilhar aqui mais informações sobre Deep Learning, como meus estudos, códigos e referências. Por hora, segue a bibliografia melhor avaliada sobre o tema.&lt;/p&gt;
 
-&lt;h5 id=&quot;file-handling&quot;&gt;File Handling&lt;/h5&gt;
-&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
-&lt;h5 id=&quot;sms-spam-filtering&quot;&gt;SMS Spam Filtering&lt;/h5&gt;
-&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;deep-learning&quot;&gt;Deep Learning&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0262035618&quot;&gt;Deep Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491914254&quot;&gt;Deep Learning: A Practitioner’s Approach&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491925612&quot;&gt;Fundamentals of Deep Learning: Designing Next-Generation Machine Intelligence Algorithms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1491978511&quot;&gt;Learning TensorFlow: A guide to building deep learning systems&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1617293873&quot;&gt;Machine Learning with TensorFlow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1786462168&quot;&gt;TensorFlow Machine Learning Cookbook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1786468573&quot;&gt;Getting Started with TensorFlow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1939902452&quot;&gt;TensorFlow for Machine Intelligence: A Hands-On Introduction to Learning Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h5 id=&quot;song-recommender&quot;&gt;Song Recommender&lt;/h5&gt;
-&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
+&lt;div style=&quot;margin-bottom: 5em;&quot;&gt;&lt;/div&gt;
 
-&lt;h5 id=&quot;basic-math&quot;&gt;Basic Math&lt;/h5&gt;
-&lt;p&gt;Basic math notions with python&lt;/p&gt;
-
-&lt;h5 id=&quot;basic-statistic-in-python&quot;&gt;Basic Statistic in Python&lt;/h5&gt;
-&lt;p&gt;Basic math statistics with python&lt;/p&gt;
-
-&lt;h5 id=&quot;basic-natural-language-processing&quot;&gt;Basic Natural Language Processing&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;Tokenization&lt;/li&gt;
-  &lt;li&gt;Stopword Removal&lt;/li&gt;
-  &lt;li&gt;N-Grams&lt;/li&gt;
-  &lt;li&gt;WordSense Disambiguation&lt;/li&gt;
-  &lt;li&gt;Parts-of-Speech&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;em&gt;This module uses NLTK for the text processing processes. It is important to note that you will need to download nltk_data.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;simple-probability-model&quot;&gt;Simple Probability Model&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;Common Ground&lt;/li&gt;
-  &lt;li&gt;Limit Theorems&lt;/li&gt;
-  &lt;li&gt;Derived Distributions
-    &lt;ul&gt;
-      &lt;li&gt;Covariance&lt;/li&gt;
-      &lt;li&gt;Correlation&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;imbalanced-learning-with-gaussians&quot;&gt;Imbalanced Learning with Gaussians&lt;/h5&gt;
-&lt;p&gt;&lt;code&gt;TBA&lt;/code&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;neural-network&quot;&gt;Neural Network&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;Adaline&lt;/li&gt;
-  &lt;li&gt;Perceptron&lt;/li&gt;
-  &lt;li&gt;Simple Neural Network&lt;/li&gt;
-  &lt;li&gt;Train a Linear Classifier&lt;/li&gt;
-  &lt;li&gt;A simple implementation of convolutional neural networks&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;é-isso-ai-valeu-pessoal-&quot;&gt;É isso ai… valeu pessoal ;)&lt;/h3&gt;
 </description>
-        <pubDate>Wed, 15 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/15/apresentando-meriat-ml-notes/</guid>
+        <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/07/literatura-classica-machine-learning/</guid>
         
         
         <category>IA</category>
@@ -3069,10 +3101,6 @@ FamilySize            int64
         <category>Data Science</category>
         
         <category>Deep Learning</category>
-        
-        <category>Jupyter Notebook</category>
-        
-        <category>Python</category>
         
       </item>
     

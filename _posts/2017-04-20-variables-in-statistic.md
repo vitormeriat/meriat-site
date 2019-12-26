@@ -27,12 +27,14 @@ Resumindo, a essência da Ciência é a observação e seu objetivo básico é a
 
 Ao falar Machine Lerning falamos em estática, e para ambos existe um elemento fundamental (você já deve ter notado na descrição acima): Os **<u>dados</u>**. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.
 
-> Uma variável é como uma pergunta que pode ter várias respostas possíveis.
+<div class="especial-box yellow-box">
+<p>Uma variável é como uma pergunta que pode ter várias respostas possíveis.</p>
+</div>
 
 Neste sentido vamos observar a tabela abaixo, que servirá de base para expressar os conceitos básicos que pretendo apresentar neste post:
 
-<table class="table-fill">
-  <tbody>
+<div align="center">
+  <table class="table-fill" style="font-size: 1.2em;">
     <tr>
       <th>Nome</th>
       <th>Idade</th>
@@ -57,8 +59,9 @@ Neste sentido vamos observar a tabela abaixo, que servirá de base para expressa
       <td>Guimarães Rosa</td>
       <td>59</td>
     </tr>
-  </tbody>
-</table>
+  </table>
+</div>
+
 
 <!-- <div style="margin-bottom: 3em;"></div> -->
 
@@ -80,7 +83,9 @@ Seguindo essa linha vamos ver que uma variável depende da pergunta que está se
 
 Podemos diferenciar variáveis pelo tipo de dado. Em estatística consideramos dois tipos de variáveis: **Númericas** e **Categóricas**.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png">
+</div>
 
 Variáveis podem ser classificadas da seguinte forma:
 
@@ -92,7 +97,9 @@ Variáveis podem ser classificadas da seguinte forma:
     * __Variáveis nominais__: não existe ordenação dentre as categorias. Exemplos: sexo, cor dos olhos, fumante/não fumante, doente/sadio.
     * __Variáveis ordinais__: existe uma ordenação entre as categorias. Exemplos: escolaridade (1o, 2o, 3o graus), estágio da doença (inicial, intermediário, terminal), mês de observação (janeiro, fevereiro,..., dezembro).
 
-> As distinções são menos rígidas do que a descrição acima nos apresenta.
+<div class="especial-box yellow-box">
+<p>As distinções são menos rígidas do que a descrição acima nos apresenta.</p>
+</div>
 
 Sendo assim, podemos definir que se o resultado a pergunta for numérica <u>("Qual a sua idade?")</u>, então temos uma variável numérica. Se a reposta não pode ser representada de forma númerica <u>("Qual a raça do seu cachorro?")</u>, então temos uma variável categórica.
 

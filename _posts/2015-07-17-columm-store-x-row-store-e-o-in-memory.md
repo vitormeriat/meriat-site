@@ -14,17 +14,23 @@ Com a crescente necessidade de análise de grandes volumes de dados no menor tem
 
 ## Row Store
 
-<p align="center"><img src="http://blob.vitormeriat.com.br/images/2015/07/Untitled-1.png" class="absolute-bg" /></p>
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2015/07/Untitled-1.png">
+</div>
 
 ## Column Store
 
-<p align="center"><img src="http://blob.vitormeriat.com.br/images/2015/07/Untitled-5.png" class="absolute-bg" /></p>
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2015/07/Untitled-5.png">
+</div>
 
 Ao invés de cada registro da tabela ficar armazenado em uma linha, o registro passa a ser armazenado em colunas separadas. Essa forma de armazenamento tem algumas vantagens, como exemplo a capacidade de compressão dos dados, se formos analisar a compressão de um banco onde os registros são armazenados em linha, encontraremos em uma mesma linha diferentes tipos (domínios) o que torna o processo mais complicado, já no banco orientado a colunas, cada coluna irá conter o mesmo tipo (domínio) de dado. De acordo com algumas pesquisas o nível de compressão alcançado  em bancos orientados a colunas chega a ser de **60%** a **70%**  mais eficiente que nos bancos orientados a linhas.
 
 Para o caso de armazenamento dos dados em colunas é necessário que haja um relacionamento entre as colunas para identificar que a mesma pertence a um registro específico, para resolver esse problema a estratégia de incluir um ID virtual é normalmente adotada, nesse caso a representação do armazenamento em colunas ficaria como a imagem abaixo:
 
-<p align="center"><img src="http://blob.vitormeriat.com.br/images/2015/07/Untitled-8.png" class="absolute-bg" /></p>
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2015/07/Untitled-8.png">
+</div>
 
 Vamos a seguinte query:
 

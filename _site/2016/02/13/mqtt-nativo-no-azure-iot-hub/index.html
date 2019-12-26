@@ -127,38 +127,38 @@
 <h2 id="criar-um-device">Criar um device</h2>
 
 <pre style="font-size: 16pt !important">
-<code class="javascript">
+  <code class="javascript">
     var clientFromConnectionString =
     require('azure-iot-device-mqtt').clientFromConnectionString;
     var Message = require('azure-iot-device').Message;
     var connectionString = '[IoT Hub device connection string]';
     var client = clientFromConnectionString(connectionString);
-    </code>
+  </code>
 </pre>
 
 <h2 id="enviando-dados">Enviando dados</h2>
 
 <pre style="font-size: 16pt !important">
-<code class="javascript">
-    var msg = new Message('some data from my device');
-    client.sendEvent(message, function (err) {
-  if (err) console.log(err.toString());
-    });
-    </code>
+  <code class="javascript">
+  var msg = new Message('some data from my device');
+  client.sendEvent(message, function (err) {
+    if (err) console.log(err.toString());
+  });
+  </code>
 </pre>
 
 <h2 id="recebendo-dados">Recebendo dados</h2>
+
 <pre style="font-size: 16pt !important">
-    <code class="javascript">
-    client.receive(function (err, msg) {
+  <code class="javascript">
+  client.receive(function (err, msg) {
   if (err) console.error(err);
-  else console.log(msg);
-    });
-    </code>
+    else console.log(msg);
+  });
+  </code>
 </pre>
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<hr style="margin-bottom: 5em; margin-top: 5em;" />
 
 <h2 id="referências">Referências</h2>
 

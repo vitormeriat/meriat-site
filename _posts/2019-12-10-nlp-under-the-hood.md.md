@@ -401,6 +401,7 @@ A descrição do trabalho foi explorada no artigo `Procedures as a representatio
 * **Person**: FIND A BLOCK WHICH IS TALLER THAN THE ONE YOU ARE HOLDING AND PUT IT INTO THE BOX.
 * **Computer**: BY "IT", I ASSUME YOU MEAN THE BLOCK WHICH IS TALLER THAN THE ONE I AM HOLDING.
 * **Computer**: OK. (does it)
+
 Tudo isso foi de certa forma possível devido a participação dos linguistas que começaram a desenvolver diversos estudos e projetos de cunho computacional, o que nos leva ao próximo ponto.
 
 <div class="especial-box yellow-box">
@@ -607,13 +608,6 @@ Natural Language", MIT AI Technical Report 235, February 1971
 .nlp-cl-comparation i { font-size: 4.4rem; color: #40B36; margin-bottom: 1em; }
 .nlp-cl-comparation span { margin: 10px 0; color: #212121; transition: all .3s ease-in-out; }
 .nlp-cl-comparation p { color: #999; padding: 0 10px; line-height: 1.3; }
-
-.table-fill { background: white; margin-bottom: 3em; margin-top: 3em; border-collapse: collapse; padding:15px; box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); }
-.table-fill th { color:#FFF; background:#1b1e24; padding:24px; text-align:left; vertical-align:middle; }
-.table-fill tr { border: 5px solid #C1C3D1; }
-.table-fill td { border: 5px solid #C1C3D1; padding:1em; text-align:center; vertical-align:middle; border-right: 1px solid #C1C3D1; }
-.text-color { background: #DBDBE0; }
-.table-fill tr:hover td { background:#4E5066; color:#FFFFFF; }
 
 .container-warning { background-color: #dcbc14; color: #382d2d; padding: 30px 40px 5px; margin-bottom: 2em; margin-top: 2em; }
 .container-warning-image { margin: 0 30px 30px 0; float: left; font-size: 4em; }
