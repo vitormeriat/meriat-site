@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Dec 2019 00:25:21 -0300</pubDate>
-    <lastBuildDate>Fri, 20 Dec 2019 00:25:21 -0300</lastBuildDate>
+    <pubDate>Thu, 26 Dec 2019 11:00:51 -0300</pubDate>
+    <lastBuildDate>Thu, 26 Dec 2019 11:00:51 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -1911,15 +1911,21 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;p&gt;Este serviço já está disponível para teste, basta apenas você se inscrever &lt;a href=&quot;https://www.aka.ms/PresentationTranslator&quot;&gt;neste formulário&lt;/a&gt; para ter a oportunidade de avaliar.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/ppt-translator.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/ppt-translator.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;h4 id=&quot;cortana-speaker&quot;&gt;Cortana speaker&lt;/h4&gt;
 
-&lt;p align=&quot;center&quot; style=&quot;background-color: black;&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/cortana.png&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/cortana.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Em relação a Cortana o que vimos neste Build é sobre adoção. Foi anunciado oficialmente o uso da Cortana como assistente para o controle por voz do &lt;a href=&quot;http://www.harmankardon.com/invoke.html&quot;&gt;Invoke&lt;/a&gt;, que até então iria utilizar o Alexa da Amazon. Este produto será lançado no quarto trimestre nos EUA, e por hora não tem nenhum detalhe em relação ao preço.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Também tivemos o anúncio da parceria fechada com a HP para a construção do seu &lt;strong&gt;smart speaker&lt;/strong&gt; utilizando a Cortana.&lt;/p&gt;
 
@@ -1929,7 +1935,9 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;p&gt;Firmando o compromisso da Microsoft com essas ações em AI, tivemos também o anúncio da nova categoria para o &lt;a href=&quot;https://mvp.microsoft.com/&quot;&gt;programa MVP&lt;/a&gt;, a categoria de AI.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png&quot; class=&quot;absolute-bg&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Como podemos ver acima essa área envolve do aprendizado de máquinas ao serviços cognitivos, ou seja, AI em toda a sua Glória ;)&lt;/p&gt;
 

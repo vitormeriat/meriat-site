@@ -62,15 +62,21 @@ Certamente outro recurso que chamou atenção: A tradução em "em tempo real" d
 
 Este serviço já está disponível para teste, basta apenas você se inscrever [neste formulário](https://www.aka.ms/PresentationTranslator) para ter a oportunidade de avaliar.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/ppt-translator.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/ppt-translator.png">
+</div>
 
 #### Cortana speaker
 
-<p align="center" style="background-color: black;"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/cortana.png" width="200"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/cortana.png">
+</div>
 
 Em relação a Cortana o que vimos neste Build é sobre adoção. Foi anunciado oficialmente o uso da Cortana como assistente para o controle por voz do [Invoke](http://www.harmankardon.com/invoke.html), que até então iria utilizar o Alexa da Amazon. Este produto será lançado no quarto trimestre nos EUA, e por hora não tem nenhum detalhe em relação ao preço.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/invoke.png">
+</div>
 
 Também tivemos o anúncio da parceria fechada com a HP para a construção do seu **smart speaker** utilizando a Cortana.
 
@@ -80,7 +86,9 @@ Apesar de a Microsoft já ter ficado bem próxima de Apple e Google no desenvolv
 
 Firmando o compromisso da Microsoft com essas ações em AI, tivemos também o anúncio da nova categoria para o [programa MVP](https://mvp.microsoft.com/), a categoria de AI.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png" class="absolute-bg"></p>
+<div align="center" class="image-content">
+<img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/award-mvp-ai.png">
+</div>
 
 Como podemos ver acima essa área envolve do aprendizado de máquinas ao serviços cognitivos, ou seja, AI em toda a sua Glória ;)
 
