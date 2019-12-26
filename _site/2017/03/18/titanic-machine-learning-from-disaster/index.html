@@ -114,7 +114,9 @@
     </div>
     <div class="fh5co-spacer fh5co-spacer-md"></div>
     <section class="section-padding post" itemprop="articleBody">
-      <p><img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg" class="absolute-bg" /></p>
+      <div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg" />
+</div>
 
 <p>O <strong>Projeto Titanic</strong> é uma competição de <strong>Data Science</strong> promovida pelo <a href="kaggle.com">Kaggle.com</a>. O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic.</p>
 
@@ -593,7 +595,7 @@ Name: Embarked, dtype: int64
 
 <p>Utilizando o <strong>Pandas</strong> vamos realizar a transformação dos dados categóricos em tipos que possam ser expressos de forma númerica. Logo após fazemos o merge das novas informações em nosso <strong>DataFrame</strong>.</p>
 
-<pre style="font-size: 1.2em !important">
+<pre style="font-size: 1.2em">
     <code class="python">
   mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
   pd.get_dummies(mergedTitanicDS_Merged['Embarked'])],axis = 1)
@@ -659,7 +661,7 @@ Name: Embarked, dtype: int64
 
   <div class="PageNavigation">
     
-    <a class="prev" href="/2017/02/15/apresentando-meriat-ml-notes/"><i class="fa fa-lg fa-arrow-left"></i> Apresentando o Meriat Machine Learning Notes</a>
+    <a class="prev" href="/2017/02/07/literatura-classica-machine-learning/"><i class="fa fa-lg fa-arrow-left"></i> Machine Learning e sua literatura clássica</a>
     
     
     <a class="next" href="/2017/04/14/hello-world-r/">Hello World R - Da base à Regressão Linear <i class="fa fa-lg fa-arrow-right"></i></a>

@@ -3,11 +3,12 @@ layout: post
 title: MQTT nativo no Azure IoT Hub
 date: 2016-02-13
 categories:
-    - Azure IoT Suite
-    - IoT
-    - Microsoft Azure
-    - MQTT
+  - Azure IoT Suite
+  - IoT
+  - Microsoft Azure
+  - MQTT
 ---
+
 Estou utilizando o Microsoft Azure em projetos de IoT antes mesmo do lançamento do <a href="https://azure.microsoft.com/pt-br/services/iot-hub/" target="_blank"><strong>Azure IoT Hub</strong></a>. Desde então tenho aguardado um notícia que veio enfim, no dia 8 de fevereiro de 2016: O suporte nativo ao protocolo <a href="http://mqtt.org/" target="_blank"><strong>MQTT</strong></a> sem a necessidade do protocol gateway.
 
 Embora essa fosse um solicitação recorrente, há de se parabenizar o esforço do time do <strong>Azure IoT</strong>. Pouco tempo após o <strong>MQTT</strong> ter sido aprovado como padrão <strong>ISO/IEC</strong> (a saber: <a title="http://www.iso.org/iso/catalogue_detail.htm?csnumber=69466" href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=69466" target="_blank">#ISO20922</a>), somos agraciados com a notícia do suporte nativo no <strong>Azure IoT Hub</strong>.
@@ -21,38 +22,38 @@ Utilizar o Azure IoT Hub com MQTT é tão simples quanto o esperado. Não há se
 ## Criar um device
 
 <pre style="font-size: 16pt !important">
-<code class="javascript">
+  <code class="javascript">
     var clientFromConnectionString =
     require('azure-iot-device-mqtt').clientFromConnectionString;
     var Message = require('azure-iot-device').Message;
     var connectionString = '[IoT Hub device connection string]';
     var client = clientFromConnectionString(connectionString);
-    </code>
+  </code>
 </pre>
 
 ## Enviando dados
 
 <pre style="font-size: 16pt !important">
-<code class="javascript">
-    var msg = new Message('some data from my device');
-    client.sendEvent(message, function (err) {
-  if (err) console.log(err.toString());
-    });
-    </code>
+  <code class="javascript">
+  var msg = new Message('some data from my device');
+  client.sendEvent(message, function (err) {
+    if (err) console.log(err.toString());
+  });
+  </code>
 </pre>
 
 ## Recebendo dados
+
 <pre style="font-size: 16pt !important">
-    <code class="javascript">
-    client.receive(function (err, msg) {
+  <code class="javascript">
+  client.receive(function (err, msg) {
   if (err) console.error(err);
-  else console.log(msg);
-    });
-    </code>
+    else console.log(msg);
+  });
+  </code>
 </pre>
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<hr style="margin-bottom: 5em; margin-top: 5em;" />
 
 ## Referências
 

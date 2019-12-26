@@ -401,6 +401,7 @@ A descrição do trabalho foi explorada no artigo `Procedures as a representatio
 * **Person**: FIND A BLOCK WHICH IS TALLER THAN THE ONE YOU ARE HOLDING AND PUT IT INTO THE BOX.
 * **Computer**: BY "IT", I ASSUME YOU MEAN THE BLOCK WHICH IS TALLER THAN THE ONE I AM HOLDING.
 * **Computer**: OK. (does it)
+
 Tudo isso foi de certa forma possível devido a participação dos linguistas que começaram a desenvolver diversos estudos e projetos de cunho computacional, o que nos leva ao próximo ponto.
 
 <div class="especial-box yellow-box">

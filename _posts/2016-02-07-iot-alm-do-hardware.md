@@ -9,7 +9,9 @@ image: "http://blob.vitormeriat.com.br/images/2016/02/capa-iot-alem-do-hardware.
 
 Tenho participado de muitos eventos e falado bastante sobre <strong>IoT</strong> no último ano. Uma pergunta recorrente que me é feita é sobre qual placa comprar para iniciar no mundo do IoT. OK... mas porque você tem de comprar uma placa para iniciar no mundo do IoT?
 
-<img title="capa-iot-alem-do-hardware" src="http://blob.vitormeriat.com.br/images/2016/02/capa-iot-alem-do-hardware.png" width="100%" />
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2016/02/capa-iot-alem-do-hardware.png">
+</div>
 
 A ideia aqui é ver o que circunda o mundo do IoT, do que ele é formado e como podemos entrar nesse mundo mesmo sem o conhecimento imediato de hardware.
 
@@ -17,14 +19,17 @@ IoT é um acrônimo para <strong>Internet of Things</strong>, ou internet das co
 
 Quando falamos do hardware, na grande maioria dos casos estamos falando da parte “burra” da brincadeira. O que as coisas fazem? Em sua maioria apenas transmitem dados, ou seja, onde está a revolução por traz do IoT.
 
-
 ## Histórico
+
 Já temos coisas conectadas na internet há muito tempo. O chamados sistemas embarcados já são um mercado consolidado a anos. Isso não é uma novidade em termos tecnológicos. Temos citações mais antigas, porém o modelo atual do chamamos IoT foi discutido amplamente a partir de 1982 com a famosa <strong>Coke Machine</strong> da Carnegie Mellon University. Uma máquina de Coca-Cola conectada na internet que era capaz de informar o inventário e se as bebidas estavam geladas. Agora começa um ponto importante, a máquina não está apenas conectada, existe uma relevância e propósito.</p>
 
 ## Qual a base do IoT?
+
 Quando falamos de IoT, temos um fluxo base para se delimitar o que é o que não é internet das coisas.
 
-<img title="fluxo-iot" alt="fluxo-iot" src="http://blob.vitormeriat.com.br/images/2016/02/fluxo-iot.png" width="100%" />
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2016/02/fluxo-iot.png">
+</div>
 
 Parece sutil, mas essa é a diferença que tem movimentado o mercado de forma tão agressiva nos últimos anos. Notem que o fluxo é composto por Coisas que estão conectadas, gerando dados e inteligência. É isso que entendemos como IoT, essa é a verdadeira revolução, a inteligência vinda com o IoT.
 
@@ -38,8 +43,8 @@ Nesse caso os dados são enviados, tratados e usados para uma tomada de decisão
 
 Esse é um caso claro de como o mais importante no processo não foi o hardware, e sim a inteligência nos dados.
 
-
 ## O que há além?
+
 A Internet das Coisas está transformando o mundo como nós o conhecemos, criando uma rede gigante e global de dispositivos e máquinas conectados, gerando e consumindo dados.
 
 Toda a tecnologia de envio, consumo, análise e tratamento de dados é sua grande maioria fora do hardware. Logo, existe um mundo de tecnologias que devemos conhecer se queremos realmente entrar no mercado de IoT.

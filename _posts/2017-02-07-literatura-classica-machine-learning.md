@@ -13,7 +13,9 @@ image: "http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg"
 
 A listagem a seguir pode ser categorizada como, **Popular Science Machine Learning Books** ou **Beginner Machine Learning Books**. É possível ainda encontrar vários livros desta listagem em categorias como **Introductory Machine Learning Books**.
 
-<img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg" class="absolute-bg">
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2017/02/07/capa.jpg">
+</div>
 
 <div style="margin-bottom: 5em;"></div>
 

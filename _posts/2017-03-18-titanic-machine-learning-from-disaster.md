@@ -13,7 +13,9 @@ description: "Getting Started Prediction Competition. Start here! Predict surviv
 image: "http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg"
 ---
 
-<img style="width: 100%;" src="http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg" class="absolute-bg">
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2017/03/18/capa.jpg">
+</div>
 
 O **Projeto Titanic** é uma competição de **Data Science** promovida pelo [Kaggle.com](kaggle.com). O objetivo deste desafio é deduzir os índices de sobrevivência dos passageiros do Titanic.
 
@@ -469,7 +471,7 @@ FIG title
 
 Utilizando o **Pandas** vamos realizar a transformação dos dados categóricos em tipos que possam ser expressos de forma númerica. Logo após fazemos o merge das novas informações em nosso **DataFrame**.
 
-<pre style="font-size: 1.2em !important">
+<pre style="font-size: 1.2em">
     <code class="python">
   mergedTitanicDS_Merged = pd.concat([mergedTitanicDS_Merged,
   pd.get_dummies(mergedTitanicDS_Merged['Embarked'])],axis = 1)

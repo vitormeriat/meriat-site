@@ -114,11 +114,14 @@
     </div>
     <div class="fh5co-spacer fh5co-spacer-md"></div>
     <section class="section-padding post" itemprop="articleBody">
-      <p style="background-color: #000000" align="center"><a href="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg"><img title="spark-capa" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" alt="spark-capa" src="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg" width="819" height="518" /></a></p>
+      <div align="center" class="image-content" style="background-color: #000">
+  <img src="http://blob.vitormeriat.com.br/images/2016/01/spark-capa.jpg" />
+</div>
 
 <p>Não é enganação, vou fazer o famoso exemplo do <strong>WordCount</strong>, porém vou tentar ir além do que apenas mostrar o código ou dizer Spark torna esta tarefa mais simples que utilizar Hadoop/MapReduce. A exemplo do post <a href="http://www.vitormeriat.com.br/spark-resilient-distributed-datasets/">Spark – Resilient Distributed Datasets</a>, vou focar na base e estrutura básica da ferramenta para se conseguir o desempenho esperado ao utilizar o Spark.</p>
 
 <h2 id="spark-e-o-mapreduce">Spark e o MapReduce</h2>
+
 <p>Resumindo toda a brincadeira, o Spark estende o <a href="https://en.wikipedia.org/wiki/MapReduce">MapReduce</a> de modo a evitar mover os dados durante o processamento se utilizando de recursos como armazenamento em memória e processamento em tempo real (ou quase isso). Só a utilização destas artimanhas já é capaz de proporcionar um desempenho várias vezes melhor que outras tecnologias de Big Data.</p>
 
 <p>Os resultados intermediários são retidos em memória ao invéz de serem escritos em disco. Isso é traduzido em desempenho, principalmente quando se precisa processar o mesmo conjuntos de dados muitas vezes.</p>
@@ -128,25 +131,33 @@
 <p>Praticamente como tudo na vida de TI, cabe ao técnico analizar os dados e casos de uso para avaliar os requisitos de memória necessários. Só assim será possível conseguir o desempenho esperado ao se utilizar o Spark.</p>
 
 <h2 id="spark-framework-ecosystem">Spark Framework Ecosystem</h2>
+
 <p>Fora a API do Spark, existem bibliotecas adicionais que fazem parte do seu ecossistema e fornecem capacidades adicionais para as áreas de análise de Big Data e aprendizado de máquina.</p>
 
-<p><a href="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png"><img title="spark-stack" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: none; padding-top: 0px; padding-left: 0px; margin-left: auto; display: block; padding-right: 0px; border-top-width: 0px; margin-right: auto" alt="spark-stack" src="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png" width="633" height="298" /></a></p>
-<div style="height: 50px;"></div>
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2016/01/spark-stack.png" />
+</div>
 
 <h4 id="spark-sql"><a href="https://spark.apache.org/sql/">Spark SQL</a></h4>
+
 <p>Fornece a capacidade de expor os conjuntos de dados Spark através de uma API JDBC. Isso permite executar consultas no estilo SQL sobre esses dados usando ferramentas tradicionais de BI e de visualização. Além disso, também permite que os usuários usem ETL para extrair seus dados em diferentes formatos (como JSON, Parquet, ou um banco de dados), transformá-los e expô-los para consultas ad-hoc;</p>
 
 <h4 id="spark-streaming"><a href="https://spark.apache.org/streaming/">Spark Streaming</a></h4>
+
 <p>Pode ser usado para processar dados de streaming em tempo real baseado na computação de microbatch. Para isso é utilizado o DStream que é basicamente uma série de RDD para processar os dados em tempo real;</p>
 
 <h4 id="mllib"><a href="https://spark.apache.org/mllib/">MLlib</a></h4>
+
 <p>É a biblioteca de aprendizado de máquina do Spark, que consiste em algoritmos de aprendizagem, incluindo a classificação, regressão, clustering, filtragem colaborativa e redução de dimensionalidade;</p>
 
 <h4 id="graphx"><a href="https://spark.apache.org/graphx/">GraphX</a></h4>
+
 <p>É uma nova API do Spark para grafos e computação paralela. Em alto nível, o GraphX ​​estende o Spark RDD para grafos. Para apoiar a computação de grafos, o GraphX ​​expõe um conjunto de operadores fundamentais (por exemplo, subgrafos e vértices adjacentes), bem como uma variante optimizada do Pregel. Além disso, o GraphX ​​inclui uma crescente coleção de algoritmos para simplificar tarefas de análise de grafos.</p>
-<div style="height: 50px;"></div>
+
+<div style="margin-bottom: 5em;"></div>
 
 <p>O Spark é escrito na linguagem <a href="http://www.scala-lang.org/">Scala</a>, executa em uma máquina virtual Java e atualmente suporta as seguintes linguagens:</p>
+
 <ul>
   <li><a href="http://www.scala-lang.org/">Scala</a></li>
   <li>Java</li>
@@ -154,19 +165,23 @@
   <li><a href="http://clojure.org/">Clojure</a></li>
   <li><a href="https://www.r-project.org/">R</a></li>
 </ul>
-<div style="height: 50px;"></div>
+
+<div style="margin-bottom: 5em;"></div>
 
 <h2 id="instalação">Instalação</h2>
+
 <p>Basicamente você pode testar o Spark utlizando uma instalação em sua máquina para execução stand-alone, utilizar alguma máquina virtual (VM) pronta, como as disponibilizadas pela Cloudera, Hortonworks, MapR ou ainda, utilizando o Spark como serviço em Cloud Computing no Azure ou AWS.</p>
 
 <p>Basicamente para este exemplo vamos apens executar o mesmo localmente. O processo é simples, basta instalar o <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">JDK</a> e realizar o download da última versão do <a href="https://spark.apache.org/downloads.html">Spark</a>.</p>
 
 <p>O importante aqui é que após o download, você deve descompactar a pasta do Spark em alguma pasta, de preferência no C: da sua máquina. No meu caso eu estou usando o seguinte caminho: <strong>C:bigdataspark</strong></p>
-<div style="height: 50px;"></div>
+
+<div style="margin-bottom: 5em;"></div>
 
 <h2 id="execução">Execução</h2>
+
 <p>Para verificar a instalação o Spark, navegue até o diretório e execute o shell do Spark utilizando os comandos a seguir. Isto é para Windows. Se estiver usando Linux ou Mac OS, edite os comandos para trabalhar em seu sistema operacional.</p>
-<pre style="font-size: 1.6em !important">
+<pre style="font-size: 1.6em">
     <code class="javascript">
     cd c:bigdataspark
     binspark-shell
@@ -175,13 +190,19 @@
 
 <p>Se o Spark foi instalado corretamente, será apresentado as seguintes mensagens na saída no console.</p>
 
-<p><img title="spark-tela" alt="spark-tela" src="http://blob.vitormeriat.com.br/images/2016/01/spark-tela.jpg" width="100%" /></p>
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2016/01/spark-tela.jpg" />
+</div>
 
 <p>Para validar, rode o seguinte comando:</p>
-<pre style="font-size: 1.6em !important"><code class="javascript">sc.version</code></pre>
+
+<pre style="font-size: 1.6em !important">
+    <code class="javascript">sc.version</code>
+</pre>
 
 <p>Ele deve voltar algo como String = 1.4.1, ou seja, a versão do Spark que estamos usando.</p>
-<div style="height: 50px;"></div>
+
+<div style="margin-bottom: 5em;"></div>
 
 <h2 id="mão-na-massa">Mão na massa</h2>
 
@@ -224,10 +245,13 @@
   <li>Transformations: São as operações que criam um novo <strong>Dataset</strong> a partir de um existente, no nosso caso temos três transformações (<strong>flatMap</strong>, <strong>map</strong> e <strong>reduceByKey</strong>)</li>
   <li>Actions: São as operações que retornam um valor processado, no nosso caso seria o <strong>collect</strong> que retorna todos os elementos do <strong>Dataset</strong> em formato de array.</li>
 </ul>
-<div style="height: 50px;"></div>
+
+<div style="margin-bottom: 5em;"></div>
 
 <h3 id="passo-1">Passo 1:</h3>
+
 <p>Nesse momento serão identificadas as necessidades de processamento, no nosso exemplo teremos a seguinte sequência:</p>
+
 <ul>
   <li>HadoopRDD</li>
   <li>flatMap()</li>
@@ -235,49 +259,61 @@
   <li>reduceByKey()</li>
   <li>collect()</li>
 </ul>
-<div style="height: 20px;"></div>
+
+<div style="margin-bottom: 5em;"></div>
 
 <h3 id="passo-2">Passo 2:</h3>
+
 <p>Nesse momento serão identificados os estágios (<strong>Stages</strong>) para o processamento, os <strong>Stages</strong> são definidos de acordo com a necessidade de movimentação de dados na execução das <strong>transformations</strong> e <strong>actions</strong>, no nosso exemplo teremos 2 estágios, o primeiro contemplando a criação do RDD, <strong>flatMap</strong>, <strong>map</strong> e <strong>reduceByKey</strong> e um outro estágio exclusivamente para o <strong>collect</strong>.</p>
-<div style="height: 20px;"></div>
+
+<div style="margin-bottom: 5em;"></div>
 
 <h3 id="passo-3">Passo 3:</h3>
+
 <p>Agora que temos os estágio definidos é o momento de dividir os estágios em <strong>Tasks</strong> e submetê-las para processamento, uma <strong>Task</strong> é a combinação dos dados e computação sobre esses dados (<strong>transformations</strong> e <strong>actions</strong>) a idéia é que somente após todas as <strong><em>Tasks</em></strong> estejam concluídas o próximo estágio seja iniciado.</p>
-<div style="height: 20px;"></div>
+
+<div style="margin-bottom: 5em;"></div>
 
 <p>Agora que já sabemos o básico dos detalhes internos do <strong>Spark</strong> vamos executar o programa que contará as palavras.</p>
 
 <pre style="font-size: 1.6em !important">
-<code class="javascript">
-val counts = full.flatMap(line =&gt; line.split(" "))
- .map(word =&gt; (word, 1))
- .reduceByKey(_+_)
- .collect()
-</code></pre>
+    <code class="javascript">
+    val counts = full.flatMap(line =&gt; line.split(" "))
+        .map(word =&gt; (word, 1))
+        .reduceByKey(_+_)
+        .collect()
+    </code>
+</pre>
 
 <p>Após a execução o <strong>collect</strong> nos retorna parte do resultado como podemos ver abaixo:</p>
 
-<p><img title="spark-result" alt="spark-result" src="http://blob.vitormeriat.com.br/images/2016/01/spark-result.jpg" width="100%" /></p>
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2016/01/spark-result.jpg" />
+</div>
 
 <p>O retorno nos mostra uma estrutura de mapa contendo como <strong>Key</strong> a palavra cujo o valor é a quantidade de vezes que a palavra aparece no arquivo.</p>
 
 <p>A imagem abaixo mostra a UI do <strong>Spark</strong> exibindo os dados de execução dos 2 estágios:</p>
 
-<p><img title="spark-ui" alt="spark-ui" src="http://blob.vitormeriat.com.br/images/2016/01/spark-ui.jpg" width="100%" /></p>
+<div align="center" class="image-content">
+  <img src="http://blob.vitormeriat.com.br/images/2016/01/spark-ui.jpg" />
+</div>
 
 <p>Ao invés de utilizar o <strong>collect</strong> poderíamos utilizar o <strong>saveAsTextFile</strong> e teríamos todo o conteúdo em arquivo.</p>
 
-<div style="height: 50px;"></div>
+<div style="margin-bottom: 5em;"></div>
 
 <h2 id="referências">Referências</h2>
+
 <ul>
   <li>Download: <a href="http://spark.incubator.apache.org/downloads.html"> http://spark.incubator.apache.org/downloads.html</a></li>
   <li>Quick Start:<a href="http://spark.incubator.apache.org/docs/latest/quick-start.html"> http://spark.incubator.apache.org/docs/latest/quick-start.html</a></li>
   <li>DataSet: <a title="https://data.cityofchicago.org/Public-Safety/Crimes-2015/vwwp-7yr9" href="https://data.cityofchicago.org/Public-Safety/Crimes-2015/vwwp-7yr9">https://data.cityofchicago.org/Public-Safety/Crimes-2015/vwwp-7yr9</a></li>
-  <li><a title="http://spark.apache.org/examples.html" href="http://spark.apache.org/examples.html">http://spark.apache.org/examples.html</a></li>
+  <li>Spark: <a title="http://spark.apache.org/examples.html" href="http://spark.apache.org/examples.html">http://spark.apache.org/examples.html</a></li>
 </ul>
 
 <h2 id="citação">Citação</h2>
+
 <p>Neste post realizei citações ao post do master Isaías que pode ser lido <a href="https://isaiasbarroso.wordpress.com/2014/08/22/wordcount-em-spark/">clicando aqui!</a></p>
 
     </section>
