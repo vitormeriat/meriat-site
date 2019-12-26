@@ -68,7 +68,7 @@ Este serviço já está disponível para teste, basta apenas você se inscrever 
 
 #### Cortana speaker
 
-<div align="center" class="image-content">
+<div align="center" class="image-content" style="background-color: #000;">
 <img src="http://meriatblob.blob.core.windows.net/images/2017/05/17/cortana.png">
 </div>
 

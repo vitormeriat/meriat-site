@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 26 Dec 2019 11:00:51 -0300</pubDate>
-    <lastBuildDate>Thu, 26 Dec 2019 11:00:51 -0300</lastBuildDate>
+    <pubDate>Thu, 26 Dec 2019 11:23:26 -0300</pubDate>
+    <lastBuildDate>Thu, 26 Dec 2019 11:23:26 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -660,13 +660,6 @@ Natural Language”, MIT AI Technical Report 235, February 1971&lt;/li&gt;
 .nlp-cl-comparation i { font-size: 4.4rem; color: #40B36; margin-bottom: 1em; }
 .nlp-cl-comparation span { margin: 10px 0; color: #212121; transition: all .3s ease-in-out; }
 .nlp-cl-comparation p { color: #999; padding: 0 10px; line-height: 1.3; }
-
-.table-fill { background: white; margin-bottom: 3em; margin-top: 3em; border-collapse: collapse; padding:15px; box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); }
-.table-fill th { color:#FFF; background:#1b1e24; padding:24px; text-align:left; vertical-align:middle; }
-.table-fill tr { border: 5px solid #C1C3D1; }
-.table-fill td { border: 5px solid #C1C3D1; padding:1em; text-align:center; vertical-align:middle; border-right: 1px solid #C1C3D1; }
-.text-color { background: #DBDBE0; }
-.table-fill tr:hover td { background:#4E5066; color:#FFFFFF; }
 
 .container-warning { background-color: #dcbc14; color: #382d2d; padding: 30px 40px 5px; margin-bottom: 2em; margin-top: 2em; }
 .container-warning-image { margin: 0 30px 30px 0; float: left; font-size: 4em; }
@@ -1545,10 +1538,8 @@ O termo &lt;b&gt;&quot;sintagma&quot;&lt;/b&gt; designa uma sequência hierarqui
 
 &lt;p&gt;Quem já trabalhou com este tipo de treinamento, provavelmente pode cair na mesma cilada, já que geralmente temos grandes quantidades de imagens para este tipo de treino.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
-É importante ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.
-&lt;/p&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;É importante ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Sendo assim resolvi mudar minha estratégia: Dividir minhas imagens em grupos de 300, já que estou falando de 3 tipos de veículos que quero identificar:&lt;/p&gt;
@@ -1781,10 +1772,8 @@ Quantidade de arquivos no conjunto de teste: 75
 
 &lt;p&gt;Note que aqui temos a classificação que foi realizada para cada imagem. Você pode deletar uma ou todas as imagens, como também realizar um novo treino com essas imagens sendo adicionadas ao dataset original. Isso pode ou não melhorar a precisão do nosso modelo.&lt;/p&gt;
 
-&lt;div style=&quot;margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d&quot;&gt;
-&lt;p style=&quot;padding: 1.6em; font-family: courier;&quot;&gt;
-Este artigo está fortemente baseado na utilização do portal. Lembre-se que podemos fazer da &lt;b&gt;ingestão&lt;/b&gt; ao &lt;b&gt;treino&lt;/b&gt; via código.
-&lt;/p&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;Este artigo está fortemente baseado na utilização do portal. Lembre-se que podemos fazer da &lt;b&gt;ingestão&lt;/b&gt; ao &lt;b&gt;treino&lt;/b&gt; via código.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h4 id=&quot;gerando-novos-modelos&quot;&gt;Gerando novos modelos&lt;/h4&gt;
@@ -1808,9 +1797,6 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
 &lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/custom-vision-postman.png&quot; /&gt;
 &lt;/div&gt;
-
-&lt;pre&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;A imagem utilizada segue abaixo. Você pode acessar a imagem no seguinte link: &lt;a href=&quot;http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg&quot;&gt;car-train&lt;/a&gt;. Essa foi uma imagem retirada da internet, você pode passar um link qualquer para realizar seu teste.&lt;/p&gt;
 
@@ -1917,7 +1903,7 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;h4 id=&quot;cortana-speaker&quot;&gt;Cortana speaker&lt;/h4&gt;
 
-&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #000;&quot;&gt;
 &lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/05/17/cortana.png&quot; /&gt;
 &lt;/div&gt;
 
@@ -2023,14 +2009,14 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;p&gt;Ao falar Machine Lerning falamos em estática, e para ambos existe um elemento fundamental (você já deve ter notado na descrição acima): Os &lt;strong&gt;&lt;u&gt;dados&lt;/u&gt;&lt;/strong&gt;. Quando olhamos para os dados precisamos notar o que há de mais especial, e geralmente conseguimos isso identificando nossas variáveis. Descobrir o porquê de uma determinada variação é um bom início para qualquer problema estatístico.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Uma variável é como uma pergunta que pode ter várias respostas possíveis.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;Uma variável é como uma pergunta que pode ter várias respostas possíveis.&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Neste sentido vamos observar a tabela abaixo, que servirá de base para expressar os conceitos básicos que pretendo apresentar neste post:&lt;/p&gt;
 
-&lt;table class=&quot;table-fill&quot;&gt;
-  &lt;tbody&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;table class=&quot;table-fill&quot; style=&quot;font-size: 1.2em;&quot;&gt;
     &lt;tr&gt;
       &lt;th&gt;Nome&lt;/th&gt;
       &lt;th&gt;Idade&lt;/th&gt;
@@ -2055,8 +2041,8 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
       &lt;td&gt;Guimarães Rosa&lt;/td&gt;
       &lt;td&gt;59&lt;/td&gt;
     &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
 
 &lt;!-- &lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt; --&gt;
 
@@ -2080,7 +2066,9 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
 
 &lt;p&gt;Podemos diferenciar variáveis pelo tipo de dado. Em estatística consideramos dois tipos de variáveis: &lt;strong&gt;Númericas&lt;/strong&gt; e &lt;strong&gt;Categóricas&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/20/variables.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Variáveis podem ser classificadas da seguinte forma:&lt;/p&gt;
 
@@ -2099,9 +2087,9 @@ Este artigo está fortemente baseado na utilização do portal. Lembre-se que po
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;As distinções são menos rígidas do que a descrição acima nos apresenta.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;especial-box yellow-box&quot;&gt;
+&lt;p&gt;As distinções são menos rígidas do que a descrição acima nos apresenta.&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Sendo assim, podemos definir que se o resultado a pergunta for numérica &lt;u&gt;(&quot;Qual a sua idade?&quot;)&lt;/u&gt;, então temos uma variável numérica. Se a reposta não pode ser representada de forma númerica &lt;u&gt;(&quot;Qual a raça do seu cachorro?&quot;)&lt;/u&gt;, então temos uma variável categórica.&lt;/p&gt;
 

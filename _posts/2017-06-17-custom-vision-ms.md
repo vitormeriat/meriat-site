@@ -84,10 +84,8 @@ Aqui eu tenho minha primeira surpresa: Existe uma limitação na quantidade de a
 
 Quem já trabalhou com este tipo de treinamento, provavelmente pode cair na mesma cilada, já que geralmente temos grandes quantidades de imagens para este tipo de treino.
 
-<div style="margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
-É importante ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.
-</p>
+<div class="especial-box yellow-box">
+<p>É importante ler todas as limitações e cotas de utilização de um serviço antes de usá-lo. Por exemplo, temos limitação de 1000 imagens, imagens somente até 4MB, somente JPG, PNG e BMP e etc.</p>
 </div>
 
 Sendo assim resolvi mudar minha estratégia: Dividir minhas imagens em grupos de 300, já que estou falando de 3 tipos de veículos que quero identificar:
@@ -319,10 +317,8 @@ Outra coisa interessante é que ao realizar estes testes, você pode acessar a g
 
 Note que aqui temos a classificação que foi realizada para cada imagem. Você pode deletar uma ou todas as imagens, como também realizar um novo treino com essas imagens sendo adicionadas ao dataset original. Isso pode ou não melhorar a precisão do nosso modelo.
 
-<div style="margin-bottom: 5em; margin-top: 4em; background-color: #dcbc14; color: #382d2d">
-<p style="padding: 1.6em; font-family: courier;">
-Este artigo está fortemente baseado na utilização do portal. Lembre-se que podemos fazer da <b>ingestão</b> ao <b>treino</b> via código.
-</p>
+<div class="especial-box yellow-box">
+<p>Este artigo está fortemente baseado na utilização do portal. Lembre-se que podemos fazer da <b>ingestão</b> ao <b>treino</b> via código.</p>
 </div>
 
 #### Gerando novos modelos
@@ -346,10 +342,6 @@ Em relação ao código é tudo muito simples. Você pode enviar a url ou o bin�
 <div align="center" class="image-content">
 <img src="http://meriatblob.blob.core.windows.net/images/2017/06/07/custom-vision-postman.png">
 </div>
-
-```
-
-```
 
 A imagem utilizada segue abaixo. Você pode acessar a imagem no seguinte link: [car-train](http://meriatblob.blob.core.windows.net/images/2017/06/07/car-train.jpg). Essa foi uma imagem retirada da internet, você pode passar um link qualquer para realizar seu teste.
 
