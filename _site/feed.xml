@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 26 Dec 2019 11:23:26 -0300</pubDate>
-    <lastBuildDate>Thu, 26 Dec 2019 11:23:26 -0300</lastBuildDate>
+    <pubDate>Thu, 26 Dec 2019 11:30:10 -0300</pubDate>
+    <lastBuildDate>Thu, 26 Dec 2019 11:30:10 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -2173,7 +2173,9 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
     
       <item>
         <title>Hello World R - Da base à Regressão Linear</title>
-        <description>&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png&quot; /&gt;&lt;/p&gt;
+        <description>&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Antes de iniciar vale notar que além da minha impressão com a linguagem, documentei aqui alguns pontos que me fizeram atentar ao R, bem como alguns pontos de atenção que devem ser levados em consideração principalmente se você estiver pensando em realizar algum projeto com R.&lt;/p&gt;
 
@@ -2187,11 +2189,15 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 
 &lt;p&gt;R tem crescido como linguagem e na preferência de utilização. Abaixo segue o ranking da &lt;a href=&quot;http://www.ieee.org&quot;&gt;IEEE&lt;/a&gt; de 2016 para “Top Programming Languages”.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/14/spectrum-ieee.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/14/spectrum-ieee.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Se tomarmos como o &lt;a href=&quot;https://www.kaggle.com&quot;&gt;Kaggle&lt;/a&gt; como referência, vemos que a maioria dos competidores preferem usar R para a criação dos modelos.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/14/kaggle-tools.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
+  &lt;img src=&quot;http://meriatblob.blob.core.windows.net/images/2017/04/14/kaggle-tools.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;hr /&gt;
 
@@ -2335,8 +2341,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
 
 &lt;p&gt;Vamos entender como chegar neste resultado. Com base nos quadro abaixo fica mais simples compreender:&lt;/p&gt;
 
-&lt;table class=&quot;table-fill&quot;&gt;
-  &lt;tbody&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;table class=&quot;table-fill&quot; style=&quot;font-size: 1.4em&quot;&gt;
     &lt;tr&gt;
       &lt;th&gt;NA&lt;/th&gt;
       &lt;th&gt;yellow&lt;/th&gt;
@@ -2351,8 +2357,8 @@ Por exemplo, a variável idade, medida em anos completos, é quantitativa (cont�
       &lt;td&gt;0.04159&lt;/td&gt;
       &lt;td&gt;0.45200&lt;/td&gt;
     &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
 
 &lt;!-- &lt;div style=&quot;margin-bottom: 3em;&quot;&gt;&lt;/div&gt; --&gt;
 

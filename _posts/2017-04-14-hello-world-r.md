@@ -9,7 +9,9 @@ description: "Esta é minha primeira impressão utilizando a linguagem R, usada 
 image: "https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png"
 ---
 
-<p align="center"><img src="https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png"></p>
+<div align="center" class="image-content">
+  <img src="https://meriatblob.blob.core.windows.net/images/2017/04/14/capa-logo-r.png">
+</div>
 
 Antes de iniciar vale notar que além da minha impressão com a linguagem, documentei aqui alguns pontos que me fizeram atentar ao R, bem como alguns pontos de atenção que devem ser levados em consideração principalmente se você estiver pensando em realizar algum projeto com R.
 
@@ -23,11 +25,15 @@ Se trata de uma linguagem free (cran.r-project.org), altamente extensível e hoj
 
 R tem crescido como linguagem e na preferência de utilização. Abaixo segue o ranking da [IEEE](http://www.ieee.org) de 2016 para "Top Programming Languages".
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/04/14/spectrum-ieee.png"></p>
+<div align="center" class="image-content">
+  <img src="http://meriatblob.blob.core.windows.net/images/2017/04/14/spectrum-ieee.png">
+</div>
 
 Se tomarmos como o [Kaggle](https://www.kaggle.com) como referência, vemos que a maioria dos competidores preferem usar R para a criação dos modelos.
 
-<p align="center"><img src="http://meriatblob.blob.core.windows.net/images/2017/04/14/kaggle-tools.png"></p>
+<div align="center" class="image-content">
+  <img src="http://meriatblob.blob.core.windows.net/images/2017/04/14/kaggle-tools.png">
+</div>
 
 <hr/>
 
@@ -165,8 +171,8 @@ Para fazer uma previsão usando o modelo, é necessário calcular a soma linear 
 
 Vamos entender como chegar neste resultado. Com base nos quadro abaixo fica mais simples compreender:
 
-<table class="table-fill">
-  <tbody>
+<div align="center">
+  <table class="table-fill" style="font-size: 1.4em">
     <tr>
       <th>NA</th>
       <th>yellow</th>
@@ -181,8 +187,8 @@ Vamos entender como chegar neste resultado. Com base nos quadro abaixo fica mais
       <td>0.04159</td>
       <td>0.45200</td>
     </tr>
-  </tbody>
-</table>
+  </table>
+</div>
 
 <!-- <div style="margin-bottom: 3em;"></div> -->
 
