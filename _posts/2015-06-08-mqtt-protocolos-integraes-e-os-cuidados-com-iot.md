@@ -13,7 +13,9 @@ image: "http://blob.vitormeriat.com.br/images/2015/06/capa1.png"
 
 Em resumo é um protocolo de mensagens de peso leve, que traz a capacidade de comunicação assíncrona em redes restritas, a dispositivos de recursos limitados. Ele se tornou um padrão <a href="https://www.oasis-open.org/" target="_blank">OASIS</a> em 07 de novembro de 2014, em sua versão <strong>3.1.1</strong>.
 
-<p style="text-align: center;" align="justify"><a href="http://blob.vitormeriat.com.br/images/2015/06/capa1.png"><img class="alignnone wp-image-2591 size-full" src="http://blob.vitormeriat.com.br/images/2015/06/capa1.png" alt="capa" width="900" height="470" /></a></p>
+<div align="center" class="image-content" style="background-color: #59B2C2;">
+  <img src="http://blob.vitormeriat.com.br/images/2015/06/capa1.png">
+</div>
 
 Recentemente me perguntaram (<a href="http://vitormeriat.com.br/2014/11/21/mensageria-e-os-protocoloschoose-your-poison/" target="_blank">por conta deste post</a>), sobre qual a necessidade de um protocolo como o MQTT. A verdade é que muito se dá ao desconhecimento do público em relação ao mundo da “<strong>Internet das Coisas</strong>”.
 

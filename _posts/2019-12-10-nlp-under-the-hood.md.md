@@ -12,12 +12,12 @@ tags:
     - deep learning
     - nlp
     - data science
-image: "https://meriatblob.blob.core.windows.net/draft/capa.png"
+image: "https://meriatblob.blob.core.windows.net/images/2019/12/10/capa.png"
 description: Esse trabalho se propõe a trazer uma introdução ao estudo do Processamento de Linguagem Natural, (Natural Language Processing). Minha intenção é olhar para sua base teórica enquanto disciplina. Sendo assim vamos passar por algumas definições e conceitos antes de avançar nas questões práticas. Vamos falar de história, engenharia, linguística, linguagem, compiladores, árvores sintáticas e suas complexidades.
 ---
 
 <div align="center" class="image-content">
-  <img src="https://meriatblob.blob.core.windows.net/draft/capa.png">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/capa.png">
 </div>
 
 # Sumário
@@ -26,7 +26,7 @@ description: Esse trabalho se propõe a trazer uma introdução ao estudo do Pro
 2. Conceituação base
    1. Teoria da comunicação
    2. Linguística básica e nomenclaturas
-   3. Influência e formação da linguagem
+   3. Influência e formação da linguagem 
    4. História
 3. Linguagem Natura e sua Complexidade
    1. Compreensão semântica
@@ -78,7 +78,7 @@ Mesmo após tanta evolução na comunicação falada e escrita, ainda vemos que 
 Quando falamos em teoria da comunicação, em termos básicos temos o papel do emissor, receptor, mensagem, código, contexto e canal. Cada um desses componentes é importante para determinar uma comunicação de sucesso. Se o emissor enviar uma mensagem para um receptor usando um código que não é conhecido pelo mesmo, ou se o contexto for desconhecido pelo receptor, ou se o canal de comunicação for insuficiente, a comunicação pode ser ruidosa e falha. Se tudo isso ainda for certeiro, temos de levar em conta que a mensagem vai ser interpretada por um receptor que vai levar em consideração sua perspectiva de mundo.
 
 <div align="center" class="image-content" style="background-color: #F5F4F0;">
-  <img src="https://meriatblob.blob.core.windows.net/draft/theory_of_communications.jpg">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/theory_of_communications.jpg">
 </div>
 
 1. A fonte (**source**) produz uma mensagem. Uma mensagem pode ser um sinal de fumaça, telégrafo, rádio e etc.
@@ -121,7 +121,7 @@ Com estes itens em mente, podemos prosseguir para nosso estudo visando nos aprof
 ## Influências e formação da linguagem
 
 <div align="center" class="image-content" style="background-color: #BFE6F6;">
-  <img src="https://meriatblob.blob.core.windows.net/draft/lusofonos.jpg">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/lusofonos.jpg">
   <p>ilustração: Guilhere Lira/Mundo Estranho</p>
 </div>
 
@@ -136,7 +136,7 @@ Em Angola, há 11 línguas e diversos dialetos que transformam o português incl
 Por exemplo, aqui no Brasil nós adoramos abusar do tempo verbal gerúndio, muito pouco usado em outros países em questão. Por exemplo, usamos a frase **"estou fazendo isso"** no lugar de **"estou a fazer isso"**. Há também o `gerundismo` (uso desnecessário do gerúndio) como em **"vamos estar averiguando"**.
 
 <div align="center" class="image-content">
-  <img src="https://meriatblob.blob.core.windows.net/draft/same-language.jpg">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/same-language.jpg">
   <p> ilustração: Pilar Hernandez</p>
 </div>
 
@@ -145,7 +145,7 @@ Outro país onde a língua portuguesa sofre diversas alterações com base nas r
 Essas estruturas são fundamentais para um correto entendimento e aplicação dos fundamentos em processamento de linguagem natural.
 
 <div align="center" class="image-content" style="background-color: #fdf0e0; color: black;">
-  <img src="https://meriatblob.blob.core.windows.net/draft/luis-vas-de-camoes.png">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/luis-vas-de-camoes.jpg">
   <span>Luís de Camões é considerado um dos maiores escritores de língua portuguesa e ainda, um dos maiores representantes da literatura mundial.</span>
 </div>
 
@@ -164,7 +164,7 @@ Entre estudiosos latinos, temos como destaque Varrão que, na esteira dos gregos
 Em relação ao período moderno, podemos citar Franz Bopp como um dos principais criadores da gramática comparada. Sua obra publicada em 1816 se intitulava: `Über das Conjugationssystem der Sanskritsprache in Vergleichung mit jenem der griechischen, lateinischen, persischen und germanischen Sprache` **(Sobre o sistema de conjugação do sânscrito em comparação com o do grego, latim, persa e germânico)**. Esse trabalho evidenciou diversas semelhanças entre as línguas em questão.
 
 <div align="center" class="image-content">
-<img src="https://meriatblob.blob.core.windows.net/draft/indo-european-tree.jpeg">
+<img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/indo-european-tree.jpeg">
 <p>ilustração: Minna Sundberg</p>
 </div>
 
@@ -177,7 +177,7 @@ Somente no início do século XX a Linguística ganhou status de estudo científ
 A complexidade envolvida na linguagem natural passa por sua estruturação formal (gramática), até as questões mais subjetivas como interpretação. Adicione a isso o fato que temos diversas linguagens no mundo, todas com estruturas e significâncias diferentes. Se isso ainda não for suficiente, ainda temos toda a problemática envolvendo as questões de engenharia, como por exemplo, processar grandes quantidades de texto.
 
 <div align="center" class="image-content">
-  <img src="https://meriatblob.blob.core.windows.net/draft/linguistics_club.png">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/linguistics_club.png">
   <p>ref: https://www.xkcd.com/1602/</p>
 </div>
 
@@ -202,7 +202,7 @@ Podemos concluir que a função base de uma linguagem é a comunicação, e esta
     <p>Como trabalhar o correto entendimento de um texto em uma máquina baseada na arquitetura de Von Neumman?</p>  
   </article>
   <aside class="aside aside-1">
-	  <img src="https://meriatblob.blob.core.windows.net/draft/von-neumann.png">
+	  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/von-neumann.png">
 	  <p>Von Neumman</p>
   </aside>
 </div>
@@ -340,7 +340,7 @@ Dado sua natureza prática, `NLP` é muito relacionada a questões comerciais em
 Quando falamos de NLP, existe uma correlação com a Linguagem de programação que é pouco explorada. Antes de entrar no aspecto técnico, podemos citar um exemplo emblemático.
 
 <div align="center" class="image-content">
-  <img src="https://meriatblob.blob.core.windows.net/draft/imitation-game.png">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/imitation-game.png">
   <p>ref: Computing Machinery and Intelligence, A. M. Turing</p>
 </div>
 
@@ -360,7 +360,7 @@ Sendo assim programar sistema de computador capaz de passar no Teste de Turing �
 Grande parte do interesse nessa atividade veio da possibilidade de dar ao usuário comum, o poder de interagir com a máquina a fim de realizar tarefas e obter informações sem a necessidade de programação explícita. Isso vai se tornar popular no imaginário mundial, por meio das obras `SyFy` (**Science Fiction**) como o clássico filme de **Kubrick**, `2001: A Space Odyssey`. Esse filme de 1968 em particular, possui diversos diálogos entre homem e máquina. O nível da conversação realizada pelo famoso computador **HAL-9000** é até hoje algo só visto em filme.
 
 <div align="center" class="image-content">
-  <img src="https://meriatblob.blob.core.windows.net/draft/hall-9000.png">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/hall-9000.png">
   <p>ref: 2001: A Space Odyssey. 1968, Stanley Kubrick</p>
 </div>
 
@@ -373,7 +373,7 @@ Em relação ao processamento aplicadas Nas questões práticas, houveram divers
 Um caso clássico é programa `ELIZA` desenvolvido pelo professor **Weizenbaum** do MIT em 1966. Esse programa tinha entre outros, o objetivo fazer com que usuários humanos achassem que estavam conversando com outros seres humanos, e não com uma máquina. Isso te parece familiar?
 
 <div align="center" class="image-content">
-  <img src="https://meriatblob.blob.core.windows.net/draft/eliza.png">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/eliza.png">
 </div>
 
 Sim meus caros, estamos falando do que foi considerado a primeira interface de conversação da computação moderna, em outras palavras, o primeiro bot da era da ciência da computação. Seu objeto primordial era simular uma conversa com um terapeuta, onde o terapeuta (`ELIZA`) conduzia a conversa com perguntas e respostas.
@@ -383,13 +383,13 @@ Seu funcionamento era simples e baseano na extração de tokens/palavras chave d
 Outro exemplo clássico é o `SHRDLU`, que além de um nome **super cool** ainda integra uma entrada de linguagem natural para uma ação em processamento gráfico da máquina. Abaixo é possível ver como se dava a interface com o usuário:
 
 <div align="center" class="image-content" style="background-color: #252525;">
-  <a href="https://meriatblob.blob.core.windows.net/draft/shrdlu.mp4" target="_blank"><img src="https://meriatblob.blob.core.windows.net/draft/shrdlu.jpg"></a>
+  <a href="https://meriatblob.blob.core.windows.net/images/2019/12/10/shrdlu.mp4" target="_blank"><img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/shrdlu.jpg"></a>
 </div>
 
 O `SHRDLU` é considerado um software de inteligência artificial baseado em compreensão de linguagem natural. Foi desenvolvido entre os anos de 1968-1970 também no MIT por Terry Winograd. Seu funcionamento se baseava no usuário humano movendo os objetos da tela por meio de descrições abertas es linguagem natural. O esquema arquitetural utilizado no `SHRDLU` mostra a rápida evolução em relação ao desenvolvimento do processamento de linguagem natural na computação.
 
 <div align="center" class="image-content">
-  <img src="https://meriatblob.blob.core.windows.net/draft/shrdlu-architecture.gif">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/shrdlu-architecture.gif">
 </div>
 
 A descrição do trabalho foi explorada no artigo `Procedures as a representationfor data in a computer program for Understanding Natural Language`. Também foi gravado um vídeo disponibilizado pelo MIT onde é possível observar o programa em ação. Abaixo temos um exemplo da interação homem/máquina do `SHRDLU`.
@@ -416,7 +416,7 @@ Saindo da história para a engenharia, em grande parte o entendimento da estrutu
 Já vimos que a gramática é o conjunto de regras que indicam o uso mais correto de uma língua. No início, a gramática tinha como função apenas estabelecer regras quanto à escrita e à leitura. A palavra gramática é de origem grega vem do radical (`grámma`) que significa "letra".
 
 <div align="center" class="image-content" style="background: antiquewhite;">
-  <img src="https://meriatblob.blob.core.windows.net/draft/noam-chomsky.png">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/noam-chomsky.png">
   <p>Noam Chomsky</p>
 </div>
 
@@ -439,7 +439,7 @@ Como vimos anteriormente, os estudos do que foi chamado `Lingugens Formais` trou
 Por linguagem formal nos referimos a uma abstração das características gerais de uma linguagem de programação, contendo um conjunto de símbolos, regras de formação de sentenças e afins. Entre as linguagens o trabalho de **Chomsky** define uma ordem hierárquica que ficou intitulada como `Hierarquia de Chomsky`.
 
 <div align="center" class="image-content">
-  <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190227115949/Comsky-1.png">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/comsky-1.png">
 </div>
 
 Essa definição de classes tenta delimitar os potenciais modelos de linguagens naturais. Cada linguagem é definida por uma determinada gramática e interpretada por um determinado reconhecedor.
@@ -496,7 +496,7 @@ Tendo isso em mente podemos explorar um pouco sua estruturação. Formalmente, u
 O professor Silvio do Lago Pereira, exemplifica a produção de uma grámatica com a seguinte árvore sintática:
 
 <div align="center" class="image-content">
-  <img src="https://meriatblob.blob.core.windows.net/draft/arvore-sintatica.png">
+  <img src="https://meriatblob.blob.core.windows.net/images/2019/12/10/arvore-sintatica.png">
   <p>Árvore Sintática</p>
 </div>
 

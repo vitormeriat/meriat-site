@@ -5,14 +5,14 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 26 Dec 2019 14:43:08 -0300</pubDate>
-    <lastBuildDate>Thu, 26 Dec 2019 14:43:08 -0300</lastBuildDate>
+    <pubDate>Sun, 29 Dec 2019 23:11:22 -0300</pubDate>
+    <lastBuildDate>Sun, 29 Dec 2019 23:11:22 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
         <title>NLP Under The Hood - An Introduction</title>
         <description>&lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/capa.png&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/capa.png&quot; /&gt;
 &lt;/div&gt;
 
 &lt;h1 id=&quot;sumário&quot;&gt;Sumário&lt;/h1&gt;
@@ -87,7 +87,7 @@
 &lt;p&gt;Quando falamos em teoria da comunicação, em termos básicos temos o papel do emissor, receptor, mensagem, código, contexto e canal. Cada um desses componentes é importante para determinar uma comunicação de sucesso. Se o emissor enviar uma mensagem para um receptor usando um código que não é conhecido pelo mesmo, ou se o contexto for desconhecido pelo receptor, ou se o canal de comunicação for insuficiente, a comunicação pode ser ruidosa e falha. Se tudo isso ainda for certeiro, temos de levar em conta que a mensagem vai ser interpretada por um receptor que vai levar em consideração sua perspectiva de mundo.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #F5F4F0;&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/theory_of_communications.jpg&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/theory_of_communications.jpg&quot; /&gt;
 &lt;/div&gt;
 
 &lt;ol&gt;
@@ -146,7 +146,7 @@
 &lt;h2 id=&quot;influências-e-formação-da-linguagem&quot;&gt;Influências e formação da linguagem&lt;/h2&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #BFE6F6;&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/lusofonos.jpg&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/lusofonos.jpg&quot; /&gt;
   &lt;p&gt;ilustração: Guilhere Lira/Mundo Estranho&lt;/p&gt;
 &lt;/div&gt;
 
@@ -163,7 +163,7 @@
 &lt;p&gt;Por exemplo, aqui no Brasil nós adoramos abusar do tempo verbal gerúndio, muito pouco usado em outros países em questão. Por exemplo, usamos a frase &lt;strong&gt;“estou fazendo isso”&lt;/strong&gt; no lugar de &lt;strong&gt;“estou a fazer isso”&lt;/strong&gt;. Há também o &lt;code&gt;gerundismo&lt;/code&gt; (uso desnecessário do gerúndio) como em &lt;strong&gt;“vamos estar averiguando”&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/same-language.jpg&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/same-language.jpg&quot; /&gt;
   &lt;p&gt; ilustração: Pilar Hernandez&lt;/p&gt;
 &lt;/div&gt;
 
@@ -172,7 +172,7 @@
 &lt;p&gt;Essas estruturas são fundamentais para um correto entendimento e aplicação dos fundamentos em processamento de linguagem natural.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #fdf0e0; color: black;&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/luis-vas-de-camoes.png&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/luis-vas-de-camoes.jpg&quot; /&gt;
   &lt;span&gt;Luís de Camões é considerado um dos maiores escritores de língua portuguesa e ainda, um dos maiores representantes da literatura mundial.&lt;/span&gt;
 &lt;/div&gt;
 
@@ -193,7 +193,7 @@
 &lt;p&gt;Em relação ao período moderno, podemos citar Franz Bopp como um dos principais criadores da gramática comparada. Sua obra publicada em 1816 se intitulava: &lt;code&gt;Über das Conjugationssystem der Sanskritsprache in Vergleichung mit jenem der griechischen, lateinischen, persischen und germanischen Sprache&lt;/code&gt; &lt;strong&gt;(Sobre o sistema de conjugação do sânscrito em comparação com o do grego, latim, persa e germânico)&lt;/strong&gt;. Esse trabalho evidenciou diversas semelhanças entre as línguas em questão.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
-&lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/indo-european-tree.jpeg&quot; /&gt;
+&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/indo-european-tree.jpeg&quot; /&gt;
 &lt;p&gt;ilustração: Minna Sundberg&lt;/p&gt;
 &lt;/div&gt;
 
@@ -206,7 +206,7 @@
 &lt;p&gt;A complexidade envolvida na linguagem natural passa por sua estruturação formal (gramática), até as questões mais subjetivas como interpretação. Adicione a isso o fato que temos diversas linguagens no mundo, todas com estruturas e significâncias diferentes. Se isso ainda não for suficiente, ainda temos toda a problemática envolvendo as questões de engenharia, como por exemplo, processar grandes quantidades de texto.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/linguistics_club.png&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/linguistics_club.png&quot; /&gt;
   &lt;p&gt;ref: https://www.xkcd.com/1602/&lt;/p&gt;
 &lt;/div&gt;
 
@@ -231,7 +231,7 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
     &lt;p&gt;Como trabalhar o correto entendimento de um texto em uma máquina baseada na arquitetura de Von Neumman?&lt;/p&gt;  
   &lt;/article&gt;
   &lt;aside class=&quot;aside aside-1&quot;&gt;
-	  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/von-neumann.png&quot; /&gt;
+	  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/von-neumann.png&quot; /&gt;
 	  &lt;p&gt;Von Neumman&lt;/p&gt;
   &lt;/aside&gt;
 &lt;/div&gt;
@@ -381,7 +381,7 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 &lt;p&gt;Quando falamos de NLP, existe uma correlação com a Linguagem de programação que é pouco explorada. Antes de entrar no aspecto técnico, podemos citar um exemplo emblemático.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/imitation-game.png&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/imitation-game.png&quot; /&gt;
   &lt;p&gt;ref: Computing Machinery and Intelligence, A. M. Turing&lt;/p&gt;
 &lt;/div&gt;
 
@@ -405,7 +405,7 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 &lt;p&gt;Grande parte do interesse nessa atividade veio da possibilidade de dar ao usuário comum, o poder de interagir com a máquina a fim de realizar tarefas e obter informações sem a necessidade de programação explícita. Isso vai se tornar popular no imaginário mundial, por meio das obras &lt;code&gt;SyFy&lt;/code&gt; (&lt;strong&gt;Science Fiction&lt;/strong&gt;) como o clássico filme de &lt;strong&gt;Kubrick&lt;/strong&gt;, &lt;code&gt;2001: A Space Odyssey&lt;/code&gt;. Esse filme de 1968 em particular, possui diversos diálogos entre homem e máquina. O nível da conversação realizada pelo famoso computador &lt;strong&gt;HAL-9000&lt;/strong&gt; é até hoje algo só visto em filme.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/hall-9000.png&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/hall-9000.png&quot; /&gt;
   &lt;p&gt;ref: 2001: A Space Odyssey. 1968, Stanley Kubrick&lt;/p&gt;
 &lt;/div&gt;
 
@@ -418,7 +418,7 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 &lt;p&gt;Um caso clássico é programa &lt;code&gt;ELIZA&lt;/code&gt; desenvolvido pelo professor &lt;strong&gt;Weizenbaum&lt;/strong&gt; do MIT em 1966. Esse programa tinha entre outros, o objetivo fazer com que usuários humanos achassem que estavam conversando com outros seres humanos, e não com uma máquina. Isso te parece familiar?&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/eliza.png&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/eliza.png&quot; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Sim meus caros, estamos falando do que foi considerado a primeira interface de conversação da computação moderna, em outras palavras, o primeiro bot da era da ciência da computação. Seu objeto primordial era simular uma conversa com um terapeuta, onde o terapeuta (&lt;code&gt;ELIZA&lt;/code&gt;) conduzia a conversa com perguntas e respostas.&lt;/p&gt;
@@ -428,13 +428,13 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 &lt;p&gt;Outro exemplo clássico é o &lt;code&gt;SHRDLU&lt;/code&gt;, que além de um nome &lt;strong&gt;super cool&lt;/strong&gt; ainda integra uma entrada de linguagem natural para uma ação em processamento gráfico da máquina. Abaixo é possível ver como se dava a interface com o usuário:&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background-color: #252525;&quot;&gt;
-  &lt;a href=&quot;https://meriatblob.blob.core.windows.net/draft/shrdlu.mp4&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/shrdlu.jpg&quot; /&gt;&lt;/a&gt;
+  &lt;a href=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/shrdlu.mp4&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/shrdlu.jpg&quot; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;O &lt;code&gt;SHRDLU&lt;/code&gt; é considerado um software de inteligência artificial baseado em compreensão de linguagem natural. Foi desenvolvido entre os anos de 1968-1970 também no MIT por Terry Winograd. Seu funcionamento se baseava no usuário humano movendo os objetos da tela por meio de descrições abertas es linguagem natural. O esquema arquitetural utilizado no &lt;code&gt;SHRDLU&lt;/code&gt; mostra a rápida evolução em relação ao desenvolvimento do processamento de linguagem natural na computação.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/shrdlu-architecture.gif&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/shrdlu-architecture.gif&quot; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;A descrição do trabalho foi explorada no artigo &lt;code&gt;Procedures as a representationfor data in a computer program for Understanding Natural Language&lt;/code&gt;. Também foi gravado um vídeo disponibilizado pelo MIT onde é possível observar o programa em ação. Abaixo temos um exemplo da interação homem/máquina do &lt;code&gt;SHRDLU&lt;/code&gt;.&lt;/p&gt;
@@ -463,7 +463,7 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 &lt;p&gt;Já vimos que a gramática é o conjunto de regras que indicam o uso mais correto de uma língua. No início, a gramática tinha como função apenas estabelecer regras quanto à escrita e à leitura. A palavra gramática é de origem grega vem do radical (&lt;code&gt;grámma&lt;/code&gt;) que significa “letra”.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot; style=&quot;background: antiquewhite;&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/noam-chomsky.png&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/noam-chomsky.png&quot; /&gt;
   &lt;p&gt;Noam Chomsky&lt;/p&gt;
 &lt;/div&gt;
 
@@ -486,7 +486,7 @@ A comunicação humana está essencialmente ligada à capacidade de utilizar mei
 &lt;p&gt;Por linguagem formal nos referimos a uma abstração das características gerais de uma linguagem de programação, contendo um conjunto de símbolos, regras de formação de sentenças e afins. Entre as linguagens o trabalho de &lt;strong&gt;Chomsky&lt;/strong&gt; define uma ordem hierárquica que ficou intitulada como &lt;code&gt;Hierarquia de Chomsky&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
-  &lt;img src=&quot;https://media.geeksforgeeks.org/wp-content/uploads/20190227115949/Comsky-1.png&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/comsky-1.png&quot; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Essa definição de classes tenta delimitar os potenciais modelos de linguagens naturais. Cada linguagem é definida por uma determinada gramática e interpretada por um determinado reconhecedor.&lt;/p&gt;
@@ -545,7 +545,7 @@ Linguagens naturais (tais como português ou inglês) não são matematicamente 
 &lt;p&gt;O professor Silvio do Lago Pereira, exemplifica a produção de uma grámatica com a seguinte árvore sintática:&lt;/p&gt;
 
 &lt;div align=&quot;center&quot; class=&quot;image-content&quot;&gt;
-  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/draft/arvore-sintatica.png&quot; /&gt;
+  &lt;img src=&quot;https://meriatblob.blob.core.windows.net/images/2019/12/10/arvore-sintatica.png&quot; /&gt;
   &lt;p&gt;Árvore Sintática&lt;/p&gt;
 &lt;/div&gt;
 
